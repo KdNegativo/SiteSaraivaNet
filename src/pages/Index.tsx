@@ -10,31 +10,23 @@ const Index = () => {
       <FloatingWhatsApp />
       
       {/* Header */}
-      <header className="bg-white shadow-sm px-6 py-4">
+      <header className="bg-white shadow-sm px-6 py-4 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            {/* Logo */}
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
-                alt="SaraivaNet Logo" 
-                className="h-12 w-12 rounded-full object-cover border-2 border-orange-500 shadow-md"
-              />
-            </div>
             <div>
-              <span className="text-2xl font-bold text-orange-500">SaraivaNet</span>
-              <div className="text-sm text-gray-500">Eliseu Martins - PI</div>
+              <span className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">SaraivaNet</span>
+              <div className="text-sm text-gray-500 font-medium">Eliseu Martins - PI</div>
             </div>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-600 hover:text-orange-500">Início</a>
-            <a href="#" className="text-gray-600 hover:text-orange-500">Serviços</a>
-            <a href="#" className="text-gray-600 hover:text-orange-500">Sobre</a>
-            <a href="#" className="text-gray-600 hover:text-orange-500">Contato</a>
+            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Início</a>
+            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Planos</a>
+            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Sobre</a>
+            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Contato</a>
           </nav>
 
-          <div className="flex items-center space-x-2 text-orange-500">
+          <div className="flex items-center space-x-2 text-orange-500 bg-orange-50 px-4 py-2 rounded-full">
             <Phone className="w-4 h-4" />
             <span className="font-medium">(86) 9 9999-9999</span>
           </div>
@@ -42,107 +34,123 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-600 via-red-600 to-red-700 text-white px-6 py-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-gradient-to-br from-orange-500 via-red-500 to-red-600 text-white px-6 py-24 relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute top-20 right-20 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-orange-300/10 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <div className="inline-flex items-center bg-orange-500/20 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm">⭐ Internet + SaraivaTV</span>
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/30">
+              <span className="text-sm font-medium">⭐ Internet + SaraivaTV Grátis</span>
             </div>
             
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-6xl font-bold mb-6 leading-tight">
               Internet<br />
-              <span className="text-orange-300">+ SaraivaTV</span>
+              <span className="text-orange-200">+ SaraivaTV</span>
             </h1>
             
-            <p className="text-xl mb-8 text-gray-100">
-              Conecte-se com nossa internet de fibra óptica e ganhe acesso ao app SaraivaTV: assista seus canais favoritos direto no celular.
+            <p className="text-xl mb-10 text-gray-100 leading-relaxed">
+              Conecte-se com nossa internet de fibra óptica ultrarrápida e ganhe acesso completo ao app SaraivaTV: 
+              assista seus canais favoritos direto no celular, onde estiver.
             </p>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-orange-500/20 rounded-lg p-4 flex items-center space-x-3">
-                <Wifi className="w-6 h-6 text-orange-300" />
-                <span>Internet Ultra Rápida</span>
+            <div className="grid grid-cols-2 gap-4 mb-10">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 flex items-center space-x-4 border border-white/20">
+                <div className="w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
+                  <Wifi className="w-6 h-6 text-white" />
+                </div>
+                <span className="font-medium">Internet Ultra Rápida</span>
               </div>
-              <div className="bg-orange-500/20 rounded-lg p-4 flex items-center space-x-3">
-                <Tv className="w-6 h-6 text-orange-300" />
-                <span>Canais de TV</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 flex items-center space-x-4 border border-white/20">
+                <div className="w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
+                  <Tv className="w-6 h-6 text-white" />
+                </div>
+                <span className="font-medium">Canais de TV</span>
               </div>
-              <div className="bg-orange-500/20 rounded-lg p-4 flex items-center space-x-3">
-                <Music className="w-6 h-6 text-orange-300" />
-                <span>Músicas Online</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 flex items-center space-x-4 border border-white/20">
+                <div className="w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
+                  <Music className="w-6 h-6 text-white" />
+                </div>
+                <span className="font-medium">Rádios Online</span>
               </div>
-              <div className="bg-orange-500/20 rounded-lg p-4 flex items-center space-x-3">
-                <Headphones className="w-6 h-6 text-orange-300" />
-                <span>Suporte 24h</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 flex items-center space-x-4 border border-white/20">
+                <div className="w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
+                  <Headphones className="w-6 h-6 text-white" />
+                </div>
+                <span className="font-medium">Suporte 24h</span>
               </div>
             </div>
 
-            <div className="flex space-x-4 mb-8">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium">
+            <div className="flex space-x-6 mb-12">
+              <Button className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-4 rounded-xl font-semibold text-lg shadow-lg transform hover:scale-105 transition-all">
                 Contratar Agora →
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-lg">
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-10 py-4 rounded-xl font-semibold text-lg">
                 Saiba Mais
               </Button>
             </div>
 
-            <div className="flex space-x-8 text-sm">
-              <div>
-                <div className="font-bold text-2xl">500+</div>
-                <div className="text-gray-300">Clientes</div>
+            <div className="flex space-x-12 text-sm">
+              <div className="text-center">
+                <div className="font-bold text-3xl mb-1">500+</div>
+                <div className="text-orange-200">Clientes</div>
               </div>
-              <div>
-                <div className="font-bold text-2xl">99,9%</div>
-                <div className="text-gray-300">Uptime</div>
+              <div className="text-center">
+                <div className="font-bold text-3xl mb-1">99,9%</div>
+                <div className="text-orange-200">Uptime</div>
               </div>
-              <div>
-                <div className="font-bold text-2xl">20+</div>
-                <div className="text-gray-300">Canais</div>
+              <div className="text-center">
+                <div className="font-bold text-3xl mb-1">20+</div>
+                <div className="text-orange-200">Canais</div>
               </div>
-              <div>
-                <div className="font-bold text-2xl">24h</div>
-                <div className="text-gray-300">Online</div>
+              <div className="text-center">
+                <div className="font-bold text-3xl mb-1">24h</div>
+                <div className="text-orange-200">Online</div>
               </div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="text-center mb-6">
-                <Smartphone className="w-12 h-12 text-orange-300 mx-auto mb-4" />
-                <h3 className="text-xl font-bold">SaraivaTV</h3>
-                <p className="text-gray-300">Seus canais favoritos no celular</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20 shadow-2xl">
+              <div className="text-center mb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Smartphone className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">SaraivaTV</h3>
+                <p className="text-orange-200">Seus canais favoritos no celular</p>
               </div>
               
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-orange-500/20 rounded-lg p-4 text-center">
-                  <Tv className="w-6 h-6 mx-auto mb-2" />
-                  <span className="text-sm">Canais de TV</span>
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="bg-white/10 rounded-xl p-6 text-center border border-white/20">
+                  <Tv className="w-8 h-8 mx-auto mb-3 text-orange-300" />
+                  <span className="text-sm font-medium">Canais de TV</span>
                 </div>
-                <div className="bg-orange-500/20 rounded-lg p-4 text-center">
-                  <Music className="w-6 h-6 mx-auto mb-2" />
-                  <span className="text-sm">Rádios</span>
+                <div className="bg-white/10 rounded-xl p-6 text-center border border-white/20">
+                  <Music className="w-8 h-8 mx-auto mb-3 text-orange-300" />
+                  <span className="text-sm font-medium">Rádios</span>
                 </div>
-                <div className="bg-orange-500/20 rounded-lg p-4 text-center">
-                  <Zap className="w-6 h-6 mx-auto mb-2" />
-                  <span className="text-sm">Ao Vivo</span>
+                <div className="bg-white/10 rounded-xl p-6 text-center border border-white/20">
+                  <Zap className="w-8 h-8 mx-auto mb-3 text-orange-300" />
+                  <span className="text-sm font-medium">Ao Vivo</span>
                 </div>
-                <div className="bg-orange-500/20 rounded-lg p-4 text-center">
-                  <Smartphone className="w-6 h-6 mx-auto mb-2" />
-                  <span className="text-sm">No Celular</span>
+                <div className="bg-white/10 rounded-xl p-6 text-center border border-white/20">
+                  <Smartphone className="w-8 h-8 mx-auto mb-3 text-orange-300" />
+                  <span className="text-sm font-medium">No Celular</span>
                 </div>
               </div>
               
-              <p className="text-center text-sm text-gray-300 mb-4">
+              <p className="text-center text-sm text-orange-200 mb-6">
                 Disponível para Android e iOS
               </p>
               
               <div className="flex justify-center space-x-4">
-                <div className="bg-orange-500/20 rounded-lg p-2">
-                  <Smartphone className="w-6 h-6" />
+                <div className="bg-white/10 rounded-xl p-3 border border-white/20">
+                  <Smartphone className="w-8 h-8 text-orange-300" />
                 </div>
-                <div className="bg-orange-500/20 rounded-lg p-2">
-                  <Tv className="w-6 h-6" />
+                <div className="bg-white/10 rounded-xl p-3 border border-white/20">
+                  <Tv className="w-8 h-8 text-orange-300" />
                 </div>
               </div>
             </div>
@@ -151,33 +159,33 @@ const Index = () => {
       </section>
 
       {/* Plans Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Escolha Seu Plano</h2>
-            <p className="text-xl text-gray-600 mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">Escolha Seu Plano</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Todos os planos incluem o app <span className="text-orange-500 font-semibold">SaraivaTV gratuito</span> para assistir TV no celular.
             </p>
-            <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full">
+            <div className="inline-flex items-center bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-6 py-3 rounded-full font-medium">
               🎉 3 meses com desconto especial!
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Basic Plan */}
-            <Card className="relative">
+            <Card className="relative transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
               <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Wifi className="w-8 h-8 text-orange-500" />
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <Wifi className="w-10 h-10 text-orange-500" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800">Plano Básico</h3>
-                  <div className="text-3xl font-bold text-orange-500 mt-2">100 MB</div>
-                  <div className="text-sm text-gray-500 line-through">R$ 119,90</div>
-                  <div className="text-4xl font-bold text-gray-800 mt-2">
-                    R$ 89,90<span className="text-base font-normal">/mês</span>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Plano Básico</h3>
+                  <div className="text-4xl font-bold text-orange-500 mt-4">100 MB</div>
+                  <div className="text-sm text-gray-500 line-through mt-2">R$ 119,90</div>
+                  <div className="text-5xl font-bold text-gray-800 mt-3">
+                    R$ 89,90<span className="text-lg font-normal">/mês</span>
                   </div>
-                  <div className="text-sm text-gray-600 mt-1">Ideal para uso básico</div>
+                  <div className="text-sm text-gray-600 mt-2">Ideal para uso básico</div>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -225,31 +233,31 @@ const Index = () => {
                   </li>
                 </ul>
 
-                <Button variant="outline" className="w-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white">
+                <Button variant="outline" className="w-full border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-3 rounded-xl transition-all">
                   Contratar Agora →
                 </Button>
               </CardContent>
             </Card>
 
             {/* Family Plan - Most Popular */}
-            <Card className="relative border-2 border-orange-500 transform scale-105">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-medium">
+            <Card className="relative border-4 border-orange-500 transform scale-110 shadow-2xl">
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-full text-sm font-bold shadow-lg">
                   ⭐ MAIS POPULAR
                 </div>
               </div>
               <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-white" />
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Users className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800">Plano Família</h3>
-                  <div className="text-3xl font-bold text-orange-500 mt-2">300 MB</div>
-                  <div className="text-sm text-gray-500 line-through">R$ 169,90</div>
-                  <div className="text-4xl font-bold text-gray-800 mt-2">
-                    R$ 129,90<span className="text-base font-normal">/mês</span>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Plano Família</h3>
+                  <div className="text-4xl font-bold text-orange-500 mt-4">300 MB</div>
+                  <div className="text-sm text-gray-500 line-through mt-2">R$ 169,90</div>
+                  <div className="text-5xl font-bold text-gray-800 mt-3">
+                    R$ 129,90<span className="text-lg font-normal">/mês</span>
                   </div>
-                  <div className="text-sm text-gray-600 mt-1">Perfeito para toda família</div>
+                  <div className="text-sm text-gray-600 mt-2">Perfeito para toda família</div>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -303,26 +311,26 @@ const Index = () => {
                   </li>
                 </ul>
 
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                <Button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-3 rounded-xl shadow-lg transition-all">
                   Contratar Agora →
                 </Button>
               </CardContent>
             </Card>
 
             {/* Business Plan */}
-            <Card className="relative">
+            <Card className="relative transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
               <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-orange-500" />
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-10 h-10 text-orange-500" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800">Plano Empresarial</h3>
-                  <div className="text-3xl font-bold text-orange-500 mt-2">500 MB</div>
-                  <div className="text-sm text-gray-500 line-through">R$ 259,90</div>
-                  <div className="text-4xl font-bold text-gray-800 mt-2">
-                    R$ 199,90<span className="text-base font-normal">/mês</span>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Plano Empresarial</h3>
+                  <div className="text-4xl font-bold text-orange-500 mt-4">500 MB</div>
+                  <div className="text-sm text-gray-500 line-through mt-2">R$ 259,90</div>
+                  <div className="text-5xl font-bold text-gray-800 mt-3">
+                    R$ 199,90<span className="text-lg font-normal">/mês</span>
                   </div>
-                  <div className="text-sm text-gray-600 mt-1">Solução completa para empresas</div>
+                  <div className="text-sm text-gray-600 mt-2">Solução completa para empresas</div>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -376,7 +384,7 @@ const Index = () => {
                   </li>
                 </ul>
 
-                <Button variant="outline" className="w-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white">
+                <Button variant="outline" className="w-full border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-3 rounded-xl transition-all">
                   Contratar Agora →
                 </Button>
               </CardContent>
@@ -386,23 +394,23 @@ const Index = () => {
       </section>
 
       {/* SaraivaTV Features Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Conheça o <span className="text-orange-500">SaraivaTV</span>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">
+              Conheça o <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">SaraivaTV</span>
             </h2>
-            <p className="text-xl text-gray-600">
-              App gratuito que vem junto com sua internet. Assista TV direto no celular!
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              App gratuito que vem junto com sua internet. Assista TV direto no celular com qualidade HD!
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Tv className="w-8 h-8 text-white" />
+          <div className="grid md:grid-cols-4 gap-8 mb-16">
+            <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-gradient-to-b from-orange-50 to-white">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Tv className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Canais de TV</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Canais de TV</h3>
               <p className="text-gray-600 mb-6">
                 Assista os mesmos canais da sua TV direto no celular
               </p>
@@ -416,11 +424,11 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Music className="w-8 h-8 text-white" />
+            <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-gradient-to-b from-orange-50 to-white">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Music className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Rádios Online</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Rádios Online</h3>
               <p className="text-gray-600 mb-6">
                 Escute suas rádios favoritas onde estiver
               </p>
@@ -434,11 +442,11 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Smartphone className="w-8 h-8 text-white" />
+            <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-gradient-to-b from-orange-50 to-white">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Smartphone className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">No Seu Celular</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">No Seu Celular</h3>
               <p className="text-gray-600 mb-6">
                 App fácil de usar para Android e iOS
               </p>
@@ -452,11 +460,11 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
+            <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-gradient-to-b from-orange-50 to-white">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Zap className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Transmissão Ao Vivo</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Transmissão Ao Vivo</h3>
               <p className="text-gray-600 mb-6">
                 Tudo que passa na TV, passa no app em tempo real
               </p>
@@ -471,20 +479,23 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-3xl p-12 text-center text-white">
-            <h3 className="text-3xl font-bold mb-4">Pronto para ter Internet + SaraivaTV?</h3>
-            <p className="text-xl mb-8 opacity-90">
-              Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
-            </p>
-            <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-medium rounded-lg">
-              Quero Contratar Agora →
-            </Button>
+          <div className="bg-gradient-to-r from-orange-500 via-red-500 to-red-600 rounded-3xl p-16 text-center text-white relative overflow-hidden">
+            <div className="absolute inset-0 bg-black/10"></div>
+            <div className="relative z-10">
+              <h3 className="text-4xl font-bold mb-6">Pronto para ter Internet + SaraivaTV?</h3>
+              <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
+                Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
+              </p>
+              <Button className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-4 text-xl font-semibold rounded-xl shadow-lg transform hover:scale-105 transition-all">
+                Quero Contratar Agora →
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-orange-500 to-red-600">
+      <section className="py-24 px-6 bg-gradient-to-r from-orange-500 to-red-600">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Números Que Falam Por Si</h2>
           <p className="text-xl text-white/90 mb-12">
@@ -540,9 +551,9 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Sobre a SaraivaNet</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               Há 5 anos conectando Eliseu Martins com o mundo digital. Somos uma empresa piauense 
@@ -620,9 +631,9 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">O Que Nossos Clientes Dizem</h2>
             <p className="text-xl text-gray-600">
               Histórias reais de pessoas que confiam na SaraivaNet para se conectar com o mundo
@@ -700,9 +711,9 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
             <p className="text-xl text-gray-600">
               Estamos aqui para ajudar! Entre em contato conosco e descubra como podemos 
@@ -776,32 +787,25 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 px-6">
+      <footer className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="relative">
-                  <img 
-                    src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
-                    alt="SaraivaNet Logo" 
-                    className="h-10 w-10 rounded-full object-cover border-2 border-orange-500 shadow-md"
-                  />
-                </div>
-                <span className="text-2xl font-bold text-orange-500">SaraivaNet</span>
+              <div className="flex items-center space-x-3 mb-6">
+                <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">SaraivaNet</span>
               </div>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 Conectando Eliseu Martins com o mundo há 5 anos. Internet de qualidade, 
                 suporte especializado e compromisso com nossa comunidade.
               </p>
-              <div className="flex items-center text-orange-500">
+              <div className="flex items-center text-orange-400">
                 <Heart className="w-5 h-5 mr-2" />
                 <span>Feito com amor no Piauí</span>
               </div>
             </div>
 
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-orange-500">Links Rápidos</h4>
+              <h4 className="text-xl font-semibold mb-4 text-orange-400">Links Rápidos</h4>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-300 hover:text-orange-500">Início</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-orange-500">Planos</a></li>
@@ -811,7 +815,7 @@ const Index = () => {
             </div>
 
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-orange-500">Contato</h4>
+              <h4 className="text-xl font-semibold mb-4 text-orange-400">Contato</h4>
               <ul className="space-y-2">
                 <li className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
@@ -829,7 +833,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <div className="border-t border-gray-700 mt-12 pt-8 text-center">
             <p className="text-gray-400">
               © 2025 SaraivaNet. Todos os direitos reservados.
             </p>
