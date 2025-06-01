@@ -2,16 +2,28 @@
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      {/* Floating WhatsApp Button */}
+      <FloatingWhatsApp />
+      
       {/* Header */}
       <header className="bg-white shadow-sm px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-orange-500">SaraivaNet</span>
-            <span className="text-sm text-gray-500">Eliseu Martins - PI</span>
+          <div className="flex items-center space-x-4">
+            {/* Logo */}
+            <img 
+              src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
+              alt="SaraivaNet Logo" 
+              className="h-12 w-auto"
+            />
+            <div>
+              <span className="text-2xl font-bold text-orange-500">SaraivaNet</span>
+              <div className="text-sm text-gray-500">Eliseu Martins - PI</div>
+            </div>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
@@ -768,7 +780,11 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Wifi className="w-8 h-8 text-orange-500" />
+                <img 
+                  src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
+                  alt="SaraivaNet Logo" 
+                  className="h-8 w-auto"
+                />
                 <span className="text-2xl font-bold text-orange-500">SaraivaNet</span>
               </div>
               <p className="text-gray-300 mb-4">
