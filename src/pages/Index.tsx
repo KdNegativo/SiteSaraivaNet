@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,11 +14,13 @@ const Index = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
             {/* Logo */}
-            <img 
-              src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
-              alt="SaraivaNet Logo" 
-              className="h-12 w-auto"
-            />
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
+                alt="SaraivaNet Logo" 
+                className="h-12 w-12 rounded-full object-cover border-2 border-orange-500 shadow-md"
+              />
+            </div>
             <div>
               <span className="text-2xl font-bold text-orange-500">SaraivaNet</span>
               <div className="text-sm text-gray-500">Eliseu Martins - PI</div>
@@ -779,12 +780,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <img 
-                  src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
-                  alt="SaraivaNet Logo" 
-                  className="h-8 w-auto"
-                />
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
+                    alt="SaraivaNet Logo" 
+                    className="h-10 w-10 rounded-full object-cover border-2 border-orange-500 shadow-md"
+                  />
+                </div>
                 <span className="text-2xl font-bold text-orange-500">SaraivaNet</span>
               </div>
               <p className="text-gray-300 mb-4">
