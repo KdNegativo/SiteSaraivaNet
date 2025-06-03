@@ -25,56 +25,56 @@ const coveragePoints: CoveragePoint[] = [
   {
     id: '1',
     name: 'Centro de Eliseu Martins',
-    lat: -8.1557,
-    lng: -43.1423,
+    lat: -8.0833,
+    lng: -43.6333,
     type: 'centro',
     description: 'Cobertura completa no centro da cidade com velocidade máxima'
   },
   {
     id: '2',
     name: 'Bairro São José',
-    lat: -8.1547,
-    lng: -43.1433,
+    lat: -8.0823,
+    lng: -43.6343,
     type: 'bairro',
     description: 'Internet de alta velocidade para residências e comércios'
   },
   {
     id: '3',
     name: 'Vila Nova',
-    lat: -8.1567,
-    lng: -43.1413,
+    lat: -8.0843,
+    lng: -43.6323,
     type: 'bairro',
     description: 'Cobertura residencial com SaraivaTV incluído'
   },
   {
     id: '4',
     name: 'Zona Rural Norte',
-    lat: -8.1527,
-    lng: -43.1443,
+    lat: -8.0803,
+    lng: -43.6353,
     type: 'interior',
     description: 'Internet no interior para fazendas e sítios'
   },
   {
     id: '5',
     name: 'Zona Rural Sul',
-    lat: -8.1587,
-    lng: -43.1403,
+    lat: -8.0863,
+    lng: -43.6313,
     type: 'interior',
     description: 'Conectividade rural de qualidade'
   },
   {
     id: '6',
     name: 'Fazenda Santa Maria',
-    lat: -8.1607,
-    lng: -43.1463,
+    lat: -8.0883,
+    lng: -43.6373,
     type: 'rural',
     description: 'Internet para propriedades rurais'
   },
   {
     id: '7',
     name: 'Sítio Boa Vista',
-    lat: -8.1507,
-    lng: -43.1383,
+    lat: -8.0783,
+    lng: -43.6293,
     type: 'rural',
     description: 'Conexão estável para zona rural'
   }
@@ -125,8 +125,8 @@ const RealMap: React.FC = () => {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Centro de Eliseu Martins - PI
-    const map = L.map(mapRef.current).setView([-8.1557, -43.1423], 13);
+    // Coordenadas corretas de Eliseu Martins - PI baseadas na imagem
+    const map = L.map(mapRef.current).setView([-8.0833, -43.6333], 12);
 
     // Adicionar camada do OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -164,8 +164,8 @@ const RealMap: React.FC = () => {
       `);
     });
 
-    // Adicionar círculo de cobertura principal
-    L.circle([-8.1557, -43.1423], {
+    // Adicionar círculo de cobertura principal com as coordenadas corretas
+    L.circle([-8.0833, -43.6333], {
       color: '#f97316',
       fillColor: '#fed7aa',
       fillOpacity: 0.3,
