@@ -57,7 +57,7 @@ const MapComponent: React.FC<{ cities: City[] }> = ({ cities }) => {
     if (!mapRef.current) return;
 
     const mapInstance = new google.maps.Map(mapRef.current, {
-      center: { lat: -8.0969, lng: -44.0597 }, // Centered on Eliseu Martins
+      center: { lat: -8.0969, lng: -44.0597 },
       zoom: 9,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       styles: [
@@ -81,7 +81,6 @@ const MapComponent: React.FC<{ cities: City[] }> = ({ cities }) => {
 
     setMap(mapInstance);
 
-    // Add markers for each city
     cities.forEach((city) => {
       const marker = new google.maps.Marker({
         position: { lat: city.lat, lng: city.lng },
@@ -156,11 +155,43 @@ const LoadingComponent = () => (
 );
 
 const ErrorComponent = () => (
-  <div className="w-full h-96 rounded-2xl bg-red-50 border-2 border-red-200 flex items-center justify-center">
-    <div className="text-center text-red-600">
-      <MapPin className="w-12 h-12 mx-auto mb-4" />
-      <p className="font-medium mb-2">Erro ao carregar o mapa</p>
-      <p className="text-sm">Verifique sua conexão com a internet</p>
+  <div className="w-full h-96 rounded-2xl bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200 flex flex-col items-center justify-center p-8">
+    <div className="bg-white rounded-2xl p-6 shadow-lg max-w-md w-full">
+      <div className="text-center mb-6">
+        <MapPin className="w-16 h-16 mx-auto mb-4 text-orange-500" />
+        <h3 className="text-xl font-bold text-gray-800 mb-2">Mapa de Cobertura SaraivaNet</h3>
+        <p className="text-gray-600 text-sm">Confira as cidades onde nossa internet está disponível</p>
+      </div>
+      
+      <div className="space-y-3">
+        {cities.map((city) => (
+          <div key={city.name} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div className="flex items-center space-x-3">
+              <div className={`w-3 h-3 rounded-full ${city.status === 'active' ? 'bg-green-500' : 'bg-orange-500 animate-pulse'}`}></div>
+              <div>
+                <p className="font-semibold text-gray-800 text-sm">{city.name}</p>
+                <p className="text-xs text-gray-600">{city.description}</p>
+              </div>
+            </div>
+            <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+              city.status === 'active' 
+                ? 'bg-green-100 text-green-700' 
+                : 'bg-orange-100 text-orange-700'
+            }`}>
+              {city.status === 'active' ? 'Ativa' : 'Em Breve'}
+            </span>
+          </div>
+        ))}
+      </div>
+      
+      <div className="mt-6 text-center">
+        <button 
+          onClick={() => window.open('https://wa.me/5586999999999?text=Olá! Gostaria de saber mais sobre os planos de internet da SaraivaNet', '_blank')}
+          className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+        >
+          💬 Falar no WhatsApp
+        </button>
+      </div>
     </div>
   </div>
 );
@@ -182,13 +213,13 @@ const RealMap: React.FC = () => {
   return (
     <div className="w-full">
       <div className="mb-4 text-center">
-        <h3 className="text-2xl font-bold text-white mb-2">Mapa Interativo de Cobertura</h3>
-        <p className="text-blue-200">Clique nos marcadores para ver detalhes e opções de contrato</p>
+        <h3 className="text-2xl font-bold text-white mb-2">Mapa de Cobertura SaraivaNet</h3>
+        <p className="text-blue-200">Veja onde nossa internet está disponível</p>
       </div>
       
       <div className="shadow-2xl rounded-2xl overflow-hidden border border-blue-600">
         <Wrapper 
-          apiKey="AIzaSyBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB" 
+          apiKey=""
           render={render}
           libraries={['places']}
         />
@@ -207,12 +238,12 @@ const RealMap: React.FC = () => {
         </div>
       </div>
       
-      <div className="mt-4 p-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl text-white text-center">
+      <div className="mt-4 p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white text-center">
         <p className="text-sm font-medium mb-2">
-          📍 <strong>Importante:</strong> Para usar o mapa, você precisa de uma chave da API do Google Maps
+          🗺️ <strong>Mapa Interativo:</strong> Para uma experiência completa com mapa do Google
         </p>
         <p className="text-xs opacity-90">
-          Substitua "AIzaSyBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB" por sua chave real do Google Maps
+          Configure uma chave válida da API do Google Maps nas configurações
         </p>
       </div>
     </div>
