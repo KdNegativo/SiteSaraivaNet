@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import RealMap from "@/components/RealMap";
 import StatsCounter from "@/components/StatsCounter";
