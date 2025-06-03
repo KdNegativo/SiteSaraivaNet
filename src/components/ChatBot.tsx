@@ -67,14 +67,13 @@ const ChatBot = () => {
   return (
     <>
       {/* Chat Button */}
-      <Button
+      <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-20 right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-2xl transition-all duration-300 hover:scale-110"
-        size="icon"
+        className="fixed bottom-20 right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Abrir chat"
       >
         <MessageCircle className="w-6 h-6" />
-      </Button>
+      </button>
 
       {/* Chat Window */}
       {isOpen && (
