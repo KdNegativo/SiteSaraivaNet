@@ -509,12 +509,14 @@ const Index = () => {
               <p className="text-2xl mb-10 opacity-90 max-w-2xl mx-auto">
                 Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
               </p>
-              <Button 
-                onClick={handleWhatsAppClick}
-                className="bg-white text-orange-600 hover:bg-gray-100 px-16 py-6 text-2xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 whitespace-nowrap"
-              >
-                Quero Contratar Agora →
-              </Button>
+              <div className="flex justify-center">
+                <Button 
+                  onClick={handleWhatsAppClick}
+                  className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 whitespace-nowrap"
+                >
+                  💬 Entrar em Contato
+                </Button>
+              </div>
             </div>
           </div>
         </div>
