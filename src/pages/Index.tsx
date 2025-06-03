@@ -1,9 +1,9 @@
 
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Wifi, Star, Users, Shield, Zap, CheckCircle, ArrowRight, Signal, Router, HeartHandshake } from "lucide-react";
-import { InteractiveMap } from "../components/InteractiveMap";
-import { StatsCounter } from "../components/StatsCounter";
-import { TestimonialCard } from "../components/TestimonialCard";
+import InteractiveMap from "../components/InteractiveMap";
+import StatsCounter from "../components/StatsCounter";
+import TestimonialCard from "../components/TestimonialCard";
 import FloatingWhatsApp from "../components/FloatingWhatsApp";
 import ThemeToggle from "../components/ThemeToggle";
 import MobileMenu from "../components/MobileMenu";
