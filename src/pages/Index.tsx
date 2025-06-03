@@ -148,7 +148,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button 
                   onClick={handleWhatsAppClick}
-                  className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-8 py-3 rounded-xl font-bold text-lg shadow-xl border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                  className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-6 py-3 rounded-xl font-bold text-base shadow-xl border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl whitespace-nowrap"
                 >
                   Contratar Agora →
                 </Button>
@@ -271,7 +271,7 @@ const Index = () => {
 
                       <Button 
                         onClick={handleWhatsAppClick}
-                        className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-12 text-xl rounded-xl shadow-xl hover:scale-110 transform transition-all duration-300"
+                        className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 text-lg rounded-xl shadow-xl hover:scale-110 transform transition-all duration-300 whitespace-nowrap"
                       >
                         Contratar Agora →
                       </Button>
@@ -316,11 +316,11 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button 
                   onClick={handleWhatsAppClick}
-                  className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-bold rounded-xl"
+                  className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 text-base font-bold rounded-xl whitespace-nowrap"
                 >
                   💬 WhatsApp
                 </Button>
-                <Button className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-8 py-3 text-lg font-bold rounded-xl">
+                <Button className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-6 py-3 text-base font-bold rounded-xl whitespace-nowrap">
                   📞 Ligar Agora
                 </Button>
               </div>
@@ -511,7 +511,7 @@ const Index = () => {
               </p>
               <Button 
                 onClick={handleWhatsAppClick}
-                className="bg-white text-orange-600 hover:bg-gray-100 px-16 py-6 text-2xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300"
+                className="bg-white text-orange-600 hover:bg-gray-100 px-16 py-6 text-2xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 whitespace-nowrap"
               >
                 Quero Contratar Agora →
               </Button>
