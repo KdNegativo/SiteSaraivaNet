@@ -20,6 +20,7 @@ interface City {
   description: string;
 }
 
+// Coordenadas corretas das cidades do Piauí
 const cities: City[] = [
   {
     name: 'Eliseu Martins',
@@ -94,119 +95,147 @@ const RealMap: React.FC = () => {
   };
 
   useEffect(() => {
-    console.log('RealMap: Iniciando useEffect');
+    console.log('RealMap: Iniciando inicialização do mapa');
     
     if (!mapRef.current) {
-      console.log('RealMap: mapRef.current não existe');
+      console.log('RealMap: Elemento do mapa não encontrado');
       return;
     }
     
     if (mapInstance.current) {
-      console.log('RealMap: mapInstance já existe, não criando novo');
-      return;
+      console.log('RealMap: Removendo mapa existente antes de criar novo');
+      mapInstance.current.remove();
+      mapInstance.current = null;
     }
 
-    console.log('RealMap: Criando novo mapa');
-
-    // Coordenadas centrais da região (Eliseu Martins)
-    const centerCoords: [number, number] = [-8.0969, -42.8764];
-
     try {
-      // Inicializar o mapa
-      console.log('RealMap: Inicializando mapa em', centerCoords);
+      // Coordenadas centrais da região (centro entre as cidades)
+      const centerCoords: [number, number] = [-8.0969, -42.8764];
+      
+      console.log('RealMap: Criando mapa centrado em:', centerCoords);
+
+      // Criar o mapa com configurações específicas
       mapInstance.current = L.map(mapRef.current, {
         center: centerCoords,
-        zoom: 10,
+        zoom: 11,
+        minZoom: 8,
+        maxZoom: 16,
         zoomControl: true,
-        scrollWheelZoom: true
+        scrollWheelZoom: true,
+        doubleClickZoom: true,
+        dragging: true
       });
 
-      console.log('RealMap: Mapa criado, adicionando tiles');
+      console.log('RealMap: Mapa criado, adicionando camada de tiles');
       
-      // Adicionar camada do mapa
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      // Adicionar tiles do OpenStreetMap
+      const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         maxZoom: 18,
-      }).addTo(mapInstance.current);
+      });
+      
+      tileLayer.addTo(mapInstance.current);
+      console.log('RealMap: Tiles adicionados');
 
-      console.log('RealMap: Tiles adicionados, criando área de cobertura');
-
-      // Adicionar área de cobertura
-      const coverageCircle = L.circle(centerCoords, {
-        color: '#ea580c',
-        fillColor: '#fed7aa',
-        fillOpacity: 0.2,
-        radius: 25000,
-      }).addTo(mapInstance.current);
-
-      coverageCircle.bindPopup(`
-        <div style="text-align: center; padding: 10px;">
-          <h3 style="margin: 0 0 8px 0; color: #ea580c; font-weight: bold;">
-            Área de Cobertura SaraivaNet
-          </h3>
-          <p style="margin: 0; color: #666; font-size: 14px;">
-            Internet de fibra óptica disponível em toda esta região
-          </p>
-        </div>
-      `);
-
-      console.log('RealMap: Área de cobertura criada, adicionando marcadores das cidades');
-
-      // Adicionar pontos das cidades
-      cities.forEach((city, index) => {
-        console.log(`RealMap: Adicionando marcador para ${city.name} em [${city.lat}, ${city.lng}]`);
+      // Calcular bounds para mostrar todas as cidades
+      const group = new L.LatLngBounds();
+      
+      // Adicionar marcadores das cidades
+      cities.forEach((city) => {
+        console.log(`RealMap: Adicionando ${city.name} em [${city.lat}, ${city.lng}]`);
         
         const marker = L.marker([city.lat, city.lng], {
           icon: createCustomIcon(city.status)
-        }).addTo(mapInstance.current!);
+        });
+        
+        marker.addTo(mapInstance.current!);
+        group.extend([city.lat, city.lng]);
 
         const popupContent = `
-          <div style="text-align: center; padding: 15px; min-width: 200px;">
-            <h3 style="margin: 0 0 8px 0; color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; font-weight: bold;">
-              ${city.name}
+          <div style="text-align: center; padding: 15px; min-width: 200px; font-family: Arial, sans-serif;">
+            <h3 style="margin: 0 0 10px 0; color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; font-weight: bold; font-size: 16px;">
+              📍 ${city.name}
             </h3>
-            <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">
+            <p style="margin: 0 0 12px 0; color: #555; font-size: 14px; line-height: 1.4;">
               ${city.description}
             </p>
-            <div style="margin: 8px 0; padding: 4px 8px; background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; color: white; border-radius: 12px; font-size: 12px; display: inline-block;">
-              ${city.status === 'active' ? 'Internet Ativa' : 'Em Breve'}
+            <div style="margin: 10px 0; padding: 6px 12px; background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; color: white; border-radius: 15px; font-size: 12px; display: inline-block; font-weight: bold;">
+              ${city.status === 'active' ? '🟢 Internet Ativa' : '🟡 Em Breve'}
             </div>
             <br>
             <button 
               onclick="window.open('https://wa.me/5586999999999?text=${encodeURIComponent(
                 city.status === 'active' 
-                  ? `Olá! Gostaria de saber mais sobre os planos de internet em ${city.name}`
-                  : `Olá! Gostaria de demonstrar interesse na chegada da internet em ${city.name}`
+                  ? `Olá! Gostaria de contratar internet em ${city.name}. Podem me ajudar?`
+                  : `Olá! Tenho interesse na chegada da internet em ${city.name}. Quando estará disponível?`
               )}', '_blank')"
               style="
-                margin-top: 8px;
-                padding: 8px 12px;
-                background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'};
+                margin-top: 10px;
+                padding: 10px 15px;
+                background-color: #25D366;
                 color: white;
                 border: none;
-                border-radius: 6px;
+                border-radius: 8px;
                 cursor: pointer;
-                font-size: 12px;
+                font-size: 13px;
                 font-weight: bold;
+                transition: background-color 0.3s;
               "
+              onmouseover="this.style.backgroundColor='#1DA851'"
+              onmouseout="this.style.backgroundColor='#25D366'"
             >
-              ${city.status === 'active' ? `Contratar em ${city.name}` : 'Demonstrar Interesse'}
+              💬 ${city.status === 'active' ? 'Contratar Agora' : 'Demonstrar Interesse'}
             </button>
           </div>
         `;
 
-        marker.bindPopup(popupContent);
+        marker.bindPopup(popupContent, {
+          maxWidth: 250,
+          className: 'custom-popup'
+        });
       });
 
-      console.log('RealMap: Todos os marcadores adicionados com sucesso');
-      console.log('RealMap: Mapa completamente inicializado');
+      // Ajustar a visualização para mostrar todas as cidades
+      if (group.isValid()) {
+        mapInstance.current.fitBounds(group, {
+          padding: [20, 20],
+          maxZoom: 12
+        });
+        console.log('RealMap: Visualização ajustada para mostrar todas as cidades');
+      }
+
+      // Adicionar área de cobertura regional
+      const coverageArea = L.circle([-8.0969, -42.8764], {
+        color: '#ea580c',
+        fillColor: '#fed7aa',
+        fillOpacity: 0.15,
+        weight: 2,
+        radius: 30000, // 30km de raio
+      }).addTo(mapInstance.current);
+
+      coverageArea.bindPopup(`
+        <div style="text-align: center; padding: 15px; font-family: Arial, sans-serif;">
+          <h3 style="margin: 0 0 10px 0; color: #ea580c; font-weight: bold;">
+            🌐 Área de Cobertura SaraivaNet
+          </h3>
+          <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">
+            Internet de fibra óptica de alta velocidade
+          </p>
+          <p style="margin: 0; color: #666; font-size: 12px;">
+            Região do Sul do Piauí - Mais de 30km de cobertura
+          </p>
+        </div>
+      `);
+
+      console.log('RealMap: Mapa totalmente configurado e funcional');
 
     } catch (error) {
-      console.error('RealMap: Erro ao criar mapa:', error);
+      console.error('RealMap: Erro crítico ao inicializar mapa:', error);
     }
 
+    // Cleanup function
     return () => {
-      console.log('RealMap: Limpando mapa no unmount');
+      console.log('RealMap: Limpando mapa');
       if (mapInstance.current) {
         mapInstance.current.remove();
         mapInstance.current = null;
@@ -214,39 +243,47 @@ const RealMap: React.FC = () => {
     };
   }, []);
 
-  console.log('RealMap: Renderizando componente');
-
   return (
     <div className="w-full">
       <div className="mb-4 text-center">
-        <h3 className="text-2xl font-bold text-white mb-2">Mapa de Cobertura SaraivaNet</h3>
-        <p className="text-blue-200">Mapa interativo com nossas áreas de cobertura</p>
+        <h3 className="text-2xl font-bold text-white mb-2">🗺️ Mapa de Cobertura SaraivaNet</h3>
+        <p className="text-blue-200">Região Sul do Piauí - Internet de Fibra Óptica</p>
       </div>
       
-      {/* Mapa Real */}
-      <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg border mb-6">
-        <div ref={mapRef} className="w-full h-full" style={{ minHeight: '384px' }} />
+      {/* Container do Mapa */}
+      <div className="w-full h-96 rounded-2xl overflow-hidden shadow-xl border-2 border-blue-400/30 mb-6">
+        <div 
+          ref={mapRef} 
+          className="w-full h-full" 
+          style={{ 
+            minHeight: '384px',
+            background: '#f8fafc' 
+          }} 
+        />
       </div>
 
       {/* Legenda */}
       <div className="grid grid-cols-2 gap-3 mb-6">
-        <div className="flex items-center space-x-2 p-3 bg-blue-800 rounded-lg border border-blue-600">
-          <div className="w-4 h-4 bg-green-600 rounded-full border-2 border-white"></div>
-          <span className="text-sm font-semibold text-blue-200">Internet Ativa</span>
+        <div className="flex items-center space-x-3 p-4 bg-blue-800/80 rounded-xl border border-blue-600/50">
+          <div className="w-5 h-5 bg-green-600 rounded-full border-2 border-white shadow-md"></div>
+          <span className="text-sm font-semibold text-blue-100">🟢 Internet Ativa</span>
         </div>
-        <div className="flex items-center space-x-2 p-3 bg-blue-800 rounded-lg border border-blue-600">
-          <div className="w-4 h-4 bg-orange-600 rounded-full border-2 border-white"></div>
-          <span className="text-sm font-semibold text-blue-200">Em Breve</span>
+        <div className="flex items-center space-x-3 p-4 bg-blue-800/80 rounded-xl border border-blue-600/50">
+          <div className="w-5 h-5 bg-orange-600 rounded-full border-2 border-white shadow-md"></div>
+          <span className="text-sm font-semibold text-blue-100">🟡 Chegando em 2025</span>
         </div>
       </div>
 
-      {/* Informações */}
-      <div className="p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white text-center">
-        <p className="text-sm font-medium mb-2">
-          🗺️ <strong>Mapa Interativo Real</strong>
+      {/* Informações do Mapa */}
+      <div className="p-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white text-center shadow-lg">
+        <p className="text-base font-bold mb-3">
+          📍 <strong>Mapa Interativo Real - Piauí</strong>
         </p>
-        <p className="text-xs opacity-90">
-          Clique nos marcadores para ver detalhes e entrar em contato
+        <p className="text-sm opacity-90 mb-2">
+          ✅ Clique nos marcadores para ver detalhes de cada cidade
+        </p>
+        <p className="text-sm opacity-90">
+          💬 Entre em contato direto via WhatsApp em cada localização
         </p>
       </div>
     </div>
