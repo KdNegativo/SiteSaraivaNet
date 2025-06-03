@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Wifi, Star, Users, Shield, Zap, CheckCircle, ArrowRight, Signal, Router, HeartHandshake } from "lucide-react";
 import InteractiveMap from "../components/InteractiveMap";
@@ -43,24 +42,24 @@ const Index = () => {
   const testimonials = [
     {
       name: "Maria Silva",
+      age: "32 anos",
       location: "Centro",
-      rating: 5,
-      comment: "Internet super rápida e estável! Trabalho home office e nunca tive problemas.",
-      avatar: "/placeholder.svg"
+      testimonial: "Internet super rápida e estável! Trabalho home office e nunca tive problemas.",
+      initials: "MS"
     },
     {
       name: "João Santos",
+      age: "45 anos", 
       location: "Bairro Alto",
-      rating: 5,
-      comment: "Melhor custo-benefício da cidade. Recomendo para todos!",
-      avatar: "/placeholder.svg"
+      testimonial: "Melhor custo-benefício da cidade. Recomendo para todos!",
+      initials: "JS"
     },
     {
       name: "Ana Costa",
-      location: "Vila Nova",
-      rating: 5,
-      comment: "Atendimento excelente e internet de qualidade. Muito satisfeita!",
-      avatar: "/placeholder.svg"
+      age: "28 anos",
+      location: "Vila Nova", 
+      testimonial: "Atendimento excelente e internet de qualidade. Muito satisfeita!",
+      initials: "AC"
     }
   ];
 
@@ -169,19 +168,19 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <StatsCounter
                 icon={<Users className="w-8 h-8" />}
-                number={2500}
+                endValue={2500}
                 label="Clientes Conectados"
                 suffix="+"
               />
               <StatsCounter
                 icon={<Signal className="w-8 h-8" />}
-                number={99}
+                endValue={99}
                 label="Uptime de Qualidade"
                 suffix="%"
               />
               <StatsCounter
                 icon={<Router className="w-8 h-8" />}
-                number={48}
+                endValue={48}
                 label="Suporte Técnico"
                 suffix="h"
               />
