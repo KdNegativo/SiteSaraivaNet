@@ -14,7 +14,7 @@ const FloatingWhatsApp = () => {
       aria-label="Entrar em contato via WhatsApp"
     >
       <img 
-        src="/lovable-uploads/b26cadae-78e1-4683-8c00-a599976c8b10.png" 
+        src="/lovable-uploads/981f602c-b0d2-4161-8119-dfd91ef1c234.png" 
         alt="WhatsApp" 
         className="w-16 h-16"
       />

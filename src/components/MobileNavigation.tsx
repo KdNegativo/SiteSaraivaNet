@@ -91,7 +91,7 @@ const MobileNavigation = () => {
                 className="w-full bg-white text-orange-600 hover:bg-orange-50 font-bold py-3 rounded-xl flex items-center justify-center space-x-2"
               >
                 <img 
-                  src="/lovable-uploads/b26cadae-78e1-4683-8c00-a599976c8b10.png" 
+                  src="/lovable-uploads/981f602c-b0d2-4161-8119-dfd91ef1c234.png" 
                   alt="WhatsApp" 
                   className="w-5 h-5"
                 />
