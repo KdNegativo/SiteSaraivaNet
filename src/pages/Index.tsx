@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -10,6 +9,8 @@ import ThemeToggle from "@/components/ThemeToggle";
 import AnimatedSection from "@/components/AnimatedSection";
 import ChatBot from "@/components/ChatBot";
 import { useParallax } from "@/hooks/useParallax";
+import MobileStats from "@/components/MobileStats";
+import MobilePhoneButton from "@/components/MobilePhoneButton";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -95,6 +96,11 @@ const Index = () => {
         </div>
       </header>
 
+      {/* Mobile Phone Button - only show on mobile */}
+      <div className="md:hidden">
+        <MobilePhoneButton />
+      </div>
+
       {/* Hero Section with Parallax */}
       <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
@@ -152,7 +158,8 @@ const Index = () => {
                 </Button>
               </div>
 
-              <div className="flex space-x-8 text-sm">
+              {/* Desktop Stats */}
+              <div className="hidden md:flex space-x-8 text-sm">
                 <div className="text-center">
                   <StatsCounter endValue={500} label="Clientes" suffix="+" />
                 </div>
@@ -212,6 +219,11 @@ const Index = () => {
               </div>
             </div>
           </AnimatedSection>
+        </div>
+
+        {/* Mobile Stats Dashboard */}
+        <div className="md:hidden mt-8">
+          <MobileStats />
         </div>
       </section>
 
