@@ -10,13 +10,13 @@ const FloatingWhatsApp = () => {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 bg-white hover:bg-gray-50 rounded-full p-2 shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
+      className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 hover:scale-110 transition-all duration-300 flex items-center justify-center"
       aria-label="Entrar em contato via WhatsApp"
     >
       <img 
-        src="/lovable-uploads/01df9255-1f15-4131-86c5-638e9796ee23.png" 
+        src="/lovable-uploads/b26cadae-78e1-4683-8c00-a599976c8b10.png" 
         alt="WhatsApp" 
-        className="w-12 h-12"
+        className="w-16 h-16"
       />
     </button>
   );
