@@ -48,13 +48,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <ThemeToggle />
-                <a href="tel:(89)99439-5789" className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-3 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg">
-                  <Phone className="w-4 h-4" />
-                  <span className="font-semibold text-sm">(89) 99439-5789</span>
-                </a>
-              </div>
+              <ThemeToggle />
             </div>
           </div>
 
