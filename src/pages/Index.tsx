@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -24,6 +23,13 @@ const Index = () => {
         block: 'start'
       });
     }
+  };
+
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "5589994395789";
+    const message = "Olá! Gostaria de contratar o plano de internet + SaraivaTV.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -140,7 +146,10 @@ const Index = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-8 py-3 rounded-xl font-bold text-lg shadow-xl border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                <Button 
+                  onClick={handleWhatsAppClick}
+                  className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-8 py-3 rounded-xl font-bold text-lg shadow-xl border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                >
                   Contratar Agora →
                 </Button>
                 <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-xl font-bold text-lg shadow-xl transition-all duration-300 transform hover:scale-105">
@@ -260,7 +269,10 @@ const Index = () => {
                         <div className="text-green-400 text-sm">Promoção válida para novos clientes</div>
                       </div>
 
-                      <Button className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-12 text-xl rounded-xl shadow-xl hover:scale-110 transform transition-all duration-300">
+                      <Button 
+                        onClick={handleWhatsAppClick}
+                        className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-12 text-xl rounded-xl shadow-xl hover:scale-110 transform transition-all duration-300"
+                      >
                         Contratar Agora →
                       </Button>
                     </div>
@@ -302,7 +314,10 @@ const Index = () => {
                 Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-bold rounded-xl">
+                <Button 
+                  onClick={handleWhatsAppClick}
+                  className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-bold rounded-xl"
+                >
                   💬 WhatsApp
                 </Button>
                 <Button className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-8 py-3 text-lg font-bold rounded-xl">
@@ -382,7 +397,10 @@ const Index = () => {
                   <p className="mb-4 opacity-90">
                     Demonstre interesse! Quanto mais pessoas de uma cidade demonstrarem interesse, mais rápido chegamos lá.
                   </p>
-                  <Button className="bg-white text-orange-500 hover:bg-gray-100 font-bold px-6 py-2 rounded-lg">
+                  <Button 
+                    onClick={handleWhatsAppClick}
+                    className="bg-white text-orange-500 hover:bg-gray-100 font-bold px-6 py-2 rounded-lg"
+                  >
                     💬 Demonstrar Interesse
                   </Button>
                 </div>
@@ -491,7 +509,10 @@ const Index = () => {
               <p className="text-2xl mb-10 opacity-90 max-w-2xl mx-auto">
                 Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
               </p>
-              <Button className="bg-white text-orange-600 hover:bg-gray-100 px-16 py-6 text-2xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300">
+              <Button 
+                onClick={handleWhatsAppClick}
+                className="bg-white text-orange-600 hover:bg-gray-100 px-16 py-6 text-2xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300"
+              >
                 Quero Contratar Agora →
               </Button>
             </div>
@@ -741,7 +762,10 @@ const Index = () => {
           </div>
 
           <div className="text-center space-x-6">
-            <Button className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
+            <Button 
+              onClick={handleWhatsAppClick}
+              className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105"
+            >
               📱 WhatsApp
             </Button>
             <Button className="bg-white text-blue-600 hover:bg-blue-50 px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
