@@ -20,7 +20,7 @@ interface City {
   description: string;
 }
 
-// Coordenadas corretas das cidades do Piauí
+// Coordenadas corretas das cidades do Piauí - apenas cidades ativas
 const cities: City[] = [
   {
     name: 'Eliseu Martins',
@@ -42,13 +42,6 @@ const cities: City[] = [
     lng: -43.8719,
     status: 'active',
     description: 'Cobertura completa de fibra óptica'
-  },
-  {
-    name: 'Canto do Buriti',
-    lat: -8.1167,
-    lng: -42.9500,
-    status: 'coming-soon',
-    description: 'Expansão prevista para 2025'
   }
 ];
 
@@ -153,14 +146,12 @@ const RealMap: React.FC = () => {
               ${city.description}
             </p>
             <div style="margin: 10px 0; padding: 6px 12px; background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; color: white; border-radius: 15px; font-size: 12px; display: inline-block; font-weight: bold;">
-              ${city.status === 'active' ? '🟢 Internet Ativa' : '🟡 Em Breve'}
+              🟢 Internet Ativa
             </div>
             <br>
             <button 
               onclick="window.open('https://wa.me/5586999999999?text=${encodeURIComponent(
-                city.status === 'active' 
-                  ? `Olá! Gostaria de contratar internet em ${city.name}. Podem me ajudar?`
-                  : `Olá! Tenho interesse na chegada da internet em ${city.name}. Quando estará disponível?`
+                `Olá! Gostaria de contratar internet em ${city.name}. Podem me ajudar?`
               )}', '_blank')"
               style="
                 margin-top: 10px;
@@ -177,7 +168,7 @@ const RealMap: React.FC = () => {
               onmouseover="this.style.backgroundColor='#1DA851'"
               onmouseout="this.style.backgroundColor='#25D366'"
             >
-              💬 ${city.status === 'active' ? 'Contratar Agora' : 'Demonstrar Interesse'}
+              💬 Contratar Agora
             </button>
           </div>
         `;
@@ -235,15 +226,11 @@ const RealMap: React.FC = () => {
         />
       </div>
 
-      {/* Legenda */}
-      <div className="grid grid-cols-2 gap-3 mb-6">
+      {/* Legenda - apenas Internet Ativa */}
+      <div className="flex justify-center mb-6">
         <div className="flex items-center space-x-3 p-4 bg-blue-800/80 rounded-xl border border-blue-600/50">
           <div className="w-5 h-5 bg-green-600 rounded-full border-2 border-white shadow-md"></div>
           <span className="text-sm font-semibold text-blue-100">🟢 Internet Ativa</span>
-        </div>
-        <div className="flex items-center space-x-3 p-4 bg-blue-800/80 rounded-xl border border-blue-600/50">
-          <div className="w-5 h-5 bg-orange-600 rounded-full border-2 border-white shadow-md"></div>
-          <span className="text-sm font-semibold text-blue-100">🟡 Chegando em 2025</span>
         </div>
       </div>
 
