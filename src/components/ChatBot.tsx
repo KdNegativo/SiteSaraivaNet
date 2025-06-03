@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import { MessageCircle, X, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
@@ -13,12 +13,9 @@ const ChatBot = () => {
       isBot: true
     }
   ]);
+  const [showOptions, setShowOptions] = useState(true);
 
   const faqOptions = [
-    {
-      question: "Quais são os planos disponíveis?",
-      answer: "Temos o plano 300MB por R$ 129,90/mês com SaraivaTV grátis incluído! Fibra óptica com instalação gratuita e suporte 24h."
-    },
     {
       question: "Como funciona a instalação?",
       answer: "A instalação é totalmente gratuita! Nossa equipe agenda um horário conveniente e realiza todo o processo em até 2 horas."
@@ -44,6 +41,7 @@ const ChatBot = () => {
       { id: Date.now(), text: faq.question, isBot: false },
       { id: Date.now() + 1, text: faq.answer, isBot: true }
     ]);
+    setShowOptions(false);
 
     if (faq.isWhatsApp) {
       setTimeout(() => {
@@ -55,12 +53,24 @@ const ChatBot = () => {
     }
   };
 
+  const handleBack = () => {
+    setMessages([
+      {
+        id: 1,
+        text: "Olá! Como posso ajudá-lo hoje? Escolha uma das opções abaixo:",
+        isBot: true
+      }
+    ]);
+    setShowOptions(true);
+  };
+
   return (
     <>
       {/* Chat Button */}
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-20 right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse"
+        className="fixed bottom-20 right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-2xl transition-all duration-300 hover:scale-110"
+        size="icon"
         aria-label="Abrir chat"
       >
         <MessageCircle className="w-6 h-6" />
@@ -72,9 +82,21 @@ const ChatBot = () => {
           <Card className="w-full h-full flex flex-col shadow-2xl border-0 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 flex justify-between items-center">
-              <div>
-                <h3 className="font-semibold">Assistente SaraivaNet</h3>
-                <p className="text-sm opacity-90">Online agora</p>
+              <div className="flex items-center gap-2">
+                {!showOptions && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={handleBack}
+                    className="text-white hover:bg-white/20 w-8 h-8"
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                  </Button>
+                )}
+                <div>
+                  <h3 className="font-semibold">Assistente SaraivaNet</h3>
+                  <p className="text-sm opacity-90">Online agora</p>
+                </div>
               </div>
               <Button
                 variant="ghost"
@@ -106,7 +128,7 @@ const ChatBot = () => {
               ))}
 
               {/* FAQ Options */}
-              {messages.length <= 2 && (
+              {showOptions && (
                 <div className="space-y-2 mt-4">
                   {faqOptions.map((faq, index) => (
                     <Button
