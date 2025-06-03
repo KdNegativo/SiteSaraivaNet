@@ -137,7 +137,7 @@ const RealMap: React.FC = () => {
       tileLayer.addTo(mapInstance.current);
       console.log('RealMap: Tiles adicionados');
 
-      // Calcular bounds para mostrar todas as cidades
+      // Calcular bounds para mostrar todas as cidades - FIXED: Added 'new' keyword
       const group = new L.LatLngBounds();
       
       // Adicionar marcadores das cidades
