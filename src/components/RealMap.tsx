@@ -31,15 +31,15 @@ const cities: City[] = [
   },
   {
     name: 'Colônia do Gurguéia',
-    lat: -8.1833,
-    lng: -42.7833,
+    lat: -8.1762,
+    lng: -43.2842,
     status: 'active',
     description: 'Internet fibra óptica disponível'
   },
   {
     name: 'Manoel Emídio',
-    lat: -7.8667,
-    lng: -42.9167,
+    lat: -7.8547,
+    lng: -43.5431,
     status: 'active',
     description: 'Cobertura completa de fibra óptica'
   },
