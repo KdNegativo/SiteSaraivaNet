@@ -502,7 +502,7 @@ const Index = () => {
             </div>
             <h2 className="text-5xl font-bold text-gray-800 mb-4">Sobre a SaraivaNet</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Há 5 anos conectando Eliseu Martins com o mundo digital. Somos uma empresa piauense 
+              Há 22 anos conectando Eliseu Martins com o mundo digital. Somos uma empresa piauense 
               comprometida em levar internet de qualidade para todos os lares e empresas da nossa cidade.
             </p>
           </div>
@@ -511,7 +511,7 @@ const Index = () => {
             <div className="animate-fade-in">
               <h3 className="text-3xl font-bold text-gray-800 mb-6">Nossa História</h3>
               <p className="text-gray-600 mb-6 text-lg">
-                Fundada em 2019 por empreendedores locais, a SaraivaNet nasceu do sonho 
+                Fundada em 2003 por empreendedores locais, a SaraivaNet nasceu do sonho 
                 de democratizar o acesso à internet de qualidade em Eliseu Martins.
               </p>
               <p className="text-gray-600 mb-6 text-lg">
@@ -543,7 +543,7 @@ const Index = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Award className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-3xl font-bold text-orange-500">5</div>
+                  <div className="text-3xl font-bold text-orange-500">22</div>
                   <div className="text-sm text-gray-600 font-medium">Anos de Experiência</div>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
@@ -563,12 +563,12 @@ const Index = () => {
               <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed">
                 Na SaraivaNet, acreditamos que internet não é apenas tecnologia, é conexão humana. É o avô vendo 
                 o neto pela primeira vez por videochamada, é o estudante acessando conhecimento, e o 
-                empreendedor expandindo seus negócios. Somos parte da sua história.
+                empreendedor expandindo seus negócios. Somos parte da sua história há mais de duas décadas.
               </p>
               <div className="text-center">
                 <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-lg">
                   <Heart className="w-6 h-6 mr-2" />
-                  Feito com amor no Piauí
+                  Feito com amor no Piauí desde 2003
                 </div>
               </div>
             </div>
@@ -713,12 +713,12 @@ const Index = () => {
                 <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">SaraivaNet</span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-                Conectando Eliseu Martins com o mundo há 5 anos. Internet de qualidade, 
+                Conectando Eliseu Martins com o mundo há 22 anos. Internet de qualidade, 
                 suporte especializado e compromisso com nossa comunidade.
               </p>
               <div className="flex items-center text-orange-400 bg-orange-900/20 px-4 py-2 rounded-full">
                 <Heart className="w-5 h-5 mr-2" />
-                <span className="font-medium">Feito com amor no Piauí</span>
+                <span className="font-medium">Feito com amor no Piauí desde 2003</span>
               </div>
             </div>
 
