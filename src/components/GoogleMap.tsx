@@ -85,12 +85,13 @@ const MapComponent: React.FC = () => {
   const [map, setMap] = useState<google.maps.Map>();
 
   const initMap = useCallback(() => {
-    if (ref.current && window.google && window.google.maps && !map) {
+    if (ref.current && window.google?.maps && !map) {
+      console.log('Inicializando Google Maps...');
       try {
         const newMap = new window.google.maps.Map(ref.current, {
           center: { lat: -8.0956, lng: -42.8764 },
           zoom: 13,
-          mapTypeId: 'roadmap', // Mudei para roadmap que funciona melhor
+          mapTypeId: 'roadmap',
           styles: [
             {
               featureType: 'poi',
@@ -101,7 +102,7 @@ const MapComponent: React.FC = () => {
         });
 
         // Adicionar área de cobertura
-        const coverageCircle = new window.google.maps.Circle({
+        new window.google.maps.Circle({
           strokeColor: '#ea580c',
           strokeOpacity: 0.8,
           strokeWeight: 2,
@@ -150,6 +151,7 @@ const MapComponent: React.FC = () => {
         });
 
         setMap(newMap);
+        console.log('Google Maps inicializado com sucesso!');
       } catch (error) {
         console.error('Erro ao inicializar o mapa:', error);
       }
@@ -157,7 +159,7 @@ const MapComponent: React.FC = () => {
   }, [ref, map]);
 
   React.useEffect(() => {
-    if (window.google && window.google.maps) {
+    if (window.google?.maps) {
       initMap();
     }
   }, [initMap]);
@@ -166,6 +168,8 @@ const MapComponent: React.FC = () => {
 };
 
 const render = (status: Status) => {
+  console.log('Status do Google Maps:', status);
+  
   switch (status) {
     case Status.LOADING:
       return (
@@ -179,16 +183,18 @@ const render = (status: Status) => {
           <div className="text-orange-600 text-lg font-semibold mb-4">Mapa Temporariamente Indisponível</div>
           <div className="text-gray-600 text-center max-w-md">
             <p className="mb-4">
-              Estamos tendo dificuldades para carregar o mapa no momento. 
-              Nossa cobertura continua disponível em toda Eliseu Martins!
+              Nossa cobertura continua disponível em toda Eliseu Martins! Veja abaixo as áreas atendidas:
             </p>
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <h4 className="font-semibold mb-2">Áreas Atendidas:</h4>
+              <h4 className="font-semibold mb-2">Áreas com Cobertura SaraivaNet:</h4>
               <ul className="text-sm space-y-1">
-                <li>• Centro de Eliseu Martins</li>
-                <li>• Todos os bairros da cidade</li>
-                <li>• Zona rural e interior</li>
-                <li>• Fazendas e sítios da região</li>
+                <li>🏢 Centro de Eliseu Martins</li>
+                <li>🏘️ Bairro São José</li>
+                <li>🏘️ Vila Nova</li>
+                <li>🌾 Zona Rural Norte</li>
+                <li>🌾 Zona Rural Sul</li>
+                <li>🚜 Fazenda Santa Maria</li>
+                <li>🌿 Sítio Boa Vista</li>
               </ul>
             </div>
           </div>
@@ -199,7 +205,7 @@ const render = (status: Status) => {
     default:
       return (
         <div className="w-full h-96 bg-gray-100 rounded-2xl flex items-center justify-center">
-          <div className="text-gray-500">Inicializando...</div>
+          <div className="text-gray-500">Inicializando mapa...</div>
         </div>
       );
   }
@@ -209,7 +215,7 @@ const GoogleMap: React.FC = () => {
   return (
     <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg border">
       <Wrapper 
-        apiKey="AIzaSyBFw0Qbyq9zTFTd-tUY6dpoWQ2Q9A6a5gM" 
+        apiKey="" 
         render={render}
         libraries={['places']}
         version="weekly"
