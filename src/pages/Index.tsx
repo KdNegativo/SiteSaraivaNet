@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Za
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import GoogleMap from "@/components/GoogleMap";
+import CoverageMap from "@/components/CoverageMap";
 import StatsCounter from "@/components/StatsCounter";
 import TestimonialCard from "@/components/TestimonialCard";
 
@@ -273,13 +273,13 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold text-gray-800 mb-6">Mapa Interativo do Google</h3>
+              <h3 className="text-3xl font-bold text-gray-800 mb-6">Mapa de Cobertura</h3>
               <p className="text-gray-600 mb-6 text-lg">
                 Clique nos pontos do mapa para ver detalhes da cobertura em cada região. 
                 Nossa rede de fibra óptica atende todo Eliseu Martins e zona rural!
               </p>
               
-              <GoogleMap />
+              <CoverageMap />
               
               {/* Legenda */}
               <div className="mt-6 grid grid-cols-2 gap-4">
