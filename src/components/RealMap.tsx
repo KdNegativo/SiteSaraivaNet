@@ -62,14 +62,6 @@ const RealMap: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<L.Map | null>(null);
 
-  const handleContact = (cityName: string, status: string) => {
-    const message = status === 'active' 
-      ? `Olá! Gostaria de saber mais sobre os planos de internet em ${cityName}`
-      : `Olá! Gostaria de demonstrar interesse na chegada da internet em ${cityName}`;
-    
-    window.open(`https://wa.me/5586999999999?text=${encodeURIComponent(message)}`, '_blank');
-  };
-
   const createCustomIcon = (status: string) => {
     const color = status === 'active' ? '#16a34a' : '#ea580c';
     return L.divIcon({
@@ -102,90 +94,127 @@ const RealMap: React.FC = () => {
   };
 
   useEffect(() => {
-    if (!mapRef.current || mapInstance.current) return;
+    console.log('RealMap: Iniciando useEffect');
+    
+    if (!mapRef.current) {
+      console.log('RealMap: mapRef.current não existe');
+      return;
+    }
+    
+    if (mapInstance.current) {
+      console.log('RealMap: mapInstance já existe, não criando novo');
+      return;
+    }
+
+    console.log('RealMap: Criando novo mapa');
 
     // Coordenadas centrais da região (Eliseu Martins)
-    const centerCoords: [number, number] = [-8.0969, -44.0597];
+    const centerCoords: [number, number] = [-8.0969, -42.8764];
 
-    // Inicializar o mapa
-    mapInstance.current = L.map(mapRef.current).setView(centerCoords, 10);
+    try {
+      // Inicializar o mapa
+      console.log('RealMap: Inicializando mapa em', centerCoords);
+      mapInstance.current = L.map(mapRef.current, {
+        center: centerCoords,
+        zoom: 10,
+        zoomControl: true,
+        scrollWheelZoom: true
+      });
 
-    // Adicionar camada do mapa
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors',
-      maxZoom: 18,
-    }).addTo(mapInstance.current);
+      console.log('RealMap: Mapa criado, adicionando tiles');
+      
+      // Adicionar camada do mapa
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 18,
+      }).addTo(mapInstance.current);
 
-    // Adicionar área de cobertura
-    const coverageCircle = L.circle(centerCoords, {
-      color: '#ea580c',
-      fillColor: '#fed7aa',
-      fillOpacity: 0.2,
-      radius: 25000,
-    }).addTo(mapInstance.current);
+      console.log('RealMap: Tiles adicionados, criando área de cobertura');
 
-    coverageCircle.bindPopup(`
-      <div style="text-align: center; padding: 10px;">
-        <h3 style="margin: 0 0 8px 0; color: #ea580c; font-weight: bold;">
-          Área de Cobertura SaraivaNet
-        </h3>
-        <p style="margin: 0; color: #666; font-size: 14px;">
-          Internet de fibra óptica disponível em toda esta região
-        </p>
-      </div>
-    `);
+      // Adicionar área de cobertura
+      const coverageCircle = L.circle(centerCoords, {
+        color: '#ea580c',
+        fillColor: '#fed7aa',
+        fillOpacity: 0.2,
+        radius: 25000,
+      }).addTo(mapInstance.current);
 
-    // Adicionar pontos das cidades
-    cities.forEach((city) => {
-      const marker = L.marker([city.lat, city.lng], {
-        icon: createCustomIcon(city.status)
-      }).addTo(mapInstance.current!);
-
-      const popupContent = `
-        <div style="text-align: center; padding: 15px; min-width: 200px;">
-          <h3 style="margin: 0 0 8px 0; color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; font-weight: bold;">
-            ${city.name}
+      coverageCircle.bindPopup(`
+        <div style="text-align: center; padding: 10px;">
+          <h3 style="margin: 0 0 8px 0; color: #ea580c; font-weight: bold;">
+            Área de Cobertura SaraivaNet
           </h3>
-          <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">
-            ${city.description}
+          <p style="margin: 0; color: #666; font-size: 14px;">
+            Internet de fibra óptica disponível em toda esta região
           </p>
-          <div style="margin: 8px 0; padding: 4px 8px; background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; color: white; border-radius: 12px; font-size: 12px; display: inline-block;">
-            ${city.status === 'active' ? 'Internet Ativa' : 'Em Breve'}
-          </div>
-          <br>
-          <button 
-            onclick="window.open('https://wa.me/5586999999999?text=${encodeURIComponent(
-              city.status === 'active' 
-                ? `Olá! Gostaria de saber mais sobre os planos de internet em ${city.name}`
-                : `Olá! Gostaria de demonstrar interesse na chegada da internet em ${city.name}`
-            )}', '_blank')"
-            style="
-              margin-top: 8px;
-              padding: 8px 12px;
-              background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'};
-              color: white;
-              border: none;
-              border-radius: 6px;
-              cursor: pointer;
-              font-size: 12px;
-              font-weight: bold;
-            "
-          >
-            ${city.status === 'active' ? `Contratar em ${city.name}` : 'Demonstrar Interesse'}
-          </button>
         </div>
-      `;
+      `);
 
-      marker.bindPopup(popupContent);
-    });
+      console.log('RealMap: Área de cobertura criada, adicionando marcadores das cidades');
+
+      // Adicionar pontos das cidades
+      cities.forEach((city, index) => {
+        console.log(`RealMap: Adicionando marcador para ${city.name} em [${city.lat}, ${city.lng}]`);
+        
+        const marker = L.marker([city.lat, city.lng], {
+          icon: createCustomIcon(city.status)
+        }).addTo(mapInstance.current!);
+
+        const popupContent = `
+          <div style="text-align: center; padding: 15px; min-width: 200px;">
+            <h3 style="margin: 0 0 8px 0; color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; font-weight: bold;">
+              ${city.name}
+            </h3>
+            <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">
+              ${city.description}
+            </p>
+            <div style="margin: 8px 0; padding: 4px 8px; background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; color: white; border-radius: 12px; font-size: 12px; display: inline-block;">
+              ${city.status === 'active' ? 'Internet Ativa' : 'Em Breve'}
+            </div>
+            <br>
+            <button 
+              onclick="window.open('https://wa.me/5586999999999?text=${encodeURIComponent(
+                city.status === 'active' 
+                  ? `Olá! Gostaria de saber mais sobre os planos de internet em ${city.name}`
+                  : `Olá! Gostaria de demonstrar interesse na chegada da internet em ${city.name}`
+              )}', '_blank')"
+              style="
+                margin-top: 8px;
+                padding: 8px 12px;
+                background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'};
+                color: white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 12px;
+                font-weight: bold;
+              "
+            >
+              ${city.status === 'active' ? `Contratar em ${city.name}` : 'Demonstrar Interesse'}
+            </button>
+          </div>
+        `;
+
+        marker.bindPopup(popupContent);
+      });
+
+      console.log('RealMap: Todos os marcadores adicionados com sucesso');
+      console.log('RealMap: Mapa completamente inicializado');
+
+    } catch (error) {
+      console.error('RealMap: Erro ao criar mapa:', error);
+    }
 
     return () => {
+      console.log('RealMap: Limpando mapa no unmount');
       if (mapInstance.current) {
         mapInstance.current.remove();
         mapInstance.current = null;
       }
     };
   }, []);
+
+  console.log('RealMap: Renderizando componente');
 
   return (
     <div className="w-full">
@@ -196,7 +225,7 @@ const RealMap: React.FC = () => {
       
       {/* Mapa Real */}
       <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg border mb-6">
-        <div ref={mapRef} className="w-full h-full" />
+        <div ref={mapRef} className="w-full h-full" style={{ minHeight: '384px' }} />
       </div>
 
       {/* Legenda */}
