@@ -16,7 +16,7 @@ interface City {
   name: string;
   lat: number;
   lng: number;
-  status: 'active' | 'coming-soon';
+  status: 'active';
   description: string;
 }
 
@@ -50,7 +50,7 @@ const RealMap: React.FC = () => {
   const mapInstance = useRef<L.Map | null>(null);
 
   const createCustomIcon = (status: string) => {
-    const color = status === 'active' ? '#16a34a' : '#ea580c';
+    const color = '#16a34a'; // verde para todas as cidades ativas
     return L.divIcon({
       className: 'custom-marker',
       html: `
@@ -139,13 +139,13 @@ const RealMap: React.FC = () => {
 
         const popupContent = `
           <div style="text-align: center; padding: 15px; min-width: 200px; font-family: Arial, sans-serif;">
-            <h3 style="margin: 0 0 10px 0; color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; font-weight: bold; font-size: 16px;">
+            <h3 style="margin: 0 0 10px 0; color: #16a34a; font-weight: bold; font-size: 16px;">
               📍 ${city.name}
             </h3>
             <p style="margin: 0 0 12px 0; color: #555; font-size: 14px; line-height: 1.4;">
               ${city.description}
             </p>
-            <div style="margin: 10px 0; padding: 6px 12px; background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; color: white; border-radius: 15px; font-size: 12px; display: inline-block; font-weight: bold;">
+            <div style="margin: 10px 0; padding: 6px 12px; background-color: #16a34a; color: white; border-radius: 15px; font-size: 12px; display: inline-block; font-weight: bold;">
               🟢 Internet Ativa
             </div>
             <br>

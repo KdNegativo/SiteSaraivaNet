@@ -354,10 +354,10 @@ const Index = () => {
 
             <AnimatedSection animation="slide-right">
               <div>
-                <h3 className="text-3xl font-bold text-white mb-4">Expandindo Nossa Rede</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">Cidades Conectadas</h3>
                 <p className="text-blue-200 mb-6">
-                  A SaraivaNet está em constante crescimento! Nossa missão é conectar todas as cidades 
-                  da região sul do Piauí com internet de fibra óptica de qualidade.
+                  A SaraivaNet atende atualmente 3 cidades na região sul do Piauí com internet 
+                  de fibra óptica de alta qualidade e o app SaraivaTV gratuito.
                 </p>
 
                 <div className="space-y-4 mb-6">
@@ -366,8 +366,8 @@ const Index = () => {
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">4 Cidades Conectadas</h4>
-                      <p className="text-blue-200 text-sm">Eliseu Martins, Colônia do Gurguéia, Manoel Emídio e Jerumenha</p>
+                      <h4 className="font-bold text-white">3 Cidades Conectadas</h4>
+                      <p className="text-blue-200 text-sm">Eliseu Martins, Colônia do Gurguéia e Manoel Emídio</p>
                     </div>
                   </div>
 
@@ -376,18 +376,18 @@ const Index = () => {
                       <Wifi className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Canto do Buriti em Breve</h4>
-                      <p className="text-blue-200 text-sm">Expansão prevista para 2025</p>
+                      <h4 className="font-bold text-white">Internet Fibra Óptica</h4>
+                      <p className="text-blue-200 text-sm">300MB de velocidade em todas as cidades</p>
                     </div>
                   </div>
 
                   <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl border border-blue-600">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
-                      <Zap className="w-6 h-6 text-white" />
+                      <Tv className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Mesma Qualidade</h4>
-                      <p className="text-blue-200 text-sm">Internet fibra óptica em todas as cidades</p>
+                      <h4 className="font-bold text-white">SaraivaTV Incluído</h4>
+                      <p className="text-blue-200 text-sm">App gratuito com canais de TV e rádios</p>
                     </div>
                   </div>
                 </div>
@@ -531,7 +531,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h2 className="text-5xl font-bold text-white mb-4">Números Que Falam Por Si</h2>
           <p className="text-2xl text-white/90 mb-12">
-            Resultados conquistados com dedicação e compromisso com Eliseu Martins
+            Resultados conquistados com dedicação e compromisso com a região
           </p>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -549,9 +549,9 @@ const Index = () => {
               <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <MapPin className="w-10 h-10 text-white" />
               </div>
-              <StatsCounter endValue={15} label="Bairros Atendidos" />
+              <StatsCounter endValue={3} label="Cidades Atendidas" />
               <div className="text-white/80 mt-2 text-lg">
-                Cobertura em toda Eliseu Martins
+                Cobertura no sul do Piauí
               </div>
             </div>
 
