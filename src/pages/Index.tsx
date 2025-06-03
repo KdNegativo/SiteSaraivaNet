@@ -721,7 +721,7 @@ const Index = () => {
             <Button className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
               📱 WhatsApp
             </Button>
-            <Button className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-4 rounded-2xl text-lg font-bold shadow-xl transition-all duration-300 transform hover:scale-105">
+            <Button className="bg-white text-blue-600 hover:bg-blue-50 border-2 border-white px-12 py-4 rounded-2xl text-lg font-bold shadow-xl transition-all duration-300 transform hover:scale-105">
               📞 Ligue Agora
             </Button>
           </div>
