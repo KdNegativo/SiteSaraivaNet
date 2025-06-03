@@ -6,15 +6,13 @@ interface StatsCounterProps {
   label: string;
   suffix?: string;
   duration?: number;
-  icon?: React.ReactNode;
 }
 
 const StatsCounter: React.FC<StatsCounterProps> = ({ 
   endValue, 
   label, 
   suffix = '', 
-  duration = 2000,
-  icon 
+  duration = 2000 
 }) => {
   const [count, setCount] = useState(0);
 
@@ -36,11 +34,6 @@ const StatsCounter: React.FC<StatsCounterProps> = ({
 
   return (
     <div className="text-center">
-      {icon && (
-        <div className="flex justify-center mb-4 text-orange-400">
-          {icon}
-        </div>
-      )}
       <div className="text-4xl font-bold mb-2 text-white">
         {count}{suffix}
       </div>

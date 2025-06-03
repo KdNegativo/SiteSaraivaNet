@@ -4,8 +4,8 @@ import { Card } from '@/components/ui/card';
 
 interface TestimonialCardProps {
   name: string;
-  age: string | number;
-  location?: string;
+  age: string;
+  location: string;
   testimonial: string;
   initials: string;
 }
@@ -34,10 +34,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </p>
       <div>
         <div className="font-semibold text-gray-800">{name}</div>
-        <div className="text-sm text-orange-500">{age} anos</div>
-        {location && (
-          <div className="text-sm text-gray-500">{location}</div>
-        )}
+        <div className="text-sm text-orange-500">{age}</div>
+        <div className="text-sm text-gray-500">{location}</div>
       </div>
     </Card>
   );
