@@ -1,6 +1,16 @@
 
-import React, { useState } from 'react';
-import { MapPin, Wifi, Clock, Phone } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import { Phone } from 'lucide-react';
+
+// Fix para os ícones padrão do Leaflet
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
 
 interface City {
   name: string;
@@ -49,11 +59,8 @@ const cities: City[] = [
 ];
 
 const RealMap: React.FC = () => {
-  const [selectedCity, setSelectedCity] = useState<City | null>(null);
-
-  const handleCityClick = (city: City) => {
-    setSelectedCity(city);
-  };
+  const mapRef = useRef<HTMLDivElement>(null);
+  const mapInstance = useRef<L.Map | null>(null);
 
   const handleContact = (cityName: string, status: string) => {
     const message = status === 'active' 
@@ -63,124 +70,154 @@ const RealMap: React.FC = () => {
     window.open(`https://wa.me/5586999999999?text=${encodeURIComponent(message)}`, '_blank');
   };
 
+  const createCustomIcon = (status: string) => {
+    const color = status === 'active' ? '#16a34a' : '#ea580c';
+    return L.divIcon({
+      className: 'custom-marker',
+      html: `
+        <div style="
+          background-color: ${color};
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          border: 3px solid white;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+          position: relative;
+        ">
+          <div style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+          "></div>
+        </div>
+      `,
+      iconSize: [25, 25],
+      iconAnchor: [12, 12],
+    });
+  };
+
+  useEffect(() => {
+    if (!mapRef.current || mapInstance.current) return;
+
+    // Coordenadas centrais da região (Eliseu Martins)
+    const centerCoords: [number, number] = [-8.0969, -44.0597];
+
+    // Inicializar o mapa
+    mapInstance.current = L.map(mapRef.current).setView(centerCoords, 10);
+
+    // Adicionar camada do mapa
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 18,
+    }).addTo(mapInstance.current);
+
+    // Adicionar área de cobertura
+    const coverageCircle = L.circle(centerCoords, {
+      color: '#ea580c',
+      fillColor: '#fed7aa',
+      fillOpacity: 0.2,
+      radius: 25000,
+    }).addTo(mapInstance.current);
+
+    coverageCircle.bindPopup(`
+      <div style="text-align: center; padding: 10px;">
+        <h3 style="margin: 0 0 8px 0; color: #ea580c; font-weight: bold;">
+          Área de Cobertura SaraivaNet
+        </h3>
+        <p style="margin: 0; color: #666; font-size: 14px;">
+          Internet de fibra óptica disponível em toda esta região
+        </p>
+      </div>
+    `);
+
+    // Adicionar pontos das cidades
+    cities.forEach((city) => {
+      const marker = L.marker([city.lat, city.lng], {
+        icon: createCustomIcon(city.status)
+      }).addTo(mapInstance.current!);
+
+      const popupContent = `
+        <div style="text-align: center; padding: 15px; min-width: 200px;">
+          <h3 style="margin: 0 0 8px 0; color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; font-weight: bold;">
+            ${city.name}
+          </h3>
+          <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">
+            ${city.description}
+          </p>
+          <div style="margin: 8px 0; padding: 4px 8px; background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'}; color: white; border-radius: 12px; font-size: 12px; display: inline-block;">
+            ${city.status === 'active' ? 'Internet Ativa' : 'Em Breve'}
+          </div>
+          <br>
+          <button 
+            onclick="window.open('https://wa.me/5586999999999?text=${encodeURIComponent(
+              city.status === 'active' 
+                ? `Olá! Gostaria de saber mais sobre os planos de internet em ${city.name}`
+                : `Olá! Gostaria de demonstrar interesse na chegada da internet em ${city.name}`
+            )}', '_blank')"
+            style="
+              margin-top: 8px;
+              padding: 8px 12px;
+              background-color: ${city.status === 'active' ? '#16a34a' : '#ea580c'};
+              color: white;
+              border: none;
+              border-radius: 6px;
+              cursor: pointer;
+              font-size: 12px;
+              font-weight: bold;
+            "
+          >
+            ${city.status === 'active' ? `Contratar em ${city.name}` : 'Demonstrar Interesse'}
+          </button>
+        </div>
+      `;
+
+      marker.bindPopup(popupContent);
+    });
+
+    return () => {
+      if (mapInstance.current) {
+        mapInstance.current.remove();
+        mapInstance.current = null;
+      }
+    };
+  }, []);
+
   return (
     <div className="w-full">
       <div className="mb-4 text-center">
         <h3 className="text-2xl font-bold text-white mb-2">Mapa de Cobertura SaraivaNet</h3>
-        <p className="text-blue-200">Veja onde nossa internet está disponível</p>
+        <p className="text-blue-200">Mapa interativo com nossas áreas de cobertura</p>
       </div>
       
-      {/* Mapa Visual Simples */}
-      <div className="relative bg-gradient-to-br from-blue-900 to-purple-900 rounded-2xl p-8 mb-6 min-h-[400px] shadow-2xl border border-blue-600">
-        <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
-        
-        {/* Região Central */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full">
-          <div className="text-center mb-8">
-            <h4 className="text-xl font-bold text-white mb-2">Região do Sul do Piauí</h4>
-            <p className="text-blue-200 text-sm">Clique nas cidades para ver detalhes</p>
-          </div>
-          
-          {/* Grid de Cidades */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-4xl">
-            {cities.map((city, index) => (
-              <div
-                key={city.name}
-                onClick={() => handleCityClick(city)}
-                className={`
-                  relative p-4 rounded-xl cursor-pointer transition-all duration-300 transform hover:scale-105
-                  ${city.status === 'active' 
-                    ? 'bg-green-500/20 border-2 border-green-400 hover:bg-green-500/30' 
-                    : 'bg-orange-500/20 border-2 border-orange-400 hover:bg-orange-500/30'
-                  }
-                  ${selectedCity?.name === city.name ? 'ring-4 ring-white/50 scale-105' : ''}
-                `}
-              >
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className={`w-3 h-3 rounded-full ${
-                    city.status === 'active' ? 'bg-green-400 animate-pulse' : 'bg-orange-400 animate-pulse'
-                  }`}></div>
-                  <MapPin className="w-4 h-4 text-white" />
-                </div>
-                
-                <h5 className="font-bold text-white text-sm mb-1">{city.name}</h5>
-                <p className="text-xs text-blue-200 opacity-90">{city.description}</p>
-                
-                <div className={`mt-2 text-xs px-2 py-1 rounded-full inline-block font-medium ${
-                  city.status === 'active' 
-                    ? 'bg-green-400 text-green-900' 
-                    : 'bg-orange-400 text-orange-900'
-                }`}>
-                  {city.status === 'active' ? 'Ativa' : 'Em Breve'}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Mapa Real */}
+      <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg border mb-6">
+        <div ref={mapRef} className="w-full h-full" />
       </div>
-
-      {/* Detalhes da Cidade Selecionada */}
-      {selectedCity && (
-        <div className="bg-white rounded-2xl p-6 shadow-lg mb-6 border-2 border-blue-200">
-          <div className="flex items-start justify-between mb-4">
-            <div>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">{selectedCity.name}</h4>
-              <p className="text-gray-600">{selectedCity.description}</p>
-            </div>
-            <button
-              onClick={() => setSelectedCity(null)}
-              className="text-gray-400 hover:text-gray-600 text-xl font-bold"
-            >
-              ×
-            </button>
-          </div>
-          
-          <div className="flex items-center space-x-2 mb-4">
-            <div className={`w-3 h-3 rounded-full ${
-              selectedCity.status === 'active' ? 'bg-green-500' : 'bg-orange-500'
-            }`}></div>
-            <span className={`font-medium ${
-              selectedCity.status === 'active' ? 'text-green-600' : 'text-orange-600'
-            }`}>
-              {selectedCity.status === 'active' ? 'Internet Ativa' : 'Em Breve'}
-            </span>
-          </div>
-          
-          <button
-            onClick={() => handleContact(selectedCity.name, selectedCity.status)}
-            className={`w-full py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300 ${
-              selectedCity.status === 'active'
-                ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700'
-                : 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700'
-            }`}
-          >
-            <Phone className="w-4 h-4 inline mr-2" />
-            {selectedCity.status === 'active' ? `Contratar em ${selectedCity.name}` : 'Demonstrar Interesse'}
-          </button>
-        </div>
-      )}
 
       {/* Legenda */}
       <div className="grid grid-cols-2 gap-3 mb-6">
         <div className="flex items-center space-x-2 p-3 bg-blue-800 rounded-lg border border-blue-600">
-          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-          <Wifi className="w-4 h-4 text-blue-200" />
+          <div className="w-4 h-4 bg-green-600 rounded-full border-2 border-white"></div>
           <span className="text-sm font-semibold text-blue-200">Internet Ativa</span>
         </div>
         <div className="flex items-center space-x-2 p-3 bg-blue-800 rounded-lg border border-blue-600">
-          <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
-          <Clock className="w-4 h-4 text-blue-200" />
+          <div className="w-4 h-4 bg-orange-600 rounded-full border-2 border-white"></div>
           <span className="text-sm font-semibold text-blue-200">Em Breve</span>
         </div>
       </div>
 
-      {/* Informações Adicionais */}
+      {/* Informações */}
       <div className="p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white text-center">
         <p className="text-sm font-medium mb-2">
-          🗺️ <strong>Mapa Interativo de Cobertura</strong>
+          🗺️ <strong>Mapa Interativo Real</strong>
         </p>
         <p className="text-xs opacity-90">
-          Clique nas cidades para ver detalhes e entrar em contato
+          Clique nos marcadores para ver detalhes e entrar em contato
         </p>
       </div>
     </div>
