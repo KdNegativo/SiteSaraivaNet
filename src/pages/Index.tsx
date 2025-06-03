@@ -329,86 +329,58 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Coverage Map Section */}
-      <section id="cobertura" className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-16">
-        <div className="max-w-7xl mx-auto">
-          <AnimatedSection animation="fade-up">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <MapPin className="w-4 h-4 mr-2" />
-                Cidades Atendidas
+      {/* Área de Cobertura */}
+      <AnimatedSection className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              🗺️ Nossa Área de Cobertura
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Levamos internet de fibra óptica de alta qualidade para toda a região sul do Piauí
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <h3 className="text-2xl font-bold mb-6">🏙️ Cidades Atendidas</h3>
+              <div className="space-y-4">
+                {[
+                  { name: "Eliseu Martins", status: "Cobertura Completa" },
+                  { name: "Colônia do Gurguéia", status: "Internet Ativa" },
+                  { name: "Manoel Emídio", status: "Fibra Óptica" },
+                  { name: "Canavieira", status: "Alta Velocidade" },
+                  { name: "Jerumenha", status: "Premium TV" }
+                ].map((city, index) => (
+                  <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <div>
+                      <div className="font-semibold">{city.name}</div>
+                      <div className="text-sm text-blue-200">{city.status}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <h2 className="text-5xl font-bold mb-4">
-                Nossa <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">Cobertura</span>
-              </h2>
-              <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-                Levamos internet de fibra óptica para cidades da região sul do Piauí, conectando mais famílias a cada dia.
-              </p>
             </div>
-          </AnimatedSection>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            <AnimatedSection animation="slide-left">
+            <div>
               <RealMap />
-            </AnimatedSection>
+            </div>
+          </div>
 
-            <AnimatedSection animation="slide-right">
-              <div>
-                <h3 className="text-3xl font-bold text-white mb-4">Cidades Conectadas</h3>
-                <p className="text-blue-200 mb-6">
-                  A SaraivaNet atende atualmente 3 cidades na região sul do Piauí com internet 
-                  de fibra óptica de alta qualidade e o app SaraivaTV gratuito.
-                </p>
-
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl border border-blue-600">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
-                      <CheckCircle className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white">3 Cidades Conectadas</h4>
-                      <p className="text-blue-200 text-sm">Eliseu Martins, Colônia do Gurguéia e Manoel Emídio</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl border border-blue-600">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
-                      <Wifi className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white">Internet Fibra Óptica</h4>
-                      <p className="text-blue-200 text-sm">300MB de velocidade em todas as cidades</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl border border-blue-600">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
-                      <Tv className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white">SaraivaTV Incluído</h4>
-                      <p className="text-blue-200 text-sm">App gratuito com canais de TV e rádios</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-6 text-white">
-                  <h4 className="text-xl font-bold mb-3">Sua Cidade Não Está na Lista?</h4>
-                  <p className="mb-4 opacity-90">
-                    Demonstre interesse! Quanto mais pessoas de uma cidade demonstrarem interesse, mais rápido chegamos lá.
-                  </p>
-                  <Button 
-                    onClick={handleWhatsAppClick}
-                    className="bg-white text-orange-500 hover:bg-gray-100 font-bold px-6 py-2 rounded-lg"
-                  >
-                    💬 Demonstrar Interesse
-                  </Button>
-                </div>
-              </div>
-            </AnimatedSection>
+          <div className="text-center">
+            <a
+              href="https://wa.me/5586999999999?text=Olá! Gostaria de saber sobre a disponibilidade da internet SaraivaNet na minha região."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <span>💬</span>
+              <span>Verificar Disponibilidade</span>
+            </a>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* SaraivaTV Features Section */}
       <section className="py-24 px-6 bg-gradient-to-b from-white to-orange-50 dark:from-gray-900 dark:to-gray-800">

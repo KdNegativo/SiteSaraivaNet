@@ -42,6 +42,20 @@ const cities: City[] = [
     lng: -43.8719,
     status: 'active',
     description: 'Cobertura completa de fibra óptica'
+  },
+  {
+    name: 'Canavieira',
+    lat: -7.70000,
+    lng: -43.7167,
+    status: 'active',
+    description: 'Internet fibra óptica de alta velocidade'
+  },
+  {
+    name: 'Jerumenha',
+    lat: -7.07806,
+    lng: -43.5578,
+    status: 'active',
+    description: 'Conectividade premium com SaraivaTV'
   }
 ];
 
