@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -31,34 +32,64 @@ const Index = () => {
       <ChatBot />
       
       {/* Header */}
-      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 sticky top-0 z-50 transition-colors duration-500">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-              <Wifi className="w-5 h-5 text-orange-600" />
+      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-4 border-b-4 border-orange-700 dark:border-gray-700 sticky top-0 z-50 transition-colors duration-500">
+        <div className="max-w-7xl mx-auto">
+          {/* Mobile Layout */}
+          <div className="md:hidden">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                  <Wifi className="w-5 h-5 text-orange-600" />
+                </div>
+                <div>
+                  <span className="text-xl font-bold text-white">SaraivaNet</span>
+                  <div className="text-xs text-orange-100 font-medium flex items-center">
+                    <MapPin className="w-3 h-3 mr-1" />
+                    Eliseu Martins - PI
+                  </div>
+                </div>
+              </div>
+              <ThemeToggle />
             </div>
-            <div>
-              <span className="text-2xl font-bold text-white">SaraivaNet</span>
-              <div className="text-xs text-orange-100 font-medium flex items-center">
-                <MapPin className="w-3 h-3 mr-1" />
-                Eliseu Martins - PI
+            
+            {/* Phone number on its own line for mobile */}
+            <div className="flex justify-center">
+              <div className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-4 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg">
+                <Phone className="w-4 h-4" />
+                <span className="font-semibold text-sm">(89) 99439-5789</span>
               </div>
             </div>
           </div>
-          
-          <nav className="hidden md:flex items-center space-x-6">
-            <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-            <a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-            <a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-            <a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-            <a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
-          </nav>
 
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <div className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-4 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg hover:scale-105 transform">
-              <Phone className="w-4 h-4" />
-              <span className="font-semibold">(89) 99439-5789</span>
+          {/* Desktop Layout */}
+          <div className="hidden md:flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                <Wifi className="w-5 h-5 text-orange-600" />
+              </div>
+              <div>
+                <span className="text-2xl font-bold text-white">SaraivaNet</span>
+                <div className="text-xs text-orange-100 font-medium flex items-center">
+                  <MapPin className="w-3 h-3 mr-1" />
+                  Eliseu Martins - PI
+                </div>
+              </div>
+            </div>
+            
+            <nav className="flex items-center space-x-6">
+              <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
+              <a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
+              <a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
+              <a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
+              <a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
+            </nav>
+
+            <div className="flex items-center space-x-4">
+              <ThemeToggle />
+              <div className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-4 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg hover:scale-105 transform">
+                <Phone className="w-4 h-4" />
+                <span className="font-semibold">(89) 99439-5789</span>
+              </div>
             </div>
           </div>
         </div>
