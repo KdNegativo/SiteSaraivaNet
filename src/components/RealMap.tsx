@@ -25,8 +25,8 @@ const coveragePoints: CoveragePoint[] = [
   {
     id: '1',
     name: 'Centro de Eliseu Martins',
-    lat: -8.1575,
-    lng: -43.1415,
+    lat: -8.0833,
+    lng: -43.6333,
     type: 'centro',
     description: 'Cobertura completa no centro da cidade com velocidade máxima'
   }
@@ -71,8 +71,8 @@ const RealMap: React.FC = () => {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Coordenadas corretas de Eliseu Martins - PI conforme mostrado na imagem
-    const map = L.map(mapRef.current).setView([-8.1575, -43.1415], 14);
+    // Coordenadas corretas de Eliseu Martins - PI conforme a imagem enviada
+    const map = L.map(mapRef.current).setView([-8.0833, -43.6333], 14);
 
     // Adicionar camada do OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -111,7 +111,7 @@ const RealMap: React.FC = () => {
     });
 
     // Adicionar círculo de cobertura principal
-    L.circle([-8.1575, -43.1415], {
+    L.circle([-8.0833, -43.6333], {
       color: '#f97316',
       fillColor: '#fed7aa',
       fillOpacity: 0.3,
