@@ -44,13 +44,6 @@ const cities: City[] = [
     description: 'Cobertura completa de fibra óptica'
   },
   {
-    name: 'Jerumenha',
-    lat: -8.0667,
-    lng: -42.6333,
-    status: 'active',
-    description: 'Internet de alta velocidade'
-  },
-  {
     name: 'Canto do Buriti',
     lat: -8.1167,
     lng: -42.9500,
@@ -128,8 +121,8 @@ const RealMap: React.FC = () => {
 
       console.log('RealMap: Mapa criado, adicionando camada de tiles');
       
-      // Adicionar tiles do OpenStreetMap
-      const tileLayer = L.tileLayer('https://{s}.tile.openstreetMap.org/{z}/{x}/{y}.png', {
+      // Adicionar tiles do OpenStreetMap - FIXED: URL corrigida
+      const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         maxZoom: 18,
       });
@@ -137,8 +130,8 @@ const RealMap: React.FC = () => {
       tileLayer.addTo(mapInstance.current);
       console.log('RealMap: Tiles adicionados');
 
-      // Calcular bounds para mostrar todas as cidades - FIXED: Use latLngBounds factory function
-      const group = L.latLngBounds([]);
+      // Criar array de coordenadas para calcular bounds
+      const coordinates: [number, number][] = [];
       
       // Adicionar marcadores das cidades
       cities.forEach((city) => {
@@ -149,7 +142,7 @@ const RealMap: React.FC = () => {
         });
         
         marker.addTo(mapInstance.current!);
-        group.extend([city.lat, city.lng]);
+        coordinates.push([city.lat, city.lng]);
 
         const popupContent = `
           <div style="text-align: center; padding: 15px; min-width: 200px; font-family: Arial, sans-serif;">
@@ -195,9 +188,12 @@ const RealMap: React.FC = () => {
         });
       });
 
-      // Ajustar a visualização para mostrar todas as cidades
-      if (group.isValid()) {
-        mapInstance.current.fitBounds(group, {
+      // Ajustar a visualização para mostrar todas as cidades - FIXED: Método simplificado
+      if (coordinates.length > 0) {
+        const group = L.featureGroup(cities.map((city) => 
+          L.marker([city.lat, city.lng])
+        ));
+        mapInstance.current.fitBounds(group.getBounds(), {
           padding: [20, 20],
           maxZoom: 12
         });
