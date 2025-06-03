@@ -31,7 +31,7 @@ const Index = () => {
       <ChatBot />
       
       {/* Header */}
-      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-4 border-b-4 border-orange-700 dark:border-gray-700 sticky top-0 z-50 transition-colors duration-500">
+      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-4 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
         <div className="max-w-7xl mx-auto">
           {/* Mobile Layout */}
           <div className="md:hidden">
