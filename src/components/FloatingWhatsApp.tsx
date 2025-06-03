@@ -16,7 +16,7 @@ const FloatingWhatsApp = () => {
       <img 
         src="/lovable-uploads/981f602c-b0d2-4161-8119-dfd91ef1c234.png" 
         alt="WhatsApp" 
-        className="w-14 h-14"
+        className="w-12 h-12"
       />
     </button>
   );
