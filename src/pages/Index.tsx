@@ -5,7 +5,6 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import RealMap from "@/components/RealMap";
 import StatsCounter from "@/components/StatsCounter";
 import TestimonialCard from "@/components/TestimonialCard";
-import CityMap from "@/components/CityMap";
 
 const Index = () => {
   return (
@@ -272,28 +271,9 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">Mapa de Cidades Atendidas</h3>
-              <p className="text-blue-200 mb-4">
-                Veja no mapa todas as cidades onde a SaraivaNet já chegou! 
-                Clique em cada cidade para ver detalhes da cobertura e planos disponíveis.
-              </p>
-              
-              <div className="shadow-2xl rounded-2xl overflow-hidden border border-blue-600">
-                <CityMap />
-              </div>
-              
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                <div className="flex items-center space-x-2 p-2 bg-blue-800 rounded-lg border border-blue-600">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-blue-200">Internet Ativa</span>
-                </div>
-                <div className="flex items-center space-x-2 p-2 bg-blue-800 rounded-lg border border-blue-600">
-                  <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold text-blue-200">Em Breve</span>
-                </div>
-              </div>
+              <RealMap />
             </div>
 
             <div>
