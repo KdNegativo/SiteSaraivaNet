@@ -22,6 +22,7 @@ const Index = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Início</a>
             <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Planos</a>
+            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Cobertura</a>
             <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Sobre</a>
             <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Contato</a>
           </nav>
@@ -158,92 +159,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section */}
+      {/* Plans Section - Single Plan */}
       <section className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-800 mb-6">Escolha Seu Plano</h2>
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">Nosso Plano Completo</h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Todos os planos incluem o app <span className="text-orange-500 font-semibold">SaraivaTV gratuito</span> para assistir TV no celular.
+              Um plano que atende todas as suas necessidades com o app <span className="text-orange-500 font-semibold">SaraivaTV gratuito</span> incluído.
             </p>
             <div className="inline-flex items-center bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-6 py-3 rounded-full font-medium">
               🎉 3 meses com desconto especial!
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Basic Plan */}
-            <Card className="relative transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Wifi className="w-10 h-10 text-orange-500" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Plano Básico</h3>
-                  <div className="text-4xl font-bold text-orange-500 mt-4">100 MB</div>
-                  <div className="text-sm text-gray-500 line-through mt-2">R$ 119,90</div>
-                  <div className="text-5xl font-bold text-gray-800 mt-3">
-                    R$ 89,90<span className="text-lg font-normal">/mês</span>
-                  </div>
-                  <div className="text-sm text-gray-600 mt-2">Ideal para uso básico</div>
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Internet 100MB</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>App SaraivaTV incluído</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Canais de TV aberta</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Rádios locais</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Wi-Fi grátis</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Suporte 24h</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Instalação gratuita</span>
-                  </li>
-                </ul>
-
-                <Button variant="outline" className="w-full border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-3 rounded-xl transition-all">
-                  Contratar Agora →
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Family Plan - Most Popular */}
-            <Card className="relative border-4 border-orange-500 transform scale-110 shadow-2xl">
+          <div className="flex justify-center">
+            {/* Single Plan Card */}
+            <Card className="relative border-4 border-orange-500 shadow-2xl max-w-lg w-full">
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
                 <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-full text-sm font-bold shadow-lg">
-                  ⭐ MAIS POPULAR
+                  ⭐ PLANO COMPLETO
                 </div>
               </div>
               <CardContent className="p-8">
@@ -251,7 +185,7 @@ const Index = () => {
                   <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <Users className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Plano Família</h3>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Internet + SaraivaTV</h3>
                   <div className="text-4xl font-bold text-orange-500 mt-4">300 MB</div>
                   <div className="text-sm text-gray-500 line-through mt-2">R$ 169,90</div>
                   <div className="text-5xl font-bold text-gray-800 mt-3">
@@ -265,37 +199,43 @@ const Index = () => {
                     <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span>Internet 300MB</span>
+                    <span>Internet 300MB fibra óptica</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span>App SaraivaTV Premium</span>
+                    <span>App SaraivaTV Premium incluído</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span>Todos os canais disponíveis</span>
+                    <span>Todos os canais de TV disponíveis</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span>Rádios nacionais</span>
+                    <span>Rádios nacionais e locais</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span>Wi-Fi potente</span>
+                    <span>Wi-Fi potente e estável</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span>Suporte prioritário</span>
+                    <span>Suporte técnico 24h</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span>Instalação gratuita</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
@@ -307,88 +247,156 @@ const Index = () => {
                     <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span>Múltiplos dispositivos</span>
+                    <span>Atendimento em toda região</span>
                   </li>
                 </ul>
 
-                <Button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-3 rounded-xl shadow-lg transition-all">
+                <Button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-4 text-lg rounded-xl shadow-lg transition-all">
                   Contratar Agora →
                 </Button>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
 
-            {/* Business Plan */}
-            <Card className="relative transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Users className="w-10 h-10 text-orange-500" />
+      {/* Coverage Map Section */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">
+              Nossa <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Cobertura</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Levamos internet de qualidade para toda Eliseu Martins e região, incluindo áreas rurais e do interior.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-8 h-96 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 to-red-100/50"></div>
+                
+                {/* Mapa Simulado */}
+                <div className="relative z-10 h-full flex items-center justify-center">
+                  <div className="w-full h-full bg-white/80 rounded-2xl p-6 shadow-lg">
+                    <div className="text-center mb-4">
+                      <h3 className="text-lg font-bold text-gray-800">Eliseu Martins - PI</h3>
+                      <p className="text-sm text-gray-600">Área de Cobertura SaraivaNet</p>
+                    </div>
+                    
+                    {/* Pontos de Cobertura */}
+                    <div className="relative h-48 bg-gradient-to-br from-green-100 to-blue-100 rounded-xl overflow-hidden">
+                      {/* Centro da cidade */}
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <div className="w-4 h-4 bg-orange-500 rounded-full animate-pulse shadow-lg"></div>
+                        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium text-gray-700 whitespace-nowrap">Centro</div>
+                      </div>
+                      
+                      {/* Bairro São José */}
+                      <div className="absolute top-1/3 left-1/3">
+                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
+                        <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">São José</div>
+                      </div>
+                      
+                      {/* Vila Nova */}
+                      <div className="absolute bottom-1/3 right-1/3">
+                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
+                        <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">Vila Nova</div>
+                      </div>
+                      
+                      {/* Interior - Zona Rural */}
+                      <div className="absolute top-1/4 right-1/4">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse shadow-lg"></div>
+                        <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">Zona Rural</div>
+                      </div>
+                      
+                      {/* Área Rural 2 */}
+                      <div className="absolute bottom-1/4 left-1/4">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse shadow-lg"></div>
+                        <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">Interior</div>
+                      </div>
+                      
+                      {/* Fazendas */}
+                      <div className="absolute top-3/4 right-1/5">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse shadow-lg"></div>
+                        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">Fazendas</div>
+                      </div>
+                    </div>
+                    
+                    {/* Legenda */}
+                    <div className="mt-4 flex justify-center space-x-6">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                        <span className="text-xs text-gray-600">Centro</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <span className="text-xs text-gray-600">Bairros</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <span className="text-xs text-gray-600">Interior</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                        <span className="text-xs text-gray-600">Rural</span>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Plano Empresarial</h3>
-                  <div className="text-4xl font-bold text-orange-500 mt-4">500 MB</div>
-                  <div className="text-sm text-gray-500 line-through mt-2">R$ 259,90</div>
-                  <div className="text-5xl font-bold text-gray-800 mt-3">
-                    R$ 199,90<span className="text-lg font-normal">/mês</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-3xl font-bold text-gray-800 mb-6">Internet em Toda Região</h3>
+              <p className="text-gray-600 mb-6 text-lg">
+                A SaraivaNet chegou onde outros não conseguiram! Levamos nossa internet de fibra óptica 
+                para o centro da cidade, todos os bairros e também para o interior e zona rural de Eliseu Martins.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center space-x-4 p-4 bg-orange-50 rounded-xl">
+                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-sm text-gray-600 mt-2">Solução completa para empresas</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Centro e Bairros</h4>
+                    <p className="text-gray-600 text-sm">Cobertura completa em toda área urbana</p>
+                  </div>
                 </div>
 
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Internet 500MB</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>App SaraivaTV Empresarial</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Canais comerciais</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>IP fixo</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Suporte técnico dedicado</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Prioridade na rede</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Relatórios de uso</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>Backup automático</span>
-                  </li>
-                </ul>
+                <div className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Interior e Zona Rural</h4>
+                    <p className="text-gray-600 text-sm">Levamos internet até as fazendas e sítios</p>
+                  </div>
+                </div>
 
-                <Button variant="outline" className="w-full border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-3 rounded-xl transition-all">
-                  Contratar Agora →
+                <div className="flex items-center space-x-4 p-4 bg-blue-50 rounded-xl">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Mesma Qualidade</h4>
+                    <p className="text-gray-600 text-sm">Internet rápida e estável em toda região</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-6 text-white">
+                <h4 className="text-xl font-bold mb-3">Sua Região Não Está na Lista?</h4>
+                <p className="mb-4 opacity-90">
+                  Entre em contato conosco! Estamos sempre expandindo nossa cobertura.
+                </p>
+                <Button className="bg-white text-orange-500 hover:bg-gray-100 font-semibold px-6 py-2 rounded-lg">
+                  Consultar Disponibilidade
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -809,6 +817,7 @@ const Index = () => {
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-300 hover:text-orange-500">Início</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-orange-500">Planos</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-orange-500">Cobertura</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-orange-500">Sobre Nós</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-orange-500">Contato</a></li>
               </ul>
