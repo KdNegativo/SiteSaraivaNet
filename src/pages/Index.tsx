@@ -166,91 +166,123 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - Clean Design without Cards */}
-      <section id="planos" className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-orange-100 text-orange-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
-              <Award className="w-4 h-4 mr-2" />
-              Plano Exclusivo
+      {/* Plans Section - Modern Clean Design */}
+      <section id="planos" className="py-32 px-6 bg-gradient-to-br from-gray-50 via-white to-orange-50 relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-orange-200/20 to-red-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-red-100/30 to-orange-100/30 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-6 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg">
+              <Award className="w-5 h-5 mr-2" />
+              Plano Exclusivo para Você
             </div>
-            <h2 className="text-6xl font-bold bg-gradient-to-r from-gray-800 to-orange-600 bg-clip-text text-transparent mb-6">Nosso Plano Completo</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Um plano que atende todas as suas necessidades com o app <span className="text-orange-500 font-semibold">SaraivaTV gratuito</span> incluído.
+            <h2 className="text-7xl font-bold bg-gradient-to-r from-gray-900 via-orange-600 to-red-600 bg-clip-text text-transparent mb-8 leading-tight">
+              Internet + SaraivaTV
+            </h2>
+            <p className="text-2xl text-gray-600 mb-6 max-w-4xl mx-auto leading-relaxed">
+              O plano completo que vai transformar sua experiência digital
             </p>
-            <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg animate-pulse">
-              🎉 3 meses com desconto especial!
+            <div className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl animate-pulse">
+              🎉 Oferta especial: 3 meses com desconto!
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-orange-50 via-white to-red-50 rounded-3xl p-16 relative overflow-hidden shadow-2xl">
-            {/* Background decorations */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-orange-200/30 to-red-200/30 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-orange-100/40 to-yellow-100/40 rounded-full blur-2xl"></div>
-            
-            {/* Popular badge */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-full text-lg font-bold shadow-xl">
-                ⭐ PLANO MAIS POPULAR
+          {/* Main Plan Card */}
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden relative border border-gray-100">
+              {/* Popular Badge */}
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-20">
+                <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-10 py-4 rounded-full text-xl font-bold shadow-2xl">
+                  ⭐ MAIS ESCOLHIDO
+                </div>
+              </div>
+
+              {/* Gradient Header */}
+              <div className="bg-gradient-to-r from-orange-500 via-red-500 to-red-600 p-12 text-white text-center relative">
+                <div className="absolute inset-0 bg-black/10"></div>
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm shadow-lg">
+                    <Wifi className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-4xl font-bold mb-4">Plano Completo</h3>
+                  <div className="text-6xl font-bold mb-2">300MB</div>
+                  <div className="text-xl opacity-90">Fibra Óptica + SaraivaTV Grátis</div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-12">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  {/* Price Section */}
+                  <div className="text-center lg:text-left">
+                    <div className="mb-8">
+                      <div className="text-2xl text-gray-500 line-through mb-2">De R$ 169,90</div>
+                      <div className="text-7xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-2">
+                        R$ 129<span className="text-4xl">,90</span>
+                      </div>
+                      <div className="text-xl text-gray-600 font-medium">por mês</div>
+                    </div>
+
+                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl mb-8 border border-green-200">
+                      <div className="text-green-700 font-bold text-lg mb-2">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
+                      <div className="text-green-600">Promoção válida para novos clientes</div>
+                    </div>
+
+                    <Button className="w-full lg:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-6 px-16 text-2xl rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-orange-500/50">
+                      Contratar Agora →
+                    </Button>
+                  </div>
+
+                  {/* Features Section */}
+                  <div>
+                    <h4 className="text-3xl font-bold text-gray-800 mb-8 text-center lg:text-left">
+                      Tudo que você precisa:
+                    </h4>
+                    <div className="space-y-4">
+                      {[
+                        { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida" },
+                        { icon: Tv, text: "App SaraivaTV Premium totalmente grátis" },
+                        { icon: Smartphone, text: "Assista TV direto no seu celular" },
+                        { icon: Music, text: "Rádios nacionais e locais incluídas" },
+                        { icon: Shield, text: "Suporte técnico 24h todos os dias" },
+                        { icon: Zap, text: "Velocidade garantida por contrato" },
+                        { icon: CheckCircle, text: "Instalação gratuita e Wi-Fi potente" },
+                        { icon: Heart, text: "Sem fidelidade, cancele quando quiser" }
+                      ].map((feature, index) => (
+                        <div key={index} className="flex items-center space-x-4 p-4 bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl hover:from-orange-50 hover:to-red-50 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md">
+                          <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
+                            <feature.icon className="w-6 h-6 text-white" />
+                          </div>
+                          <span className="font-semibold text-gray-800 text-lg">{feature.text}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div className="relative z-10 grid md:grid-cols-2 gap-16 items-center">
-              {/* Left side - Plan info */}
-              <div className="text-center md:text-left">
-                <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto md:mx-0 mb-8 shadow-2xl">
-                  <Users className="w-12 h-12 text-white" />
-                </div>
-                
-                <h3 className="text-4xl font-bold text-gray-800 mb-4">Internet + SaraivaTV</h3>
-                <div className="text-7xl font-bold text-orange-500 mb-2">300MB</div>
-                <div className="text-lg text-gray-500 line-through mb-2">R$ 169,90</div>
-                <div className="text-6xl font-bold bg-gradient-to-r from-gray-800 to-orange-600 bg-clip-text text-transparent mb-4">
-                  R$ 129,90<span className="text-2xl font-normal">/mês</span>
-                </div>
-                <div className="text-lg text-gray-600 mb-8">Perfeito para toda família</div>
-
-                <Button className="w-full md:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 px-12 text-xl rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-orange-500/50">
-                  Contratar Agora →
-                </Button>
-              </div>
-
-              {/* Right side - Features */}
-              <div>
-                <h4 className="text-2xl font-bold text-gray-800 mb-8 text-center">O que está incluído:</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0" />
-                    <span className="font-medium text-gray-800">Internet 300MB fibra óptica</span>
-                  </div>
-                  <div className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0" />
-                    <span className="font-medium text-gray-800">App SaraivaTV Premium incluído</span>
-                  </div>
-                  <div className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0" />
-                    <span className="font-medium text-gray-800">Todos os canais de TV disponíveis</span>
-                  </div>
-                  <div className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0" />
-                    <span className="font-medium text-gray-800">Rádios nacionais e locais</span>
-                  </div>
-                  <div className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0" />
-                    <span className="font-medium text-gray-800">Wi-Fi potente e estável</span>
-                  </div>
-                  <div className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0" />
-                    <span className="font-medium text-gray-800">Suporte técnico 24h</span>
-                  </div>
-                  <div className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0" />
-                    <span className="font-medium text-gray-800">Instalação gratuita</span>
-                  </div>
-                  <div className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0" />
-                    <span className="font-medium text-gray-800">Velocidade garantida</span>
-                  </div>
+          {/* Bottom CTA */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-orange-500 via-red-500 to-red-600 rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 bg-black/10"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-300/20 rounded-full blur-2xl"></div>
+              <div className="relative z-10">
+                <h3 className="text-5xl font-bold mb-6">Não Perca Esta Oportunidade!</h3>
+                <p className="text-2xl mb-10 opacity-90 max-w-3xl mx-auto">
+                  Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                  <Button className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-6 text-2xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300">
+                    💬 WhatsApp
+                  </Button>
+                  <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-12 py-6 text-2xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300">
+                    📞 Ligar Agora
+                  </Button>
                 </div>
               </div>
             </div>
