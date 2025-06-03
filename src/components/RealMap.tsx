@@ -24,15 +24,15 @@ interface City {
 const cities: City[] = [
   {
     name: 'Eliseu Martins',
-    lat: -8.0969,
-    lng: -42.8764,
+    lat: -8.09667,
+    lng: -43.6636,
     status: 'active',
     description: 'Internet fibra óptica 300MB + SaraivaTV'
   },
   {
     name: 'Colônia do Gurguéia',
-    lat: -8.1762,
-    lng: -43.2842,
+    lat: -8.18241,
+    lng: -43.7922,
     status: 'active',
     description: 'Internet fibra óptica disponível'
   },
