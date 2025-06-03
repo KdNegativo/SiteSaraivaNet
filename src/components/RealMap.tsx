@@ -129,7 +129,7 @@ const RealMap: React.FC = () => {
       console.log('RealMap: Mapa criado, adicionando camada de tiles');
       
       // Adicionar tiles do OpenStreetMap
-      const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      const tileLayer = L.tileLayer('https://{s}.tile.openstreetMap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         maxZoom: 18,
       });
@@ -137,8 +137,8 @@ const RealMap: React.FC = () => {
       tileLayer.addTo(mapInstance.current);
       console.log('RealMap: Tiles adicionados');
 
-      // Calcular bounds para mostrar todas as cidades - FIXED: Added 'new' keyword
-      const group = new L.LatLngBounds();
+      // Calcular bounds para mostrar todas as cidades - FIXED: Use latLngBounds factory function
+      const group = L.latLngBounds([]);
       
       // Adicionar marcadores das cidades
       cities.forEach((city) => {
