@@ -7,6 +7,17 @@ import StatsCounter from "@/components/StatsCounter";
 import TestimonialCard from "@/components/TestimonialCard";
 
 const Index = () => {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600">
       {/* Floating WhatsApp Button */}
@@ -29,11 +40,11 @@ const Index = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#inicio" className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-            <a href="#planos" className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-            <a href="#cobertura" className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-            <a href="#sobre" className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-            <a href="#contato" className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
+            <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
+            <a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
+            <a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
+            <a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
+            <a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
           </nav>
 
           <div className="flex items-center space-x-2 text-white bg-orange-700 px-4 py-2 rounded-full hover:bg-orange-800 transition-colors cursor-pointer shadow-lg">
@@ -725,11 +736,11 @@ const Index = () => {
             <div>
               <h4 className="text-2xl font-bold mb-6 text-orange-400">Links Rápidos</h4>
               <ul className="space-y-3">
-                <li><a href="#inicio" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</a></li>
-                <li><a href="#planos" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</a></li>
-                <li><a href="#cobertura" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</a></li>
-                <li><a href="#sobre" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</a></li>
-                <li><a href="#contato" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</a></li>
+                <li><a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</a></li>
+                <li><a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</a></li>
+                <li><a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</a></li>
+                <li><a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</a></li>
+                <li><a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</a></li>
               </ul>
             </div>
 
