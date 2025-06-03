@@ -2,7 +2,9 @@ import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Za
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import InteractiveMap from "@/components/InteractiveMap";
+import GoogleMap from "@/components/GoogleMap";
+import StatsCounter from "@/components/StatsCounter";
+import TestimonialCard from "@/components/TestimonialCard";
 
 const Index = () => {
   return (
@@ -11,7 +13,7 @@ const Index = () => {
       <FloatingWhatsApp />
       
       {/* Header */}
-      <header className="bg-white shadow-sm px-6 py-4 border-b border-gray-100">
+      <header className="bg-white shadow-sm px-6 py-4 border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div>
@@ -21,14 +23,14 @@ const Index = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Início</a>
-            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Planos</a>
-            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Cobertura</a>
-            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Sobre</a>
-            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Contato</a>
+            <a href="#inicio" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Início</a>
+            <a href="#planos" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Planos</a>
+            <a href="#cobertura" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Cobertura</a>
+            <a href="#sobre" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Sobre</a>
+            <a href="#contato" className="text-gray-600 hover:text-orange-500 transition-colors font-medium">Contato</a>
           </nav>
 
-          <div className="flex items-center space-x-2 text-orange-500 bg-orange-50 px-4 py-2 rounded-full">
+          <div className="flex items-center space-x-2 text-orange-500 bg-orange-50 px-4 py-2 rounded-full hover:bg-orange-100 transition-colors cursor-pointer">
             <Phone className="w-4 h-4" />
             <span className="font-medium">(86) 9 9999-9999</span>
           </div>
@@ -36,7 +38,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-500 via-red-500 to-red-600 text-white px-6 py-24 relative overflow-hidden">
+      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-red-600 text-white px-6 py-24 relative overflow-hidden">
         {/* Background decorations */}
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute top-20 right-20 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
@@ -44,7 +46,7 @@ const Index = () => {
         
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/30">
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/30 animate-pulse">
               <span className="text-sm font-medium">⭐ Internet + SaraivaTV Grátis</span>
             </div>
             
@@ -96,20 +98,16 @@ const Index = () => {
 
             <div className="flex space-x-12 text-sm">
               <div className="text-center">
-                <div className="font-bold text-3xl mb-1">500+</div>
-                <div className="text-orange-200">Clientes</div>
+                <StatsCounter endValue={500} label="Clientes" suffix="+" />
               </div>
               <div className="text-center">
-                <div className="font-bold text-3xl mb-1">99,9%</div>
-                <div className="text-orange-200">Uptime</div>
+                <StatsCounter endValue={99.9} label="Uptime" suffix="%" />
               </div>
               <div className="text-center">
-                <div className="font-bold text-3xl mb-1">20+</div>
-                <div className="text-orange-200">Canais</div>
+                <StatsCounter endValue={20} label="Canais" suffix="+" />
               </div>
               <div className="text-center">
-                <div className="font-bold text-3xl mb-1">24h</div>
-                <div className="text-orange-200">Online</div>
+                <StatsCounter endValue={24} label="Online" suffix="h" />
               </div>
             </div>
           </div>
@@ -161,7 +159,7 @@ const Index = () => {
       </section>
 
       {/* Plans Section - Single Plan */}
-      <section className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white">
+      <section id="planos" className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-800 mb-6">Nosso Plano Completo</h2>
@@ -262,7 +260,7 @@ const Index = () => {
       </section>
 
       {/* Coverage Map Section */}
-      <section className="py-24 px-6 bg-white">
+      <section id="cobertura" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-800 mb-6">
@@ -275,13 +273,13 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold text-gray-800 mb-6">Mapa Interativo</h3>
+              <h3 className="text-3xl font-bold text-gray-800 mb-6">Mapa Interativo do Google</h3>
               <p className="text-gray-600 mb-6 text-lg">
                 Clique nos pontos do mapa para ver detalhes da cobertura em cada região. 
-                Nossa rede de fibra óptica atende todo Eliseu Martins!
+                Nossa rede de fibra óptica atende todo Eliseu Martins e zona rural!
               </p>
               
-              <InteractiveMap />
+              <GoogleMap />
               
               {/* Legenda */}
               <div className="mt-6 grid grid-cols-2 gap-4">
@@ -471,9 +469,8 @@ const Index = () => {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-xl font-semibold mb-2">Famílias Conectadas</div>
-              <div className="text-white/80">
+              <StatsCounter endValue={500} label="Famílias Conectadas" suffix="+" />
+              <div className="text-white/80 mt-2">
                 Lares piauenses com internet de qualidade
               </div>
             </div>
@@ -482,9 +479,8 @@ const Index = () => {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold mb-2">15</div>
-              <div className="text-xl font-semibold mb-2">Bairros Atendidos</div>
-              <div className="text-white/80">
+              <StatsCounter endValue={15} label="Bairros Atendidos" />
+              <div className="text-white/80 mt-2">
                 Cobertura em toda Eliseu Martins
               </div>
             </div>
@@ -493,9 +489,8 @@ const Index = () => {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold mb-2">99,9%</div>
-              <div className="text-xl font-semibold mb-2">Uptime Garantido</div>
-              <div className="text-white/80">
+              <StatsCounter endValue={99.9} label="Uptime Garantido" suffix="%" />
+              <div className="text-white/80 mt-2">
                 Conexão estável e confiável
               </div>
             </div>
@@ -504,9 +499,8 @@ const Index = () => {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold mb-2">98%</div>
-              <div className="text-xl font-semibold mb-2">Satisfação</div>
-              <div className="text-white/80">
+              <StatsCounter endValue={98} label="Satisfação" suffix="%" />
+              <div className="text-white/80 mt-2">
                 Clientes recomendam nossos serviços
               </div>
             </div>
@@ -515,7 +509,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-24 px-6 bg-white">
+      <section id="sobre" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Sobre a SaraivaNet</h2>
@@ -605,77 +599,38 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                  MS
-                </div>
-                <div className="flex text-orange-500">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-xl">⭐</span>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "A internet da SaraivaNet mudou minha vida! Agora consigo falar com meus netos 
+            <TestimonialCard
+              name="Maria Santos"
+              age="68 anos"
+              location="Centro de Eliseu Martins"
+              initials="MS"
+              testimonial="A internet da SaraivaNet mudou minha vida! Agora consigo falar com meus netos 
                 que moram longe todos os dias. O atendimento é muito carinhoso."
-              </p>
-              <div>
-                <div className="font-semibold text-gray-800">Maria Santos</div>
-                <div className="text-sm text-orange-500">68 anos</div>
-                <div className="text-sm text-gray-500">Centro de Eliseu Martins</div>
-              </div>
-            </Card>
-
-            <Card className="p-8">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                  JS
-                </div>
-                <div className="flex text-orange-500">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-xl">⭐</span>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "Trabalho com vendas online e a internet nunca me deixou na mão. Rápida e estável, 
+            />
+            
+            <TestimonialCard
+              name="João Silva"
+              age="45 anos"
+              location="Bairro São José"
+              initials="JS"
+              testimonial="Trabalho com vendas online e a internet nunca me deixou na mão. Rápida e estável, 
                 exatamente o que precisava para meu negócio crescer."
-              </p>
-              <div>
-                <div className="font-semibold text-gray-800">João Silva</div>
-                <div className="text-sm text-orange-500">45 anos</div>
-                <div className="text-sm text-gray-500">Bairro São José</div>
-              </div>
-            </Card>
-
-            <Card className="p-8">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                  AO
-                </div>
-                <div className="flex text-orange-500">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-xl">⭐</span>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "Os técnicos são muito educados e me ensinaram a usar o Wi-Fi. Agora assisto 
+            />
+            
+            <TestimonialCard
+              name="Ana Oliveira"
+              age="72 anos"
+              location="Vila Nova"
+              initials="AO"
+              testimonial="Os técnicos são muito educados e me ensinaram a usar o Wi-Fi. Agora assisto 
                 meus programas favoritos no tablet sem travar."
-              </p>
-              <div>
-                <div className="font-semibold text-gray-800">Ana Oliveira</div>
-                <div className="text-sm text-orange-500">72 anos</div>
-                <div className="text-sm text-gray-500">Vila Nova</div>
-              </div>
-            </Card>
+            />
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 px-6 bg-white">
+      <section id="contato" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
@@ -771,11 +726,11 @@ const Index = () => {
             <div>
               <h4 className="text-xl font-semibold mb-4 text-orange-400">Links Rápidos</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-orange-500">Início</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-orange-500">Planos</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-orange-500">Cobertura</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-orange-500">Sobre Nós</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-orange-500">Contato</a></li>
+                <li><a href="#inicio" className="text-gray-300 hover:text-orange-500">Início</a></li>
+                <li><a href="#planos" className="text-gray-300 hover:text-orange-500">Planos</a></li>
+                <li><a href="#cobertura" className="text-gray-300 hover:text-orange-500">Cobertura</a></li>
+                <li><a href="#sobre" className="text-gray-300 hover:text-orange-500">Sobre Nós</a></li>
+                <li><a href="#contato" className="text-gray-300 hover:text-orange-500">Contato</a></li>
               </ul>
             </div>
 
