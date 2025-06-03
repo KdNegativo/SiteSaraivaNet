@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -6,6 +7,7 @@ import RealMap from "@/components/RealMap";
 import StatsCounter from "@/components/StatsCounter";
 import TestimonialCard from "@/components/TestimonialCard";
 import ThemeToggle from "@/components/ThemeToggle";
+import MobileNavigation from "@/components/MobileNavigation";
 import AnimatedSection from "@/components/AnimatedSection";
 import ChatBot from "@/components/ChatBot";
 import { useParallax } from "@/hooks/useParallax";
@@ -48,7 +50,10 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <ThemeToggle />
+              <div className="flex items-center space-x-2">
+                <ThemeToggle />
+                <MobileNavigation />
+              </div>
             </div>
           </div>
 
