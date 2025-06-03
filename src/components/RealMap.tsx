@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -16,7 +17,7 @@ interface CoveragePoint {
   name: string;
   lat: number;
   lng: number;
-  type: 'centro' | 'bairro' | 'interior' | 'rural';
+  type: 'centro';
   description: string;
 }
 
@@ -24,69 +25,15 @@ const coveragePoints: CoveragePoint[] = [
   {
     id: '1',
     name: 'Centro de Eliseu Martins',
-    lat: -8.1557,
-    lng: -43.1423,
+    lat: -8.0833,
+    lng: -43.6333,
     type: 'centro',
     description: 'Cobertura completa no centro da cidade com velocidade máxima'
-  },
-  {
-    id: '2',
-    name: 'Bairro São José',
-    lat: -8.1547,
-    lng: -43.1433,
-    type: 'bairro',
-    description: 'Internet de alta velocidade para residências e comércios'
-  },
-  {
-    id: '3',
-    name: 'Vila Nova',
-    lat: -8.1567,
-    lng: -43.1413,
-    type: 'bairro',
-    description: 'Cobertura residencial com SaraivaTV incluído'
-  },
-  {
-    id: '4',
-    name: 'Zona Rural Norte',
-    lat: -8.1527,
-    lng: -43.1443,
-    type: 'interior',
-    description: 'Internet no interior para fazendas e sítios'
-  },
-  {
-    id: '5',
-    name: 'Zona Rural Sul',
-    lat: -8.1587,
-    lng: -43.1403,
-    type: 'interior',
-    description: 'Conectividade rural de qualidade'
-  },
-  {
-    id: '6',
-    name: 'Fazenda Santa Maria',
-    lat: -8.1607,
-    lng: -43.1463,
-    type: 'rural',
-    description: 'Internet para propriedades rurais'
-  },
-  {
-    id: '7',
-    name: 'Sítio Boa Vista',
-    lat: -8.1507,
-    lng: -43.1383,
-    type: 'rural',
-    description: 'Conexão estável para zona rural'
   }
 ];
 
 const getMarkerColor = (type: string) => {
-  switch (type) {
-    case 'centro': return '#f97316'; // orange-500
-    case 'bairro': return '#22c55e'; // green-500
-    case 'interior': return '#3b82f6'; // blue-500
-    case 'rural': return '#a855f7'; // purple-500
-    default: return '#6b7280'; // gray-500
-  }
+  return '#f97316'; // orange-500 para centro
 };
 
 const createCustomIcon = (type: string) => {
@@ -107,7 +54,7 @@ const createCustomIcon = (type: string) => {
         font-weight: bold;
         font-size: 12px;
       ">
-        ${type === 'centro' ? '🏢' : type === 'bairro' ? '🏠' : type === 'interior' ? '🌾' : '🚜'}
+        🏢
       </div>
     `,
     className: 'custom-marker',
@@ -124,8 +71,8 @@ const RealMap: React.FC = () => {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Coordenadas corretas de Eliseu Martins - PI conforme a imagem fornecida
-    const map = L.map(mapRef.current).setView([-8.1557, -43.1423], 13);
+    // Coordenadas corretas de Eliseu Martins - PI conforme a imagem
+    const map = L.map(mapRef.current).setView([-8.0833, -43.6333], 14);
 
     // Adicionar camada do OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -133,7 +80,7 @@ const RealMap: React.FC = () => {
       maxZoom: 18,
     }).addTo(map);
 
-    // Adicionar marcadores para cada ponto de cobertura
+    // Adicionar marcador para o centro
     coveragePoints.forEach((point) => {
       const marker = L.marker([point.lat, point.lng], {
         icon: createCustomIcon(point.type)
@@ -157,18 +104,18 @@ const RealMap: React.FC = () => {
             display: inline-block;
             font-weight: 500;
           ">
-            ${point.type.charAt(0).toUpperCase() + point.type.slice(1)}
+            Centro
           </div>
         </div>
       `);
     });
 
-    // Adicionar círculo de cobertura principal nas coordenadas corretas
-    L.circle([-8.1557, -43.1423], {
+    // Adicionar círculo de cobertura principal
+    L.circle([-8.0833, -43.6333], {
       color: '#f97316',
       fillColor: '#fed7aa',
       fillOpacity: 0.3,
-      radius: 2000
+      radius: 3000
     }).addTo(map);
 
     mapInstanceRef.current = map;
