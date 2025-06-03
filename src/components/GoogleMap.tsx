@@ -86,7 +86,7 @@ const MapComponent: React.FC = () => {
 
   const initMap = useCallback(() => {
     if (ref.current && !map) {
-      const newMap = new google.maps.Map(ref.current, {
+      const newMap = new window.google.maps.Map(ref.current, {
         center: { lat: -8.0956, lng: -42.8764 },
         zoom: 13,
         mapTypeId: 'hybrid',
@@ -100,7 +100,7 @@ const MapComponent: React.FC = () => {
       });
 
       // Adicionar área de cobertura
-      const coverageCircle = new google.maps.Circle({
+      const coverageCircle = new window.google.maps.Circle({
         strokeColor: '#ea580c',
         strokeOpacity: 0.8,
         strokeWeight: 2,
@@ -113,12 +113,12 @@ const MapComponent: React.FC = () => {
 
       // Adicionar pontos de cobertura
       coveragePoints.forEach((point) => {
-        const marker = new google.maps.Marker({
+        const marker = new window.google.maps.Marker({
           position: { lat: point.lat, lng: point.lng },
           map: newMap,
           title: point.name,
           icon: {
-            path: google.maps.SymbolPath.CIRCLE,
+            path: window.google.maps.SymbolPath.CIRCLE,
             fillColor: getMarkerColor(point.type),
             fillOpacity: 1,
             strokeColor: '#ffffff',
@@ -127,7 +127,7 @@ const MapComponent: React.FC = () => {
           },
         });
 
-        const infoWindow = new google.maps.InfoWindow({
+        const infoWindow = new window.google.maps.InfoWindow({
           content: `
             <div style="text-align: center; padding: 10px; max-width: 250px;">
               <h3 style="margin: 0 0 8px 0; color: ${getMarkerColor(point.type)}; font-weight: bold; font-size: 16px;">
