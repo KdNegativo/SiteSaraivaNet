@@ -18,6 +18,13 @@ const MobileNavigation = () => {
     }
   };
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "5589994395789";
+    const message = "Olá! Gostaria de saber mais sobre os planos da SaraivaNet.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const menuItems = [
     { id: 'inicio', label: 'Início', icon: Home },
     { id: 'planos', label: 'Planos', icon: CreditCard },
@@ -79,8 +86,16 @@ const MobileNavigation = () => {
           <div className="mt-8 pt-8 border-t border-white/20">
             <div className="text-center">
               <p className="text-white/80 text-sm mb-4">Entre em contato</p>
-              <Button className="w-full bg-white text-orange-600 hover:bg-orange-50 font-bold py-3 rounded-xl">
-                📱 WhatsApp
+              <Button 
+                onClick={handleWhatsAppClick}
+                className="w-full bg-white text-orange-600 hover:bg-orange-50 font-bold py-3 rounded-xl flex items-center justify-center space-x-2"
+              >
+                <img 
+                  src="/lovable-uploads/01df9255-1f15-4131-86c5-638e9796ee23.png" 
+                  alt="WhatsApp" 
+                  className="w-5 h-5"
+                />
+                <span>WhatsApp</span>
               </Button>
             </div>
           </div>
