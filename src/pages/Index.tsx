@@ -167,84 +167,84 @@ const Index = () => {
       </section>
 
       {/* Plans Section - Enhanced */}
-      <section id="planos" className="py-24 px-6 bg-gradient-to-b from-gray-50 via-white to-orange-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+      <section id="planos" className="py-16 px-6 bg-gradient-to-b from-gray-50 via-white to-orange-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Award className="w-4 h-4 mr-2" />
               Plano Exclusivo
             </div>
-            <h2 className="text-6xl font-bold bg-gradient-to-r from-gray-800 to-orange-600 bg-clip-text text-transparent mb-6">Nosso Plano Completo</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-gray-800 to-orange-600 bg-clip-text text-transparent mb-4">Nosso Plano Completo</h2>
+            <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
               Um plano que atende todas as suas necessidades com o app <span className="text-orange-500 font-semibold">SaraivaTV gratuito</span> incluído.
             </p>
-            <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-semibold shadow-lg animate-pulse">
+            <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg animate-pulse">
               🎉 3 meses com desconto especial!
             </div>
           </div>
 
           <div className="flex justify-center">
             {/* Enhanced Plan Card */}
-            <Card className="relative border-4 border-orange-500 shadow-2xl max-w-lg w-full transform hover:scale-105 transition-all duration-300 hover:shadow-orange-500/25">
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-full text-sm font-bold shadow-lg animate-pulse">
+            <Card className="relative border-4 border-orange-500 shadow-2xl max-w-md w-full transform hover:scale-105 transition-all duration-300 hover:shadow-orange-500/25">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
                   ⭐ PLANO COMPLETO
                 </div>
               </div>
-              <CardContent className="p-8 bg-gradient-to-b from-white to-orange-50">
-                <div className="text-center mb-8">
-                  <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                    <Users className="w-12 h-12 text-white" />
+              <CardContent className="p-6 bg-gradient-to-b from-white to-orange-50">
+                <div className="text-center mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-2xl">
+                    <Users className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-800 mb-2">Internet + SaraivaTV</h3>
-                  <div className="text-5xl font-bold text-orange-500 mt-4">300 MB</div>
-                  <div className="text-sm text-gray-500 line-through mt-2">R$ 169,90</div>
-                  <div className="text-6xl font-bold bg-gradient-to-r from-gray-800 to-orange-600 bg-clip-text text-transparent mt-3">
-                    R$ 129,90<span className="text-xl font-normal">/mês</span>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Internet + SaraivaTV</h3>
+                  <div className="text-4xl font-bold text-orange-500 mt-2">300 MB</div>
+                  <div className="text-sm text-gray-500 line-through mt-1">R$ 169,90</div>
+                  <div className="text-5xl font-bold bg-gradient-to-r from-gray-800 to-orange-600 bg-clip-text text-transparent mt-2">
+                    R$ 129,90<span className="text-lg font-normal">/mês</span>
                   </div>
-                  <div className="text-sm text-gray-600 mt-2">Perfeito para toda família</div>
+                  <div className="text-sm text-gray-600 mt-1">Perfeito para toda família</div>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-3 mb-6">
                   <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium">Internet 300MB fibra óptica</span>
+                    <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Internet 300MB fibra óptica</span>
                   </li>
                   <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium">App SaraivaTV Premium incluído</span>
+                    <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">App SaraivaTV Premium incluído</span>
                   </li>
                   <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium">Todos os canais de TV disponíveis</span>
+                    <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Todos os canais de TV disponíveis</span>
                   </li>
                   <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium">Rádios nacionais e locais</span>
+                    <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Rádios nacionais e locais</span>
                   </li>
                   <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium">Wi-Fi potente e estável</span>
+                    <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Wi-Fi potente e estável</span>
                   </li>
                   <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium">Suporte técnico 24h</span>
+                    <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Suporte técnico 24h</span>
                   </li>
                   <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium">Instalação gratuita</span>
+                    <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Instalação gratuita</span>
                   </li>
                   <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium">Velocidade garantida</span>
+                    <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Velocidade garantida</span>
                   </li>
                   <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-50 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium">Atendimento em toda região</span>
+                    <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Atendimento em toda região</span>
                   </li>
                 </ul>
 
-                <Button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-6 text-xl rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-orange-500/50">
+                <Button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 text-lg rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-orange-500/50">
                   Contratar Agora →
                 </Button>
               </CardContent>
