@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Za
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import InteractiveMap from "@/components/InteractiveMap";
 
 const Index = () => {
   return (
@@ -274,76 +275,31 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-8 h-96 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 to-red-100/50"></div>
-                
-                {/* Mapa Simulado */}
-                <div className="relative z-10 h-full flex items-center justify-center">
-                  <div className="w-full h-full bg-white/80 rounded-2xl p-6 shadow-lg">
-                    <div className="text-center mb-4">
-                      <h3 className="text-lg font-bold text-gray-800">Eliseu Martins - PI</h3>
-                      <p className="text-sm text-gray-600">Área de Cobertura SaraivaNet</p>
-                    </div>
-                    
-                    {/* Pontos de Cobertura */}
-                    <div className="relative h-48 bg-gradient-to-br from-green-100 to-blue-100 rounded-xl overflow-hidden">
-                      {/* Centro da cidade */}
-                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-4 h-4 bg-orange-500 rounded-full animate-pulse shadow-lg"></div>
-                        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium text-gray-700 whitespace-nowrap">Centro</div>
-                      </div>
-                      
-                      {/* Bairro São José */}
-                      <div className="absolute top-1/3 left-1/3">
-                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
-                        <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">São José</div>
-                      </div>
-                      
-                      {/* Vila Nova */}
-                      <div className="absolute bottom-1/3 right-1/3">
-                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
-                        <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">Vila Nova</div>
-                      </div>
-                      
-                      {/* Interior - Zona Rural */}
-                      <div className="absolute top-1/4 right-1/4">
-                        <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse shadow-lg"></div>
-                        <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">Zona Rural</div>
-                      </div>
-                      
-                      {/* Área Rural 2 */}
-                      <div className="absolute bottom-1/4 left-1/4">
-                        <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse shadow-lg"></div>
-                        <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">Interior</div>
-                      </div>
-                      
-                      {/* Fazendas */}
-                      <div className="absolute top-3/4 right-1/5">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse shadow-lg"></div>
-                        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">Fazendas</div>
-                      </div>
-                    </div>
-                    
-                    {/* Legenda */}
-                    <div className="mt-4 flex justify-center space-x-6">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                        <span className="text-xs text-gray-600">Centro</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                        <span className="text-xs text-gray-600">Bairros</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                        <span className="text-xs text-gray-600">Interior</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                        <span className="text-xs text-gray-600">Rural</span>
-                      </div>
-                    </div>
-                  </div>
+              <h3 className="text-3xl font-bold text-gray-800 mb-6">Mapa Interativo</h3>
+              <p className="text-gray-600 mb-6 text-lg">
+                Clique nos pontos do mapa para ver detalhes da cobertura em cada região. 
+                Nossa rede de fibra óptica atende todo Eliseu Martins!
+              </p>
+              
+              <InteractiveMap />
+              
+              {/* Legenda */}
+              <div className="mt-6 grid grid-cols-2 gap-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-4 h-4 bg-orange-500 rounded-full border-2 border-white shadow-md"></div>
+                  <span className="text-sm font-medium text-gray-700">Centro</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-4 h-4 bg-green-500 rounded-full border-2 border-white shadow-md"></div>
+                  <span className="text-sm font-medium text-gray-700">Bairros</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-md"></div>
+                  <span className="text-sm font-medium text-gray-700">Interior</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full border-2 border-white shadow-md"></div>
+                  <span className="text-sm font-medium text-gray-700">Rural</span>
                 </div>
               </div>
             </div>
