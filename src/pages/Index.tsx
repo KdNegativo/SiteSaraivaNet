@@ -521,7 +521,7 @@ const Index = () => {
               <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <MapPin className="w-10 h-10 text-white" />
               </div>
-              <StatsCounter endValue={5} label="Cidades Atendidas" />
+              <StatsCounter endValue={3} label="Cidades Atendidas" />
               <div className="text-white/80 mt-2 text-lg">
                 Cobertura no sul do Piauí
               </div>
