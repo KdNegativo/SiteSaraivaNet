@@ -1,8 +1,9 @@
+
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import CoverageMap from "@/components/CoverageMap";
+import RealMap from "@/components/RealMap";
 import StatsCounter from "@/components/StatsCounter";
 import TestimonialCard from "@/components/TestimonialCard";
 
@@ -273,13 +274,13 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold text-gray-800 mb-6">Mapa de Cobertura</h3>
+              <h3 className="text-3xl font-bold text-gray-800 mb-6">Mapa de Cobertura Real</h3>
               <p className="text-gray-600 mb-6 text-lg">
-                Clique nos pontos do mapa para ver detalhes da cobertura em cada região. 
-                Nossa rede de fibra óptica atende todo Eliseu Martins e zona rural!
+                Veja no mapa real onde nossa rede de fibra óptica atende. 
+                Clique nos marcadores para ver detalhes da cobertura em cada região!
               </p>
               
-              <CoverageMap />
+              <RealMap />
               
               {/* Legenda */}
               <div className="mt-6 grid grid-cols-2 gap-4">
