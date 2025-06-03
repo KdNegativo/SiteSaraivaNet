@@ -38,8 +38,8 @@ const cities: City[] = [
   },
   {
     name: 'Manoel Emídio',
-    lat: -7.8547,
-    lng: -43.5431,
+    lat: -8.01278,
+    lng: -43.8719,
     status: 'active',
     description: 'Cobertura completa de fibra óptica'
   },
@@ -103,7 +103,7 @@ const RealMap: React.FC = () => {
 
     try {
       // Coordenadas centrais da região (centro entre as cidades)
-      const centerCoords: [number, number] = [-8.0969, -42.8764];
+      const centerCoords: [number, number] = [-8.0969, -43.5764];
       
       console.log('RealMap: Criando mapa centrado em:', centerCoords);
 
@@ -121,7 +121,7 @@ const RealMap: React.FC = () => {
 
       console.log('RealMap: Mapa criado, adicionando camada de tiles');
       
-      // Adicionar tiles do OpenStreetMap - FIXED: URL corrigida
+      // Adicionar tiles do OpenStreetMap
       const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         maxZoom: 18,
@@ -188,7 +188,7 @@ const RealMap: React.FC = () => {
         });
       });
 
-      // Ajustar a visualização para mostrar todas as cidades - FIXED: Método simplificado
+      // Ajustar a visualização para mostrar todas as cidades
       if (coordinates.length > 0) {
         const group = L.featureGroup(cities.map((city) => 
           L.marker([city.lat, city.lng])
@@ -199,29 +199,6 @@ const RealMap: React.FC = () => {
         });
         console.log('RealMap: Visualização ajustada para mostrar todas as cidades');
       }
-
-      // Adicionar área de cobertura regional
-      const coverageArea = L.circle([-8.0969, -42.8764], {
-        color: '#ea580c',
-        fillColor: '#fed7aa',
-        fillOpacity: 0.15,
-        weight: 2,
-        radius: 30000, // 30km de raio
-      }).addTo(mapInstance.current);
-
-      coverageArea.bindPopup(`
-        <div style="text-align: center; padding: 15px; font-family: Arial, sans-serif;">
-          <h3 style="margin: 0 0 10px 0; color: #ea580c; font-weight: bold;">
-            🌐 Área de Cobertura SaraivaNet
-          </h3>
-          <p style="margin: 0 0 10px 0; color: #666; font-size: 14px;">
-            Internet de fibra óptica de alta velocidade
-          </p>
-          <p style="margin: 0; color: #666; font-size: 12px;">
-            Região do Sul do Piauí - Mais de 30km de cobertura
-          </p>
-        </div>
-      `);
 
       console.log('RealMap: Mapa totalmente configurado e funcional');
 
