@@ -49,7 +49,7 @@ const Index = () => {
 
           <div className="flex items-center space-x-2 text-white bg-orange-700 px-4 py-2 rounded-full hover:bg-orange-800 transition-colors cursor-pointer shadow-lg">
             <Phone className="w-4 h-4" />
-            <span className="font-semibold">(86) 9 9999-9999</span>
+            <span className="font-semibold">(86) 9 8994-3957</span>
           </div>
         </div>
       </header>
@@ -655,7 +655,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-800">Telefone</h3>
-                  <p className="text-gray-600 text-lg">(86) 9 9999-9999</p>
+                  <p className="text-gray-600 text-lg">(86) 9 8994-3957</p>
                   <p className="text-sm text-gray-500">WhatsApp disponível</p>
                 </div>
               </div>
@@ -736,7 +736,7 @@ const Index = () => {
               <ul className="space-y-4">
                 <li className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-orange-400" />
-                  <span className="text-lg">(86) 9 9999-9999</span>
+                  <span className="text-lg">(86) 9 8994-3957</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-orange-400" />

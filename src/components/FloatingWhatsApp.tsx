@@ -3,8 +3,8 @@ import { Phone } from "lucide-react";
 
 const FloatingWhatsApp = () => {
   const handleWhatsAppClick = () => {
-    // Número do WhatsApp da SaraivaNet (usando o número que já está no site)
-    const phoneNumber = "5586999999999"; // Formato internacional sem espaços
+    // Número do WhatsApp da SaraivaNet atualizado
+    const phoneNumber = "5586989943957"; // Formato internacional sem espaços
     const message = "Olá! Gostaria de saber mais sobre os planos da SaraivaNet.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
