@@ -9,8 +9,6 @@ import ThemeToggle from "@/components/ThemeToggle";
 import AnimatedSection from "@/components/AnimatedSection";
 import ChatBot from "@/components/ChatBot";
 import { useParallax } from "@/hooks/useParallax";
-import MobileStats from "@/components/MobileStats";
-import MobilePhoneButton from "@/components/MobilePhoneButton";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -37,7 +35,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           {/* Mobile Layout */}
           <div className="md:hidden">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
                   <Wifi className="w-5 h-5 text-orange-600" />
@@ -50,14 +48,12 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <ThemeToggle />
-            </div>
-            
-            {/* Phone number on its own line for mobile */}
-            <div className="flex justify-center">
-              <div className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-4 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg">
-                <Phone className="w-4 h-4" />
-                <span className="font-semibold text-sm">(89) 99439-5789</span>
+              <div className="flex items-center space-x-3">
+                <ThemeToggle />
+                <a href="tel:(89)99439-5789" className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-3 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg">
+                  <Phone className="w-4 h-4" />
+                  <span className="font-semibold text-sm">(89) 99439-5789</span>
+                </a>
               </div>
             </div>
           </div>
@@ -95,11 +91,6 @@ const Index = () => {
           </div>
         </div>
       </header>
-
-      {/* Mobile Phone Button - only show on mobile */}
-      <div className="md:hidden">
-        <MobilePhoneButton />
-      </div>
 
       {/* Hero Section with Parallax */}
       <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-12 relative overflow-hidden">
@@ -158,8 +149,7 @@ const Index = () => {
                 </Button>
               </div>
 
-              {/* Desktop Stats */}
-              <div className="hidden md:flex space-x-8 text-sm">
+              <div className="flex space-x-8 text-sm">
                 <div className="text-center">
                   <StatsCounter endValue={500} label="Clientes" suffix="+" />
                 </div>
@@ -219,11 +209,6 @@ const Index = () => {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-
-        {/* Mobile Stats Dashboard */}
-        <div className="md:hidden mt-8">
-          <MobileStats />
         </div>
       </section>
 
