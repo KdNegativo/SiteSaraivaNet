@@ -87,11 +87,11 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="flex space-x-4 mb-8">
-              <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-xl font-bold text-lg shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Button className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-8 py-3 rounded-xl font-bold text-lg shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
                 Contratar Agora →
               </Button>
-              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-xl font-bold text-lg">
+              <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-xl font-bold text-lg shadow-xl transition-all duration-300 transform hover:scale-105">
                 Saiba Mais
               </Button>
             </div>
@@ -178,7 +178,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-600">
               <div className="bg-gradient-to-r from-orange-600 to-red-600 p-8 text-white text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold mb-2">Plano Completo</h3>
@@ -649,15 +649,15 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-24 px-6 bg-white">
+      <section id="contato" className="py-24 px-6 bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/30">
               <Phone className="w-4 h-4 mr-2" />
               Fale Conosco
             </div>
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-5xl font-bold text-white mb-4">Entre em Contato</h2>
+            <p className="text-xl text-blue-200">
               Estamos aqui para ajudar! Entre em contato conosco e descubra como podemos 
               conectar você ao mundo digital.
             </p>
@@ -718,11 +718,11 @@ const Index = () => {
           </div>
 
           <div className="text-center space-x-6">
-            <Button className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-2xl text-lg font-bold shadow-lg transform hover:scale-105 transition-all duration-300">
+            <Button className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
               📱 WhatsApp
             </Button>
-            <Button variant="outline" className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-12 py-4 rounded-2xl text-lg font-bold shadow-lg transform hover:scale-105 transition-all duration-300">
-              📞 Ligar Agora
+            <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-12 py-4 rounded-2xl text-lg font-bold shadow-xl transition-all duration-300 transform hover:scale-105">
+              📞 Ligue Agora
             </Button>
           </div>
         </div>
