@@ -5,6 +5,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import RealMap from "@/components/RealMap";
 import StatsCounter from "@/components/StatsCounter";
 import TestimonialCard from "@/components/TestimonialCard";
+import CityMap from "@/components/CityMap";
 
 const Index = () => {
   return (
@@ -261,73 +262,65 @@ const Index = () => {
           <div className="text-center mb-12">
             <div className="inline-flex items-center bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
               <MapPin className="w-4 h-4 mr-2" />
-              Área de Cobertura
+              Cidades Atendidas
             </div>
             <h2 className="text-5xl font-bold mb-4">
               Nossa <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">Cobertura</span>
             </h2>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              Levamos internet de qualidade para toda Eliseu Martins e região, incluindo áreas rurais e do interior.
+              Levamos internet de fibra óptica para cidades da região sul do Piauí, conectando mais famílias a cada dia.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">Mapa de Cobertura Real</h3>
+              <h3 className="text-3xl font-bold text-white mb-4">Mapa de Cidades Atendidas</h3>
               <p className="text-blue-200 mb-4">
-                Veja no mapa real onde nossa rede de fibra óptica atende. 
-                Clique nos marcadores para ver detalhes da cobertura em cada região!
+                Veja no mapa todas as cidades onde a SaraivaNet já chegou! 
+                Clique em cada cidade para ver detalhes da cobertura e planos disponíveis.
               </p>
               
               <div className="shadow-2xl rounded-2xl overflow-hidden border border-blue-600">
-                <RealMap />
+                <CityMap />
               </div>
               
               <div className="mt-4 grid grid-cols-2 gap-3">
                 <div className="flex items-center space-x-2 p-2 bg-blue-800 rounded-lg border border-blue-600">
-                  <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-blue-200">Centro</span>
-                </div>
-                <div className="flex items-center space-x-2 p-2 bg-blue-800 rounded-lg border border-blue-600">
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-blue-200">Bairros</span>
+                  <span className="text-sm font-semibold text-blue-200">Internet Ativa</span>
                 </div>
                 <div className="flex items-center space-x-2 p-2 bg-blue-800 rounded-lg border border-blue-600">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-blue-200">Interior</span>
-                </div>
-                <div className="flex items-center space-x-2 p-2 bg-blue-800 rounded-lg border border-blue-600">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-blue-200">Rural</span>
+                  <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-semibold text-blue-200">Em Breve</span>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">Internet em Toda Região</h3>
+              <h3 className="text-3xl font-bold text-white mb-4">Expandindo Nossa Rede</h3>
               <p className="text-blue-200 mb-6">
-                A SaraivaNet chegou onde outros não conseguiram! Levamos nossa internet de fibra óptica 
-                para o centro da cidade, todos os bairros e também para o interior e zona rural de Eliseu Martins.
+                A SaraivaNet está em constante crescimento! Nossa missão é conectar todas as cidades 
+                da região sul do Piauí com internet de fibra óptica de qualidade.
               </p>
 
               <div className="space-y-4 mb-6">
                 <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl border border-blue-600">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white">Centro e Bairros</h4>
-                    <p className="text-blue-200 text-sm">Cobertura completa em toda área urbana</p>
+                    <h4 className="font-bold text-white">4 Cidades Conectadas</h4>
+                    <p className="text-blue-200 text-sm">Eliseu Martins, Colônia do Gurguéia, Manoel Emídio e Jerumenha</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl border border-blue-600">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+                    <Wifi className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white">Interior e Zona Rural</h4>
-                    <p className="text-blue-200 text-sm">Levamos internet até as fazendas e sítios</p>
+                    <h4 className="font-bold text-white">Canto do Buriti em Breve</h4>
+                    <p className="text-blue-200 text-sm">Expansão prevista para 2025</p>
                   </div>
                 </div>
 
@@ -337,18 +330,18 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white">Mesma Qualidade</h4>
-                    <p className="text-blue-200 text-sm">Internet rápida e estável em toda região</p>
+                    <p className="text-blue-200 text-sm">Internet fibra óptica em todas as cidades</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-6 text-white">
-                <h4 className="text-xl font-bold mb-3">Sua Região Não Está na Lista?</h4>
+                <h4 className="text-xl font-bold mb-3">Sua Cidade Não Está na Lista?</h4>
                 <p className="mb-4 opacity-90">
-                  Entre em contato conosco! Estamos sempre expandindo nossa cobertura.
+                  Demonstre interesse! Quanto mais pessoas de uma cidade demonstrarem interesse, mais rápido chegamos lá.
                 </p>
                 <Button className="bg-white text-orange-500 hover:bg-gray-100 font-bold px-6 py-2 rounded-lg">
-                  Consultar Disponibilidade
+                  💬 Demonstrar Interesse
                 </Button>
               </div>
             </div>
