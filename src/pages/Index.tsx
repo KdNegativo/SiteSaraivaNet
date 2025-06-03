@@ -647,7 +647,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card className="p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
@@ -664,25 +664,12 @@ const Index = () => {
             <Card className="p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-800">Email</h3>
-                  <p className="text-gray-600 text-lg">contato@saraivanet.com.br</p>
-                  <p className="text-sm text-gray-500">Resposta em até 2 horas</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-800">Endereço</h3>
-                  <p className="text-gray-600 text-lg">Centro de Eliseu Martins</p>
-                  <p className="text-sm text-gray-500">Piauí, Brasil</p>
+                  <p className="text-gray-600 text-lg">Rua Fernando Silva, Centro</p>
+                  <p className="text-sm text-gray-500">Eliseu Martins - PI</p>
                 </div>
               </div>
             </Card>
@@ -752,12 +739,8 @@ const Index = () => {
                   <span className="text-lg">(86) 9 9999-9999</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-orange-400" />
-                  <span className="text-lg">contato@saraivanet.com.br</span>
-                </li>
-                <li className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-orange-400" />
-                  <span className="text-lg">Centro, Eliseu Martins - PI</span>
+                  <span className="text-lg">Rua Fernando Silva, Centro, Eliseu Martins - PI</span>
                 </li>
               </ul>
             </div>
