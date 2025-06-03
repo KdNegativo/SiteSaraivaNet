@@ -24,28 +24,28 @@ const cities: City[] = [
   {
     name: 'Eliseu Martins',
     lat: -8.0969,
-    lng: -44.0597,
+    lng: -42.8764,
     status: 'active',
     description: 'Internet fibra óptica 300MB + SaraivaTV'
   },
   {
     name: 'Colônia do Gurguéia',
     lat: -8.1833,
-    lng: -43.7833,
+    lng: -42.7833,
     status: 'active',
     description: 'Internet fibra óptica disponível'
   },
   {
     name: 'Manoel Emídio',
     lat: -7.8667,
-    lng: -44.2167,
+    lng: -42.9167,
     status: 'active',
     description: 'Cobertura completa de fibra óptica'
   },
   {
     name: 'Jerumenha',
     lat: -8.0667,
-    lng: -43.8333,
+    lng: -42.6333,
     status: 'active',
     description: 'Internet de alta velocidade'
   },
