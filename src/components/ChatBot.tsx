@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { MessageCircle, X, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -68,16 +69,16 @@ const ChatBot = () => {
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-16 right-4 md:bottom-24 md:right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 md:p-4 shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center"
+        className="fixed bottom-36 right-4 md:bottom-24 md:right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 md:p-4 shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
         aria-label="Abrir chat"
       >
-        <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
+        <MessageCircle className="w-6 h-6" />
       </button>
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 w-[calc(100vw-2rem)] max-w-80 h-96 animate-scale-in">
-          <Card className="w-full h-full flex flex-col shadow-2xl border-0 overflow-hidden">
+        <div className="fixed inset-x-4 bottom-4 md:bottom-6 md:right-6 md:left-auto md:w-80 z-50 animate-scale-in">
+          <Card className="w-full h-[32rem] md:h-96 flex flex-col shadow-2xl border-0 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 flex justify-between items-center">
               <div className="flex items-center gap-2">
@@ -114,7 +115,7 @@ const ChatBot = () => {
                   className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
                 >
                   <div
-                    className={`max-w-[80%] p-3 rounded-lg text-sm animate-fade-in ${
+                    className={`max-w-[85%] p-3 rounded-lg text-sm animate-fade-in ${
                       message.isBot
                         ? 'bg-white dark:bg-gray-800 text-gray-800 dark:text-white shadow-md'
                         : 'bg-blue-600 text-white shadow-md'
@@ -134,7 +135,7 @@ const ChatBot = () => {
                       variant="outline"
                       size="sm"
                       onClick={() => handleFaqClick(faq)}
-                      className="w-full text-left justify-start h-auto p-3 text-xs hover:bg-blue-50 hover:border-blue-300 dark:hover:bg-blue-900/20 transition-all duration-200"
+                      className="w-full text-left justify-start h-auto p-3 text-sm hover:bg-blue-50 hover:border-blue-300 dark:hover:bg-blue-900/20 transition-all duration-200"
                     >
                       {faq.question}
                     </Button>
