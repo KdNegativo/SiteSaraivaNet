@@ -16,14 +16,14 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white dark:from-gray-900 dark:to-gray-800">
       {/* Header */}
       <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2 sm:space-x-4">
+        <div className="container mx-auto px-3 py-2 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
               alt="SaraivaNet Logo" 
-              className="w-6 h-6 sm:w-10 sm:h-10 rounded-full"
+              className="w-6 h-6 rounded-full"
             />
-            <h1 className="text-sm sm:text-2xl font-bold text-white">SaraivaNet</h1>
+            <h1 className="text-sm font-bold text-white">SaraivaNet</h1>
           </div>
           
           <div className="hidden lg:flex items-center space-x-8">
@@ -45,31 +45,31 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section id="inicio" className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600/90 to-red-600/90 dark:from-gray-900/90 dark:to-gray-800/90"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
-        <div className="relative z-10 text-center px-2 sm:px-4 max-w-6xl mx-auto">
-          <h2 className="text-lg sm:text-3xl md:text-5xl font-bold text-white mb-2 sm:mb-4 animate-fade-in">
+        <div className="relative z-10 text-center px-3 max-w-6xl mx-auto">
+          <h2 className="text-lg font-bold text-white mb-2 animate-fade-in">
             Internet de <span className="text-yellow-300">Alta Velocidade</span>
           </h2>
-          <p className="text-xs sm:text-lg md:text-xl text-white/90 mb-3 sm:mb-6 max-w-3xl mx-auto animate-fade-in">
+          <p className="text-xs text-white/90 mb-3 max-w-3xl mx-auto animate-fade-in">
             Conecte-se com o futuro! Planos de fibra óptica com velocidades de até 1GB para sua casa ou empresa.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center mb-4 sm:mb-8 animate-bounce-in">
+          <div className="flex flex-col gap-2 justify-center items-center mb-4 animate-bounce-in">
             <Button 
               size="lg" 
-              className="w-full sm:w-auto bg-white text-orange-600 hover:bg-orange-50 font-bold py-1.5 sm:py-3 px-3 sm:px-6 rounded-xl text-xs sm:text-base shadow-lg transform hover:scale-105 transition-all"
+              className="w-full bg-white text-orange-600 hover:bg-orange-50 font-bold py-1.5 px-3 rounded-xl text-xs shadow-lg transform hover:scale-105 transition-all"
               onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <Wifi className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" />
+              <Wifi className="mr-1 h-3 w-3" />
               Ver Planos
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
-              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold py-1.5 sm:py-3 px-3 sm:px-6 rounded-xl text-xs sm:text-base transition-all"
+              className="w-full border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold py-1.5 px-3 rounded-xl text-xs transition-all"
               onClick={() => {
                 const phoneNumber = "5589994395789";
                 const message = "Olá! Gostaria de saber mais sobre os planos da SaraivaNet.";
@@ -77,78 +77,78 @@ const Index = () => {
                 window.open(whatsappUrl, '_blank');
               }}
             >
-              <Phone className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" />
+              <Phone className="mr-1 h-3 w-3" />
               Fale Conosco
             </Button>
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-6 mt-4 sm:mt-12">
-            <div className="text-center animate-slide-in-left p-1 sm:p-4">
-              <div className="w-8 h-8 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-4 shadow-lg">
-                <Zap className="w-4 h-4 sm:w-8 sm:h-8 text-white" />
+          <div className="grid grid-cols-1 gap-2 mt-4">
+            <div className="text-center animate-slide-in-left p-1">
+              <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1 shadow-lg">
+                <Zap className="w-3 h-3 text-white" />
               </div>
               <StatsCounter endValue={1000} label="Mbps de Velocidade" />
-              <div className="text-white/80 mt-0.5 text-xs sm:text-sm">
+              <div className="text-white/80 mt-0.5 text-xs">
                 Fibra óptica premium
               </div>
             </div>
 
-            <div className="text-center animate-scale-in p-1 sm:p-4">
-              <div className="w-8 h-8 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-4 shadow-lg">
-                <Users className="w-4 h-4 sm:w-8 sm:h-8 text-white" />
+            <div className="text-center animate-scale-in p-1">
+              <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1 shadow-lg">
+                <Users className="w-3 h-3 text-white" />
               </div>
               <StatsCounter endValue={500} label="Clientes Satisfeitos" />
-              <div className="text-white/80 mt-0.5 text-xs sm:text-sm">
+              <div className="text-white/80 mt-0.5 text-xs">
                 E crescendo cada dia
               </div>
             </div>
 
-            <div className="text-center animate-slide-in-right p-1 sm:p-4">
-              <div className="w-8 h-8 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-4 shadow-lg">
-                <MapPin className="w-4 h-4 sm:w-8 sm:h-8 text-white" />
+            <div className="text-center animate-slide-in-right p-1">
+              <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1 shadow-lg">
+                <MapPin className="w-3 h-3 text-white" />
               </div>
               <StatsCounter endValue={5} label="Cidades Atendidas" />
-              <div className="text-white/80 mt-0.5 text-xs sm:text-sm">
+              <div className="text-white/80 mt-0.5 text-xs">
                 Cobertura no sul do Piauí
               </div>
             </div>
           </div>
         </div>
 
-        <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-4 h-4 sm:w-6 sm:h-6 text-white/70" />
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-4 h-4 text-white/70" />
         </div>
       </section>
 
       {/* Plans Section */}
-      <section id="planos" className="py-4 sm:py-12 lg:py-16 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-2 sm:px-4">
-          <div className="text-center mb-4 sm:mb-12">
-            <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-3">
+      <section id="planos" className="py-6 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-3">
+          <div className="text-center mb-6">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
               Escolha seu Plano Ideal
             </h3>
-            <p className="text-xs sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xs text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Temos o plano perfeito para suas necessidades. Todos com fibra óptica e suporte 24/7.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 gap-3">
             {/* Plano Básico */}
             <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2">
-              <CardContent className="p-2 sm:p-4">
+              <CardContent className="p-3">
                 <div className="text-center">
-                  <Zap className="w-6 h-6 sm:w-10 sm:h-10 text-orange-600 mx-auto mb-1 sm:mb-3" />
-                  <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">Plano Básico</h4>
-                  <div className="text-lg sm:text-2xl font-bold text-orange-600 mb-1 sm:mb-3">
+                  <Zap className="w-6 h-6 text-orange-600 mx-auto mb-2" />
+                  <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-1">Plano Básico</h4>
+                  <div className="text-lg font-bold text-orange-600 mb-2">
                     R$ 59,90
                     <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">/mês</span>
                   </div>
-                  <div className="text-base sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 sm:mb-4">
+                  <div className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
                     100 Mbps
                   </div>
                   
-                  <ul className="space-y-1 mb-2 sm:mb-4 text-left">
+                  <ul className="space-y-1 mb-3 text-left">
                     <li className="flex items-center text-xs">
                       <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
                       <span>Download: 100 Mbps</span>
@@ -176,19 +176,19 @@ const Index = () => {
 
             {/* Plano Intermediário */}
             <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2">
-              <CardContent className="p-2 sm:p-4">
+              <CardContent className="p-3">
                 <div className="text-center">
-                  <Wifi className="w-6 h-6 sm:w-10 sm:h-10 text-orange-600 mx-auto mb-1 sm:mb-3" />
-                  <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">Plano Intermediário</h4>
-                  <div className="text-lg sm:text-2xl font-bold text-orange-600 mb-1 sm:mb-3">
+                  <Wifi className="w-6 h-6 text-orange-600 mx-auto mb-2" />
+                  <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-1">Plano Intermediário</h4>
+                  <div className="text-lg font-bold text-orange-600 mb-2">
                     R$ 89,90
                     <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">/mês</span>
                   </div>
-                  <div className="text-base sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 sm:mb-4">
+                  <div className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
                     300 Mbps
                   </div>
                   
-                  <ul className="space-y-1 mb-2 sm:mb-4 text-left">
+                  <ul className="space-y-1 mb-3 text-left">
                     <li className="flex items-center text-xs">
                       <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
                       <span>Download: 300 Mbps</span>
@@ -215,23 +215,23 @@ const Index = () => {
             </Card>
 
             {/* Plano Premium - Destacado */}
-            <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-orange-500 lg:scale-105">
+            <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-orange-500">
               <div className="absolute top-0 right-0 bg-orange-500 text-white px-1 py-0.5 text-xs font-bold">
                 POPULAR
               </div>
-              <CardContent className="p-2 sm:p-4">
+              <CardContent className="p-3">
                 <div className="text-center">
-                  <Zap className="w-6 h-6 sm:w-10 sm:h-10 text-orange-600 mx-auto mb-1 sm:mb-3" />
-                  <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">Plano Premium</h4>
-                  <div className="text-lg sm:text-2xl font-bold text-orange-600 mb-1 sm:mb-3">
+                  <Zap className="w-6 h-6 text-orange-600 mx-auto mb-2" />
+                  <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-1">Plano Premium</h4>
+                  <div className="text-lg font-bold text-orange-600 mb-2">
                     R$ 129,90
                     <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">/mês</span>
                   </div>
-                  <div className="text-base sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 sm:mb-4">
+                  <div className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
                     600 Mbps
                   </div>
                   
-                  <ul className="space-y-1 mb-2 sm:mb-4 text-left">
+                  <ul className="space-y-1 mb-3 text-left">
                     <li className="flex items-center text-xs">
                       <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
                       <span>Download: 600 Mbps</span>
@@ -263,19 +263,19 @@ const Index = () => {
 
             {/* Plano Ultra */}
             <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2">
-              <CardContent className="p-2 sm:p-4">
+              <CardContent className="p-3">
                 <div className="text-center">
-                  <Rocket className="w-6 h-6 sm:w-10 sm:h-10 text-orange-600 mx-auto mb-1 sm:mb-3" />
-                  <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">Plano Ultra</h4>
-                  <div className="text-lg sm:text-2xl font-bold text-orange-600 mb-1 sm:mb-3">
+                  <Rocket className="w-6 h-6 text-orange-600 mx-auto mb-2" />
+                  <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-1">Plano Ultra</h4>
+                  <div className="text-lg font-bold text-orange-600 mb-2">
                     R$ 199,90
                     <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">/mês</span>
                   </div>
-                  <div className="text-base sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 sm:mb-4">
+                  <div className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
                     1000 Mbps
                   </div>
                   
-                  <ul className="space-y-1 mb-2 sm:mb-4 text-left">
+                  <ul className="space-y-1 mb-3 text-left">
                     <li className="flex items-center text-xs">
                       <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
                       <span>Download: 1000 Mbps</span>
@@ -313,24 +313,24 @@ const Index = () => {
       </section>
 
       {/* Coverage Section */}
-      <section id="cobertura" className="py-4 sm:py-12 lg:py-16 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-2 sm:px-4">
-          <div className="text-center mb-4 sm:mb-12">
-            <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-3">
+      <section id="cobertura" className="py-6 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-3">
+          <div className="text-center mb-6">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
               Nossa Cobertura
             </h3>
-            <p className="text-xs sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xs text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Estamos expandindo nossa rede para levar internet de qualidade para toda a região.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-6 lg:gap-8 items-center">
-            <div className="order-2 lg:order-1">
-              <h4 className="text-base sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">
+          <div className="grid grid-cols-1 gap-4 items-center">
+            <div>
+              <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-3">
                 Cidades Atendidas
               </h4>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 gap-2">
                 {[
                   { name: "Eliseu Martins", status: "Ativo", coverage: 95 },
                   { name: "Colônia do Gurguéia", status: "Ativo", coverage: 90 },
@@ -362,7 +362,7 @@ const Index = () => {
                 ))}
               </div>
 
-              <div className="mt-3 sm:mt-6 p-2 sm:p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg border border-orange-200 dark:border-orange-800">
+              <div className="mt-4 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg border border-orange-200 dark:border-orange-800">
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0" />
                   <div>
@@ -389,8 +389,8 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="order-1 lg:order-2">
-              <div className="bg-white dark:bg-gray-900 p-1 sm:p-3 rounded-lg shadow-lg">
+            <div>
+              <div className="bg-white dark:bg-gray-900 p-2 rounded-lg shadow-lg">
                 <RealMap />
               </div>
             </div>
@@ -399,26 +399,26 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-4 sm:py-12 lg:py-16 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-2 sm:px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-6 lg:gap-8 items-center">
+      <section id="sobre" className="py-6 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-3">
+          <div className="grid grid-cols-1 gap-4 items-center">
             <div className="animate-slide-in-left">
-              <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
                 Sobre a SaraivaNet
               </h3>
-              <p className="text-xs sm:text-base text-gray-600 dark:text-gray-300 mb-2 sm:mb-4 leading-relaxed">
+              <p className="text-xs text-gray-600 dark:text-gray-300 mb-2 leading-relaxed">
                 Há mais de 10 anos levando internet de qualidade para o interior do Piauí. 
                 Nossa missão é conectar pessoas e empresas com a tecnologia do futuro.
               </p>
-              <p className="text-xs sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-6 leading-relaxed">
+              <p className="text-xs text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                 Com infraestrutura própria de fibra óptica, garantimos estabilidade, 
                 velocidade e o melhor suporte técnico da região.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
+              <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-center space-x-2">
-                  <div className="w-6 h-6 sm:w-10 sm:h-10 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
-                    <Shield className="w-3 h-3 sm:w-5 sm:h-5 text-orange-600" />
+                  <div className="w-6 h-6 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                    <Shield className="w-3 h-3 text-orange-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white text-xs">Confiabilidade</h4>
@@ -427,8 +427,8 @@ const Index = () => {
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <div className="w-6 h-6 sm:w-10 sm:h-10 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
-                    <Clock className="w-3 h-3 sm:w-5 sm:h-5 text-orange-600" />
+                  <div className="w-6 h-6 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                    <Clock className="w-3 h-3 text-orange-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white text-xs">Suporte 24/7</h4>
@@ -437,8 +437,8 @@ const Index = () => {
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <div className="w-6 h-6 sm:w-10 sm:h-10 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
-                    <Award className="w-3 h-3 sm:w-5 sm:h-5 text-orange-600" />
+                  <div className="w-6 h-6 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                    <Award className="w-3 h-3 text-orange-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white text-xs">Qualidade</h4>
@@ -447,8 +447,8 @@ const Index = () => {
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <div className="w-6 h-6 sm:w-10 sm:h-10 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
-                    <Heart className="w-3 h-3 sm:w-5 sm:h-5 text-orange-600" />
+                  <div className="w-6 h-6 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                    <Heart className="w-3 h-3 text-orange-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white text-xs">Local</h4>
@@ -460,27 +460,27 @@ const Index = () => {
 
             <div className="animate-slide-in-right">
               <Card className="overflow-hidden shadow-xl">
-                <div className="aspect-video bg-gradient-to-br from-orange-500 to-red-600 p-3 sm:p-6 flex items-center justify-center">
+                <div className="aspect-video bg-gradient-to-br from-orange-500 to-red-600 p-4 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <Wifi className="w-8 h-8 sm:w-16 sm:h-16 mx-auto mb-1 sm:mb-3" />
-                    <h4 className="text-sm sm:text-xl font-bold mb-1">Tecnologia de Ponta</h4>
-                    <p className="text-xs sm:text-sm opacity-90">
+                    <Wifi className="w-8 h-8 mx-auto mb-2" />
+                    <h4 className="text-sm font-bold mb-1">Tecnologia de Ponta</h4>
+                    <p className="text-xs opacity-90">
                       Investimos constantemente em infraestrutura para oferecer o melhor serviço
                     </p>
                   </div>
                 </div>
-                <CardContent className="p-2 sm:p-4">
+                <CardContent className="p-3">
                   <div className="grid grid-cols-3 gap-2 text-center">
                     <div>
-                      <div className="text-sm sm:text-xl font-bold text-orange-600">10+</div>
+                      <div className="text-sm font-bold text-orange-600">10+</div>
                       <div className="text-xs text-gray-600 dark:text-gray-400">Anos de experiência</div>
                     </div>
                     <div>
-                      <div className="text-sm sm:text-xl font-bold text-orange-600">500+</div>
+                      <div className="text-sm font-bold text-orange-600">500+</div>
                       <div className="text-xs text-gray-600 dark:text-gray-400">Clientes satisfeitos</div>
                     </div>
                     <div>
-                      <div className="text-sm sm:text-xl font-bold text-orange-600">5</div>
+                      <div className="text-sm font-bold text-orange-600">5</div>
                       <div className="text-xs text-gray-600 dark:text-gray-400">Cidades atendidas</div>
                     </div>
                   </div>
@@ -492,18 +492,18 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-4 sm:py-12 lg:py-16 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-2 sm:px-4">
-          <div className="text-center mb-4 sm:mb-12">
-            <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-3">
+      <section className="py-6 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-3">
+          <div className="text-center mb-6">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
               O que nossos clientes dizem
             </h3>
-            <p className="text-xs sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xs text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               A satisfação dos nossos clientes é nossa maior conquista
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 gap-3">
             <TestimonialCard 
               name="Maria Silva"
               city="Eliseu Martins"
@@ -527,27 +527,27 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-4 sm:py-12 lg:py-16 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-2 sm:px-4">
-          <div className="text-center mb-4 sm:mb-12">
-            <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-3">
+      <section id="contato" className="py-6 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-3">
+          <div className="text-center mb-6">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
               Entre em Contato
             </h3>
-            <p className="text-xs sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xs text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Estamos prontos para atender você. Escolha a forma de contato mais conveniente.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-6">
-            <Card className="p-2 sm:p-4 text-center hover:shadow-lg transition-shadow">
-              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-3">
+          <div className="grid grid-cols-1 gap-3">
+            <Card className="p-3 text-center hover:shadow-lg transition-shadow">
+              <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
                 <img 
                   src="/lovable-uploads/981f602c-b0d2-4161-8119-dfd91ef1c234.png" 
                   alt="WhatsApp" 
-                  className="w-4 h-4 sm:w-6 sm:h-6"
+                  className="w-4 h-4"
                 />
               </div>
-              <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1">WhatsApp</h4>
+              <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-1">WhatsApp</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
                 Atendimento rápido e direto
               </p>
@@ -564,11 +564,11 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="p-2 sm:p-4 text-center hover:shadow-lg transition-shadow">
-              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-3">
-                <Phone className="w-4 h-4 sm:w-6 sm:h-6 text-blue-600" />
+            <Card className="p-3 text-center hover:shadow-lg transition-shadow">
+              <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
+                <Phone className="w-4 h-4 text-blue-600" />
               </div>
-              <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1">Telefone</h4>
+              <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-1">Telefone</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
                 Ligue para nós agora
               </p>
@@ -581,11 +581,11 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="p-2 sm:p-4 text-center hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-1">
-              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-3">
-                <MapPin className="w-4 h-4 sm:w-6 sm:h-6 text-orange-600" />
+            <Card className="p-3 text-center hover:shadow-lg transition-shadow">
+              <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
+                <MapPin className="w-4 h-4 text-orange-600" />
               </div>
-              <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1">Nossos Escritórios</h4>
+              <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-1">Nossos Escritórios</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
                 Visite-nos em uma de nossas cidades
               </p>
@@ -600,27 +600,27 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-3 sm:py-6 lg:py-8">
-        <div className="container mx-auto px-2 sm:px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
-            <div className="md:col-span-2 lg:col-span-1">
+      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-4">
+        <div className="container mx-auto px-3">
+          <div className="grid grid-cols-1 gap-4">
+            <div>
               <div className="flex items-center space-x-2 mb-2">
                 <img 
                   src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
                   alt="SaraivaNet Logo" 
-                  className="w-5 h-5 sm:w-8 sm:h-8 rounded-full"
+                  className="w-5 h-5 rounded-full"
                 />
-                <span className="text-sm sm:text-lg font-bold">SaraivaNet</span>
+                <span className="text-sm font-bold">SaraivaNet</span>
               </div>
               <p className="text-xs text-gray-400 mb-2">
                 Conectando o Piauí com internet de qualidade há mais de 10 anos.
               </p>
               <div className="flex space-x-2">
-                <div className="w-5 h-5 sm:w-8 sm:h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                  <Phone className="w-2.5 h-2.5 sm:w-4 sm:h-4" />
+                <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center">
+                  <Phone className="w-3 h-3" />
                 </div>
-                <div className="w-5 h-5 sm:w-8 sm:h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                  <Mail className="w-2.5 h-2.5 sm:w-4 sm:h-4" />
+                <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center">
+                  <Mail className="w-3 h-3" />
                 </div>
               </div>
             </div>
@@ -656,7 +656,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-3 sm:mt-6 pt-3 sm:pt-6 text-center">
+          <div className="border-t border-gray-800 mt-4 pt-4 text-center">
             <p className="text-xs text-gray-400">
               © 2024 SaraivaNet. Todos os direitos reservados.
             </p>
