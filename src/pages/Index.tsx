@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,10 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { Phone, MessageCircle, MapPin, Users, Building, Zap, Shield, Heart, Star, ChevronDown, Wifi, Clock, ThumbsUp } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import ParallaxSection from "@/components/ParallaxSection";
-import { TestimonialCard } from "@/components/TestimonialCard";
-import { StatsCounter } from "@/components/StatsCounter";
-import { RealMap } from "@/components/RealMap";
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import TestimonialCard from "@/components/TestimonialCard";
+import StatsCounter from "@/components/StatsCounter";
+import RealMap from "@/components/RealMap";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -38,7 +37,7 @@ const Index = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={400}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-primary via-foreground to-primary bg-clip-text text-transparent leading-tight">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-primary/20 to-primary bg-clip-text text-transparent leading-tight">
               ConnectNet
             </h1>
           </AnimatedSection>
