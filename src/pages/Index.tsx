@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -341,19 +340,25 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <TestimonialCard 
-              name="Maria Silva" 
-              testimonial="A SaraivaNet mudou minha vida! A internet é super rápida e o suporte é excelente." 
-              rating={5} 
+              name="Maria Silva"
+              age="32 anos"
+              location="Eliseu Martins, PI"
+              testimonial="A SaraivaNet mudou minha vida! A internet é super rápida e o suporte é excelente."
+              initials="MS"
             />
             <TestimonialCard 
-              name="João Santos" 
-              testimonial="Finalmente uma internet que funciona de verdade. Recomendo a todos!" 
-              rating={4} 
+              name="João Santos"
+              age="45 anos"
+              location="Colônia do Gurguéia, PI"
+              testimonial="Finalmente uma internet que funciona de verdade. Recomendo a todos!"
+              initials="JS"
             />
             <TestimonialCard 
-              name="Carla Oliveira" 
-              testimonial="A melhor internet que já tive. Sem quedas e com alta velocidade." 
-              rating={5} 
+              name="Carla Oliveira"
+              age="28 anos"
+              location="Jerumenha, PI"
+              testimonial="A melhor internet que já tive. Sem quedas e com alta velocidade."
+              initials="CO"
             />
           </div>
         </div>
