@@ -10,10 +10,8 @@ import MobileNavigation from "@/components/MobileNavigation";
 import AnimatedSection from "@/components/AnimatedSection";
 import ChatBot from "@/components/ChatBot";
 import { useParallax } from "@/hooks/useParallax";
-
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
-
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -24,16 +22,13 @@ const Index = () => {
       });
     }
   };
-
   const handleWhatsAppClick = () => {
     const phoneNumber = "5589994395789";
     const message = "Olá! Gostaria de contratar o plano de internet + SaraivaTV.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+  return <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
       {/* Floating Components */}
       <FloatingWhatsApp />
       <ChatBot />
@@ -79,19 +74,16 @@ const Index = () => {
             </div>
             
             <nav className="flex items-center space-x-6">
-              <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-              <a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-              <a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-              <a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-              <a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
+              <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
+              <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
+              <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
+              <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
+              <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
             </nav>
 
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              <div className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-4 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg hover:scale-105 transform">
-                <Phone className="w-4 h-4" />
-                <span className="font-semibold">(89) 99439-5789</span>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -100,13 +92,14 @@ const Index = () => {
       {/* Hero Section with Parallax */}
       <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
-        <div 
-          className="absolute inset-0"
-          style={{ transform: `translateY(${parallaxOffset}px)` }}
-        >
+        <div className="absolute inset-0" style={{
+        transform: `translateY(${parallaxOffset}px)`
+      }}>
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-600/50 via-red-600/50 to-purple-700/50"></div>
           <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-float"></div>
-          <div className="absolute bottom-10 left-10 w-48 h-48 bg-orange-300/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-orange-300/20 rounded-full blur-2xl animate-float" style={{
+          animationDelay: '1s'
+        }}></div>
         </div>
         
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center relative z-10">
@@ -146,10 +139,7 @@ const Index = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button 
-                  onClick={handleWhatsAppClick}
-                  className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-6 py-3 rounded-xl font-bold text-base shadow-xl border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl whitespace-nowrap"
-                >
+                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-6 py-3 rounded-xl font-bold text-base shadow-xl border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl whitespace-nowrap">
                   Contratar Agora →
                 </Button>
                 <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-xl font-bold text-lg shadow-xl transition-all duration-300 transform hover:scale-105">
@@ -269,10 +259,7 @@ const Index = () => {
                         <div className="text-green-400 text-sm">Promoção válida para novos clientes</div>
                       </div>
 
-                      <Button 
-                        onClick={handleWhatsAppClick}
-                        className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 text-lg rounded-xl shadow-xl hover:scale-110 transform transition-all duration-300 whitespace-nowrap"
-                      >
+                      <Button onClick={handleWhatsAppClick} className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 text-lg rounded-xl shadow-xl hover:scale-110 transform transition-all duration-300 whitespace-nowrap">
                         Contratar Agora →
                       </Button>
                     </div>
@@ -282,23 +269,36 @@ const Index = () => {
                         Tudo que você precisa:
                       </h4>
                       <div className="space-y-3">
-                        {[
-                          { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida" },
-                          { icon: Tv, text: "App SaraivaTV Premium totalmente grátis" },
-                          { icon: Smartphone, text: "Assista TV direto no seu celular" },
-                          { icon: Music, text: "Rádios nacionais e locais incluídas" },
-                          { icon: Shield, text: "Suporte técnico 24h todos os dias" },
-                          { icon: Zap, text: "Velocidade garantida por contrato" },
-                          { icon: CheckCircle, text: "Instalação gratuita e Wi-Fi potente" },
-                          { icon: Heart, text: "Sem fidelidade, cancele quando quiser" }
-                        ].map((feature, index) => (
-                          <div key={index} className="flex items-center space-x-3 p-3 bg-gradient-to-r from-gray-600 to-gray-700 dark:from-gray-700 dark:to-gray-800 rounded-lg border border-gray-500 dark:border-gray-600 hover:from-orange-600/20 hover:to-red-600/20 hover:border-orange-500 transition-all duration-300 hover:scale-105 transform">
+                        {[{
+                        icon: Wifi,
+                        text: "Internet 300MB fibra óptica ultrarrápida"
+                      }, {
+                        icon: Tv,
+                        text: "App SaraivaTV Premium totalmente grátis"
+                      }, {
+                        icon: Smartphone,
+                        text: "Assista TV direto no seu celular"
+                      }, {
+                        icon: Music,
+                        text: "Rádios nacionais e locais incluídas"
+                      }, {
+                        icon: Shield,
+                        text: "Suporte técnico 24h todos os dias"
+                      }, {
+                        icon: Zap,
+                        text: "Velocidade garantida por contrato"
+                      }, {
+                        icon: CheckCircle,
+                        text: "Instalação gratuita e Wi-Fi potente"
+                      }, {
+                        icon: Heart,
+                        text: "Sem fidelidade, cancele quando quiser"
+                      }].map((feature, index) => <div key={index} className="flex items-center space-x-3 p-3 bg-gradient-to-r from-gray-600 to-gray-700 dark:from-gray-700 dark:to-gray-800 rounded-lg border border-gray-500 dark:border-gray-600 hover:from-orange-600/20 hover:to-red-600/20 hover:border-orange-500 transition-all duration-300 hover:scale-105 transform">
                             <div className="w-8 h-8 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                               <feature.icon className="w-4 h-4 text-white" />
                             </div>
                             <span className="font-semibold text-gray-200">{feature.text}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </div>
                   </div>
@@ -314,10 +314,7 @@ const Index = () => {
                 Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button 
-                  onClick={handleWhatsAppClick}
-                  className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 text-base font-bold rounded-xl whitespace-nowrap"
-                >
+                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 text-base font-bold rounded-xl whitespace-nowrap">
                   💬 WhatsApp
                 </Button>
                 <Button className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-6 py-3 text-base font-bold rounded-xl whitespace-nowrap">
@@ -345,21 +342,28 @@ const Index = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">🏙️ Cidades Atendidas</h3>
               <div className="space-y-4">
-                {[
-                  { name: "Eliseu Martins", status: "Cobertura Completa" },
-                  { name: "Colônia do Gurguéia", status: "Internet Ativa" },
-                  { name: "Manoel Emídio", status: "Fibra Óptica" },
-                  { name: "Canavieira", status: "Alta Velocidade" },
-                  { name: "Jerumenha", status: "Premium TV" }
-                ].map((city, index) => (
-                  <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                {[{
+                name: "Eliseu Martins",
+                status: "Cobertura Completa"
+              }, {
+                name: "Colônia do Gurguéia",
+                status: "Internet Ativa"
+              }, {
+                name: "Manoel Emídio",
+                status: "Fibra Óptica"
+              }, {
+                name: "Canavieira",
+                status: "Alta Velocidade"
+              }, {
+                name: "Jerumenha",
+                status: "Premium TV"
+              }].map((city, index) => <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
                     <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                     <div>
                       <div className="font-semibold">{city.name}</div>
                       <div className="text-sm text-blue-200">{city.status}</div>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -369,12 +373,7 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <a
-              href="https://wa.me/5586999999999?text=Olá! Gostaria de saber sobre a disponibilidade da internet SaraivaNet na minha região."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
+            <a href="https://wa.me/5586999999999?text=Olá! Gostaria de saber sobre a disponibilidade da internet SaraivaNet na minha região." target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
               <span>💬</span>
               <span>Verificar Disponibilidade</span>
             </a>
@@ -482,10 +481,7 @@ const Index = () => {
                 Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
               </p>
               <div className="flex justify-center">
-                <Button 
-                  onClick={handleWhatsAppClick}
-                  className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 whitespace-nowrap"
-                >
+                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 whitespace-nowrap">
                   💬 Entrar em Contato
                 </Button>
               </div>
@@ -649,32 +645,14 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <TestimonialCard
-              name="Maria Santos"
-              age="68 anos"
-              location="Centro de Eliseu Martins"
-              initials="MS"
-              testimonial="A internet da SaraivaNet mudou minha vida! Agora consigo falar com meus netos 
-                que moram longe todos os dias. O atendimento é muito carinhoso."
-            />
+            <TestimonialCard name="Maria Santos" age="68 anos" location="Centro de Eliseu Martins" initials="MS" testimonial="A internet da SaraivaNet mudou minha vida! Agora consigo falar com meus netos 
+                que moram longe todos os dias. O atendimento é muito carinhoso." />
             
-            <TestimonialCard
-              name="João Silva"
-              age="45 anos"
-              location="Bairro São José"
-              initials="JS"
-              testimonial="Trabalho com vendas online e a internet nunca me deixou na mão. Rápida e estável, 
-                exatamente o que precisava para meu negócio crescer."
-            />
+            <TestimonialCard name="João Silva" age="45 anos" location="Bairro São José" initials="JS" testimonial="Trabalho com vendas online e a internet nunca me deixou na mão. Rápida e estável, 
+                exatamente o que precisava para meu negócio crescer." />
             
-            <TestimonialCard
-              name="Ana Oliveira"
-              age="72 anos"
-              location="Vila Nova"
-              initials="AO"
-              testimonial="Os técnicos são muito educados e me ensinaram a usar o Wi-Fi. Agora assisto 
-                meus programas favoritos no tablet sem travar."
-            />
+            <TestimonialCard name="Ana Oliveira" age="72 anos" location="Vila Nova" initials="AO" testimonial="Os técnicos são muito educados e me ensinaram a usar o Wi-Fi. Agora assisto 
+                meus programas favoritos no tablet sem travar." />
           </div>
         </div>
       </section>
@@ -736,10 +714,7 @@ const Index = () => {
           </div>
 
           <div className="text-center space-x-6">
-            <Button 
-              onClick={handleWhatsAppClick}
-              className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105"
-            >
+            <Button onClick={handleWhatsAppClick} className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
               📱 WhatsApp
             </Button>
             <Button className="bg-white text-blue-600 hover:bg-blue-50 px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
@@ -773,11 +748,11 @@ const Index = () => {
             <div>
               <h4 className="text-2xl font-bold mb-6 text-orange-400">Links Rápidos</h4>
               <ul className="space-y-3">
-                <li><a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</a></li>
-                <li><a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</a></li>
-                <li><a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</a></li>
-                <li><a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</a></li>
-                <li><a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</a></li>
+                <li><a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</a></li>
+                <li><a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</a></li>
+                <li><a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</a></li>
+                <li><a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</a></li>
+                <li><a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</a></li>
               </ul>
             </div>
 
@@ -803,8 +778,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
