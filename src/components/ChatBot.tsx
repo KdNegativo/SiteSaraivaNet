@@ -18,15 +18,15 @@ const ChatBot = () => {
   const faqOptions = [
     {
       question: "Como funciona a instalação?",
-      answer: "A instalação tem um custo de R$ 150,00. Nossa equipe agenda um horário conveniente e realiza todo o processo em até 2 horas com a máxima qualidade."
+      answer: "A instalação é totalmente gratuita! Nossa equipe agenda um horário conveniente e realiza todo o processo em até 2 horas."
     },
     {
       question: "Qual a área de cobertura?",
-      answer: "Atendemos Eliseu Martins, Colônia do Gurguéia, Manoel Emídio, Canavieira e Jerumenha. Nossa cobertura está em constante expansão!"
+      answer: "Atendemos Eliseu Martins, Colônia do Gurguéia, Manoel Emídio e Jerumenha. Em breve chegamos em Canto do Buriti!"
     },
     {
       question: "O que é o SaraivaTV?",
-      answer: "É nosso app exclusivo e GRATUITO com canais de TV e rádios que você pode assistir no celular. Vem incluído com todos os planos sem custo adicional!"
+      answer: "É nosso app gratuito com canais de TV e rádios que você pode assistir no celular. Vem incluído com todos os planos!"
     },
     {
       question: "Falar com atendente",
@@ -69,7 +69,7 @@ const ChatBot = () => {
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110"
+        className="fixed bottom-36 right-4 md:bottom-24 md:right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 md:p-4 shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
         aria-label="Abrir chat"
       >
         <MessageCircle className="w-6 h-6" />
@@ -77,10 +77,10 @@ const ChatBot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-4 right-6 w-96 z-50 animate-scale-in">
-          <Card className="h-[28rem] flex flex-col shadow-xl border">
+        <div className="fixed inset-x-4 bottom-4 md:bottom-6 md:right-6 md:left-auto md:w-80 z-50 animate-scale-in">
+          <Card className="w-full h-[32rem] md:h-96 flex flex-col shadow-2xl border-0 overflow-hidden">
             {/* Header */}
-            <div className="bg-blue-600 text-white p-4 flex justify-between items-center">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 flex justify-between items-center">
               <div className="flex items-center gap-2">
                 {!showOptions && (
                   <Button
@@ -93,8 +93,8 @@ const ChatBot = () => {
                   </Button>
                 )}
                 <div>
-                  <h3 className="font-bold">🤖 SaraivaNet Bot</h3>
-                  <p className="text-xs opacity-90">Online agora</p>
+                  <h3 className="font-semibold">Assistente SaraivaNet</h3>
+                  <p className="text-sm opacity-90">Online agora</p>
                 </div>
               </div>
               <Button
@@ -108,17 +108,17 @@ const ChatBot = () => {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-gray-50">
+            <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-gray-50 dark:bg-gray-900">
               {messages.map((message) => (
                 <div
                   key={message.id}
                   className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
                 >
                   <div
-                    className={`max-w-[80%] p-3 rounded-lg text-sm ${
+                    className={`max-w-[85%] p-3 rounded-lg text-sm animate-fade-in ${
                       message.isBot
-                        ? 'bg-white border text-gray-800'
-                        : 'bg-blue-600 text-white'
+                        ? 'bg-white dark:bg-gray-800 text-gray-800 dark:text-white shadow-md'
+                        : 'bg-blue-600 text-white shadow-md'
                     }`}
                   >
                     {message.text}
@@ -135,9 +135,9 @@ const ChatBot = () => {
                       variant="outline"
                       size="sm"
                       onClick={() => handleFaqClick(faq)}
-                      className="w-full text-left justify-start h-auto p-3 text-sm hover:bg-blue-50"
+                      className="w-full text-left justify-start h-auto p-3 text-sm hover:bg-blue-50 hover:border-blue-300 dark:hover:bg-blue-900/20 transition-all duration-200"
                     >
-                      💬 {faq.question}
+                      {faq.question}
                     </Button>
                   ))}
                 </div>
