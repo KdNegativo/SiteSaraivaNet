@@ -18,7 +18,7 @@ const ChatBot = () => {
   const faqOptions = [
     {
       question: "Como funciona a instalação?",
-      answer: "A instalação é 100% GRATUITA! Nossa equipe agenda um horário conveniente e realiza todo o processo em até 2 horas, sem nenhum custo para você."
+      answer: "A instalação tem um custo de R$ 150,00. Nossa equipe agenda um horário conveniente e realiza todo o processo em até 2 horas com a máxima qualidade."
     },
     {
       question: "Qual a área de cobertura?",
@@ -66,62 +66,59 @@ const ChatBot = () => {
 
   return (
     <>
-      {/* Chat Button - Melhorado para mobile */}
+      {/* Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-28 right-4 md:bottom-24 md:right-6 z-40 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full p-3 md:p-4 shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center border-2 border-blue-500 animate-pulse"
+        className="fixed bottom-6 right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Abrir chat"
       >
-        <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
+        <MessageCircle className="w-6 h-6" />
       </button>
 
-      {/* Chat Window - Melhorado para mobile */}
+      {/* Chat Window */}
       {isOpen && (
-        <div className="fixed inset-2 md:inset-x-4 md:bottom-4 md:top-auto md:right-6 md:left-auto md:w-96 z-50 animate-scale-in">
-          <Card className="w-full h-full md:h-[28rem] flex flex-col shadow-2xl border-2 border-blue-200 overflow-hidden bg-white/95 backdrop-blur-sm">
-            {/* Header - Melhorado */}
-            <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 text-white p-3 md:p-4 flex justify-between items-center shadow-lg">
+        <div className="fixed bottom-4 right-6 w-96 z-50 animate-scale-in">
+          <Card className="h-[28rem] flex flex-col shadow-xl border">
+            {/* Header */}
+            <div className="bg-blue-600 text-white p-4 flex justify-between items-center">
               <div className="flex items-center gap-2">
                 {!showOptions && (
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={handleBack}
-                    className="text-white hover:bg-white/20 w-8 h-8 rounded-full"
+                    className="text-white hover:bg-white/20 w-8 h-8"
                   >
                     <ArrowLeft className="w-4 h-4" />
                   </Button>
                 )}
                 <div>
-                  <h3 className="font-bold text-sm md:text-base">🤖 SaraivaNet Bot</h3>
-                  <p className="text-xs opacity-90 flex items-center">
-                    <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                    Online agora
-                  </p>
+                  <h3 className="font-bold">🤖 SaraivaNet Bot</h3>
+                  <p className="text-xs opacity-90">Online agora</p>
                 </div>
               </div>
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsOpen(false)}
-                className="text-white hover:bg-white/20 rounded-full"
+                className="text-white hover:bg-white/20"
               >
-                <X className="w-4 h-4 md:w-5 md:h-5" />
+                <X className="w-5 h-5" />
               </Button>
             </div>
 
-            {/* Messages - Melhorado para mobile */}
-            <div className="flex-1 p-3 md:p-4 overflow-y-auto space-y-3 bg-gradient-to-b from-gray-50 to-blue-50">
+            {/* Messages */}
+            <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-gray-50">
               {messages.map((message) => (
                 <div
                   key={message.id}
                   className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
                 >
                   <div
-                    className={`max-w-[85%] p-3 rounded-2xl text-sm animate-fade-in shadow-md ${
+                    className={`max-w-[80%] p-3 rounded-lg text-sm ${
                       message.isBot
-                        ? 'bg-white border border-blue-200 text-gray-800 rounded-bl-sm'
-                        : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-br-sm'
+                        ? 'bg-white border text-gray-800'
+                        : 'bg-blue-600 text-white'
                     }`}
                   >
                     {message.text}
@@ -129,7 +126,7 @@ const ChatBot = () => {
                 </div>
               ))}
 
-              {/* FAQ Options - Melhorado */}
+              {/* FAQ Options */}
               {showOptions && (
                 <div className="space-y-2 mt-4">
                   {faqOptions.map((faq, index) => (
@@ -138,10 +135,9 @@ const ChatBot = () => {
                       variant="outline"
                       size="sm"
                       onClick={() => handleFaqClick(faq)}
-                      className="w-full text-left justify-start h-auto p-3 text-xs md:text-sm hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:border-blue-300 border-2 rounded-xl transition-all duration-300 hover:scale-[1.02] bg-white/80 backdrop-blur-sm"
+                      className="w-full text-left justify-start h-auto p-3 text-sm hover:bg-blue-50"
                     >
-                      <span className="text-blue-600 mr-2">💬</span>
-                      {faq.question}
+                      💬 {faq.question}
                     </Button>
                   ))}
                 </div>

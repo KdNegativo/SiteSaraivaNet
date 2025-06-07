@@ -33,28 +33,24 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-500">
+    <div className="min-h-screen bg-white">
       {/* Floating Components */}
       <FloatingWhatsApp />
       <ChatBot />
       
-      {/* Header - Melhorado */}
-      <header className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 dark:from-gray-800 dark:to-gray-900 shadow-2xl px-3 md:px-4 py-3 md:py-4 border-b-4 border-blue-500 dark:border-gray-700 z-50 transition-all duration-500 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 via-purple-600/50 to-blue-700/50 animate-pulse"></div>
-        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-float"></div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          {/* Mobile Layout - Melhorado */}
+      {/* Header */}
+      <header className="bg-blue-600 shadow-lg px-4 py-4 border-b">
+        <div className="max-w-7xl mx-auto">
+          {/* Mobile Layout */}
           <div className="md:hidden">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-white rounded-xl flex items-center justify-center shadow-lg animate-pulse">
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                   <Wifi className="w-4 h-4 text-blue-600" />
                 </div>
                 <div>
-                  <span className="text-lg font-bold text-white drop-shadow-sm">SaraivaNet</span>
-                  <div className="text-xs text-blue-100 font-medium flex items-center">
+                  <span className="text-lg font-bold text-white">SaraivaNet</span>
+                  <div className="text-xs text-blue-100 flex items-center">
                     <MapPin className="w-3 h-3 mr-1" />
                     Eliseu Martins - PI
                   </div>
@@ -67,15 +63,15 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Desktop Layout - Melhorado */}
+          {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-xl animate-pulse">
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
                 <Wifi className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <span className="text-3xl font-bold text-white drop-shadow-lg">SaraivaNet</span>
-                <div className="text-sm text-blue-100 font-medium flex items-center">
+                <span className="text-3xl font-bold text-white">SaraivaNet</span>
+                <div className="text-sm text-blue-100 flex items-center">
                   <MapPin className="w-4 h-4 mr-1" />
                   Eliseu Martins - PI
                 </div>
@@ -83,16 +79,16 @@ const Index = () => {
             </div>
             
             <nav className="flex items-center space-x-8">
-              <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-blue-200 transition-all font-semibold hover:scale-105 transform">Início</a>
-              <a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-white hover:text-blue-200 transition-all font-semibold hover:scale-105 transform">Planos</a>
-              <a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-blue-200 transition-all font-semibold hover:scale-105 transform">Cobertura</a>
-              <a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-blue-200 transition-all font-semibold hover:scale-105 transform">Sobre</a>
-              <a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-white hover:text-blue-200 transition-all font-semibold hover:scale-105 transform">Contato</a>
+              <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-blue-200 transition-all font-semibold">Início</a>
+              <a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-white hover:text-blue-200 transition-all font-semibold">Planos</a>
+              <a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-blue-200 transition-all font-semibold">Cobertura</a>
+              <a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-blue-200 transition-all font-semibold">Sobre</a>
+              <a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-white hover:text-blue-200 transition-all font-semibold">Contato</a>
             </nav>
 
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              <div className="flex items-center space-x-2 text-white bg-blue-700/80 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-blue-800/80 transition-all duration-300 cursor-pointer shadow-xl hover:scale-105 transform border border-blue-400">
+              <div className="flex items-center space-x-2 text-white bg-blue-700 px-4 py-2 rounded-full">
                 <Phone className="w-4 h-4" />
                 <span className="font-semibold">(89) 99439-5789</span>
               </div>
@@ -101,62 +97,60 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Melhorado para mobile */}
-      <section id="inicio" className="bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-3 md:px-4 py-8 md:py-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20 dark:bg-black/50"></div>
+      {/* Hero Section */}
+      <section id="inicio" className="bg-blue-600 text-white px-4 py-12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-blue-700/50"></div>
         <div 
           className="absolute inset-0"
           style={{ transform: `translateY(${parallaxOffset}px)` }}
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/30 via-purple-600/30 to-blue-800/30"></div>
-          <div className="absolute top-10 right-10 w-32 md:w-64 h-32 md:h-64 bg-white/10 rounded-full blur-2xl animate-float"></div>
-          <div className="absolute bottom-10 left-10 w-24 md:w-48 h-24 md:h-48 bg-blue-300/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-blue-700/30"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 md:gap-8 items-center relative z-10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center relative z-10">
           <AnimatedSection animation="fade-up">
             <div>
-              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-3 md:px-4 py-2 mb-4 md:mb-6 border border-white/30 shadow-lg">
-                <Star className="w-4 h-4 mr-2 text-yellow-300 animate-pulse" />
-                <span className="text-xs md:text-sm font-semibold">Internet + SaraivaTV Grátis</span>
+              <div className="inline-flex items-center bg-white/20 rounded-full px-4 py-2 mb-6 border border-white/30">
+                <Star className="w-4 h-4 mr-2 text-yellow-300" />
+                <span className="text-sm font-semibold">Internet + SaraivaTV Grátis</span>
               </div>
               
-              <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4 leading-tight">
+              <h1 className="text-5xl font-bold mb-4 leading-tight">
                 Internet<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">+ SaraivaTV</span>
+                <span className="text-yellow-300">+ SaraivaTV</span>
               </h1>
               
-              <p className="text-base md:text-lg mb-4 md:mb-6 text-gray-100 leading-relaxed">
+              <p className="text-lg mb-6 text-gray-100 leading-relaxed">
                 Conecte-se com nossa internet de fibra óptica ultrarrápida e ganhe acesso completo ao app SaraivaTV.
               </p>
 
-              <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4 md:mb-6">
+              <div className="grid grid-cols-2 gap-3 mb-6">
                 {[
                   { icon: Wifi, text: "Internet Ultra Rápida" },
                   { icon: Tv, text: "Canais de TV" },
                   { icon: Music, text: "Rádios Online" },
                   { icon: Shield, text: "Suporte 24h" }
                 ].map((feature, index) => (
-                  <div key={index} className="bg-white/15 backdrop-blur-sm rounded-xl p-2 md:p-4 flex items-center space-x-2 md:space-x-3 border border-white/20 hover:bg-white/25 transition-all duration-300 hover:scale-105 transform shadow-lg">
-                    <feature.icon className="w-5 h-5 md:w-8 md:h-8 text-yellow-300" />
-                    <span className="font-semibold text-xs md:text-sm">{feature.text}</span>
+                  <div key={index} className="bg-white/15 rounded-lg p-4 flex items-center space-x-3 border border-white/20">
+                    <feature.icon className="w-8 h-8 text-yellow-300" />
+                    <span className="font-semibold text-sm">{feature.text}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button 
                   onClick={handleWhatsAppClick}
-                  className="bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-4 md:px-6 py-2 md:py-3 rounded-xl font-bold text-sm md:text-base shadow-2xl border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl whitespace-nowrap"
+                  className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-bold text-base"
                 >
                   Contratar Agora →
                 </Button>
-                <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-4 md:px-8 py-2 md:py-3 rounded-xl font-bold text-sm md:text-lg shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-bold text-lg">
                   Saiba Mais
                 </Button>
               </div>
 
-              <div className="grid grid-cols-4 gap-4 md:gap-8 text-xs md:text-sm">
+              <div className="grid grid-cols-4 gap-8 text-sm">
                 <div className="text-center">
                   <StatsCounter endValue={500} label="Clientes" suffix="+" />
                 </div>
@@ -174,39 +168,39 @@ const Index = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="scale-in" delay={300}>
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/20 shadow-2xl hover:bg-white/20 transition-all duration-500 hover:scale-105 transform">
-              <div className="text-center mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg">
-                  <Smartphone className="w-6 h-6 md:w-8 md:h-8 text-white" />
+            <div className="bg-white/15 rounded-xl p-6 border border-white/20">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-blue-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-2">SaraivaTV</h3>
-                <p className="text-blue-200 text-sm md:text-base">Seus canais favoritos no celular</p>
+                <h3 className="text-2xl font-bold mb-2">SaraivaTV</h3>
+                <p className="text-blue-200">Seus canais favoritos no celular</p>
               </div>
               
-              <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4 md:mb-6">
+              <div className="grid grid-cols-2 gap-3 mb-6">
                 {[
                   { icon: Tv, text: "Canais de TV" },
                   { icon: Music, text: "Rádios" },
                   { icon: Zap, text: "Ao Vivo" },
                   { icon: Smartphone, text: "No Celular" }
                 ].map((feature, index) => (
-                  <div key={index} className="bg-white/10 rounded-lg p-2 md:p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
-                    <feature.icon className="w-4 h-4 md:w-6 md:h-6 mx-auto mb-1 md:mb-2 text-yellow-300" />
+                  <div key={index} className="bg-white/10 rounded-lg p-4 text-center border border-white/20">
+                    <feature.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                     <span className="text-xs font-medium">{feature.text}</span>
                   </div>
                 ))}
               </div>
               
-              <p className="text-center text-xs md:text-sm text-blue-200 mb-3 md:mb-4">
+              <p className="text-center text-sm text-blue-200 mb-4">
                 Disponível para Android e iOS
               </p>
               
               <div className="flex justify-center space-x-3">
-                <div className="bg-white/10 rounded-lg p-2 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <Smartphone className="w-5 h-5 md:w-6 md:h-6 text-yellow-300" />
+                <div className="bg-white/10 rounded-lg p-2 border border-white/20">
+                  <Smartphone className="w-6 h-6 text-yellow-300" />
                 </div>
-                <div className="bg-white/10 rounded-lg p-2 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <Tv className="w-5 h-5 md:w-6 md:h-6 text-yellow-300" />
+                <div className="bg-white/10 rounded-lg p-2 border border-white/20">
+                  <Tv className="w-6 h-6 text-yellow-300" />
                 </div>
               </div>
             </div>
@@ -214,7 +208,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - Melhorado */}
+      {/* Plans Section */}
       <section id="planos" className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 dark:from-gray-900 dark:via-black dark:to-gray-900 text-white px-3 md:px-4 py-12 md:py-16 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-purple-900/30 to-blue-900/30"></div>
