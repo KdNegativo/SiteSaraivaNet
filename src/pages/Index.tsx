@@ -40,67 +40,65 @@ const Index = () => {
       
       {/* Header with Enhanced Glassmorphism */}
       <header className="bg-white/10 backdrop-blur-lg shadow-2xl px-3 md:px-4 py-2 md:py-4 border-b border-white/20 z-50 transition-all duration-500 sticky top-0">
-        <div className="max-w-7xl mx-auto">
-          {/* Mobile Layout */}
-          <div className="md:hidden">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <div className="w-6 h-6 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center shadow-xl animate-pulse">
-                  <Wifi className="w-3 h-3 text-white" />
-                </div>
-                <div>
-                  <span className="text-base font-black text-white bg-gradient-to-r from-orange-200 to-yellow-200 bg-clip-text text-transparent">SaraivaNet</span>
-                  <div className="text-xs text-orange-100 font-medium flex items-center">
-                    <MapPin className="w-2 h-2 mr-1" />
-                    Eliseu Martins - PI
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-1">
-                <ThemeToggle />
-                <MobileNavigation />
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop Layout */}
-          <div className="hidden md:flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center shadow-2xl animate-pulse">
-                <Wifi className="w-6 h-6 text-white" />
+        {/* Mobile Layout */}
+        <div className="md:hidden">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="w-6 h-6 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center shadow-xl animate-pulse">
+                <Wifi className="w-3 h-3 text-white" />
               </div>
               <div>
-                <span className="text-2xl font-black text-white bg-gradient-to-r from-orange-200 to-yellow-200 bg-clip-text text-transparent">SaraivaNet</span>
-                <div className="text-sm text-orange-100 font-semibold flex items-center">
-                  <MapPin className="w-3 h-3 mr-1" />
+                <span className="text-base font-black text-white bg-gradient-to-r from-orange-200 to-yellow-200 bg-clip-text text-transparent">SaraivaNet</span>
+                <div className="text-xs text-orange-100 font-medium flex items-center">
+                  <MapPin className="w-2 h-2 mr-1" />
                   Eliseu Martins - PI
                 </div>
               </div>
             </div>
-            
-            <nav className="flex items-center space-x-6">
-              {[
-                { href: "#inicio", label: "Início" },
-                { href: "#planos", label: "Planos" },
-                { href: "#cobertura", label: "Cobertura" },
-                { href: "#sobre", label: "Sobre" },
-                { href: "#contato", label: "Contato" }
-              ].map((item) => (
-                <a 
-                  key={item.href}
-                  href={item.href} 
-                  onClick={e => handleSmoothScroll(e, item.href.slice(1))} 
-                  className="text-white hover:text-orange-200 transition-all duration-300 font-semibold text-base relative group"
-                >
-                  {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-300 to-yellow-300 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              ))}
-            </nav>
-
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-1">
               <ThemeToggle />
+              <MobileNavigation />
             </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center shadow-2xl animate-pulse">
+              <Wifi className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <span className="text-2xl font-black text-white bg-gradient-to-r from-orange-200 to-yellow-200 bg-clip-text text-transparent">SaraivaNet</span>
+              <div className="text-sm text-orange-100 font-semibold flex items-center">
+                <MapPin className="w-3 h-3 mr-1" />
+                Eliseu Martins - PI
+              </div>
+            </div>
+          </div>
+          
+          <nav className="flex items-center space-x-6">
+            {[
+              { href: "#inicio", label: "Início" },
+              { href: "#planos", label: "Planos" },
+              { href: "#cobertura", label: "Cobertura" },
+              { href: "#sobre", label: "Sobre" },
+              { href: "#contato", label: "Contato" }
+            ].map((item) => (
+              <a 
+                key={item.href}
+                href={item.href} 
+                onClick={e => handleSmoothScroll(e, item.href.slice(1))} 
+                className="text-white hover:text-orange-200 transition-all duration-300 font-semibold text-base relative group"
+              >
+                {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-300 to-yellow-300 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
           </div>
         </div>
       </header>
@@ -316,7 +314,7 @@ const Index = () => {
               <div className="absolute top-10 right-10 w-20 h-20 md:w-40 md:h-40 bg-white/10 rounded-full blur-2xl"></div>
               <div className="absolute bottom-10 left-10 w-16 h-16 md:w-32 md:h-32 bg-orange-300/20 rounded-full blur-2xl"></div>
               <div className="relative z-10">
-                <h3 className="text-xl md:text-5xl font-black mb-4 md:mb-6">Não Perca Esta Oportunidade!</h3>
+                <h3 className="text-xl md:text-5xl font-bold mb-4 md:mb-6">Não Perca Esta Oportunidade!</h3>
                 <p className="text-sm md:text-2xl mb-6 md:mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
                   Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
                 </p>
@@ -704,7 +702,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-6 md:mb-12">
             <Card className="p-4 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-2 md:space-x-3 mb-3 md:mb-6">
-                <div className="w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg">
                   <Phone className="w-5 h-5 md:w-8 md:h-8 text-white" />
                 </div>
                 <div>
@@ -717,7 +715,7 @@ const Index = () => {
 
             <Card className="p-4 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-2 md:space-x-3 mb-3 md:mb-6">
-                <div className="w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg">
                   <MapPin className="w-5 h-5 md:w-8 md:h-8 text-white" />
                 </div>
                 <div>
@@ -730,7 +728,7 @@ const Index = () => {
 
             <Card className="p-4 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-2 md:space-x-3 mb-3 md:mb-6">
-                <div className="w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg">
                   <Clock className="w-5 h-5 md:w-8 md:h-8 text-white" />
                 </div>
                 <div>
@@ -797,21 +795,4 @@ const Index = () => {
                 </li>
                 <li className="flex items-center space-x-2 md:space-x-3">
                   <MapPin className="w-4 h-4 md:w-6 md:h-6 text-orange-400" />
-                  <span className="text-sm md:text-lg">Rua Fernando Silva, Centro, Eliseu Martins - PI</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-6 md:mt-12 pt-4 md:pt-8 text-center">
-            <p className="text-gray-400 text-sm md:text-lg">
-              © 2025 SaraivaNet. Todos os direitos reservados.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+                  <span className="text-sm md:text
