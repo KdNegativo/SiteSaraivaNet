@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -795,4 +796,21 @@ const Index = () => {
                 </li>
                 <li className="flex items-center space-x-2 md:space-x-3">
                   <MapPin className="w-4 h-4 md:w-6 md:h-6 text-orange-400" />
-                  <span className="text-sm md:text
+                  <span className="text-sm md:text-lg">Eliseu Martins - PI</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700 mt-6 md:mt-12 pt-6 md:pt-8 text-center">
+            <p className="text-gray-400 text-xs md:text-base">
+              © 2024 SaraivaNet. Todos os direitos reservados. Conectando o Piauí desde 2003.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
