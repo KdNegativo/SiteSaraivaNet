@@ -1,366 +1,355 @@
-import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import RealMap from "@/components/RealMap";
-import StatsCounter from "@/components/StatsCounter";
-import TestimonialCard from "@/components/TestimonialCard";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle, ChevronDown, Clock, Heart, Mail, MapPin, Rocket, Shield, Users, Wifi, Zap, Phone, Award } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import MobileNavigation from "@/components/MobileNavigation";
-import AnimatedSection from "@/components/AnimatedSection";
+import StatsCounter from "@/components/StatsCounter";
+import RealMap from "@/components/RealMap";
+import TestimonialCard from "@/components/TestimonialCard";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ChatBot from "@/components/ChatBot";
-import { useParallax } from "@/hooks/useParallax";
 
 const Index = () => {
-  const parallaxOffset = useParallax(0.5);
-
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "5589994395789";
-    const message = "Olá! Gostaria de contratar o plano de internet + SaraivaTV.";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white dark:from-gray-900 dark:to-gray-800">
       {/* Floating Components */}
       <FloatingWhatsApp />
       <ChatBot />
       
       {/* Header */}
-      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-4 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
-        <div className="max-w-7xl mx-auto">
-          {/* Mobile Layout */}
-          <div className="md:hidden">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                  <Wifi className="w-5 h-5 text-orange-600" />
-                </div>
-                <div>
-                  <span className="text-xl font-bold text-white">SaraivaNet</span>
-                  <div className="text-xs text-orange-100 font-medium flex items-center">
-                    <MapPin className="w-3 h-3 mr-1" />
-                    Eliseu Martins - PI
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <ThemeToggle />
-                <MobileNavigation />
-              </div>
-            </div>
+      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-lg sticky top-0 z-50">
+        <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <img 
+              src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png" 
+              alt="SaraivaNet Logo" 
+              className="w-6 h-6 sm:w-10 sm:h-10 rounded-full"
+            />
+            <h1 className="text-sm sm:text-2xl font-bold text-white">SaraivaNet</h1>
+          </div>
+          
+          <div className="hidden lg:flex items-center space-x-8">
+            <nav className="flex space-x-6">
+              <a href="#inicio" className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
+              <a href="#planos" className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
+              <a href="#cobertura" className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
+              <a href="#sobre" className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
+              <a href="#contato" className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
+            </nav>
+            <ThemeToggle />
           </div>
 
-          {/* Desktop Layout */}
-          <div className="hidden md:flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                <Wifi className="w-5 h-5 text-orange-600" />
-              </div>
-              <div>
-                <span className="text-2xl font-bold text-white">SaraivaNet</span>
-                <div className="text-xs text-orange-100 font-medium flex items-center">
-                  <MapPin className="w-3 h-3 mr-1" />
-                  Eliseu Martins - PI
-                </div>
-              </div>
-            </div>
-            
-            <nav className="flex items-center space-x-6">
-              <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-              <a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-              <a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-              <a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-              <a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
-            </nav>
-
-            <div className="flex items-center space-x-4">
-              <ThemeToggle />
-              <div className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-4 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg hover:scale-105 transform">
-                <Phone className="w-4 h-4" />
-                <span className="font-semibold">(89) 99439-5789</span>
-              </div>
-            </div>
+          <div className="flex items-center space-x-2 lg:hidden">
+            <ThemeToggle />
+            <MobileNavigation />
           </div>
         </div>
       </header>
 
-      {/* Hero Section with Parallax */}
-      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
-        <div 
-          className="absolute inset-0"
-          style={{ transform: `translateY(${parallaxOffset}px)` }}
-        >
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-600/50 via-red-600/50 to-purple-700/50"></div>
-          <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-float"></div>
-          <div className="absolute bottom-10 left-10 w-48 h-48 bg-orange-300/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
-        </div>
+      {/* Hero Section */}
+      <section id="inicio" className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-600/90 to-red-600/90 dark:from-gray-900/90 dark:to-gray-800/90"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center relative z-10">
-          <AnimatedSection animation="fade-up">
-            <div>
-              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/30">
-                <Star className="w-4 h-4 mr-2 text-yellow-300" />
-                <span className="text-sm font-semibold">Internet + SaraivaTV Grátis</span>
-              </div>
-              
-              <h1 className="text-5xl font-bold mb-4 leading-tight">
-                Internet<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-200 to-yellow-200">+ SaraivaTV</span>
-              </h1>
-              
-              <p className="text-lg mb-6 text-gray-100">
-                Conecte-se com nossa internet de fibra óptica ultrarrápida e ganhe acesso completo ao app SaraivaTV.
-              </p>
+        <div className="relative z-10 text-center px-2 sm:px-4 max-w-6xl mx-auto">
+          <h2 className="text-lg sm:text-3xl md:text-5xl font-bold text-white mb-2 sm:mb-4 animate-fade-in">
+            Internet de <span className="text-yellow-300">Alta Velocidade</span>
+          </h2>
+          <p className="text-xs sm:text-lg md:text-xl text-white/90 mb-3 sm:mb-6 max-w-3xl mx-auto animate-fade-in">
+            Conecte-se com o futuro! Planos de fibra óptica com velocidades de até 1GB para sua casa ou empresa.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center mb-4 sm:mb-8 animate-bounce-in">
+            <Button 
+              size="lg" 
+              className="w-full sm:w-auto bg-white text-orange-600 hover:bg-orange-50 font-bold py-1.5 sm:py-3 px-3 sm:px-6 rounded-xl text-xs sm:text-base shadow-lg transform hover:scale-105 transition-all"
+              onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <Wifi className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" />
+              Ver Planos
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold py-1.5 sm:py-3 px-3 sm:px-6 rounded-xl text-xs sm:text-base transition-all"
+              onClick={() => {
+                const phoneNumber = "5589994395789";
+                const message = "Olá! Gostaria de saber mais sobre os planos da SaraivaNet.";
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+              }}
+            >
+              <Phone className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" />
+              Fale Conosco
+            </Button>
+          </div>
 
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex items-center space-x-3 border border-white/20 hover:bg-white/25 transition-all duration-300 hover:scale-105 transform">
-                  <Wifi className="w-8 h-8 text-orange-300" />
-                  <span className="font-semibold text-sm">Internet Ultra Rápida</span>
-                </div>
-                <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex items-center space-x-3 border border-white/20 hover:bg-white/25 transition-all duration-300 hover:scale-105 transform">
-                  <Tv className="w-8 h-8 text-orange-300" />
-                  <span className="font-semibold text-sm">Canais de TV</span>
-                </div>
-                <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex items-center space-x-3 border border-white/20 hover:bg-white/25 transition-all duration-300 hover:scale-105 transform">
-                  <Music className="w-8 h-8 text-orange-300" />
-                  <span className="font-semibold text-sm">Rádios Online</span>
-                </div>
-                <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex items-center space-x-3 border border-white/20 hover:bg-white/25 transition-all duration-300 hover:scale-105 transform">
-                  <Shield className="w-8 h-8 text-orange-300" />
-                  <span className="font-semibold text-sm">Suporte 24h</span>
-                </div>
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-6 mt-4 sm:mt-12">
+            <div className="text-center animate-slide-in-left p-1 sm:p-4">
+              <div className="w-8 h-8 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-4 shadow-lg">
+                <Zap className="w-4 h-4 sm:w-8 sm:h-8 text-white" />
               </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button 
-                  onClick={handleWhatsAppClick}
-                  className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-6 py-3 rounded-xl font-bold text-base shadow-xl border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl whitespace-nowrap"
-                >
-                  Contratar Agora →
-                </Button>
-                <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-xl font-bold text-lg shadow-xl transition-all duration-300 transform hover:scale-105">
-                  Saiba Mais
-                </Button>
-              </div>
-
-              <div className="flex space-x-8 text-sm">
-                <div className="text-center">
-                  <StatsCounter endValue={500} label="Clientes" suffix="+" />
-                </div>
-                <div className="text-center">
-                  <StatsCounter endValue={99.9} label="Uptime" suffix="%" />
-                </div>
-                <div className="text-center">
-                  <StatsCounter endValue={20} label="Canais" suffix="+" />
-                </div>
-                <div className="text-center">
-                  <StatsCounter endValue={24} label="Online" suffix="h" />
-                </div>
+              <StatsCounter endValue={1000} label="Mbps de Velocidade" />
+              <div className="text-white/80 mt-0.5 text-xs sm:text-sm">
+                Fibra óptica premium
               </div>
             </div>
-          </AnimatedSection>
 
-          <AnimatedSection animation="scale-in" delay={300}>
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/20 transition-all duration-500 hover:scale-105 transform">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Smartphone className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-2">SaraivaTV</h3>
-                <p className="text-orange-200">Seus canais favoritos no celular</p>
+            <div className="text-center animate-scale-in p-1 sm:p-4">
+              <div className="w-8 h-8 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-4 shadow-lg">
+                <Users className="w-4 h-4 sm:w-8 sm:h-8 text-white" />
               </div>
-              
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                <div className="bg-white/10 rounded-lg p-4 text-center border border-white/20">
-                  <Tv className="w-6 h-6 mx-auto mb-2 text-orange-300" />
-                  <span className="text-xs font-medium">Canais de TV</span>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4 text-center border border-white/20">
-                  <Music className="w-6 h-6 mx-auto mb-2 text-orange-300" />
-                  <span className="text-xs font-medium">Rádios</span>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4 text-center border border-white/20">
-                  <Zap className="w-6 h-6 mx-auto mb-2 text-orange-300" />
-                  <span className="text-xs font-medium">Ao Vivo</span>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4 text-center border border-white/20">
-                  <Smartphone className="w-6 h-6 mx-auto mb-2 text-orange-300" />
-                  <span className="text-xs font-medium">No Celular</span>
-                </div>
-              </div>
-              
-              <p className="text-center text-sm text-orange-200 mb-4">
-                Disponível para Android e iOS
-              </p>
-              
-              <div className="flex justify-center space-x-3">
-                <div className="bg-white/10 rounded-lg p-2 border border-white/20">
-                  <Smartphone className="w-6 h-6 text-orange-300" />
-                </div>
-                <div className="bg-white/10 rounded-lg p-2 border border-white/20">
-                  <Tv className="w-6 h-6 text-orange-300" />
-                </div>
+              <StatsCounter endValue={500} label="Clientes Satisfeitos" />
+              <div className="text-white/80 mt-0.5 text-xs sm:text-sm">
+                E crescendo cada dia
               </div>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
 
-      {/* Plans Section with Enhanced Hover Effects */}
-      <section id="planos" className="bg-gradient-to-br from-gray-800 via-gray-900 to-black dark:from-gray-900 dark:via-black dark:to-gray-900 text-white px-4 py-16">
-        <div className="max-w-7xl mx-auto">
-          <AnimatedSection animation="fade-up">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                <Award className="w-4 h-4 mr-2" />
-                Plano Exclusivo para Você
+            <div className="text-center animate-slide-in-right p-1 sm:p-4">
+              <div className="w-8 h-8 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-4 shadow-lg">
+                <MapPin className="w-4 h-4 sm:w-8 sm:h-8 text-white" />
               </div>
-              <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-6">
-                Internet + SaraivaTV
-              </h2>
-              <p className="text-xl text-gray-300 mb-4 max-w-3xl mx-auto">
-                O plano completo que vai transformar sua experiência digital
-              </p>
-              <div className="inline-flex items-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-full font-bold shadow-xl animate-pulse">
-                🎉 Oferta especial: 3 meses com desconto!
-              </div>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection animation="scale-in" delay={200}>
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-gray-700 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600 dark:border-gray-700 hover:scale-105 transform transition-all duration-500 hover:shadow-orange-500/20 hover:shadow-2xl group">
-                <div className="bg-gradient-to-r from-orange-600 to-red-600 p-8 text-white text-center group-hover:from-orange-500 group-hover:to-red-500 transition-all duration-500">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Wifi className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-3xl font-bold mb-2">Plano Completo</h3>
-                  <div className="text-5xl font-bold mb-2">300MB</div>
-                  <div className="text-lg opacity-90">Fibra Óptica + SaraivaTV Grátis</div>
-                </div>
-
-                <div className="p-8">
-                  <div className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className="text-center lg:text-left">
-                      <div className="mb-6">
-                        <div className="text-lg text-gray-400 line-through mb-2">De R$ 169,90</div>
-                        <div className="text-5xl font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors duration-300">
-                          R$ 129<span className="text-2xl">,90</span>
-                        </div>
-                        <div className="text-lg text-gray-300">por mês</div>
-                      </div>
-
-                      <div className="bg-gradient-to-r from-green-800 to-emerald-800 p-4 rounded-xl mb-6 border border-green-600 group-hover:from-green-700 group-hover:to-emerald-700 transition-all duration-300">
-                        <div className="text-green-300 font-bold mb-1">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
-                        <div className="text-green-400 text-sm">Promoção válida para novos clientes</div>
-                      </div>
-
-                      <Button 
-                        onClick={handleWhatsAppClick}
-                        className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 text-lg rounded-xl shadow-xl hover:scale-110 transform transition-all duration-300 whitespace-nowrap"
-                      >
-                        Contratar Agora →
-                      </Button>
-                    </div>
-
-                    <div>
-                      <h4 className="text-2xl font-bold text-white mb-6">
-                        Tudo que você precisa:
-                      </h4>
-                      <div className="space-y-3">
-                        {[
-                          { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida" },
-                          { icon: Tv, text: "App SaraivaTV Premium totalmente grátis" },
-                          { icon: Smartphone, text: "Assista TV direto no seu celular" },
-                          { icon: Music, text: "Rádios nacionais e locais incluídas" },
-                          { icon: Shield, text: "Suporte técnico 24h todos os dias" },
-                          { icon: Zap, text: "Velocidade garantida por contrato" },
-                          { icon: CheckCircle, text: "Instalação gratuita e Wi-Fi potente" },
-                          { icon: Heart, text: "Sem fidelidade, cancele quando quiser" }
-                        ].map((feature, index) => (
-                          <div key={index} className="flex items-center space-x-3 p-3 bg-gradient-to-r from-gray-600 to-gray-700 dark:from-gray-700 dark:to-gray-800 rounded-lg border border-gray-500 dark:border-gray-600 hover:from-orange-600/20 hover:to-red-600/20 hover:border-orange-500 transition-all duration-300 hover:scale-105 transform">
-                            <div className="w-8 h-8 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                              <feature.icon className="w-4 h-4 text-white" />
-                            </div>
-                            <span className="font-semibold text-gray-200">{feature.text}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white shadow-2xl">
-              <h3 className="text-3xl font-bold mb-4">Não Perca Esta Oportunidade!</h3>
-              <p className="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
-                Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button 
-                  onClick={handleWhatsAppClick}
-                  className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 text-base font-bold rounded-xl whitespace-nowrap"
-                >
-                  💬 WhatsApp
-                </Button>
-                <Button className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-6 py-3 text-base font-bold rounded-xl whitespace-nowrap">
-                  📞 Ligar Agora
-                </Button>
+              <StatsCounter endValue={5} label="Cidades Atendidas" />
+              <div className="text-white/80 mt-0.5 text-xs sm:text-sm">
+                Cobertura no sul do Piauí
               </div>
             </div>
           </div>
         </div>
+
+        <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-4 h-4 sm:w-6 sm:h-6 text-white/70" />
+        </div>
       </section>
 
-      {/* Área de Cobertura */}
-      <AnimatedSection className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              🗺️ Nossa Área de Cobertura
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Levamos internet de fibra óptica de alta qualidade para toda a região sul do Piauí
+      {/* Plans Section */}
+      <section id="planos" className="py-4 sm:py-12 lg:py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="text-center mb-4 sm:mb-12">
+            <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-3">
+              Escolha seu Plano Ideal
+            </h3>
+            <p className="text-xs sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Temos o plano perfeito para suas necessidades. Todos com fibra óptica e suporte 24/7.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">🏙️ Cidades Atendidas</h3>
-              <div className="space-y-4">
-                {[
-                  { name: "Eliseu Martins", status: "Cobertura Completa" },
-                  { name: "Colônia do Gurguéia", status: "Internet Ativa" },
-                  { name: "Manoel Emídio", status: "Fibra Óptica" },
-                  { name: "Canavieira", status: "Alta Velocidade" },
-                  { name: "Jerumenha", status: "Premium TV" }
-                ].map((city, index) => (
-                  <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                    <div>
-                      <div className="font-semibold">{city.name}</div>
-                      <div className="text-sm text-blue-200">{city.status}</div>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6">
+            {/* Plano Básico */}
+            <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2">
+              <CardContent className="p-2 sm:p-4">
+                <div className="text-center">
+                  <Zap className="w-6 h-6 sm:w-10 sm:h-10 text-orange-600 mx-auto mb-1 sm:mb-3" />
+                  <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">Plano Básico</h4>
+                  <div className="text-lg sm:text-2xl font-bold text-orange-600 mb-1 sm:mb-3">
+                    R$ 59,90
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">/mês</span>
                   </div>
-                ))}
+                  <div className="text-base sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 sm:mb-4">
+                    100 Mbps
+                  </div>
+                  
+                  <ul className="space-y-1 mb-2 sm:mb-4 text-left">
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Download: 100 Mbps</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Upload: 50 Mbps</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Fibra óptica</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Suporte 24/7</span>
+                    </li>
+                  </ul>
+                  
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-1 text-xs">
+                    Contratar Agora
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Plano Intermediário */}
+            <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2">
+              <CardContent className="p-2 sm:p-4">
+                <div className="text-center">
+                  <Wifi className="w-6 h-6 sm:w-10 sm:h-10 text-orange-600 mx-auto mb-1 sm:mb-3" />
+                  <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">Plano Intermediário</h4>
+                  <div className="text-lg sm:text-2xl font-bold text-orange-600 mb-1 sm:mb-3">
+                    R$ 89,90
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">/mês</span>
+                  </div>
+                  <div className="text-base sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 sm:mb-4">
+                    300 Mbps
+                  </div>
+                  
+                  <ul className="space-y-1 mb-2 sm:mb-4 text-left">
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Download: 300 Mbps</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Upload: 150 Mbps</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Fibra óptica</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Suporte 24/7</span>
+                    </li>
+                  </ul>
+                  
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-1 text-xs">
+                    Contratar Agora
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Plano Premium - Destacado */}
+            <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-orange-500 lg:scale-105">
+              <div className="absolute top-0 right-0 bg-orange-500 text-white px-1 py-0.5 text-xs font-bold">
+                POPULAR
               </div>
+              <CardContent className="p-2 sm:p-4">
+                <div className="text-center">
+                  <Zap className="w-6 h-6 sm:w-10 sm:h-10 text-orange-600 mx-auto mb-1 sm:mb-3" />
+                  <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">Plano Premium</h4>
+                  <div className="text-lg sm:text-2xl font-bold text-orange-600 mb-1 sm:mb-3">
+                    R$ 129,90
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">/mês</span>
+                  </div>
+                  <div className="text-base sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 sm:mb-4">
+                    600 Mbps
+                  </div>
+                  
+                  <ul className="space-y-1 mb-2 sm:mb-4 text-left">
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Download: 600 Mbps</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Upload: 300 Mbps</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Fibra óptica</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Suporte 24/7</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>WiFi 6 incluso</span>
+                    </li>
+                  </ul>
+                  
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-1 text-xs">
+                    Contratar Agora
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Plano Ultra */}
+            <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2">
+              <CardContent className="p-2 sm:p-4">
+                <div className="text-center">
+                  <Rocket className="w-6 h-6 sm:w-10 sm:h-10 text-orange-600 mx-auto mb-1 sm:mb-3" />
+                  <h4 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">Plano Ultra</h4>
+                  <div className="text-lg sm:text-2xl font-bold text-orange-600 mb-1 sm:mb-3">
+                    R$ 199,90
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">/mês</span>
+                  </div>
+                  <div className="text-base sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 sm:mb-4">
+                    1000 Mbps
+                  </div>
+                  
+                  <ul className="space-y-1 mb-2 sm:mb-4 text-left">
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Download: 1000 Mbps</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Upload: 500 Mbps</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Fibra óptica</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>Suporte 24/7</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>WiFi 6 incluso</span>
+                    </li>
+                    <li className="flex items-center text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" />
+                      <span>IP fixo gratuito</span>
+                    </li>
+                  </ul>
+                  
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-1 text-xs">
+                    Contratar Agora
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage Section */}
+      <section id="cobertura" className="py-4 sm:py-12 lg:py-16 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Nossa Área de Cobertura</h3>
+            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+              Levamos internet de fibra óptica de alta qualidade para toda a região sul do Piauí.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Cidades Atendidas</h4>
+              <ul className="space-y-3">
+                <li className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-gray-800 dark:text-gray-200">Eliseu Martins - Cobertura Completa</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-gray-800 dark:text-gray-200">Colônia do Gurguéia - Internet Ativa</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-gray-800 dark:text-gray-200">Manoel Emídio - Fibra Óptica</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-gray-800 dark:text-gray-200">Canavieira - Alta Velocidade</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-gray-800 dark:text-gray-200">Jerumenha - Premium TV</span>
+                </li>
+              </ul>
             </div>
 
             <div>
@@ -368,7 +357,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-8">
             <a
               href="https://wa.me/5586999999999?text=Olá! Gostaria de saber sobre a disponibilidade da internet SaraivaNet na minha região."
               target="_blank"
@@ -380,254 +369,40 @@ const Index = () => {
             </a>
           </div>
         </div>
-      </AnimatedSection>
-
-      {/* SaraivaTV Features Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-white to-orange-50 dark:from-gray-900 dark:to-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Tv className="w-4 h-4 mr-2" />
-              App Exclusivo
-            </div>
-            <h2 className="text-6xl font-bold mb-6">
-              Conheça o <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">SaraivaTV</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              App gratuito que vem junto com sua internet. Assista TV direto no celular com qualidade HD!
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 mb-16">
-            <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 bg-gradient-to-b from-orange-50 to-white shadow-lg">
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                <Tv className="w-12 h-12 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Canais de TV</h3>
-              <p className="text-gray-600 mb-6">
-                Assista os mesmos canais da sua TV direto no celular
-              </p>
-              <div className="space-y-2">
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">TV Aberta</span>
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Canais Locais</span>
-                <div className="mt-2">
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Notícias</span>
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Esportes</span>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 bg-gradient-to-b from-orange-50 to-white shadow-lg">
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                <Music className="w-12 h-12 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Rádios Online</h3>
-              <p className="text-gray-600 mb-6">
-                Escute suas rádios favoritas onde estiver
-              </p>
-              <div className="space-y-2">
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Rádios Locais</span>
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Música</span>
-                <div className="mt-2">
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Notícias</span>
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Esportes</span>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 bg-gradient-to-b from-orange-50 to-white shadow-lg">
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                <Smartphone className="w-12 h-12 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">No Seu Celular</h3>
-              <p className="text-gray-600 mb-6">
-                App fácil de usar para Android e iOS
-              </p>
-              <div className="space-y-2">
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Android</span>
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">iOS</span>
-                <div className="mt-2">
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Fácil de Usar</span>
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Gratuito</span>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 bg-gradient-to-b from-orange-50 to-white shadow-lg">
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                <Zap className="w-12 h-12 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Transmissão Ao Vivo</h3>
-              <p className="text-gray-600 mb-6">
-                Tudo que passa na TV, passa no app em tempo real
-              </p>
-              <div className="space-y-2">
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Ao Vivo</span>
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Tempo Real</span>
-                <div className="mt-2">
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Sem Atraso</span>
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Qualidade HD</span>
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          <div className="bg-gradient-to-r from-orange-500 via-red-500 to-red-600 rounded-3xl p-16 text-white relative overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-black/10"></div>
-            <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-            <div className="absolute bottom-10 left-10 w-24 h-24 bg-orange-300/20 rounded-full blur-xl"></div>
-            <div className="relative z-10">
-              <h3 className="text-5xl font-bold mb-6">Pronto para ter Internet + SaraivaTV?</h3>
-              <p className="text-2xl mb-10 opacity-90 max-w-2xl mx-auto">
-                Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
-              </p>
-              <div className="flex justify-center">
-                <Button 
-                  onClick={handleWhatsAppClick}
-                  className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 whitespace-nowrap"
-                >
-                  💬 Entrar em Contato
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-24 px-6 bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute top-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 left-10 w-72 h-72 bg-orange-300/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h2 className="text-5xl font-bold text-white mb-4">Números Que Falam Por Si</h2>
-          <p className="text-2xl text-white/90 mb-12">
-            Resultados conquistados com dedicação e compromisso com a região
-          </p>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Users className="w-10 h-10 text-white" />
-              </div>
-              <StatsCounter endValue={500} label="Famílias Conectadas" suffix="+" />
-              <div className="text-white/80 mt-2 text-lg">
-                Lares piauenses com internet de qualidade
-              </div>
-            </div>
-
-            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <MapPin className="w-10 h-10 text-white" />
-              </div>
-              <StatsCounter endValue={5} label="Cidades Atendidas" />
-              <div className="text-white/80 mt-2 text-lg">
-                Cobertura no sul do Piauí
-              </div>
-            </div>
-
-            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Zap className="w-10 h-10 text-white" />
-              </div>
-              <StatsCounter endValue={99.9} label="Uptime Garantido" suffix="%" />
-              <div className="text-white/80 mt-2 text-lg">
-                Conexão estável e confiável
-              </div>
-            </div>
-
-            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Heart className="w-10 h-10 text-white" />
-              </div>
-              <StatsCounter endValue={98} label="Satisfação" suffix="%" />
-              <div className="text-white/80 mt-2 text-lg">
-                Clientes recomendam nossos serviços
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-24 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
-              Nossa História
-            </div>
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">Sobre a SaraivaNet</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Há 22 anos conectando Eliseu Martins com o mundo digital. Somos uma empresa piauense 
-              comprometida em levar internet de qualidade para todos os lares e empresas da nossa cidade.
+      <section id="sobre" className="py-4 sm:py-12 lg:py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Sobre a SaraivaNet</h3>
+            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+              Há 22 anos conectando Eliseu Martins com o mundo digital. Somos uma empresa piauense comprometida em levar internet de qualidade para todos os lares e empresas da nossa cidade.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="animate-fade-in">
-              <h3 className="text-3xl font-bold text-gray-800 mb-6">Nossa História</h3>
-              <p className="text-gray-600 mb-6 text-lg">
-                Fundada em 2003 por empreendedores locais, a SaraivaNet nasceu do sonho 
-                de democratizar o acesso à internet de qualidade em Eliseu Martins.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Nossa História</h4>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Fundada em 2003 por empreendedores locais, a SaraivaNet nasceu do sonho de democratizar o acesso à internet de qualidade em Eliseu Martins.
               </p>
-              <p className="text-gray-600 mb-6 text-lg">
-                Começamos atendendo apenas algumas famílias e hoje somos referência em 
-                conectividade na região, sempre mantendo nosso compromisso com a 
-                excelência no atendimento e tecnologia de ponta.
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Começamos atendendo apenas algumas famílias e hoje somos referência em conectividade na região, sempre mantendo nosso compromisso com a excelência no atendimento e tecnologia de ponta.
               </p>
-              <p className="text-gray-600 mb-8 text-lg">
-                Nossa missão é simples: conectar pessoas, aproximar famílias e impulsionar o 
-                desenvolvimento digital da nossa querida cidade piauense.
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Nossa missão é simples: conectar pessoas, aproximar famílias e impulsionar o desenvolvimento digital da nossa querida cidade piauense.
               </p>
-
-              <div className="grid grid-cols-2 gap-8">
-                <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-orange-500">500+</div>
-                  <div className="text-sm text-gray-600 font-medium">Clientes Ativos</div>
-                </div>
-                <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <MapPin className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-orange-500">100%</div>
-                  <div className="text-sm text-gray-600 font-medium">Cobertura Local</div>
-                </div>
-                <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <Award className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-orange-500">22</div>
-                  <div className="text-sm text-gray-600 font-medium">Anos de Experiência</div>
-                </div>
-                <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <Heart className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-orange-500">24h</div>
-                  <div className="text-sm text-gray-600 font-medium">Suporte Local</div>
-                </div>
-              </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-10 shadow-2xl animate-fade-in delay-300">
-              <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-                Tecnologia que Conecta Corações
-              </h3>
-              <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed">
-                Na SaraivaNet, acreditamos que internet não é apenas tecnologia, é conexão humana. É o avô vendo 
-                o neto pela primeira vez por videochamada, é o estudante acessando conhecimento, e o 
-                empreendedor expandindo seus negócios. Somos parte da sua história há mais de duas décadas.
+            <div>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Tecnologia que Conecta Corações</h4>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Na SaraivaNet, acreditamos que internet não é apenas tecnologia, é conexão humana. É o avô vendo o neto pela primeira vez por videochamada, é o estudante acessando conhecimento, e o empreendedor expandindo seus negócios. Somos parte da sua história há mais de duas décadas.
               </p>
-              <div className="text-center">
-                <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-lg">
-                  <Heart className="w-6 h-6 mr-2" />
-                  Feito com amor no Piauí desde 2003
-                </div>
+              <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-lg">
+                <Heart className="w-6 h-6 mr-2" />
+                Feito com amor no Piauí desde 2003
               </div>
             </div>
           </div>
@@ -635,27 +410,22 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Star className="w-4 h-4 mr-2" />
-              Depoimentos
-            </div>
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">O Que Nossos Clientes Dizem</h2>
-            <p className="text-xl text-gray-600">
-              Histórias reais de pessoas que confiam na SaraivaNet para se conectar com o mundo
+      <section className="py-4 sm:py-12 lg:py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">O Que Nossos Clientes Dizem</h3>
+            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+              Histórias reais de pessoas que confiam na SaraivaNet para se conectar com o mundo.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
               name="Maria Santos"
               age="68 anos"
               location="Centro de Eliseu Martins"
               initials="MS"
-              testimonial="A internet da SaraivaNet mudou minha vida! Agora consigo falar com meus netos 
-                que moram longe todos os dias. O atendimento é muito carinhoso."
+              testimonial="A internet da SaraivaNet mudou minha vida! Agora consigo falar com meus netos que moram longe todos os dias. O atendimento é muito carinhoso."
             />
             
             <TestimonialCard
@@ -663,8 +433,7 @@ const Index = () => {
               age="45 anos"
               location="Bairro São José"
               initials="JS"
-              testimonial="Trabalho com vendas online e a internet nunca me deixou na mão. Rápida e estável, 
-                exatamente o que precisava para meu negócio crescer."
+              testimonial="Trabalho com vendas online e a internet nunca me deixou na mão. Rápida e estável, exatamente o que precisava para meu negócio crescer."
             />
             
             <TestimonialCard
@@ -672,63 +441,57 @@ const Index = () => {
               age="72 anos"
               location="Vila Nova"
               initials="AO"
-              testimonial="Os técnicos são muito educados e me ensinaram a usar o Wi-Fi. Agora assisto 
-                meus programas favoritos no tablet sem travar."
+              testimonial="Os técnicos são muito educados e me ensinaram a usar o Wi-Fi. Agora assisto meus programas favoritos no tablet sem travar."
             />
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-24 px-6 bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/30">
-              <Phone className="w-4 h-4 mr-2" />
-              Fale Conosco
-            </div>
-            <h2 className="text-5xl font-bold text-white mb-4">Entre em Contato</h2>
-            <p className="text-xl text-blue-200">
-              Estamos aqui para ajudar! Entre em contato conosco e descubra como podemos 
-              conectar você ao mundo digital.
+      <section id="contato" className="py-4 sm:py-12 lg:py-16 bg-gradient-to-br from-orange-600 to-red-600 dark:from-gray-900 dark:to-gray-800 text-white">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-3xl font-bold mb-4">Entre em Contato</h3>
+            <p className="text-base sm:text-lg max-w-3xl mx-auto mb-8">
+              Estamos aqui para ajudar! Entre em contato conosco e descubra como podemos conectar você ao mundo digital.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <Card className="p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-800">Telefone</h3>
-                  <p className="text-gray-600 text-lg">(89) 99439-5789</p>
+                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Telefone</h4>
+                  <p className="text-lg">(89) 99439-5789</p>
                   <p className="text-sm text-gray-500">WhatsApp disponível</p>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <Card className="p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-800">Endereço</h3>
-                  <p className="text-gray-600 text-lg">Rua Fernando Silva, Centro</p>
+                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Endereço</h4>
+                  <p className="text-lg">Rua Fernando Silva, Centro</p>
                   <p className="text-sm text-gray-500">Eliseu Martins - PI</p>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <Card className="p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-800">Horário</h3>
-                  <p className="text-gray-600 text-lg">Segunda a Sábado</p>
+                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Horário</h4>
+                  <p className="text-lg">Segunda a Sábado</p>
                   <p className="text-sm text-gray-500">8h às 18h</p>
                 </div>
               </div>
@@ -737,12 +500,17 @@ const Index = () => {
 
           <div className="text-center space-x-6">
             <Button 
-              onClick={handleWhatsAppClick}
+              onClick={() => {
+                const phoneNumber = "5589994395789";
+                const message = "Olá! Gostaria de contratar o plano de internet + SaraivaTV.";
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+              }}
               className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105"
             >
               📱 WhatsApp
             </Button>
-            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
+            <Button className="bg-white text-orange-600 hover:bg-orange-50 px-12 py-4 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
               📞 Ligar Agora
             </Button>
           </div>
@@ -750,53 +518,39 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-b from-gray-800 to-gray-900 dark:from-gray-900 dark:to-black text-white py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
-                  <Wifi className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">SaraivaNet</span>
+      <footer className="bg-gray-900 dark:bg-black text-white py-4 sm:py-8">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+                <Wifi className="w-6 h-6 text-white" />
               </div>
-              <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-                Conectando Eliseu Martins com o mundo há 22 anos. Internet de qualidade, 
-                suporte especializado e compromisso com nossa comunidade.
-              </p>
-              <div className="flex items-center text-orange-400 bg-orange-900/20 px-4 py-2 rounded-full">
-                <Heart className="w-5 h-5 mr-2" />
-                <span className="font-medium">Feito com amor no Piauí desde 2003</span>
-              </div>
+              <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">SaraivaNet</span>
             </div>
 
-            <div>
-              <h4 className="text-2xl font-bold mb-6 text-orange-400">Links Rápidos</h4>
-              <ul className="space-y-3">
-                <li><a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</a></li>
-                <li><a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</a></li>
-                <li><a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</a></li>
-                <li><a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</a></li>
-                <li><a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</a></li>
-              </ul>
+            <div className="flex space-x-8">
+              <nav className="flex space-x-6">
+                <a href="#inicio" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</a>
+                <a href="#planos" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</a>
+                <a href="#cobertura" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</a>
+                <a href="#sobre" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</a>
+                <a href="#contato" className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</a>
+              </nav>
             </div>
 
-            <div>
-              <h4 className="text-2xl font-bold mb-6 text-orange-400">Contato</h4>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-orange-400" />
-                  <span className="text-lg">(89) 99439-5789</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-orange-400" />
-                  <span className="text-lg">Rua Fernando Silva, Centro, Eliseu Martins - PI</span>
-                </li>
-              </ul>
+            <div className="flex space-x-6">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-orange-400" />
+                <span className="text-lg">(89) 99439-5789</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-orange-400" />
+                <span className="text-lg">Rua Fernando Silva, Centro, Eliseu Martins - PI</span>
+              </div>
             </div>
           </div>
 
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center">
+          <div className="border-t border-gray-700 mt-8 pt-4 text-center">
             <p className="text-gray-400 text-lg">
               © 2025 SaraivaNet. Todos os direitos reservados.
             </p>
