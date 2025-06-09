@@ -45,58 +45,56 @@ const Index = () => {
       
       {/* Header - Optimized for mobile touch */}
       <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-3 py-3 md:px-4 md:py-4 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
-        <div className="max-w-7xl mx-auto">
-          {/* Mobile Layout - Enhanced touch targets */}
-          <div className="md:hidden">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <div className="w-7 h-7 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                  <Wifi className="w-4 h-4 text-orange-600" />
-                </div>
-                <div>
-                  <span className="text-base font-bold text-white">SaraivaNet</span>
-                  <div className="text-xs text-orange-100 font-medium flex items-center">
-                    <MapPin className="w-2.5 h-2.5 mr-1" />
-                    Eliseu Martins - PI
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <ThemeToggle />
-                <MobileNavigation />
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop Layout */}
-          <div className="hidden md:flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                <Wifi className="w-5 h-5 text-orange-600" />
+        {/* Mobile Layout - Enhanced touch targets */}
+        <div className="md:hidden">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="w-7 h-7 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                <Wifi className="w-4 h-4 text-orange-600" />
               </div>
               <div>
-                <span className="text-2xl font-bold text-white">SaraivaNet</span>
+                <span className="text-base font-bold text-white">SaraivaNet</span>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
-                  <MapPin className="w-3 h-3 mr-1" />
+                  <MapPin className="w-2.5 h-2.5 mr-1" />
                   Eliseu Martins - PI
                 </div>
               </div>
             </div>
-            
-            <nav className="flex items-center space-x-6">
-              <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-              <a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-              <a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-              <a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-              <a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
-            </nav>
-
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
               <ThemeToggle />
-              <div className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-4 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg hover:scale-105 transform">
-                <Phone className="w-4 h-4" />
-                <span className="font-semibold">(89) 99439-5789</span>
+              <MobileNavigation />
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
+              <Wifi className="w-5 h-5 text-orange-600" />
+            </div>
+            <div>
+              <span className="text-2xl font-bold text-white">SaraivaNet</span>
+              <div className="text-xs text-orange-100 font-medium flex items-center">
+                <MapPin className="w-3 h-3 mr-1" />
+                Eliseu Martins - PI
               </div>
+            </div>
+          </div>
+          
+          <nav className="flex items-center space-x-6">
+            <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
+            <a href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
+            <a href="#cobertura" onClick={(e) => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
+            <a href="#sobre" onClick={(e) => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
+            <a href="#contato" onClick={(e) => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
+          </nav>
+
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            <div className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-4 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg hover:scale-105 transform">
+              <Phone className="w-4 h-4" />
+              <span className="font-semibold">(89) 99439-5789</span>
             </div>
           </div>
         </div>
@@ -230,7 +228,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - Enhanced for mobile */}
+      {/* Plans Section - Single plan as before */}
       <section id="planos" className="bg-gradient-to-br from-gray-800 via-gray-900 to-black dark:from-gray-900 dark:via-black dark:to-gray-900 text-white px-3 py-8 md:px-4 md:py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-up">
@@ -239,7 +237,7 @@ const Index = () => {
                 <Award className="w-3 h-3 mr-2" />
                 Plano Exclusivo para Você
               </div>
-              <h2 className="text-2xl md:text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-3 md:mb-4">
+              <h2 className="text-xl md:text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-3 md:mb-4">
                 Internet + SaraivaTV
               </h2>
               <p className="text-sm md:text-base sm:text-lg md:text-xl text-gray-300 mb-2 md:mb-3 max-w-3xl mx-auto leading-relaxed">
@@ -251,90 +249,85 @@ const Index = () => {
             </div>
           </AnimatedSection>
 
-          {/* Mobile Carousel */}
-          <MobilePlansCarousel />
-
-          {/* Desktop Grid - Hidden on mobile */}
-          <div className="hidden md:block">
-            <div className="bg-gradient-to-br from-gray-700 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600 dark:border-gray-700 hover:scale-105 transform transition-all duration-500 hover:shadow-orange-500/20 hover:shadow-2xl group">
-              <div className="bg-gradient-to-r from-orange-600 to-red-600 p-6 sm:p-8 text-white text-center group-hover:from-orange-500 group-hover:to-red-500 transition-all duration-500">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Wifi className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-                </div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Plano Completo</h3>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">300MB</div>
-                <div className="text-sm sm:text-base md:text-lg opacity-90">Fibra Óptica + SaraivaTV Grátis</div>
+          {/* Single Plan Card */}
+          <div className="bg-gradient-to-br from-gray-700 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600 dark:border-gray-700 hover:scale-105 transform transition-all duration-500 hover:shadow-orange-500/20 hover:shadow-2xl group">
+            <div className="bg-gradient-to-r from-orange-600 to-red-600 p-4 sm:p-6 md:p-8 text-white text-center group-hover:from-orange-500 group-hover:to-red-500 transition-all duration-500">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                <Wifi className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
               </div>
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-2">Plano Completo</h3>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">300MB</div>
+              <div className="text-sm sm:text-base md:text-lg opacity-90">Fibra Óptica + SaraivaTV Grátis</div>
+            </div>
 
-              <div className="p-4 sm:p-8">
-                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
-                  <div className="text-center lg:text-left">
-                    <div className="mb-4 sm:mb-6">
-                      <div className="text-sm sm:text-lg text-gray-400 line-through mb-1 sm:mb-2">De R$ 169,90</div>
-                      <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-400 mb-1 sm:mb-2 group-hover:text-orange-300 transition-colors duration-300">
-                        R$ 129<span className="text-lg sm:text-2xl">,90</span>
-                      </div>
-                      <div className="text-sm sm:text-lg text-gray-300">por mês</div>
+            <div className="p-3 sm:p-4 md:p-8">
+              <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
+                <div className="text-center lg:text-left">
+                  <div className="mb-3 sm:mb-4 md:mb-6">
+                    <div className="text-sm sm:text-base md:text-lg text-gray-400 line-through mb-1 sm:mb-2">De R$ 169,90</div>
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-orange-400 mb-1 sm:mb-2 group-hover:text-orange-300 transition-colors duration-300">
+                      R$ 129<span className="text-lg sm:text-xl md:text-2xl">,90</span>
                     </div>
-
-                    <div className="bg-gradient-to-r from-green-800 to-emerald-800 p-3 sm:p-4 rounded-xl mb-4 sm:mb-6 border border-green-600 group-hover:from-green-700 group-hover:to-emerald-700 transition-all duration-300">
-                      <div className="text-green-300 font-bold mb-1 text-xs sm:text-sm">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
-                      <div className="text-green-400 text-xs">Promoção válida para novos clientes</div>
-                    </div>
-
-                    <Button 
-                      onClick={handleWhatsAppClick}
-                      className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-6 text-sm sm:text-base rounded-xl shadow-xl hover:scale-110 transform transition-all duration-300"
-                    >
-                      Contratar Agora →
-                    </Button>
+                    <div className="text-sm sm:text-base md:text-lg text-gray-300">por mês</div>
                   </div>
 
-                  <div>
-                    <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 sm:mb-6">
-                      Tudo que você precisa:
-                    </h4>
-                    <div className="space-y-2 sm:space-y-3">
-                      {[
-                        { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida" },
-                        { icon: Tv, text: "App SaraivaTV Premium totalmente grátis" },
-                        { icon: Smartphone, text: "Assista TV direto no seu celular" },
-                        { icon: Music, text: "Rádios nacionais e locais incluídas" },
-                        { icon: Shield, text: "Suporte técnico 24h todos os dias" },
-                        { icon: Zap, text: "Velocidade garantida por contrato" },
-                        { icon: CheckCircle, text: "Instalação gratuita e Wi-Fi potente" },
-                        { icon: Heart, text: "Sem fidelidade, cancele quando quiser" }
-                      ].map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 bg-gradient-to-r from-gray-600 to-gray-700 dark:from-gray-700 dark:to-gray-800 rounded-lg border border-gray-500 dark:border-gray-600 hover:from-orange-600/20 hover:to-red-600/20 hover:border-orange-500 transition-all duration-300 hover:scale-105 transform">
-                          <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                            <feature.icon className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
-                          </div>
-                          <span className="font-semibold text-gray-200 text-xs sm:text-sm">{feature.text}</span>
+                  <div className="bg-gradient-to-r from-green-800 to-emerald-800 p-2 sm:p-3 md:p-4 rounded-xl mb-3 sm:mb-4 md:mb-6 border border-green-600 group-hover:from-green-700 group-hover:to-emerald-700 transition-all duration-300">
+                    <div className="text-green-300 font-bold mb-1 text-xs sm:text-sm">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
+                    <div className="text-green-400 text-xs">Promoção válida para novos clientes</div>
+                  </div>
+
+                  <TouchButton 
+                    onClick={handleWhatsAppClick}
+                    className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-6 text-sm sm:text-base rounded-xl shadow-xl"
+                  >
+                    Contratar Agora →
+                  </TouchButton>
+                </div>
+
+                <div>
+                  <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
+                    Tudo que você precisa:
+                  </h4>
+                  <div className="space-y-2 sm:space-y-3">
+                    {[
+                      { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida" },
+                      { icon: Tv, text: "App SaraivaTV Premium totalmente grátis" },
+                      { icon: Smartphone, text: "Assista TV direto no seu celular" },
+                      { icon: Music, text: "Rádios nacionais e locais incluídas" },
+                      { icon: Shield, text: "Suporte técnico 24h todos os dias" },
+                      { icon: Zap, text: "Velocidade garantida por contrato" },
+                      { icon: CheckCircle, text: "Instalação gratuita e Wi-Fi potente" },
+                      { icon: Heart, text: "Sem fidelidade, cancele quando quiser" }
+                    ].map((feature, index) => (
+                      <div key={index} className="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 bg-gradient-to-r from-gray-600 to-gray-700 dark:from-gray-700 dark:to-gray-800 rounded-lg border border-gray-500 dark:border-gray-600 hover:from-orange-600/20 hover:to-red-600/20 hover:border-orange-500 transition-all duration-300 hover:scale-105 transform">
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                          <feature.icon className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                         </div>
-                      ))}
-                    </div>
+                        <span className="font-semibold text-gray-200 text-xs sm:text-sm">{feature.text}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="text-center mt-8 sm:mt-12">
-            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-6 sm:p-8 text-white shadow-2xl">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Não Perca Esta Oportunidade!</h3>
+          <div className="text-center mt-6 sm:mt-8 md:mt-12">
+            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-4 sm:p-6 md:p-8 text-white shadow-2xl">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Não Perca Esta Oportunidade!</h3>
               <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 opacity-90 max-w-2xl mx-auto">
                 Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-                <Button 
+                <TouchButton 
                   onClick={handleWhatsAppClick}
                   className="bg-white text-orange-600 hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl"
                 >
                   💬 WhatsApp
-                </Button>
-                <Button className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl">
+                </TouchButton>
+                <TouchButton className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl">
                   📞 Ligar Agora
-                </Button>
+                </TouchButton>
               </div>
             </div>
           </div>
