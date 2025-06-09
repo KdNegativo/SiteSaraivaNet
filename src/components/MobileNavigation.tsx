@@ -39,12 +39,12 @@ const MobileNavigation = () => {
         variant="ghost"
         size="icon"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 h-10 text-white hover:bg-white/20 transition-colors rounded-full"
+        className="w-10 h-10 text-white hover:bg-white/20 transition-colors rounded-full relative z-40"
       >
         <Menu className="h-5 w-5" />
       </Button>
 
-      {/* Overlay */}
+      {/* Overlay - não deve interferir com outros elementos quando fechado */}
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 z-40"
@@ -52,8 +52,8 @@ const MobileNavigation = () => {
         />
       )}
 
-      {/* Menu */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 z-50 transform transition-transform duration-300 ${
+      {/* Menu - z-index menor que os botões flutuantes */}
+      <div className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 z-40 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="p-6">
