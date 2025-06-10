@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { MessageCircle, X, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -18,7 +17,7 @@ const ChatBot = () => {
   const faqOptions = [
     {
       question: "Como funciona a instalação?",
-      answer: "A instalação é totalmente gratuita! Nossa equipe agenda um horário conveniente e realiza todo o processo em até 2 horas."
+      answer: "Nossa equipe agenda um horário conveniente e realiza todo o processo de instalação profissional. O valor da instalação é cobrado separadamente conforme nossa tabela de preços."
     },
     {
       question: "Qual a área de cobertura?",

@@ -296,7 +296,7 @@ const Index = () => {
                       { icon: Music, text: "Rádios nacionais e locais incluídas" },
                       { icon: Shield, text: "Suporte técnico 24h todos os dias" },
                       { icon: Zap, text: "Velocidade garantida por contrato" },
-                      { icon: CheckCircle, text: "Instalação gratuita e Wi-Fi potente" },
+                      { icon: CheckCircle, text: "Instalação profissional e Wi-Fi potente" },
                       { icon: Heart, text: "Sem fidelidade, cancele quando quiser" }
                     ].map((feature, index) => (
                       <div key={index} className="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 bg-gradient-to-r from-gray-600 to-gray-700 dark:from-gray-700 dark:to-gray-800 rounded-lg border border-gray-500 dark:border-gray-600 hover:from-orange-600/20 hover:to-red-600/20 hover:border-orange-500 transition-all duration-300 hover:scale-105 transform">
