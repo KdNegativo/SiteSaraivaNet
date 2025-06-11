@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { MessageCircle, X, ArrowLeft } from 'lucide-react';
+import { MessageCircle, X, ArrowLeft, HelpCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
@@ -66,17 +66,29 @@ const ChatBot = () => {
 
   return (
     <>
-      {/* Chat Button with Label */}
+      {/* Chat Button with Improved Mobile UX */}
       <div className="fixed bottom-36 right-4 md:bottom-24 md:right-6 z-40 flex items-center gap-3">
-        <div className="hidden md:block bg-white dark:bg-gray-800 text-gray-800 dark:text-white px-3 py-2 rounded-lg shadow-lg text-sm font-medium border border-gray-200 dark:border-gray-700">
+        {/* Desktop label - only visible on medium screens and up */}
+        <div className="hidden md:block bg-white dark:bg-gray-800 text-gray-800 dark:text-white px-3 py-2 rounded-lg shadow-lg text-sm font-medium border border-gray-200 dark:border-gray-700 animate-pulse">
           Tire suas dúvidas
         </div>
+        
+        {/* Chat button with better mobile accessibility */}
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
-          aria-label="Abrir chat de dúvidas"
+          className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center group relative"
+          aria-label="Abrir chat de dúvidas frequentes"
         >
-          <MessageCircle className="w-6 h-6" />
+          {/* Icon with subtle help indicator */}
+          <div className="relative">
+            <MessageCircle className="w-6 h-6" />
+            <HelpCircle className="w-3 h-3 absolute -top-1 -right-1 bg-white text-blue-600 rounded-full md:hidden" />
+          </div>
+          
+          {/* Mobile-only tooltip on long press */}
+          <div className="absolute bottom-full right-0 mb-2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-active:opacity-100 transition-opacity duration-200 whitespace-nowrap md:hidden pointer-events-none">
+            Dúvidas frequentes
+          </div>
         </button>
       </div>
 
