@@ -10,13 +10,18 @@ const FloatingWhatsApp = () => {
   };
 
   return (
-    <button
-      onClick={handleWhatsAppClick}
-      className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 bg-green-500 hover:bg-green-600 hover:scale-110 transition-all duration-300 flex items-center justify-center w-14 h-14 rounded-full shadow-lg"
-      aria-label="Entrar em contato via WhatsApp"
-    >
-      <MessageCircle className="w-7 h-7 text-white" />
-    </button>
+    <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center gap-3">
+      <div className="hidden md:block bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200 px-3 py-2 rounded-lg shadow-lg text-sm font-medium border border-green-200 dark:border-green-700">
+        Fale conosco
+      </div>
+      <button
+        onClick={handleWhatsAppClick}
+        className="bg-green-500 hover:bg-green-600 hover:scale-110 transition-all duration-300 flex items-center justify-center w-14 h-14 rounded-full shadow-lg group"
+        aria-label="Entrar em contato via WhatsApp"
+      >
+        <MessageCircle className="w-7 h-7 text-white" />
+      </button>
+    </div>
   );
 };
 

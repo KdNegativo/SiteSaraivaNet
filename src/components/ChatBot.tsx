@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { MessageCircle, X, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -65,14 +66,19 @@ const ChatBot = () => {
 
   return (
     <>
-      {/* Chat Button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-36 right-4 md:bottom-24 md:right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 md:p-4 shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
-        aria-label="Abrir chat"
-      >
-        <MessageCircle className="w-6 h-6" />
-      </button>
+      {/* Chat Button with Label */}
+      <div className="fixed bottom-36 right-4 md:bottom-24 md:right-6 z-40 flex items-center gap-3">
+        <div className="hidden md:block bg-white dark:bg-gray-800 text-gray-800 dark:text-white px-3 py-2 rounded-lg shadow-lg text-sm font-medium border border-gray-200 dark:border-gray-700">
+          Tire suas dúvidas
+        </div>
+        <button
+          onClick={() => setIsOpen(true)}
+          className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
+          aria-label="Abrir chat de dúvidas"
+        >
+          <MessageCircle className="w-6 h-6" />
+        </button>
+      </div>
 
       {/* Chat Window */}
       {isOpen && (
