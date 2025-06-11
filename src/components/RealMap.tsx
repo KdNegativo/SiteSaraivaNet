@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -52,8 +51,8 @@ const cities: City[] = [
   },
   {
     name: 'Jerumenha',
-    lat: -7.07806,
-    lng: -43.5578,
+    lat: -7.08778,
+    lng: -43.5097,
     status: 'active',
     description: 'Conectividade premium com SaraivaTV'
   }
