@@ -87,10 +87,7 @@ const Index = () => {
 
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            <div className="flex items-center space-x-2 text-white bg-orange-700 dark:bg-gray-700 px-4 py-2 rounded-full hover:bg-orange-800 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer shadow-lg hover:scale-105 transform">
-              
-              
-            </div>
+            
           </div>
         </div>
       </header>
