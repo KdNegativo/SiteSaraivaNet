@@ -478,14 +478,17 @@ const Index = () => {
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
             <div className="absolute bottom-10 left-10 w-24 h-24 bg-orange-300/20 rounded-full blur-xl"></div>
-            <div className="relative z-10">
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Pronto para ter Internet + SaraivaTV?</h3>
-              <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-10 opacity-90 max-w-2xl mx-auto">
+            <div className="relative z-10 text-center">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+                Pronto para ter Internet + SaraivaTV?
+              </h3>
+              <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
                 Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
               </p>
               <div className="flex justify-center">
-                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300">
-                  💬 Entrar em Contato
+                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3">
+                  <span className="text-2xl">💬</span>
+                  Entrar em Contato
                 </Button>
               </div>
             </div>
