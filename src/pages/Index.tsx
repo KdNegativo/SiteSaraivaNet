@@ -27,12 +27,24 @@ const Index = () => {
       });
     }
   };
+
+  const handleSaibaMaisClick = () => {
+    const planosSection = document.getElementById('planos');
+    if (planosSection) {
+      planosSection.scrollIntoView({
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   const handleWhatsAppClick = () => {
     const phoneNumber = "5589994395789";
     const message = "Olá! Gostaria de contratar o plano de internet + SaraivaTV.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
+
   return <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
       {/* Floating Components */}
       <FloatingWhatsApp />
@@ -147,7 +159,7 @@ const Index = () => {
                 <TouchButton onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-6 py-3 rounded-xl font-bold text-sm shadow-xl border-0">
                   Contratar Agora →
                 </TouchButton>
-                <TouchButton className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 px-6 py-3 rounded-xl font-bold text-sm shadow-xl">
+                <TouchButton onClick={handleSaibaMaisClick} className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 px-6 py-3 rounded-xl font-bold text-sm shadow-xl">
                   Saiba Mais
                 </TouchButton>
               </div>
