@@ -152,10 +152,10 @@ const Index = () => {
                 </TouchButton>
               </div>
 
-              {/* Stats - Mobile optimized */}
+              {/* Stats - Mobile optimized - Updated clientes to 1000+ */}
               <div className="grid grid-cols-4 gap-2 text-xs">
                 <div className="text-center">
-                  <StatsCounter endValue={500} label="Clientes" suffix="+" />
+                  <StatsCounter endValue={1000} label="Clientes" suffix="+" />
                 </div>
                 <div className="text-center">
                   <StatsCounter endValue={99.9} label="Uptime" suffix="%" />
@@ -329,7 +329,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Área de Cobertura */}
+      {/* Área de Cobertura - Updated cities to all show "Internet Ativa" */}
       <AnimatedSection className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 sm:mb-16">
@@ -347,19 +347,19 @@ const Index = () => {
               <div className="space-y-3 sm:space-y-4">
                 {[{
                 name: "Eliseu Martins",
-                status: "Cobertura Completa"
+                status: "Internet Ativa"
               }, {
                 name: "Colônia do Gurguéia",
                 status: "Internet Ativa"
               }, {
                 name: "Manoel Emídio",
-                status: "Fibra Óptica"
+                status: "Internet Ativa"
               }, {
                 name: "Canavieira",
-                status: "Alta Velocidade"
+                status: "Internet Ativa"
               }, {
                 name: "Jerumenha",
-                status: "Premium TV"
+                status: "Internet Ativa"
               }].map((city, index) => <div key={index} className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
                     <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                     <div>
@@ -493,7 +493,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section - Updated to show 1000+ clients */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute top-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -510,7 +510,7 @@ const Index = () => {
               <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Users className="w-10 h-10 text-white" />
               </div>
-              <StatsCounter endValue={500} label="Famílias Conectadas" suffix="+" />
+              <StatsCounter endValue={1000} label="Famílias Conectadas" suffix="+" />
               <div className="text-white/80 mt-2 text-lg">
                 Lares piauenses com internet de qualidade
               </div>
@@ -549,7 +549,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Updated clients count to 1000+ */}
       <section id="sobre" className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -586,7 +586,7 @@ const Index = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Users className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-3xl font-bold text-orange-500">500+</div>
+                  <div className="text-3xl font-bold text-orange-500">1000+</div>
                   <div className="text-sm text-gray-600 font-medium">Clientes Ativos</div>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
