@@ -1,8 +1,6 @@
-
 import { useState } from 'react';
 import { MessageCircle, X, ArrowLeft, HelpCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import PremiumCard from './PremiumCard';
 import AnimatedIcon from './AnimatedIcon';
 import PremiumButton from './PremiumButton';
 
@@ -28,7 +26,7 @@ const ChatBot = () => {
     },
     {
       question: "O que é o SaraivaTV?",
-      answer: "É nosso app gratuito com canais de TV e rádios que você pode assistir no celular. Vem incluído com todos os planos!"
+      answer: "É nosso app gratuito com canais de TV e rádios que você pode assistir no celular."
     },
     {
       question: "Falar com atendente",
@@ -158,7 +156,7 @@ const ChatBot = () => {
                   {faqOptions.map((faq, index) => (
                     <PremiumButton
                       key={index}
-                      variant="outline"
+                      variant="secondary"
                       size="sm"
                       onClick={() => handleFaqClick(faq)}
                       className="w-full text-left justify-start h-auto p-4 text-sm bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-white border border-gray-200 dark:border-gray-700 animate-slide-in-left"
