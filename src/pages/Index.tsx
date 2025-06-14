@@ -28,16 +28,6 @@ const Index = () => {
     }
   };
 
-  const handleSaibaMaisClick = () => {
-    const planosSection = document.getElementById('planos');
-    if (planosSection) {
-      planosSection.scrollIntoView({
-        behavior: prefersReducedMotion ? 'auto' : 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
   const handleWhatsAppClick = () => {
     const phoneNumber = "5589994395789";
     const message = "Olá! Gostaria de contratar o plano de internet + SaraivaTV.";
@@ -154,13 +144,10 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* CTA Buttons - Touch optimized */}
-              <div className="flex flex-col gap-3 mb-4">
-                <TouchButton onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-6 py-3 rounded-xl font-bold text-sm shadow-xl border-0">
+              {/* CTA Button - Touch optimized */}
+              <div className="mb-4">
+                <TouchButton onClick={handleWhatsAppClick} className="w-full bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-6 py-3 rounded-xl font-bold text-sm shadow-xl border-0">
                   Contratar Agora →
-                </TouchButton>
-                <TouchButton onClick={handleSaibaMaisClick} className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 px-6 py-3 rounded-xl font-bold text-sm shadow-xl">
-                  Saiba Mais
                 </TouchButton>
               </div>
 
