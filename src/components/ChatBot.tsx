@@ -100,7 +100,7 @@ const ChatBot = () => {
       {/* Premium Chat Window */}
       {isOpen && (
         <div className="fixed inset-x-4 bottom-4 md:bottom-6 md:right-6 md:left-auto md:w-80 z-50 animate-scale-in">
-          <PremiumCard variant="glass" className="w-full h-[32rem] md:h-96 flex flex-col shadow-2xl border-0 overflow-hidden">
+          <div className="w-full h-[32rem] md:h-96 flex flex-col shadow-2xl bg-white dark:bg-gray-900 rounded-xl overflow-hidden">
             {/* Header with gradient */}
             <div className="gradient-primary text-white p-4 flex justify-between items-center">
               <div className="flex items-center gap-3">
@@ -143,7 +143,7 @@ const ChatBot = () => {
                   <div
                     className={`max-w-[85%] p-3 rounded-2xl text-sm font-inter ${
                       message.isBot
-                        ? 'glass-card text-gray-800 dark:text-white shadow-lg'
+                        ? 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white shadow-lg'
                         : 'gradient-blue text-white shadow-lg'
                     }`}
                   >
@@ -158,10 +158,10 @@ const ChatBot = () => {
                   {faqOptions.map((faq, index) => (
                     <PremiumButton
                       key={index}
-                      variant="glass"
+                      variant="outline"
                       size="sm"
                       onClick={() => handleFaqClick(faq)}
-                      className="w-full text-left justify-start h-auto p-4 text-sm bg-white/60 hover:bg-white/80 text-gray-800 dark:text-white backdrop-blur-md border border-white/30 animate-slide-in-left"
+                      className="w-full text-left justify-start h-auto p-4 text-sm bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-white border border-gray-200 dark:border-gray-700 animate-slide-in-left"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       {faq.question}
@@ -170,7 +170,7 @@ const ChatBot = () => {
                 </div>
               )}
             </div>
-          </PremiumCard>
+          </div>
         </div>
       )}
     </>
