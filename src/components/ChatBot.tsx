@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { MessageCircle, X, ArrowLeft, HelpCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -22,7 +21,7 @@ const ChatBot = () => {
     },
     {
       question: "Qual a área de cobertura?",
-      answer: "Atendemos Eliseu Martins, Colônia do Gurguéia, Manoel Emídio e Jerumenha. Em breve chegamos em Canto do Buriti!"
+      answer: "Atendemos Eliseu Martins, Colônia do Gurguéia, Manoel Emídio e Jerumenha."
     },
     {
       question: "O que é o SaraivaTV?",
