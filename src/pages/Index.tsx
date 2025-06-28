@@ -158,8 +158,8 @@ const Index = () => {
                 </TouchButton>
               </div>
 
-              {/* Stats - Mobile optimized */}
-              <div className="grid grid-cols-4 gap-4 text-center max-w-md mx-auto">
+              {/* Stats - Mobile optimized with better spacing */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 text-center max-w-lg mx-auto">
                 <div>
                   <StatsCounter endValue={1000} label="Clientes" suffix="+" />
                 </div>

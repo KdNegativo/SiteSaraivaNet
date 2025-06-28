@@ -33,11 +33,11 @@ const StatsCounter: React.FC<StatsCounterProps> = ({
   }, [endValue, duration]);
 
   return (
-    <div className="text-center">
-      <div className="text-4xl font-bold mb-2 text-white">
+    <div className="text-center px-1">
+      <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 text-white leading-tight">
         {count}{suffix}
       </div>
-      <div className="text-xl font-semibold mb-2 text-white">{label}</div>
+      <div className="text-xs sm:text-sm md:text-lg font-semibold text-white leading-tight">{label}</div>
     </div>
   );
 };
