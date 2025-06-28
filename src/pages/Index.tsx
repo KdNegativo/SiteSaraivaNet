@@ -1,4 +1,3 @@
-
 import { TypeAnimation } from 'react-type-animation';
 import { Sparkles } from 'lucide-react';
 import FloatingActionButton from "@/components/FloatingActionButton";
