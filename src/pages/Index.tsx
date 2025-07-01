@@ -1,20 +1,24 @@
-
+import Head from 'next/head';
 import { TypeAnimation } from 'react-type-animation';
 import { Sparkles } from 'lucide-react';
+import Link from 'next/link';
 import FloatingActionButton from "@/components/FloatingActionButton";
 import ChatBot from "@/components/ChatBot";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900">
-      <title>SaraivaNet - Internet que conecta você ao mundo!</title>
-      <meta name="description" content="A melhor internet da região, com ultravelocidade e стабильность garantida. Planos especiais para você e sua família." />
-      <meta property="og:title" content="SaraivaNet - Sua conexão com o futuro!" />
-      <meta property="og:description" content="Internet de ultravelocidade para você navegar sem limites. Confira nossos planos!" />
-      <meta property="og:image" content="/images/logo-saraivanet.png" />
-      <meta property="og:url" content="https://www.saraivanet.com.br" />
-      <meta name="keywords" content="internet, ultravelocidade, planos, SaraivaNet, melhor internet, стабильность, fibra óptica" />
-      <meta name="author" content="SaraivaNet" />
+      <Head>
+        <title>SaraivaNet - Internet que conecta você ao mundo!</title>
+        <meta name="description" content="A melhor internet da região, com ultravelocidade e стабильность garantida. Planos especiais para você e sua família." />
+        <meta property="og:title" content="SaraivaNet - Sua conexão com o futuro!" />
+        <meta property="og:description" content="Internet de ultravelocidade para você navegar sem limites. Confira nossos planos!" />
+        <meta property="og:image" content="/images/logo-saraivanet.png" />
+        <meta property="og:url" content="https://www.saraivanet.com.br" />
+        <meta name="keywords" content="internet, ultravelocidade, planos, SaraivaNet, melhor internet, стабильность, fibra óptica" />
+        <meta name="author" content="SaraivaNet" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
       <header className="relative py-20">
         <div className="container mx-auto px-4 text-center">
@@ -44,9 +48,9 @@ const Index = () => {
               className="text-white text-xl md:text-2xl font-semibold"
             />
           </div>
-          <a href="#planos" className="mt-10 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 relative z-10">
+          <Link href="/#planos" className="mt-10 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 relative z-10">
             Confira nossos planos
-          </a>
+          </Link>
         </div>
       </header>
 
@@ -96,9 +100,9 @@ const Index = () => {
                 <li>Wi-fi incluso</li>
                 <li>Suporte 24/7</li>
               </ul>
-              <a href="https://wa.me/5589994395789?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20básico." className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+              <Link href="https://wa.me/5589994395789?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20básico." className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                 Assinar agora
-              </a>
+              </Link>
             </div>
 
             {/* Plano 2 */}
@@ -116,9 +120,9 @@ const Index = () => {
                 <li>Suporte 24/7</li>
                 <li>Acesso ao SaraivaTV</li>
               </ul>
-              <a href="https://wa.me/5589994395789?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20intermediário." className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+              <Link href="https://wa.me/5589994395789?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20intermediário." className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                 Assinar agora
-              </a>
+              </Link>
             </div>
 
             {/* Plano 3 */}
@@ -137,9 +141,9 @@ const Index = () => {
                 <li>Acesso ao SaraivaTV</li>
                 <li>IP Fixo</li>
               </ul>
-              <a href="https://wa.me/5589994395789?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20premium." className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+              <Link href="https://wa.me/5589994395789?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20premium." className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                 Assinar agora
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -189,6 +193,7 @@ const Index = () => {
         </p>
       </footer>
       
+      {/* Replace the individual FloatingWhatsApp and ChatBot floating buttons with the combined one */}
       <FloatingActionButton />
       <ChatBot />
     </div>
