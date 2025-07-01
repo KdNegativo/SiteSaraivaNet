@@ -97,7 +97,7 @@ const FloatingActionButton = () => {
         
         {/* Main icon */}
         <div className="relative z-10">
-          <AnimatedIcon animation={isMenuOpen ? "pulse" : "pulse"}>
+          <AnimatedIcon animation={isMenuOpen ? "spin" : "pulse"}>
             {isMenuOpen ? (
               <X className="w-8 h-8 drop-shadow-lg" />
             ) : (
