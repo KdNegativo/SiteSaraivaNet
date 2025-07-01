@@ -1,7 +1,7 @@
 import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FloatingActionButton from "@/components/FloatingActionButton";
 import RealMap from "@/components/RealMap";
 import StatsCounter from "@/components/StatsCounter";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -38,23 +38,22 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
       {/* Floating Components */}
-      <FloatingWhatsApp />
-      <ChatBot />
+      <FloatingActionButton />
       
       {/* Header - Mobile optimized */}
-      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
+      <header className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-blue-700 dark:border-gray-700 z-50 transition-colors duration-500">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                <Wifi className="w-4 h-4 text-orange-600" />
+                <Wifi className="w-4 h-4 text-blue-600" />
               </div>
               <div>
                 <span className="text-lg font-bold text-white">SaraivaNet</span>
-                <div className="text-xs text-orange-100 font-medium flex items-center">
+                <div className="text-xs text-blue-100 font-medium flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
                   Eliseu Martins - PI
                 </div>
@@ -71,11 +70,11 @@ const Index = () => {
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-              <Wifi className="w-5 h-5 text-orange-600" />
+              <Wifi className="w-5 h-5 text-blue-600" />
             </div>
             <div>
               <span className="text-2xl font-bold text-white">SaraivaNet</span>
-              <div className="text-xs text-orange-100 font-medium flex items-center">
+              <div className="text-xs text-blue-100 font-medium flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
                 Eliseu Martins - PI
               </div>
@@ -83,11 +82,11 @@ const Index = () => {
           </div>
           
           <nav className="flex items-center space-x-6">
-            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
+            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-blue-200 transition-colors font-medium">Início</a>
+            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-blue-200 transition-colors font-medium">Planos</a>
+            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-blue-200 transition-colors font-medium">Cobertura</a>
+            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-blue-200 transition-colors font-medium">Sobre</a>
+            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-blue-200 transition-colors font-medium">Contato</a>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -98,13 +97,13 @@ const Index = () => {
       </header>
 
       {/* Hero Section - Mobile first design */}
-      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-8 relative overflow-hidden min-h-screen flex items-center">
+      <section id="inicio" className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-8 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
         {!prefersReducedMotion && (
           <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-600/30 via-red-600/30 to-purple-700/30"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/30 via-indigo-600/30 to-purple-700/30"></div>
             <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-float"></div>
-            <div className="absolute bottom-10 left-10 w-48 h-48 bg-orange-300/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
         )}
         
@@ -120,7 +119,7 @@ const Index = () => {
               {/* Main Title */}
               <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
                 Internet<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-200 to-yellow-200">+ SaraivaTV</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-yellow-200">+ SaraivaTV</span>
               </h1>
               
               {/* Subtitle */}
@@ -131,19 +130,19 @@ const Index = () => {
               {/* Feature Grid - Mobile optimized */}
               <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto">
                 <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex flex-col items-center space-y-2 border border-white/20 hover:bg-white/25 transition-all duration-300">
-                  <Wifi className="w-6 h-6 text-orange-300" />
+                  <Wifi className="w-6 h-6 text-blue-300" />
                   <span className="font-semibold text-sm text-center">Internet Ultra Rápida</span>
                 </div>
                 <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex flex-col items-center space-y-2 border border-white/20 hover:bg-white/25 transition-all duration-300">
-                  <Tv className="w-6 h-6 text-orange-300" />
+                  <Tv className="w-6 h-6 text-blue-300" />
                   <span className="font-semibold text-sm text-center">Canais de TV</span>
                 </div>
                 <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex flex-col items-center space-y-2 border border-white/20 hover:bg-white/25 transition-all duration-300">
-                  <Music className="w-6 h-6 text-orange-300" />
+                  <Music className="w-6 h-6 text-blue-300" />
                   <span className="font-semibold text-sm text-center">Rádios Online</span>
                 </div>
                 <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex flex-col items-center space-y-2 border border-white/20 hover:bg-white/25 transition-all duration-300">
-                  <Shield className="w-6 h-6 text-orange-300" />
+                  <Shield className="w-6 h-6 text-blue-300" />
                   <span className="font-semibold text-sm text-center">Suporte 24h</span>
                 </div>
               </div>
@@ -152,7 +151,7 @@ const Index = () => {
               <div className="mb-8">
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="w-full max-w-sm mx-auto bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-8 py-4 rounded-xl font-bold text-lg shadow-xl border-0"
+                  className="w-full max-w-sm mx-auto bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-8 py-4 rounded-xl font-bold text-lg shadow-xl border-0"
                 >
                   Contratar Agora →
                 </TouchButton>
@@ -180,42 +179,42 @@ const Index = () => {
           <AnimatedSection animation="scale-in" delay={300}>
             <div className="mt-12 bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/20 transition-all duration-500 max-w-md mx-auto">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Smartphone className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">SaraivaTV</h3>
-                <p className="text-orange-200 text-sm">Seus canais favoritos no celular</p>
+                <p className="text-blue-200 text-sm">Seus canais favoritos no celular</p>
               </div>
               
               <div className="grid grid-cols-2 gap-3 mb-6">
                 <div className="bg-white/10 rounded-lg p-3 text-center border border-white/20">
-                  <Tv className="w-6 h-6 mx-auto mb-2 text-orange-300" />
+                  <Tv className="w-6 h-6 mx-auto mb-2 text-blue-300" />
                   <span className="text-xs font-medium">Canais de TV</span>
                 </div>
                 <div className="bg-white/10 rounded-lg p-3 text-center border border-white/20">
-                  <Music className="w-6 h-6 mx-auto mb-2 text-orange-300" />
+                  <Music className="w-6 h-6 mx-auto mb-2 text-blue-300" />
                   <span className="text-xs font-medium">Rádios</span>
                 </div>
                 <div className="bg-white/10 rounded-lg p-3 text-center border border-white/20">
-                  <Zap className="w-6 h-6 mx-auto mb-2 text-orange-300" />
+                  <Zap className="w-6 h-6 mx-auto mb-2 text-blue-300" />
                   <span className="text-xs font-medium">Ao Vivo</span>
                 </div>
                 <div className="bg-white/10 rounded-lg p-3 text-center border border-white/20">
-                  <Smartphone className="w-6 h-6 mx-auto mb-2 text-orange-300" />
+                  <Smartphone className="w-6 h-6 mx-auto mb-2 text-blue-300" />
                   <span className="text-xs font-medium">No Celular</span>
                 </div>
               </div>
               
-              <p className="text-center text-sm text-orange-200 mb-4">
+              <p className="text-center text-sm text-blue-200 mb-4">
                 Disponível para Android e iOS
               </p>
               
               <div className="flex justify-center space-x-4">
                 <div className="bg-white/10 rounded-lg p-3 border border-white/20">
-                  <Smartphone className="w-6 h-6 text-orange-300" />
+                  <Smartphone className="w-6 h-6 text-blue-300" />
                 </div>
                 <div className="bg-white/10 rounded-lg p-3 border border-white/20">
-                  <Tv className="w-6 h-6 text-orange-300" />
+                  <Tv className="w-6 h-6 text-blue-300" />
                 </div>
               </div>
             </div>
@@ -228,11 +227,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-up">
             <div className="text-center mb-6 md:mb-8 sm:mb-12">
-              <div className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 md:mb-4">
+              <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 md:mb-4">
                 <Award className="w-3 h-3 mr-2" />
                 Plano Exclusivo para Você
               </div>
-              <h2 className="text-xl md:text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-3 md:mb-4">
+              <h2 className="text-xl md:text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-3 md:mb-4">
                 Internet + SaraivaTV
               </h2>
               <p className="text-sm md:text-base sm:text-lg md:text-xl text-gray-300 mb-2 md:mb-3 max-w-3xl mx-auto leading-relaxed">
@@ -246,8 +245,8 @@ const Index = () => {
 
           {/* Single Plan Card */}
           <div className="bg-gradient-to-br from-gray-700 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600 dark:border-gray-700 hover:scale-105 transform transition-all duration-500 hover:shadow-orange-500/20 hover:shadow-2xl group">
-            <div className="bg-gradient-to-r from-orange-600 to-red-600 p-4 sm:p-6 md:p-8 text-white text-center group-hover:from-orange-500 group-hover:to-red-500 transition-all duration-500">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 sm:p-6 md:p-8 text-white text-center group-hover:from-blue-500 group-hover:to-indigo-500 transition-all duration-500">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                 <Wifi className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
               </div>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-2">Plano Completo</h3>
@@ -260,7 +259,7 @@ const Index = () => {
                 <div className="text-center lg:text-left">
                   <div className="mb-3 sm:mb-4 md:mb-6">
                     <div className="text-sm sm:text-base md:text-lg text-gray-400 line-through mb-1 sm:mb-2">De R$ 169,90</div>
-                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-orange-400 mb-1 sm:mb-2 group-hover:text-orange-300 transition-colors duration-300">
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400 mb-1 sm:mb-2 group-hover:text-blue-300 transition-colors duration-300">
                       R$ 129<span className="text-lg sm:text-xl md:text-2xl">,90</span>
                     </div>
                     <div className="text-sm sm:text-base md:text-lg text-gray-300">por mês</div>
@@ -271,7 +270,7 @@ const Index = () => {
                     <div className="text-green-400 text-xs">Promoção válida para novos clientes</div>
                   </div>
 
-                  <TouchButton onClick={handleWhatsAppClick} className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-6 text-sm sm:text-base rounded-xl shadow-xl">
+                  <TouchButton onClick={handleWhatsAppClick} className="w-full lg:w-auto bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3 px-6 text-sm sm:text-base rounded-xl shadow-xl">
                     Contratar Agora →
                   </TouchButton>
                 </div>
@@ -318,16 +317,16 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-6 sm:mt-8 md:mt-12">
-            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-4 sm:p-6 md:p-8 text-white shadow-2xl">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-4 sm:p-6 md:p-8 text-white shadow-2xl">
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Não Perca Esta Oportunidade!</h3>
               <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 opacity-90 max-w-2xl mx-auto">
                 Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-                <TouchButton onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl">
+                <TouchButton onClick={handleWhatsAppClick} className="bg-white text-blue-600 hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl">
                   💬 WhatsApp
                 </TouchButton>
-                <TouchButton className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl">
+                <TouchButton className="bg-white text-blue-600 hover:bg-blue-50 border-2 border-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl">
                   📞 Ligar Agora
                 </TouchButton>
               </div>
@@ -493,7 +492,7 @@ const Index = () => {
                 Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
               </p>
               <div className="flex justify-center">
-                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3">
+                <Button onClick={handleWhatsAppClick} className="bg-white text-blue-600 hover:bg-gray-100 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3">
                   <span className="text-2xl">💬</span>
                   Entrar em Contato
                 </Button>
@@ -743,10 +742,10 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-lg">
                   <Wifi className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">SaraivaNet</span>
+                <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">SaraivaNet</span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed text-lg">
                 Conectando Eliseu Martins com o mundo há 22 anos. Internet de qualidade, 
