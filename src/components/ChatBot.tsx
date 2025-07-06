@@ -95,11 +95,6 @@ const ChatBot = () => {
             <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
               <div className="w-2 h-2 bg-white rounded-full"></div>
             </div>
-            
-            {/* Help indicator for mobile */}
-            <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-white rounded-full flex items-center justify-center md:hidden shadow-md">
-              <HelpCircle className="w-3 h-3 text-purple-600" />
-            </div>
           </div>
           
           {/* Mobile tooltip with enhanced design */}
