@@ -737,13 +737,8 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="text-center space-x-6">
-            <Button onClick={handleWhatsAppClick} className="bg-green-500 hover:bg-green-600 text-white px-12 sm:px-16 py-4 sm:py-5 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
-              📱 WhatsApp
-            </Button>
-            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-12 sm:px-16 py-4 sm:py-5 rounded-2xl text-lg font-bold shadow-xl border-0 transition-all duration-300 transform hover:scale-105">
-              📞 Ligar Agora
-            </Button>
+          <div className="text-center">
+            {/* Botões removidos conforme solicitado */}
           </div>
         </div>
       </section>
