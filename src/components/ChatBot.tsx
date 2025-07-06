@@ -66,31 +66,50 @@ const ChatBot = () => {
 
   return (
     <>
-      {/* Chat Button with Premium Design */}
-      <div className="fixed bottom-36 right-4 md:bottom-24 md:right-6 z-40 flex items-center gap-3">
-        {/* Desktop label with glassmorphism */}
-        <div className="hidden md:block glass-card px-4 py-2 rounded-lg text-sm font-medium text-gray-800 dark:text-white animate-pulse">
-          Tire suas dúvidas
+      {/* Chat Button with Enhanced Premium Design */}
+      <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center gap-3">
+        {/* Desktop label with beautiful gradient */}
+        <div className="hidden md:block bg-gradient-to-r from-blue-600/90 to-purple-600/90 backdrop-blur-md text-white px-4 py-3 rounded-xl text-sm font-medium shadow-xl border border-white/20 animate-pulse hover:scale-105 transition-all duration-300">
+          <div className="flex items-center gap-2">
+            <HelpCircle className="w-4 h-4" />
+            <span>Tire suas dúvidas</span>
+          </div>
         </div>
         
-        {/* Premium chat button */}
+        {/* Enhanced premium chat button */}
         <button
           onClick={() => setIsOpen(true)}
-          className="btn-premium rounded-full p-4 shadow-2xl hover:scale-110 hover:shadow-blue-500/25 group relative"
+          className="relative group bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 hover:from-blue-400 hover:via-purple-500 hover:to-indigo-600 p-4 rounded-full shadow-2xl hover:shadow-purple-500/40 transform hover:scale-110 transition-all duration-300 border-2 border-white/30 hover:border-white/50"
           aria-label="Abrir chat de dúvidas frequentes"
         >
-          <AnimatedIcon animation="float" className="text-white">
-            <MessageCircle className="w-6 h-6" />
-          </AnimatedIcon>
+          {/* Glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300 -z-10"></div>
           
-          {/* Help indicator with glow */}
-          <div className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full flex items-center justify-center md:hidden">
-            <HelpCircle className="w-3 h-3 text-blue-600" />
+          {/* Button content */}
+          <div className="relative">
+            <AnimatedIcon animation="float" className="text-white">
+              <MessageCircle className="w-7 h-7" />
+            </AnimatedIcon>
+            
+            {/* Pulse indicator */}
+            <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+            </div>
+            
+            {/* Help indicator for mobile */}
+            <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-white rounded-full flex items-center justify-center md:hidden shadow-md">
+              <HelpCircle className="w-3 h-3 text-purple-600" />
+            </div>
           </div>
           
-          {/* Mobile tooltip with glass effect */}
-          <div className="absolute bottom-full right-0 mb-2 px-3 py-1 glass text-white text-xs rounded opacity-0 group-active:opacity-100 transition-opacity duration-200 whitespace-nowrap md:hidden pointer-events-none">
-            Dúvidas frequentes
+          {/* Mobile tooltip with enhanced design */}
+          <div className="absolute bottom-full right-0 mb-3 px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-xs rounded-lg opacity-0 group-active:opacity-100 transition-all duration-300 whitespace-nowrap md:hidden pointer-events-none shadow-xl border border-gray-600">
+            <div className="flex items-center gap-2">
+              <HelpCircle className="w-3 h-3" />
+              <span>Dúvidas frequentes</span>
+            </div>
+            {/* Tooltip arrow */}
+            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-800"></div>
           </div>
         </button>
       </div>
