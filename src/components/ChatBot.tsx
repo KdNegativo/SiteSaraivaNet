@@ -66,24 +66,24 @@ const ChatBot = () => {
 
   return (
     <>
-      {/* Chat Button with Enhanced Premium Design */}
+      {/* Chat Button matching site theme */}
       <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center gap-3">
-        {/* Desktop label with beautiful gradient */}
-        <div className="hidden md:block bg-gradient-to-r from-blue-600/90 to-purple-600/90 backdrop-blur-md text-white px-4 py-3 rounded-xl text-sm font-medium shadow-xl border border-white/20 animate-pulse hover:scale-105 transition-all duration-300">
+        {/* Desktop label matching site colors */}
+        <div className="hidden md:block bg-gradient-to-r from-orange-600/90 to-red-600/90 backdrop-blur-md text-white px-4 py-3 rounded-xl text-sm font-medium shadow-xl border border-orange-400/30 animate-pulse hover:scale-105 transition-all duration-300">
           <div className="flex items-center gap-2">
-            <HelpCircle className="w-4 h-4" />
+            <MessageCircle className="w-4 h-4" />
             <span>Tire suas dúvidas</span>
           </div>
         </div>
         
-        {/* Enhanced premium chat button */}
+        {/* Chat button matching site gradient */}
         <button
           onClick={() => setIsOpen(true)}
-          className="relative group bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 hover:from-blue-400 hover:via-purple-500 hover:to-indigo-600 p-4 rounded-full shadow-2xl hover:shadow-purple-500/40 transform hover:scale-110 transition-all duration-300 border-2 border-white/30 hover:border-white/50"
+          className="relative group bg-gradient-to-br from-orange-500 via-red-500 to-red-600 hover:from-orange-400 hover:via-red-400 hover:to-red-500 p-4 rounded-full shadow-2xl hover:shadow-orange-500/40 transform hover:scale-110 transition-all duration-300 border-2 border-orange-400/30 hover:border-orange-300/50"
           aria-label="Abrir chat de dúvidas frequentes"
         >
-          {/* Glow effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300 -z-10"></div>
+          {/* Glow effect matching site colors */}
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300 -z-10"></div>
           
           {/* Button content */}
           <div className="relative">
@@ -92,14 +92,14 @@ const ChatBot = () => {
             </AnimatedIcon>
           </div>
           
-          {/* Mobile tooltip with enhanced design */}
-          <div className="absolute bottom-full right-0 mb-3 px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-xs rounded-lg opacity-0 group-active:opacity-100 transition-all duration-300 whitespace-nowrap md:hidden pointer-events-none shadow-xl border border-gray-600">
+          {/* Mobile tooltip matching site design */}
+          <div className="absolute bottom-full right-0 mb-3 px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 text-white text-xs rounded-lg opacity-0 group-active:opacity-100 transition-all duration-300 whitespace-nowrap md:hidden pointer-events-none shadow-xl border border-orange-400/30">
             <div className="flex items-center gap-2">
-              <HelpCircle className="w-3 h-3" />
+              <MessageCircle className="w-3 h-3" />
               <span>Dúvidas frequentes</span>
             </div>
             {/* Tooltip arrow */}
-            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-800"></div>
+            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-orange-600"></div>
           </div>
         </button>
       </div>
