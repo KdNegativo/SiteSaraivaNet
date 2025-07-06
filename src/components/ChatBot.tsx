@@ -29,8 +29,8 @@ const ChatBot = () => {
       answer: "É nosso app gratuito com canais de TV e rádios que você pode assistir no celular."
     },
     {
-      question: "Falar com atendente",
-      answer: "Vou te direcionar para nosso WhatsApp onde nossa equipe poderá ajudá-lo melhor!",
+      question: "💬 Falar com atendente",
+      answer: "Vou te conectar com nosso WhatsApp onde nossa equipe está pronta para ajudá-lo!",
       isWhatsApp: true
     }
   ];
