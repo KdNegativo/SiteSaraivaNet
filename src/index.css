@@ -465,43 +465,94 @@
     animation-delay: 500ms;
   }
 
-  /* Advanced Visual Effects */
+  /* Ultra Advanced Visual Effects */
+  @keyframes grid-move {
+    0% { 
+      transform: translateX(0) translateY(0);
+    }
+    100% { 
+      transform: translateX(50px) translateY(50px);
+    }
+  }
+
   @keyframes network-pulse {
     0%, 100% { 
       opacity: 0.3;
       transform: scale(1);
+      filter: brightness(1);
     }
     50% { 
       opacity: 0.8;
       transform: scale(1.1);
+      filter: brightness(1.5);
     }
   }
 
   @keyframes float-complex {
     0%, 100% { 
-      transform: translateY(0px) rotate(0deg);
+      transform: translateY(0px) rotate(0deg) scale(1);
     }
     25% { 
-      transform: translateY(-10px) rotate(5deg);
+      transform: translateY(-15px) rotate(5deg) scale(1.1);
     }
     50% { 
-      transform: translateY(-20px) rotate(0deg);
+      transform: translateY(-30px) rotate(0deg) scale(1.05);
     }
     75% { 
-      transform: translateY(-10px) rotate(-5deg);
+      transform: translateY(-15px) rotate(-5deg) scale(1.1);
     }
   }
 
   @keyframes connect-line {
     0% { 
       stroke-dasharray: 0, 1000;
+      opacity: 0.3;
     }
     50% { 
       stroke-dasharray: 500, 500;
+      opacity: 0.8;
     }
     100% { 
       stroke-dasharray: 1000, 0;
+      opacity: 0.3;
     }
+  }
+
+  @keyframes data-flow {
+    0% { 
+      transform: translateX(-100%) scale(0);
+      opacity: 0;
+    }
+    50% { 
+      transform: translateX(0%) scale(1);
+      opacity: 1;
+    }
+    100% { 
+      transform: translateX(100%) scale(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes orbit {
+    0% { 
+      transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% { 
+      transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
+
+  @keyframes wave-flow {
+    0%, 100% { 
+      d: path("M0,60 C300,120 600,0 900,60 C1050,90 1200,30 1200,60 L1200,120 L0,120 Z");
+    }
+    50% { 
+      d: path("M0,80 C300,20 600,100 900,40 C1050,10 1200,70 1200,40 L1200,120 L0,120 Z");
+    }
+  }
+
+  .animate-grid-move {
+    animation: grid-move 20s linear infinite;
   }
 
   .animate-network-pulse {
@@ -509,11 +560,23 @@
   }
 
   .animate-float-complex {
-    animation: float-complex 6s ease-in-out infinite;
+    animation: float-complex 8s ease-in-out infinite;
   }
 
   .animate-connect {
     animation: connect-line 4s ease-in-out infinite;
+  }
+
+  .animate-data-flow {
+    animation: data-flow 3s ease-in-out infinite;
+  }
+
+  .animate-orbit {
+    animation: orbit 12s linear infinite;
+  }
+
+  .animate-wave-flow {
+    animation: wave-flow 8s ease-in-out infinite;
   }
 
   /* Scroll Animations */
