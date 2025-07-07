@@ -69,7 +69,7 @@ const ChatBot = () => {
       {/* Chat Button matching site theme */}
       <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center gap-3">
         {/* Desktop label matching site colors */}
-        <div className="hidden md:block bg-gradient-to-r from-orange-600/90 to-red-600/90 backdrop-blur-md text-white px-4 py-3 rounded-xl text-sm font-medium shadow-xl border border-orange-400/30 animate-pulse hover:scale-105 transition-all duration-300">
+        <div className="hidden md:block bg-gradient-to-r from-orange-600/90 to-orange-600/90 backdrop-blur-md text-white px-4 py-3 rounded-xl text-sm font-medium shadow-xl border border-orange-400/30 hover:scale-105 transition-all duration-300">
           <div className="flex items-center gap-2">
             <MessageCircle className="w-4 h-4" />
             <span>Tire suas dúvidas</span>
@@ -124,7 +124,7 @@ const ChatBot = () => {
                 <div>
                   <h3 className="font-heading font-semibold">Assistente SaraivaNet</h3>
                   <p className="text-sm opacity-90 flex items-center gap-1">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                     Online agora
                   </p>
                 </div>

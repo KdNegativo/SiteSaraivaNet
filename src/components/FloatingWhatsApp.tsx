@@ -12,7 +12,7 @@ const FloatingWhatsApp = () => {
   return (
     <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center gap-3">
       {/* Desktop label with subtle animation */}
-      <div className="hidden md:block bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200 px-3 py-2 rounded-lg shadow-lg text-sm font-medium border border-green-200 dark:border-green-700 animate-pulse">
+      <div className="hidden md:block bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200 px-3 py-2 rounded-lg shadow-lg text-sm font-medium border border-green-200 dark:border-green-700">
         Fale conosco
       </div>
       

@@ -83,7 +83,7 @@ const CityMap: React.FC = () => {
             <span className="text-xs font-medium text-gray-700">Internet Ativa</span>
           </div>
           <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
+            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
             <span className="text-xs font-medium text-gray-700">Em Breve</span>
           </div>
         </div>
@@ -111,7 +111,7 @@ const CityMap: React.FC = () => {
           }}
           onClick={() => setSelectedCity(selectedCity?.id === city.id ? null : city)}
         >
-          <div className={`relative ${city.status === 'ativa' ? 'animate-pulse' : ''}`}>
+          <div className="relative">
             <div className={`w-10 h-10 ${city.status === 'ativa' ? 'bg-green-500' : 'bg-orange-500'} rounded-full border-4 border-white shadow-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300`}>
               {city.status === 'ativa' ? (
                 <CheckCircle className="w-5 h-5" />
