@@ -121,7 +121,7 @@ const Index = () => {
               {/* Enhanced Main Title */}
               <h1 className="font-extrabold mb-6 leading-tight">
                 <span className="block text-white text-shadow">Internet</span>
-                <span className="block gradient-text text-glow">+ SaraivaTV</span>
+                <span className="block text-white text-shadow font-bold bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 bg-clip-text text-transparent drop-shadow-lg">+ SaraivaTV</span>
               </h1>
               
               {/* Enhanced Subtitle */}
@@ -218,7 +218,7 @@ const Index = () => {
                 <div className="w-20 h-20 gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl hover-scale">
                   <Smartphone className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3 gradient-text">SaraivaTV</h3>
+                <h3 className="text-2xl font-bold mb-3 text-white text-shadow">SaraivaTV</h3>
                 <p className="text-white/90 text-base font-medium">Seus canais favoritos no celular</p>
               </div>
               
