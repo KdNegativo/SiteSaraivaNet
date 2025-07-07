@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun, Sparkles, Rocket, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import RealMap from "@/components/RealMap";
@@ -11,6 +11,11 @@ import ChatBot from "@/components/ChatBot";
 import TouchButton from "@/components/TouchButton";
 import MobilePlansCarousel from "@/components/MobilePlansCarousel";
 import ResponsiveImage from "@/components/ResponsiveImage";
+import ModernCard from "@/components/ModernCard";
+import ModernButton from "@/components/ModernButton";
+import AnimatedIcon from "@/components/AnimatedIcon";
+import ParallaxBackground from "@/components/ParallaxBackground";
+import ModernTestimonial from "@/components/ModernTestimonial";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
@@ -37,23 +42,29 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <div className="min-h-screen">
+      <ParallaxBackground variant="mesh" className="fixed inset-0 -z-10" />
+      <div className="min-h-screen bg-gradient-to-br from-orange-400/90 via-red-500/90 to-purple-600/90 dark:from-gray-900/90 dark:via-gray-800/90 dark:to-gray-900/90 transition-colors duration-500">
       {/* Floating Components */}
       <ChatBot />
       
-      {/* Header - Mobile optimized */}
-      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
+      {/* Enhanced Header */}
+      <header className="glass-nav shadow-2xl px-4 py-3 border-b border-white/20 dark:border-gray-700/20 z-50 transition-colors duration-500 sticky top-0">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                <Wifi className="w-4 h-4 text-orange-600" />
+              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg hover-lift">
+                <AnimatedIcon animation="float" size="sm" className="text-white">
+                  <Wifi className="w-4 h-4" />
+                </AnimatedIcon>
               </div>
               <div>
-                <span className="text-lg font-bold text-white">SaraivaNet</span>
-                <div className="text-xs text-orange-100 font-medium flex items-center">
-                  <MapPin className="w-2.5 h-2.5 mr-1" />
+                <span className="text-lg font-bold gradient-text-hero">SaraivaNet</span>
+                <div className="text-xs text-gray-600 dark:text-gray-400 font-medium flex items-center">
+                  <AnimatedIcon animation="pulse" size="sm" className="text-orange-500 mr-1">
+                    <MapPin className="w-2.5 h-2.5" />
+                  </AnimatedIcon>
                   Eliseu Martins - PI
                 </div>
               </div>
@@ -68,24 +79,43 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-              <Wifi className="w-5 h-5 text-orange-600" />
+            <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg hover-lift">
+              <AnimatedIcon animation="float" size="md" className="text-white">
+                <Wifi className="w-5 h-5" />
+              </AnimatedIcon>
             </div>
             <div>
-              <span className="text-2xl font-bold text-white">SaraivaNet</span>
-              <div className="text-xs text-orange-100 font-medium flex items-center">
-                <MapPin className="w-3 h-3 mr-1" />
+              <span className="text-2xl font-bold gradient-text-hero text-shadow">SaraivaNet</span>
+              <div className="text-xs text-gray-600 dark:text-gray-400 font-medium flex items-center">
+                <AnimatedIcon animation="pulse" size="sm" className="text-orange-500 mr-1">
+                  <MapPin className="w-3 h-3" />
+                </AnimatedIcon>
                 Eliseu Martins - PI
               </div>
             </div>
           </div>
           
           <nav className="flex items-center space-x-6">
-            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
+            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-all duration-300 font-medium hover-float relative group">
+              Início
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-red-500 group-hover:w-full transition-all duration-300"></div>
+            </a>
+            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-all duration-300 font-medium hover-float relative group">
+              Planos
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-red-500 group-hover:w-full transition-all duration-300"></div>
+            </a>
+            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-all duration-300 font-medium hover-float relative group">
+              Cobertura
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-red-500 group-hover:w-full transition-all duration-300"></div>
+            </a>
+            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-all duration-300 font-medium hover-float relative group">
+              Sobre
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-red-500 group-hover:w-full transition-all duration-300"></div>
+            </a>
+            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-all duration-300 font-medium hover-float relative group">
+              Contato
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-red-500 group-hover:w-full transition-all duration-300"></div>
+            </a>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -95,9 +125,13 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Enhanced Mobile Design */}
-      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-12 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
+      {/* Enhanced Hero Section */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center">
+        <ParallaxBackground variant="geometric" className="absolute inset-0" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/90 via-red-500/90 to-purple-600/90 dark:from-gray-900/90 dark:via-gray-800/90 dark:to-gray-700/90"></div>
+        <div className="absolute inset-0 pattern-dots opacity-10"></div>
+        <div className="px-4 py-12 text-white w-full relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20 -z-10"></div>
         {!prefersReducedMotion && (
           <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-600/20 via-red-600/20 to-purple-700/20"></div>
@@ -156,40 +190,47 @@ const Index = () => {
 
               {/* Enhanced CTA Button */}
               <div className="mb-12">
-                <TouchButton 
-                  onClick={handleWhatsAppClick} 
-                  className="w-full max-w-sm mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl border-0 transform hover:scale-105 transition-all duration-300"
-                >
-                  <span className="flex items-center justify-center gap-3">
-                    Contratar Agora 
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                      →
-                    </div>
-                  </span>
-                </TouchButton>
+              <ModernButton 
+                onClick={handleWhatsAppClick} 
+                variant="gradient"
+                size="xl"
+                glow
+                shine
+                className="w-full max-w-sm mx-auto shadow-2xl hover:shadow-orange-500/40"
+              >
+                <span className="flex items-center justify-center gap-3">
+                  <AnimatedIcon animation="bounce" size="md" className="text-white">
+                    <Rocket className="w-6 h-6" />
+                  </AnimatedIcon>
+                  Contratar Agora 
+                  <AnimatedIcon animation="float" size="sm" className="text-white">
+                    <Sparkles className="w-5 h-5" />
+                  </AnimatedIcon>
+                </span>
+              </ModernButton>
               </div>
 
               {/* Enhanced Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-2xl mx-auto">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <ModernCard variant="glass" hover glow className="p-4 animate-fade-in delay-100">
                   <StatsCounter endValue={1000} label="Clientes" suffix="+" />
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                </ModernCard>
+                <ModernCard variant="glass" hover glow className="p-4 animate-fade-in delay-200">
                   <StatsCounter endValue={99} label="Uptime" suffix="%" />
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                </ModernCard>
+                <ModernCard variant="glass" hover glow className="p-4 animate-fade-in delay-300">
                   <StatsCounter endValue={20} label="Canais" suffix="+" />
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                </ModernCard>
+                <ModernCard variant="glass" hover glow className="p-4 animate-fade-in delay-500">
                   <StatsCounter endValue={24} label="Online" suffix="h" />
-                </div>
+                </ModernCard>
               </div>
             </div>
           </AnimatedSection>
 
           {/* Enhanced SaraivaTV Preview Card */}
           <AnimatedSection animation="scale-in" delay={300}>
-            <div className="mt-16 bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:from-white/20 hover:to-white/10 transition-all duration-500 max-w-md mx-auto">
+            <ModernCard variant="glass" hover tilt shine className="mt-16 max-w-md mx-auto hover-glow">
               <div className="text-center mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-orange-400 via-red-400 to-purple-400 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
                   <Smartphone className="w-10 h-10 text-white" />
@@ -229,14 +270,19 @@ const Index = () => {
                   <Tv className="w-8 h-8 text-blue-300" />
                 </div>
               </div>
-            </div>
+            </ModernCard>
           </AnimatedSection>
+        </div>
         </div>
       </section>
 
-      {/* Plans Section */}
-      <section id="planos" className="bg-gradient-to-br from-gray-800 via-gray-900 to-black dark:from-gray-900 dark:via-black dark:to-gray-900 text-white px-4 py-12">
-        <div className="max-w-7xl mx-auto">
+      {/* Enhanced Plans Section */}
+      <section id="planos" className="relative px-4 py-12 overflow-hidden">
+        <ParallaxBackground variant="floating" className="absolute inset-0" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-800/95 via-gray-900/95 to-black/95 dark:from-gray-900/95 dark:via-black/95 dark:to-gray-900/95"></div>
+        <div className="absolute inset-0 pattern-grid opacity-5"></div>
+        <div className="relative z-10 text-white">
+          <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-up">
             <div className="text-center mb-6 md:mb-8 sm:mb-12">
               <div className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 md:mb-4">
@@ -255,8 +301,8 @@ const Index = () => {
             </div>
           </AnimatedSection>
 
-          {/* Single Plan Card */}
-          <div className="bg-gradient-to-br from-gray-700 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600 dark:border-gray-700 hover:scale-105 transform transition-all duration-500 hover:shadow-orange-500/20 hover:shadow-2xl group">
+          {/* Enhanced Plan Card */}
+          <ModernCard variant="floating" hover glow shine className="group max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-orange-600 to-red-600 p-4 sm:p-6 md:p-8 text-white text-center group-hover:from-orange-500 group-hover:to-red-500 transition-all duration-500">
               <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                 <Wifi className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
@@ -343,6 +389,8 @@ const Index = () => {
                 </TouchButton>
               </div>
             </div>
+          </div>
+          </ModernCard>
           </div>
         </div>
       </section>
@@ -669,14 +717,29 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <TestimonialCard name="Maria Santos" age="68 anos" location="Centro de Eliseu Martins" initials="MS" testimonial="A internet da SaraivaNet mudou minha vida! Agora consigo falar com meus netos 
-                que moram longe todos os dias. O atendimento é muito carinhoso." />
+            <ModernTestimonial 
+              name="Maria Santos" 
+              location="Centro de Eliseu Martins" 
+              text="A internet da SaraivaNet mudou minha vida! Agora consigo falar com meus netos que moram longe todos os dias. O atendimento é muito carinhoso." 
+              rating={5}
+              delay={100}
+            />
             
-            <TestimonialCard name="João Silva" age="45 anos" location="Bairro São José" initials="JS" testimonial="Trabalho com vendas online e a internet nunca me deixou na mão. Rápida e estável, 
-                exatamente o que precisava para meu negócio crescer." />
+            <ModernTestimonial 
+              name="João Silva" 
+              location="Bairro São José" 
+              text="Trabalho com vendas online e a internet nunca me deixou na mão. Rápida e estável, exatamente o que precisava para meu negócio crescer." 
+              rating={5}
+              delay={200}
+            />
             
-            <TestimonialCard name="Ana Oliveira" age="72 anos" location="Vila Nova" initials="AO" testimonial="Os técnicos são muito educados e me ensinaram a usar o Wi-Fi. Agora assisto 
-                meus programas favoritos no tablet sem travar." />
+            <ModernTestimonial 
+              name="Ana Oliveira" 
+              location="Vila Nova" 
+              text="Os técnicos são muito educados e me ensinaram a usar o Wi-Fi. Agora assisto meus programas favoritos no tablet sem travar." 
+              rating={5}
+              delay={300}
+            />
           </div>
         </div>
       </section>
@@ -797,6 +860,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 };

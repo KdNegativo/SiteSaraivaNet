@@ -231,7 +231,13 @@ export default {
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 				'glow': 'glow 2s ease-in-out infinite',
 				'gradient-shift': 'gradient-shift 3s ease-in-out infinite',
-				'shimmer': 'shimmer 2s ease-in-out infinite'
+                'shimmer': 'shimmer 2s ease-in-out infinite',
+                'slide-up': 'slide-in-left 0.6s ease-out',
+                'zoom-in': 'scale-in 0.4s ease-out',
+                'fade-up': 'fade-in 0.8s ease-out',
+                'float-delayed': 'float 3s ease-in-out infinite',
+                'glow-pulse': 'glow 2s ease-in-out infinite',
+                'bounce-gentle': 'bounce-in 0.8s ease-out'
 			},
 			backgroundSize: {
 				'300%': '300%',
