@@ -95,14 +95,16 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Enhanced Mobile Design */}
+      {/* Hero Section - Enhanced with subtle elegance */}
       <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-12 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/15"></div>
+        
+        {/* Floating elements with better positioning */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-600/20 via-red-600/20 to-purple-700/20"></div>
-            <div className="absolute top-20 right-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float"></div>
-            <div className="absolute bottom-20 left-10 w-56 h-56 bg-orange-300/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-20 right-[10%] w-96 h-96 bg-gradient-to-br from-orange-400/20 to-yellow-400/20 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-20 left-[10%] w-64 h-64 bg-gradient-to-br from-purple-400/15 to-pink-400/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-gradient-to-br from-red-400/10 to-orange-400/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
         )}
         
@@ -126,31 +128,31 @@ const Index = () => {
                 Conecte-se com nossa internet de fibra óptica ultrarrápida e ganhe acesso completo ao app SaraivaTV.
               </p>
 
-              {/* Enhanced Feature Grid */}
+              {/* Premium Feature Cards */}
               <div className="grid grid-cols-2 gap-4 mb-12 max-w-lg mx-auto">
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-400 rounded-full flex items-center justify-center">
-                    <Wifi className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-lg rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/40 hover:from-white/35 hover:to-white/25 transition-all duration-500 shadow-2xl hover:shadow-orange-500/20 hover:scale-105">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-400 via-red-400 to-red-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                    <Wifi className="w-7 h-7 text-white" />
                   </div>
-                  <span className="font-bold text-base text-center text-white">Internet Ultra Rápida</span>
+                  <span className="font-bold text-base text-center text-white leading-tight">Internet Ultra Rápida</span>
                 </div>
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center">
-                    <Tv className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-lg rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/40 hover:from-white/35 hover:to-white/25 transition-all duration-500 shadow-2xl hover:shadow-blue-500/20 hover:scale-105">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                    <Tv className="w-7 h-7 text-white" />
                   </div>
-                  <span className="font-bold text-base text-center text-white">Canais de TV</span>
+                  <span className="font-bold text-base text-center text-white leading-tight">Canais de TV</span>
                 </div>
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center">
-                    <Music className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-lg rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/40 hover:from-white/35 hover:to-white/25 transition-all duration-500 shadow-2xl hover:shadow-green-500/20 hover:scale-105">
+                  <div className="w-14 h-14 bg-gradient-to-br from-green-400 via-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                    <Music className="w-7 h-7 text-white" />
                   </div>
-                  <span className="font-bold text-base text-center text-white">Rádios Online</span>
+                  <span className="font-bold text-base text-center text-white leading-tight">Rádios Online</span>
                 </div>
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-lg rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/40 hover:from-white/35 hover:to-white/25 transition-all duration-500 shadow-2xl hover:shadow-purple-500/20 hover:scale-105">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-400 via-pink-400 to-rose-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                    <Shield className="w-7 h-7 text-white" />
                   </div>
-                  <span className="font-bold text-base text-center text-white">Suporte 24h</span>
+                  <span className="font-bold text-base text-center text-white leading-tight">Suporte 24h</span>
                 </div>
               </div>
 
@@ -169,33 +171,33 @@ const Index = () => {
                 </TouchButton>
               </div>
 
-              {/* Enhanced Stats */}
+              {/* Enhanced Stats with premium styling */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-2xl mx-auto">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="group bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl hover:scale-105">
                   <StatsCounter endValue={1000} label="Clientes" suffix="+" />
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="group bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl hover:scale-105">
                   <StatsCounter endValue={99} label="Uptime" suffix="%" />
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="group bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl hover:scale-105">
                   <StatsCounter endValue={20} label="Canais" suffix="+" />
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="group bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl hover:scale-105">
                   <StatsCounter endValue={24} label="Online" suffix="h" />
                 </div>
               </div>
             </div>
           </AnimatedSection>
 
-          {/* Enhanced SaraivaTV Preview Card */}
+          {/* Premium SaraivaTV Preview Card */}
           <AnimatedSection animation="scale-in" delay={300}>
-            <div className="mt-16 bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:from-white/20 hover:to-white/10 transition-all duration-500 max-w-md mx-auto">
+            <div className="mt-16 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/30 shadow-2xl hover:from-white/25 hover:to-white/15 transition-all duration-500 max-w-md mx-auto hover:scale-105 group">
               <div className="text-center mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 via-red-400 to-purple-400 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                  <Smartphone className="w-10 h-10 text-white" />
+                <div className="w-24 h-24 bg-gradient-to-br from-orange-400 via-red-400 to-purple-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform duration-300 border border-white/20">
+                  <Smartphone className="w-12 h-12 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-white">SaraivaTV</h3>
-                <p className="text-orange-200 text-base font-medium">Seus canais favoritos no celular</p>
+                <h3 className="text-3xl font-bold mb-3 text-white">SaraivaTV</h3>
+                <p className="text-orange-200 text-lg font-medium">Seus canais favoritos no celular</p>
               </div>
               
               <div className="grid grid-cols-2 gap-4 mb-6">
