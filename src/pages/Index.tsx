@@ -11,6 +11,9 @@ import ChatBot from "@/components/ChatBot";
 import TouchButton from "@/components/TouchButton";
 import MobilePlansCarousel from "@/components/MobilePlansCarousel";
 import ResponsiveImage from "@/components/ResponsiveImage";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import GlassCard from "@/components/GlassCard";
+import PremiumButton from "@/components/PremiumButton";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
@@ -37,7 +40,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <div className="min-h-screen gradient-hero transition-colors duration-500">
       {/* Floating Components */}
       <ChatBot />
       
@@ -96,7 +99,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section - Enhanced Mobile Design */}
-      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-12 relative overflow-hidden min-h-screen flex items-center">
+      <section id="inicio" className="gradient-hero text-white px-4 py-12 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
         {!prefersReducedMotion && (
           <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
@@ -107,95 +110,116 @@ const Index = () => {
         )}
         
         <div className="max-w-7xl mx-auto w-full relative z-10">
-          <AnimatedSection animation="fade-up">
+          <ScrollAnimation animation="fade-up">
             <div className="text-center">
               {/* Enhanced Badge */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-6 py-3 rounded-full mb-8 shadow-2xl font-bold text-sm border-2 border-yellow-300/50">
-                <Star className="w-5 h-5 mr-2 fill-current" />
-                <span>Internet + SaraivaTV Grátis</span>
+              <div className="inline-flex items-center glass-button px-6 py-3 rounded-full mb-8 font-bold text-sm">
+                <Star className="w-5 h-5 mr-2 fill-current text-yellow-300" />
+                <span className="text-white">Internet + SaraivaTV Grátis</span>
               </div>
               
               {/* Enhanced Main Title */}
-              <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                <span className="block text-white drop-shadow-lg">Internet</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 drop-shadow-lg">+ SaraivaTV</span>
+              <h1 className="font-extrabold mb-6 leading-tight">
+                <span className="block text-white text-shadow">Internet</span>
+                <span className="block gradient-text text-glow">+ SaraivaTV</span>
               </h1>
               
               {/* Enhanced Subtitle */}
-              <p className="text-xl mb-12 text-white/90 leading-relaxed max-w-2xl mx-auto font-medium">
+              <p className="text-xl mb-12 text-white/90 leading-relaxed max-w-2xl mx-auto font-medium text-shadow">
                 Conecte-se com nossa internet de fibra óptica ultrarrápida e ganhe acesso completo ao app SaraivaTV.
               </p>
 
               {/* Enhanced Feature Grid */}
               <div className="grid grid-cols-2 gap-4 mb-12 max-w-lg mx-auto">
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-400 rounded-full flex items-center justify-center">
-                    <Wifi className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-bold text-base text-center text-white">Internet Ultra Rápida</span>
-                </div>
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center">
-                    <Tv className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-bold text-base text-center text-white">Canais de TV</span>
-                </div>
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center">
-                    <Music className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-bold text-base text-center text-white">Rádios Online</span>
-                </div>
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-bold text-base text-center text-white">Suporte 24h</span>
-                </div>
+                <ScrollAnimation animation="fade-up" delay={200}>
+                  <GlassCard className="flex flex-col items-center space-y-3 hover-float">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-400 rounded-full flex items-center justify-center hover-scale">
+                      <Wifi className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="font-bold text-base text-center text-white">Internet Ultra Rápida</span>
+                  </GlassCard>
+                </ScrollAnimation>
+                <ScrollAnimation animation="fade-up" delay={300}>
+                  <GlassCard className="flex flex-col items-center space-y-3 hover-float">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center hover-scale">
+                      <Tv className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="font-bold text-base text-center text-white">Canais de TV</span>
+                  </GlassCard>
+                </ScrollAnimation>
+                <ScrollAnimation animation="fade-up" delay={400}>
+                  <GlassCard className="flex flex-col items-center space-y-3 hover-float">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center hover-scale">
+                      <Music className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="font-bold text-base text-center text-white">Rádios Online</span>
+                  </GlassCard>
+                </ScrollAnimation>
+                <ScrollAnimation animation="fade-up" delay={500}>
+                  <GlassCard className="flex flex-col items-center space-y-3 hover-float">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center hover-scale">
+                      <Shield className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="font-bold text-base text-center text-white">Suporte 24h</span>
+                  </GlassCard>
+                </ScrollAnimation>
               </div>
 
               {/* Enhanced CTA Button */}
               <div className="mb-12">
-                <TouchButton 
-                  onClick={handleWhatsAppClick} 
-                  className="w-full max-w-sm mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl border-0 transform hover:scale-105 transition-all duration-300"
-                >
-                  <span className="flex items-center justify-center gap-3">
-                    Contratar Agora 
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                      →
-                    </div>
-                  </span>
-                </TouchButton>
+                <ScrollAnimation animation="fade-scale" delay={600}>
+                  <PremiumButton 
+                    onClick={handleWhatsAppClick} 
+                    size="xl"
+                    glow
+                    shimmer
+                    className="w-full max-w-sm mx-auto"
+                  >
+                    <span className="flex items-center justify-center gap-3">
+                      Contratar Agora 
+                      <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                        →
+                      </div>
+                    </span>
+                  </PremiumButton>
+                </ScrollAnimation>
               </div>
 
               {/* Enhanced Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-2xl mx-auto">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <StatsCounter endValue={1000} label="Clientes" suffix="+" />
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <StatsCounter endValue={99} label="Uptime" suffix="%" />
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <StatsCounter endValue={20} label="Canais" suffix="+" />
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <StatsCounter endValue={24} label="Online" suffix="h" />
-                </div>
+                <ScrollAnimation animation="fade-up" delay={700}>
+                  <GlassCard variant="premium" className="hover-glow">
+                    <StatsCounter endValue={1000} label="Clientes" suffix="+" />
+                  </GlassCard>
+                </ScrollAnimation>
+                <ScrollAnimation animation="fade-up" delay={800}>
+                  <GlassCard variant="premium" className="hover-glow">
+                    <StatsCounter endValue={99} label="Uptime" suffix="%" />
+                  </GlassCard>
+                </ScrollAnimation>
+                <ScrollAnimation animation="fade-up" delay={900}>
+                  <GlassCard variant="premium" className="hover-glow">
+                    <StatsCounter endValue={20} label="Canais" suffix="+" />
+                  </GlassCard>
+                </ScrollAnimation>
+                <ScrollAnimation animation="fade-up" delay={1000}>
+                  <GlassCard variant="premium" className="hover-glow">
+                    <StatsCounter endValue={24} label="Online" suffix="h" />
+                  </GlassCard>
+                </ScrollAnimation>
               </div>
             </div>
-          </AnimatedSection>
+          </ScrollAnimation>
 
           {/* Enhanced SaraivaTV Preview Card */}
-          <AnimatedSection animation="scale-in" delay={300}>
-            <div className="mt-16 bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:from-white/20 hover:to-white/10 transition-all duration-500 max-w-md mx-auto">
+          <ScrollAnimation animation="fade-scale" delay={1100}>
+            <GlassCard variant="premium" className="mt-16 max-w-md mx-auto hover-lift hover-glow">
               <div className="text-center mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 via-red-400 to-purple-400 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                <div className="w-20 h-20 gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl hover-scale">
                   <Smartphone className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-white">SaraivaTV</h3>
-                <p className="text-orange-200 text-base font-medium">Seus canais favoritos no celular</p>
+                <h3 className="text-2xl font-bold mb-3 gradient-text">SaraivaTV</h3>
+                <p className="text-white/90 text-base font-medium">Seus canais favoritos no celular</p>
               </div>
               
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -229,8 +253,8 @@ const Index = () => {
                   <Tv className="w-8 h-8 text-blue-300" />
                 </div>
               </div>
-            </div>
-          </AnimatedSection>
+            </GlassCard>
+          </ScrollAnimation>
         </div>
       </section>
 

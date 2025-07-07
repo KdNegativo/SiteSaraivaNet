@@ -5,9 +5,11 @@ import { cn } from '@/lib/utils';
 interface PremiumButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant?: 'primary' | 'secondary' | 'glass' | 'gradient';
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   loading?: boolean;
   icon?: ReactNode;
+  glow?: boolean;
+  shimmer?: boolean;
 }
 
 const PremiumButton = ({ 
@@ -18,15 +20,23 @@ const PremiumButton = ({
   loading = false,
   icon,
   disabled,
+  glow = false,
+  shimmer = false,
   ...props 
 }: PremiumButtonProps) => {
-  const baseClasses = "font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseClasses = "font-semibold rounded-xl transition-all duration-500 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed";
   
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    lg: 'px-8 py-4 text-lg',
+    xl: 'px-10 py-5 text-xl'
   };
+
+  const effectClasses = cn(
+    glow && "hover-glow",
+    shimmer && "hover-shimmer"
+  );
 
   const variantClasses = {
     primary: 'btn-premium',
@@ -41,6 +51,7 @@ const PremiumButton = ({
         baseClasses,
         sizeClasses[size],
         variantClasses[variant],
+        effectClasses,
         className
       )}
       disabled={disabled || loading}
