@@ -465,41 +465,33 @@
     animation-delay: 500ms;
   }
 
-  /* Ultra Advanced Visual Effects */
-  @keyframes grid-move {
-    0% { 
-      transform: translateX(0) translateY(0);
+  /* Mobile Optimized Animations */
+  @keyframes mobile-float {
+    0%, 100% { 
+      transform: translateY(0px);
     }
-    100% { 
-      transform: translateX(50px) translateY(50px);
+    50% { 
+      transform: translateY(-10px);
     }
   }
 
-  @keyframes network-pulse {
+  @keyframes smooth-pulse {
     0%, 100% { 
-      opacity: 0.3;
+      opacity: 0.4;
       transform: scale(1);
-      filter: brightness(1);
     }
     50% { 
       opacity: 0.8;
-      transform: scale(1.1);
-      filter: brightness(1.5);
+      transform: scale(1.05);
     }
   }
 
-  @keyframes float-complex {
+  @keyframes gentle-fade {
     0%, 100% { 
-      transform: translateY(0px) rotate(0deg) scale(1);
-    }
-    25% { 
-      transform: translateY(-15px) rotate(5deg) scale(1.1);
+      opacity: 0.3;
     }
     50% { 
-      transform: translateY(-30px) rotate(0deg) scale(1.05);
-    }
-    75% { 
-      transform: translateY(-15px) rotate(-5deg) scale(1.1);
+      opacity: 0.7;
     }
   }
 
@@ -551,17 +543,7 @@
     }
   }
 
-  .animate-grid-move {
-    animation: grid-move 20s linear infinite;
-  }
-
-  .animate-network-pulse {
-    animation: network-pulse 3s ease-in-out infinite;
-  }
-
-  .animate-float-complex {
-    animation: float-complex 8s ease-in-out infinite;
-  }
+  /* Legacy animation classes - keeping for compatibility */
 
   .animate-connect {
     animation: connect-line 4s ease-in-out infinite;
@@ -577,6 +559,19 @@
 
   .animate-wave-flow {
     animation: wave-flow 8s ease-in-out infinite;
+  }
+
+  /* Mobile Optimized Animation Classes */
+  .animate-mobile-float {
+    animation: mobile-float 4s ease-in-out infinite;
+  }
+
+  .animate-smooth-pulse {
+    animation: smooth-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-gentle-fade {
+    animation: gentle-fade 2s ease-in-out infinite;
   }
 
   /* Scroll Animations */
