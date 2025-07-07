@@ -11,12 +11,19 @@ import ChatBot from "@/components/ChatBot";
 import TouchButton from "@/components/TouchButton";
 import MobilePlansCarousel from "@/components/MobilePlansCarousel";
 import ResponsiveImage from "@/components/ResponsiveImage";
+import MobileOptimized from "@/components/MobileOptimized";
+import AccessibleButton from "@/components/AccessibleButton";
+import PerformanceImage from "@/components/PerformanceImage";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { usePerformance } from "@/hooks/usePerformance";
+import { useAccessibility } from "@/hooks/useAccessibility";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
   const prefersReducedMotion = useReducedMotion();
+  const { prefetchResource } = usePerformance();
+  const { announceToScreenReader, focusElement } = useAccessibility();
   
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -33,6 +40,13 @@ const Index = () => {
     const phoneNumber = "5589994395789";
     const message = "Olá! Gostaria de contratar o plano de internet + SaraivaTV.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Announce action to screen readers
+    announceToScreenReader("Redirecionando para WhatsApp para contratar internet SaraivaNet");
+    
+    // Prefetch WhatsApp for better performance
+    prefetchResource(whatsappUrl, 'script');
+    
     window.open(whatsappUrl, '_blank');
   };
 
@@ -42,7 +56,10 @@ const Index = () => {
       <ChatBot />
       
       {/* Header - Mobile optimized */}
-      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
+      <header 
+        className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl mobile-padding border-b-4 border-orange-700 dark:border-gray-700 z-50 fast-transition" 
+        role="banner"
+      >
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -80,12 +97,12 @@ const Index = () => {
             </div>
           </div>
           
-          <nav className="flex items-center space-x-6">
-            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
+          <nav className="flex items-center space-x-6" role="navigation" aria-label="Menu principal">
+            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 fast-transition font-medium focus-visible" aria-label="Ir para início">Início</a>
+            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 fast-transition font-medium focus-visible" aria-label="Ver planos">Planos</a>
+            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 fast-transition font-medium focus-visible" aria-label="Ver área de cobertura">Cobertura</a>
+            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 fast-transition font-medium focus-visible" aria-label="Sobre a SaraivaNet">Sobre</a>
+            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 fast-transition font-medium focus-visible" aria-label="Entrar em contato">Contato</a>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -155,10 +172,13 @@ const Index = () => {
               </div>
 
               {/* Enhanced CTA Button */}
-              <div className="mb-12">
-                <TouchButton 
+              <MobileOptimized touchOptimized className="mb-12">
+                <AccessibleButton 
                   onClick={handleWhatsAppClick} 
-                  className="w-full max-w-sm mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl border-0 transform hover:scale-105 transition-all duration-300"
+                  className="w-full max-w-sm mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 smooth-corners font-bold text-xl shadow-2xl border-0"
+                  touchOptimized
+                  visuallyHiddenText="Contratar plano de internet SaraivaNet"
+                  aria-label="Contratar plano de internet agora via WhatsApp"
                 >
                   <span className="flex items-center justify-center gap-3">
                     Contratar Agora 
@@ -166,8 +186,8 @@ const Index = () => {
                       →
                     </div>
                   </span>
-                </TouchButton>
-              </div>
+                </AccessibleButton>
+              </MobileOptimized>
 
               {/* Enhanced Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-2xl mx-auto">
@@ -282,9 +302,16 @@ const Index = () => {
                     <div className="text-green-400 text-xs">Promoção válida para novos clientes</div>
                   </div>
 
-                  <TouchButton onClick={handleWhatsAppClick} className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-6 text-sm sm:text-base rounded-xl shadow-xl">
-                    Contratar Agora →
-                  </TouchButton>
+                  <MobileOptimized touchOptimized>
+                    <AccessibleButton 
+                      onClick={handleWhatsAppClick} 
+                      className="w-full lg:w-auto bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-6 responsive-text smooth-corners shadow-xl"
+                      touchOptimized
+                      aria-label="Contratar plano completo de internet"
+                    >
+                      Contratar Agora →
+                    </AccessibleButton>
+                  </MobileOptimized>
                 </div>
 
                 <div>
@@ -335,12 +362,25 @@ const Index = () => {
                 Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-                <TouchButton onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl">
-                  💬 WhatsApp
-                </TouchButton>
-                <TouchButton className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl">
-                  📞 Ligar Agora
-                </TouchButton>
+                <MobileOptimized touchOptimized>
+                  <AccessibleButton 
+                    onClick={handleWhatsAppClick} 
+                    className="bg-white text-orange-600 hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-3 responsive-text font-bold smooth-corners"
+                    touchOptimized
+                    aria-label="Entrar em contato via WhatsApp"
+                  >
+                    💬 WhatsApp
+                  </AccessibleButton>
+                </MobileOptimized>
+                <MobileOptimized touchOptimized>
+                  <AccessibleButton 
+                    className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-4 sm:px-6 py-2 sm:py-3 responsive-text font-bold smooth-corners"
+                    touchOptimized
+                    aria-label="Ligar para SaraivaNet"
+                  >
+                    📞 Ligar Agora
+                  </AccessibleButton>
+                </MobileOptimized>
               </div>
             </div>
           </div>
@@ -504,10 +544,17 @@ const Index = () => {
                 Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
               </p>
               <div className="flex justify-center">
-                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3">
-                  <span className="text-2xl">💬</span>
+              <MobileOptimized touchOptimized>
+                <AccessibleButton 
+                  onClick={handleWhatsAppClick} 
+                  className="bg-white text-orange-600 hover:bg-gray-100 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold smooth-corners shadow-2xl flex items-center gap-3"
+                  touchOptimized
+                  aria-label="Entrar em contato para contratar SaraivaTV"
+                >
+                  <span className="text-2xl" aria-hidden="true">💬</span>
                   Entrar em Contato
-                </Button>
+                </AccessibleButton>
+              </MobileOptimized>
               </div>
             </div>
           </div>
@@ -515,14 +562,19 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 relative overflow-hidden">
+      <section 
+        className="mobile-padding bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 relative overflow-hidden" 
+        aria-labelledby="stats-heading"
+      >
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute top-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 left-10 w-72 h-72 bg-orange-300/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl no-motion"></div>
+        <div className="absolute bottom-10 left-10 w-72 h-72 bg-orange-300/20 rounded-full blur-3xl no-motion"></div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h2 className="text-5xl font-bold text-white mb-4">Números Que Falam Por Si</h2>
-          <p className="text-2xl text-white/90 mb-12">
+          <h2 id="stats-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 responsive-text">
+            Números Que Falam Por Si
+          </h2>
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 responsive-text">
             Resultados conquistados com dedicação e compromisso com a região
           </p>
 
