@@ -41,8 +41,8 @@ const Index = () => {
       {/* Floating Components */}
       <ChatBot />
       
-      {/* Header - Mobile optimized */}
-      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
+      {/* Modern Header - Mobile optimized */}
+      <header className="gradient-brand shadow-[var(--shadow-xl)] px-4 py-3 border-b-4 border-primary/20 z-50 transition-all duration-300 backdrop-blur-sm">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -95,14 +95,13 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Enhanced Mobile Design */}
-      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-12 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
+      {/* Hero Section - Modern Mobile-First Design */}
+      <section id="inicio" className="gradient-brand text-white px-4 py-16 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
         {!prefersReducedMotion && (
-          <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-600/20 via-red-600/20 to-purple-700/20"></div>
-            <div className="absolute top-20 right-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float"></div>
-            <div className="absolute bottom-20 left-10 w-56 h-56 bg-orange-300/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute inset-0 gpu-accelerated" style={{ transform: `translateY(${parallaxOffset * 0.3}px)` }}>
+            <div className="absolute top-20 right-10 w-64 h-64 bg-white/5 rounded-full blur-2xl animate-float"></div>
+            <div className="absolute bottom-20 left-10 w-48 h-48 bg-orange-300/10 rounded-full blur-2xl animate-float delay-500"></div>
           </div>
         )}
         
@@ -126,39 +125,39 @@ const Index = () => {
                 Conecte-se com nossa internet de fibra óptica ultrarrápida e ganhe acesso completo ao app SaraivaTV.
               </p>
 
-              {/* Enhanced Feature Grid */}
+              {/* Modern Feature Grid */}
               <div className="grid grid-cols-2 gap-4 mb-12 max-w-lg mx-auto">
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-400 rounded-full flex items-center justify-center">
+                <div className="glass-card-modern text-center touch-optimized animate-fade-in-up delay-100">
+                  <div className="w-12 h-12 gradient-brand rounded-full flex items-center justify-center mx-auto mb-3">
                     <Wifi className="w-6 h-6 text-white" />
                   </div>
-                  <span className="font-bold text-base text-center text-white">Internet Ultra Rápida</span>
+                  <span className="font-bold text-sm text-white">Internet Ultra Rápida</span>
                 </div>
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center">
+                <div className="glass-card-modern text-center touch-optimized animate-fade-in-up delay-200">
+                  <div className="w-12 h-12 gradient-secondary-brand rounded-full flex items-center justify-center mx-auto mb-3">
                     <Tv className="w-6 h-6 text-white" />
                   </div>
-                  <span className="font-bold text-base text-center text-white">Canais de TV</span>
+                  <span className="font-bold text-sm text-white">Canais de TV</span>
                 </div>
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center">
+                <div className="glass-card-modern text-center touch-optimized animate-fade-in-up delay-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Music className="w-6 h-6 text-white" />
                   </div>
-                  <span className="font-bold text-base text-center text-white">Rádios Online</span>
+                  <span className="font-bold text-sm text-white">Rádios Online</span>
                 </div>
-                <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center space-y-3 border border-white/30 hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-xl">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
+                <div className="glass-card-modern text-center touch-optimized animate-fade-in-up delay-500">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Shield className="w-6 h-6 text-white" />
                   </div>
-                  <span className="font-bold text-base text-center text-white">Suporte 24h</span>
+                  <span className="font-bold text-sm text-white">Suporte 24h</span>
                 </div>
               </div>
 
-              {/* Enhanced CTA Button */}
-              <div className="mb-12">
+              {/* Modern CTA Button */}
+              <div className="mb-12 animate-scale-in delay-300">
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="w-full max-w-sm mx-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl border-0 transform hover:scale-105 transition-all duration-300"
+                  className="btn-primary-modern w-full max-w-sm mx-auto touch-optimized"
                 >
                   <span className="flex items-center justify-center gap-3">
                     Contratar Agora 
@@ -169,18 +168,18 @@ const Index = () => {
                 </TouchButton>
               </div>
 
-              {/* Enhanced Stats */}
+              {/* Modern Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-2xl mx-auto">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="glass-card-modern p-4 animate-slide-in-right delay-100">
                   <StatsCounter endValue={1000} label="Clientes" suffix="+" />
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="glass-card-modern p-4 animate-slide-in-right delay-200">
                   <StatsCounter endValue={99} label="Uptime" suffix="%" />
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="glass-card-modern p-4 animate-slide-in-right delay-300">
                   <StatsCounter endValue={20} label="Canais" suffix="+" />
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="glass-card-modern p-4 animate-slide-in-right delay-500">
                   <StatsCounter endValue={24} label="Online" suffix="h" />
                 </div>
               </div>
