@@ -41,8 +41,8 @@ const Index = () => {
       {/* Floating Components */}
       <ChatBot />
       
-      {/* Modern Header - Mobile optimized */}
-      <header className="gradient-brand shadow-[var(--shadow-xl)] px-4 py-3 border-b-4 border-primary/20 z-50 transition-all duration-300 backdrop-blur-sm">
+      {/* SUPER VISIBLE MOBILE HEADER */}
+      <header className="bg-gradient-to-r from-purple-600 to-pink-600 shadow-2xl px-6 py-6 border-b-8 border-yellow-400 z-50 transition-all duration-300">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -95,13 +95,13 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Modern Mobile-First Design */}
-      <section id="inicio" className="gradient-brand text-white px-4 py-16 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+      {/* Hero Section - MOBILE SUPER VISUAL */}
+      <section id="inicio" className="bg-gradient-to-br from-pink-500 via-purple-600 to-blue-600 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
         {!prefersReducedMotion && (
-          <div className="absolute inset-0 gpu-accelerated" style={{ transform: `translateY(${parallaxOffset * 0.3}px)` }}>
-            <div className="absolute top-20 right-10 w-64 h-64 bg-white/5 rounded-full blur-2xl animate-float"></div>
-            <div className="absolute bottom-20 left-10 w-48 h-48 bg-orange-300/10 rounded-full blur-2xl animate-float delay-500"></div>
+          <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset * 0.2}px)` }}>
+            <div className="absolute top-10 right-5 w-32 h-32 bg-yellow-300/20 rounded-full blur-xl animate-bounce"></div>
+            <div className="absolute bottom-10 left-5 w-24 h-24 bg-green-300/20 rounded-full blur-xl animate-pulse"></div>
           </div>
         )}
         
@@ -125,43 +125,43 @@ const Index = () => {
                 Conecte-se com nossa internet de fibra óptica ultrarrápida e ganhe acesso completo ao app SaraivaTV.
               </p>
 
-              {/* Modern Feature Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-12 max-w-lg mx-auto">
-                <div className="glass-card-modern text-center touch-optimized animate-fade-in-up delay-100">
-                  <div className="w-12 h-12 gradient-brand rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Wifi className="w-6 h-6 text-white" />
+              {/* SUPER VISUAL MOBILE CARDS */}
+              <div className="grid grid-cols-2 gap-6 mb-12 max-w-lg mx-auto">
+                <div className="bg-gradient-to-br from-yellow-400 to-orange-500 text-center p-6 rounded-3xl shadow-2xl transform hover:scale-110 transition-all duration-300 border-4 border-white/30">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Wifi className="w-8 h-8 text-white" />
                   </div>
-                  <span className="font-bold text-sm text-white">Internet Ultra Rápida</span>
+                  <span className="font-bold text-lg text-white">Internet Ultra Rápida</span>
                 </div>
-                <div className="glass-card-modern text-center touch-optimized animate-fade-in-up delay-200">
-                  <div className="w-12 h-12 gradient-secondary-brand rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Tv className="w-6 h-6 text-white" />
+                <div className="bg-gradient-to-br from-green-400 to-blue-500 text-center p-6 rounded-3xl shadow-2xl transform hover:scale-110 transition-all duration-300 border-4 border-white/30">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Tv className="w-8 h-8 text-white" />
                   </div>
-                  <span className="font-bold text-sm text-white">Canais de TV</span>
+                  <span className="font-bold text-lg text-white">Canais de TV</span>
                 </div>
-                <div className="glass-card-modern text-center touch-optimized animate-fade-in-up delay-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Music className="w-6 h-6 text-white" />
+                <div className="bg-gradient-to-br from-purple-400 to-pink-500 text-center p-6 rounded-3xl shadow-2xl transform hover:scale-110 transition-all duration-300 border-4 border-white/30">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Music className="w-8 h-8 text-white" />
                   </div>
-                  <span className="font-bold text-sm text-white">Rádios Online</span>
+                  <span className="font-bold text-lg text-white">Rádios Online</span>
                 </div>
-                <div className="glass-card-modern text-center touch-optimized animate-fade-in-up delay-500">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Shield className="w-6 h-6 text-white" />
+                <div className="bg-gradient-to-br from-red-400 to-orange-500 text-center p-6 rounded-3xl shadow-2xl transform hover:scale-110 transition-all duration-300 border-4 border-white/30">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-white" />
                   </div>
-                  <span className="font-bold text-sm text-white">Suporte 24h</span>
+                  <span className="font-bold text-lg text-white">Suporte 24h</span>
                 </div>
               </div>
 
-              {/* Modern CTA Button */}
-              <div className="mb-12 animate-scale-in delay-300">
+              {/* SUPER VISIBLE CTA BUTTON */}
+              <div className="mb-12">
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="btn-primary-modern w-full max-w-sm mx-auto touch-optimized"
+                  className="w-full max-w-sm mx-auto bg-gradient-to-r from-yellow-400 to-red-500 hover:from-yellow-500 hover:to-red-600 text-black px-12 py-6 rounded-3xl font-bold text-2xl shadow-2xl border-4 border-white transform hover:scale-110 transition-all duration-300 animate-pulse"
                 >
-                  <span className="flex items-center justify-center gap-3">
-                    Contratar Agora 
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="flex items-center justify-center gap-4">
+                    🚀 CONTRATAR AGORA 
+                    <div className="w-8 h-8 bg-black/20 rounded-full flex items-center justify-center">
                       →
                     </div>
                   </span>
