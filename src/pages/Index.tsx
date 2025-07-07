@@ -14,6 +14,7 @@ import GlassCard from "@/components/GlassCard";
 import PremiumButton from "@/components/PremiumButton";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -251,20 +252,22 @@ const Index = () => {
       {/* Plans Section */}
       <section id="planos" className="bg-gradient-to-br from-gray-800 via-gray-900 to-black dark:from-gray-900 dark:via-black dark:to-gray-900 text-white px-4 py-12">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-6 md:mb-8 sm:mb-12">
+          <AnimatedSection animation="fade-up" className="text-center mb-6 md:mb-8 sm:mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Nossos <span className="gradient-text">Planos</span>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Escolha o plano ideal para sua casa ou empresa. Todos incluem SaraivaTV gratuito!
             </p>
-          </div>
+          </AnimatedSection>
 
           {/* Mobile Plans Carousel */}
-          <MobilePlansCarousel />
+          <AnimatedSection animation="scale-in" delay={200}>
+            <MobilePlansCarousel />
+          </AnimatedSection>
 
           {/* Desktop Plans Grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <AnimatedSection animation="fade-up" delay={300} className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Plano Básico */}
             <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300">
               <div className="p-6">
@@ -373,7 +376,7 @@ const Index = () => {
                     </li>
                     <li className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      <span>Fibra óptica</span>
+                    <span>Fibra óptica</span>
                     </li>
                     <li className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
@@ -439,14 +442,14 @@ const Index = () => {
                 </div>
               </div>
             </Card>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className="py-12 px-4 bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+          <AnimatedSection animation="scale-in" className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             <div>
               <div className="text-3xl font-bold text-white mb-2">5000+</div>
               <p className="text-lg font-semibold mt-2">Clientes Ativos</p>
@@ -466,23 +469,23 @@ const Index = () => {
               <div className="text-3xl font-bold text-white mb-2">15</div>
               <p className="text-lg font-semibold mt-2">Anos no Mercado</p>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Coverage Section */}
       <section id="cobertura" className="py-12 px-4 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <AnimatedSection animation="fade-up" className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Área de <span className="gradient-text">Cobertura</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Levamos internet de qualidade para toda a região de Eliseu Martins e cidades vizinhas
             </p>
-          </div>
+          </AnimatedSection>
           
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <AnimatedSection animation="slide-left" delay={200} className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Cidades Atendidas</h3>
@@ -516,23 +519,23 @@ const Index = () => {
             <div className="h-96 bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
               <RealMap />
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* About Section */}
       <section id="sobre" className="py-12 px-4 bg-gradient-to-br from-gray-50 to-orange-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <AnimatedSection animation="fade-up" className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Sobre a <span className="gradient-text">SaraivaNet</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Há mais de 15 anos conectando famílias e empresas com internet de qualidade e agora com nosso próprio streaming
             </p>
-          </div>
+          </AnimatedSection>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <AnimatedSection animation="scale-in" delay={300} className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
@@ -559,12 +562,12 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Comunidade</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Empresa local que entende as necessidades da nossa região
-              </p>
-            </div>
-          </div>
-          
-          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+                 Empresa local que entende as necessidades da nossa região
+               </p>
+             </div>
+           </AnimatedSection>
+           
+           <AnimatedSection animation="fade-up" delay={500} className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -599,23 +602,23 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Testimonials Section */}
       <section className="py-12 px-4 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <AnimatedSection animation="fade-up" className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               O que nossos <span className="gradient-text">clientes</span> dizem
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
               Depoimentos reais de quem confia na SaraivaNet
             </p>
-          </div>
+          </AnimatedSection>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <AnimatedSection animation="scale-in" delay={200} className="grid md:grid-cols-3 gap-8">
             <TestimonialCard 
               name="Maria Silva"
               age="35 anos"
@@ -638,10 +641,10 @@ const Index = () => {
               location="São João do Piauí"
               testimonial="Suporte excepcional e preço justo. O SaraivaTV entretém as crianças enquanto trabalho em casa."
               initials="AC"
-            />
-          </div>
-        </div>
-      </section>
+             />
+           </AnimatedSection>
+         </div>
+       </section>
 
       {/* Contact Section */}
       <section id="contato" className="py-12 px-4 bg-gradient-to-br from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 text-white">

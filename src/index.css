@@ -160,15 +160,30 @@
     backdrop-filter: blur(24px) saturate(200%);
     border: 1px solid hsla(0, 0%, 100%, 0.2);
     box-shadow: var(--shadow-premium), var(--shadow-glow);
-    @apply transition-all duration-500;
+    @apply transition-all duration-500 relative overflow-hidden;
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsla(0, 0%, 100%, 0.3), transparent);
+    transition: left 0.8s ease;
+  }
+
+  .glass-card:hover::before {
+    left: 100%;
   }
 
   .glass-card:hover {
     background: linear-gradient(135deg, 
       hsla(0, 0%, 100%, 0.35) 0%, 
       hsla(0, 0%, 100%, 0.15) 100%);
-    box-shadow: var(--shadow-premium), 0 0 60px hsla(24, 100%, 60%, 0.4);
-    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-premium), 0 0 80px hsla(24, 100%, 60%, 0.5);
+    transform: translateY(-6px) scale(1.03);
   }
 
   .glass-button {
