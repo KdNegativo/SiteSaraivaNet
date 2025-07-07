@@ -37,12 +37,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-orange-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
       {/* Floating Components */}
       <ChatBot />
       
       {/* Header - Mobile optimized */}
-      <header className="bg-gradient-to-r from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
+      <header className="bg-gradient-to-r from-orange-600 to-orange-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -96,7 +96,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section - MOBILE BONITÃO */}
-      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
+      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-orange-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         
         {/* MEGA VISUAL - Floating elements */}
@@ -130,7 +130,7 @@ const Index = () => {
 
               {/* CARTÕES MEGA VISUAIS */}
               <div className="grid grid-cols-2 gap-4 mb-10 max-w-md mx-auto">
-                <div className="group bg-gradient-to-br from-orange-500/80 to-red-500/60 backdrop-blur-xl rounded-3xl p-6 flex flex-col items-center space-y-3 border-2 border-orange-300/60 hover:from-orange-400/90 hover:to-red-400/70 transition-all duration-500 shadow-2xl hover:shadow-orange-500/50 hover:scale-110 active:scale-95 animate-slide-in-left">
+                <div className="group bg-gradient-to-br from-orange-500/80 to-orange-500/60 backdrop-blur-xl rounded-3xl p-6 flex flex-col items-center space-y-3 border-2 border-orange-300/60 hover:from-orange-400/90 hover:to-orange-400/70 transition-all duration-500 shadow-2xl hover:shadow-orange-500/50 hover:scale-110 active:scale-95 animate-slide-in-left">
                   <div className="w-16 h-16 bg-gradient-to-br from-white to-orange-100 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-xl group-hover:scale-125 transition-all duration-500 group-hover:rotate-12">
                     <Wifi className="w-8 h-8 text-orange-600" />
                   </div>
@@ -160,7 +160,7 @@ const Index = () => {
               <div className="mb-10 animate-scale-in" style={{ animationDelay: '0.8s' }}>
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="relative w-full max-w-sm mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-10 py-6 rounded-3xl font-black text-xl shadow-2xl border-4 border-yellow-300/60 transform hover:scale-110 active:scale-95 transition-all duration-300 shadow-orange-500/70 overflow-hidden group"
+                  className="relative w-full max-w-sm mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-500 hover:from-yellow-300 hover:via-orange-400 hover:to-orange-400 text-gray-900 px-10 py-6 rounded-3xl font-black text-xl shadow-2xl border-4 border-yellow-300/60 transform hover:scale-110 active:scale-95 transition-all duration-300 shadow-orange-500/70 overflow-hidden group"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                   <span className="relative flex items-center justify-center gap-3">
@@ -194,7 +194,7 @@ const Index = () => {
           <AnimatedSection animation="scale-in" delay={300}>
             <div className="bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-xl rounded-3xl p-6 border border-white/40 shadow-2xl hover:from-white/30 hover:to-white/20 transition-all duration-500 max-w-sm mx-auto hover:scale-105 group active:scale-95">
               <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 via-red-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl group-hover:scale-110 transition-transform duration-300 border border-white/30">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 via-orange-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl group-hover:scale-110 transition-transform duration-300 border border-white/30">
                   <Smartphone className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2 text-white">SaraivaTV</h3>
@@ -242,11 +242,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-up">
             <div className="text-center mb-6 md:mb-8 sm:mb-12">
-              <div className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 md:mb-4">
+              <div className="inline-flex items-center bg-gradient-to-r from-orange-600 to-orange-600 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 md:mb-4">
                 <Award className="w-3 h-3 mr-2" />
                 Plano Exclusivo para Você
               </div>
-              <h2 className="text-xl md:text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-3 md:mb-4">
+              <h2 className="text-xl md:text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-400 bg-clip-text text-transparent mb-3 md:mb-4">
                 Internet + SaraivaTV
               </h2>
               <p className="text-sm md:text-base sm:text-lg md:text-xl text-gray-300 mb-2 md:mb-3 max-w-3xl mx-auto leading-relaxed">
