@@ -95,91 +95,66 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - MEGA IMPRESSIONANTE */}
-      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+      {/* Hero Section - Mobile Friendly */}
+      <section id="inicio" className="bg-gradient-to-br from-orange-400 via-red-500 to-purple-500 text-white px-4 py-16 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20"></div>
         
-        {/* Background Effects */}
+        {/* Efeitos simplificados para mobile */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            {/* Múltiplas esferas animadas */}
-            <div className="absolute top-10 right-5 w-40 h-40 bg-orange-300/30 rounded-full blur-2xl animate-float"></div>
-            <div className="absolute bottom-10 left-5 w-32 h-32 bg-red-300/25 rounded-full blur-xl animate-float delay-300"></div>
-            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-yellow-300/20 rounded-full blur-lg animate-float delay-700"></div>
-            <div className="absolute bottom-1/4 right-1/3 w-36 h-36 bg-purple-300/25 rounded-full blur-xl animate-float delay-1000"></div>
-            
-            {/* Efeito de partículas */}
-            <div className="absolute inset-0">
-              {Array.from({ length: 20 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-2 h-2 bg-white/20 rounded-full animate-float"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 3}s`,
-                    animationDuration: `${3 + Math.random() * 2}s`
-                  }}
-                />
-              ))}
-            </div>
+            <div className="absolute top-20 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"></div>
+            <div className="absolute bottom-20 left-10 w-24 h-24 bg-orange-200/15 rounded-full blur-lg animate-float delay-500"></div>
           </div>
         )}
         
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <AnimatedSection animation="fade-up">
             <div className="text-center">
-              {/* Super Badge Animado */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-8 py-4 rounded-full mb-8 shadow-2xl font-bold text-lg border-4 border-yellow-300/50 transform hover:scale-110 transition-all duration-300">
-                <Star className="w-6 h-6 mr-3 fill-current animate-pulse" />
-                <span>🚀 Internet + SaraivaTV GRÁTIS</span>
-                <Star className="w-6 h-6 ml-3 fill-current animate-pulse" />
+              {/* Badge mais claro */}
+              <div className="inline-flex items-center bg-white/90 text-gray-900 px-6 py-3 rounded-full mb-6 shadow-xl font-bold text-sm">
+                <Star className="w-5 h-5 mr-2 fill-current text-orange-500" />
+                <span>Internet + SaraivaTV Grátis</span>
               </div>
               
-              {/* Título Mega Impactante */}
-              <h1 className="text-6xl md:text-8xl font-extrabold mb-8 leading-tight">
-                <span className="block text-white drop-shadow-2xl animate-fade-in-up">Internet</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 drop-shadow-2xl animate-fade-in-up delay-200">ULTRA RÁPIDA</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 drop-shadow-2xl animate-fade-in-up delay-500">+ SaraivaTV</span>
+              {/* Título mais legível */}
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                <span className="block text-white drop-shadow-lg">Internet Ultra Rápida</span>
+                <span className="block text-yellow-300 drop-shadow-lg">+ SaraivaTV</span>
               </h1>
               
-              {/* Subtitle Impactante */}
-              <p className="text-2xl mb-16 text-white/95 leading-relaxed max-w-4xl mx-auto font-semibold animate-fade-in-up delay-700">
-                💫 Conecte-se com nossa <span className="text-yellow-300 font-bold">fibra óptica ultrarrápida</span> e ganhe acesso completo ao app <span className="text-orange-300 font-bold">SaraivaTV</span> com canais de TV e rádios online! 📺
+              {/* Subtitle mais claro */}
+              <p className="text-lg mb-12 text-white leading-relaxed max-w-2xl mx-auto font-medium">
+                Fibra óptica de 300MB + app SaraivaTV com canais de TV e rádios grátis!
               </p>
 
-              {/* Grid de Features MEGA VISUAL */}
-              <div className="grid grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
-                <div className="group bg-gradient-to-br from-yellow-400/20 to-orange-500/20 backdrop-blur-xl text-center p-8 rounded-3xl shadow-2xl transform hover:scale-110 transition-all duration-500 border-4 border-white/30 hover:border-yellow-300/50 animate-scale-in delay-100">
-                  <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce">
-                    <Wifi className="w-10 h-10 text-white" />
+              {/* Cards Mobile Friendly */}
+              <div className="grid grid-cols-2 gap-4 mb-12 max-w-lg mx-auto">
+                <div className="bg-white/20 backdrop-blur-sm text-center p-4 rounded-2xl shadow-lg border border-white/30">
+                  <div className="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Wifi className="w-7 h-7 text-white" />
                   </div>
-                  <span className="font-bold text-xl text-white drop-shadow-lg">🚀 Internet Ultra Rápida</span>
-                  <p className="text-yellow-200 mt-2 text-sm">Fibra óptica de 300MB</p>
+                  <span className="font-bold text-base text-white">Internet 300MB</span>
                 </div>
                 
-                <div className="group bg-gradient-to-br from-green-400/20 to-blue-500/20 backdrop-blur-xl text-center p-8 rounded-3xl shadow-2xl transform hover:scale-110 transition-all duration-500 border-4 border-white/30 hover:border-green-300/50 animate-scale-in delay-200">
-                  <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce">
-                    <Tv className="w-10 h-10 text-white" />
+                <div className="bg-white/20 backdrop-blur-sm text-center p-4 rounded-2xl shadow-lg border border-white/30">
+                  <div className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Tv className="w-7 h-7 text-white" />
                   </div>
-                  <span className="font-bold text-xl text-white drop-shadow-lg">📺 Canais de TV</span>
-                  <p className="text-blue-200 mt-2 text-sm">No seu celular grátis</p>
+                  <span className="font-bold text-base text-white">TV no Celular</span>
                 </div>
                 
-                <div className="group bg-gradient-to-br from-purple-400/20 to-pink-500/20 backdrop-blur-xl text-center p-8 rounded-3xl shadow-2xl transform hover:scale-110 transition-all duration-500 border-4 border-white/30 hover:border-purple-300/50 animate-scale-in delay-300">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce">
-                    <Music className="w-10 h-10 text-white" />
+                <div className="bg-white/20 backdrop-blur-sm text-center p-4 rounded-2xl shadow-lg border border-white/30">
+                  <div className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Music className="w-7 h-7 text-white" />
                   </div>
-                  <span className="font-bold text-xl text-white drop-shadow-lg">🎵 Rádios Online</span>
-                  <p className="text-purple-200 mt-2 text-sm">Suas favoritas sempre</p>
+                  <span className="font-bold text-base text-white">Rádios Online</span>
                 </div>
                 
-                <div className="group bg-gradient-to-br from-red-400/20 to-orange-500/20 backdrop-blur-xl text-center p-8 rounded-3xl shadow-2xl transform hover:scale-110 transition-all duration-500 border-4 border-white/30 hover:border-red-300/50 animate-scale-in delay-500">
-                  <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce">
-                    <Shield className="w-10 h-10 text-white" />
+                <div className="bg-white/20 backdrop-blur-sm text-center p-4 rounded-2xl shadow-lg border border-white/30">
+                  <div className="w-14 h-14 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Shield className="w-7 h-7 text-white" />
                   </div>
-                  <span className="font-bold text-xl text-white drop-shadow-lg">🛡️ Suporte 24h</span>
-                  <p className="text-red-200 mt-2 text-sm">Sempre aqui por você</p>
+                  <span className="font-bold text-base text-white">Suporte 24h</span>
                 </div>
               </div>
 
