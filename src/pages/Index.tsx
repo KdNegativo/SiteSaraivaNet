@@ -38,6 +38,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+      {/* Floating Components */}
+      <ChatBot />
       
       {/* Header - Mobile optimized */}
       <header className="bg-gradient-to-r from-orange-600 to-red-600 shadow-xl px-6 py-6 border-b-8 border-orange-700 z-50 transition-all duration-300">
