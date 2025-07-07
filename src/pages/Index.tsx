@@ -98,14 +98,67 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Enhanced Mobile Design */}
+      {/* Hero Section - Enhanced Visual Effects */}
       <section id="inicio" className="gradient-hero text-white px-4 py-12 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          {/* Floating Orbs */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-orange-400/30 to-red-500/30 rounded-full blur-xl animate-float"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-full blur-lg animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-gradient-to-br from-orange-300/25 to-red-400/25 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-60 right-10 w-16 h-16 bg-gradient-to-br from-yellow-400/40 to-orange-400/40 rounded-full blur-md animate-float" style={{ animationDelay: '0.5s' }}></div>
+          
+          {/* Network Connection Lines */}
+          <div className="absolute inset-0">
+            <svg className="absolute top-20 left-20 w-64 h-64 opacity-20" viewBox="0 0 200 200">
+              <defs>
+                <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#ff6b35" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#f7931e" stopOpacity="0.3"/>
+                </linearGradient>
+              </defs>
+              <path d="M20,20 Q100,80 180,20 T180,180 Q100,120 20,180 T20,20" 
+                    stroke="url(#lineGradient1)" strokeWidth="2" fill="none" 
+                    className="animate-pulse">
+                <animate attributeName="stroke-dasharray" values="0,300;150,150;300,0;150,150;0,300" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="stroke-dashoffset" values="0;-150;-300;-450;-600" dur="4s" repeatCount="indefinite"/>
+              </path>
+            </svg>
+            
+            <svg className="absolute bottom-20 right-20 w-48 h-48 opacity-15" viewBox="0 0 150 150">
+              <defs>
+                <linearGradient id="lineGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#f7931e" stopOpacity="0.7"/>
+                  <stop offset="100%" stopColor="#ff6b35" stopOpacity="0.2"/>
+                </linearGradient>
+              </defs>
+              <circle cx="75" cy="75" r="60" stroke="url(#lineGradient2)" strokeWidth="2" fill="none" className="animate-spin" style={{ animationDuration: '8s' }}>
+                <animate attributeName="stroke-dasharray" values="0,377;188,188;377,0;188,188;0,377" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="75" cy="75" r="30" stroke="url(#lineGradient2)" strokeWidth="1" fill="none" className="animate-spin" style={{ animationDuration: '6s', animationDirection: 'reverse' }}>
+                <animate attributeName="stroke-dasharray" values="0,188;94,94;188,0;94,94;0,188" dur="2s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </div>
+          
+          {/* Geometric Shapes */}
+          <div className="absolute top-32 right-1/4 w-8 h-8 bg-gradient-to-br from-orange-400 to-red-500 transform rotate-45 animate-bounce opacity-60" style={{ animationDelay: '1.5s' }}></div>
+          <div className="absolute bottom-40 left-1/3 w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full animate-ping opacity-50" style={{ animationDelay: '2.5s' }}></div>
+          <div className="absolute top-1/2 left-10 w-4 h-4 bg-gradient-to-br from-red-400 to-orange-400 transform rotate-12 animate-pulse opacity-70"></div>
+          
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 via-transparent to-red-600/20"></div>
+        </div>
+        
         {!prefersReducedMotion && (
           <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-600/20 via-red-600/20 to-purple-700/20"></div>
-            <div className="absolute top-20 right-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float"></div>
-            <div className="absolute bottom-20 left-10 w-56 h-56 bg-orange-300/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+            {/* Parallax Elements */}
+            <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-orange-300 rounded-full animate-ping opacity-40" style={{ animationDelay: '3s' }}></div>
+              <div className="absolute top-3/4 right-1/3 w-3 h-3 bg-red-300 rounded-full animate-ping opacity-30" style={{ animationDelay: '4s' }}></div>
+              <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-yellow-300 rounded-full animate-ping opacity-50" style={{ animationDelay: '5s' }}></div>
+            </div>
           </div>
         )}
         
