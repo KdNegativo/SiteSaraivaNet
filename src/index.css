@@ -35,17 +35,6 @@
 
     --radius: 0.5rem;
 
-    /* Accessibility Variables */
-    --focus-ring: 216 100% 50%;
-    --focus-ring-offset: 2px;
-    --high-contrast-text: 0 0% 0%;
-    --high-contrast-bg: 0 0% 100%;
-    
-    /* Performance Variables */
-    --transition-fast: 150ms;
-    --transition-normal: 300ms;
-    --transition-slow: 500ms;
-
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -253,58 +242,6 @@
     text-wrap: balance;
   }
 
-  /* Accessibility Utilities */
-  .focus-visible {
-    @apply ring-2 ring-blue-500 ring-offset-2 outline-none;
-  }
-  
-  .sr-only {
-    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
-    clip-path: inset(50%);
-  }
-  
-  .high-contrast {
-    filter: contrast(150%) brightness(120%);
-  }
-  
-  /* Mobile Optimization */
-  .touch-target {
-    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
-  }
-  
-  .mobile-friendly {
-    @apply text-base leading-relaxed;
-  }
-  
-  .mobile-padding {
-    @apply px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-12;
-  }
-  
-  /* Performance Utilities */
-  .gpu-accelerated {
-    transform: translateZ(0);
-    will-change: transform;
-  }
-  
-  .no-motion {
-    @media (prefers-reduced-motion: reduce) {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
-  
-  .fast-transition {
-    transition: all var(--transition-fast) ease;
-  }
-  
-  .normal-transition {
-    transition: all var(--transition-normal) ease;
-  }
-  
-  .slow-transition {
-    transition: all var(--transition-slow) ease;
-  }
-
   /* Animation Delays */
   .delay-100 {
     animation-delay: 100ms;
@@ -320,19 +257,5 @@
 
   .delay-500 {
     animation-delay: 500ms;
-  }
-  
-  /* Modern UX/UI Utilities */
-  .interactive-scale {
-    @apply transition-transform duration-200 active:scale-95 hover:scale-105;
-  }
-  
-  .smooth-corners {
-    border-radius: clamp(0.5rem, 2vw, 1.5rem);
-  }
-  
-  .responsive-text {
-    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
-    line-height: 1.6;
   }
 }
