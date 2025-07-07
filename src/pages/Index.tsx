@@ -38,11 +38,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
-      {/* Floating Components */}
-      <ChatBot />
       
-      {/* SUPER VISIBLE MOBILE HEADER */}
-      <header className="bg-gradient-to-r from-purple-600 to-pink-600 shadow-2xl px-6 py-6 border-b-8 border-yellow-400 z-50 transition-all duration-300">
+      {/* Header - Mobile optimized */}
+      <header className="bg-gradient-to-r from-orange-600 to-red-600 shadow-xl px-6 py-6 border-b-8 border-orange-700 z-50 transition-all duration-300">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -95,13 +93,13 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - MOBILE SUPER VISUAL */}
-      <section id="inicio" className="bg-gradient-to-br from-pink-500 via-purple-600 to-blue-600 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
+      {/* Hero Section - Original Colors */}
+      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
         {!prefersReducedMotion && (
           <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset * 0.2}px)` }}>
-            <div className="absolute top-10 right-5 w-32 h-32 bg-yellow-300/20 rounded-full blur-xl animate-bounce"></div>
-            <div className="absolute bottom-10 left-5 w-24 h-24 bg-green-300/20 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute top-10 right-5 w-32 h-32 bg-orange-300/20 rounded-full blur-xl animate-float"></div>
+            <div className="absolute bottom-10 left-5 w-24 h-24 bg-red-300/20 rounded-full blur-xl animate-float delay-500"></div>
           </div>
         )}
         
