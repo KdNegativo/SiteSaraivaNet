@@ -95,76 +95,77 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Mobile First Design */}
-      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-4 py-16 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/15"></div>
+      {/* Hero Section - MOBILE BONITÃO */}
+      <section id="inicio" className="bg-gradient-to-br from-orange-500 via-red-500 to-purple-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         
-        {/* Mobile-optimized floating elements */}
+        {/* MEGA VISUAL - Floating elements */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
-            <div className="absolute top-10 right-4 w-64 h-64 bg-gradient-to-br from-orange-400/30 to-yellow-400/20 rounded-full blur-3xl animate-float"></div>
-            <div className="absolute bottom-16 left-4 w-48 h-48 bg-gradient-to-br from-purple-400/20 to-pink-400/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-            <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-gradient-to-br from-red-400/15 to-orange-400/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-10 right-4 w-80 h-80 bg-gradient-to-br from-orange-400/40 to-yellow-400/30 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-16 left-4 w-64 h-64 bg-gradient-to-br from-purple-400/30 to-pink-400/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-gradient-to-br from-red-400/25 to-orange-400/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
         )}
         
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <AnimatedSection animation="fade-up">
             <div className="text-center">
-              {/* Mobile-first badge */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-2.5 rounded-full mb-6 shadow-2xl font-bold text-sm border-2 border-yellow-300/50 hover:scale-105 transition-transform duration-300">
-                <Star className="w-4 h-4 mr-2 fill-current" />
-                <span className="text-xs sm:text-sm">Internet + SaraivaTV Grátis</span>
+              {/* BADGE ULTRA CHAMATIVO */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-6 py-3 rounded-full mb-8 shadow-2xl font-black text-base border-4 border-yellow-300/70 hover:scale-110 transition-transform duration-500 animate-pulse">
+                <Star className="w-5 h-5 mr-2 fill-current animate-spin" style={{ animationDuration: '3s' }} />
+                <span className="text-sm font-extrabold">🔥 INTERNET + TV GRÁTIS 🔥</span>
               </div>
               
-              {/* Mobile-optimized title */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                <span className="block text-white drop-shadow-2xl mb-2">Internet</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 drop-shadow-2xl">+ SaraivaTV</span>
+              {/* TÍTULO MEGA VISUAL */}
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-8 leading-tight">
+                <span className="block text-white drop-shadow-2xl mb-3 animate-fade-in">Internet</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 drop-shadow-2xl animate-fade-in" style={{ animationDelay: '0.3s' }}>+ SaraivaTV</span>
               </h1>
               
-              {/* Mobile subtitle */}
-              <p className="text-lg sm:text-xl mb-8 text-white/90 leading-relaxed max-w-xl mx-auto font-medium px-2">
-                Conecte-se com nossa internet de fibra óptica ultrarrápida e ganhe acesso completo ao app SaraivaTV.
+              {/* SUBTITLE CHAMATIVO */}
+              <p className="text-xl sm:text-2xl mb-10 text-white/95 leading-relaxed max-w-xl mx-auto font-bold px-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                🚀 A internet mais rápida da região + App exclusivo GRATUITO!
               </p>
 
-              {/* Mobile-optimized Feature Cards */}
-              <div className="grid grid-cols-2 gap-3 mb-8 max-w-sm mx-auto">
-                <div className="group bg-gradient-to-br from-white/30 to-white/20 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border border-white/50 hover:from-white/40 hover:to-white/30 transition-all duration-500 shadow-2xl hover:shadow-orange-500/30 hover:scale-105 active:scale-95">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 via-red-400 to-red-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                    <Wifi className="w-6 h-6 text-white" />
+              {/* CARTÕES MEGA VISUAIS */}
+              <div className="grid grid-cols-2 gap-4 mb-10 max-w-md mx-auto">
+                <div className="group bg-gradient-to-br from-orange-500/80 to-red-500/60 backdrop-blur-xl rounded-3xl p-6 flex flex-col items-center space-y-3 border-2 border-orange-300/60 hover:from-orange-400/90 hover:to-red-400/70 transition-all duration-500 shadow-2xl hover:shadow-orange-500/50 hover:scale-110 active:scale-95 animate-slide-in-left">
+                  <div className="w-16 h-16 bg-gradient-to-br from-white to-orange-100 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-xl group-hover:scale-125 transition-all duration-500 group-hover:rotate-12">
+                    <Wifi className="w-8 h-8 text-orange-600" />
                   </div>
-                  <span className="font-bold text-sm text-center text-white leading-tight">Internet Ultra</span>
+                  <span className="font-black text-base text-center text-white leading-tight">Internet ULTRA</span>
                 </div>
-                <div className="group bg-gradient-to-br from-white/30 to-white/20 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border border-white/50 hover:from-white/40 hover:to-white/30 transition-all duration-500 shadow-2xl hover:shadow-blue-500/30 hover:scale-105 active:scale-95">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                    <Tv className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-blue-500/80 to-purple-500/60 backdrop-blur-xl rounded-3xl p-6 flex flex-col items-center space-y-3 border-2 border-blue-300/60 hover:from-blue-400/90 hover:to-purple-400/70 transition-all duration-500 shadow-2xl hover:shadow-blue-500/50 hover:scale-110 active:scale-95 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
+                  <div className="w-16 h-16 bg-gradient-to-br from-white to-blue-100 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-xl group-hover:scale-125 transition-all duration-500 group-hover:rotate-12">
+                    <Tv className="w-8 h-8 text-blue-600" />
                   </div>
-                  <span className="font-bold text-sm text-center text-white leading-tight">Canais TV</span>
+                  <span className="font-black text-base text-center text-white leading-tight">TV Premium</span>
                 </div>
-                <div className="group bg-gradient-to-br from-white/30 to-white/20 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border border-white/50 hover:from-white/40 hover:to-white/30 transition-all duration-500 shadow-2xl hover:shadow-green-500/30 hover:scale-105 active:scale-95">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 via-emerald-400 to-teal-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                    <Music className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-green-500/80 to-emerald-500/60 backdrop-blur-xl rounded-3xl p-6 flex flex-col items-center space-y-3 border-2 border-green-300/60 hover:from-green-400/90 hover:to-emerald-400/70 transition-all duration-500 shadow-2xl hover:shadow-green-500/50 hover:scale-110 active:scale-95 animate-slide-in-left" style={{ animationDelay: '0.4s' }}>
+                  <div className="w-16 h-16 bg-gradient-to-br from-white to-green-100 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-xl group-hover:scale-125 transition-all duration-500 group-hover:rotate-12">
+                    <Music className="w-8 h-8 text-green-600" />
                   </div>
-                  <span className="font-bold text-sm text-center text-white leading-tight">Rádios</span>
+                  <span className="font-black text-base text-center text-white leading-tight">Rádios 24h</span>
                 </div>
-                <div className="group bg-gradient-to-br from-white/30 to-white/20 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border border-white/50 hover:from-white/40 hover:to-white/30 transition-all duration-500 shadow-2xl hover:shadow-purple-500/30 hover:scale-105 active:scale-95">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-400 to-rose-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                    <Shield className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-purple-500/80 to-pink-500/60 backdrop-blur-xl rounded-3xl p-6 flex flex-col items-center space-y-3 border-2 border-purple-300/60 hover:from-purple-400/90 hover:to-pink-400/70 transition-all duration-500 shadow-2xl hover:shadow-purple-500/50 hover:scale-110 active:scale-95 animate-slide-in-left" style={{ animationDelay: '0.6s' }}>
+                  <div className="w-16 h-16 bg-gradient-to-br from-white to-purple-100 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-xl group-hover:scale-125 transition-all duration-500 group-hover:rotate-12">
+                    <Shield className="w-8 h-8 text-purple-600" />
                   </div>
-                  <span className="font-bold text-sm text-center text-white leading-tight">Suporte 24h</span>
+                  <span className="font-black text-base text-center text-white leading-tight">Suporte VIP</span>
                 </div>
               </div>
 
-              {/* Mobile-first CTA Button */}
-              <div className="mb-8">
+              {/* BOTÃO MEGA CHAMATIVO */}
+              <div className="mb-10 animate-scale-in" style={{ animationDelay: '0.8s' }}>
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="w-full max-w-xs mx-auto bg-gradient-to-r from-orange-500 via-red-500 to-red-600 hover:from-orange-400 hover:via-red-400 hover:to-red-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl border-0 transform hover:scale-105 active:scale-95 transition-all duration-300 shadow-orange-500/50"
+                  className="relative w-full max-w-sm mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-10 py-6 rounded-3xl font-black text-xl shadow-2xl border-4 border-yellow-300/60 transform hover:scale-110 active:scale-95 transition-all duration-300 shadow-orange-500/70 overflow-hidden group"
                 >
-                  <span className="flex items-center justify-center gap-2">
-                    Contratar Agora 
-                    <div className="w-5 h-5 bg-white/30 rounded-full flex items-center justify-center text-sm">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                  <span className="relative flex items-center justify-center gap-3">
+                    🚀 CONTRATAR AGORA 🚀
+                    <div className="w-8 h-8 bg-white/40 rounded-full flex items-center justify-center text-lg animate-bounce">
                       →
                     </div>
                   </span>
