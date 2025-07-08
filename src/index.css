@@ -224,14 +224,34 @@
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
   }
 
-  /* Pulse animation for CTAs */
-  .animate-pulse-slow {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
   /* Better mobile transitions */
   .transition-mobile {
     transition: all 0.2s ease-out;
+  }
+
+  /* Premium gradient effects */
+  .gradient-premium-mobile {
+    background: linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%);
+  }
+
+  /* Mobile responsive animations */
+  @media (max-width: 640px) {
+    .animate-slide-in-left {
+      animation-duration: 0.4s;
+    }
+    
+    .animate-fade-in {
+      animation-duration: 0.5s;
+    }
+    
+    .animate-scale-in {
+      animation-duration: 0.3s;
+    }
+  }
+
+  /* Enhanced mobile shadows */
+  .shadow-premium {
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
   }
 }
 

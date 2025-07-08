@@ -95,77 +95,86 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - MOBILE SUPER OTIMIZADO */}
-      <section id="inicio" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 50%, #cc3300 100%)', color: 'white'}} className="px-4 py-16 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
+      {/* Hero Section - MOBILE ULTRA PREMIUM */}
+      <section id="inicio" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%)', color: 'white'}} className="px-4 py-16 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50"></div>
         
-        {/* EFEITOS VISUAIS MOBILE OTIMIZADO */}
+        {/* PADRÃO DE FUNDO ELEGANTE */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.3) 1px, transparent 1px),
+                             radial-gradient(circle at 75% 75%, rgba(255,255,255,0.2) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        {/* EFEITOS VISUAIS MOBILE PREMIUM */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
-            <div className="absolute top-8 right-2 w-72 h-72 bg-gradient-to-br from-orange-300/50 to-yellow-300/40 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-12 left-2 w-56 h-56 bg-gradient-to-br from-purple-300/40 to-pink-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 right-1/3 w-40 h-40 bg-gradient-to-br from-orange-300/30 to-orange-300/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+            <div className="absolute top-8 right-2 w-72 h-72 bg-gradient-to-br from-orange-300/60 to-yellow-300/50 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
+            <div className="absolute bottom-12 left-2 w-56 h-56 bg-gradient-to-br from-purple-300/50 to-pink-300/40 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s', animationDuration: '5s' }}></div>
+            <div className="absolute top-1/2 right-1/3 w-40 h-40 bg-gradient-to-br from-orange-300/40 to-orange-300/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s', animationDuration: '3s' }}></div>
           </div>
         )}
         
         <div className="max-w-sm mx-auto w-full relative z-10">
           <AnimatedSection animation="fade-up">
             <div className="text-center">
-              {/* BADGE MOBILE OTIMIZADO */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-4 py-2.5 rounded-full mb-6 shadow-2xl font-black text-sm border-3 border-yellow-300/80 hover:scale-105 transition-transform duration-300 animate-bounce">
+              {/* BADGE MOBILE OTIMIZADO - SEM BOUNCE */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-4 py-2.5 rounded-full mb-6 shadow-2xl font-black text-sm border-3 border-yellow-300/80 hover:scale-105 transition-transform duration-300">
                 <Star className="w-4 h-4 mr-2 fill-current animate-spin" style={{ animationDuration: '3s' }} />
                 <span className="text-xs font-extrabold">🔥 INTERNET + TV GRÁTIS 🔥</span>
               </div>
               
-              {/* TÍTULO MOBILE OTIMIZADO */}
+              {/* TÍTULO MOBILE PREMIUM */}
               <h1 className="text-4xl font-black mb-6 leading-tight">
-                <span className="block text-white drop-shadow-2xl mb-2 animate-fade-in text-shadow-lg">Internet</span>
-                <span className="block text-white drop-shadow-2xl animate-fade-in text-shadow-lg" style={{ animationDelay: '0.2s' }}>+ SaraivaTV</span>
+                <span className="block text-white drop-shadow-2xl mb-2 animate-fade-in text-shadow-lg tracking-tight">Internet</span>
+                <span className="block text-white drop-shadow-2xl animate-fade-in text-shadow-lg tracking-tight" style={{ animationDelay: '0.2s' }}>+ SaraivaTV</span>
               </h1>
               
-              {/* SUBTITLE MOBILE */}
-              <p className="text-lg mb-8 text-white/95 leading-relaxed font-bold px-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              {/* SUBTITLE MOBILE PREMIUM */}
+              <p className="text-lg mb-8 text-white/95 leading-relaxed font-bold px-2 animate-fade-in tracking-wide" style={{ animationDelay: '0.4s' }}>
                 🚀 Internet mais rápida + App GRATUITO!
               </p>
 
-              {/* CARTÕES MOBILE SUPER OTIMIZADOS */}
+              {/* CARTÕES MOBILE PREMIUM */}
               <div className="grid grid-cols-2 gap-3 mb-8 max-w-xs mx-auto">
-                <div className="group bg-gradient-to-br from-orange-500/90 to-red-500/80 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-orange-200/70 hover:from-orange-400/95 hover:to-red-400/85 transition-all duration-300 shadow-xl hover:shadow-orange-500/60 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation">
-                  <div className="w-12 h-12 bg-gradient-to-br from-white to-orange-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6">
+                <div className="group bg-gradient-to-br from-orange-500/95 to-red-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-orange-200/80 hover:from-orange-400/100 hover:to-red-400/90 transition-all duration-300 shadow-xl hover:shadow-orange-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation">
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-orange-200/50">
                     <Wifi className="w-6 h-6 text-orange-600" />
                   </div>
-                  <span className="font-black text-sm text-center text-white leading-tight">Internet ULTRA</span>
+                  <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">Internet ULTRA</span>
                 </div>
-                <div className="group bg-gradient-to-br from-blue-500/90 to-purple-500/80 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-blue-200/70 hover:from-blue-400/95 hover:to-purple-400/85 transition-all duration-300 shadow-xl hover:shadow-blue-500/60 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.1s' }}>
-                  <div className="w-12 h-12 bg-gradient-to-br from-white to-blue-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6">
+                <div className="group bg-gradient-to-br from-blue-500/95 to-purple-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-blue-200/80 hover:from-blue-400/100 hover:to-purple-400/90 transition-all duration-300 shadow-xl hover:shadow-blue-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.1s' }}>
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-blue-200/50">
                     <Tv className="w-6 h-6 text-blue-600" />
                   </div>
-                  <span className="font-black text-sm text-center text-white leading-tight">TV Premium</span>
+                  <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">TV Premium</span>
                 </div>
-                <div className="group bg-gradient-to-br from-green-500/90 to-emerald-500/80 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-green-200/70 hover:from-green-400/95 hover:to-emerald-400/85 transition-all duration-300 shadow-xl hover:shadow-green-500/60 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.2s' }}>
-                  <div className="w-12 h-12 bg-gradient-to-br from-white to-green-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6">
+                <div className="group bg-gradient-to-br from-green-500/95 to-emerald-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-green-200/80 hover:from-green-400/100 hover:to-emerald-400/90 transition-all duration-300 shadow-xl hover:shadow-green-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.2s' }}>
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-green-50 to-green-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-green-200/50">
                     <Music className="w-6 h-6 text-green-600" />
                   </div>
-                  <span className="font-black text-sm text-center text-white leading-tight">Rádios 24h</span>
+                  <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">Rádios 24h</span>
                 </div>
-                <div className="group bg-gradient-to-br from-purple-500/90 to-pink-500/80 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-purple-200/70 hover:from-purple-400/95 hover:to-pink-400/85 transition-all duration-300 shadow-xl hover:shadow-purple-500/60 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.3s' }}>
-                  <div className="w-12 h-12 bg-gradient-to-br from-white to-purple-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6">
+                <div className="group bg-gradient-to-br from-purple-500/95 to-pink-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-purple-200/80 hover:from-purple-400/100 hover:to-pink-400/90 transition-all duration-300 shadow-xl hover:shadow-purple-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.3s' }}>
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-purple-50 to-purple-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-purple-200/50">
                     <Shield className="w-6 h-6 text-purple-600" />
                   </div>
-                  <span className="font-black text-sm text-center text-white leading-tight">Suporte VIP</span>
+                  <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">Suporte VIP</span>
                 </div>
               </div>
 
-              {/* BOTÃO MOBILE SUPER OTIMIZADO */}
+              {/* BOTÃO MOBILE PREMIUM */}
               <div className="mb-8 animate-scale-in" style={{ animationDelay: '0.5s' }}>
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="relative w-full max-w-xs mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-5 rounded-2xl font-black text-lg shadow-2xl border-3 border-yellow-300/80 transform hover:scale-105 active:scale-95 transition-all duration-200 shadow-orange-500/80 overflow-hidden group touch-manipulation"
+                  className="relative w-full max-w-xs mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-5 rounded-2xl font-black text-lg shadow-2xl border-3 border-yellow-300/90 transform hover:scale-105 active:scale-95 transition-all duration-200 shadow-orange-500/80 overflow-hidden group touch-manipulation"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-800"></div>
-                  <span className="relative flex items-center justify-center gap-2">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-800"></div>
+                  <span className="relative flex items-center justify-center gap-2 drop-shadow-lg">
                     🚀 CONTRATAR AGORA
-                    <div className="w-6 h-6 bg-white/50 rounded-full flex items-center justify-center text-sm animate-pulse">
+                    <div className="w-6 h-6 bg-white/60 rounded-full flex items-center justify-center text-sm">
                       →
                     </div>
                   </span>
