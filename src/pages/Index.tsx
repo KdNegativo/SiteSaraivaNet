@@ -51,7 +51,7 @@ const Index = () => {
                 <Wifi className="w-4 h-4 text-orange-600" />
               </div>
               <div>
-                <span className="saraivanet-logo saraivanet-logo-mobile" style={{color: '#ffffff', fontWeight: 'bold', fontSize: '18px', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif', WebkitTextFillColor: '#ffffff', background: 'none', backgroundClip: 'unset', WebkitBackgroundClip: 'unset'}}>SaraivaNet</span>
+                <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
                   Eliseu Martins - PI
@@ -72,7 +72,7 @@ const Index = () => {
               <Wifi className="w-5 h-5 text-orange-600" />
             </div>
             <div>
-              <span className="saraivanet-logo saraivanet-logo-desktop" style={{color: '#ffffff', fontWeight: 'bold', fontSize: '24px', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif', WebkitTextFillColor: '#ffffff', background: 'none', backgroundClip: 'unset', WebkitBackgroundClip: 'unset'}}>SaraivaNet</span>
+              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
               <div className="text-xs text-orange-100 font-medium flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
                 Eliseu Martins - PI
@@ -120,7 +120,7 @@ const Index = () => {
               {/* TÍTULO MEGA VISUAL */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-8 leading-tight">
                 <span className="block text-white drop-shadow-2xl mb-3 animate-fade-in">Internet</span>
-                <span className="block text-white drop-shadow-2xl animate-fade-in" style={{ animationDelay: '0.3s' }}>+ SaraivaTV</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-orange-300 drop-shadow-2xl animate-fade-in" style={{ animationDelay: '0.3s' }}>+ SaraivaTV</span>
               </h1>
               
               {/* SUBTITLE CHAMATIVO */}

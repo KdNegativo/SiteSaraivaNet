@@ -225,41 +225,6 @@
   border-bottom-color: hsl(var(--orange-dark));
 }
 
-/* CLASSE ESPECIAL PARA LOGO SARAIVANET - SEMPRE LEGÍVEL */
-.saraivanet-logo {
-  color: #ffffff !important;
-  font-weight: bold !important;
-  font-family: 'Poppins', sans-serif !important;
-  text-shadow: 2px 2px 4px #000000 !important;
-  background: none !important;
-  background-color: transparent !important;
-  -webkit-text-fill-color: #ffffff !important;
-  -webkit-background-clip: unset !important;
-  background-clip: unset !important;
-  filter: none !important;
-  opacity: 1 !important;
-  z-index: 9999 !important;
-  position: relative !important;
-  display: inline !important;
-}
-
-.saraivanet-logo *,
-.saraivanet-logo::before,
-.saraivanet-logo::after {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  background: none !important;
-  background-color: transparent !important;
-}
-
-.saraivanet-logo-mobile {
-  font-size: 18px !important;
-}
-
-.saraivanet-logo-desktop {
-  font-size: 24px !important;
-}
-
 /* TRAVA O SITE NO MODO CLARO - NUNCA MUDA */
 * {
   color-scheme: light only !important;
