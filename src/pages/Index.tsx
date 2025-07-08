@@ -477,7 +477,7 @@ const Index = () => {
             </Card>
 
             <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 bg-gradient-to-b from-orange-50 to-white shadow-lg">
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+              <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
                 <Zap className="w-12 h-12 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Transmissão Ao Vivo</h3>
@@ -485,17 +485,17 @@ const Index = () => {
                 Tudo que passa na TV, passa no app em tempo real
               </p>
               <div className="space-y-2">
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Ao Vivo</span>
-                <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Tempo Real</span>
+                <span className="inline-block bg-gradient-to-r from-orange-100 to-orange-200 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Ao Vivo</span>
+                <span className="inline-block bg-gradient-to-r from-orange-100 to-orange-200 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Tempo Real</span>
                 <div className="mt-2">
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Sem Atraso</span>
-                  <span className="inline-block bg-gradient-to-r from-orange-100 to-red-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Qualidade HD</span>
+                  <span className="inline-block bg-gradient-to-r from-orange-100 to-orange-200 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Sem Atraso</span>
+                  <span className="inline-block bg-gradient-to-r from-orange-100 to-orange-200 text-orange-600 px-3 py-1 rounded-full text-sm font-medium ml-2">Qualidade HD</span>
                 </div>
               </div>
             </Card>
           </div>
 
-          <div className="bg-gradient-to-r from-orange-500 via-red-500 to-red-600 rounded-3xl p-8 sm:p-16 text-white relative overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 rounded-3xl p-8 sm:p-16 text-white relative overflow-hidden shadow-2xl">
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
             <div className="absolute bottom-10 left-10 w-24 h-24 bg-orange-300/20 rounded-full blur-xl"></div>
@@ -518,7 +518,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 relative overflow-hidden">
+      <section className="py-16 px-4 bg-gradient-to-r from-orange-500 via-orange-600 to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute top-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-72 h-72 bg-orange-300/20 rounded-full blur-3xl"></div>
@@ -607,28 +607,28 @@ const Index = () => {
 
               <div className="grid grid-cols-2 gap-8">
                 <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Users className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-orange-500">1000+</div>
                   <div className="text-sm text-gray-600 font-medium">Clientes Ativos</div>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-orange-500">100%</div>
                   <div className="text-sm text-gray-600 font-medium">Cobertura Local</div>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Award className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-orange-500">22</div>
                   <div className="text-sm text-gray-600 font-medium">Anos de Experiência</div>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Heart className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-orange-500">24h</div>
@@ -637,7 +637,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-10 shadow-2xl animate-fade-in delay-300">
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-10 shadow-2xl animate-fade-in delay-300">
               <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
                 Tecnologia que Conecta Corações
               </h3>
@@ -702,7 +702,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card className="p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -715,7 +715,7 @@ const Index = () => {
 
             <Card className="p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -728,7 +728,7 @@ const Index = () => {
 
             <Card className="p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -752,10 +752,10 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Wifi className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">SaraivaNet</span>
+                <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">SaraivaNet</span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed text-lg">
                 Conectando Eliseu Martins com o mundo há 22 anos. Internet de qualidade, 
