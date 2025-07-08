@@ -120,7 +120,7 @@ const Index = () => {
               {/* TÍTULO MEGA VISUAL */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-8 leading-tight">
                 <span className="block text-white drop-shadow-2xl mb-3 animate-fade-in">Internet</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-orange-300 drop-shadow-2xl animate-fade-in" style={{ animationDelay: '0.3s' }}>+ SaraivaTV</span>
+                <span className="block text-white drop-shadow-2xl animate-fade-in" style={{ animationDelay: '0.3s' }}>+ SaraivaTV</span>
               </h1>
               
               {/* SUBTITLE CHAMATIVO */}
