@@ -291,43 +291,6 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-
-  /* Custom Cursor Effects */
-  .cursor-pointer {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23ff6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>'), pointer;
-  }
-
-  /* Micro-interactions */
-  .micro-bounce:hover {
-    animation: micro-bounce 0.3s ease-in-out;
-  }
-
-  @keyframes micro-bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-2px); }
-  }
-
-  /* Pull to refresh indicator */
-  .pull-refresh {
-    transform: translateY(-60px);
-    transition: transform 0.3s ease-out;
-  }
-
-  .pull-refresh.active {
-    transform: translateY(0);
-  }
-
-  /* Loading skeleton improvements */
-  .skeleton-text {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: loading 1.5s infinite;
-  }
-
-  @keyframes loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
 }
 
 /* Classes adicionais para garantir o laranja funcione bem */
