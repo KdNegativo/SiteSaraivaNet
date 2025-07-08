@@ -1,131 +1,213 @@
-import { useState } from 'react';
-import { MessageCircle, X, ArrowLeft, HelpCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { MessageCircle, X, ArrowLeft, Send, Bot, User, Sparkles, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import AnimatedIcon from './AnimatedIcon';
-import PremiumButton from './PremiumButton';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Olá! Como posso ajudá-lo hoje? Escolha uma das opções abaixo:",
-      isBot: true
+      text: "Oi! 👋 Sou a assistente virtual da SaraivaNet! Como posso te ajudar hoje?",
+      isBot: true,
+      timestamp: new Date()
     }
   ]);
   const [showOptions, setShowOptions] = useState(true);
+  const [currentStep, setCurrentStep] = useState('main');
+  const prefersReducedMotion = useReducedMotion();
 
   const faqOptions = [
     {
-      question: "Como funciona a instalação?",
-      answer: "Nossa equipe agenda um horário conveniente e realiza todo o processo de instalação profissional. O valor da instalação é cobrado separadamente conforme nossa tabela de preços."
+      id: 'installation',
+      question: "🔧 Como funciona a instalação?",
+      answer: "Nossa equipe técnica agenda um horário conveniente para você e realiza toda a instalação profissional gratuitamente! Levamos todos os equipamentos necessários e deixamos tudo funcionando perfeitamente. 🚀",
+      icon: "🔧"
     },
     {
-      question: "Qual a área de cobertura?",
-      answer: "Atendemos Eliseu Martins, Colônia do Gurguéia, Manoel Emídio e Jerumenha."
+      id: 'coverage',
+      question: "🗺️ Qual a área de cobertura?",
+      answer: "Atendemos com fibra óptica em:\n• Eliseu Martins 📍\n• Colônia do Gurguéia 📍\n• Manoel Emídio 📍\n• Canavieira 📍\n• Jerumenha 📍\n\nTodos com internet ultra rápida! ⚡",
+      icon: "🗺️"
     },
     {
-      question: "O que é o SaraivaTV?",
-      answer: "É nosso app gratuito com canais de TV e rádios que você pode assistir no celular."
+      id: 'saraivatv',
+      question: "📺 O que é o SaraivaTV?",
+      answer: "O SaraivaTV é nosso app GRATUITO que vem junto com sua internet! 🎉\n\n📱 Assista TV no celular\n🎵 Ouça rádios online\n📺 Canais locais e nacionais\n🔴 Transmissão ao vivo\n\nTudo grátis e sem limite! 💝",
+      icon: "📺"
     },
     {
-      question: "💬 Falar com atendente",
-      answer: "Vou te conectar com nosso WhatsApp onde nossa equipe está pronta para ajudá-lo!",
-      isWhatsApp: true
+      id: 'plans',
+      question: "💰 Quais são os planos?",
+      answer: "Nosso plano completo:\n\n🚀 300MB Fibra Óptica\n📺 SaraivaTV Grátis\n🔧 Instalação Profissional\n🛡️ Suporte 24h\n💝 Sem fidelidade\n\nPor apenas R$ 129,90/mês\n(3 primeiros meses com desconto!) 🎊",
+      icon: "💰"
+    },
+    {
+      id: 'whatsapp',
+      question: "💬 Falar com atendente humano",
+      answer: "Perfeito! Vou te conectar com nossa equipe no WhatsApp agora mesmo! Eles vão cuidar de tudo para você! 🥰",
+      isWhatsApp: true,
+      icon: "💬"
     }
   ];
 
   const handleFaqClick = (faq: typeof faqOptions[0]) => {
+    // Adiciona a pergunta do usuário
     setMessages(prev => [
       ...prev,
-      { id: Date.now(), text: faq.question, isBot: false },
-      { id: Date.now() + 1, text: faq.answer, isBot: true }
+      { 
+        id: Date.now(), 
+        text: faq.question.replace(/^[^a-zA-Z]+\s/, ''), // Remove emoji do início
+        isBot: false, 
+        timestamp: new Date() 
+      }
     ]);
+
+    // Simula digitação
+    setIsTyping(true);
     setShowOptions(false);
 
-    if (faq.isWhatsApp) {
-      setTimeout(() => {
-        const phoneNumber = "5589994395789";
-        const message = "Olá! Gostaria de falar com um atendente da SaraivaNet.";
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-      }, 1500);
-    }
+    setTimeout(() => {
+      setIsTyping(false);
+      setMessages(prev => [
+        ...prev,
+        { 
+          id: Date.now() + 1, 
+          text: faq.answer, 
+          isBot: true,
+          timestamp: new Date()
+        }
+      ]);
+
+      // Mostra botão de volta após resposta, exceto para WhatsApp
+      if (!faq.isWhatsApp) {
+        setTimeout(() => {
+          setCurrentStep('back');
+        }, 1000);
+      }
+
+      // Redireciona para WhatsApp se necessário
+      if (faq.isWhatsApp) {
+        setTimeout(() => {
+          const phoneNumber = "5589994395789";
+          const message = "Olá! Gostaria de falar com um atendente da SaraivaNet.";
+          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+        }, 2000);
+      }
+    }, 1500 + Math.random() * 1000); // Tempo variável para parecer mais humano
   };
 
   const handleBack = () => {
     setMessages([
       {
         id: 1,
-        text: "Olá! Como posso ajudá-lo hoje? Escolha uma das opções abaixo:",
-        isBot: true
+        text: "Oi! 👋 Sou a assistente virtual da SaraivaNet! Como posso te ajudar hoje?",
+        isBot: true,
+        timestamp: new Date()
       }
     ]);
     setShowOptions(true);
+    setCurrentStep('main');
   };
+
+  const formatTime = (date: Date) => {
+    return date.toLocaleTimeString('pt-BR', { 
+      hour: '2-digit', 
+      minute: '2-digit' 
+    });
+  };
+
+  // Efeito de digitação
+  const TypingIndicator = () => (
+    <div className="flex justify-start animate-fade-in">
+      <div className="max-w-[85%] p-4 rounded-2xl bg-white/80 backdrop-blur-sm border border-orange-200/50 shadow-lg">
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-red-400 rounded-full flex items-center justify-center">
+            <Bot className="w-4 h-4 text-white" />
+          </div>
+          <div className="flex space-x-1">
+            <div className="w-2 h-2 bg-orange-400 rounded-full animate-bounce"></div>
+            <div className="w-2 h-2 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+            <div className="w-2 h-2 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+          </div>
+          <span className="text-sm text-gray-600 font-medium">Digitando...</span>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <>
-      {/* Chat Button matching site theme */}
+      {/* Floating Chat Button Ultra Premium */}
       <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center gap-3">
-        {/* Desktop label matching site colors */}
-        <div className="hidden md:block bg-gradient-to-r from-orange-600/90 to-orange-600/90 backdrop-blur-md text-white px-4 py-3 rounded-xl text-sm font-medium shadow-xl border border-orange-400/30 hover:scale-105 transition-all duration-300">
-          <div className="flex items-center gap-2">
-            <MessageCircle className="w-4 h-4" />
-            <span>Tire suas dúvidas</span>
+        {/* Desktop Tooltip Premium */}
+        <div className="hidden md:block bg-white/90 backdrop-blur-xl text-gray-800 px-4 py-3 rounded-2xl text-sm font-medium shadow-xl border border-orange-200/50 hover:scale-105 transition-all duration-300 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-100/50 to-transparent animate-shimmer"></div>
+          <div className="flex items-center gap-2 relative z-10">
+            <Sparkles className="w-4 h-4 text-orange-500" />
+            <span className="font-semibold">Assistente Virtual</span>
           </div>
         </div>
         
-        {/* Chat button matching site gradient */}
+        {/* Chat Button Ultra Premium */}
         <button
           onClick={() => setIsOpen(true)}
-          className="relative group bg-gradient-to-br from-orange-500 via-red-500 to-red-600 hover:from-orange-400 hover:via-red-400 hover:to-red-500 p-4 rounded-full shadow-2xl hover:shadow-orange-500/40 transform hover:scale-110 transition-all duration-300 border-2 border-orange-400/30 hover:border-orange-300/50"
-          aria-label="Abrir chat de dúvidas frequentes"
+          className="relative group bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 hover:from-orange-400 hover:via-red-400 hover:to-pink-400 p-4 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-white/30 hover:border-white/50 overflow-hidden"
+          aria-label="Abrir assistente virtual"
         >
-          {/* Glow effect matching site colors */}
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300 -z-10"></div>
+          {/* Glow Effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300 -z-10 animate-pulse"></div>
           
-          {/* Button content */}
-          <div className="relative">
+          {/* Shimmer Effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
+          
+          {/* Button Content */}
+          <div className="relative z-10">
             <AnimatedIcon animation="float" className="text-white">
               <MessageCircle className="w-7 h-7" />
             </AnimatedIcon>
           </div>
           
-          {/* Mobile tooltip matching site design */}
-          <div className="absolute bottom-full right-0 mb-3 px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 text-white text-xs rounded-lg opacity-0 group-active:opacity-100 transition-all duration-300 whitespace-nowrap md:hidden pointer-events-none shadow-xl border border-orange-400/30">
-            <div className="flex items-center gap-2">
-              <MessageCircle className="w-3 h-3" />
-              <span>Dúvidas frequentes</span>
-            </div>
-            {/* Tooltip arrow */}
-            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-orange-600"></div>
+          {/* Notification Badge */}
+          <div className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center border-2 border-white shadow-lg animate-pulse">
+            <Heart className="w-2.5 h-2.5 text-white fill-current" />
           </div>
         </button>
       </div>
 
       {/* Premium Chat Window */}
       {isOpen && (
-        <div className="fixed inset-x-4 bottom-4 md:bottom-6 md:right-6 md:left-auto md:w-80 z-50 animate-scale-in">
-          <div className="w-full h-[32rem] md:h-96 flex flex-col shadow-2xl bg-white dark:bg-gray-900 rounded-xl overflow-hidden">
-            {/* Header with gradient */}
-            <div className="gradient-primary text-white p-4 flex justify-between items-center">
+        <div className="fixed inset-x-4 bottom-4 md:bottom-6 md:right-6 md:left-auto md:w-96 z-50 animate-scale-in">
+          <div className="w-full h-[32rem] md:h-[28rem] flex flex-col shadow-2xl bg-white/95 backdrop-blur-xl rounded-3xl overflow-hidden border border-orange-200/50 relative">
+            {/* Animated Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-50/80 to-pink-50/80 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-orange-200/30 to-transparent rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-200/30 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            
+            {/* Header Premium */}
+            <div className="relative z-10 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white p-4 flex justify-between items-center">
               <div className="flex items-center gap-3">
-                {!showOptions && (
+                {currentStep === 'back' && (
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={handleBack}
-                    className="text-white hover:bg-white/20 w-8 h-8 transition-all duration-200"
+                    className="text-white hover:bg-white/20 w-8 h-8 transition-all duration-200 rounded-full"
                   >
                     <ArrowLeft className="w-4 h-4" />
                   </Button>
                 )}
+                <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                  <Bot className="w-5 h-5 text-white" />
+                </div>
                 <div>
-                  <h3 className="font-heading font-semibold">Assistente SaraivaNet</h3>
-                  <p className="text-sm opacity-90 flex items-center gap-1">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    Online agora
+                  <h3 className="font-bold text-lg">SaraivaNet Bot</h3>
+                  <p className="text-sm opacity-90 flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    Assistente Virtual Online
                   </p>
                 </div>
               </div>
@@ -133,47 +215,91 @@ const ChatBot = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsOpen(false)}
-                className="text-white hover:bg-white/20 transition-all duration-200"
+                className="text-white hover:bg-white/20 transition-all duration-200 rounded-full"
               >
                 <X className="w-5 h-5" />
               </Button>
             </div>
 
-            {/* Messages with enhanced styling */}
-            <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 scrollbar-thin">
+            {/* Messages Area Premium */}
+            <div className="flex-1 p-4 overflow-y-auto space-y-4 relative z-10" style={{ scrollbarWidth: 'thin' }}>
               {messages.map((message, index) => (
                 <div
                   key={message.id}
                   className={`flex animate-fade-in ${message.isBot ? 'justify-start' : 'justify-end'}`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div
-                    className={`max-w-[85%] p-3 rounded-2xl text-sm font-inter ${
-                      message.isBot
-                        ? 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white shadow-lg'
-                        : 'gradient-blue text-white shadow-lg'
-                    }`}
-                  >
-                    {message.text}
+                  <div className={`max-w-[85%] ${message.isBot ? 'flex items-start gap-2' : ''}`}>
+                    {message.isBot && (
+                      <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-red-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1 border-2 border-white shadow-lg">
+                        <Bot className="w-4 h-4 text-white" />
+                      </div>
+                    )}
+                    <div className="flex flex-col">
+                      <div
+                        className={`p-4 rounded-2xl text-sm font-medium shadow-lg relative overflow-hidden ${
+                          message.isBot
+                            ? 'bg-white/80 backdrop-blur-sm text-gray-800 border border-orange-200/50'
+                            : 'bg-gradient-to-r from-orange-500 to-red-500 text-white'
+                        }`}
+                      >
+                        {message.isBot && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-100/30 to-transparent animate-shimmer"></div>
+                        )}
+                        <div className="relative z-10 whitespace-pre-line leading-relaxed">
+                          {message.text}
+                        </div>
+                      </div>
+                      <div className={`text-xs text-gray-500 mt-1 px-1 ${message.isBot ? 'text-left' : 'text-right'}`}>
+                        {formatTime(message.timestamp)}
+                      </div>
+                    </div>
+                    {!message.isBot && (
+                      <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1 ml-2 border-2 border-white shadow-lg">
+                        <User className="w-4 h-4 text-white" />
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
 
-              {/* Premium FAQ Options */}
-              {showOptions && (
-                <div className="space-y-3 mt-4">
+              {/* Typing Indicator */}
+              {isTyping && <TypingIndicator />}
+
+              {/* FAQ Options Premium */}
+              {showOptions && !isTyping && (
+                <div className="space-y-3 mt-6">
+                  <div className="text-center text-gray-600 font-medium mb-4 flex items-center justify-center gap-2">
+                    <Sparkles className="w-4 h-4 text-orange-500" />
+                    <span>Escolha uma opção:</span>
+                  </div>
                   {faqOptions.map((faq, index) => (
-                    <PremiumButton
-                      key={index}
-                      variant="secondary"
-                      size="sm"
+                    <button
+                      key={faq.id}
                       onClick={() => handleFaqClick(faq)}
-                      className="w-full text-left justify-start h-auto p-4 text-sm bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-white border border-gray-200 dark:border-gray-700 animate-slide-in-left"
+                      className="w-full text-left p-4 bg-white/80 hover:bg-white backdrop-blur-sm text-gray-800 border border-orange-200/50 hover:border-orange-300/70 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg animate-slide-in-left relative overflow-hidden group touch-manipulation"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      {faq.question}
-                    </PremiumButton>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-100/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                      <div className="flex items-center gap-3 relative z-10">
+                        <span className="text-lg">{faq.icon}</span>
+                        <span className="font-medium text-sm leading-relaxed">{faq.question.replace(/^[^a-zA-Z]+\s/, '')}</span>
+                      </div>
+                    </button>
                   ))}
+                </div>
+              )}
+
+              {/* Back Button */}
+              {currentStep === 'back' && !showOptions && (
+                <div className="text-center pt-4 animate-fade-in">
+                  <button
+                    onClick={handleBack}
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white px-6 py-3 rounded-2xl font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 mx-auto"
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    Voltar ao menu principal
+                  </button>
                 </div>
               )}
             </div>
