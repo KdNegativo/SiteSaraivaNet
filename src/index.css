@@ -291,11 +291,6 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-
-  /* Glow Effect */
-  .glow {
-    filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.7));
-  }
 }
 
 /* Classes adicionais para garantir o laranja funcione bem */

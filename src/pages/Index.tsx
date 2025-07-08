@@ -132,8 +132,8 @@ const Index = () => {
         <div className="max-w-sm mx-auto w-full relative z-10 px-4 py-16">
           <AnimatedSection animation="fade-up">
             <div className="text-center">
-              {/* BADGE PREMIUM FIXO */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-4 py-2.5 rounded-full mb-6 shadow-2xl font-black text-sm border-3 border-yellow-300/90 hover:scale-105 transition-all duration-300 relative overflow-hidden group">
+              {/* BADGE PREMIUM SIMPLES */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-4 py-2.5 rounded-full mb-6 shadow-lg font-black text-sm border-2 border-yellow-300/80 hover:scale-105 transition-all duration-300 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
                 <Star className="w-4 h-4 mr-2 fill-current animate-spin relative z-10" style={{ animationDuration: '4s' }} />
                 <span className="text-xs font-extrabold relative z-10">🔥 INTERNET + TV GRÁTIS 🔥</span>
@@ -198,35 +198,34 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* BOTÃO MOBILE ULTRA PREMIUM */}
+              {/* BOTÃO MOBILE CLEAN */}
               <div className="mb-8 animate-scale-in" style={{ animationDelay: '0.5s' }}>
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="relative w-full max-w-xs mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-5 rounded-2xl font-black text-lg shadow-2xl border-3 border-yellow-300/90 transform hover:scale-105 active:scale-95 transition-all duration-200 shadow-orange-500/80 overflow-hidden group touch-manipulation btn-3d glow"
+                  className="relative w-full max-w-xs mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-5 rounded-2xl font-black text-lg shadow-lg border-2 border-yellow-300/80 transform hover:scale-105 active:scale-95 transition-all duration-200 overflow-hidden group touch-manipulation"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-800"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-300/20 via-orange-400/20 to-red-400/20 animate-pulse"></div>
-                  <span className="relative flex items-center justify-center gap-2 drop-shadow-lg z-10">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-800"></div>
+                  <span className="relative flex items-center justify-center gap-2 drop-shadow-sm z-10">
                     🚀 CONTRATAR AGORA
-                    <div className="w-6 h-6 bg-white/70 rounded-full flex items-center justify-center text-sm animate-float">
+                    <div className="w-6 h-6 bg-white/60 rounded-full flex items-center justify-center text-sm animate-float">
                       →
                     </div>
                   </span>
                 </TouchButton>
               </div>
 
-              {/* Stats Mobile Ultra Premium */}
+              {/* Stats Mobile Clean */}
               <div className="grid grid-cols-2 gap-2.5 text-center max-w-xs mx-auto mb-6">
-                <div className="group glass-premium rounded-xl p-3 hover:bg-white/30 transition-all duration-200 shadow-lg hover:scale-105 active:scale-95 touch-manipulation glow">
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-3 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 active:scale-95 touch-manipulation border border-white/30">
                   <StatsCounter endValue={1000} label="Clientes" suffix="+" />
                 </div>
-                <div className="group glass-premium rounded-xl p-3 hover:bg-white/30 transition-all duration-200 shadow-lg hover:scale-105 active:scale-95 touch-manipulation glow">
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-3 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 active:scale-95 touch-manipulation border border-white/30">
                   <StatsCounter endValue={99} label="Uptime" suffix="%" />
                 </div>
-                <div className="group glass-premium rounded-xl p-3 hover:bg-white/30 transition-all duration-200 shadow-lg hover:scale-105 active:scale-95 touch-manipulation glow">
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-3 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 active:scale-95 touch-manipulation border border-white/30">
                   <StatsCounter endValue={20} label="Canais" suffix="+" />
                 </div>
-                <div className="group glass-premium rounded-xl p-3 hover:bg-white/30 transition-all duration-200 shadow-lg hover:scale-105 active:scale-95 touch-manipulation glow">
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-3 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 active:scale-95 touch-manipulation border border-white/30">
                   <StatsCounter endValue={24} label="Online" suffix="h" />
                 </div>
               </div>
@@ -285,63 +284,50 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - ULTRA PREMIUM */}
-      <section id="planos" className="relative overflow-hidden py-16 px-4" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)'}}>
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70"></div>
-        <div className="absolute inset-0 opacity-20">
+      {/* Plans Section - CLEAN PREMIUM */}
+      <section id="planos" className="relative overflow-hidden py-16 px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700">
+        {/* Background Effects - Mais Suaves */}
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full" style={{
             backgroundImage: `
-              radial-gradient(circle at 30% 30%, rgba(255,165,0,0.3) 2px, transparent 2px),
-              radial-gradient(circle at 70% 70%, rgba(255,100,0,0.2) 2px, transparent 2px),
-              linear-gradient(45deg, transparent 45%, rgba(255,165,0,0.1) 50%, transparent 55%)
+              radial-gradient(circle at 30% 30%, rgba(255,165,0,0.2) 2px, transparent 2px),
+              radial-gradient(circle at 70% 70%, rgba(255,100,0,0.1) 2px, transparent 2px)
             `,
-            backgroundSize: '80px 80px, 60px 60px, 140px 140px'
+            backgroundSize: '80px 80px, 60px 60px'
           }}></div>
         </div>
         
-        {/* Floating Elements */}
-        <div className="absolute top-10 right-10 w-80 h-80 bg-gradient-to-br from-orange-400/30 to-purple-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-to-tr from-blue-400/20 to-orange-400/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+        {/* Floating Elements - Mais Suaves */}
+        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-orange-200/30 to-red-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-tr from-blue-200/20 to-orange-200/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <AnimatedSection animation="fade-up">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center glass-premium text-white px-4 py-2.5 rounded-full text-sm font-bold mb-6 border border-orange-400/50 glow">
+              <div className="inline-flex items-center bg-white/80 dark:bg-gray-700/80 text-orange-600 dark:text-orange-400 px-4 py-2.5 rounded-full text-sm font-bold mb-6 border border-orange-300/50 shadow-md">
                 <Award className="w-4 h-4 mr-2" />
                 <span>Plano Exclusivo para Você</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
               </div>
-              <h2 className="text-4xl font-black text-white mb-4 relative" style={{
-                textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(255,165,0,0.5)',
-                letterSpacing: '1px'
-              }}>
+              <h2 className="text-4xl font-black text-gray-800 dark:text-white mb-4">
                 Internet + SaraivaTV
-                <div className="absolute inset-0 text-4xl font-black text-transparent bg-gradient-to-r from-orange-300/50 to-yellow-300/50 bg-clip-text blur-sm pointer-events-none">
-                  Internet + SaraivaTV
-                </div>
               </h2>
-              <p className="text-lg text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed font-medium">
                 O plano completo que vai transformar sua experiência digital
               </p>
-              <div className="inline-flex items-center glass-premium text-white px-4 py-2 rounded-full font-bold text-sm glow relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 via-emerald-400/30 to-green-400/20 animate-pulse"></div>
-                <span className="relative z-10">🎉 Oferta especial: 3 meses com desconto!</span>
+              <div className="inline-flex items-center bg-green-100 dark:bg-green-800/50 text-green-700 dark:text-green-300 px-4 py-2 rounded-full font-bold text-sm shadow-md">
+                🎉 Oferta especial: 3 meses com desconto!
               </div>
             </div>
           </AnimatedSection>
 
-          {/* Plan Card Ultra Premium */}
-          <div className="glass-premium rounded-3xl shadow-2xl overflow-hidden border border-orange-400/30 hover:scale-105 transform transition-all duration-500 glow group relative">
-            {/* Shimmer Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
-            
+          {/* Plan Card Clean Premium */}
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-600 hover:scale-105 transform transition-all duration-500 hover:shadow-xl group relative">
             <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 p-6 text-white text-center group-hover:from-orange-400 group-hover:via-orange-500 group-hover:to-red-400 transition-all duration-500 relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-white/30 to-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 border border-white/40 glow">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 border border-white/30">
                 <Wifi className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-2" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>Plano Completo</h3>
-              <div className="text-4xl font-bold mb-2" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>300MB</div>
+              <h3 className="text-2xl font-bold mb-2" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>Plano Completo</h3>
+              <div className="text-4xl font-bold mb-2" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>300MB</div>
               <div className="text-base opacity-95 font-medium">Fibra Óptica + SaraivaTV Grátis</div>
             </div>
 
@@ -349,19 +335,19 @@ const Index = () => {
               <div className="grid lg:grid-cols-2 gap-6 items-center">
                 <div className="text-center lg:text-left">
                   <div className="mb-6">
-                    <div className="text-base text-gray-400 line-through mb-2">De R$ 169,90</div>
-                    <div className="text-4xl font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors duration-300 glow">
+                    <div className="text-base text-gray-500 dark:text-gray-400 line-through mb-2">De R$ 169,90</div>
+                    <div className="text-4xl font-bold text-orange-500 dark:text-orange-400 mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-300 transition-colors duration-300">
                       R$ 129<span className="text-2xl">,90</span>
                     </div>
-                    <div className="text-base text-gray-300">por mês</div>
+                    <div className="text-base text-gray-600 dark:text-gray-300">por mês</div>
                   </div>
 
-                  <div className="glass-premium p-4 rounded-xl mb-6 border border-green-400/50 group-hover:border-green-300/70 transition-all duration-300 glow">
-                    <div className="text-green-300 font-bold mb-1 text-sm">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
-                    <div className="text-green-400 text-xs">Promoção válida para novos clientes</div>
+                  <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-xl mb-6 border border-green-200 dark:border-green-700 shadow-sm">
+                    <div className="text-green-700 dark:text-green-300 font-bold mb-1 text-sm">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
+                    <div className="text-green-600 dark:text-green-400 text-xs">Promoção válida para novos clientes</div>
                   </div>
 
-                  <TouchButton onClick={handleWhatsAppClick} className="w-full lg:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-bold py-3 px-6 rounded-xl shadow-xl btn-3d glow transition-all duration-300">
+                  <TouchButton onClick={handleWhatsAppClick} className="w-full lg:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-bold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
                     🚀 Contratar Agora →
                   </TouchButton>
                 </div>
