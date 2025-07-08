@@ -6,7 +6,14 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light only" />
-    <meta name="supported-color-schemes" content="light" />
+    <meta name="supported-color-schemes" content="light only" />
+    <meta name="theme-color" content="#ff6600" />
+    <style>
+      /* FORÇA MODO CLARO ANTES DE QUALQUER COISA CARREGAR */
+      :root { color-scheme: light only !important; }
+      html { color-scheme: light only !important; background: #fff5f0 !important; }
+      body { color-scheme: light only !important; background: #fff5f0 !important; }
+    </style>
     <title>SaraivaNet - Internet de Alta Velocidade</title>
     
     <!-- Google Fonts Premium -->
