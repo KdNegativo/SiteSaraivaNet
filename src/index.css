@@ -234,6 +234,16 @@
     background: linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%);
   }
 
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
   /* Mobile responsive animations */
   @media (max-width: 640px) {
     .animate-slide-in-left {
@@ -252,6 +262,39 @@
   /* Enhanced mobile shadows */
   .shadow-premium {
     box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  /* 3D Button Effect */
+  .btn-3d {
+    transform: perspective(1000px) rotateX(10deg);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-3d:hover {
+    transform: perspective(1000px) rotateX(0deg) translateY(-2px);
+  }
+
+  /* Glass morphism enhanced */
+  .glass-premium {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Glow Effect */
+  .glow {
+    filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.7));
   }
 }
 
