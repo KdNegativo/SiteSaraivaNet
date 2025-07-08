@@ -38,16 +38,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen" style={{ 
-      background: '#f97316 !important',
-      backgroundImage: 'linear-gradient(135deg, #f97316, #ea580c, #fb923c) !important'
+      background: '#ff6600 !important',
+      backgroundImage: 'linear-gradient(135deg, #ff6600, #ff8800, #ffaa00) !important'
     }}>
       {/* Floating Components */}
       <ChatBot />
       
       {/* Header - Mobile optimized */}
       <header style={{ 
-        background: '#f97316 !important',
-        borderBottomColor: '#ea580c !important',
+        background: '#ff6600 !important',
+        borderBottomColor: '#ff4400 !important',
         borderBottomWidth: '4px !important'
       }} className="shadow-xl px-4 py-3 z-50">
         {/* Mobile Layout */}
@@ -104,8 +104,8 @@ const Index = () => {
 
       {/* Hero Section - MOBILE BONITÃO */}
       <section id="inicio" style={{ 
-        background: '#f97316 !important',
-        backgroundImage: 'linear-gradient(135deg, #f97316, #ea580c, #fb923c) !important',
+        background: '#ff6600 !important',
+        backgroundImage: 'linear-gradient(135deg, #ff6600, #ff8800, #ffaa00) !important',
         color: 'white !important'
       }} className="px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
