@@ -37,19 +37,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ 
-      background: '#ff6600 !important',
-      backgroundImage: 'linear-gradient(135deg, #ff6600, #ff8800, #ffaa00) !important'
-    }}>
+    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600">
       {/* Floating Components */}
       <ChatBot />
       
       {/* Header - Mobile optimized */}
-      <header style={{ 
-        background: '#ff6600 !important',
-        borderBottomColor: '#ff4400 !important',
-        borderBottomWidth: '4px !important'
-      }} className="shadow-xl px-4 py-3 z-50">
+      <header className="bg-gradient-to-r from-orange-500 to-orange-600 shadow-xl px-4 py-3 border-b-4 border-orange-700 z-50">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -58,7 +51,7 @@ const Index = () => {
                 <Wifi className="w-4 h-4 text-orange-600" />
               </div>
               <div>
-                <span className="text-lg font-bold" style={{ color: 'white !important' }}>SaraivaNet</span>
+                <span className="text-lg font-bold text-white">SaraivaNet</span>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
                   Eliseu Martins - PI
@@ -79,7 +72,7 @@ const Index = () => {
               <Wifi className="w-5 h-5 text-orange-600" />
             </div>
             <div>
-              <span className="text-2xl font-bold" style={{ color: 'white !important' }}>SaraivaNet</span>
+              <span className="text-2xl font-bold text-white">SaraivaNet</span>
               <div className="text-xs text-orange-100 font-medium flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
                 Eliseu Martins - PI
@@ -103,11 +96,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section - MOBILE BONITÃO */}
-      <section id="inicio" style={{ 
-        background: '#ff6600 !important',
-        backgroundImage: 'linear-gradient(135deg, #ff6600, #ff8800, #ffaa00) !important',
-        color: 'white !important'
-      }} className="px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
+      <section id="inicio" className="bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         
         {/* MEGA VISUAL - Floating elements */}
