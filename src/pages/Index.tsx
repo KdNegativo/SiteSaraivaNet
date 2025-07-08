@@ -37,12 +37,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-orange-500 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #fb923c, #f97316, #ea580c)' }}>
       {/* Floating Components */}
       <ChatBot />
       
       {/* Header - Mobile optimized */}
-      <header className="bg-orange-500 dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
+      <header className="shadow-xl px-4 py-3 border-b-4 z-50 transition-colors duration-500" style={{ background: 'linear-gradient(90deg, #ea580c, #f97316)', borderBottomColor: '#c2410c' }}>
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -96,7 +96,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section - MOBILE BONITÃO */}
-      <section id="inicio" className="bg-orange-500 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
+      <section id="inicio" className="text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center" style={{ background: 'linear-gradient(135deg, #fb923c, #f97316, #ea580c)' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         
         {/* MEGA VISUAL - Floating elements */}
