@@ -11,6 +11,11 @@ import ChatBot from "@/components/ChatBot";
 import TouchButton from "@/components/TouchButton";
 import MobilePlansCarousel from "@/components/MobilePlansCarousel";
 import ResponsiveImage from "@/components/ResponsiveImage";
+import ScrollProgressBar from "@/components/ScrollProgressBar";
+import BackToTop from "@/components/BackToTop";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
+import ParticlesBackground from "@/components/ParticlesBackground";
+import LoadingScreen from "@/components/LoadingScreen";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
@@ -38,13 +43,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative" style={{background: 'linear-gradient(135deg, #fff5f0 0%, #ffede0 50%, #ffe5d4 100%)'}}>
-      {/* Animated Background Pattern */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-orange-200/30 to-pink-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-purple-200/20 to-blue-200/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '12s', animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-yellow-200/20 to-orange-200/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '4s' }}></div>
-      </div>
-      {/* Floating Components */}
+      {/* Components Premium */}
+      <LoadingScreen />
+      <ScrollProgressBar />
+      <ParticlesBackground />
+      <BackToTop />
+      <FloatingWhatsAppButton />
       <ChatBot />
       
       {/* Header - Mobile optimized */}
