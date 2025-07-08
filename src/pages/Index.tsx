@@ -37,12 +37,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <div className="min-h-screen bg-orange-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
       {/* Floating Components */}
       <ChatBot />
       
       {/* Header - Mobile optimized */}
-      <header className="bg-gradient-to-r from-orange-500 to-orange-600 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
+      <header className="bg-orange-500 dark:from-gray-800 dark:to-gray-900 shadow-xl px-4 py-3 border-b-4 border-orange-700 dark:border-gray-700 z-50 transition-colors duration-500">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -96,7 +96,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section - MOBILE BONITÃO */}
-      <section id="inicio" className="bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
+      <section id="inicio" className="bg-orange-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         
         {/* MEGA VISUAL - Floating elements */}
