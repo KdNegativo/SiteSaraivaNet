@@ -51,7 +51,7 @@ const Index = () => {
                 <Wifi className="w-4 h-4 text-orange-600" />
               </div>
               <div>
-                <span className="text-lg font-bold text-white">SaraivaNet</span>
+                <span className="text-lg font-bold text-white dark:text-orange-200">SaraivaNet</span>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
                   Eliseu Martins - PI
@@ -72,7 +72,7 @@ const Index = () => {
               <Wifi className="w-5 h-5 text-orange-600" />
             </div>
             <div>
-              <span className="text-2xl font-bold text-white">SaraivaNet</span>
+              <span className="text-2xl font-bold text-white dark:text-orange-200">SaraivaNet</span>
               <div className="text-xs text-orange-100 font-medium flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
                 Eliseu Martins - PI
