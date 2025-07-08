@@ -223,7 +223,8 @@ const RealMap: React.FC = () => {
   return (
     <div className="w-full">
       <div className="mb-4 text-center">
-        <h3 className="text-2xl font-bold text-white mb-2">🗺️ Mapa de Cobertura SaraivaNet</h3>
+        <h3 className="text-2xl font-bold text-white mb-2">🗺️ Mapa de Cobertura</h3>
+        <h4 className="text-xl font-bold text-orange-300 mb-2">SaraivaNet</h4>
         <p className="text-blue-200">Região Sul do Piauí - Internet de Fibra Óptica</p>
       </div>
       

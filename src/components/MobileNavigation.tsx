@@ -58,7 +58,10 @@ const MobileNavigation = () => {
       }`}>
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-bold text-white">Menu</h2>
+            <div>
+              <h2 className="text-xl font-bold text-white">SaraivaNet</h2>
+              <p className="text-sm text-orange-200">Menu</p>
+            </div>
             <Button
               variant="ghost"
               size="icon"
