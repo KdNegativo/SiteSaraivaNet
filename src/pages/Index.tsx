@@ -37,12 +37,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen !bg-orange-500" style={{ background: 'linear-gradient(135deg, #fb923c, #f97316, #ea580c) !important' }}>
+    <div className="min-h-screen force-orange-bg">
       {/* Floating Components */}
       <ChatBot />
       
       {/* Header - Mobile optimized */}
-      <header className="!bg-orange-600 shadow-xl px-4 py-3 border-b-4 !border-orange-700 z-50 transition-colors duration-500" style={{ background: 'linear-gradient(90deg, #ea580c, #f97316) !important', borderBottomColor: '#c2410c !important' }}>
+      <header className="force-orange-header shadow-xl px-4 py-3 border-b-4 z-50 transition-colors duration-500">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -96,7 +96,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section - MOBILE BONITÃO */}
-      <section id="inicio" className="!bg-orange-500 text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center" style={{ background: 'linear-gradient(135deg, #fb923c, #f97316, #ea580c) !important' }}>
+      <section id="inicio" className="force-orange-bg text-white px-6 py-20 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         
         {/* MEGA VISUAL - Floating elements */}

@@ -291,3 +291,27 @@
     animation-delay: 500ms;
   }
 }
+
+/* FORÇA CORES CORRETAS SEMPRE - SOBRESCREVE MODO ESCURO DO NAVEGADOR */
+.force-orange-bg {
+  background: linear-gradient(135deg, #fb923c, #f97316, #ea580c) !important;
+  color: white !important;
+}
+
+.force-orange-header {
+  background: linear-gradient(90deg, #ea580c, #f97316) !important;
+  border-bottom-color: #c2410c !important;
+}
+
+/* Previne o navegador de forçar cores escuras */
+* {
+  color-scheme: light !important;
+}
+
+html {
+  color-scheme: light !important;
+}
+
+body {
+  color-scheme: light !important;
+}
