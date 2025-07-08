@@ -9,10 +9,16 @@
     <meta name="supported-color-schemes" content="light only" />
     <meta name="theme-color" content="#ff6600" />
     <style>
-      /* FORÇA MODO CLARO ANTES DE QUALQUER COISA CARREGAR */
-      :root { color-scheme: light only !important; }
-      html { color-scheme: light only !important; background: #fff5f0 !important; }
-      body { color-scheme: light only !important; background: #fff5f0 !important; }
+      /* FORÇA BRUTAL PARA LARANJA - SOBRESCREVE TUDO */
+      * { color-scheme: light only !important; }
+      html, body { 
+        color-scheme: light only !important; 
+        background: #ff6600 !important; 
+        background-color: #ff6600 !important;
+      }
+      body * {
+        background-color: inherit !important;
+      }
     </style>
     <title>SaraivaNet - Internet de Alta Velocidade</title>
     
