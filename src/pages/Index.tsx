@@ -91,200 +91,126 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Super Moderno */}
-      <section id="inicio" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700">
-        {/* Background Animated Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-400/80 via-red-500/60 to-purple-600/80 animate-gradient-x"></div>
-        
-        {/* Floating Geometric Shapes */}
+      {/* Hero Section - Redesenhado */}
+      <section id="inicio" className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-20 px-4 relative overflow-hidden">
+        {/* Background Effects */}
         {!prefersReducedMotion && (
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-br from-yellow-300/30 to-orange-400/20 rounded-full blur-3xl animate-float"></div>
-            <div className="absolute top-1/3 -left-32 w-80 h-80 bg-gradient-to-br from-pink-400/20 to-purple-500/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-            <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-gradient-to-br from-blue-400/25 to-cyan-400/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
-            
-            {/* Geometric Elements */}
-            <div className="absolute top-20 left-10 w-4 h-4 bg-white/40 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
-            <div className="absolute top-40 right-20 w-6 h-6 bg-yellow-300/60 rotate-45 animate-spin" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-pink-300/50 rounded-full animate-pulse"></div>
+          <div className="absolute inset-0">
+            <div className="absolute top-20 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-20 left-10 w-48 h-48 bg-yellow-400/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
           </div>
         )}
         
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 flex items-center min-h-screen">
-          <div className="w-full text-center">
-            <AnimatedSection animation="fade-up">
-              {/* Premium Badge */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 text-orange-900 px-8 py-4 rounded-full mb-8 font-black text-lg shadow-2xl hover:scale-110 transition-all duration-500 border-2 border-white/30 backdrop-blur-sm">
-                <div className="w-6 h-6 bg-orange-600 rounded-full flex items-center justify-center mr-3 animate-pulse">
-                  <Star className="w-4 h-4 text-white fill-current" />
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <AnimatedSection animation="fade-up">
+            {/* Badge */}
+            <div className="inline-flex items-center bg-yellow-400 text-orange-900 px-6 py-3 rounded-full mb-8 font-bold shadow-lg">
+              <Star className="w-5 h-5 mr-2" />
+              🔥 INTERNET + TV GRÁTIS 🔥
+            </div>
+            
+            {/* Main Title */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight">
+              <span className="block text-white mb-2">Internet Ultra Rápida</span>
+              <span className="block text-white">+ SaraivaTV Grátis</span>
+            </h1>
+            
+            {/* Subtitle */}
+            <p className="text-xl sm:text-2xl mb-12 text-white/95 max-w-3xl mx-auto font-medium">
+              🚀 A internet fibra óptica mais rápida da região + App de TV exclusivo
+            </p>
+
+            {/* Feature Cards */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Wifi className="w-6 h-6 text-orange-600" />
                 </div>
-                <span className="bg-gradient-to-r from-orange-700 to-red-700 bg-clip-text text-transparent">
-                  🔥 INTERNET + TV GRÁTIS 🔥
-                </span>
+                <h3 className="text-white font-bold text-lg mb-1">300MB</h3>
+                <p className="text-white/80 text-sm">Fibra Óptica</p>
               </div>
               
-              {/* Main Hero Title */}
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight">
-                <span className="block text-white drop-shadow-2xl mb-4 animate-fade-in bg-gradient-to-r from-white via-orange-100 to-white bg-clip-text">
-                  Internet Ultra
-                </span>
-                <span className="block text-white drop-shadow-2xl animate-fade-in bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text" style={{ animationDelay: '0.3s' }}>
-                  + SaraivaTV
-                </span>
-              </h1>
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Tv className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-white font-bold text-lg mb-1">SaraivaTV</h3>
+                <p className="text-white/80 text-sm">App Grátis</p>
+              </div>
               
-              {/* Subtitle com Gradient */}
-              <p className="text-xl sm:text-2xl md:text-3xl mb-12 font-bold max-w-4xl mx-auto leading-relaxed animate-fade-in text-white/95" style={{ animationDelay: '0.6s' }}>
-                <span className="bg-gradient-to-r from-yellow-200 via-white to-orange-200 bg-clip-text text-transparent">
-                  🚀 Fibra óptica 300MB + App exclusivo
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Smartphone className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-white font-bold text-lg mb-1">Mobile</h3>
+                <p className="text-white/80 text-sm">Qualquer lugar</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Shield className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-white font-bold text-lg mb-1">Suporte</h3>
+                <p className="text-white/80 text-sm">24h VIP</p>
+              </div>
+            </div>
+
+            {/* Main CTA Button */}
+            <div className="mb-12">
+              <TouchButton 
+                onClick={handleWhatsAppClick} 
+                className="relative w-full max-w-sm mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-500 hover:from-yellow-300 hover:via-orange-400 hover:to-orange-400 text-gray-900 px-10 py-6 rounded-3xl font-black text-xl shadow-2xl border-4 border-yellow-300/60 transform hover:scale-110 active:scale-95 transition-all duration-300 shadow-orange-500/70 overflow-hidden group"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                <span className="relative flex items-center justify-center gap-3">
+                  🚀 CONTRATAR AGORA 🚀
+                  <div className="w-8 h-8 bg-white/40 rounded-full flex items-center justify-center text-lg animate-bounce">
+                    →
+                  </div>
                 </span>
-                <br />
-                <span className="text-white/90 text-lg">
-                  A conexão mais rápida da região!
-                </span>
-              </p>
+              </TouchButton>
+            </div>
 
-              {/* Feature Cards com Glassmorphism */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-5xl mx-auto">
-                <div className="group bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-110 hover:-translate-y-2 shadow-2xl hover:shadow-orange-500/30">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-                    <Wifi className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-white font-black text-xl mb-2">300MB</h3>
-                  <p className="text-white/80 text-sm font-medium">Fibra Óptica</p>
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+                <StatsCounter endValue={1000} label="Clientes" suffix="+" />
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+                <StatsCounter endValue={99} label="Uptime" suffix="%" />
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+                <StatsCounter endValue={20} label="Canais" suffix="+" />
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+                <StatsCounter endValue={24} label="Online" suffix="h" />
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* SaraivaTV Card */}
+          <AnimatedSection animation="scale-in" delay={300}>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 max-w-md mx-auto mt-8">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="w-8 h-8 text-white" />
                 </div>
-                
-                <div className="group bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-110 hover:-translate-y-2 shadow-2xl hover:shadow-blue-500/30">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-                    <Tv className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-white font-black text-xl mb-2">SaraivaTV</h3>
-                  <p className="text-white/80 text-sm font-medium">App Grátis</p>
+                <h3 className="text-2xl font-bold mb-2 text-white">SaraivaTV</h3>
+                <p className="text-white/80 text-base">Seus canais favoritos no celular</p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-white/10 rounded-xl p-3 text-center border border-white/20">
+                  <Tv className="w-6 h-6 mx-auto mb-2 text-orange-300" />
+                  <span className="text-xs font-semibold text-white">Canais TV</span>
                 </div>
-                
-                <div className="group bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-110 hover:-translate-y-2 shadow-2xl hover:shadow-green-500/30">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-                    <Smartphone className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-white font-black text-xl mb-2">Mobile</h3>
-                  <p className="text-white/80 text-sm font-medium">Qualquer lugar</p>
-                </div>
-                
-                <div className="group bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-110 hover:-translate-y-2 shadow-2xl hover:shadow-purple-500/30">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-                    <Shield className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-white font-black text-xl mb-2">Suporte</h3>
-                  <p className="text-white/80 text-sm font-medium">24h VIP</p>
+                <div className="bg-white/10 rounded-xl p-3 text-center border border-white/20">
+                  <Music className="w-6 h-6 mx-auto mb-2 text-green-300" />
+                  <span className="text-xs font-semibold text-white">Rádios</span>
                 </div>
               </div>
-
-              {/* Super CTA Button */}
-              <div className="mb-16">
-                <TouchButton 
-                  onClick={handleWhatsAppClick} 
-                  className="group relative w-full max-w-md mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-12 py-8 rounded-full font-black text-2xl shadow-2xl transform hover:scale-110 active:scale-95 transition-all duration-500 hover:shadow-orange-500/60 border-4 border-white/30 overflow-hidden"
-                >
-                  {/* Shine Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  
-                  {/* Pulsing Background */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-300/50 to-orange-400/50 rounded-full animate-pulse"></div>
-                  
-                  <span className="relative flex items-center justify-center gap-4">
-                    <span className="text-2xl animate-bounce">🚀</span>
-                    CONTRATAR AGORA
-                    <span className="text-2xl animate-bounce" style={{ animationDelay: '0.5s' }}>🚀</span>
-                  </span>
-                  
-                  {/* Floating particles */}
-                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-300 rounded-full animate-ping"></div>
-                  <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-orange-300 rounded-full animate-ping" style={{ animationDelay: '0.3s' }}></div>
-                </TouchButton>
-              </div>
-
-              {/* Stats com Efeitos Modernos */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
-                <div className="group bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:from-white/25 hover:to-white/15 transition-all duration-500 hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl">
-                  <div className="text-center">
-                    <div className="text-3xl font-black text-white mb-1">
-                      <StatsCounter endValue={1000} label="" suffix="+" />
-                    </div>
-                    <p className="text-white font-medium">Clientes</p>
-                    <p className="text-white/70 text-sm">Conectados</p>
-                  </div>
-                </div>
-                
-                <div className="group bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:from-white/25 hover:to-white/15 transition-all duration-500 hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl">
-                  <div className="text-center">
-                    <div className="text-3xl font-black text-white mb-1">
-                      <StatsCounter endValue={99} label="" suffix="%" />
-                    </div>
-                    <p className="text-white font-medium">Uptime</p>
-                    <p className="text-white/70 text-sm">Disponibilidade</p>
-                  </div>
-                </div>
-                
-                <div className="group bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:from-white/25 hover:to-white/15 transition-all duration-500 hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl">
-                  <div className="text-center">
-                    <div className="text-3xl font-black text-white mb-1">
-                      <StatsCounter endValue={20} label="" suffix="+" />
-                    </div>
-                    <p className="text-white font-medium">Canais</p>
-                    <p className="text-white/70 text-sm">Disponíveis</p>
-                  </div>
-                </div>
-                
-                <div className="group bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:from-white/25 hover:to-white/15 transition-all duration-500 hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl">
-                  <div className="text-center">
-                    <div className="text-3xl font-black text-white mb-1">
-                      <StatsCounter endValue={24} label="" suffix="h" />
-                    </div>
-                    <p className="text-white font-medium">Online</p>
-                    <p className="text-white/70 text-sm">Por dia</p>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
-
-            {/* SaraivaTV Premium Card */}
-            <AnimatedSection animation="scale-in" delay={300}>
-              <div className="bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-2xl rounded-3xl p-8 border border-white/30 max-w-lg mx-auto shadow-2xl hover:scale-105 transition-all duration-500">
-                <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-orange-400 via-red-500 to-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl hover:scale-110 transition-transform duration-500">
-                    <Smartphone className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-3xl font-black mb-3 text-white bg-gradient-to-r from-orange-200 to-yellow-200 bg-clip-text text-transparent">SaraivaTV</h3>
-                  <p className="text-white/90 text-lg font-medium">Seus canais favoritos no celular</p>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-gradient-to-br from-orange-500/30 to-red-500/20 rounded-2xl p-4 text-center border border-orange-300/30 hover:scale-105 transition-transform duration-300">
-                    <Tv className="w-8 h-8 mx-auto mb-2 text-orange-200" />
-                    <span className="text-sm font-bold text-white">20+ Canais</span>
-                  </div>
-                  <div className="bg-gradient-to-br from-green-500/30 to-emerald-500/20 rounded-2xl p-4 text-center border border-green-300/30 hover:scale-105 transition-transform duration-300">
-                    <Music className="w-8 h-8 mx-auto mb-2 text-green-200" />
-                    <span className="text-sm font-bold text-white">Rádios 24h</span>
-                  </div>
-                </div>
-                
-                <div className="text-center">
-                  <p className="text-white/80 text-sm mb-4 font-medium">
-                    📱 Disponível para Android e iOS
-                  </p>
-                  <div className="flex justify-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500/40 to-purple-500/30 rounded-xl flex items-center justify-center border border-blue-300/30">
-                      <Smartphone className="w-6 h-6 text-blue-200" />
-                    </div>
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500/40 to-pink-500/30 rounded-xl flex items-center justify-center border border-purple-300/30">
-                      <Tv className="w-6 h-6 text-purple-200" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
