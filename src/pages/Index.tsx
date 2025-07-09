@@ -65,7 +65,6 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <ThemeToggle />
               <MobileNavigation />
             </div>
           </div>
@@ -95,8 +94,7 @@ const Index = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            
+            {/* ThemeToggle removido */}
           </div>
         </div>
       </header>

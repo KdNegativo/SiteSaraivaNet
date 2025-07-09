@@ -291,6 +291,12 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
+
+  /* Floating Animation */
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
 }
 
 /* Classes adicionais para garantir o laranja funcione bem */
