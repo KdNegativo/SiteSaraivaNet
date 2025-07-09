@@ -88,8 +88,8 @@ const MobilePlansCarousel = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <Card className={`relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 ${
-            plan.popular ? 'border-orange-500 scale-105' : ''
+            <Card className={`relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 bg-gradient-to-br from-gray-800 to-gray-900 ${
+            plan.popular ? 'border-orange-500 scale-105' : 'border-gray-600'
           }`}>
             {plan.popular && (
               <div className="absolute top-0 right-0 bg-orange-500 text-white px-2 py-1 text-xs font-bold rounded-bl-lg">
@@ -98,21 +98,21 @@ const MobilePlansCarousel = () => {
             )}
             <CardContent className="p-4">
               <div className="text-center">
-                <Icon className="w-12 h-12 text-orange-600 mx-auto mb-3" />
-                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{plan.name}</h4>
-                <div className="text-2xl font-bold text-orange-600 mb-3">
+                <Icon className="w-12 h-12 text-orange-400 mx-auto mb-3" />
+                <h4 className="text-lg font-bold text-white mb-2">{plan.name}</h4>
+                <div className="text-2xl font-bold text-orange-400 mb-3">
                   R$ {plan.price}
-                  <span className="text-sm text-gray-500 dark:text-gray-400 font-normal">/mês</span>
+                  <span className="text-sm text-gray-300 font-normal">/mês</span>
                 </div>
-                <div className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                <div className="text-xl font-semibold text-gray-100 mb-4">
                   {plan.speed}
                 </div>
                 
                 <ul className="space-y-2 mb-6 text-left">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex items-center text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      <span>{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <span className="text-gray-200">{feature}</span>
                     </li>
                   ))}
                 </ul>

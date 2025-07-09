@@ -285,43 +285,43 @@ const Index = () => {
       </section>
 
       {/* Plans Section - CLEAN PREMIUM */}
-      <section id="planos" className="relative overflow-hidden py-16 px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700">
-        {/* Background Effects - Mais Suaves */}
-        <div className="absolute inset-0 opacity-10">
+      <section id="planos" className="relative overflow-hidden py-16 px-4" style={{background: 'linear-gradient(135deg, #1f2937 0%, #374151 30%, #4b5563 70%, #6b7280 100%)'}}>
+        {/* Background Effects */}
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full" style={{
             backgroundImage: `
-              radial-gradient(circle at 30% 30%, rgba(255,165,0,0.2) 2px, transparent 2px),
-              radial-gradient(circle at 70% 70%, rgba(255,100,0,0.1) 2px, transparent 2px)
+              radial-gradient(circle at 30% 30%, rgba(255,165,0,0.3) 2px, transparent 2px),
+              radial-gradient(circle at 70% 70%, rgba(255,100,0,0.2) 2px, transparent 2px)
             `,
             backgroundSize: '80px 80px, 60px 60px'
           }}></div>
         </div>
         
-        {/* Floating Elements - Mais Suaves */}
-        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-orange-200/30 to-red-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-tr from-blue-200/20 to-orange-200/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+        {/* Floating Elements */}
+        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-orange-500/30 to-red-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-tr from-orange-500/20 to-yellow-500/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <AnimatedSection animation="fade-up">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center bg-white/80 dark:bg-gray-700/80 text-orange-600 dark:text-orange-400 px-4 py-2.5 rounded-full text-sm font-bold mb-6 border border-orange-300/50 shadow-md">
+              <div className="inline-flex items-center bg-orange-500/90 text-white px-4 py-2.5 rounded-full text-sm font-bold mb-6 border border-orange-400 shadow-lg">
                 <Award className="w-4 h-4 mr-2" />
                 <span>Plano Exclusivo para Você</span>
               </div>
-              <h2 className="text-4xl font-black text-gray-800 dark:text-white mb-4">
+              <h2 className="text-4xl font-black text-white mb-4" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
                 Internet + SaraivaTV
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-lg text-orange-100 mb-4 max-w-3xl mx-auto leading-relaxed font-medium">
                 O plano completo que vai transformar sua experiência digital
               </p>
-              <div className="inline-flex items-center bg-green-100 dark:bg-green-800/50 text-green-700 dark:text-green-300 px-4 py-2 rounded-full font-bold text-sm shadow-md">
+              <div className="inline-flex items-center bg-green-500/90 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
                 🎉 Oferta especial: 3 meses com desconto!
               </div>
             </div>
           </AnimatedSection>
 
-          {/* Plan Card Clean Premium */}
-          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-600 hover:scale-105 transform transition-all duration-500 hover:shadow-xl group relative">
+          {/* Plan Card Premium Dark */}
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden border-2 border-orange-500/50 hover:scale-105 transform transition-all duration-500 hover:shadow-orange-500/25 group relative">
             <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 p-6 text-white text-center group-hover:from-orange-400 group-hover:via-orange-500 group-hover:to-red-400 transition-all duration-500 relative z-10">
               <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 border border-white/30">
                 <Wifi className="w-8 h-8 text-white" />
@@ -335,16 +335,16 @@ const Index = () => {
               <div className="grid lg:grid-cols-2 gap-6 items-center">
                 <div className="text-center lg:text-left">
                   <div className="mb-6">
-                    <div className="text-base text-gray-500 dark:text-gray-400 line-through mb-2">De R$ 169,90</div>
-                    <div className="text-4xl font-bold text-orange-500 dark:text-orange-400 mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-300 transition-colors duration-300">
+                    <div className="text-base text-gray-400 line-through mb-2">De R$ 169,90</div>
+                    <div className="text-4xl font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors duration-300">
                       R$ 129<span className="text-2xl">,90</span>
                     </div>
-                    <div className="text-base text-gray-600 dark:text-gray-300">por mês</div>
+                    <div className="text-base text-gray-300">por mês</div>
                   </div>
 
-                  <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-xl mb-6 border border-green-200 dark:border-green-700 shadow-sm">
-                    <div className="text-green-700 dark:text-green-300 font-bold mb-1 text-sm">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
-                    <div className="text-green-600 dark:text-green-400 text-xs">Promoção válida para novos clientes</div>
+                  <div className="bg-green-900/50 p-4 rounded-xl mb-6 border border-green-700 shadow-sm">
+                    <div className="text-green-300 font-bold mb-1 text-sm">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
+                    <div className="text-green-400 text-xs">Promoção válida para novos clientes</div>
                   </div>
 
                   <TouchButton onClick={handleWhatsAppClick} className="w-full lg:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-bold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
@@ -353,7 +353,7 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-6 glow">
+                  <h4 className="text-xl font-bold text-white mb-6" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
                     Tudo que você precisa:
                   </h4>
                   <div className="space-y-3">
@@ -381,11 +381,11 @@ const Index = () => {
                   }, {
                     icon: Heart,
                     text: "Sem fidelidade, cancele quando quiser"
-                  }].map((feature, index) => <div key={index} className="flex items-center space-x-3 p-3 glass-premium rounded-lg border border-white/20 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 transform touch-manipulation glow">
+                  }].map((feature, index) => <div key={index} className="flex items-center space-x-3 p-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-orange-400 hover:bg-gray-600/50 transition-all duration-300 hover:scale-105 transform touch-manipulation">
                         <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
                           <feature.icon className="w-4 h-4 text-white" />
                         </div>
-                        <span className="font-semibold text-gray-200 text-sm">{feature.text}</span>
+                        <span className="font-semibold text-gray-100 text-sm">{feature.text}</span>
                       </div>)}
                   </div>
                 </div>
