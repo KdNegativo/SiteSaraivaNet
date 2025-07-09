@@ -13,7 +13,7 @@ const FloatingWhatsApp = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3">
       {/* Expanded card */}
       {isExpanded && (
         <div className="absolute bottom-20 right-0 w-80 max-w-[90vw] bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 animate-scale-in transform origin-bottom-right">
@@ -78,20 +78,23 @@ const FloatingWhatsApp = () => {
         </div>
       )}
 
+      {/* WhatsApp text label - sempre visível */}
+      {!isExpanded && (
+        <div className="bg-white shadow-lg rounded-full px-4 py-2 border border-gray-200">
+          <p className="text-sm font-medium text-gray-700 whitespace-nowrap">💬 WhatsApp</p>
+        </div>
+      )}
+
       {/* Floating button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className={`relative bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 shadow-2xl transition-all duration-300 flex items-center justify-center rounded-full group overflow-hidden ${
-          isExpanded ? 'w-14 h-14 rotate-180' : 'w-16 h-16 hover:scale-110 animate-pulse'
+          isExpanded ? 'w-14 h-14' : 'w-16 h-16 hover:scale-110'
         }`}
         style={{
-          boxShadow: '0 8px 32px rgba(34, 197, 94, 0.4), 0 0 0 0 rgba(34, 197, 94, 0.4)',
-          animation: isExpanded ? 'none' : 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite, floating 3s ease-in-out infinite'
+          boxShadow: '0 8px 32px rgba(34, 197, 94, 0.4)'
         }}
       >
-        {/* Shimmer effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rotate-45 animate-shimmer"></div>
-        
         {/* Icon */}
         <div className="relative z-10">
           {isExpanded ? (
@@ -104,13 +107,6 @@ const FloatingWhatsApp = () => {
         {/* Ripple effect on hover */}
         <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500"></div>
       </button>
-
-      {/* Floating text indicator */}
-      {!isExpanded && (
-        <div className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-bounce">
-          💬
-        </div>
-      )}
     </div>
   );
 };
