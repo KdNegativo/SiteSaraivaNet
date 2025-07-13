@@ -7,8 +7,6 @@ import TestimonialCard from "@/components/TestimonialCard";
 import ThemeToggle from "@/components/ThemeToggle";
 import MobileNavigation from "@/components/MobileNavigation";
 import AnimatedSection from "@/components/AnimatedSection";
-import AnimatedIcon from "@/components/AnimatedIcon";
-import ParallaxSection from "@/components/ParallaxSection";
 import ChatBot from "@/components/ChatBot";
 import TouchButton from "@/components/TouchButton";
 import MobilePlansCarousel from "@/components/MobilePlansCarousel";
@@ -50,15 +48,14 @@ const Index = () => {
       <ChatBot />
       
       {/* Header - Mobile optimized */}
-      <AnimatedSection animation="fade-in" duration="fast">
-        <header style={{background: '#ff6600', borderBottomColor: '#ff4400'}} className="shadow-xl px-4 py-3 border-b-4 z-50 animate-slide-in-down">
+      <header style={{background: '#ff6600', borderBottomColor: '#ff4400'}} className="shadow-xl px-4 py-3 border-b-4 z-50">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <AnimatedIcon animation="float" size="sm" className="w-8 h-8 bg-gradient-to-br from-white to-orange-100 rounded-xl flex items-center justify-center shadow-lg border border-white/30 hover:scale-110 transition-all duration-300">
+              <div className="w-8 h-8 bg-gradient-to-br from-white to-orange-100 rounded-xl flex items-center justify-center shadow-lg border border-white/30">
                 <Wifi className="w-4 h-4 text-orange-600" />
-              </AnimatedIcon>
+              </div>
               <div>
                 <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
@@ -76,9 +73,9 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <AnimatedIcon animation="glow" className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300">
+            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
               <Wifi className="w-5 h-5 text-orange-600" />
-            </AnimatedIcon>
+            </div>
             <div>
               <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
               <div className="text-xs text-orange-100 font-medium flex items-center">
@@ -89,19 +86,18 @@ const Index = () => {
           </div>
           
           <nav className="flex items-center space-x-6">
-            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-all duration-300 font-medium hover:scale-110 hover:drop-shadow-lg story-link">Início</a>
-            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-all duration-300 font-medium hover:scale-110 hover:drop-shadow-lg story-link">Planos</a>
-            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-all duration-300 font-medium hover:scale-110 hover:drop-shadow-lg story-link">Cobertura</a>
-            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-all duration-300 font-medium hover:scale-110 hover:drop-shadow-lg story-link">Sobre</a>
-            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-all duration-300 font-medium hover:scale-110 hover:drop-shadow-lg story-link">Contato</a>
+            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
+            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
+            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
+            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
+            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
           </nav>
 
           <div className="flex items-center space-x-4">
             {/* ThemeToggle removido */}
           </div>
         </div>
-        </header>
-      </AnimatedSection>
+      </header>
 
       {/* Hero Section - MOBILE ULTRA PREMIUM */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%)', color: 'white'}}>
@@ -175,27 +171,27 @@ const Index = () => {
               {/* CARTÕES MOBILE PREMIUM */}
               <div className="grid grid-cols-2 gap-3 mb-8 max-w-xs mx-auto">
                 <div className="group bg-gradient-to-br from-orange-500/95 to-red-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-orange-200/80 hover:from-orange-400/100 hover:to-red-400/90 transition-all duration-300 shadow-xl hover:shadow-orange-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation">
-                  <AnimatedIcon animation="pulse" className="w-12 h-12 bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-orange-200/50">
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-orange-200/50">
                     <Wifi className="w-6 h-6 text-orange-600" />
-                  </AnimatedIcon>
+                  </div>
                   <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">Internet ULTRA</span>
                 </div>
                 <div className="group bg-gradient-to-br from-blue-500/95 to-purple-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-blue-200/80 hover:from-blue-400/100 hover:to-purple-400/90 transition-all duration-300 shadow-xl hover:shadow-blue-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.1s' }}>
-                  <AnimatedIcon animation="bounce" className="w-12 h-12 bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-blue-200/50">
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-blue-200/50">
                     <Tv className="w-6 h-6 text-blue-600" />
-                  </AnimatedIcon>
+                  </div>
                   <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">TV Premium</span>
                 </div>
                 <div className="group bg-gradient-to-br from-green-500/95 to-emerald-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-green-200/80 hover:from-green-400/100 hover:to-emerald-400/90 transition-all duration-300 shadow-xl hover:shadow-green-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.2s' }}>
-                  <AnimatedIcon animation="float" className="w-12 h-12 bg-gradient-to-br from-white via-green-50 to-green-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-green-200/50">
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-green-50 to-green-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-green-200/50">
                     <Music className="w-6 h-6 text-green-600" />
-                  </AnimatedIcon>
+                  </div>
                   <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">Rádios 24h</span>
                 </div>
                 <div className="group bg-gradient-to-br from-purple-500/95 to-pink-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-purple-200/80 hover:from-purple-400/100 hover:to-pink-400/90 transition-all duration-300 shadow-xl hover:shadow-purple-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.3s' }}>
-                  <AnimatedIcon animation="glow" className="w-12 h-12 bg-gradient-to-br from-white via-purple-50 to-purple-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-purple-200/50">
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-purple-50 to-purple-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-purple-200/50">
                     <Shield className="w-6 h-6 text-purple-600" />
-                  </AnimatedIcon>
+                  </div>
                   <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">Suporte VIP</span>
                 </div>
               </div>
@@ -241,9 +237,9 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
               
               <div className="text-center mb-4 relative z-10">
-                <AnimatedIcon animation="float" className="w-14 h-14 bg-gradient-to-br from-orange-400 via-red-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/40 glow">
+                <div className="w-14 h-14 bg-gradient-to-br from-orange-400 via-red-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/40 glow">
                   <Smartphone className="w-7 h-7 text-white" />
-                </AnimatedIcon>
+                </div>
                 <h3 className="text-xl font-bold mb-1 text-white" style={{
                   textShadow: '2px 2px 8px rgba(0,0,0,0.8)'
                 }}>SaraivaTV</h3>
@@ -383,16 +379,12 @@ const Index = () => {
                   }, {
                     icon: Heart,
                     text: "Sem fidelidade, cancele quando quiser"
-                   }].map((feature, index) => 
-                    <AnimatedSection key={index} animation="slide-left" delay={index * 100}>
-                      <div className="flex items-center space-x-3 p-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-orange-400 hover:bg-gray-600/50 transition-all duration-300 hover:scale-105 transform touch-manipulation animate-fade-in">
-                        <AnimatedIcon animation="glow" className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  }].map((feature, index) => <div key={index} className="flex items-center space-x-3 p-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-orange-400 hover:bg-gray-600/50 transition-all duration-300 hover:scale-105 transform touch-manipulation">
+                        <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
                           <feature.icon className="w-4 h-4 text-white" />
-                        </AnimatedIcon>
+                        </div>
                         <span className="font-semibold text-gray-100 text-sm">{feature.text}</span>
-                      </div>
-                    </AnimatedSection>
-                  )}
+                      </div>)}
                   </div>
                 </div>
               </div>
@@ -450,35 +442,27 @@ const Index = () => {
               }, {
                 name: "Jerumenha",
                 status: "Internet Ativa"
-              }].map((city, index) => 
-                <AnimatedSection key={index} animation="slide-right" delay={index * 150}>
-                  <div className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              }].map((city, index) => <div key={index} className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                     <div>
                       <div className="font-semibold text-sm sm:text-base">{city.name}</div>
                       <div className="text-xs sm:text-sm text-blue-200">{city.status}</div>
                     </div>
-                  </div>
-                </AnimatedSection>
-              )}
+                  </div>)}
               </div>
             </div>
 
-            <AnimatedSection animation="scale-in" delay={200}>
-              <div className="hover:scale-105 transition-all duration-500">
-                <RealMap />
-              </div>
-            </AnimatedSection>
+            <div>
+              <RealMap />
+            </div>
           </div>
 
-          <AnimatedSection animation="bounce-in" delay={400}>
-            <div className="text-center">
-              <a href="https://wa.me/5586999999999?text=Olá! Gostaria de saber sobre a disponibilidade da internet SaraivaNet na minha região." target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 sm:space-x-3 bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-lg transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl animate-pulse-glow">
-                <span className="animate-bounce">💬</span>
-                <span>Verificar Disponibilidade</span>
-              </a>
-            </div>
-          </AnimatedSection>
+          <div className="text-center">
+            <a href="https://wa.me/5586999999999?text=Olá! Gostaria de saber sobre a disponibilidade da internet SaraivaNet na minha região." target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 sm:space-x-3 bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <span>💬</span>
+              <span>Verificar Disponibilidade</span>
+            </a>
+          </div>
         </div>
       </AnimatedSection>
 
@@ -501,15 +485,12 @@ const Index = () => {
         <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-tr from-purple-300/30 to-orange-300/40 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <AnimatedSection animation="fade-up">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center glass-premium text-orange-600 px-4 py-2.5 rounded-full text-sm font-bold mb-6 border border-orange-400/50 glow relative overflow-hidden hover:scale-110 transition-all duration-300">
-                <AnimatedIcon animation="bounce" size="sm">
-                  <Tv className="w-4 h-4 mr-2" />
-                </AnimatedIcon>
-                <span>App Exclusivo</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-200/30 to-transparent animate-shimmer"></div>
-              </div>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center glass-premium text-orange-600 px-4 py-2.5 rounded-full text-sm font-bold mb-6 border border-orange-400/50 glow relative overflow-hidden">
+              <Tv className="w-4 h-4 mr-2" />
+              <span>App Exclusivo</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-200/30 to-transparent animate-shimmer"></div>
+            </div>
             <h2 className="text-5xl font-black mb-6 relative">
               <span className="text-gray-800">Conheça o </span>
               <span className="bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-clip-text text-transparent glow">SaraivaTV</span>
@@ -621,75 +602,64 @@ const Index = () => {
               </div>
             </div>
           </div>
-          </AnimatedSection>
         </div>
       </section>
 
       {/* Stats Section */}
-      <AnimatedSection animation="fade-up">
-        <section className="py-16 px-4 bg-gradient-to-r from-orange-500 via-orange-600 to-purple-600 relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="absolute top-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 left-10 w-72 h-72 bg-orange-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-          
-          <div className="max-w-7xl mx-auto text-center relative z-10">
-            <h2 className="text-5xl font-bold text-white mb-4 animate-fade-in">Números Que Falam Por Si</h2>
-            <p className="text-2xl text-white/90 mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              Resultados conquistados com dedicação e compromisso com a região
-            </p>
+      <section className="py-16 px-4 bg-gradient-to-r from-orange-500 via-orange-600 to-purple-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute top-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-72 h-72 bg-orange-300/20 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <h2 className="text-5xl font-bold text-white mb-4">Números Que Falam Por Si</h2>
+          <p className="text-2xl text-white/90 mb-12">
+            Resultados conquistados com dedicação e compromisso com a região
+          </p>
 
           <div className="grid md:grid-cols-4 gap-8">
-            <AnimatedSection animation="scale-in" delay={100}>
-              <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105 animate-heartbeat">
-                <AnimatedIcon animation="float" className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <Users className="w-10 h-10 text-white" />
-                </AnimatedIcon>
+            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Users className="w-10 h-10 text-white" />
+              </div>
               <StatsCounter endValue={1000} label="Famílias Conectadas" suffix="+" />
-                <div className="text-white/80 mt-2 text-lg">
-                  Lares piauenses com internet de qualidade
-                </div>
+              <div className="text-white/80 mt-2 text-lg">
+                Lares piauenses com internet de qualidade
               </div>
-            </AnimatedSection>
+            </div>
 
-            <AnimatedSection animation="scale-in" delay={200}>
-              <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105 animate-wiggle">
-                <AnimatedIcon animation="bounce" className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <MapPin className="w-10 h-10 text-white" />
-                </AnimatedIcon>
+            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <MapPin className="w-10 h-10 text-white" />
+              </div>
               <StatsCounter endValue={5} label="Cidades Atendidas" />
-                <div className="text-white/80 mt-2 text-lg">
-                  Cobertura no sul do Piauí
-                </div>
+              <div className="text-white/80 mt-2 text-lg">
+                Cobertura no sul do Piauí
               </div>
-            </AnimatedSection>
+            </div>
 
-            <AnimatedSection animation="scale-in" delay={300}>
-              <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105 animate-rubber-band">
-                <AnimatedIcon animation="glow" className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <Zap className="w-10 h-10 text-white" />
-                </AnimatedIcon>
-                <StatsCounter endValue={99.9} label="Uptime Garantido" suffix="%" />
-                <div className="text-white/80 mt-2 text-lg">
-                  Conexão estável e confiável
-                </div>
+            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Zap className="w-10 h-10 text-white" />
               </div>
-            </AnimatedSection>
+              <StatsCounter endValue={99.9} label="Uptime Garantido" suffix="%" />
+              <div className="text-white/80 mt-2 text-lg">
+                Conexão estável e confiável
+              </div>
+            </div>
 
-            <AnimatedSection animation="scale-in" delay={400}>
-              <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105 animate-tada">
-                <AnimatedIcon animation="pulse" className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <Heart className="w-10 h-10 text-white" />
-                </AnimatedIcon>
-                <StatsCounter endValue={98} label="Satisfação" suffix="%" />
-                <div className="text-white/80 mt-2 text-lg">
-                  Clientes recomendam nossos serviços
-                </div>
+            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Heart className="w-10 h-10 text-white" />
               </div>
-            </AnimatedSection>
+              <StatsCounter endValue={98} label="Satisfação" suffix="%" />
+              <div className="text-white/80 mt-2 text-lg">
+                Clientes recomendam nossos serviços
+              </div>
+            </div>
           </div>
         </div>
-        </section>
-      </AnimatedSection>
+      </section>
 
       {/* About Section */}
       <section id="sobre" className="py-16 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">

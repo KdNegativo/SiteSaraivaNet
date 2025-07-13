@@ -141,39 +141,30 @@ const ChatBot = () => {
 
   return (
     <>
-      {/* Floating Chat Button Ultra Premium */}
+      {/* Floating Chat Button */}
       <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center gap-3">
-        {/* Desktop Tooltip Premium */}
-        <div className="hidden md:block bg-white/90 backdrop-blur-xl text-gray-800 px-4 py-3 rounded-2xl text-sm font-medium shadow-xl border border-orange-200/50 hover:scale-105 transition-all duration-300 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-100/50 to-transparent animate-shimmer"></div>
-          <div className="flex items-center gap-2 relative z-10">
-            <Sparkles className="w-4 h-4 text-orange-500" />
-            <span className="font-semibold">Assistente Virtual</span>
-          </div>
+        {/* Label sempre visível */}
+        <div className="bg-white shadow-lg rounded-full px-4 py-2 border border-gray-200">
+          <p className="text-sm font-medium text-gray-700 whitespace-nowrap flex items-center gap-2">
+            <Bot className="w-4 h-4 text-orange-500" />
+            Assistente Virtual
+          </p>
         </div>
         
-        {/* Chat Button Ultra Premium */}
+        {/* Chat Button */}
         <button
           onClick={() => setIsOpen(true)}
-          className="relative group bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 hover:from-orange-400 hover:via-red-400 hover:to-pink-400 p-4 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-white/30 hover:border-white/50 overflow-hidden"
+          className="relative group bg-gradient-to-br from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 p-4 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-white/30 hover:border-white/50 overflow-hidden"
           aria-label="Abrir assistente virtual"
         >
-          {/* Glow Effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300 -z-10 animate-pulse"></div>
-          
-          {/* Shimmer Effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
-          
           {/* Button Content */}
           <div className="relative z-10">
-            <AnimatedIcon animation="float" className="text-white">
-              <MessageCircle className="w-7 h-7" />
-            </AnimatedIcon>
+            <MessageCircle className="w-7 h-7 text-white" />
           </div>
           
           {/* Notification Badge */}
-          <div className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center border-2 border-white shadow-lg animate-pulse">
-            <Heart className="w-2.5 h-2.5 text-white fill-current" />
+          <div className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg">
+            <Bot className="w-2.5 h-2.5 text-white" />
           </div>
         </button>
       </div>
