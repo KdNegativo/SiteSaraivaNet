@@ -23,7 +23,7 @@ const ChatBot = () => {
     {
       id: 'installation',
       question: "🔧 Como funciona a instalação?",
-      answer: "Nossa equipe técnica agenda um horário conveniente para você e realiza toda a instalação profissional gratuitamente! Levamos todos os equipamentos necessários e deixamos tudo funcionando perfeitamente. 🚀",
+      answer: "Nossa equipe técnica agenda um horário conveniente para você e realiza toda a instalação profissional! Levamos todos os equipamentos necessários e deixamos tudo funcionando perfeitamente. Taxa de instalação: R$ 149,90 (paga apenas uma vez). 🚀",
       icon: "🔧"
     },
     {

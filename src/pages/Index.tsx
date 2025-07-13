@@ -375,7 +375,7 @@ const Index = () => {
                     text: "Velocidade garantida por contrato"
                   }, {
                     icon: CheckCircle,
-                    text: "Instalação profissional e Wi-Fi potente"
+                    text: "Instalação profissional (taxa única R$ 149,90)"
                   }, {
                     icon: Heart,
                     text: "Sem fidelidade, cancele quando quiser"
