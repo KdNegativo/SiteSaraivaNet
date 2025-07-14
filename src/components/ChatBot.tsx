@@ -17,6 +17,7 @@ const ChatBot = () => {
   ]);
   const [showOptions, setShowOptions] = useState(true);
   const [currentStep, setCurrentStep] = useState('main');
+  const [showContactOptions, setShowContactOptions] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
   const faqOptions = [
@@ -47,7 +48,7 @@ const ChatBot = () => {
     {
       id: 'whatsapp',
       question: "💬 Falar com atendente humano",
-      answer: "Perfeito! Vou te conectar com nossa equipe no WhatsApp agora mesmo! Eles vão cuidar de tudo para você! 🥰",
+      answer: "Perfeito! Escolha com quem gostaria de falar:",
       isWhatsApp: true,
       icon: "💬"
     }
@@ -88,16 +89,71 @@ const ChatBot = () => {
         }, 1000);
       }
 
-      // Redireciona para WhatsApp se necessário
+      // Mostra opções de contato para WhatsApp
       if (faq.isWhatsApp) {
         setTimeout(() => {
-          const phoneNumber = "5589994395789";
-          const message = "Olá! Gostaria de falar com um atendente da SaraivaNet.";
-          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-          window.open(whatsappUrl, '_blank');
-        }, 2000);
+          setShowContactOptions(true);
+          setCurrentStep('contact');
+        }, 1000);
       }
     }, 1500 + Math.random() * 1000); // Tempo variável para parecer mais humano
+  };
+
+  const handleContactOption = (type: 'office' | 'joaquim') => {
+    const phoneNumbers = {
+      office: "5589994395789",
+      joaquim: "5589994024531"
+    };
+    
+    const names = {
+      office: "Escritório SaraivaNet",
+      joaquim: "Joaquim"
+    };
+    
+    const phoneNumber = phoneNumbers[type];
+    const contactName = names[type];
+    const message = `Olá! Gostaria de falar com um atendente da SaraivaNet.`;
+    
+    // Tenta tanto WhatsApp Business quanto normal
+    const whatsappBusinessUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Adiciona mensagem do usuário
+    setMessages(prev => [
+      ...prev,
+      { 
+        id: Date.now(), 
+        text: `Contatar ${contactName}`, 
+        isBot: false, 
+        timestamp: new Date() 
+      }
+    ]);
+
+    // Simula digitação da resposta
+    setIsTyping(true);
+    setShowContactOptions(false);
+
+    setTimeout(() => {
+      setIsTyping(false);
+      setMessages(prev => [
+        ...prev,
+        { 
+          id: Date.now() + 1, 
+          text: `Perfeito! Redirecionando você para o WhatsApp de ${contactName}... 🚀`, 
+          isBot: true,
+          timestamp: new Date()
+        }
+      ]);
+      
+      setTimeout(() => {
+        // Tenta primeiro WhatsApp Business, depois normal
+        const businessWindow = window.open(whatsappBusinessUrl, '_blank');
+        if (!businessWindow) {
+          window.open(whatsappUrl, '_blank');
+        }
+        setCurrentStep('back');
+      }, 1500);
+    }, 1000);
   };
 
   const handleBack = () => {
@@ -110,6 +166,7 @@ const ChatBot = () => {
       }
     ]);
     setShowOptions(true);
+    setShowContactOptions(false);
     setCurrentStep('main');
   };
 
@@ -265,6 +322,43 @@ const ChatBot = () => {
                       </div>
                     </button>
                   ))}
+                </div>
+              )}
+
+              {/* Contact Options */}
+              {showContactOptions && !isTyping && (
+                <div className="space-y-3 mt-6">
+                  <div className="text-center text-gray-600 font-medium mb-4 flex items-center justify-center gap-2">
+                    <Sparkles className="w-4 h-4 text-orange-500" />
+                    <span>Escolha o contato:</span>
+                  </div>
+                  <button
+                    onClick={() => handleContactOption('office')}
+                    className="w-full text-left p-4 bg-white/80 hover:bg-white backdrop-blur-sm text-gray-800 border border-orange-200/50 hover:border-orange-300/70 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg animate-slide-in-left relative overflow-hidden group touch-manipulation"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-100/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                    <div className="flex items-center gap-3 relative z-10">
+                      <span className="text-lg">🏢</span>
+                      <div>
+                        <span className="font-medium text-sm leading-relaxed block">Escritório SaraivaNet</span>
+                        <span className="text-xs text-gray-600">Atendimento comercial e suporte</span>
+                      </div>
+                    </div>
+                  </button>
+                  <button
+                    onClick={() => handleContactOption('joaquim')}
+                    className="w-full text-left p-4 bg-white/80 hover:bg-white backdrop-blur-sm text-gray-800 border border-orange-200/50 hover:border-orange-300/70 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg animate-slide-in-left relative overflow-hidden group touch-manipulation"
+                    style={{ animationDelay: '100ms' }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-100/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                    <div className="flex items-center gap-3 relative z-10">
+                      <span className="text-lg">👤</span>
+                      <div>
+                        <span className="font-medium text-sm leading-relaxed block">Joaquim</span>
+                        <span className="text-xs text-gray-600">Atendimento direto</span>
+                      </div>
+                    </div>
+                  </button>
                 </div>
               )}
 
