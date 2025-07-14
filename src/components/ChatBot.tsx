@@ -112,11 +112,6 @@ const ChatBot = () => {
     
     const phoneNumber = phoneNumbers[type];
     const contactName = names[type];
-    const message = `Olá! Gostaria de falar com um atendente da SaraivaNet.`;
-    
-    // Tenta tanto WhatsApp Business quanto normal
-    const whatsappBusinessUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
     // Adiciona mensagem do usuário
     setMessages(prev => [
@@ -146,10 +141,25 @@ const ChatBot = () => {
       ]);
       
       setTimeout(() => {
-        // Tenta primeiro WhatsApp Business, depois normal
-        const businessWindow = window.open(whatsappBusinessUrl, '_blank');
-        if (!businessWindow) {
-          window.open(whatsappUrl, '_blank');
+        if (type === 'joaquim') {
+          // Para Joaquim: WhatsApp sem mensagem automática
+          const whatsappBusinessUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+          const whatsappUrl = `https://wa.me/${phoneNumber}`;
+          
+          const businessWindow = window.open(whatsappBusinessUrl, '_blank');
+          if (!businessWindow) {
+            window.open(whatsappUrl, '_blank');
+          }
+        } else {
+          // Para escritório: com mensagem automática
+          const message = `Olá! Gostaria de falar com um atendente da SaraivaNet.`;
+          const whatsappBusinessUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+          
+          const businessWindow = window.open(whatsappBusinessUrl, '_blank');
+          if (!businessWindow) {
+            window.open(whatsappUrl, '_blank');
+          }
         }
         setCurrentStep('back');
       }, 1500);
