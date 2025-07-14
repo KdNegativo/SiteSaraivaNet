@@ -378,7 +378,7 @@ const Index = () => {
                     text: "Instalação profissional (taxa única R$ 149,90)"
                   }, {
                     icon: Heart,
-                    text: "Sem fidelidade, cancele quando quiser"
+                    text: "Contrato de 12 meses"
                   }].map((feature, index) => <div key={index} className="flex items-center space-x-3 p-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-orange-400 hover:bg-gray-600/50 transition-all duration-300 hover:scale-105 transform touch-manipulation">
                         <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
                           <feature.icon className="w-4 h-4 text-white" />
