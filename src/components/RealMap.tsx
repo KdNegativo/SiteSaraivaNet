@@ -26,35 +26,35 @@ const cities: City[] = [
     lat: -8.09667,
     lng: -43.6636,
     status: 'active',
-    description: 'Internet fibra óptica 300MB + SaraivaTV'
+    description: 'Internet fibra óptica 300MB + SaraivaTV incluso | 1.200+ clientes conectados'
   },
   {
     name: 'Colônia do Gurguéia',
     lat: -8.18241,
     lng: -43.7922,
     status: 'active',
-    description: 'Internet fibra óptica disponível'
+    description: 'Internet fibra óptica 300MB + SaraivaTV | Instalação gratuita disponível'
   },
   {
     name: 'Manoel Emídio',
     lat: -8.01278,
     lng: -43.8719,
     status: 'active',
-    description: 'Cobertura completa de fibra óptica'
+    description: 'Cobertura completa 300MB + SaraivaTV | 800+ clientes satisfeitos'
   },
   {
     name: 'Canavieira',
     lat: -7.70000,
     lng: -43.7167,
     status: 'active',
-    description: 'Internet fibra óptica de alta velocidade'
+    description: 'Internet fibra óptica 300MB + SaraivaTV | Zona rural incluída'
   },
   {
     name: 'Jerumenha',
     lat: -7.08778,
     lng: -43.5097,
     status: 'active',
-    description: 'Conectividade premium com SaraivaTV'
+    description: 'Conectividade premium 300MB + SaraivaTV | Suporte 24h disponível'
   }
 ];
 
@@ -63,33 +63,40 @@ const RealMap: React.FC = () => {
   const mapInstance = useRef<L.Map | null>(null);
 
   const createCustomIcon = (status: string) => {
-    const color = '#16a34a'; // verde para todas as cidades ativas
+    const color = '#16a34a';
     return L.divIcon({
       className: 'custom-marker',
       html: `
         <div style="
-          background-color: ${color};
-          width: 25px;
-          height: 25px;
+          background: linear-gradient(45deg, ${color}, #22c55e);
+          width: 35px;
+          height: 35px;
           border-radius: 50%;
-          border: 3px solid white;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+          border: 4px solid white;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 0 4px rgba(22,163,74,0.3);
           position: relative;
+          animation: pulse 2s infinite;
         ">
           <div style="
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            border-radius: 50%;
-          "></div>
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+          ">📡</div>
         </div>
+        <style>
+          @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+          }
+        </style>
       `,
-      iconSize: [25, 25],
-      iconAnchor: [12, 12],
+      iconSize: [35, 35],
+      iconAnchor: [17, 17],
     });
   };
 
@@ -163,7 +170,7 @@ const RealMap: React.FC = () => {
             </div>
             <br>
             <button 
-              onclick="window.open('https://wa.me/5586999999999?text=${encodeURIComponent(
+              onclick="window.open('https://wa.me/5589994395789?text=${encodeURIComponent(
                 `Olá! Gostaria de contratar internet em ${city.name}. Podem me ajudar?`
               )}', '_blank')"
               style="
@@ -222,10 +229,16 @@ const RealMap: React.FC = () => {
 
   return (
     <div className="w-full">
-      <div className="mb-4 text-center">
+      <div className="mb-6 text-center bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-xl p-6 border border-blue-400/30">
         <h1 className="text-xl font-bold text-white mb-1">SaraivaNet</h1>
-        <h3 className="text-2xl font-bold text-white mb-2">🗺️ Mapa de Cobertura</h3>
-        <p className="text-blue-200">Região Sul do Piauí - Internet de Fibra Óptica</p>
+        <h3 className="text-3xl font-bold text-white mb-2 flex items-center justify-center gap-2">
+          🗺️ Mapa de Cobertura Completa
+        </h3>
+        <p className="text-blue-200 text-lg">📍 Região Sul do Piauí - Internet Fibra Óptica 300MB</p>
+        <div className="mt-3 flex justify-center gap-4 text-sm">
+          <span className="bg-green-600/80 px-3 py-1 rounded-full text-white font-medium">5 Cidades Ativas</span>
+          <span className="bg-orange-600/80 px-3 py-1 rounded-full text-white font-medium">3.000+ Clientes</span>
+        </div>
       </div>
       
       {/* Container do Mapa */}

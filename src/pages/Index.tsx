@@ -760,14 +760,29 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <TestimonialCard name="Maria Santos" age="68 anos" location="Centro de Eliseu Martins" initials="MS" testimonial="A internet da SaraivaNet mudou minha vida! Agora consigo falar com meus netos 
-                que moram longe todos os dias. O atendimento é muito carinhoso." />
+            <TestimonialCard 
+              name="Maria Santos" 
+              age="68 anos" 
+              location="Centro de Eliseu Martins" 
+              initials="MS" 
+              testimonial="Meu filho instalou essa internet aqui em casa e nossa... que diferença! Agora consigo ver meus netinhos que moram em São Paulo toda semana pelo vídeo. A Dona Francisca, minha vizinha, ficou com inveja (risos). O rapaz que veio instalar foi muito educado, me ensinou direitinho como usar." 
+            />
             
-            <TestimonialCard name="João Silva" age="45 anos" location="Bairro São José" initials="JS" testimonial="Trabalho com vendas online e a internet nunca me deixou na mão. Rápida e estável, 
-                exatamente o que precisava para meu negócio crescer." />
+            <TestimonialCard 
+              name="João Silva" 
+              age="45 anos" 
+              location="Bairro São José" 
+              initials="JS" 
+              testimonial="Rapaz, eu tinha uma internet que vivia caindo bem na hora que eu ia fechar uma venda. Desde que mudei pra SaraivaNet, nunca mais tive problema. Os clientes conseguem ver minhas fotos dos produtos na hora, sem aquela demora chata. Valeu cada centavo!" 
+            />
             
-            <TestimonialCard name="Ana Oliveira" age="72 anos" location="Vila Nova" initials="AO" testimonial="Os técnicos são muito educados e me ensinaram a usar o Wi-Fi. Agora assisto 
-                meus programas favoritos no tablet sem travar." />
+            <TestimonialCard 
+              name="Ana Oliveira" 
+              age="72 anos" 
+              location="Vila Nova" 
+              initials="AO" 
+              testimonial="Eu tinha medo dessas coisas de internet, achava muito complicado. Mas o técnico teve uma paciência de santo comigo! Me ensinou a mexer no tablet, baixar os aplicativos... Agora até assisto novela no celular quando estou cozinhando. Minha filha não acredita!" 
+            />
           </div>
         </div>
       </section>
