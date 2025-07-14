@@ -142,15 +142,7 @@ const ChatBot = () => {
   return (
     <>
       {/* Floating Chat Button */}
-      <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex items-center gap-3">
-        {/* Label sempre visível */}
-        <div className="bg-white shadow-lg rounded-full px-4 py-2 border border-gray-200">
-          <p className="text-sm font-medium text-gray-700 whitespace-nowrap flex items-center gap-2">
-            <Bot className="w-4 h-4 text-orange-500" />
-            Assistente Virtual
-          </p>
-        </div>
-        
+      <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40">
         {/* Chat Button */}
         <button
           onClick={() => setIsOpen(true)}
@@ -160,11 +152,6 @@ const ChatBot = () => {
           {/* Button Content */}
           <div className="relative z-10">
             <MessageCircle className="w-7 h-7 text-white" />
-          </div>
-          
-          {/* Notification Badge */}
-          <div className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg">
-            <Bot className="w-2.5 h-2.5 text-white" />
           </div>
         </button>
       </div>
