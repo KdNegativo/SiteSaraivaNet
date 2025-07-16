@@ -69,11 +69,11 @@ const RealMap: React.FC = () => {
       html: `
         <div style="
           background: linear-gradient(45deg, ${color}, #22c55e);
-          width: 35px;
-          height: 35px;
+          width: 24px;
+          height: 24px;
           border-radius: 50%;
-          border: 4px solid white;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 0 4px rgba(22,163,74,0.3);
+          border: 2px solid white;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.2), 0 0 0 2px rgba(22,163,74,0.2);
           position: relative;
           animation: pulse 2s infinite;
         ">
@@ -83,7 +83,7 @@ const RealMap: React.FC = () => {
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 16px;
+            font-size: 10px;
             font-weight: bold;
           ">📡</div>
         </div>
@@ -95,8 +95,8 @@ const RealMap: React.FC = () => {
           }
         </style>
       `,
-      iconSize: [35, 35],
-      iconAnchor: [17, 17],
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
     });
   };
 

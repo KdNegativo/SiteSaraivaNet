@@ -765,7 +765,7 @@ const Index = () => {
               age="68 anos" 
               location="Centro de Eliseu Martins" 
               initials="MS" 
-              testimonial="Meu filho instalou essa internet aqui em casa e nossa... que diferença! Agora consigo ver meus netinhos que moram em São Paulo toda semana pelo vídeo. A Dona Francisca, minha vizinha, ficou com inveja (risos). O rapaz que veio instalar foi muito educado, me ensinou direitinho como usar." 
+              testimonial="Nossa, que diferença essa internet fez na minha vida! Antes eu não conseguia nem fazer uma videochamada direito com meus filhos. Agora converso com eles toda semana, vejo meus netinhos crescendo... O moço que veio instalar foi um amor, me ensinou tudo com paciência. Estou muito feliz mesmo!" 
             />
             
             <TestimonialCard 
@@ -773,7 +773,7 @@ const Index = () => {
               age="45 anos" 
               location="Bairro São José" 
               initials="JS" 
-              testimonial="Rapaz, eu tinha uma internet que vivia caindo bem na hora que eu ia fechar uma venda. Desde que mudei pra SaraivaNet, nunca mais tive problema. Os clientes conseguem ver minhas fotos dos produtos na hora, sem aquela demora chata. Valeu cada centavo!" 
+              testimonial="Cara, mudou tudo aqui no meu negócio! Antes a internet travava justo na hora de mostrar produto pro cliente, era um sufoco. Agora com a SaraivaNet, tudo funciona certinho. Consigo mandar foto, fazer vídeo, tudo na hora. Meus clientes ficam impressionados com a rapidez!" 
             />
             
             <TestimonialCard 
@@ -781,7 +781,7 @@ const Index = () => {
               age="72 anos" 
               location="Vila Nova" 
               initials="AO" 
-              testimonial="Eu tinha medo dessas coisas de internet, achava muito complicado. Mas o técnico teve uma paciência de santo comigo! Me ensinou a mexer no tablet, baixar os aplicativos... Agora até assisto novela no celular quando estou cozinhando. Minha filha não acredita!" 
+              testimonial="Eu era meio desconfiada dessas coisas de internet, achava complicado demais. Mas que surpresa boa! O técnico me explicou tudo devagar, instalou os aplicativos que eu queria... Agora assisto meus programas favoritos no tablet, converso com as amigas... Até minha filha ficou boba!" 
             />
           </div>
         </div>

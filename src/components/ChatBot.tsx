@@ -42,7 +42,7 @@ const ChatBot = () => {
     {
       id: 'plans',
       question: "💰 Quais são os planos?",
-      answer: "Nosso plano completo:\n\n🚀 300MB Fibra Óptica\n📺 SaraivaTV Grátis\n🔧 Instalação Profissional\n🛡️ Suporte 24h\n💝 Sem fidelidade\n\nPor apenas R$ 129,90/mês\n(3 primeiros meses com desconto!) 🎊",
+      answer: "Nosso plano completo:\n\n🚀 300MB Fibra Óptica\n📺 SaraivaTV Grátis\n🔧 Instalação Profissional\n🛡️ Suporte 24h\n✅ Com fidelidade de 12 meses\n\nPor apenas R$ 129,90/mês\n(3 primeiros meses com desconto!) 🎊",
       icon: "💰"
     },
     {
