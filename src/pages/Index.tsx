@@ -765,7 +765,7 @@ const Index = () => {
               age="68 anos" 
               location="Centro de Eliseu Martins" 
               initials="MS" 
-              testimonial="Nossa, que diferença essa internet fez na minha vida! Antes eu não conseguia nem fazer uma videochamada direito com meus filhos. Agora converso com eles toda semana, vejo meus netinhos crescendo... O moço que veio instalar foi um amor, me ensinou tudo com paciência. Estou muito feliz mesmo!" 
+              testimonial="Aqui em casa a internet funciona super bem, nunca tive problema de velocidade ou queda. Cumpre o que promete." 
             />
             
             <TestimonialCard 
@@ -773,7 +773,7 @@ const Index = () => {
               age="45 anos" 
               location="Bairro São José" 
               initials="JS" 
-              testimonial="Cara, mudou tudo aqui no meu negócio! Antes a internet travava justo na hora de mostrar produto pro cliente, era um sufoco. Agora com a SaraivaNet, tudo funciona certinho. Consigo mandar foto, fazer vídeo, tudo na hora. Meus clientes ficam impressionados com a rapidez!" 
+              testimonial="O atendimento foi rápido e eficiente, e a instalação foi no prazo. A conexão tá ótima até agora." 
             />
             
             <TestimonialCard 
@@ -781,7 +781,7 @@ const Index = () => {
               age="72 anos" 
               location="Vila Nova" 
               initials="AO" 
-              testimonial="Eu era meio desconfiada dessas coisas de internet, achava complicado demais. Mas que surpresa boa! O técnico me explicou tudo devagar, instalou os aplicativos que eu queria... Agora assisto meus programas favoritos no tablet, converso com as amigas... Até minha filha ficou boba!" 
+              testimonial="Trabalho com internet o dia todo e essa foi a melhor que já tive. Estável, rápida e sem surpresas na conta." 
             />
           </div>
         </div>
