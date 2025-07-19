@@ -571,11 +571,11 @@ const Index = () => {
                 Tudo que passa na TV, passa no app em tempo real
               </p>
               <div className="space-y-2 relative z-10">
-                <span className="inline-block glass-premium text-purple-600 px-3 py-1 rounded-full text-sm font-bold border border-purple-300/50">Ao Vivo</span>
-                <span className="inline-block glass-premium text-purple-600 px-3 py-1 rounded-full text-sm font-bold ml-2 border border-purple-300/50">Tempo Real</span>
+                <span className="text-purple-600 text-sm font-bold">Ao Vivo</span>
+                <span className="text-purple-600 text-sm font-bold ml-2">Tempo Real</span>
                 <div className="mt-2">
-                  <span className="inline-block glass-premium text-purple-600 px-3 py-1 rounded-full text-sm font-bold border border-purple-300/50">Sem Atraso</span>
-                  <span className="inline-block glass-premium text-purple-600 px-3 py-1 rounded-full text-sm font-bold ml-2 border border-purple-300/50">Qualidade HD</span>
+                  <span className="text-purple-600 text-sm font-bold">Sem Atraso</span>
+                  <span className="text-purple-600 text-sm font-bold ml-2">Qualidade HD</span>
                 </div>
               </div>
             </Card>
