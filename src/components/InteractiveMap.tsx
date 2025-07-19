@@ -133,9 +133,9 @@ const InteractiveMap: React.FC = () => {
     // Inicializar o mapa
     mapInstance.current = L.map(mapRef.current).setView(centerCoords, 13);
 
-    // Adicionar camada do mapa
+    // Adicionar camada do mapa sem marca d'água
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors',
+      attribution: '',
       maxZoom: 18,
     }).addTo(mapInstance.current);
 

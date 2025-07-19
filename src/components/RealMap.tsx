@@ -134,9 +134,9 @@ const RealMap: React.FC = () => {
 
       console.log('RealMap: Mapa criado, adicionando camada de tiles');
       
-      // Adicionar tiles do OpenStreetMap
+      // Adicionar tiles sem marca d'água
       const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
+        attribution: '',
         maxZoom: 18,
       });
       
