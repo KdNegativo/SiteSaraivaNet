@@ -503,67 +503,67 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
-            <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 glass-premium glow relative overflow-hidden touch-manipulation">
+            <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-200/20 to-transparent animate-shimmer"></div>
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl glow relative z-10">
-                <Tv className="w-12 h-12 text-white" />
+              <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
+                <Tv className="w-12 h-12 text-orange-500" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">Canais de TV</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 Assista os mesmos canais da sua TV direto no celular
               </p>
               <div className="space-y-2 relative z-10">
-                <span className="inline-block glass-premium text-orange-600 px-3 py-1 rounded-full text-sm font-bold border border-orange-300/50">TV Aberta</span>
-                <span className="inline-block glass-premium text-orange-600 px-3 py-1 rounded-full text-sm font-bold ml-2 border border-orange-300/50">Canais Locais</span>
+                <span className="text-orange-600 text-sm font-bold">TV Aberta</span>
+                <span className="text-orange-600 text-sm font-bold ml-2">Canais Locais</span>
                 <div className="mt-2">
-                  <span className="inline-block glass-premium text-orange-600 px-3 py-1 rounded-full text-sm font-bold border border-orange-300/50">Notícias</span>
-                  <span className="inline-block glass-premium text-orange-600 px-3 py-1 rounded-full text-sm font-bold ml-2 border border-orange-300/50">Esportes</span>
+                  <span className="text-orange-600 text-sm font-bold">Notícias</span>
+                  <span className="text-orange-600 text-sm font-bold ml-2">Esportes</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 glass-premium glow relative overflow-hidden touch-manipulation">
+            <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-200/20 to-transparent animate-shimmer"></div>
-              <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl glow relative z-10">
-                <Music className="w-12 h-12 text-white" />
+              <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
+                <Music className="w-12 h-12 text-green-500" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">Rádios Online</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 Escute suas rádios favoritas onde estiver
               </p>
               <div className="space-y-2 relative z-10">
-                <span className="inline-block glass-premium text-green-600 px-3 py-1 rounded-full text-sm font-bold border border-green-300/50">Rádios Locais</span>
-                <span className="inline-block glass-premium text-green-600 px-3 py-1 rounded-full text-sm font-bold ml-2 border border-green-300/50">Música</span>
+                <span className="text-green-600 text-sm font-bold">Rádios Locais</span>
+                <span className="text-green-600 text-sm font-bold ml-2">Música</span>
                 <div className="mt-2">
-                  <span className="inline-block glass-premium text-green-600 px-3 py-1 rounded-full text-sm font-bold border border-green-300/50">Notícias</span>
-                  <span className="inline-block glass-premium text-green-600 px-3 py-1 rounded-full text-sm font-bold ml-2 border border-green-300/50">Esportes</span>
+                  <span className="text-green-600 text-sm font-bold">Notícias</span>
+                  <span className="text-green-600 text-sm font-bold ml-2">Esportes</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 glass-premium glow relative overflow-hidden touch-manipulation">
+            <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-200/20 to-transparent animate-shimmer"></div>
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl glow relative z-10">
-                <Smartphone className="w-12 h-12 text-white" />
+              <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
+                <Smartphone className="w-12 h-12 text-blue-500" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">No Seu Celular</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 App fácil de usar para Android e iOS
               </p>
               <div className="space-y-2 relative z-10">
-                <span className="inline-block glass-premium text-blue-600 px-3 py-1 rounded-full text-sm font-bold border border-blue-300/50">Android</span>
-                <span className="inline-block glass-premium text-blue-600 px-3 py-1 rounded-full text-sm font-bold ml-2 border border-blue-300/50">iOS</span>
+                <span className="text-blue-600 text-sm font-bold">Android</span>
+                <span className="text-blue-600 text-sm font-bold ml-2">iOS</span>
                 <div className="mt-2">
-                  <span className="inline-block glass-premium text-blue-600 px-3 py-1 rounded-full text-sm font-bold border border-blue-300/50">Fácil de Usar</span>
-                  <span className="inline-block glass-premium text-blue-600 px-3 py-1 rounded-full text-sm font-bold ml-2 border border-blue-300/50">Gratuito</span>
+                  <span className="text-blue-600 text-sm font-bold">Fácil de Usar</span>
+                  <span className="text-blue-600 text-sm font-bold ml-2">Gratuito</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 glass-premium glow relative overflow-hidden touch-manipulation">
+            <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-200/20 to-transparent animate-shimmer"></div>
-              <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl glow relative z-10">
-                <Zap className="w-12 h-12 text-white" />
+              <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
+                <Zap className="w-12 h-12 text-purple-500" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">Transmissão Ao Vivo</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
