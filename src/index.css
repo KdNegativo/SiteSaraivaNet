@@ -316,6 +316,19 @@
   }
 
   /* Glass morphism enhanced */
+  
+  /* Hide Leaflet attribution and branding */
+  .leaflet-control-attribution {
+    display: none !important;
+  }
+  
+  .leaflet-bottom.leaflet-right {
+    display: none !important;
+  }
+  
+  .leaflet-control-container .leaflet-control-attribution {
+    display: none !important;
+  }
   .glass-premium {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
