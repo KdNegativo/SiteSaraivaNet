@@ -232,12 +232,12 @@ const Index = () => {
 
           {/* SaraivaTV Card Ultra Premium */}
           <AnimatedSection animation="scale-in" delay={200}>
-            <div className="glass-premium rounded-2xl p-5 shadow-xl hover:bg-white/25 transition-all duration-300 max-w-xs mx-auto hover:scale-105 group active:scale-95 touch-manipulation glow relative overflow-hidden">
+            <div className="p-5 max-w-xs mx-auto group touch-manipulation relative overflow-hidden">
               {/* Shimmer Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
               
               <div className="text-center mb-4 relative z-10">
-                <div className="w-14 h-14 bg-gradient-to-br from-orange-400 via-red-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/40 glow">
+                <div className="w-14 h-14 flex items-center justify-center mx-auto mb-3">
                   <Smartphone className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-1 text-white" style={{
@@ -247,19 +247,19 @@ const Index = () => {
               </div>
               
               <div className="grid grid-cols-2 gap-2.5 mb-4 relative z-10">
-                <div className="glass-premium rounded-lg p-2.5 text-center hover:bg-white/25 transition-all duration-200 active:scale-95 touch-manipulation">
+                <div className="p-2.5 text-center touch-manipulation">
                   <Tv className="w-5 h-5 mx-auto mb-1.5 text-orange-300" />
                   <span className="text-xs font-semibold text-white">Canais TV</span>
                 </div>
-                <div className="glass-premium rounded-lg p-2.5 text-center hover:bg-white/25 transition-all duration-200 active:scale-95 touch-manipulation">
+                <div className="p-2.5 text-center touch-manipulation">
                   <Music className="w-5 h-5 mx-auto mb-1.5 text-green-300" />
                   <span className="text-xs font-semibold text-white">Rádios</span>
                 </div>
-                <div className="glass-premium rounded-lg p-2.5 text-center hover:bg-white/25 transition-all duration-200 active:scale-95 touch-manipulation">
+                <div className="p-2.5 text-center touch-manipulation">
                   <Zap className="w-5 h-5 mx-auto mb-1.5 text-blue-300" />
                   <span className="text-xs font-semibold text-white">Ao Vivo</span>
                 </div>
-                <div className="glass-premium rounded-lg p-2.5 text-center hover:bg-white/25 transition-all duration-200 active:scale-95 touch-manipulation">
+                <div className="p-2.5 text-center touch-manipulation">
                   <Smartphone className="w-5 h-5 mx-auto mb-1.5 text-purple-300" />
                   <span className="text-xs font-semibold text-white">No Celular</span>
                 </div>
@@ -486,10 +486,9 @@ const Index = () => {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center glass-premium text-orange-600 px-4 py-2.5 rounded-full text-sm font-bold mb-6 border border-orange-400/50 glow relative overflow-hidden">
+            <div className="inline-flex items-center text-orange-600 text-sm font-bold mb-6">
               <Tv className="w-4 h-4 mr-2" />
               <span>App Exclusivo</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-200/30 to-transparent animate-shimmer"></div>
             </div>
             <h2 className="text-5xl font-black mb-6 relative">
               <span className="text-gray-800">Conheça o </span>
