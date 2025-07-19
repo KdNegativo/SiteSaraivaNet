@@ -490,12 +490,9 @@ const Index = () => {
               <Tv className="w-4 h-4 mr-2" />
               <span>App Exclusivo</span>
             </div>
-            <h2 className="text-5xl font-black mb-6 relative">
+            <h2 className="text-5xl font-black mb-6">
               <span className="text-gray-800">Conheça o </span>
-              <span className="bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-clip-text text-transparent glow">SaraivaTV</span>
-              <div className="absolute inset-0 text-5xl font-black text-transparent bg-gradient-to-r from-orange-300/30 to-red-300/30 bg-clip-text blur-sm pointer-events-none">
-                Conheça o SaraivaTV
-              </div>
+              <span className="text-red-600">SaraivaTV</span>
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
               App gratuito que vem junto com sua internet. Assista TV direto no celular com qualidade HD!
