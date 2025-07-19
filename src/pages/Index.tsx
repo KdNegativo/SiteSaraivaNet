@@ -505,7 +505,7 @@ const Index = () => {
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Tv className="w-12 h-12 text-orange-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">Canais de TV</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">Canais de TV</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 Assista os mesmos canais da sua TV direto no celular
               </p>
@@ -524,7 +524,7 @@ const Index = () => {
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Music className="w-12 h-12 text-green-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">Rádios Online</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">Rádios Online</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 Escute suas rádios favoritas onde estiver
               </p>
@@ -543,7 +543,7 @@ const Index = () => {
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Smartphone className="w-12 h-12 text-blue-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">No Seu Celular</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">No Seu Celular</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 App fácil de usar para Android e iOS
               </p>
@@ -562,7 +562,7 @@ const Index = () => {
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Zap className="w-12 h-12 text-purple-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">Transmissão Ao Vivo</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">Transmissão Ao Vivo</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 Tudo que passa na TV, passa no app em tempo real
               </p>
@@ -577,10 +577,8 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="glass-premium rounded-3xl p-16 text-white relative overflow-hidden shadow-2xl glow" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 50%, #cc3300 100%)'}}>
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-            <div className="absolute top-10 right-10 w-32 h-32 bg-white/20 rounded-full blur-xl animate-pulse"></div>
-            <div className="absolute bottom-10 left-10 w-24 h-24 bg-orange-300/30 rounded-full blur-xl animate-pulse"></div>
+          <div className="glass-premium rounded-3xl p-16 text-white relative overflow-hidden shadow-2xl" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 50%, #cc3300 100%)'}}>
+            <div className="absolute inset-0"></div>
             <div className="relative z-10 text-center">
               <h3 className="text-4xl font-bold mb-6 leading-tight" style={{
                 textShadow: '3px 3px 12px rgba(0,0,0,0.8)'
@@ -591,7 +589,7 @@ const Index = () => {
                 Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
               </p>
               <div className="flex justify-center">
-                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-5 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3 btn-3d glow">
+                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-5 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3">
                   <span className="text-2xl">💬</span>
                   Entrar em Contato
                 </Button>
