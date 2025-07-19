@@ -138,41 +138,61 @@ const Index = () => {
               </div>
               
               {/* TÍTULO MOBILE ULTRA PREMIUM */}
-              <h1 className="text-4xl font-black mb-6 leading-tight">
-                <span className="block text-white mb-2">Internet</span>
-                <span className="block text-white">+ SaraivaTV</span>
+              <h1 className="text-4xl font-black mb-6 leading-tight relative">
+                <span className="block text-white mb-2 animate-fade-in relative z-10" style={{
+                  textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(255,255,255,0.3)',
+                  letterSpacing: '1px'
+                }}>Internet</span>
+                <span className="block text-white animate-fade-in relative z-10" style={{ 
+                  animationDelay: '0.2s',
+                  textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(255,255,255,0.3)',
+                  letterSpacing: '1px'
+                }}>+ SaraivaTV</span>
+                
+                {/* Glow Effect */}
+                <div className="absolute inset-0 text-4xl font-black leading-tight pointer-events-none">
+                  <span className="block text-transparent bg-gradient-to-r from-orange-300/50 to-yellow-300/50 bg-clip-text mb-2 blur-sm">Internet</span>
+                  <span className="block text-transparent bg-gradient-to-r from-orange-300/50 to-yellow-300/50 bg-clip-text blur-sm">+ SaraivaTV</span>
+                </div>
               </h1>
               
               {/* SUBTITLE PREMIUM */}
-              <p className="text-lg mb-8 text-white leading-relaxed font-bold px-2">
+              <p className="text-lg mb-8 text-white/95 leading-relaxed font-bold px-2 animate-fade-in relative" style={{ 
+                animationDelay: '0.4s',
+                textShadow: '2px 2px 8px rgba(0,0,0,0.8)',
+                letterSpacing: '0.5px'
+              }}>
                 🚀 Internet mais rápida + App GRATUITO!
+                <div className="absolute inset-0 text-lg leading-relaxed font-bold text-transparent bg-gradient-to-r from-white/30 to-orange-200/30 bg-clip-text blur-sm pointer-events-none">
+                  🚀 Internet mais rápida + App GRATUITO!
+                </div>
               </p>
 
               {/* CARTÕES MOBILE PREMIUM */}
               <div className="grid grid-cols-2 gap-3 mb-8 max-w-xs mx-auto">
-                <div className="p-4 flex flex-col items-center space-y-2">
-                  <div className="w-12 h-12 flex items-center justify-center">
-                    <Wifi className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-orange-500/95 to-red-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-orange-200/80 hover:from-orange-400/100 hover:to-red-400/90 transition-all duration-300 shadow-xl hover:shadow-orange-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation">
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-orange-200/50">
+                    <Wifi className="w-6 h-6 text-orange-600" />
                   </div>
-                  <span className="font-black text-sm text-center text-white leading-tight">Internet ULTRA</span>
+                  <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">Internet ULTRA</span>
                 </div>
-                <div className="p-4 flex flex-col items-center space-y-2">
-                  <div className="w-12 h-12 flex items-center justify-center">
-                    <Tv className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-blue-500/95 to-purple-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-blue-200/80 hover:from-blue-400/100 hover:to-purple-400/90 transition-all duration-300 shadow-xl hover:shadow-blue-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.1s' }}>
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-blue-200/50">
+                    <Tv className="w-6 h-6 text-blue-600" />
                   </div>
-                  <span className="font-black text-sm text-center text-white leading-tight">TV Premium</span>
+                  <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">TV Premium</span>
                 </div>
-                <div className="p-4 flex flex-col items-center space-y-2">
-                  <div className="w-12 h-12 flex items-center justify-center">
-                    <Music className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-green-500/95 to-emerald-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-green-200/80 hover:from-green-400/100 hover:to-emerald-400/90 transition-all duration-300 shadow-xl hover:shadow-green-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.2s' }}>
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-green-50 to-green-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-green-200/50">
+                    <Music className="w-6 h-6 text-green-600" />
                   </div>
-                  <span className="font-black text-sm text-center text-white leading-tight">Rádios 24h</span>
+                  <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">Rádios 24h</span>
                 </div>
-                <div className="p-4 flex flex-col items-center space-y-2">
-                  <div className="w-12 h-12 flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-white" />
+                <div className="group bg-gradient-to-br from-purple-500/95 to-pink-500/85 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border-2 border-purple-200/80 hover:from-purple-400/100 hover:to-pink-400/90 transition-all duration-300 shadow-xl hover:shadow-purple-500/70 hover:scale-105 active:scale-95 animate-slide-in-left touch-manipulation" style={{ animationDelay: '0.3s' }}>
+                  <div className="w-12 h-12 bg-gradient-to-br from-white via-purple-50 to-purple-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-purple-200/50">
+                    <Shield className="w-6 h-6 text-purple-600" />
                   </div>
-                  <span className="font-black text-sm text-center text-white leading-tight">Suporte VIP</span>
+                  <span className="font-black text-sm text-center text-white leading-tight drop-shadow-md">Suporte VIP</span>
                 </div>
               </div>
 
@@ -220,16 +240,18 @@ const Index = () => {
                 <div className="w-14 h-14 flex items-center justify-center mx-auto mb-3">
                   <Smartphone className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-1 text-white">SaraivaTV</h3>
+                <h3 className="text-xl font-bold mb-1 text-white" style={{
+                  textShadow: '2px 2px 8px rgba(0,0,0,0.8)'
+                }}>SaraivaTV</h3>
                 <p className="text-orange-200 text-sm font-medium">Canais favoritos no celular</p>
               </div>
               
               <div className="grid grid-cols-2 gap-2.5 mb-4 relative z-10">
-                <div className="p-2.5 text-center">
-                  <Tv className="w-5 h-5 mx-auto mb-1.5 text-white" />
+                <div className="p-2.5 text-center touch-manipulation">
+                  <Tv className="w-5 h-5 mx-auto mb-1.5 text-orange-300" />
                   <span className="text-xs font-semibold text-white">Canais TV</span>
                 </div>
-                <div className="p-2.5 text-center">
+                <div className="p-2.5 text-center touch-manipulation">
                   <Music className="w-5 h-5 mx-auto mb-1.5 text-green-300" />
                   <span className="text-xs font-semibold text-white">Rádios</span>
                 </div>
@@ -248,11 +270,11 @@ const Index = () => {
               </p>
               
               <div className="flex justify-center space-x-3 relative z-10">
-                <div className="rounded-lg p-2.5">
-                  <Smartphone className="w-5 h-5 text-white" />
+                <div className="glass-premium rounded-lg p-2.5 shadow-md active:scale-95 transition-transform duration-200 touch-manipulation glow">
+                  <Smartphone className="w-5 h-5 text-orange-300" />
                 </div>
-                <div className="rounded-lg p-2.5">
-                  <Tv className="w-5 h-5 text-white" />
+                <div className="glass-premium rounded-lg p-2.5 shadow-md active:scale-95 transition-transform duration-200 touch-manipulation glow">
+                  <Tv className="w-5 h-5 text-blue-300" />
                 </div>
               </div>
             </div>
@@ -370,17 +392,17 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <div className="rounded-3xl p-8 text-white relative overflow-hidden">
+            <div className="glass-premium rounded-3xl p-8 text-white shadow-2xl glow relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/30 to-orange-500/20 animate-pulse"></div>
               <h3 className="text-2xl font-bold mb-4 relative z-10" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>Não Perca Esta Oportunidade!</h3>
               <p className="text-base mb-6 opacity-90 max-w-2xl mx-auto relative z-10">
                 Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-10">
-                <TouchButton onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 font-bold rounded-xl transition-all duration-300">
+                <TouchButton onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 font-bold rounded-xl btn-3d glow transition-all duration-300">
                   💬 WhatsApp
                 </TouchButton>
-                <TouchButton className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-6 py-3 font-bold rounded-xl transition-all duration-300">
+                <TouchButton className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-6 py-3 font-bold rounded-xl btn-3d glow transition-all duration-300">
                   📞 Ligar Agora
                 </TouchButton>
               </div>
@@ -483,7 +505,7 @@ const Index = () => {
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Tv className="w-12 h-12 text-orange-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">Canais de TV</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">Canais de TV</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 Assista os mesmos canais da sua TV direto no celular
               </p>
@@ -502,7 +524,7 @@ const Index = () => {
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Music className="w-12 h-12 text-green-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">Rádios Online</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">Rádios Online</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 Escute suas rádios favoritas onde estiver
               </p>
@@ -521,7 +543,7 @@ const Index = () => {
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Smartphone className="w-12 h-12 text-blue-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">No Seu Celular</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">No Seu Celular</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 App fácil de usar para Android e iOS
               </p>
@@ -540,7 +562,7 @@ const Index = () => {
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Zap className="w-12 h-12 text-purple-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">Transmissão Ao Vivo</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10 glow">Transmissão Ao Vivo</h3>
               <p className="text-gray-600 mb-6 relative z-10 font-medium">
                 Tudo que passa na TV, passa no app em tempo real
               </p>
@@ -555,7 +577,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="rounded-3xl p-16 text-white relative overflow-hidden" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 50%, #cc3300 100%)'}}>
+          <div className="glass-premium rounded-3xl p-16 text-white relative overflow-hidden shadow-2xl glow" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 50%, #cc3300 100%)'}}>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
             <div className="absolute top-10 right-10 w-32 h-32 bg-white/20 rounded-full blur-xl animate-pulse"></div>
             <div className="absolute bottom-10 left-10 w-24 h-24 bg-orange-300/30 rounded-full blur-xl animate-pulse"></div>
@@ -569,7 +591,7 @@ const Index = () => {
                 Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
               </p>
               <div className="flex justify-center">
-                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-5 text-xl font-bold rounded-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3">
+                <Button onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-5 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3 btn-3d glow">
                   <span className="text-2xl">💬</span>
                   Entrar em Contato
                 </Button>
@@ -782,12 +804,19 @@ const Index = () => {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center text-white px-4 py-2.5 rounded-full text-sm font-bold mb-6">
+            <div className="inline-flex items-center glass-premium text-white px-4 py-2.5 rounded-full text-sm font-bold mb-6 border border-white/50 glow relative overflow-hidden">
               <Phone className="w-4 h-4 mr-2" />
               <span>Fale Conosco</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
             </div>
-            <h2 className="text-5xl font-bold text-white mb-4">
+            <h2 className="text-5xl font-bold text-white mb-4 relative" style={{
+              textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(255,255,255,0.3)',
+              letterSpacing: '1px'
+            }}>
               Entre em Contato
+              <div className="absolute inset-0 text-5xl font-bold text-transparent bg-gradient-to-r from-white/30 to-blue-200/30 bg-clip-text blur-sm pointer-events-none">
+                Entre em Contato
+              </div>
             </h2>
             <p className="text-xl text-white/90 font-medium leading-relaxed">
               Estamos aqui para ajudar! Entre em contato conosco e descubra como podemos 
@@ -796,39 +825,42 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="p-8 transition-all duration-300 text-white">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center">
+            <Card className="p-8 glass-premium hover:bg-white/25 transition-all duration-300 transform hover:scale-105 glow border border-white/20 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+              <div className="flex items-center space-x-4 mb-4 relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg glow">
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Telefone</h3>
+                  <h3 className="text-2xl font-bold text-white glow">Telefone</h3>
                   <p className="text-white/90 text-lg font-medium">(89) 99439-5789</p>
                   <p className="text-sm text-white/70">WhatsApp disponível</p>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-8 transition-all duration-300 text-white">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center">
+            <Card className="p-8 glass-premium hover:bg-white/25 transition-all duration-300 transform hover:scale-105 glow border border-white/20 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+              <div className="flex items-center space-x-4 mb-4 relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg glow">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Endereço</h3>
+                  <h3 className="text-2xl font-bold text-white glow">Endereço</h3>
                   <p className="text-white/90 text-lg font-medium">Rua Fernando Silva, Centro</p>
                   <p className="text-sm text-white/70">Eliseu Martins - PI</p>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-8 transition-all duration-300 text-white">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center">
+            <Card className="p-8 glass-premium hover:bg-white/25 transition-all duration-300 transform hover:scale-105 glow border border-white/20 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+              <div className="flex items-center space-x-4 mb-4 relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg glow">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Horário</h3>
+                  <h3 className="text-2xl font-bold text-white glow">Horário</h3>
                   <p className="text-white/90 text-lg font-medium">Segunda a Sábado</p>
                   <p className="text-sm text-white/70">8h às 18h</p>
                 </div>
@@ -837,14 +869,15 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <div className="rounded-3xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">
+            <div className="glass-premium rounded-3xl p-8 glow relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+              <h3 className="text-2xl font-bold text-white mb-4 relative z-10" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
                 🚀 Pronto para se conectar?
               </h3>
-              <p className="text-white/90 mb-6 text-lg">
+              <p className="text-white/90 mb-6 text-lg relative z-10">
                 Entre em contato agora e ganhe o SaraivaTV grátis!
               </p>
-              <TouchButton onClick={handleWhatsAppClick} className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold rounded-2xl transform hover:scale-110 transition-all duration-300">
+              <TouchButton onClick={handleWhatsAppClick} className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 btn-3d glow relative z-10">
                 💬 Falar no WhatsApp
               </TouchButton>
             </div>
