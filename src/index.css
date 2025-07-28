@@ -4,67 +4,46 @@
 @tailwind utilities;
 
 @layer base {
-  /* DESIGN SYSTEM UNIFICADO */
+  /* Design System Unificado - SaraivaNet */
   :root {
-    --background: 24 100% 96%;
-    --foreground: 16 100% 10%;
+    --background: 24 100% 98%;
+    --foreground: 16 100% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 16 100% 15%;
+    --card-foreground: 16 100% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 16 100% 15%;
+    --popover-foreground: 16 100% 12%;
 
     --primary: 20 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 24 100% 92%;
-    --secondary-foreground: 16 100% 20%;
+    --secondary: 24 95% 95%;
+    --secondary-foreground: 16 100% 15%;
 
-    --muted: 24 100% 94%;
-    --muted-foreground: 16 60% 40%;
+    --muted: 24 95% 96%;
+    --muted-foreground: 16 50% 45%;
 
-    --accent: 20 100% 55%;
+    --accent: 20 95% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 24 80% 85%;
-    --input: 24 80% 88%;
+    --border: 24 70% 88%;
+    --input: 24 70% 90%;
     --ring: 20 100% 50%;
 
+    /* Gradientes principais */
+    --gradient-primary: linear-gradient(135deg, hsl(20, 100%, 50%) 0%, hsl(15, 100%, 45%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(220, 70%, 15%) 0%, hsl(220, 80%, 25%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(20, 100%, 50%) 0%, hsl(15, 100%, 45%) 50%, hsl(10, 95%, 40%) 100%);
+    
+    /* Sombras elegantes */
+    --shadow-luxury: 0 20px 60px -12px hsl(20, 100%, 50%, 0.25);
+    --shadow-glow: 0 0 40px hsl(20, 100%, 50%, 0.3);
+    
     --radius: 0.75rem;
-
-    /* SISTEMA DE CORES UNIFICADO */
-    --orange-50: 24 100% 97%;
-    --orange-100: 24 100% 94%;
-    --orange-200: 24 100% 87%;
-    --orange-300: 20 100% 80%;
-    --orange-400: 20 100% 70%;
-    --orange-500: 20 100% 60%;
-    --orange-600: 20 100% 50%;
-    --orange-700: 16 100% 45%;
-    --orange-800: 16 100% 35%;
-    --orange-900: 16 100% 25%;
-
-    /* GRADIENTES PADRONIZADOS */
-    --gradient-primary: linear-gradient(135deg, hsl(20 100% 60%) 0%, hsl(16 100% 50%) 50%, hsl(0 84% 60%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(24 100% 97%) 0%, hsl(24 100% 92%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(20 100% 50%) 0%, hsl(16 100% 45%) 25%, hsl(0 84% 55%) 50%, hsl(0 70% 50%) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
-
-    /* SOMBRAS CONSISTENTES */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
-    --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
-    --shadow-xl: 0 12px 24px rgba(0,0,0,0.25);
-    --shadow-orange: 0 8px 25px rgba(255,102,0,0.3);
-
-    /* TRANSIÇÕES CONSISTENTES */
-    --transition-fast: 150ms ease-out;
-    --transition-normal: 300ms ease-out;
-    --transition-slow: 500ms ease-out;
   }
 }
 
@@ -85,24 +64,23 @@
 }
 
 @layer components {
-  /* Glassmorphism Effects */
-  .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  /* Sistema de Design Unificado */
+  .glass-luxury {
+    @apply bg-white/90 backdrop-blur-xl border border-primary/20 shadow-2xl;
+    box-shadow: var(--shadow-luxury);
   }
 
-  .glass-dark {
-    @apply bg-black/10 backdrop-blur-md border border-white/10;
+  .glass-dark-luxury {
+    @apply bg-slate-900/90 backdrop-blur-xl border border-primary/20 shadow-2xl;
+    box-shadow: var(--shadow-luxury);
   }
 
-  .glass-card {
-    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/20 shadow-2xl;
+  .glass-button-luxury {
+    @apply bg-white/20 hover:bg-white/30 backdrop-blur-md border border-primary/30 transition-all duration-300;
+    box-shadow: var(--shadow-glow);
   }
 
-  .glass-button {
-    @apply bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 transition-all duration-300;
-  }
-
-  /* Gradientes limpos do sistema */
+  /* Gradientes Unificados */
   .gradient-primary {
     background: var(--gradient-primary);
   }
@@ -111,17 +89,22 @@
     background: var(--gradient-secondary);
   }
 
-  .gradient-text {
-    background: linear-gradient(135deg, hsl(var(--orange-600)) 0%, hsl(var(--orange-800)) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .gradient-hero {
+    background: var(--gradient-hero);
   }
 
-  .gradient-animated {
-    background: var(--gradient-primary);
-    background-size: 200% 200%;
-    animation: gradient-shift 8s ease infinite;
+  .gradient-text-luxury {
+    @apply bg-gradient-to-r from-primary via-orange-600 to-red-500 bg-clip-text text-transparent;
+  }
+
+  /* Botões Premium Unificados */
+  .btn-luxury {
+    @apply bg-gradient-to-r from-primary to-orange-600 hover:from-orange-500 hover:to-red-500 text-white font-bold py-4 px-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-luxury);
+  }
+
+  .btn-secondary-luxury {
+    @apply bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02];
   }
 
   /* Hover Effects */
@@ -155,12 +138,14 @@
            hover:bg-white/80 dark:hover:bg-gray-900/80;
   }
 
-  /* Button Enhancements - Sistema unificado */
+  /* Button Enhancements */
   .btn-premium {
-    background: var(--gradient-primary);
-    @apply relative overflow-hidden text-white font-semibold 
-           transition-all duration-300
-           hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply relative overflow-hidden 
+           bg-gradient-to-r from-blue-600 to-purple-600 
+           hover:from-blue-700 hover:to-purple-700 
+           text-white font-semibold 
+           transition-all duration-300 
+           hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25;
   }
 
   .btn-premium::before {
@@ -256,9 +241,9 @@
     transition: all 0.2s ease-out;
   }
 
-  /* Gradientes otimizados para mobile */
+  /* Premium gradient effects */
   .gradient-premium-mobile {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%);
   }
 
   /* Shimmer Animation */
@@ -380,14 +365,14 @@
   }
 }
 
-/* Classes do sistema unificado */
+/* Classes adicionais para garantir o laranja funcione bem */
 .orange-gradient-bg {
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, hsl(var(--orange-primary)), hsl(var(--orange-light)));
 }
 
 .orange-header {
-  background: hsl(var(--orange-600));
-  border-bottom-color: hsl(var(--orange-700));
+  background: hsl(var(--orange-primary));
+  border-bottom-color: hsl(var(--orange-dark));
 }
 
 /* TRAVA O SITE NO MODO CLARO - NUNCA MUDA */
