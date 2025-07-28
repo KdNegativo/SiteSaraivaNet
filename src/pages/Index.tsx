@@ -160,22 +160,22 @@ const Index = () => {
                      Desperte a paixão pelo conhecimento com nossa plataforma inovadora.
                    </p>
 
-                   {/* Professional Cards with Elegant Icons */}
-                   <div className="grid grid-cols-2 gap-5 mt-12">
-                     {[
-                       { image: iconWifi, text: "Internet Premium", gradient: "from-white/20 to-white/10" },
-                       { image: iconTv, text: "Conteúdo Digital", gradient: "from-white/20 to-white/10" },
-                       { image: iconMusic, text: "Experiência Interativa", gradient: "from-white/20 to-white/10" },
-                       { image: iconShield, text: "Ambiente Seguro", gradient: "from-white/20 to-white/10" }
-                     ].map((card, index) => (
-                       <div key={index} className={`group relative bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center space-y-4 border border-white/30 shadow-lg hover:scale-105 hover:-translate-y-2 transition-all duration-300 overflow-hidden`}>
-                         <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 relative z-10">
-                           <img src={card.image} alt={card.text} className="w-12 h-12 object-contain" />
-                         </div>
-                         <span className="font-semibold text-sm text-white text-center relative z-10">{card.text}</span>
-                       </div>
-                     ))}
-                   </div>
+                    {/* Modern Orange Cards */}
+                    <div className="grid grid-cols-2 gap-4 mt-12">
+                      {[
+                        { image: iconWifi, text: "Internet Premium" },
+                        { image: iconTv, text: "Conteúdo Digital" },
+                        { image: iconMusic, text: "Experiência Interativa" },
+                        { image: iconShield, text: "Ambiente Seguro" }
+                      ].map((card, index) => (
+                        <div key={index} className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-3xl p-6 flex flex-col items-center space-y-3 shadow-lg hover:scale-105 transition-all duration-300">
+                          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md">
+                            <img src={card.image} alt={card.text} className="w-8 h-8 object-contain" />
+                          </div>
+                          <span className="font-semibold text-sm text-white text-center leading-tight">{card.text}</span>
+                        </div>
+                      ))}
+                    </div>
 
                    {/* Professional Call-to-Action Button */}
                    <div className="relative mt-12">
@@ -230,22 +230,22 @@ const Index = () => {
                      Desperte a paixão pelo conhecimento com nossa plataforma inovadora.
                    </p>
 
-                  {/* Fun Cards Desktop with Custom Icons */}
-                  <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto mt-16">
-                     {[
-                       { image: iconWifi, text: "Internet Premium", gradient: "from-white/20 to-white/10" },
-                       { image: iconTv, text: "Conteúdo Digital", gradient: "from-white/20 to-white/10" },
-                       { image: iconMusic, text: "Experiência Interativa", gradient: "from-white/20 to-white/10" },
-                       { image: iconShield, text: "Ambiente Seguro", gradient: "from-white/20 to-white/10" }
-                     ].map((card, index) => (
-                      <div key={index} className={`group relative bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-8 flex flex-col items-center space-y-5 border border-white/30 shadow-lg hover:scale-105 hover:-translate-y-2 transition-all duration-300 overflow-hidden`}>
-                         <div className="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 relative z-10">
-                           <img src={card.image} alt={card.text} className="w-16 h-16 object-contain" />
-                         </div>
-                         <span className="font-semibold text-lg text-white text-center relative z-10">{card.text}</span>
-                      </div>
-                    ))}
-                  </div>
+                   {/* Modern Orange Cards Desktop */}
+                   <div className="grid grid-cols-4 gap-6 max-w-5xl mx-auto mt-16">
+                      {[
+                        { image: iconWifi, text: "Internet Premium" },
+                        { image: iconTv, text: "Conteúdo Digital" },
+                        { image: iconMusic, text: "Experiência Interativa" },
+                        { image: iconShield, text: "Ambiente Seguro" }
+                      ].map((card, index) => (
+                       <div key={index} className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-3xl p-8 flex flex-col items-center space-y-4 shadow-lg hover:scale-105 transition-all duration-300">
+                          <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md">
+                            <img src={card.image} alt={card.text} className="w-12 h-12 object-contain" />
+                          </div>
+                          <span className="font-semibold text-lg text-white text-center leading-tight">{card.text}</span>
+                       </div>
+                     ))}
+                   </div>
 
                    {/* Professional Call-to-Action Button Desktop */}
                    <div className="relative mt-16">
