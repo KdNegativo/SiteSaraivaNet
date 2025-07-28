@@ -145,7 +145,7 @@
            hover:from-blue-700 hover:to-purple-700 
            text-white font-semibold 
            transition-all duration-300 
-           hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25;
+           hover:scale-105 hover:shadow-xl;
   }
 
   .btn-premium::before {
