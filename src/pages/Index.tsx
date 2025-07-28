@@ -93,17 +93,21 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Clean & Beautiful */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 50%, #cc3300 100%)'}}>
+      {/* Hero Section - Beautiful & Elegant */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%)'}}>
         
-        {/* Simple Background Effect */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
+        {/* Beautiful Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08) 2px, transparent 2px)`,
+          backgroundSize: '60px 60px, 80px 80px'
+        }}></div>
         
-        {/* Subtle Floating Elements */}
+        {/* Elegant Floating Elements */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
-            <div className="absolute bottom-20 left-20 w-48 h-48 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
+            <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-orange-300/20 to-yellow-300/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
+            <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-br from-red-300/15 to-pink-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
           </div>
         )}
         
@@ -115,73 +119,60 @@ const Index = () => {
             <div className="md:hidden">
               <AnimatedSection animation="fade-up">
                 <div className="text-center space-y-8">
-                  {/* Simple Badge */}
-                  <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-full font-bold text-sm border border-white/30">
-                    <Star className="w-4 h-4 mr-2 fill-current" />
-                    <span>Internet + TV Grátis</span>
+                  {/* Elegant Badge */}
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-5 py-3 rounded-full font-bold text-sm shadow-xl border-2 border-yellow-200/50">
+                    <Star className="w-4 h-4 mr-2 fill-current animate-pulse" />
+                    <span>🔥 Internet + TV Grátis</span>
                   </div>
                   
-                  {/* Clean Title */}
+                  {/* Beautiful Title */}
                   <h1 className="text-4xl font-black leading-tight text-white">
-                    <span className="block mb-2" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>Internet</span>
-                    <span className="block" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>+ SaraivaTV</span>
+                    <span className="block mb-2" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.7), 0 0 30px rgba(255,255,255,0.3)'}}>Internet</span>
+                    <span className="block" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.7), 0 0 30px rgba(255,255,255,0.3)'}}>+ SaraivaTV</span>
                   </h1>
                   
-                  {/* Simple Subtitle */}
-                  <p className="text-lg text-white/95 font-medium" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.5)'}}>
-                    🚀 Internet mais rápida + App gratuito
+                  {/* Elegant Subtitle */}
+                  <p className="text-lg text-white/95 font-medium" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.6)'}}>
+                    🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Clean Cards */}
+                  {/* Beautiful Cards */}
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex flex-col items-center space-y-3 border border-white/20">
-                      <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                        <Wifi className="w-6 h-6 text-white" />
+                    {[
+                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
+                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
+                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
+                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                    ].map((card, index) => (
+                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-lg rounded-2xl p-5 flex flex-col items-center space-y-3 border border-white/30 shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300`}>
+                        <div className="w-12 h-12 bg-white/25 rounded-xl flex items-center justify-center shadow-lg">
+                          <card.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="font-bold text-sm text-white text-center drop-shadow-lg">{card.text}</span>
                       </div>
-                      <span className="font-bold text-sm text-white text-center">Internet ULTRA</span>
-                    </div>
-                    <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex flex-col items-center space-y-3 border border-white/20">
-                      <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                        <Tv className="w-6 h-6 text-white" />
-                      </div>
-                      <span className="font-bold text-sm text-white text-center">TV Premium</span>
-                    </div>
-                    <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex flex-col items-center space-y-3 border border-white/20">
-                      <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                        <Music className="w-6 h-6 text-white" />
-                      </div>
-                      <span className="font-bold text-sm text-white text-center">Rádios 24h</span>
-                    </div>
-                    <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 flex flex-col items-center space-y-3 border border-white/20">
-                      <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                        <Shield className="w-6 h-6 text-white" />
-                      </div>
-                      <span className="font-bold text-sm text-white text-center">Suporte VIP</span>
-                    </div>
+                    ))}
                   </div>
 
-                  {/* Simple Button */}
+                  {/* Beautiful Button */}
                   <TouchButton 
                     onClick={handleWhatsAppClick} 
-                    className="w-full bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 rounded-xl font-black text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-xl font-black text-lg shadow-xl border-2 border-yellow-200/50 hover:scale-105 hover:-translate-y-1 transition-all duration-300"
                   >
                     🚀 Contratar Agora
                   </TouchButton>
 
-                  {/* Clean Stats */}
+                  {/* Elegant Stats */}
                   <div className="grid grid-cols-2 gap-3 text-center">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                      <StatsCounter endValue={1000} label="Clientes" suffix="+" />
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                      <StatsCounter endValue={99} label="Uptime" suffix="%" />
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                      <StatsCounter endValue={20} label="Canais" suffix="+" />
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                      <StatsCounter endValue={24} label="Online" suffix="h" />
-                    </div>
+                    {[
+                      { value: 1000, label: "Clientes", suffix: "+" },
+                      { value: 99, label: "Uptime", suffix: "%" },
+                      { value: 20, label: "Canais", suffix: "+" },
+                      { value: 24, label: "Online", suffix: "h" }
+                    ].map((stat, index) => (
+                      <div key={index} className="bg-white/20 backdrop-blur-lg rounded-xl p-3 border border-white/30 shadow-lg hover:bg-white/25 hover:scale-105 transition-all duration-300">
+                        <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                      </div>
+                    ))}
                   </div>
                 </div>
               </AnimatedSection>
@@ -191,72 +182,59 @@ const Index = () => {
             <div className="hidden md:block">
               <AnimatedSection animation="fade-up">
                 <div className="text-center space-y-12">
-                  {/* Simple Badge Desktop */}
-                  <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-full font-bold text-lg border border-white/30">
-                    <Star className="w-5 h-5 mr-3 fill-current" />
-                    <span>Internet + TV Grátis</span>
+                  {/* Elegant Badge Desktop */}
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-xl border-2 border-yellow-200/50">
+                    <Star className="w-5 h-5 mr-3 fill-current animate-pulse" />
+                    <span>🔥 Internet + TV Grátis</span>
                   </div>
                   
-                  {/* Beautiful Title */}
+                  {/* Stunning Title */}
                   <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto">
-                    <span className="block mb-4" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.5)'}}>Internet + SaraivaTV</span>
+                    <span className="block mb-4" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.7), 0 0 40px rgba(255,255,255,0.4), 0 0 80px rgba(255,165,0,0.3)'}}>Internet + SaraivaTV</span>
                   </h1>
                   
-                  {/* Clean Subtitle */}
-                  <p className="text-2xl lg:text-3xl text-white/95 font-medium max-w-3xl mx-auto" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>
-                    🚀 Internet mais rápida + App gratuito
+                  {/* Beautiful Subtitle */}
+                  <p className="text-2xl lg:text-3xl text-white/95 font-medium max-w-3xl mx-auto" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.6)'}}>
+                    🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Beautiful Cards */}
+                  {/* Stunning Cards */}
                   <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
-                    <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center space-y-4 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300">
-                      <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
-                        <Wifi className="w-8 h-8 text-white" />
+                    {[
+                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
+                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
+                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
+                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                    ].map((card, index) => (
+                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-lg rounded-3xl p-8 flex flex-col items-center space-y-4 border border-white/30 shadow-xl hover:scale-110 hover:-translate-y-2 transition-all duration-500`}>
+                        <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center shadow-xl">
+                          <card.icon className="w-8 h-8 text-white" />
+                        </div>
+                        <span className="font-bold text-lg text-white text-center drop-shadow-xl">{card.text}</span>
                       </div>
-                      <span className="font-bold text-lg text-white text-center">Internet ULTRA</span>
-                    </div>
-                    <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center space-y-4 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300">
-                      <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
-                        <Tv className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="font-bold text-lg text-white text-center">TV Premium</span>
-                    </div>
-                    <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center space-y-4 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300">
-                      <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
-                        <Music className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="font-bold text-lg text-white text-center">Rádios 24h</span>
-                    </div>
-                    <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center space-y-4 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300">
-                      <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
-                        <Shield className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="font-bold text-lg text-white text-center">Suporte VIP</span>
-                    </div>
+                    ))}
                   </div>
 
-                  {/* Beautiful Button */}
+                  {/* Stunning Button */}
                   <TouchButton 
                     onClick={handleWhatsAppClick} 
-                    className="bg-white text-orange-600 hover:bg-orange-50 px-12 py-5 rounded-xl font-black text-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-12 py-5 rounded-xl font-black text-2xl shadow-xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500"
                   >
                     🚀 Contratar Agora
                   </TouchButton>
 
-                  {/* Clean Stats Desktop */}
+                  {/* Beautiful Stats Desktop */}
                   <div className="flex justify-center gap-12 text-center max-w-3xl mx-auto">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 hover:bg-white/25 hover:scale-105 transition-all duration-300">
-                      <StatsCounter endValue={1000} label="Clientes" suffix="+" />
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 hover:bg-white/25 hover:scale-105 transition-all duration-300">
-                      <StatsCounter endValue={99} label="Uptime" suffix="%" />
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 hover:bg-white/25 hover:scale-105 transition-all duration-300">
-                      <StatsCounter endValue={20} label="Canais" suffix="+" />
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 hover:bg-white/25 hover:scale-105 transition-all duration-300">
-                      <StatsCounter endValue={24} label="Online" suffix="h" />
-                    </div>
+                    {[
+                      { value: 1000, label: "Clientes", suffix: "+" },
+                      { value: 99, label: "Uptime", suffix: "%" },
+                      { value: 20, label: "Canais", suffix: "+" },
+                      { value: 24, label: "Online", suffix: "h" }
+                    ].map((stat, index) => (
+                      <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-xl hover:bg-white/25 hover:scale-110 hover:-translate-y-1 transition-all duration-500">
+                        <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                      </div>
+                    ))}
                   </div>
                 </div>
               </AnimatedSection>
