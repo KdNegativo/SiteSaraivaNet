@@ -196,24 +196,39 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* BOTÃO RESPONSIVO CLEAN */}
-              <div className="mb-8 md:mb-12 animate-scale-in" style={{ animationDelay: '0.5s' }}>
+              {/* BOTÃO MOBILE/DESKTOP DIFERENCIADO */}
+              <div className="mb-8 animate-scale-in" style={{ animationDelay: '0.5s' }}>
+                {/* Botão Mobile */}
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="relative w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 md:px-12 lg:px-16 py-4 md:py-5 lg:py-6 rounded-2xl font-black text-lg md:text-xl lg:text-2xl shadow-lg border-2 border-yellow-300/80 transform hover:scale-105 active:scale-95 transition-all duration-200 overflow-hidden group touch-manipulation"
+                  className="relative w-full max-w-xs mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-5 rounded-2xl font-black text-lg shadow-lg border-2 border-yellow-300/80 transform hover:scale-105 active:scale-95 transition-all duration-200 overflow-hidden group touch-manipulation md:hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-800"></div>
-                  <span className="relative flex items-center justify-center gap-2 md:gap-3 drop-shadow-sm z-10">
+                  <span className="relative flex items-center justify-center gap-2 drop-shadow-sm z-10">
                     🚀 CONTRATAR AGORA
-                    <div className="w-6 h-6 md:w-8 md:h-8 bg-white/60 rounded-full flex items-center justify-center text-sm md:text-base animate-float">
+                    <div className="w-6 h-6 bg-white/60 rounded-full flex items-center justify-center text-sm">
+                      →
+                    </div>
+                  </span>
+                </TouchButton>
+
+                {/* Botão Desktop */}
+                <TouchButton 
+                  onClick={handleWhatsAppClick} 
+                  className="relative hidden md:inline-flex mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-12 lg:px-16 py-4 lg:py-5 rounded-2xl font-black text-xl lg:text-2xl shadow-lg border-2 border-yellow-300/80 transform hover:scale-105 active:scale-95 transition-all duration-200 overflow-hidden group"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-800"></div>
+                  <span className="relative flex items-center justify-center gap-3 drop-shadow-sm z-10">
+                    🚀 CONTRATAR AGORA
+                    <div className="w-8 h-8 bg-white/60 rounded-full flex items-center justify-center text-base">
                       →
                     </div>
                   </span>
                 </TouchButton>
               </div>
 
-              {/* Stats Mobile Clean */}
-              <div className="grid grid-cols-2 gap-2.5 text-center max-w-xs mx-auto mb-6">
+              {/* Stats Mobile - Mantém original */}
+              <div className="grid grid-cols-2 gap-2.5 text-center max-w-xs mx-auto mb-6 md:hidden">
                 <div className="group bg-white/20 backdrop-blur-md rounded-xl p-3 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 active:scale-95 touch-manipulation border border-white/30">
                   <StatsCounter endValue={1000} label="Clientes" suffix="+" />
                 </div>
@@ -227,11 +242,27 @@ const Index = () => {
                   <StatsCounter endValue={24} label="Online" suffix="h" />
                 </div>
               </div>
+
+              {/* Stats Desktop - Versão horizontal */}
+              <div className="hidden md:flex justify-center gap-6 lg:gap-8 text-center mb-8">
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-4 lg:p-6 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[120px] border border-white/30">
+                  <StatsCounter endValue={1000} label="Clientes" suffix="+" />
+                </div>
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-4 lg:p-6 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[120px] border border-white/30">
+                  <StatsCounter endValue={99} label="Uptime" suffix="%" />
+                </div>
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-4 lg:p-6 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[120px] border border-white/30">
+                  <StatsCounter endValue={20} label="Canais" suffix="+" />
+                </div>
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-4 lg:p-6 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[120px] border border-white/30">
+                  <StatsCounter endValue={24} label="Online" suffix="h" />
+                </div>
+              </div>
             </div>
           </AnimatedSection>
 
-          {/* SaraivaTV Card Ultra Premium */}
-          <AnimatedSection animation="scale-in" delay={200}>
+          {/* SaraivaTV Card - Mobile */}
+          <AnimatedSection animation="scale-in" delay={200} className="md:hidden">
             <div className="p-5 max-w-xs mx-auto group touch-manipulation relative overflow-hidden">
               {/* Shimmer Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
@@ -275,6 +306,52 @@ const Index = () => {
                 </div>
                 <div className="glass-premium rounded-lg p-2.5 shadow-md active:scale-95 transition-transform duration-200 touch-manipulation glow">
                   <Tv className="w-5 h-5 text-blue-300" />
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* SaraivaTV Card - Desktop */}
+          <AnimatedSection animation="scale-in" delay={200} className="hidden md:block">
+            <div className="max-w-4xl mx-auto p-8 lg:p-12">
+              <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-3xl p-8 lg:p-12 shadow-2xl border border-orange-300/30">
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center mx-auto mb-6 bg-white/20 rounded-2xl">
+                    <Smartphone className="w-10 h-10 lg:w-12 lg:h-12 text-white" />
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-bold mb-4 text-white">SaraivaTV</h3>
+                  <p className="text-lg lg:text-xl text-orange-100 font-medium">Canais favoritos no celular</p>
+                </div>
+                
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                  <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-colors">
+                    <Tv className="w-8 h-8 mx-auto mb-3 text-orange-200" />
+                    <span className="text-sm font-semibold text-white">Canais TV</span>
+                  </div>
+                  <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-colors">
+                    <Music className="w-8 h-8 mx-auto mb-3 text-green-200" />
+                    <span className="text-sm font-semibold text-white">Rádios</span>
+                  </div>
+                  <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-colors">
+                    <Zap className="w-8 h-8 mx-auto mb-3 text-blue-200" />
+                    <span className="text-sm font-semibold text-white">Ao Vivo</span>
+                  </div>
+                  <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-colors">
+                    <Smartphone className="w-8 h-8 mx-auto mb-3 text-purple-200" />
+                    <span className="text-sm font-semibold text-white">Multiplataforma</span>
+                  </div>
+                </div>
+                
+                <div className="text-center">
+                  <p className="text-orange-100 font-medium mb-6">📱 Disponível para Android e iOS</p>
+                  <div className="flex justify-center gap-4">
+                    <div className="bg-white/20 rounded-xl p-4 hover:bg-white/30 transition-colors">
+                      <Smartphone className="w-8 h-8 text-orange-200 mx-auto" />
+                    </div>
+                    <div className="bg-white/20 rounded-xl p-4 hover:bg-white/30 transition-colors">
+                      <Tv className="w-8 h-8 text-blue-200 mx-auto" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
