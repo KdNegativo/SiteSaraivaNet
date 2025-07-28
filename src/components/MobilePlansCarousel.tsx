@@ -88,8 +88,8 @@ const MobilePlansCarousel = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-            <Card className={`relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-gray-800 to-gray-900 shadow-lg ${
-            plan.popular ? 'ring-2 ring-orange-500/50 scale-105' : ''
+            <Card className={`relative overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 bg-gradient-to-br from-gray-800 to-gray-900 ${
+            plan.popular ? 'border-orange-500 scale-105' : 'border-gray-600'
           }`}>
             {plan.popular && (
               <div className="absolute top-0 right-0 bg-orange-500 text-white px-2 py-1 text-xs font-bold rounded-bl-lg">
