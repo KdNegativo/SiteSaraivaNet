@@ -382,129 +382,283 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - CLEAN PREMIUM */}
-      <section id="planos" className="relative overflow-hidden py-16 px-4" style={{background: 'linear-gradient(135deg, #1f2937 0%, #374151 30%, #4b5563 70%, #6b7280 100%)'}}>
-        {/* Background Effects */}
-        <div className="absolute inset-0 opacity-20">
+      {/* Plans Section - ULTRA SPECTACULAR PREMIUM */}
+      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 20%, #334155 50%, #475569 80%, #64748b 100%)'}}>
+        
+        {/* Advanced Background Layers */}
+        <div className="absolute inset-0 opacity-30">
           <div className="absolute top-0 left-0 w-full h-full" style={{
             backgroundImage: `
-              radial-gradient(circle at 30% 30%, rgba(255,165,0,0.3) 2px, transparent 2px),
-              radial-gradient(circle at 70% 70%, rgba(255,100,0,0.2) 2px, transparent 2px)
+              radial-gradient(circle at 20% 20%, rgba(255,165,0,0.4) 3px, transparent 3px),
+              radial-gradient(circle at 80% 80%, rgba(255,69,0,0.3) 2px, transparent 2px),
+              radial-gradient(circle at 50% 10%, rgba(255,140,0,0.2) 4px, transparent 4px),
+              linear-gradient(45deg, transparent 47%, rgba(255,165,0,0.1) 49%, rgba(255,165,0,0.1) 51%, transparent 53%),
+              linear-gradient(-45deg, transparent 47%, rgba(255,69,0,0.08) 49%, rgba(255,69,0,0.08) 51%, transparent 53%)
             `,
-            backgroundSize: '80px 80px, 60px 60px'
+            backgroundSize: '120px 120px, 80px 80px, 100px 100px, 60px 60px, 80px 80px'
           }}></div>
         </div>
+
+        {/* Multiple Animated Gradients */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-red-500/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-purple-500/10 via-transparent to-blue-500/15"></div>
         
-        {/* Floating Elements */}
-        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-orange-500/30 to-red-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-tr from-orange-500/20 to-yellow-500/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+        {/* Ultra Advanced Floating Elements */}
+        {!prefersReducedMotion && (
+          <>
+            <div className="absolute top-16 right-16 w-96 h-96 bg-gradient-to-br from-orange-400/25 to-red-400/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '12s' }}></div>
+            <div className="absolute bottom-16 left-16 w-80 h-80 bg-gradient-to-tr from-purple-400/20 to-pink-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '15s', animationDelay: '3s' }}></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-br from-blue-400/15 to-cyan-400/10 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '6s' }}></div>
+            
+            {/* Floating Particles for Plans Section */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-24 left-1/6 w-4 h-4 bg-orange-300/40 rounded-full animate-bounce" style={{ animationDelay: '2s', animationDuration: '4s' }}></div>
+              <div className="absolute top-48 right-1/6 w-3 h-3 bg-yellow-300/50 rounded-full animate-bounce" style={{ animationDelay: '3s', animationDuration: '5s' }}></div>
+              <div className="absolute bottom-36 left-1/4 w-5 h-5 bg-red-300/30 rounded-full animate-bounce" style={{ animationDelay: '1s', animationDuration: '3.5s' }}></div>
+              <div className="absolute top-72 right-1/4 w-3.5 h-3.5 bg-white/30 rounded-full animate-bounce" style={{ animationDelay: '4s', animationDuration: '2.8s' }}></div>
+            </div>
+          </>
+        )}
         
         <div className="max-w-7xl mx-auto relative z-10">
           <AnimatedSection animation="fade-up">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center bg-orange-500/90 text-white px-6 py-3 rounded-full text-base font-bold mb-8 border border-orange-400 shadow-lg">
-                <Award className="w-5 h-5 mr-3" />
-                <span>Plano Exclusivo para Você</span>
+            <div className="text-center mb-20">
+              {/* Ultra Premium Badge */}
+              <div className="relative inline-flex items-center mb-8 animate-scale-in">
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 rounded-full blur-xl opacity-60 animate-pulse" style={{ animationDuration: '4s' }}></div>
+                <div className="relative bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-black border-2 border-orange-200 shadow-2xl">
+                  <div className="flex items-center">
+                    <Award className="w-6 h-6 mr-3 animate-spin" style={{ animationDuration: '8s' }} />
+                    <span className="bg-gradient-to-r from-white to-orange-100 bg-clip-text text-transparent">✨ PLANO EXCLUSIVO PREMIUM ✨</span>
+                  </div>
+                </div>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
-                Internet + SaraivaTV
-              </h2>
-              <p className="text-lg md:text-xl lg:text-2xl text-orange-100 mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
-                O plano completo que vai transformar sua experiência digital
-              </p>
-              <div className="inline-flex items-center bg-green-500/90 text-white px-6 py-3 rounded-full font-bold text-base shadow-lg">
-                🎉 Oferta especial: 3 meses com desconto!
+              
+              {/* Spectacular Title */}
+              <div className="relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 relative z-10" style={{
+                  textShadow: '6px 6px 20px rgba(0,0,0,0.9), 0 0 80px rgba(255,165,0,0.5), 0 0 160px rgba(255,69,0,0.3)',
+                  letterSpacing: '2px'
+                }}>
+                  Internet + SaraivaTV
+                </h2>
+                
+                {/* Multiple Title Glow Effects */}
+                <div className="absolute inset-0 text-5xl md:text-6xl lg:text-7xl font-black pointer-events-none">
+                  <h2 className="text-transparent bg-gradient-to-r from-orange-300/50 to-red-300/50 bg-clip-text mb-8 blur-lg">Internet + SaraivaTV</h2>
+                </div>
+                <div className="absolute inset-0 text-5xl md:text-6xl lg:text-7xl font-black pointer-events-none">
+                  <h2 className="text-transparent bg-gradient-to-r from-white/30 to-orange-200/30 bg-clip-text mb-8 blur-md">Internet + SaraivaTV</h2>
+                </div>
+              </div>
+              
+              <div className="relative animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                <p className="text-xl md:text-2xl lg:text-3xl text-orange-100 mb-10 max-w-5xl mx-auto leading-relaxed font-bold relative z-10" style={{
+                  textShadow: '3px 3px 12px rgba(0,0,0,0.8), 0 0 30px rgba(255,255,255,0.2)',
+                  letterSpacing: '1px'
+                }}>
+                  🌟 O plano completo que vai revolucionar sua experiência digital
+                </p>
+                <div className="absolute inset-0 text-xl md:text-2xl lg:text-3xl font-bold text-transparent bg-gradient-to-r from-white/20 to-orange-200/20 bg-clip-text blur-sm pointer-events-none">
+                  🌟 O plano completo que vai revolucionar sua experiência digital
+                </div>
+              </div>
+              
+              {/* Special Offer Badge */}
+              <div className="relative inline-flex items-center animate-scale-in" style={{ animationDelay: '0.9s' }}>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full blur-lg opacity-75 animate-pulse" style={{ animationDuration: '3s' }}></div>
+                <div className="relative bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-black text-lg shadow-2xl border-2 border-green-300">
+                  🎉 OFERTA ESPECIAL: 3 MESES COM 50% DE DESCONTO! 🎉
+                </div>
               </div>
             </div>
           </AnimatedSection>
 
-          {/* Plan Card Premium Dark */}
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden border-2 border-orange-500/50 hover:scale-105 transform transition-all duration-500 hover:shadow-orange-500/25 group relative">
-            <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 p-6 text-white text-center group-hover:from-orange-400 group-hover:via-orange-500 group-hover:to-red-400 transition-all duration-500 relative z-10">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 border border-white/30">
-                <Wifi className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>Plano Completo</h3>
-              <div className="text-4xl font-bold mb-2" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>300MB</div>
-              <div className="text-base opacity-95 font-medium">Fibra Óptica + SaraivaTV Grátis</div>
-            </div>
-
-            <div className="p-6 relative z-10">
-              <div className="grid lg:grid-cols-2 gap-6 items-center">
-                <div className="text-center lg:text-left">
-                  <div className="mb-6">
-                    <div className="text-base text-gray-400 line-through mb-2">De R$ 169,90</div>
-                    <div className="text-4xl font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors duration-300">
-                      R$ 129<span className="text-2xl">,90</span>
-                    </div>
-                    <div className="text-base text-gray-300">por mês</div>
-                  </div>
-
-                  <div className="bg-green-900/50 p-4 rounded-xl mb-6 border border-green-700 shadow-sm">
-                    <div className="text-green-300 font-bold mb-1 text-sm">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
-                    <div className="text-green-400 text-xs">Promoção válida para novos clientes</div>
-                  </div>
-
-                  <TouchButton onClick={handleWhatsAppClick} className="w-full lg:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-bold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                    🚀 Contratar Agora →
-                  </TouchButton>
+          {/* Ultra Spectacular Plan Card */}
+          <div className="relative group animate-scale-in" style={{ animationDelay: '1.2s' }}>
+            {/* Card Outer Glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 to-red-500/30 rounded-3xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/30 to-orange-500/20 rounded-3xl blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-700 animate-pulse" style={{ animationDelay: '2s' }}></div>
+            
+            <div className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-gray-900 rounded-3xl shadow-2xl overflow-hidden border-3 border-gradient group-hover:scale-105 transform transition-all duration-700 hover:shadow-orange-500/30">
+              
+              {/* Plan Header - Ultra Premium */}
+              <div className="relative bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 p-8 text-white text-center group-hover:from-orange-400 group-hover:via-red-400 group-hover:to-pink-400 transition-all duration-700 overflow-hidden">
+                {/* Header Background Pattern */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="absolute top-0 left-0 w-full h-full" style={{
+                    backgroundImage: `
+                      radial-gradient(circle at 25% 25%, rgba(255,255,255,0.4) 2px, transparent 2px),
+                      radial-gradient(circle at 75% 75%, rgba(255,255,255,0.3) 2px, transparent 2px)
+                    `,
+                    backgroundSize: '40px 40px, 60px 60px'
+                  }}></div>
                 </div>
+                
+                {/* Floating Header Sparkles */}
+                <div className="absolute top-4 right-4 w-2 h-2 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-white/50 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute top-1/2 right-8 w-1 h-1 bg-white/40 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1.5s' }}></div>
+                
+                {/* Icon with Advanced Effects */}
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-white/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="w-20 h-20 bg-white/25 backdrop-blur-lg rounded-3xl flex items-center justify-center mx-auto group-hover:scale-125 group-hover:rotate-12 transition-all duration-700 border-2 border-white/40 shadow-2xl relative z-10">
+                    <Wifi className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-500" />
+                  </div>
+                </div>
+                
+                <h3 className="text-3xl lg:text-4xl font-black mb-3 relative z-10" style={{ textShadow: '3px 3px 8px rgba(0,0,0,0.5)' }}>PLANO MEGA PREMIUM</h3>
+                <div className="text-5xl lg:text-6xl font-black mb-3 relative z-10" style={{ textShadow: '4px 4px 12px rgba(0,0,0,0.6)' }}>300MB</div>
+                <div className="text-xl lg:text-2xl opacity-95 font-bold relative z-10">Fibra Óptica + SaraivaTV GRÁTIS</div>
+              </div>
 
-                <div>
-                  <h4 className="text-xl font-bold text-white mb-6" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
-                    Tudo que você precisa:
-                  </h4>
-                  <div className="space-y-3">
-                    {[{
-                    icon: Wifi,
-                    text: "Internet 300MB fibra óptica ultrarrápida"
-                  }, {
-                    icon: Tv,
-                    text: "App SaraivaTV Premium totalmente grátis"
-                  }, {
-                    icon: Smartphone,
-                    text: "Assista TV direto no seu celular"
-                  }, {
-                    icon: Music,
-                    text: "Rádios nacionais e locais incluídas"
-                  }, {
-                    icon: Shield,
-                    text: "Suporte técnico 24h todos os dias"
-                  }, {
-                    icon: Zap,
-                    text: "Velocidade garantida por contrato"
-                  }, {
-                    icon: CheckCircle,
-                    text: "Instalação profissional (taxa única R$ 149,90)"
-                  }, {
-                    icon: Heart,
-                    text: "Contrato de 12 meses"
-                  }].map((feature, index) => <div key={index} className="flex items-center space-x-3 p-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-orange-400 hover:bg-gray-600/50 transition-all duration-300 hover:scale-105 transform touch-manipulation">
-                        <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                          <feature.icon className="w-4 h-4 text-white" />
+              {/* Plan Content - Ultra Enhanced */}
+              <div className="p-8 lg:p-10 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-10 items-center">
+                  
+                  {/* Pricing Section - Spectacular */}
+                  <div className="text-center lg:text-left space-y-8">
+                    {/* Price Display with Glow */}
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/15 rounded-2xl blur-xl opacity-60 animate-pulse"></div>
+                      <div className="relative bg-gradient-to-br from-slate-700/50 to-slate-800/50 backdrop-blur-xl rounded-2xl p-6 border border-orange-400/30 shadow-2xl">
+                        <div className="text-lg text-gray-400 line-through mb-2 font-medium">De R$ 169,90</div>
+                        <div className="text-5xl lg:text-6xl font-black text-orange-400 mb-2 group-hover:text-orange-300 transition-colors duration-500">
+                          R$ 129<span className="text-3xl">,90</span>
                         </div>
-                        <span className="font-semibold text-gray-100 text-sm">{feature.text}</span>
-                      </div>)}
+                        <div className="text-lg text-gray-300 font-medium">por mês</div>
+                      </div>
+                    </div>
+
+                    {/* Special Offer Box */}
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-500/30 to-emerald-500/20 rounded-2xl blur-lg opacity-75 animate-pulse"></div>
+                      <div className="relative bg-gradient-to-br from-green-900/60 to-emerald-900/50 backdrop-blur-xl p-6 rounded-2xl border-2 border-green-500/40 shadow-2xl">
+                        <div className="text-green-300 font-black mb-2 text-lg">💰 ECONOMIA DE R$ 120 NOS PRIMEIROS 3 MESES!</div>
+                        <div className="text-green-400 text-base font-medium">Promoção exclusiva para novos clientes</div>
+                      </div>
+                    </div>
+
+                    {/* Ultra Premium Button */}
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl blur-xl opacity-60 animate-pulse" style={{ animationDuration: '3s' }}></div>
+                      <TouchButton 
+                        onClick={handleWhatsAppClick} 
+                        className="relative w-full lg:w-auto bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-400 hover:via-red-400 hover:to-pink-400 text-white font-black py-5 px-10 rounded-2xl shadow-2xl border-2 border-orange-300 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden group text-xl"
+                      >
+                        {/* Button Shine Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+                        <span className="relative flex items-center justify-center gap-3 z-10">
+                          <span className="animate-bounce text-2xl">🚀</span>
+                          CONTRATAR AGORA
+                          <span className="animate-bounce text-2xl">→</span>
+                        </span>
+                      </TouchButton>
+                    </div>
+                  </div>
+
+                  {/* Features Section - Ultra Enhanced */}
+                  <div className="space-y-6">
+                    <h4 className="text-2xl lg:text-3xl font-black text-white mb-8 relative z-10" style={{textShadow: '3px 3px 8px rgba(0,0,0,0.8)'}}>
+                      ✨ TUDO QUE VOCÊ PRECISA:
+                    </h4>
+                    
+                    <div className="space-y-4">
+                      {[
+                        { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida", color: "from-orange-500 to-red-500" },
+                        { icon: Tv, text: "App SaraivaTV Premium totalmente grátis", color: "from-blue-500 to-purple-500" },
+                        { icon: Smartphone, text: "Assista TV direto no seu celular", color: "from-green-500 to-emerald-500" },
+                        { icon: Music, text: "Rádios nacionais e locais incluídas", color: "from-purple-500 to-pink-500" },
+                        { icon: Shield, text: "Suporte técnico 24h todos os dias", color: "from-yellow-500 to-orange-500" },
+                        { icon: Zap, text: "Velocidade garantida por contrato", color: "from-cyan-500 to-blue-500" },
+                        { icon: CheckCircle, text: "Instalação profissional (taxa única R$ 149,90)", color: "from-emerald-500 to-green-500" },
+                        { icon: Heart, text: "Contrato de 12 meses", color: "from-pink-500 to-red-500" }
+                      ].map((feature, index) => (
+                        <div key={index} className="group relative animate-slide-in-left" style={{ animationDelay: `${1.5 + index * 0.1}s` }}>
+                          {/* Feature Item Glow */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                          
+                          <div className="relative flex items-center space-x-4 p-4 bg-gradient-to-r from-slate-700/40 to-slate-800/30 backdrop-blur-lg rounded-xl border border-slate-600/50 group-hover:border-orange-400/60 group-hover:bg-slate-600/50 transition-all duration-500 group-hover:scale-105 transform group-hover:-translate-y-1 shadow-lg group-hover:shadow-xl overflow-hidden">
+                            
+                            {/* Feature Icon with Advanced Effects */}
+                            <div className="relative">
+                              <div className="absolute inset-0 bg-gradient-to-br opacity-20 rounded-full blur-md group-hover:opacity-40 transition-opacity duration-500"></div>
+                              <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 border border-white/20 relative z-10`}>
+                                <feature.icon className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
+                              </div>
+                            </div>
+                            
+                            <span className="font-bold text-gray-100 text-base lg:text-lg group-hover:text-white transition-colors duration-300 relative z-10">{feature.text}</span>
+                            
+                            {/* Floating Sparkle */}
+                            <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.3s' }}></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <div className="glass-premium rounded-3xl p-8 text-white shadow-2xl glow relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/30 to-orange-500/20 animate-pulse"></div>
-              <h3 className="text-2xl font-bold mb-4 relative z-10" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>Não Perca Esta Oportunidade!</h3>
-              <p className="text-base mb-6 opacity-90 max-w-2xl mx-auto relative z-10">
-                Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-10">
-                <TouchButton onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 font-bold rounded-xl btn-3d glow transition-all duration-300">
-                  💬 WhatsApp
-                </TouchButton>
-                <TouchButton className="bg-white text-orange-600 hover:bg-orange-50 border-2 border-white px-6 py-3 font-bold rounded-xl btn-3d glow transition-all duration-300">
-                  📞 Ligar Agora
-                </TouchButton>
+          {/* Call to Action - Ultra Spectacular */}
+          <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: '2s' }}>
+            <div className="relative group">
+              {/* CTA Background Glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 via-red-500/40 to-pink-500/30 rounded-3xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 via-orange-500/30 to-red-500/20 rounded-3xl blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-700 animate-pulse" style={{ animationDelay: '2s' }}></div>
+              
+              <div className="relative bg-gradient-to-br from-slate-800/90 via-slate-900/80 to-gray-900/90 backdrop-blur-2xl rounded-3xl p-10 text-white shadow-2xl border-2 border-gradient group-hover:scale-105 transition-transform duration-700 overflow-hidden">
+                
+                {/* CTA Background Pattern */}
+                <div className="absolute inset-0 opacity-10">
+                  <div className="absolute top-0 left-0 w-full h-full" style={{
+                    backgroundImage: `
+                      radial-gradient(circle at 30% 30%, rgba(255,165,0,0.3) 2px, transparent 2px),
+                      radial-gradient(circle at 70% 70%, rgba(255,69,0,0.2) 2px, transparent 2px)
+                    `,
+                    backgroundSize: '60px 60px, 80px 80px'
+                  }}></div>
+                </div>
+                
+                {/* Floating CTA Sparkles */}
+                <div className="absolute top-6 right-6 w-3 h-3 bg-white/50 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute bottom-6 left-6 w-2 h-2 bg-orange-300/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute top-1/2 right-10 w-1.5 h-1.5 bg-yellow-300/50 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1.5s' }}></div>
+                
+                <h3 className="text-3xl lg:text-4xl font-black mb-6 relative z-10" style={{ textShadow: '4px 4px 12px rgba(0,0,0,0.8)' }}>
+                  🔥 NÃO PERCA ESTA OPORTUNIDADE ÚNICA!
+                </h3>
+                <p className="text-xl lg:text-2xl mb-8 opacity-90 max-w-3xl mx-auto relative z-10 font-medium leading-relaxed">
+                  Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente. Oferta limitada!
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-10">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-white/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <TouchButton 
+                      onClick={handleWhatsAppClick} 
+                      className="relative bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 font-black rounded-2xl shadow-2xl transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 text-lg border-2 border-orange-200 overflow-hidden group"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-100/50 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-800"></div>
+                      <span className="relative flex items-center gap-3 z-10">
+                        💬 WHATSAPP
+                      </span>
+                    </TouchButton>
+                  </div>
+                  
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-white/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <TouchButton className="relative bg-transparent text-white hover:bg-white/10 border-3 border-white px-8 py-4 font-black rounded-2xl shadow-2xl transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 text-lg overflow-hidden group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-800"></div>
+                      <span className="relative flex items-center gap-3 z-10">
+                        📞 LIGAR AGORA
+                      </span>
+                    </TouchButton>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
