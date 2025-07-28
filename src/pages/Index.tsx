@@ -416,15 +416,12 @@ const Index = () => {
                 Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <div className="text-center">
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 font-black rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+                  className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-8 py-4 font-black rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
                 >
-                  💬 WhatsApp
-                </TouchButton>
-                <TouchButton className="bg-transparent text-white hover:bg-white/10 border-2 border-white px-8 py-4 font-black rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg">
-                  📞 Ligar Agora
+                  💬 Falar no WhatsApp
                 </TouchButton>
               </div>
             </div>
