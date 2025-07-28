@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import RealMap from "@/components/RealMap";
@@ -319,74 +319,101 @@ const Index = () => {
             </div>
           </AnimatedSection>
 
-          {/* Beautiful Plan Card */}
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-2xl overflow-hidden border border-orange-500/30 hover:border-orange-500/50 hover:scale-102 transform transition-all duration-500 group">
-            
-            {/* Plan Header */}
-            <div className="bg-gradient-to-r from-orange-500 to-red-500 p-8 text-white text-center group-hover:from-orange-400 group-hover:to-red-400 transition-all duration-500">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Wifi className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-3xl font-black mb-3" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>Plano Completo</h3>
-              <div className="text-5xl font-black mb-3" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>300MB</div>
-              <div className="text-xl opacity-95 font-medium">Fibra Óptica + SaraivaTV Grátis</div>
-            </div>
-
-            {/* Plan Content */}
-            <div className="p-8 lg:p-10">
-              <div className="grid lg:grid-cols-2 gap-10 items-center">
-                
-                {/* Pricing Section */}
-                <div className="text-center lg:text-left space-y-6">
-                  <div className="bg-slate-700/50 rounded-2xl p-6 border border-slate-600">
-                    <div className="text-lg text-slate-400 line-through mb-2">De R$ 169,90</div>
-                    <div className="text-5xl font-black text-orange-400 mb-2 group-hover:text-orange-300 transition-colors duration-300">
-                      R$ 129<span className="text-3xl">,90</span>
-                    </div>
-                    <div className="text-lg text-slate-300">por mês</div>
-                  </div>
-
-                  <div className="bg-green-900/50 p-6 rounded-2xl border border-green-700">
-                    <div className="text-green-300 font-bold mb-2 text-lg">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
-                    <div className="text-green-400 text-base">Promoção exclusiva para novos clientes</div>
-                  </div>
-
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="w-full lg:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-black py-4 px-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
-                  >
-                    🚀 Contratar Agora
-                  </TouchButton>
-                </div>
-
-                {/* Features Section */}
-                <div className="space-y-6">
-                  <h4 className="text-2xl font-black text-white mb-6" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
-                    Tudo que você precisa:
-                  </h4>
-                  
-                  <div className="space-y-4">
-                    {[
-                      { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida", color: "from-orange-500 to-red-500" },
-                      { icon: Tv, text: "App SaraivaTV Premium totalmente grátis", color: "from-blue-500 to-purple-500" },
-                      { icon: Smartphone, text: "Assista TV direto no seu celular", color: "from-green-500 to-emerald-500" },
-                      { icon: Music, text: "Rádios nacionais e locais incluídas", color: "from-purple-500 to-pink-500" },
-                      { icon: Shield, text: "Suporte técnico 24h todos os dias", color: "from-yellow-500 to-orange-500" },
-                      { icon: Zap, text: "Velocidade garantida por contrato", color: "from-cyan-500 to-blue-500" },
-                      { icon: CheckCircle, text: "Instalação profissional (taxa única R$ 149,90)", color: "from-emerald-500 to-green-500" },
-                      { icon: Heart, text: "Contrato de 12 meses", color: "from-pink-500 to-red-500" }
-                    ].map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-4 p-4 bg-slate-700/30 rounded-xl border border-slate-600/50 hover:border-orange-400/50 hover:bg-slate-600/30 transition-all duration-300 hover:scale-105 transform">
-                        <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                          <feature.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <span className="font-bold text-slate-100 text-lg">{feature.text}</span>
+          {/* Modern Plans Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {[
+              {
+                id: 1,
+                name: "Plano Básico",
+                price: "59,90",
+                speed: "100 Mbps",
+                icon: Zap,
+                popular: false,
+                features: ["Download: 100 Mbps", "Upload: 50 Mbps", "Fibra óptica", "Suporte 24/7"]
+              },
+              {
+                id: 2,
+                name: "Plano Intermediário", 
+                price: "89,90",
+                speed: "300 Mbps",
+                icon: Wifi,
+                popular: false,
+                features: ["Download: 300 Mbps", "Upload: 150 Mbps", "Fibra óptica", "Suporte 24/7"]
+              },
+              {
+                id: 3,
+                name: "Plano Premium",
+                price: "129,90", 
+                speed: "600 Mbps",
+                icon: Rocket,
+                popular: true,
+                features: ["Download: 600 Mbps", "Upload: 300 Mbps", "Fibra óptica", "Suporte 24/7", "WiFi 6 incluso"]
+              },
+              {
+                id: 4,
+                name: "Plano Ultra",
+                price: "199,90",
+                speed: "1000 Mbps", 
+                icon: Zap,
+                popular: false,
+                features: ["Download: 1000 Mbps", "Upload: 500 Mbps", "Fibra óptica", "Suporte 24/7", "WiFi 6 incluso", "IP fixo gratuito"]
+              }
+            ].map((plan) => {
+              const Icon = plan.icon;
+              return (
+                <div
+                  key={plan.id}
+                  className={`relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 transform group ${
+                    plan.popular ? 'ring-2 ring-orange-500/50 scale-105' : ''
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1 text-sm font-bold rounded-full shadow-lg">
+                        POPULAR
                       </div>
-                    ))}
+                    </div>
+                  )}
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="w-8 h-8 text-orange-400" />
+                    </div>
+                    
+                    <h4 className="text-xl font-bold text-white mb-2">{plan.name}</h4>
+                    
+                    <div className="text-3xl font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors duration-300">
+                      R$ {plan.price}
+                      <span className="text-sm text-slate-300 font-normal">/mês</span>
+                    </div>
+                    
+                    <div className="text-lg font-semibold text-slate-200 mb-6">
+                      {plan.speed}
+                    </div>
+                    
+                    <ul className="space-y-3 mb-8 text-left">
+                      {plan.features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                          <span className="text-slate-200">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <TouchButton 
+                      onClick={handleWhatsAppClick}
+                      className={`w-full font-bold py-3 px-4 rounded-xl transition-all duration-300 hover:scale-105 ${
+                        plan.popular 
+                          ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white shadow-lg hover:shadow-xl' 
+                          : 'bg-slate-700/50 hover:bg-slate-600/50 text-white border border-slate-600 hover:border-orange-400/50'
+                      }`}
+                    >
+                      Contratar Agora
+                    </TouchButton>
                   </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
 
           {/* Call to Action */}
