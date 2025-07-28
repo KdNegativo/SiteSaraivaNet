@@ -37,7 +37,16 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative" style={{background: 'linear-gradient(135deg, #fff5f0 0%, #ffede0 50%, #ffe5d4 100%)'}}>
+    <div className="min-h-screen relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fff9f5 0%, #ffeee0 25%, #ffe5d0 50%, #ffddc0 75%, #ffd5b0 100%)'}}>
+      {/* Elegant Background Pattern */}
+      <div className="absolute inset-0" style={{
+        backgroundImage: `
+          radial-gradient(circle at 20% 20%, rgba(255, 102, 0, 0.05) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.03) 0%, transparent 50%),
+          radial-gradient(circle at 40% 60%, rgba(255, 140, 0, 0.02) 0%, transparent 50%)
+        `,
+        backgroundSize: '800px 800px, 600px 600px, 400px 400px'
+      }}></div>
       {/* Floating Components */}
       <ChatBot />
       
@@ -94,20 +103,25 @@ const Index = () => {
       </header>
 
       {/* Hero Section - Beautiful & Elegant */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%)'}}>
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
         
-        {/* Beautiful Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
+        {/* Sophisticated Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08) 2px, transparent 2px)`,
-          backgroundSize: '60px 60px, 80px 80px'
+          backgroundImage: `
+            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%)
+          `,
+          backgroundSize: '80px 80px, 60px 60px, 120px 120px'
         }}></div>
         
         {/* Elegant Floating Elements */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-orange-300/20 to-yellow-300/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-br from-red-300/15 to-pink-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+            <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-orange-300/25 to-yellow-300/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s' }}></div>
+            <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-red-300/20 to-pink-300/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s', animationDelay: '3s' }}></div>
+            <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-yellow-300/15 to-orange-300/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '5s' }}></div>
           </div>
         )}
         
@@ -125,10 +139,10 @@ const Index = () => {
                     <span>🔥 Internet + TV Grátis</span>
                   </div>
                   
-                  {/* Beautiful Title */}
-                  <h1 className="text-4xl font-black leading-tight text-white">
-                    <span className="block mb-2" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.7), 0 0 30px rgba(255,255,255,0.3)'}}>Internet</span>
-                    <span className="block" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.7), 0 0 30px rgba(255,255,255,0.3)'}}>+ SaraivaTV</span>
+                  {/* Luxurious Title */}
+                  <h1 className="text-4xl font-black leading-tight text-white font-playfair">
+                    <span className="block mb-2" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)'}}>Internet</span>
+                    <span className="block" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)'}}>+ SaraivaTV</span>
                   </h1>
                   
                   {/* Elegant Subtitle */}
@@ -144,11 +158,11 @@ const Index = () => {
                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
                     ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-lg rounded-2xl p-5 flex flex-col items-center space-y-3 border border-white/30 shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300`}>
-                        <div className="w-12 h-12 bg-white/25 rounded-xl flex items-center justify-center shadow-lg">
+                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-5 flex flex-col items-center space-y-3 border border-white/40 shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20`}>
+                        <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl">,
                           <card.icon className="w-6 h-6 text-white" />
                         </div>
-                        <span className="font-bold text-sm text-white text-center drop-shadow-lg">{card.text}</span>
+                        <span className="font-bold text-sm text-white text-center drop-shadow-2xl">{card.text}</span>
                       </div>
                     ))}
                   </div>
@@ -156,7 +170,7 @@ const Index = () => {
                   {/* Beautiful Button */}
                   <TouchButton 
                     onClick={handleWhatsAppClick} 
-                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-xl font-black text-lg shadow-xl border-2 border-yellow-200/50 hover:scale-105 hover:-translate-y-1 transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-2xl font-black text-lg shadow-2xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/30"
                   >
                     🚀 Contratar Agora
                   </TouchButton>
@@ -188,9 +202,9 @@ const Index = () => {
                     <span>🔥 Internet + TV Grátis</span>
                   </div>
                   
-                  {/* Stunning Title */}
-                  <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto">
-                    <span className="block mb-4" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.7), 0 0 40px rgba(255,255,255,0.4), 0 0 80px rgba(255,165,0,0.3)'}}>Internet + SaraivaTV</span>
+                  {/* Sophisticated Title */}
+                  <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto font-playfair">
+                    <span className="block mb-4" style={{textShadow: '5px 5px 20px rgba(0,0,0,0.8), 0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,165,0,0.4)'}}>Internet + SaraivaTV</span>
                   </h1>
                   
                   {/* Beautiful Subtitle */}
@@ -206,11 +220,11 @@ const Index = () => {
                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
                     ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-lg rounded-3xl p-8 flex flex-col items-center space-y-4 border border-white/30 shadow-xl hover:scale-110 hover:-translate-y-2 transition-all duration-500`}>
-                        <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center shadow-xl">
+                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-4xl p-10 flex flex-col items-center space-y-5 border border-white/50 shadow-2xl hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-white/30`}>
+                        <div className="w-20 h-20 bg-white/35 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl hover:rotate-12 transition-transform duration-300">
                           <card.icon className="w-8 h-8 text-white" />
                         </div>
-                        <span className="font-bold text-lg text-white text-center drop-shadow-xl">{card.text}</span>
+                        <span className="font-bold text-xl text-white text-center drop-shadow-2xl">{card.text}</span>
                       </div>
                     ))}
                   </div>
@@ -218,7 +232,7 @@ const Index = () => {
                   {/* Stunning Button */}
                   <TouchButton 
                     onClick={handleWhatsAppClick} 
-                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-12 py-5 rounded-xl font-black text-2xl shadow-xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500"
+                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-16 py-6 rounded-2xl font-black text-2xl shadow-2xl border-3 border-yellow-200/50 hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-yellow-500/40"
                   >
                     🚀 Contratar Agora
                   </TouchButton>
@@ -244,16 +258,17 @@ const Index = () => {
       </section>
 
       {/* Plans Section - Clean & Beautiful */}
-      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{background: 'linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)'}}>
+      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
         
-        {/* Simple Background Effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-red-500/10"></div>
+        {/* Sophisticated Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-blue-500/8"></div>
         
-        {/* Subtle Floating Elements */}
+        {/* Elegant Floating Elements */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-48 h-48 bg-orange-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute bottom-20 left-20 w-64 h-64 bg-red-400/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+            <div className="absolute top-20 right-20 w-64 h-64 bg-orange-400/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s' }}></div>
+            <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-400/12 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '3s' }}></div>
+            <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-purple-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s', animationDelay: '6s' }}></div>
           </div>
         )}
         

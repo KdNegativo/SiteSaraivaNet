@@ -50,7 +50,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-playfair font-bold;
   }
 }
 
@@ -375,4 +375,118 @@ html {
 body {
   color-scheme: light only !important;
   background: hsl(24 100% 96%) !important;
+}
+
+/* Elegant text shadows for better readability */
+.text-shadow-elegant {
+  text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Premium glass effects */
+.glass-ultra {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Luxurious hover effects */
+.hover-luxe {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-luxe:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced gradients */
+.gradient-luxury {
+  background: linear-gradient(135deg, 
+    #ff6600 0%, 
+    #ff5722 15%, 
+    #e65100 30%, 
+    #d84315 45%, 
+    #bf360c 60%, 
+    #a6300c 75%, 
+    #8f280a 90%, 
+    #782108 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Premium text effects */
+.text-luxury {
+  background: linear-gradient(135deg, #ffffff 0%, #fff3e0 50%, #ffe0b2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Floating particles effect */
+@keyframes float-particles {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+    opacity: 0.7;
+  }
+  33% { 
+    transform: translateY(-20px) rotate(120deg); 
+    opacity: 1;
+  }
+  66% { 
+    transform: translateY(-10px) rotate(240deg); 
+    opacity: 0.8;
+  }
+}
+
+.animate-particles {
+  animation: float-particles 6s ease-in-out infinite;
+}
+
+/* Enhanced card effects */
+.card-luxury {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 15px 45px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 0 50px rgba(255, 102, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-luxury:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 0 80px rgba(255, 102, 0, 0.2);
+}
+
+/* Rounded corners enhancement */
+.rounded-4xl {
+  border-radius: 2rem;
+}
+
+/* Premium button effects */
+.btn-luxury {
+  background: linear-gradient(135deg, #ffd54f 0%, #ffb300 50%, #ff8f00 100%);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 10px 30px rgba(255, 143, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-luxury:hover {
+  background: linear-gradient(135deg, #fff176 0%, #ffc107 50%, #ffa000 100%);
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 
+    0 15px 40px rgba(255, 143, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 193, 7, 0.6);
 }

@@ -20,10 +20,12 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
-				'heading': ['Poppins', 'system-ui', 'sans-serif'],
+				'heading': ['Playfair Display', 'serif'],
+				'display': ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
