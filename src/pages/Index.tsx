@@ -747,104 +747,98 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section - ULTRA PREMIUM */}
-      <section id="contato" className="py-16 px-4 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)'}}>
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60"></div>
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full" style={{
-            backgroundImage: `
-              radial-gradient(circle at 25% 25%, rgba(255,255,255,0.4) 2px, transparent 2px),
-              radial-gradient(circle at 75% 75%, rgba(255,255,255,0.3) 2px, transparent 2px),
-              linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 50%, transparent 55%)
-            `,
-            backgroundSize: '70px 70px, 50px 50px, 120px 120px'
+      {/* Contact Section - Modern Design */}
+      <section id="contato" className="relative py-20 px-4" style={{background: 'linear-gradient(135deg, #6B46C1 0%, #7C3AED 25%, #8B5CF6 50%, #A855F7 75%, #C084FC 100%)'}}>
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-purple-900/30"></div>
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 1px, transparent 1px)`,
+            backgroundSize: '40px 40px, 60px 60px'
           }}></div>
         </div>
-        
-        {/* Floating Elements */}
-        <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-blue-300/40 to-purple-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }}></div>
-        <div className="absolute bottom-20 left-20 w-56 h-56 bg-gradient-to-tr from-pink-300/30 to-blue-300/40 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '9s', animationDelay: '2s' }}></div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center glass-premium text-white px-4 py-2.5 rounded-full text-sm font-bold mb-6 border border-white/50 glow relative overflow-hidden">
-              <Phone className="w-4 h-4 mr-2" />
-              <span>Fale Conosco</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-            </div>
-            <h2 className="text-5xl font-bold text-white mb-4 relative" style={{
-              textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(255,255,255,0.3)',
-              letterSpacing: '1px'
-            }}>
-              Entre em Contato
-              <div className="absolute inset-0 text-5xl font-bold text-transparent bg-gradient-to-r from-white/30 to-blue-200/30 bg-clip-text blur-sm pointer-events-none">
-                Entre em Contato
-              </div>
-            </h2>
-            <p className="text-xl text-white/90 font-medium leading-relaxed">
-              Estamos aqui para ajudar! Entre em contato conosco e descubra como podemos 
-              conectar você ao mundo digital.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="p-8 glass-premium hover:bg-white/25 transition-all duration-300 transform hover:scale-105 glow border border-white/20 relative overflow-hidden touch-manipulation">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
-              <div className="flex items-center space-x-4 mb-4 relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg glow">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <AnimatedSection animation="fade-up">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-bold mb-8 border border-white/30">
+                <Phone className="w-5 h-5 mr-3" />
+                <span>Fale Conosco</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.8)'}}>
+                Entre em Contato
+              </h2>
+              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
+                Estamos aqui para ajudar! Entre em contato conosco e descubra como podemos conectar você ao mundo digital.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          {/* Contact Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Telefone */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-xl">
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white glow">Telefone</h3>
-                  <p className="text-white/90 text-lg font-medium">(89) 99439-5789</p>
+                  <h3 className="text-2xl font-bold text-white mb-1">Telefone</h3>
+                  <p className="text-white/90 text-lg font-semibold">(89) 99439-5789</p>
                   <p className="text-sm text-white/70">WhatsApp disponível</p>
                 </div>
               </div>
-            </Card>
+            </div>
 
-            <Card className="p-8 glass-premium hover:bg-white/25 transition-all duration-300 transform hover:scale-105 glow border border-white/20 relative overflow-hidden touch-manipulation">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
-              <div className="flex items-center space-x-4 mb-4 relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg glow">
+            {/* Endereço */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-xl">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white glow">Endereço</h3>
-                  <p className="text-white/90 text-lg font-medium">Rua Fernando Silva, Centro</p>
+                  <h3 className="text-2xl font-bold text-white mb-1">Endereço</h3>
+                  <p className="text-white/90 text-lg font-semibold">Rua Fernando Silva, Centro</p>
                   <p className="text-sm text-white/70">Eliseu Martins - PI</p>
                 </div>
               </div>
-            </Card>
+            </div>
 
-            <Card className="p-8 glass-premium hover:bg-white/25 transition-all duration-300 transform hover:scale-105 glow border border-white/20 relative overflow-hidden touch-manipulation">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
-              <div className="flex items-center space-x-4 mb-4 relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg glow">
+            {/* Horário */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-xl">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white glow">Horário</h3>
-                  <p className="text-white/90 text-lg font-medium">Segunda a Sábado</p>
+                  <h3 className="text-2xl font-bold text-white mb-1">Horário</h3>
+                  <p className="text-white/90 text-lg font-semibold">Segunda a Sábado</p>
                   <p className="text-sm text-white/70">8h às 18h</p>
                 </div>
               </div>
-            </Card>
+            </div>
           </div>
 
-          <div className="text-center">
-            <div className="glass-premium rounded-3xl p-8 glow relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-              <h3 className="text-2xl font-bold text-white mb-4 relative z-10" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+          {/* WhatsApp CTA Card */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20 text-center">
+            <div className="mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-400 to-pink-500 rounded-2xl shadow-xl mb-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
                 🚀 Pronto para se conectar?
               </h3>
-              <p className="text-white/90 mb-6 text-lg relative z-10">
+              <p className="text-white/90 mb-8 text-xl max-w-2xl mx-auto">
                 Entre em contato agora e ganhe o SaraivaTV grátis!
               </p>
-              <TouchButton onClick={handleWhatsAppClick} className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 btn-3d glow relative z-10">
-                💬 Falar no WhatsApp
-              </TouchButton>
             </div>
+            <TouchButton 
+              onClick={handleWhatsAppClick} 
+              className="bg-white text-purple-600 hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 inline-flex items-center"
+            >
+              <Phone className="w-6 h-6 mr-3" />
+              💬 Falar no WhatsApp
+            </TouchButton>
           </div>
         </div>
       </section>
