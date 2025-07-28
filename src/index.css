@@ -159,7 +159,7 @@
   .btn-premium {
     background: var(--gradient-primary);
     @apply relative overflow-hidden text-white font-semibold 
-           transition-all duration-var(--transition-normal)
+           transition-all duration-300
            hover:scale-105 shadow-lg hover:shadow-orange;
   }
 
