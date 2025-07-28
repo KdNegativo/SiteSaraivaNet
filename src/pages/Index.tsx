@@ -196,16 +196,16 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* BOTÃO MOBILE CLEAN */}
-              <div className="mb-8 animate-scale-in" style={{ animationDelay: '0.5s' }}>
+              {/* BOTÃO RESPONSIVO CLEAN */}
+              <div className="mb-8 md:mb-12 animate-scale-in" style={{ animationDelay: '0.5s' }}>
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="relative w-full max-w-xs mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-5 rounded-2xl font-black text-lg shadow-lg border-2 border-yellow-300/80 transform hover:scale-105 active:scale-95 transition-all duration-200 overflow-hidden group touch-manipulation"
+                  className="relative w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 md:px-12 lg:px-16 py-4 md:py-5 lg:py-6 rounded-2xl font-black text-lg md:text-xl lg:text-2xl shadow-lg border-2 border-yellow-300/80 transform hover:scale-105 active:scale-95 transition-all duration-200 overflow-hidden group touch-manipulation"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-800"></div>
-                  <span className="relative flex items-center justify-center gap-2 drop-shadow-sm z-10">
+                  <span className="relative flex items-center justify-center gap-2 md:gap-3 drop-shadow-sm z-10">
                     🚀 CONTRATAR AGORA
-                    <div className="w-6 h-6 bg-white/60 rounded-full flex items-center justify-center text-sm animate-float">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-white/60 rounded-full flex items-center justify-center text-sm md:text-base animate-float">
                       →
                     </div>
                   </span>
