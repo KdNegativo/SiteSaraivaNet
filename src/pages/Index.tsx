@@ -9,6 +9,7 @@ import MobileNavigation from "@/components/MobileNavigation";
 import AnimatedSection from "@/components/AnimatedSection";
 import ChatBot from "@/components/ChatBot";
 import TouchButton from "@/components/TouchButton";
+import PlanSection from "@/components/PlanSection";
 
 import ResponsiveImage from "@/components/ResponsiveImage";
 import { useParallax } from "@/hooks/useParallax";
@@ -278,120 +279,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - Redesigned for Single Plan */}
-      <section id="planos" className="relative overflow-hidden py-24 px-4 gradient-secondary">
-        {/* Elegant Background Pattern */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `radial-gradient(circle at 20% 50%, hsl(20, 100%, 50%, 0.3) 0%, transparent 50%),
-                           radial-gradient(circle at 80% 50%, hsl(220, 70%, 50%, 0.2) 0%, transparent 50%)`
-        }}></div>
-
-        <div className="max-w-4xl mx-auto relative z-10">
-          <AnimatedSection animation="fade-up">
-            {/* Clean Header */}
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gradient-primary text-white px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
-                <Award className="w-4 h-4 mr-2" />
-                <span>Oferta Especial</span>
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">
-                Plano Completo SaraivaNet
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                Internet fibra óptica + SaraivaTV em um só plano
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* Single Plan Card - Simplified & Elegant */}
-          <AnimatedSection animation="scale-in" delay={200}>
-            <div className="glass-dark-luxury rounded-3xl overflow-hidden group hover:scale-[1.02] transition-all duration-500">
-              
-              {/* Plan Header */}
-              <div className="gradient-primary p-8 text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
-                <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                      <Wifi className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl md:text-3xl font-black mb-1">Fibra 300MB + TV</h3>
-                      <p className="text-white/90 font-medium">Internet ultrarrápida + App Premium</p>
-                    </div>
-                  </div>
-                  <div className="text-center md:text-right">
-                    <div className="text-sm text-white/80 line-through mb-1">De R$ 169,90</div>
-                    <div className="text-4xl md:text-5xl font-black">
-                      R$ 129<span className="text-2xl">,90</span>
-                    </div>
-                    <div className="text-white/90">por mês</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Plan Content */}
-              <div className="p-8">
-                {/* Key Benefits - Clean Grid */}
-                <div className="grid md:grid-cols-2 gap-4 mb-8">
-                  {[
-                    { icon: Wifi, text: "300MB Fibra Óptica", subtitle: "Velocidade garantida" },
-                    { icon: Tv, text: "SaraivaTV Premium", subtitle: "App gratuito incluído" },
-                    { icon: Smartphone, text: "TV no Celular", subtitle: "Assista onde quiser" },
-                    { icon: Shield, text: "Suporte 24h", subtitle: "Sempre disponível" }
-                  ].map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300">
-                      <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                        <benefit.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-white">{benefit.text}</div>
-                        <div className="text-sm text-slate-300">{benefit.subtitle}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Special Offer Banner */}
-                <div className="bg-green-900/30 border border-green-500/30 rounded-xl p-6 mb-8 text-center">
-                  <div className="text-green-300 font-bold text-lg mb-1">💰 Primeiros 3 meses por R$ 89,90</div>
-                  <div className="text-green-400">Economia de R$ 120 para novos clientes</div>
-                </div>
-
-                {/* Installation Info */}
-                <div className="flex flex-col md:flex-row gap-4 mb-8">
-                  <div className="flex-1 bg-white/5 rounded-xl p-4">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <CheckCircle className="w-5 h-5 text-emerald-400" />
-                      <span className="font-semibold text-white">Instalação</span>
-                    </div>
-                    <p className="text-slate-300 text-sm">Taxa única R$ 149,90</p>
-                  </div>
-                  <div className="flex-1 bg-white/5 rounded-xl p-4">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <Heart className="w-5 h-5 text-pink-400" />
-                      <span className="font-semibold text-white">Contrato</span>
-                    </div>
-                    <p className="text-slate-300 text-sm">12 meses com benefícios</p>
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <div className="text-center">
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="btn-luxury w-full md:w-auto text-lg"
-                  >
-                    <span className="mr-2">🚀</span>
-                    Contratar Agora pelo WhatsApp
-                  </TouchButton>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      {/* Plans Section */}
+      <PlanSection />
 
       {/* Coverage Area */}
       <section id="cobertura" className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 text-white">
