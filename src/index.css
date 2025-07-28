@@ -4,53 +4,37 @@
 @tailwind utilities;
 
 @layer base {
-/* DESIGN SYSTEM UNIFICADO - PALETA COESA */
+  /* FORÇA O SITE A SEMPRE SER LARANJA - MODO CLARO TRAVADO */
   :root {
-    /* Background & Text */
-    --background: 25 100% 97%;
-    --foreground: 20 100% 8%;
+    --background: 24 100% 96%;
+    --foreground: 16 100% 10%;
 
-    /* Cards */
     --card: 0 0% 100%;
-    --card-foreground: 20 100% 12%;
+    --card-foreground: 16 100% 15%;
 
-    /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 20 100% 12%;
+    --popover-foreground: 16 100% 15%;
 
-    /* Primary - Orange theme unificado */
     --primary: 20 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 25 100% 65%;
-    --primary-dark: 15 100% 35%;
 
-    /* Secondary - Tom complementar */
-    --secondary: 25 100% 94%;
-    --secondary-foreground: 20 100% 15%;
+    --secondary: 24 100% 92%;
+    --secondary-foreground: 16 100% 20%;
 
-    /* Muted */
-    --muted: 25 100% 95%;
-    --muted-foreground: 20 60% 45%;
+    --muted: 24 100% 94%;
+    --muted-foreground: 16 60% 40%;
 
-    /* Accent */
-    --accent: 22 100% 58%;
+    --accent: 20 100% 55%;
     --accent-foreground: 0 0% 100%;
 
-    /* Destructive */
-    --destructive: 0 84% 60%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders & Inputs */
-    --border: 25 80% 88%;
-    --input: 25 80% 90%;
+    --border: 24 80% 85%;
+    --input: 24 80% 88%;
     --ring: 20 100% 50%;
 
-    /* Gradients unificados */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(20 100% 55%) 0%, hsl(15 100% 45%) 100%);
-
-    --radius: 0.75rem;
+    --radius: 0.5rem;
   }
 }
 
@@ -65,19 +49,9 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
-  /* TIPOGRAFIA UNIFICADA */
   h1, h2, h3, h4, h5, h6 {
     @apply font-playfair font-bold;
-    line-height: 1.2;
-    letter-spacing: -0.025em;
   }
-
-  h1 { @apply text-4xl md:text-6xl; }
-  h2 { @apply text-3xl md:text-5xl; }
-  h3 { @apply text-2xl md:text-4xl; }
-  h4 { @apply text-xl md:text-2xl; }
-  h5 { @apply text-lg md:text-xl; }
-  h6 { @apply text-base md:text-lg; }
 }
 
 @layer components {
