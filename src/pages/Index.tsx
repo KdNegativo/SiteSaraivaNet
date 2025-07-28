@@ -269,100 +269,100 @@ const Index = () => {
         <div className="hidden md:block relative z-10 px-4 py-16 max-w-7xl mx-auto">
           <AnimatedSection animation="fade-up">
             <div className="text-center">
-              {/* BADGE PREMIUM DESKTOP */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-6 py-3 rounded-full mb-8 shadow-lg font-black text-base border-2 border-yellow-300/80 hover:scale-105 transition-all duration-300 relative overflow-hidden group">
+              {/* BADGE PREMIUM DESKTOP - Tamanho equilibrado */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-5 py-2.5 rounded-full mb-6 shadow-lg font-black text-sm border-2 border-yellow-300/80 hover:scale-105 transition-all duration-300 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
-                <Star className="w-5 h-5 mr-3 fill-current animate-spin relative z-10" style={{ animationDuration: '4s' }} />
+                <Star className="w-4 h-4 mr-2 fill-current animate-spin relative z-10" style={{ animationDuration: '4s' }} />
                 <span className="font-extrabold relative z-10">🔥 INTERNET + TV GRÁTIS 🔥</span>
               </div>
               
-              {/* TÍTULO DESKTOP */}
-              <h1 className="text-6xl lg:text-7xl xl:text-8xl font-black mb-8 leading-tight relative">
-                <span className="block text-white mb-4 animate-fade-in relative z-10" style={{
+              {/* TÍTULO DESKTOP - Tamanho proporcional */}
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight relative">
+                <span className="block text-white mb-2 animate-fade-in relative z-10" style={{
                   textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(255,255,255,0.3)',
-                  letterSpacing: '2px'
+                  letterSpacing: '1px'
                 }}>Internet</span>
                 <span className="block text-white animate-fade-in relative z-10" style={{ 
                   animationDelay: '0.2s',
                   textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(255,255,255,0.3)',
-                  letterSpacing: '2px'
+                  letterSpacing: '1px'
                 }}>+ SaraivaTV</span>
                 
                 {/* Glow Effect Desktop */}
-                <div className="absolute inset-0 text-6xl lg:text-7xl xl:text-8xl font-black leading-tight pointer-events-none">
-                  <span className="block text-transparent bg-gradient-to-r from-orange-300/50 to-yellow-300/50 bg-clip-text mb-4 blur-sm">Internet</span>
+                <div className="absolute inset-0 text-4xl lg:text-5xl xl:text-6xl font-black leading-tight pointer-events-none">
+                  <span className="block text-transparent bg-gradient-to-r from-orange-300/50 to-yellow-300/50 bg-clip-text mb-2 blur-sm">Internet</span>
                   <span className="block text-transparent bg-gradient-to-r from-orange-300/50 to-yellow-300/50 bg-clip-text blur-sm">+ SaraivaTV</span>
                 </div>
               </h1>
               
-              {/* SUBTITLE DESKTOP */}
-              <p className="text-2xl lg:text-3xl mb-12 text-white/95 leading-relaxed font-bold animate-fade-in relative max-w-4xl mx-auto" style={{ 
+              {/* SUBTITLE DESKTOP - Tamanho equilibrado */}
+              <p className="text-lg lg:text-xl mb-8 text-white/95 leading-relaxed font-bold animate-fade-in relative max-w-3xl mx-auto" style={{ 
                 animationDelay: '0.4s',
                 textShadow: '2px 2px 8px rgba(0,0,0,0.8)',
-                letterSpacing: '1px'
+                letterSpacing: '0.5px'
               }}>
                 🚀 Internet mais rápida + App GRATUITO!
-                <div className="absolute inset-0 text-2xl lg:text-3xl leading-relaxed font-bold text-transparent bg-gradient-to-r from-white/30 to-orange-200/30 bg-clip-text blur-sm pointer-events-none">
+                <div className="absolute inset-0 text-lg lg:text-xl leading-relaxed font-bold text-transparent bg-gradient-to-r from-white/30 to-orange-200/30 bg-clip-text blur-sm pointer-events-none">
                   🚀 Internet mais rápida + App GRATUITO!
                 </div>
               </p>
 
-              {/* CARTÕES DESKTOP */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 max-w-5xl mx-auto">
-                <div className="group bg-gradient-to-br from-orange-500/95 to-red-500/85 backdrop-blur-xl rounded-3xl p-6 lg:p-8 flex flex-col items-center space-y-4 border-2 border-orange-200/80 hover:from-orange-400/100 hover:to-red-400/90 transition-all duration-300 shadow-xl hover:shadow-orange-500/70 hover:scale-105 animate-slide-in-left">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-orange-200/50">
-                    <Wifi className="w-8 h-8 lg:w-10 lg:h-10 text-orange-600" />
+              {/* CARTÕES DESKTOP - Tamanho proporcional */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-8 max-w-4xl mx-auto">
+                <div className="group bg-gradient-to-br from-orange-500/95 to-red-500/85 backdrop-blur-xl rounded-2xl p-4 lg:p-5 flex flex-col items-center space-y-3 border-2 border-orange-200/80 hover:from-orange-400/100 hover:to-red-400/90 transition-all duration-300 shadow-xl hover:shadow-orange-500/70 hover:scale-105 animate-slide-in-left">
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-orange-200/50">
+                    <Wifi className="w-6 h-6 lg:w-7 lg:h-7 text-orange-600" />
                   </div>
-                  <span className="font-black text-lg lg:text-xl text-center text-white leading-tight drop-shadow-md">Internet ULTRA</span>
+                  <span className="font-black text-sm lg:text-base text-center text-white leading-tight drop-shadow-md">Internet ULTRA</span>
                 </div>
-                <div className="group bg-gradient-to-br from-blue-500/95 to-purple-500/85 backdrop-blur-xl rounded-3xl p-6 lg:p-8 flex flex-col items-center space-y-4 border-2 border-blue-200/80 hover:from-blue-400/100 hover:to-purple-400/90 transition-all duration-300 shadow-xl hover:shadow-blue-500/70 hover:scale-105 animate-slide-in-left" style={{ animationDelay: '0.1s' }}>
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-blue-200/50">
-                    <Tv className="w-8 h-8 lg:w-10 lg:h-10 text-blue-600" />
+                <div className="group bg-gradient-to-br from-blue-500/95 to-purple-500/85 backdrop-blur-xl rounded-2xl p-4 lg:p-5 flex flex-col items-center space-y-3 border-2 border-blue-200/80 hover:from-blue-400/100 hover:to-purple-400/90 transition-all duration-300 shadow-xl hover:shadow-blue-500/70 hover:scale-105 animate-slide-in-left" style={{ animationDelay: '0.1s' }}>
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-blue-200/50">
+                    <Tv className="w-6 h-6 lg:w-7 lg:h-7 text-blue-600" />
                   </div>
-                  <span className="font-black text-lg lg:text-xl text-center text-white leading-tight drop-shadow-md">TV Premium</span>
+                  <span className="font-black text-sm lg:text-base text-center text-white leading-tight drop-shadow-md">TV Premium</span>
                 </div>
-                <div className="group bg-gradient-to-br from-green-500/95 to-emerald-500/85 backdrop-blur-xl rounded-3xl p-6 lg:p-8 flex flex-col items-center space-y-4 border-2 border-green-200/80 hover:from-green-400/100 hover:to-emerald-400/90 transition-all duration-300 shadow-xl hover:shadow-green-500/70 hover:scale-105 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-white via-green-50 to-green-100 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-green-200/50">
-                    <Music className="w-8 h-8 lg:w-10 lg:h-10 text-green-600" />
+                <div className="group bg-gradient-to-br from-green-500/95 to-emerald-500/85 backdrop-blur-xl rounded-2xl p-4 lg:p-5 flex flex-col items-center space-y-3 border-2 border-green-200/80 hover:from-green-400/100 hover:to-emerald-400/90 transition-all duration-300 shadow-xl hover:shadow-green-500/70 hover:scale-105 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-white via-green-50 to-green-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-green-200/50">
+                    <Music className="w-6 h-6 lg:w-7 lg:h-7 text-green-600" />
                   </div>
-                  <span className="font-black text-lg lg:text-xl text-center text-white leading-tight drop-shadow-md">Rádios 24h</span>
+                  <span className="font-black text-sm lg:text-base text-center text-white leading-tight drop-shadow-md">Rádios 24h</span>
                 </div>
-                <div className="group bg-gradient-to-br from-purple-500/95 to-pink-500/85 backdrop-blur-xl rounded-3xl p-6 lg:p-8 flex flex-col items-center space-y-4 border-2 border-purple-200/80 hover:from-purple-400/100 hover:to-pink-400/90 transition-all duration-300 shadow-xl hover:shadow-purple-500/70 hover:scale-105 animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-white via-purple-50 to-purple-100 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-purple-200/50">
-                    <Shield className="w-8 h-8 lg:w-10 lg:h-10 text-purple-600" />
+                <div className="group bg-gradient-to-br from-purple-500/95 to-pink-500/85 backdrop-blur-xl rounded-2xl p-4 lg:p-5 flex flex-col items-center space-y-3 border-2 border-purple-200/80 hover:from-purple-400/100 hover:to-pink-400/90 transition-all duration-300 shadow-xl hover:shadow-purple-500/70 hover:scale-105 animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-white via-purple-50 to-purple-100 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-purple-200/50">
+                    <Shield className="w-6 h-6 lg:w-7 lg:h-7 text-purple-600" />
                   </div>
-                  <span className="font-black text-lg lg:text-xl text-center text-white leading-tight drop-shadow-md">Suporte VIP</span>
+                  <span className="font-black text-sm lg:text-base text-center text-white leading-tight drop-shadow-md">Suporte VIP</span>
                 </div>
               </div>
 
-              {/* BOTÃO DESKTOP */}
-              <div className="mb-12 animate-scale-in" style={{ animationDelay: '0.5s' }}>
+              {/* BOTÃO DESKTOP - Tamanho equilibrado */}
+              <div className="mb-8 animate-scale-in" style={{ animationDelay: '0.5s' }}>
                 <TouchButton 
                   onClick={handleWhatsAppClick} 
-                  className="relative bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-16 lg:px-20 py-6 lg:py-8 rounded-3xl font-black text-2xl lg:text-3xl shadow-lg border-2 border-yellow-300/80 transform hover:scale-105 active:scale-95 transition-all duration-200 overflow-hidden group"
+                  className="relative bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-10 lg:px-12 py-4 lg:py-5 rounded-2xl font-black text-lg lg:text-xl shadow-lg border-2 border-yellow-300/80 transform hover:scale-105 active:scale-95 transition-all duration-200 overflow-hidden group"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-800"></div>
-                  <span className="relative flex items-center justify-center gap-4 drop-shadow-sm z-10">
+                  <span className="relative flex items-center justify-center gap-3 drop-shadow-sm z-10">
                     🚀 CONTRATAR AGORA
-                    <div className="w-10 h-10 lg:w-12 lg:h-12 bg-white/60 rounded-full flex items-center justify-center text-xl lg:text-2xl">
+                    <div className="w-7 h-7 lg:w-8 lg:h-8 bg-white/60 rounded-full flex items-center justify-center text-base lg:text-lg">
                       →
                     </div>
                   </span>
                 </TouchButton>
               </div>
 
-              {/* Stats Desktop */}
-              <div className="flex justify-center gap-8 lg:gap-12 text-center mb-8">
-                <div className="group bg-white/20 backdrop-blur-md rounded-2xl p-6 lg:p-8 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[150px] border border-white/30">
+              {/* Stats Desktop - Tamanho proporcional */}
+              <div className="flex justify-center gap-4 lg:gap-6 text-center mb-8">
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-4 lg:p-5 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[100px] lg:min-w-[120px] border border-white/30">
                   <StatsCounter endValue={1000} label="Clientes" suffix="+" />
                 </div>
-                <div className="group bg-white/20 backdrop-blur-md rounded-2xl p-6 lg:p-8 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[150px] border border-white/30">
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-4 lg:p-5 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[100px] lg:min-w-[120px] border border-white/30">
                   <StatsCounter endValue={99} label="Uptime" suffix="%" />
                 </div>
-                <div className="group bg-white/20 backdrop-blur-md rounded-2xl p-6 lg:p-8 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[150px] border border-white/30">
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-4 lg:p-5 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[100px] lg:min-w-[120px] border border-white/30">
                   <StatsCounter endValue={20} label="Canais" suffix="+" />
                 </div>
-                <div className="group bg-white/20 backdrop-blur-md rounded-2xl p-6 lg:p-8 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[150px] border border-white/30">
+                <div className="group bg-white/20 backdrop-blur-md rounded-xl p-4 lg:p-5 hover:bg-white/30 transition-all duration-200 shadow-md hover:scale-105 min-w-[100px] lg:min-w-[120px] border border-white/30">
                   <StatsCounter endValue={24} label="Online" suffix="h" />
                 </div>
               </div>
