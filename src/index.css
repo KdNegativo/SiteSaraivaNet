@@ -160,7 +160,7 @@
     background: var(--gradient-primary);
     @apply relative overflow-hidden text-white font-semibold 
            transition-all duration-300
-           hover:scale-105 shadow-lg hover:shadow-orange;
+           hover:scale-105 shadow-lg hover:shadow-xl;
   }
 
   .btn-premium::before {
