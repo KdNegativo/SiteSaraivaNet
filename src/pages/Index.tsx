@@ -93,25 +93,30 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Refined & Modern */}
+      {/* Hero Section - Stylish & Glamorous */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center pt-20" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%)'}}>
         
-        {/* Refined Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
+        {/* Stylish Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/35"></div>
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 2px, transparent 2px), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.06) 2px, transparent 2px)`,
-          backgroundSize: '60px 60px, 80px 80px'
+          backgroundImage: `
+            radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15) 2px, transparent 2px),
+            radial-gradient(circle at 80% 80%, rgba(255,255,255,0.12) 2px, transparent 2px),
+            radial-gradient(circle at 50% 10%, rgba(255,255,255,0.08) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px, 80px 80px, 40px 40px'
         }}></div>
         
-        {/* Subtle Floating Elements */}
+        {/* Glamorous Floating Elements */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-orange-300/15 to-yellow-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute bottom-20 left-20 w-56 h-56 bg-gradient-to-br from-red-300/10 to-pink-300/8 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+            <div className="absolute top-16 right-16 w-80 h-80 bg-gradient-to-br from-orange-300/25 to-yellow-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
+            <div className="absolute bottom-16 left-16 w-72 h-72 bg-gradient-to-br from-red-300/20 to-pink-300/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-purple-300/15 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '4s' }}></div>
           </div>
         )}
         
-        {/* Main Content with Better Spacing */}
+        {/* Main Content with Style */}
         <div className="relative z-10 w-full px-6 py-16">
           <div className="max-w-6xl mx-auto">
             
@@ -119,51 +124,73 @@ const Index = () => {
             <div className="md:hidden">
               <AnimatedSection animation="fade-up">
                 <div className="text-center space-y-10">
-                  {/* Refined Badge */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-5 py-3 rounded-full font-bold text-sm shadow-lg border border-yellow-200/30">
-                    <Star className="w-4 h-4 mr-2 fill-current animate-pulse" />
-                    <span className="font-medium">🔥 Internet + TV Grátis</span>
+                  {/* Glamorous Badge */}
+                  <div className="relative inline-flex items-center">
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full blur-md opacity-60 animate-pulse"></div>
+                    <div className="relative bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-6 py-3 rounded-full font-black text-sm shadow-xl border-2 border-yellow-200">
+                      <div className="flex items-center">
+                        <Star className="w-4 h-4 mr-2 fill-current animate-spin" style={{ animationDuration: '4s' }} />
+                        <span>🔥 INTERNET + TV GRÁTIS 🔥</span>
+                      </div>
+                    </div>
                   </div>
                   
-                  {/* Refined Title */}
-                  <h1 className="text-4xl font-black leading-tight text-white">
-                    <span className="block mb-3" style={{textShadow: '3px 3px 8px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.2)'}}>Internet</span>
-                    <span className="block" style={{textShadow: '3px 3px 8px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.2)'}}>+ SaraivaTV</span>
-                  </h1>
+                  {/* Stylish Title */}
+                  <div className="relative">
+                    <h1 className="text-4xl font-black leading-tight text-white relative z-10">
+                      <span className="block mb-3" style={{textShadow: '4px 4px 12px rgba(0,0,0,0.8), 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(255,165,0,0.4)'}}>Internet</span>
+                      <span className="block" style={{textShadow: '4px 4px 12px rgba(0,0,0,0.8), 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(255,165,0,0.4)'}}>+ SaraivaTV</span>
+                    </h1>
+                    
+                    {/* Title Glow Effect */}
+                    <div className="absolute inset-0 text-4xl font-black leading-tight pointer-events-none">
+                      <span className="block text-transparent bg-gradient-to-r from-orange-300/30 to-yellow-300/30 bg-clip-text mb-3 blur-sm">Internet</span>
+                      <span className="block text-transparent bg-gradient-to-r from-orange-300/30 to-yellow-300/30 bg-clip-text blur-sm">+ SaraivaTV</span>
+                    </div>
+                  </div>
                   
-                  {/* Lighter Subtitle */}
-                  <p className="text-lg text-white/90 font-normal leading-relaxed" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.5)'}}>
+                  {/* Stylish Subtitle */}
+                  <p className="text-lg text-white/95 font-bold" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.7), 0 0 20px rgba(255,255,255,0.2)'}}>
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Harmonized Cards */}
+                  {/* Glamorous Cards */}
                   <div className="grid grid-cols-2 gap-5 mt-12">
                     {[
-                      { icon: Wifi, text: "Internet ULTRA" },
-                      { icon: Tv, text: "TV Premium" },
-                      { icon: Music, text: "Rádios 24h" },
-                      { icon: Shield, text: "Suporte VIP" }
+                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/85 to-red-500/75", glow: "shadow-orange-500/40" },
+                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/85 to-purple-500/75", glow: "shadow-blue-500/40" },
+                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/85 to-emerald-500/75", glow: "shadow-green-500/40" },
+                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/85 to-pink-500/75", glow: "shadow-purple-500/40" }
                     ].map((card, index) => (
-                      <div key={index} className="bg-white/15 backdrop-blur-lg rounded-2xl p-5 flex flex-col items-center space-y-4 border border-white/20 shadow-md hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 ease-out">
-                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center shadow-sm">
+                      <div key={index} className={`group relative bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center space-y-4 border border-white/30 shadow-xl ${card.glow} hover:scale-105 hover:-translate-y-2 transition-all duration-500 hover:rotate-1 overflow-hidden`}>
+                        {/* Card Shine Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        {/* Floating Sparkle */}
+                        <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping"></div>
+                        
+                        <div className="w-12 h-12 bg-white/25 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 relative z-10">
                           <card.icon className="w-6 h-6 text-white" />
                         </div>
-                        <span className="font-medium text-sm text-white text-center">{card.text}</span>
+                        <span className="font-bold text-sm text-white text-center drop-shadow-lg relative z-10">{card.text}</span>
                       </div>
                     ))}
                   </div>
 
-                  {/* Refined Button */}
-                  <div className="mt-12">
+                  {/* Glamorous Button */}
+                  <div className="relative mt-12">
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-xl blur-lg opacity-60 animate-pulse"></div>
                     <TouchButton 
                       onClick={handleWhatsAppClick} 
-                      className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg shadow-md hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 ease-out border border-yellow-200/30"
+                      className="relative w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-xl font-black text-lg shadow-2xl border-2 border-yellow-200 hover:scale-105 hover:-translate-y-1 transition-all duration-300 overflow-hidden group"
                     >
-                      🚀 Contratar Agora
+                      {/* Button Shine */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-800"></div>
+                      <span className="relative z-10">🚀 CONTRATAR AGORA</span>
                     </TouchButton>
                   </div>
 
-                  {/* Refined Stats */}
+                  {/* Stylish Stats */}
                   <div className="grid grid-cols-2 gap-4 text-center mt-12">
                     {[
                       { value: 1000, label: "Clientes", suffix: "+" },
@@ -171,8 +198,11 @@ const Index = () => {
                       { value: 20, label: "Canais", suffix: "+" },
                       { value: 24, label: "Online", suffix: "h" }
                     ].map((stat, index) => (
-                      <div key={index} className="bg-white/15 backdrop-blur-lg rounded-xl p-4 border border-white/20 shadow-sm hover:bg-white/20 hover:scale-[1.02] transition-all duration-300 ease-out">
-                        <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                      <div key={index} className="group bg-white/20 backdrop-blur-xl rounded-xl p-4 border border-white/30 shadow-lg hover:bg-white/25 hover:scale-105 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="relative z-10">
+                          <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -184,50 +214,76 @@ const Index = () => {
             <div className="hidden md:block">
               <AnimatedSection animation="fade-up">
                 <div className="text-center space-y-16">
-                  {/* Refined Badge Desktop */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-lg border border-yellow-200/30">
-                    <Star className="w-5 h-5 mr-3 fill-current animate-pulse" />
-                    <span className="font-medium">🔥 Internet + TV Grátis</span>
+                  {/* Glamorous Badge Desktop */}
+                  <div className="relative inline-flex items-center">
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full blur-xl opacity-50 animate-pulse" style={{ animationDuration: '3s' }}></div>
+                    <div className="relative bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-8 py-4 rounded-full font-black text-lg shadow-2xl border-2 border-yellow-200">
+                      <div className="flex items-center">
+                        <Star className="w-5 h-5 mr-3 fill-current animate-spin" style={{ animationDuration: '5s' }} />
+                        <span>🔥 INTERNET + TV GRÁTIS 🔥</span>
+                      </div>
+                    </div>
                   </div>
                   
-                  {/* Refined Title */}
-                  <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto">
-                    <span className="block mb-6" style={{textShadow: '4px 4px 12px rgba(0,0,0,0.6), 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(255,165,0,0.2)'}}>Internet + SaraivaTV</span>
-                  </h1>
+                  {/* Spectacular Title */}
+                  <div className="relative">
+                    <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto relative z-10">
+                      <span className="block mb-6" style={{textShadow: '5px 5px 15px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4), 0 0 80px rgba(255,165,0,0.3)'}}>Internet + SaraivaTV</span>
+                    </h1>
+                    
+                    {/* Title Glow Effects */}
+                    <div className="absolute inset-0 text-6xl lg:text-7xl font-black leading-tight pointer-events-none">
+                      <span className="block text-transparent bg-gradient-to-r from-orange-300/40 to-yellow-300/40 bg-clip-text mb-6 blur-md">Internet + SaraivaTV</span>
+                    </div>
+                    <div className="absolute inset-0 text-6xl lg:text-7xl font-black leading-tight pointer-events-none">
+                      <span className="block text-transparent bg-gradient-to-r from-white/25 to-orange-200/25 bg-clip-text mb-6 blur-sm">Internet + SaraivaTV</span>
+                    </div>
+                  </div>
                   
-                  {/* Lighter Subtitle */}
-                  <p className="text-2xl lg:text-3xl text-white/90 font-normal max-w-3xl mx-auto leading-relaxed" style={{textShadow: '2px 2px 6px rgba(0,0,0,0.5)'}}>
+                  {/* Stylish Subtitle */}
+                  <p className="text-2xl lg:text-3xl text-white/95 font-bold max-w-3xl mx-auto" style={{textShadow: '3px 3px 10px rgba(0,0,0,0.7), 0 0 25px rgba(255,255,255,0.3)'}}>
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Harmonized Cards */}
+                  {/* Spectacular Cards */}
                   <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto mt-16">
                     {[
-                      { icon: Wifi, text: "Internet ULTRA" },
-                      { icon: Tv, text: "TV Premium" },
-                      { icon: Music, text: "Rádios 24h" },
-                      { icon: Shield, text: "Suporte VIP" }
+                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/85 to-red-500/75", glow: "shadow-orange-500/30" },
+                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/85 to-purple-500/75", glow: "shadow-blue-500/30" },
+                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/85 to-emerald-500/75", glow: "shadow-green-500/30" },
+                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/85 to-pink-500/75", glow: "shadow-purple-500/30" }
                     ].map((card, index) => (
-                      <div key={index} className="bg-white/15 backdrop-blur-lg rounded-3xl p-8 flex flex-col items-center space-y-5 border border-white/20 shadow-md hover:shadow-lg hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300 ease-out">
-                        <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-sm">
+                      <div key={index} className={`group relative bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-8 flex flex-col items-center space-y-5 border border-white/30 shadow-2xl ${card.glow} hover:scale-110 hover:-translate-y-3 transition-all duration-500 hover:rotate-2 overflow-hidden`}>
+                        {/* Card Background Glow */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        {/* Multiple Floating Sparkles */}
+                        <div className="absolute top-3 right-3 w-2 h-2 bg-white/70 rounded-full opacity-0 group-hover:opacity-100 animate-ping"></div>
+                        <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-white/50 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                        
+                        <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 relative z-10">
                           <card.icon className="w-8 h-8 text-white" />
                         </div>
-                        <span className="font-medium text-lg text-white text-center">{card.text}</span>
+                        <span className="font-bold text-lg text-white text-center drop-shadow-xl relative z-10">{card.text}</span>
                       </div>
                     ))}
                   </div>
 
-                  {/* Refined Button */}
-                  <div className="mt-16">
+                  {/* Spectacular Button */}
+                  <div className="relative mt-16">
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-xl blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s' }}></div>
                     <TouchButton 
                       onClick={handleWhatsAppClick} 
-                      className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-12 py-5 rounded-xl font-bold text-2xl shadow-md hover:shadow-lg hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300 ease-out border border-yellow-200/30"
+                      className="relative bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-12 py-5 rounded-xl font-black text-2xl shadow-2xl border-2 border-yellow-200 hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden group"
                     >
-                      🚀 Contratar Agora
+                      {/* Multiple Shine Effects */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent translate-x-[-300%] group-hover:translate-x-[300%] transition-transform duration-1000"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-300%] group-hover:translate-x-[300%] transition-transform duration-800" style={{ animationDelay: '0.2s' }}></div>
+                      <span className="relative z-10">🚀 CONTRATAR AGORA</span>
                     </TouchButton>
                   </div>
 
-                  {/* Refined Stats Desktop */}
+                  {/* Spectacular Stats Desktop */}
                   <div className="flex justify-center gap-12 text-center max-w-4xl mx-auto mt-16">
                     {[
                       { value: 1000, label: "Clientes", suffix: "+" },
@@ -235,8 +291,16 @@ const Index = () => {
                       { value: 20, label: "Canais", suffix: "+" },
                       { value: 24, label: "Online", suffix: "h" }
                     ].map((stat, index) => (
-                      <div key={index} className="bg-white/15 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-sm hover:bg-white/20 hover:scale-[1.03] hover:-translate-y-0.5 transition-all duration-300 ease-out">
-                        <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                      <div key={index} className="group relative bg-white/20 backdrop-blur-xl rounded-2xl p-6 border border-white/30 shadow-xl hover:bg-white/25 hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                        {/* Stat Background Glow */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div className="relative z-10">
+                          <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                        </div>
+                        
+                        {/* Floating Sparkle */}
+                        <div className="absolute top-2 right-2 w-2 h-2 bg-white/70 rounded-full opacity-0 group-hover:opacity-100 animate-ping"></div>
                       </div>
                     ))}
                   </div>
