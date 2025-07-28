@@ -319,72 +319,87 @@ const Index = () => {
             </div>
           </AnimatedSection>
 
-          {/* Beautiful Single Plan Card */}
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden hover:shadow-orange-500/20 hover:scale-[1.02] transform transition-all duration-500 group">
+          {/* Desktop Plan Layout */}
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden hover:shadow-orange-500/20 transition-all duration-500 group">
               
-              {/* Plan Header */}
-              <div className="bg-gradient-to-r from-orange-500 to-red-500 p-8 text-white text-center group-hover:from-orange-400 group-hover:to-red-400 transition-all duration-500">
-                <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                  <Wifi className="w-12 h-12 text-white" />
+              {/* Plan Header - Horizontal */}
+              <div className="bg-gradient-to-r from-orange-500 to-red-500 p-6 text-white group-hover:from-orange-400 group-hover:to-red-400 transition-all duration-500">
+                <div className="flex items-center justify-between max-w-6xl mx-auto">
+                  <div className="flex items-center space-x-6">
+                    <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                      <Wifi className="w-10 h-10 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-black mb-2" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>Plano Completo SaraivaNet</h3>
+                      <div className="text-xl opacity-95 font-medium">Fibra Óptica 300MB + SaraivaTV Grátis</div>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-lg text-white/80 line-through mb-1">De R$ 169,90</div>
+                    <div className="text-5xl font-black group-hover:scale-105 transition-transform duration-300" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>
+                      R$ 129<span className="text-3xl">,90</span>
+                    </div>
+                    <div className="text-lg text-white/90">por mês</div>
+                  </div>
                 </div>
-                <h3 className="text-4xl font-black mb-4" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>Plano Completo</h3>
-                <div className="text-6xl font-black mb-4" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>300MB</div>
-                <div className="text-2xl opacity-95 font-medium">Fibra Óptica + SaraivaTV Grátis</div>
               </div>
 
-              {/* Plan Content */}
-              <div className="p-8 lg:p-12">
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Plan Content - Wide Layout */}
+              <div className="p-8">
+                <div className="max-w-6xl mx-auto">
                   
-                  {/* Pricing Section */}
-                  <div className="space-y-8">
-                    <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 backdrop-blur-sm rounded-3xl p-8 border border-slate-600/50 shadow-xl">
-                      <div className="text-xl text-slate-400 line-through mb-3 text-center">De R$ 169,90</div>
-                      <div className="text-6xl font-black text-orange-400 mb-3 text-center group-hover:text-orange-300 transition-colors duration-300">
-                        R$ 129<span className="text-4xl">,90</span>
-                      </div>
-                      <div className="text-xl text-slate-300 text-center">por mês</div>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 p-8 rounded-3xl border border-green-700/50 shadow-xl">
-                      <div className="text-green-300 font-bold mb-3 text-lg text-center">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
-                      <div className="text-green-400 text-center">Promoção exclusiva para novos clientes</div>
-                    </div>
-
-                    <TouchButton 
-                      onClick={handleWhatsAppClick} 
-                      className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-black py-6 px-8 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-xl"
-                    >
-                      🚀 Contratar Agora
-                    </TouchButton>
+                  {/* Promo Banner */}
+                  <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 p-6 rounded-2xl border border-green-700/50 shadow-xl mb-8 text-center">
+                    <div className="text-green-300 font-bold text-xl mb-2">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
+                    <div className="text-green-400 text-lg">Promoção exclusiva para novos clientes</div>
                   </div>
 
-                  {/* Features Section */}
-                  <div className="space-y-8">
-                    <h4 className="text-3xl font-black text-white mb-8" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
-                      Tudo que você precisa:
-                    </h4>
-                    
-                    <div className="space-y-5">
-                      {[
-                        { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida", color: "from-orange-500 to-red-500" },
-                        { icon: Tv, text: "App SaraivaTV Premium totalmente grátis", color: "from-blue-500 to-purple-500" },
-                        { icon: Smartphone, text: "Assista TV direto no seu celular", color: "from-green-500 to-emerald-500" },
-                        { icon: Music, text: "Rádios nacionais e locais incluídas", color: "from-purple-500 to-pink-500" },
-                        { icon: Shield, text: "Suporte técnico 24h todos os dias", color: "from-yellow-500 to-orange-500" },
-                        { icon: Zap, text: "Velocidade garantida por contrato", color: "from-cyan-500 to-blue-500" },
-                        { icon: CheckCircle, text: "Instalação profissional (taxa única R$ 149,90)", color: "from-emerald-500 to-green-500" },
-                        { icon: Heart, text: "Contrato de 12 meses", color: "from-pink-500 to-red-500" }
-                      ].map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-5 p-5 bg-gradient-to-r from-slate-700/30 to-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-600/30 hover:border-orange-400/50 hover:bg-slate-600/30 transition-all duration-300 hover:scale-[1.02] transform shadow-lg">
-                          <div className={`w-14 h-14 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                            <feature.icon className="w-7 h-7 text-white" />
-                          </div>
-                          <span className="font-bold text-slate-100 text-lg">{feature.text}</span>
+                  {/* Features Grid - 3 columns for desktop */}
+                  <div className="grid lg:grid-cols-3 gap-6 mb-8">
+                    {[
+                      { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida", color: "from-orange-500 to-red-500" },
+                      { icon: Tv, text: "App SaraivaTV Premium totalmente grátis", color: "from-blue-500 to-purple-500" },
+                      { icon: Smartphone, text: "Assista TV direto no seu celular", color: "from-green-500 to-emerald-500" },
+                      { icon: Music, text: "Rádios nacionais e locais incluídas", color: "from-purple-500 to-pink-500" },
+                      { icon: Shield, text: "Suporte técnico 24h todos os dias", color: "from-yellow-500 to-orange-500" },
+                      { icon: Zap, text: "Velocidade garantida por contrato", color: "from-cyan-500 to-blue-500" }
+                    ].map((feature, index) => (
+                      <div key={index} className="flex items-center space-x-4 p-4 bg-gradient-to-r from-slate-700/30 to-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-600/30 hover:border-orange-400/50 hover:bg-slate-600/30 transition-all duration-300 hover:scale-[1.02] transform shadow-lg">
+                        <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                          <feature.icon className="w-6 h-6 text-white" />
                         </div>
-                      ))}
+                        <span className="font-semibold text-slate-100">{feature.text}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Additional Info Row */}
+                  <div className="grid lg:grid-cols-2 gap-6 mb-8">
+                    <div className="bg-gradient-to-r from-slate-700/40 to-slate-800/40 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 shadow-lg">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <CheckCircle className="w-6 h-6 text-emerald-400" />
+                        <span className="font-bold text-slate-100 text-lg">Instalação Profissional</span>
+                      </div>
+                      <p className="text-slate-300">Taxa única de R$ 149,90 - Técnicos especializados</p>
                     </div>
+                    <div className="bg-gradient-to-r from-slate-700/40 to-slate-800/40 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 shadow-lg">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Heart className="w-6 h-6 text-pink-400" />
+                        <span className="font-bold text-slate-100 text-lg">Contrato Flexível</span>
+                      </div>
+                      <p className="text-slate-300">Fidelidade de 12 meses com benefícios exclusivos</p>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="text-center">
+                    <TouchButton 
+                      onClick={handleWhatsAppClick} 
+                      className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-black py-5 px-12 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-xl"
+                    >
+                      🚀 Contratar Agora pelo WhatsApp
+                    </TouchButton>
                   </div>
                 </div>
               </div>
