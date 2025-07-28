@@ -416,7 +416,8 @@ const Index = () => {
       </section>
 
       {/* Coverage Area */}
-      <AnimatedSection id="cobertura" className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 text-white">
+      <section id="cobertura" className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 text-white">
+        <AnimatedSection>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
@@ -468,7 +469,8 @@ const Index = () => {
             </a>
           </div>
         </div>
-      </AnimatedSection>
+        </AnimatedSection>
+      </section>
 
       {/* SaraivaTV Features Section - ULTRA PREMIUM */}
       <section className="py-16 px-4 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fff5f0 0%, #ffede0 30%, #ffe5d4 70%, #ffd4c4 100%)'}}>
@@ -657,7 +659,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        </AnimatedSection>
+      </section>
 
       {/* About Section */}
       <section id="sobre" className="py-16 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
