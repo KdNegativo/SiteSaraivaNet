@@ -4,46 +4,37 @@
 @tailwind utilities;
 
 @layer base {
-  /* Design System Unificado - SaraivaNet */
+  /* FORÇA O SITE A SEMPRE SER LARANJA - MODO CLARO TRAVADO */
   :root {
-    --background: 24 100% 98%;
-    --foreground: 16 100% 8%;
+    --background: 24 100% 96%;
+    --foreground: 16 100% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 16 100% 12%;
+    --card-foreground: 16 100% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 16 100% 12%;
+    --popover-foreground: 16 100% 15%;
 
     --primary: 20 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 24 95% 95%;
-    --secondary-foreground: 16 100% 15%;
+    --secondary: 24 100% 92%;
+    --secondary-foreground: 16 100% 20%;
 
-    --muted: 24 95% 96%;
-    --muted-foreground: 16 50% 45%;
+    --muted: 24 100% 94%;
+    --muted-foreground: 16 60% 40%;
 
-    --accent: 20 95% 55%;
+    --accent: 20 100% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 24 70% 88%;
-    --input: 24 70% 90%;
+    --border: 24 80% 85%;
+    --input: 24 80% 88%;
     --ring: 20 100% 50%;
 
-    /* Gradientes principais */
-    --gradient-primary: linear-gradient(135deg, hsl(20, 100%, 50%) 0%, hsl(15, 100%, 45%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(220, 70%, 15%) 0%, hsl(220, 80%, 25%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(20, 100%, 50%) 0%, hsl(15, 100%, 45%) 50%, hsl(10, 95%, 40%) 100%);
-    
-    /* Sombras elegantes */
-    --shadow-luxury: 0 20px 60px -12px hsl(20, 100%, 50%, 0.25);
-    --shadow-glow: 0 0 40px hsl(20, 100%, 50%, 0.3);
-    
-    --radius: 0.75rem;
+    --radius: 0.5rem;
   }
 }
 
@@ -64,47 +55,44 @@
 }
 
 @layer components {
-  /* Sistema de Design Unificado */
-  .glass-luxury {
-    @apply bg-white/90 backdrop-blur-xl border border-primary/20 shadow-2xl;
-    box-shadow: var(--shadow-luxury);
+  /* Glassmorphism Effects */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
   }
 
-  .glass-dark-luxury {
-    @apply bg-slate-900/90 backdrop-blur-xl border border-primary/20 shadow-2xl;
-    box-shadow: var(--shadow-luxury);
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-white/10;
   }
 
-  .glass-button-luxury {
-    @apply bg-white/20 hover:bg-white/30 backdrop-blur-md border border-primary/30 transition-all duration-300;
-    box-shadow: var(--shadow-glow);
+  .glass-card {
+    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/20 shadow-2xl;
   }
 
-  /* Gradientes Unificados */
+  .glass-button {
+    @apply bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 transition-all duration-300;
+  }
+
+  /* Gradient Backgrounds */
   .gradient-primary {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 
-  .gradient-secondary {
-    background: var(--gradient-secondary);
+  .gradient-blue {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   }
 
-  .gradient-hero {
-    background: var(--gradient-hero);
+  .gradient-purple {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
   }
 
-  .gradient-text-luxury {
-    @apply bg-gradient-to-r from-primary via-orange-600 to-red-500 bg-clip-text text-transparent;
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent;
   }
 
-  /* Botões Premium Unificados */
-  .btn-luxury {
-    @apply bg-gradient-to-r from-primary to-orange-600 hover:from-orange-500 hover:to-red-500 text-white font-bold py-4 px-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105;
-    box-shadow: var(--shadow-luxury);
-  }
-
-  .btn-secondary-luxury {
-    @apply bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02];
+  .gradient-animated {
+    background: linear-gradient(-45deg, #667eea, #764ba2, #4facfe, #00f2fe);
+    background-size: 300% 300%;
+    animation: gradient-shift 6s ease infinite;
   }
 
   /* Hover Effects */
