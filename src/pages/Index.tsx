@@ -406,26 +406,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <div className="bg-slate-800/80 backdrop-blur-sm rounded-3xl p-10 text-white shadow-xl border border-slate-700 hover:border-orange-500/30 transition-all duration-500 hover:scale-102">
-              <h3 className="text-3xl font-black mb-6" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
-                🔥 Não Perca Esta Oportunidade!
-              </h3>
-              <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
-              </p>
-              
-              <div className="text-center">
-                <TouchButton 
-                  onClick={handleWhatsAppClick} 
-                  className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-8 py-4 font-black rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
-                >
-                  💬 Falar no WhatsApp
-                </TouchButton>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
