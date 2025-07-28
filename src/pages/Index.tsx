@@ -41,20 +41,20 @@ const Index = () => {
       {/* Floating Components */}
       <ChatBot />
       
-      {/* Header */}
-      <header style={{background: '#ff6600', borderBottomColor: '#ff4400'}} className="shadow-xl px-4 py-3 border-b-4 z-50">
+      {/* Header - Fixed Navigation */}
+      <header style={{background: '#ff6600', borderBottomColor: '#ff4400'}} className="fixed top-0 left-0 right-0 shadow-md px-4 py-3 border-b-2 z-50 backdrop-blur-sm bg-opacity-95">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-white to-orange-100 rounded-xl flex items-center justify-center shadow-lg border border-white/30">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-white to-orange-100 rounded-lg flex items-center justify-center shadow-sm border border-white/20">
                 <Wifi className="w-4 h-4 text-orange-600" />
               </div>
               <div>
-                <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
+                <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '1px 1px 3px rgba(0,0,0,0.5)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.3px'}}>SaraivaNet</span>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
-                  <span className="bg-gradient-to-r from-white/80 to-white/60 bg-clip-text text-transparent font-bold">Eliseu Martins - PI</span>
+                  <span className="font-medium">Eliseu Martins - PI</span>
                 </div>
               </div>
             </div>
@@ -66,110 +66,112 @@ const Index = () => {
 
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
+          <div className="flex items-center space-x-4">
+            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
               <Wifi className="w-5 h-5 text-orange-600" />
             </div>
             <div>
-              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
-              <div className="text-xs text-orange-100 font-medium flex items-center">
+              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '1px 1px 3px rgba(0,0,0,0.5)', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
+              <div className="text-sm text-orange-100 font-medium flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
                 Eliseu Martins - PI
               </div>
             </div>
           </div>
           
-          <nav className="flex items-center space-x-6">
-            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
+          <nav className="flex items-center space-x-8">
+            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium text-base">Início</a>
+            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium text-base">Planos</a>
+            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium text-base">Cobertura</a>
+            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium text-base">Sobre</a>
+            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium text-base">Contato</a>
           </nav>
 
           <div className="flex items-center space-x-4">
-            {/* ThemeToggle removido */}
+            {/* Space for future elements */}
           </div>
         </div>
       </header>
 
-      {/* Hero Section - Beautiful & Elegant */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%)'}}>
+      {/* Hero Section - Refined & Modern */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center pt-20" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%)'}}>
         
-        {/* Beautiful Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
+        {/* Refined Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08) 2px, transparent 2px)`,
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 2px, transparent 2px), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.06) 2px, transparent 2px)`,
           backgroundSize: '60px 60px, 80px 80px'
         }}></div>
         
-        {/* Elegant Floating Elements */}
+        {/* Subtle Floating Elements */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-orange-300/20 to-yellow-300/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-br from-red-300/15 to-pink-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+            <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-orange-300/15 to-yellow-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
+            <div className="absolute bottom-20 left-20 w-56 h-56 bg-gradient-to-br from-red-300/10 to-pink-300/8 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
           </div>
         )}
         
-        {/* Main Content */}
-        <div className="relative z-10 w-full px-6 py-12">
+        {/* Main Content with Better Spacing */}
+        <div className="relative z-10 w-full px-6 py-16">
           <div className="max-w-6xl mx-auto">
             
             {/* Mobile Version */}
             <div className="md:hidden">
               <AnimatedSection animation="fade-up">
-                <div className="text-center space-y-8">
-                  {/* Elegant Badge */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-5 py-3 rounded-full font-bold text-sm shadow-xl border-2 border-yellow-200/50">
+                <div className="text-center space-y-10">
+                  {/* Refined Badge */}
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-5 py-3 rounded-full font-bold text-sm shadow-lg border border-yellow-200/30">
                     <Star className="w-4 h-4 mr-2 fill-current animate-pulse" />
-                    <span>🔥 Internet + TV Grátis</span>
+                    <span className="font-medium">🔥 Internet + TV Grátis</span>
                   </div>
                   
-                  {/* Beautiful Title */}
+                  {/* Refined Title */}
                   <h1 className="text-4xl font-black leading-tight text-white">
-                    <span className="block mb-2" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.7), 0 0 30px rgba(255,255,255,0.3)'}}>Internet</span>
-                    <span className="block" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.7), 0 0 30px rgba(255,255,255,0.3)'}}>+ SaraivaTV</span>
+                    <span className="block mb-3" style={{textShadow: '3px 3px 8px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.2)'}}>Internet</span>
+                    <span className="block" style={{textShadow: '3px 3px 8px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.2)'}}>+ SaraivaTV</span>
                   </h1>
                   
-                  {/* Elegant Subtitle */}
-                  <p className="text-lg text-white/95 font-medium" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.6)'}}>
+                  {/* Lighter Subtitle */}
+                  <p className="text-lg text-white/90 font-normal leading-relaxed" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.5)'}}>
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Beautiful Cards */}
-                  <div className="grid grid-cols-2 gap-4">
+                  {/* Harmonized Cards */}
+                  <div className="grid grid-cols-2 gap-5 mt-12">
                     {[
-                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
-                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
-                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
-                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                      { icon: Wifi, text: "Internet ULTRA" },
+                      { icon: Tv, text: "TV Premium" },
+                      { icon: Music, text: "Rádios 24h" },
+                      { icon: Shield, text: "Suporte VIP" }
                     ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-lg rounded-2xl p-5 flex flex-col items-center space-y-3 border border-white/30 shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300`}>
-                        <div className="w-12 h-12 bg-white/25 rounded-xl flex items-center justify-center shadow-lg">
+                      <div key={index} className="bg-white/15 backdrop-blur-lg rounded-2xl p-5 flex flex-col items-center space-y-4 border border-white/20 shadow-md hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 ease-out">
+                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center shadow-sm">
                           <card.icon className="w-6 h-6 text-white" />
                         </div>
-                        <span className="font-bold text-sm text-white text-center drop-shadow-lg">{card.text}</span>
+                        <span className="font-medium text-sm text-white text-center">{card.text}</span>
                       </div>
                     ))}
                   </div>
 
-                  {/* Beautiful Button */}
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-xl font-black text-lg shadow-xl border-2 border-yellow-200/50 hover:scale-105 hover:-translate-y-1 transition-all duration-300"
-                  >
-                    🚀 Contratar Agora
-                  </TouchButton>
+                  {/* Refined Button */}
+                  <div className="mt-12">
+                    <TouchButton 
+                      onClick={handleWhatsAppClick} 
+                      className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg shadow-md hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 ease-out border border-yellow-200/30"
+                    >
+                      🚀 Contratar Agora
+                    </TouchButton>
+                  </div>
 
-                  {/* Elegant Stats */}
-                  <div className="grid grid-cols-2 gap-3 text-center">
+                  {/* Refined Stats */}
+                  <div className="grid grid-cols-2 gap-4 text-center mt-12">
                     {[
                       { value: 1000, label: "Clientes", suffix: "+" },
                       { value: 99, label: "Uptime", suffix: "%" },
                       { value: 20, label: "Canais", suffix: "+" },
                       { value: 24, label: "Online", suffix: "h" }
                     ].map((stat, index) => (
-                      <div key={index} className="bg-white/20 backdrop-blur-lg rounded-xl p-3 border border-white/30 shadow-lg hover:bg-white/25 hover:scale-105 transition-all duration-300">
+                      <div key={index} className="bg-white/15 backdrop-blur-lg rounded-xl p-4 border border-white/20 shadow-sm hover:bg-white/20 hover:scale-[1.02] transition-all duration-300 ease-out">
                         <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
                       </div>
                     ))}
@@ -181,57 +183,59 @@ const Index = () => {
             {/* Desktop Version */}
             <div className="hidden md:block">
               <AnimatedSection animation="fade-up">
-                <div className="text-center space-y-12">
-                  {/* Elegant Badge Desktop */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-xl border-2 border-yellow-200/50">
+                <div className="text-center space-y-16">
+                  {/* Refined Badge Desktop */}
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-lg border border-yellow-200/30">
                     <Star className="w-5 h-5 mr-3 fill-current animate-pulse" />
-                    <span>🔥 Internet + TV Grátis</span>
+                    <span className="font-medium">🔥 Internet + TV Grátis</span>
                   </div>
                   
-                  {/* Stunning Title */}
+                  {/* Refined Title */}
                   <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto">
-                    <span className="block mb-4" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.7), 0 0 40px rgba(255,255,255,0.4), 0 0 80px rgba(255,165,0,0.3)'}}>Internet + SaraivaTV</span>
+                    <span className="block mb-6" style={{textShadow: '4px 4px 12px rgba(0,0,0,0.6), 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(255,165,0,0.2)'}}>Internet + SaraivaTV</span>
                   </h1>
                   
-                  {/* Beautiful Subtitle */}
-                  <p className="text-2xl lg:text-3xl text-white/95 font-medium max-w-3xl mx-auto" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.6)'}}>
+                  {/* Lighter Subtitle */}
+                  <p className="text-2xl lg:text-3xl text-white/90 font-normal max-w-3xl mx-auto leading-relaxed" style={{textShadow: '2px 2px 6px rgba(0,0,0,0.5)'}}>
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Stunning Cards */}
-                  <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
+                  {/* Harmonized Cards */}
+                  <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto mt-16">
                     {[
-                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
-                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
-                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
-                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                      { icon: Wifi, text: "Internet ULTRA" },
+                      { icon: Tv, text: "TV Premium" },
+                      { icon: Music, text: "Rádios 24h" },
+                      { icon: Shield, text: "Suporte VIP" }
                     ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-lg rounded-3xl p-8 flex flex-col items-center space-y-4 border border-white/30 shadow-xl hover:scale-110 hover:-translate-y-2 transition-all duration-500`}>
-                        <div className="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center shadow-xl">
+                      <div key={index} className="bg-white/15 backdrop-blur-lg rounded-3xl p-8 flex flex-col items-center space-y-5 border border-white/20 shadow-md hover:shadow-lg hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300 ease-out">
+                        <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-sm">
                           <card.icon className="w-8 h-8 text-white" />
                         </div>
-                        <span className="font-bold text-lg text-white text-center drop-shadow-xl">{card.text}</span>
+                        <span className="font-medium text-lg text-white text-center">{card.text}</span>
                       </div>
                     ))}
                   </div>
 
-                  {/* Stunning Button */}
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-12 py-5 rounded-xl font-black text-2xl shadow-xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500"
-                  >
-                    🚀 Contratar Agora
-                  </TouchButton>
+                  {/* Refined Button */}
+                  <div className="mt-16">
+                    <TouchButton 
+                      onClick={handleWhatsAppClick} 
+                      className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-12 py-5 rounded-xl font-bold text-2xl shadow-md hover:shadow-lg hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300 ease-out border border-yellow-200/30"
+                    >
+                      🚀 Contratar Agora
+                    </TouchButton>
+                  </div>
 
-                  {/* Beautiful Stats Desktop */}
-                  <div className="flex justify-center gap-12 text-center max-w-3xl mx-auto">
+                  {/* Refined Stats Desktop */}
+                  <div className="flex justify-center gap-12 text-center max-w-4xl mx-auto mt-16">
                     {[
                       { value: 1000, label: "Clientes", suffix: "+" },
                       { value: 99, label: "Uptime", suffix: "%" },
                       { value: 20, label: "Canais", suffix: "+" },
                       { value: 24, label: "Online", suffix: "h" }
                     ].map((stat, index) => (
-                      <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-xl hover:bg-white/25 hover:scale-110 hover:-translate-y-1 transition-all duration-500">
+                      <div key={index} className="bg-white/15 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-sm hover:bg-white/20 hover:scale-[1.03] hover:-translate-y-0.5 transition-all duration-300 ease-out">
                         <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
                       </div>
                     ))}
