@@ -44,7 +44,7 @@ const MobileNavigation = () => {
         <Menu className="h-5 w-5" />
       </Button>
 
-      {/* Overlay */}
+      {/* Sobreposição */}
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 z-40"

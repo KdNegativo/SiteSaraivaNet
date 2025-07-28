@@ -18,15 +18,15 @@ const TouchButton = React.forwardRef<HTMLButtonElement, TouchButtonProps>(
         variant={variant}
         size={size}
         className={cn(
-          // Touch-friendly improvements
+          // Melhorias para toque
           touchOptimized && [
-            "min-h-[44px] min-w-[44px]", // Minimum touch target size
-            "active:scale-95", // Touch feedback
+            "min-h-[44px] min-w-[44px]", // Tamanho mínimo da área de toque
+            "active:scale-95", // Feedback de toque
             "transition-transform duration-150 ease-out",
-            "touch-manipulation", // Optimize for touch
-            "select-none", // Prevent text selection
+            "touch-manipulation", // Otimizar para toque
+            "select-none", // Prevenir seleção de texto
           ],
-          // Enhanced visual feedback
+          // Feedback visual aprimorado
           "relative overflow-hidden",
           "before:absolute before:inset-0 before:bg-white/20 before:opacity-0 before:transition-opacity",
           "active:before:opacity-100",

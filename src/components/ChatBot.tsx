@@ -208,31 +208,31 @@ const ChatBot = () => {
 
   return (
     <>
-      {/* Floating Chat Button */}
+      {/* Botão Flutuante do Chat */}
       <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40">
-        {/* Chat Button */}
+        {/* Botão do Chat */}
         <button
           onClick={() => setIsOpen(true)}
           className="relative group bg-gradient-to-br from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 p-4 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-white/30 hover:border-white/50 overflow-hidden"
           aria-label="Abrir assistente virtual"
         >
-          {/* Button Content */}
+          {/* Conteúdo do Botão */}
           <div className="relative z-10">
             <MessageCircle className="w-7 h-7 text-white" />
           </div>
         </button>
       </div>
 
-      {/* Premium Chat Window */}
+      {/* Janela Premium do Chat */}
       {isOpen && (
         <div className="fixed inset-x-4 bottom-4 md:bottom-6 md:right-6 md:left-auto md:w-96 z-50 animate-scale-in">
           <div className="w-full h-[32rem] md:h-[28rem] flex flex-col shadow-2xl bg-white/95 backdrop-blur-xl rounded-3xl overflow-hidden border border-orange-200/50 relative">
-            {/* Animated Background */}
+            {/* Fundo Animado */}
             <div className="absolute inset-0 bg-gradient-to-br from-orange-50/80 to-pink-50/80 pointer-events-none"></div>
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-orange-200/30 to-transparent rounded-full blur-2xl animate-pulse"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-200/30 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
             
-            {/* Header Premium */}
+            {/* Cabeçalho Premium */}
             <div className="relative z-10 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white p-4 flex justify-between items-center">
               <div className="flex items-center gap-3">
                 {currentStep === 'back' && (
@@ -266,7 +266,7 @@ const ChatBot = () => {
               </Button>
             </div>
 
-            {/* Messages Area Premium */}
+            {/* Área de Mensagens Premium */}
             <div className="flex-1 p-4 overflow-y-auto space-y-4 relative z-10" style={{ scrollbarWidth: 'thin' }}>
               {messages.map((message, index) => (
                 <div
@@ -308,10 +308,10 @@ const ChatBot = () => {
                 </div>
               ))}
 
-              {/* Typing Indicator */}
+              {/* Indicador de Digitação */}
               {isTyping && <TypingIndicator />}
 
-              {/* FAQ Options Premium */}
+              {/* Opções de FAQ Premium */}
               {showOptions && !isTyping && (
                 <div className="space-y-3 mt-6">
                   <div className="text-center text-gray-600 font-medium mb-4 flex items-center justify-center gap-2">
@@ -335,7 +335,7 @@ const ChatBot = () => {
                 </div>
               )}
 
-              {/* Contact Options */}
+              {/* Opções de Contato */}
               {showContactOptions && !isTyping && (
                 <div className="space-y-3 mt-6">
                   <div className="text-center text-gray-600 font-medium mb-4 flex items-center justify-center gap-2">
@@ -372,7 +372,7 @@ const ChatBot = () => {
                 </div>
               )}
 
-              {/* Back Button */}
+              {/* Botão Voltar */}
               {currentStep === 'back' && !showOptions && (
                 <div className="text-center pt-4 animate-fade-in">
                   <button

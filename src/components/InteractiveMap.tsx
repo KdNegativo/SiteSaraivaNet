@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// Fix for default markers in Leaflet
+// Correção para marcadores padrão do Leaflet
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
@@ -88,11 +88,11 @@ const InteractiveMap: React.FC = () => {
 
   const getMarkerColor = (type: string) => {
     switch (type) {
-      case 'centro': return '#ea580c'; // orange-600
-      case 'bairro': return '#16a34a'; // green-600
-      case 'interior': return '#2563eb'; // blue-600
-      case 'rural': return '#9333ea'; // purple-600
-      default: return '#6b7280'; // gray-500
+      case 'centro': return '#ea580c'; // laranja-600
+      case 'bairro': return '#16a34a'; // verde-600
+      case 'interior': return '#2563eb'; // azul-600
+      case 'rural': return '#9333ea'; // roxo-600
+      default: return '#6b7280'; // cinza-500
     }
   };
 

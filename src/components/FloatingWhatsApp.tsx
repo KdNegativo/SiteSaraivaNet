@@ -14,10 +14,10 @@ const FloatingWhatsApp = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3">
-      {/* Expanded card */}
+      {/* Cartão expandido */}
       {isExpanded && (
         <div className="absolute bottom-20 right-0 w-80 max-w-[90vw] bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 animate-scale-in transform origin-bottom-right">
-          {/* Header */}
+          {/* Cabeçalho */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
@@ -36,14 +36,14 @@ const FloatingWhatsApp = () => {
             </button>
           </div>
 
-          {/* Message */}
+          {/* Mensagem */}
           <div className="bg-gray-50 rounded-xl p-4 mb-4">
             <p className="text-sm text-gray-700 leading-relaxed">
               👋 Olá! Como podemos ajudar você hoje? Estamos aqui para tirar suas dúvidas sobre nossos planos de internet e SaraivaTV!
             </p>
           </div>
 
-          {/* Actions */}
+          {/* Ações */}
           <div className="space-y-2">
             <button
               onClick={handleWhatsAppClick}
@@ -78,14 +78,14 @@ const FloatingWhatsApp = () => {
         </div>
       )}
 
-      {/* WhatsApp text label - sempre visível */}
+      {/* Rótulo de texto do WhatsApp - sempre visível */}
       {!isExpanded && (
         <div className="bg-white shadow-lg rounded-full px-4 py-2 border border-gray-200">
           <p className="text-sm font-medium text-gray-700 whitespace-nowrap">💬 WhatsApp</p>
         </div>
       )}
 
-      {/* Floating button */}
+      {/* Botão flutuante */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className={`relative bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 shadow-2xl transition-all duration-300 flex items-center justify-center rounded-full group overflow-hidden ${
@@ -95,7 +95,7 @@ const FloatingWhatsApp = () => {
           boxShadow: '0 8px 32px rgba(34, 197, 94, 0.4)'
         }}
       >
-        {/* Icon */}
+        {/* Ícone */}
         <div className="relative z-10">
           {isExpanded ? (
             <X className="w-7 h-7 text-white transition-transform duration-300" />
@@ -104,7 +104,7 @@ const FloatingWhatsApp = () => {
           )}
         </div>
 
-        {/* Ripple effect on hover */}
+        {/* Efeito ondulação no hover */}
         <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500"></div>
       </button>
     </div>

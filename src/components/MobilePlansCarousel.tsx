@@ -125,7 +125,7 @@ const MobilePlansCarousel = () => {
           </Card>
         </div>
 
-        {/* Navigation buttons */}
+        {/* Botões de navegação */}
         <button
           onClick={prevPlan}
           className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm touch-manipulation"
@@ -141,7 +141,7 @@ const MobilePlansCarousel = () => {
         </button>
       </div>
 
-      {/* Dots indicator */}
+      {/* Indicador de pontos */}
       <div className="flex justify-center mt-4 space-x-2">
         {plans.map((_, index) => (
           <button
