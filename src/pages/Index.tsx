@@ -1,16 +1,15 @@
-import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun, Rocket } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Star, Shield, CheckCircle, Award, Smartphone, Zap, Users, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import RealMap from "@/components/RealMap";
 import StatsCounter from "@/components/StatsCounter";
 import TestimonialCard from "@/components/TestimonialCard";
-import ThemeToggle from "@/components/ThemeToggle";
 import MobileNavigation from "@/components/MobileNavigation";
 import AnimatedSection from "@/components/AnimatedSection";
-import ChatBot from "@/components/ChatBot";
 import TouchButton from "@/components/TouchButton";
-import MobilePlansCarousel from "@/components/MobilePlansCarousel";
 import ResponsiveImage from "@/components/ResponsiveImage";
+import UnifiedWhatsApp from "@/components/UnifiedWhatsApp";
+import SinglePlan from "@/components/SinglePlan";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
@@ -51,7 +50,7 @@ const Index = () => {
         backgroundSize: '800px 800px, 600px 600px, 400px 400px'
       }}></div>
       {/* Floating Components */}
-      <ChatBot />
+      <UnifiedWhatsApp variant="expanded" />
       
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-orange-400/30" style={{background: 'linear-gradient(135deg, rgba(255, 102, 0, 0.95) 0%, rgba(255, 87, 34, 0.95) 50%, rgba(230, 81, 0, 0.95) 100%)'}}>
@@ -125,26 +124,17 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Beautiful & Elegant */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center pt-20" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
+      {/* Hero Section - Simplificado e Elegante */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center pt-20" style={{background: 'var(--gradient-hero)'}}>
         
-        {/* Sophisticated Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%)
-          `,
-          backgroundSize: '80px 80px, 60px 60px, 120px 120px'
-        }}></div>
+        {/* Fundo sutil */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         
-        {/* Elegant Floating Elements */}
+        {/* Elementos flutuantes simplificados */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-orange-300/25 to-yellow-300/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-red-300/20 to-pink-300/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s', animationDelay: '3s' }}></div>
-            <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-yellow-300/15 to-orange-300/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '5s' }}></div>
+            <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-orange-400/20 to-red-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s' }}></div>
+            <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-yellow-400/15 to-orange-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '3s' }}></div>
           </div>
         )}
         
@@ -182,7 +172,7 @@ const Index = () => {
                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
                     ].map((card, index) => (
                       <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-5 flex flex-col items-center space-y-3 border border-white/40 shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20`}>
-                        <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl">,
+                        <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl">
                           <card.icon className="w-6 h-6 text-white" />
                         </div>
                         <span className="font-bold text-sm text-white text-center drop-shadow-2xl">{card.text}</span>
@@ -191,12 +181,11 @@ const Index = () => {
                   </div>
 
                   {/* Beautiful Button */}
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-2xl font-black text-lg shadow-2xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/30"
-                  >
-                    🚀 Contratar Agora
-                  </TouchButton>
+                  <UnifiedWhatsApp 
+                    position="inline"
+                    size="lg"
+                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 text-lg shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500"
+                  />
 
                   {/* Elegant Stats */}
                   <div className="grid grid-cols-2 gap-3 text-center">
@@ -253,12 +242,11 @@ const Index = () => {
                   </div>
 
                   {/* Stunning Button */}
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-16 py-6 rounded-2xl font-black text-2xl shadow-2xl border-3 border-yellow-200/50 hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-yellow-500/40"
-                  >
-                    🚀 Contratar Agora
-                  </TouchButton>
+                  <UnifiedWhatsApp 
+                    position="inline"
+                    size="lg"
+                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-16 py-6 rounded-2xl font-black text-2xl shadow-2xl hover:scale-115 hover:-translate-y-3 transition-all duration-700"
+                  />
 
                   {/* Beautiful Stats Desktop */}
                   <div className="flex justify-center gap-12 text-center max-w-3xl mx-auto">
@@ -280,132 +268,21 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - Clean & Beautiful */}
-      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
+      {/* Plans Section - Simplificado */}
+      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{background: 'linear-gradient(135deg, hsl(210 100% 15%) 0%, hsl(210 100% 20%) 50%, hsl(210 100% 25%) 100%)'}}>
+        {/* Fundo sutil */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-blue-500/5"></div>
         
-        {/* Sophisticated Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-blue-500/8"></div>
-        
-        {/* Elegant Floating Elements */}
+        {/* Elementos flutuantes simplificados */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-64 h-64 bg-orange-400/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s' }}></div>
-            <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-400/12 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '3s' }}></div>
-            <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-purple-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s', animationDelay: '6s' }}></div>
+            <div className="absolute top-20 right-20 w-48 h-48 bg-orange-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s' }}></div>
+            <div className="absolute bottom-20 left-20 w-32 h-32 bg-blue-400/8 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s', animationDelay: '3s' }}></div>
           </div>
         )}
         
-        <div className="max-w-6xl mx-auto relative z-10">
-          <AnimatedSection animation="fade-up">
-            <div className="text-center mb-16">
-              {/* Simple Badge */}
-              <div className="inline-flex items-center bg-orange-500/90 text-white px-6 py-3 rounded-full text-lg font-bold mb-8 border border-orange-400">
-                <Award className="w-5 h-5 mr-3" />
-                <span>Plano Exclusivo</span>
-              </div>
-              
-              {/* Beautiful Title */}
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.8)'}}>
-                Internet + SaraivaTV
-              </h2>
-              <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
-                O plano completo que vai transformar sua experiência digital
-              </p>
-              
-              {/* Special Offer */}
-              <div className="inline-flex items-center bg-green-500/90 text-white px-6 py-3 rounded-full font-bold text-lg">
-                🎉 Oferta especial: 3 meses com desconto!
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Desktop Plan Layout */}
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden hover:shadow-orange-500/20 transition-all duration-500 group">
-              
-              {/* Plan Header - Horizontal */}
-              <div className="bg-gradient-to-r from-orange-500 to-red-500 p-6 text-white group-hover:from-orange-400 group-hover:to-red-400 transition-all duration-500">
-                <div className="flex items-center justify-between max-w-6xl mx-auto">
-                  <div className="flex items-center space-x-6">
-                    <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                      <Wifi className="w-10 h-10 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-black mb-2" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>Plano Completo SaraivaNet</h3>
-                      <div className="text-xl opacity-95 font-medium">Fibra Óptica 300MB + SaraivaTV Grátis</div>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-lg text-white/80 line-through mb-1">De R$ 169,90</div>
-                    <div className="text-5xl font-black group-hover:scale-105 transition-transform duration-300" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>
-                      R$ 129<span className="text-3xl">,90</span>
-                    </div>
-                    <div className="text-lg text-white/90">por mês</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Plan Content - Wide Layout */}
-              <div className="p-8">
-                <div className="max-w-6xl mx-auto">
-                  
-                  {/* Promo Banner */}
-                  <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 p-6 rounded-2xl border border-green-700/50 shadow-xl mb-8 text-center">
-                    <div className="text-green-300 font-bold text-xl mb-2">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
-                    <div className="text-green-400 text-lg">Promoção exclusiva para novos clientes</div>
-                  </div>
-
-                  {/* Features Grid - 3 columns for desktop */}
-                  <div className="grid lg:grid-cols-3 gap-6 mb-8">
-                    {[
-                      { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida", color: "from-orange-500 to-red-500" },
-                      { icon: Tv, text: "App SaraivaTV Premium totalmente grátis", color: "from-blue-500 to-purple-500" },
-                      { icon: Smartphone, text: "Assista TV direto no seu celular", color: "from-green-500 to-emerald-500" },
-                      { icon: Music, text: "Rádios nacionais e locais incluídas", color: "from-purple-500 to-pink-500" },
-                      { icon: Shield, text: "Suporte técnico 24h todos os dias", color: "from-yellow-500 to-orange-500" },
-                      { icon: Zap, text: "Velocidade garantida por contrato", color: "from-cyan-500 to-blue-500" }
-                    ].map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-4 p-4 bg-gradient-to-r from-slate-700/30 to-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-600/30 hover:border-orange-400/50 hover:bg-slate-600/30 transition-all duration-300 hover:scale-[1.02] transform shadow-lg">
-                        <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                          <feature.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <span className="font-semibold text-slate-100">{feature.text}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Additional Info Row */}
-                  <div className="grid lg:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-gradient-to-r from-slate-700/40 to-slate-800/40 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 shadow-lg">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <CheckCircle className="w-6 h-6 text-emerald-400" />
-                        <span className="font-bold text-slate-100 text-lg">Instalação Profissional</span>
-                      </div>
-                      <p className="text-slate-300">Taxa única de R$ 149,90 - Técnicos especializados</p>
-                    </div>
-                    <div className="bg-gradient-to-r from-slate-700/40 to-slate-800/40 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 shadow-lg">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Heart className="w-6 h-6 text-pink-400" />
-                        <span className="font-bold text-slate-100 text-lg">Contrato Flexível</span>
-                      </div>
-                      <p className="text-slate-300">Fidelidade de 12 meses com benefícios exclusivos</p>
-                    </div>
-                  </div>
-
-                  {/* CTA Button */}
-                  <div className="text-center">
-                    <TouchButton 
-                      onClick={handleWhatsAppClick} 
-                      className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-black py-5 px-12 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-xl"
-                    >
-                      🚀 Contratar Agora pelo WhatsApp
-                    </TouchButton>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="relative z-10">
+          <SinglePlan />
         </div>
       </section>
 

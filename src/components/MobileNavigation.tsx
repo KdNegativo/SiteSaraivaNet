@@ -94,15 +94,11 @@ const MobileNavigation = () => {
           <div className="mt-8 pt-8 border-t border-white/30">
             <div className="text-center">
               <p className="text-white/90 text-sm mb-6 font-medium">Entre em contato</p>
-              <Button 
+                <Button 
                 onClick={handleWhatsAppClick}
                 className="w-full bg-gradient-to-r from-white to-orange-50 text-orange-600 hover:from-orange-50 hover:to-white font-black py-4 rounded-2xl flex items-center justify-center space-x-3 shadow-2xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 border-2 border-white/50"
               >
-                <img 
-                  src="/lovable-uploads/981f602c-b0d2-4161-8119-dfd91ef1c234.png" 
-                  alt="WhatsApp" 
-                  className="w-6 h-6"
-                />
+                <span className="text-2xl">💬</span>
                 <span className="text-lg">WhatsApp</span>
               </Button>
             </div>

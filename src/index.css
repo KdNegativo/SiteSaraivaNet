@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 @layer base {
-  /* FORÇA O SITE A SEMPRE SER LARANJA - MODO CLARO TRAVADO */
+  /* DESIGN SYSTEM UNIFICADO */
   :root {
     --background: 24 100% 96%;
     --foreground: 16 100% 10%;
@@ -34,7 +34,37 @@
     --input: 24 80% 88%;
     --ring: 20 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* SISTEMA DE CORES UNIFICADO */
+    --orange-50: 24 100% 97%;
+    --orange-100: 24 100% 94%;
+    --orange-200: 24 100% 87%;
+    --orange-300: 20 100% 80%;
+    --orange-400: 20 100% 70%;
+    --orange-500: 20 100% 60%;
+    --orange-600: 20 100% 50%;
+    --orange-700: 16 100% 45%;
+    --orange-800: 16 100% 35%;
+    --orange-900: 16 100% 25%;
+
+    /* GRADIENTES PADRONIZADOS */
+    --gradient-primary: linear-gradient(135deg, hsl(20 100% 60%) 0%, hsl(16 100% 50%) 50%, hsl(0 84% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(24 100% 97%) 0%, hsl(24 100% 92%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(20 100% 50%) 0%, hsl(16 100% 45%) 25%, hsl(0 84% 55%) 50%, hsl(0 70% 50%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+
+    /* SOMBRAS CONSISTENTES */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+    --shadow-xl: 0 12px 24px rgba(0,0,0,0.25);
+    --shadow-orange: 0 8px 25px rgba(255,102,0,0.3);
+
+    /* TRANSIÇÕES CONSISTENTES */
+    --transition-fast: 150ms ease-out;
+    --transition-normal: 300ms ease-out;
+    --transition-slow: 500ms ease-out;
   }
 }
 
@@ -72,27 +102,26 @@
     @apply bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 transition-all duration-300;
   }
 
-  /* Gradient Backgrounds */
+  /* Gradientes limpos do sistema */
   .gradient-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
   }
 
-  .gradient-blue {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  }
-
-  .gradient-purple {
-    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  .gradient-secondary {
+    background: var(--gradient-secondary);
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent;
+    background: linear-gradient(135deg, hsl(var(--orange-600)) 0%, hsl(var(--orange-800)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .gradient-animated {
-    background: linear-gradient(-45deg, #667eea, #764ba2, #4facfe, #00f2fe);
-    background-size: 300% 300%;
-    animation: gradient-shift 6s ease infinite;
+    background: var(--gradient-primary);
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
   }
 
   /* Hover Effects */
@@ -126,14 +155,12 @@
            hover:bg-white/80 dark:hover:bg-gray-900/80;
   }
 
-  /* Button Enhancements */
+  /* Button Enhancements - Sistema unificado */
   .btn-premium {
-    @apply relative overflow-hidden 
-           bg-gradient-to-r from-blue-600 to-purple-600 
-           hover:from-blue-700 hover:to-purple-700 
-           text-white font-semibold 
-           transition-all duration-300 
-           hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25;
+    background: var(--gradient-primary);
+    @apply relative overflow-hidden text-white font-semibold 
+           transition-all duration-var(--transition-normal)
+           hover:scale-105 shadow-lg hover:shadow-orange;
   }
 
   .btn-premium::before {
@@ -229,9 +256,9 @@
     transition: all 0.2s ease-out;
   }
 
-  /* Premium gradient effects */
+  /* Gradientes otimizados para mobile */
   .gradient-premium-mobile {
-    background: linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%);
+    background: var(--gradient-primary);
   }
 
   /* Shimmer Animation */
@@ -353,14 +380,14 @@
   }
 }
 
-/* Classes adicionais para garantir o laranja funcione bem */
+/* Classes do sistema unificado */
 .orange-gradient-bg {
-  background: linear-gradient(135deg, hsl(var(--orange-primary)), hsl(var(--orange-light)));
+  background: var(--gradient-primary);
 }
 
 .orange-header {
-  background: hsl(var(--orange-primary));
-  border-bottom-color: hsl(var(--orange-dark));
+  background: hsl(var(--orange-600));
+  border-bottom-color: hsl(var(--orange-700));
 }
 
 /* TRAVA O SITE NO MODO CLARO - NUNCA MUDA */
