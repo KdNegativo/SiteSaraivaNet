@@ -18,13 +18,16 @@ const Index = () => {
   const parallaxOffset = useParallax(0.5);
   const prefersReducedMotion = useReducedMotion();
   
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: prefersReducedMotion ? 'auto' : 'smooth',
-        block: 'start'
+      const headerHeight = 80; // Altura do header
+      const elementPosition = targetElement.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
       });
     }
   };
@@ -51,59 +54,79 @@ const Index = () => {
       <ChatBot />
       
       {/* Header */}
-      <header style={{background: '#ff6600', borderBottomColor: '#ff4400'}} className="shadow-xl px-4 py-3 border-b-4 z-50">
-        {/* Mobile Layout */}
-        <div className="md:hidden">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-white to-orange-100 rounded-xl flex items-center justify-center shadow-lg border border-white/30">
-                <Wifi className="w-4 h-4 text-orange-600" />
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-orange-400/30" style={{background: 'linear-gradient(135deg, rgba(255, 102, 0, 0.95) 0%, rgba(255, 87, 34, 0.95) 50%, rgba(230, 81, 0, 0.95) 100%)'}}>
+        {/* Elegant header overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/10"></div>
+        
+        <div className="relative px-4 py-4">
+          {/* Mobile Layout */}
+          <div className="md:hidden">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-white to-orange-100 rounded-2xl flex items-center justify-center shadow-2xl border-2 border-white/50">
+                  <Wifi className="w-5 h-5 text-orange-600" />
+                </div>
+                <div>
+                  <span className="text-xl font-black text-white font-playfair" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)', letterSpacing: '0.5px'}}>SaraivaNet</span>
+                  <div className="text-xs text-orange-100 font-semibold flex items-center">
+                    <MapPin className="w-3 h-3 mr-1" />
+                    <span className="bg-gradient-to-r from-white/90 to-white/70 bg-clip-text text-transparent font-bold">Eliseu Martins - PI</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MobileNavigation />
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Layout */}
+          <div className="hidden md:flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-white to-orange-100 rounded-2xl flex items-center justify-center shadow-2xl border-2 border-white/50">
+                <Wifi className="w-6 h-6 text-orange-600" />
               </div>
               <div>
-                <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
-                <div className="text-xs text-orange-100 font-medium flex items-center">
-                  <MapPin className="w-2.5 h-2.5 mr-1" />
-                  <span className="bg-gradient-to-r from-white/80 to-white/60 bg-clip-text text-transparent font-bold">Eliseu Martins - PI</span>
+                <span className="text-2xl font-black text-white font-playfair" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.8)', letterSpacing: '1px'}}>SaraivaNet</span>
+                <div className="text-sm text-orange-100 font-semibold flex items-center">
+                  <MapPin className="w-4 h-4 mr-1" />
+                  <span className="bg-gradient-to-r from-white/90 to-white/70 bg-clip-text text-transparent">Eliseu Martins - PI</span>
                 </div>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <MobileNavigation />
-            </div>
-          </div>
-        </div>
+            
+            <nav className="flex items-center space-x-2">
+              <button onClick={e => handleSmoothScroll(e, 'inicio')} className="relative px-6 py-3 text-white hover:text-orange-200 transition-all duration-300 font-semibold group rounded-full">
+                <span className="relative z-10">Início</span>
+                <div className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+              </button>
+              <button onClick={e => handleSmoothScroll(e, 'planos')} className="relative px-6 py-3 text-white hover:text-orange-200 transition-all duration-300 font-semibold group rounded-full">
+                <span className="relative z-10">Planos</span>
+                <div className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+              </button>
+              <button onClick={e => handleSmoothScroll(e, 'cobertura')} className="relative px-6 py-3 text-white hover:text-orange-200 transition-all duration-300 font-semibold group rounded-full">
+                <span className="relative z-10">Cobertura</span>
+                <div className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+              </button>
+              <button onClick={e => handleSmoothScroll(e, 'sobre')} className="relative px-6 py-3 text-white hover:text-orange-200 transition-all duration-300 font-semibold group rounded-full">
+                <span className="relative z-10">Sobre</span>
+                <div className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+              </button>
+              <button onClick={e => handleSmoothScroll(e, 'contato')} className="relative px-6 py-3 text-white hover:text-orange-200 transition-all duration-300 font-semibold group rounded-full">
+                <span className="relative z-10">Contato</span>
+                <div className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+              </button>
+            </nav>
 
-        {/* Desktop Layout */}
-        <div className="hidden md:flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-              <Wifi className="w-5 h-5 text-orange-600" />
+            <div className="flex items-center space-x-4">
+              {/* Espaço para futuros elementos */}
             </div>
-            <div>
-              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
-              <div className="text-xs text-orange-100 font-medium flex items-center">
-                <MapPin className="w-3 h-3 mr-1" />
-                Eliseu Martins - PI
-              </div>
-            </div>
-          </div>
-          
-          <nav className="flex items-center space-x-6">
-            <a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</a>
-            <a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</a>
-            <a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</a>
-            <a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</a>
-            <a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</a>
-          </nav>
-
-          <div className="flex items-center space-x-4">
-            {/* ThemeToggle removido */}
           </div>
         </div>
       </header>
 
       {/* Hero Section - Beautiful & Elegant */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center pt-20" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
         
         {/* Sophisticated Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
@@ -882,11 +905,11 @@ const Index = () => {
             <div>
               <h4 className="text-2xl font-bold mb-6 text-orange-400">Links Rápidos</h4>
               <ul className="space-y-3">
-                <li><a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</a></li>
-                <li><a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</a></li>
-                <li><a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</a></li>
-                <li><a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</a></li>
-                <li><a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</a></li>
+                <li><button onClick={e => handleSmoothScroll(e, 'inicio')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg cursor-pointer">Início</button></li>
+                <li><button onClick={e => handleSmoothScroll(e, 'planos')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg cursor-pointer">Planos</button></li>
+                <li><button onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg cursor-pointer">Cobertura</button></li>
+                <li><button onClick={e => handleSmoothScroll(e, 'sobre')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg cursor-pointer">Sobre Nós</button></li>
+                <li><button onClick={e => handleSmoothScroll(e, 'contato')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg cursor-pointer">Contato</button></li>
               </ul>
             </div>
 

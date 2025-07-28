@@ -6,14 +6,17 @@ import { Button } from "@/components/ui/button";
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLButtonElement>, targetId: string) => {
     e.preventDefault();
     setIsOpen(false); // Fecha o menu após clicar
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+      const headerHeight = 80; // Altura do header
+      const elementPosition = targetElement.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
       });
     }
   };
@@ -53,8 +56,8 @@ const MobileNavigation = () => {
       )}
 
       {/* Menu */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 z-50 transform transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : 'translate-x-full'
+      <div className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-br from-orange-600 via-red-600 to-red-700 backdrop-blur-xl border-l border-white/20 z-50 transform transition-all duration-500 ease-out ${
+        isOpen ? 'translate-x-0 shadow-2xl' : 'translate-x-full'
       }`}>
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
@@ -72,33 +75,35 @@ const MobileNavigation = () => {
             </Button>
           </div>
 
-          <nav className="space-y-4">
-            {menuItems.map((item) => (
-              <a
+          <nav className="space-y-3">
+            {menuItems.map((item, index) => (
+              <button
                 key={item.id}
-                href={`#${item.id}`}
                 onClick={(e) => handleSmoothScroll(e, item.id)}
-                className="flex items-center space-x-3 p-3 text-white hover:bg-white/20 rounded-lg transition-colors"
+                className="w-full flex items-center space-x-4 p-4 text-white hover:bg-white/20 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 group"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <item.icon className="w-5 h-5" />
-                <span className="font-medium">{item.label}</span>
-              </a>
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
+                  <item.icon className="w-5 h-5" />
+                </div>
+                <span className="font-semibold text-lg">{item.label}</span>
+              </button>
             ))}
           </nav>
 
-          <div className="mt-8 pt-8 border-t border-white/20">
+          <div className="mt-8 pt-8 border-t border-white/30">
             <div className="text-center">
-              <p className="text-white/80 text-sm mb-4">Entre em contato</p>
+              <p className="text-white/90 text-sm mb-6 font-medium">Entre em contato</p>
               <Button 
                 onClick={handleWhatsAppClick}
-                className="w-full bg-white text-orange-600 hover:bg-orange-50 font-bold py-3 rounded-xl flex items-center justify-center space-x-2"
+                className="w-full bg-gradient-to-r from-white to-orange-50 text-orange-600 hover:from-orange-50 hover:to-white font-black py-4 rounded-2xl flex items-center justify-center space-x-3 shadow-2xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 border-2 border-white/50"
               >
                 <img 
                   src="/lovable-uploads/981f602c-b0d2-4161-8119-dfd91ef1c234.png" 
                   alt="WhatsApp" 
-                  className="w-5 h-5"
+                  className="w-6 h-6"
                 />
-                <span>WhatsApp</span>
+                <span className="text-lg">WhatsApp</span>
               </Button>
             </div>
           </div>
