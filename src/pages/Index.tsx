@@ -14,12 +14,12 @@ import ResponsiveImage from "@/components/ResponsiveImage";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
-// Import fun animated images
+// Import elegant images
 import heroAnimated from "@/assets/hero-animated.jpg";
-import iconWifiFun from "@/assets/icon-wifi-fun.jpg";
-import iconTvFun from "@/assets/icon-tv-fun.jpg";
-import iconMusicFun from "@/assets/icon-music-fun.jpg";
-import iconShieldFun from "@/assets/icon-shield-fun.jpg";
+import iconWifi from "@/assets/icon-wifi-elegant.jpg";
+import iconTv from "@/assets/icon-tv-elegant.jpg";
+import iconMusic from "@/assets/icon-music-elegant.jpg";
+import iconShield from "@/assets/icon-shield-elegant.jpg";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -140,72 +140,52 @@ const Index = () => {
             <div className="md:hidden">
               <AnimatedSection animation="fade-up">
                 <div className="text-center space-y-10">
-                  {/* Fun Badge */}
-                  <div className="relative inline-flex items-center">
-                    <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-full blur-md opacity-60 animate-pulse"></div>
-                    <div className="relative bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 text-white px-6 py-3 rounded-full font-black text-sm shadow-xl border-2 border-orange-200">
-                      <div className="flex items-center">
-                        <Star className="w-4 h-4 mr-2 fill-current animate-bounce" />
-                        <span>🎮 DIVERSÃO + APRENDIZADO 🎮</span>
-                      </div>
-                    </div>
-                  </div>
+                   {/* Professional Badge */}
+                   <div className="relative inline-flex items-center">
+                     <div className="relative bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg">
+                       <span>Plataforma Educacional Premium</span>
+                     </div>
+                   </div>
                   
-                  {/* Fun Title */}
-                  <div className="relative">
-                    <h1 className="text-4xl font-black leading-tight text-white relative z-10">
-                      <span className="block mb-3" style={{textShadow: '4px 4px 12px rgba(0,0,0,0.8), 0 0 30px rgba(255,165,0,0.8)'}}>Aulas Divertidas</span>
-                      <span className="block" style={{textShadow: '4px 4px 12px rgba(0,0,0,0.8), 0 0 30px rgba(255,165,0,0.8)'}}>+ Internet Ultra</span>
-                    </h1>
-                    
-                    {/* Title Glow Effect */}
-                    <div className="absolute inset-0 text-4xl font-black leading-tight pointer-events-none">
-                      <span className="block text-transparent bg-gradient-to-r from-orange-300/50 to-orange-200/50 bg-clip-text mb-3 blur-sm">Aulas Divertidas</span>
-                      <span className="block text-transparent bg-gradient-to-r from-orange-300/50 to-orange-200/50 bg-clip-text blur-sm">+ Internet Ultra</span>
-                    </div>
-                  </div>
+                   {/* Professional Title */}
+                   <div className="relative">
+                     <h1 className="text-4xl font-bold leading-tight text-white relative z-10">
+                       <span className="block mb-3">Transforme o</span>
+                       <span className="block">Aprendizado</span>
+                     </h1>
+                   </div>
                   
-                  {/* Fun Subtitle */}
-                  <p className="text-lg text-white/95 font-bold" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.7), 0 0 20px rgba(255,165,0,0.5)'}}>
-                    🎮 Plataforma gamificada que as crianças AMAM!
-                  </p>
+                   {/* Professional Subtitle */}
+                   <p className="text-lg text-white/95 font-medium">
+                     Desperte a paixão pelo conhecimento com nossa plataforma inovadora.
+                   </p>
 
-                  {/* Fun Cards with Custom Icons */}
-                  <div className="grid grid-cols-2 gap-5 mt-12">
-                    {[
-                      { image: iconWifiFun, text: "Internet ULTRA", gradient: "from-orange-500/90 to-orange-600/80", glow: "shadow-orange-500/50" },
-                      { image: iconTvFun, text: "Aulas Animadas", gradient: "from-orange-400/90 to-orange-500/80", glow: "shadow-orange-400/50" },
-                      { image: iconMusicFun, text: "Sons & Músicas", gradient: "from-orange-600/90 to-red-500/80", glow: "shadow-orange-600/50" },
-                      { image: iconShieldFun, text: "100% Seguro", gradient: "from-orange-500/90 to-red-600/80", glow: "shadow-orange-500/50" }
-                    ].map((card, index) => (
-                      <div key={index} className={`group relative bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center space-y-4 border border-orange-200/30 shadow-xl ${card.glow} hover:scale-110 hover:-translate-y-3 transition-all duration-500 hover:rotate-2 overflow-hidden`}>
-                        {/* Card Shine Effect */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
-                        {/* Multiple Floating Sparkles */}
-                        <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-yellow-300/80 rounded-full opacity-0 group-hover:opacity-100 animate-ping"></div>
-                        <div className="absolute bottom-2 left-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.3s' }}></div>
-                        
-                        <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 relative z-10 overflow-hidden">
-                          <img src={card.image} alt={card.text} className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-500" />
-                        </div>
-                        <span className="font-bold text-sm text-white text-center drop-shadow-lg relative z-10">{card.text}</span>
-                      </div>
-                    ))}
-                  </div>
+                   {/* Professional Cards with Elegant Icons */}
+                   <div className="grid grid-cols-2 gap-5 mt-12">
+                     {[
+                       { image: iconWifi, text: "Internet Premium", gradient: "from-white/20 to-white/10" },
+                       { image: iconTv, text: "Conteúdo Digital", gradient: "from-white/20 to-white/10" },
+                       { image: iconMusic, text: "Experiência Interativa", gradient: "from-white/20 to-white/10" },
+                       { image: iconShield, text: "Ambiente Seguro", gradient: "from-white/20 to-white/10" }
+                     ].map((card, index) => (
+                       <div key={index} className={`group relative bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center space-y-4 border border-white/30 shadow-lg hover:scale-105 hover:-translate-y-2 transition-all duration-300 overflow-hidden`}>
+                         <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 relative z-10">
+                           <img src={card.image} alt={card.text} className="w-12 h-12 object-contain" />
+                         </div>
+                         <span className="font-semibold text-sm text-white text-center relative z-10">{card.text}</span>
+                       </div>
+                     ))}
+                   </div>
 
-                  {/* Fun Call-to-Action Button */}
-                  <div className="relative mt-12">
-                    <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-xl blur-lg opacity-60 animate-pulse"></div>
-                    <TouchButton 
-                      onClick={handleWhatsAppClick} 
-                      className="relative w-full bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:from-orange-300 hover:via-orange-400 hover:to-orange-500 text-white px-8 py-4 rounded-xl font-black text-lg shadow-2xl border-2 border-orange-200 hover:scale-105 hover:-translate-y-1 transition-all duration-300 overflow-hidden group"
-                    >
-                      {/* Button Shine */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-800"></div>
-                      <span className="relative z-10">🎮 QUERO DIVERSÃO + INTERNET!</span>
-                    </TouchButton>
-                  </div>
+                   {/* Professional Call-to-Action Button */}
+                   <div className="relative mt-12">
+                     <TouchButton 
+                       onClick={handleWhatsAppClick} 
+                       className="relative w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300"
+                     >
+                       <span className="relative z-10">Comece Agora - É Grátis</span>
+                     </TouchButton>
+                   </div>
 
                   {/* Stylish Stats */}
                   <div className="grid grid-cols-2 gap-4 text-center mt-12">
@@ -231,75 +211,51 @@ const Index = () => {
             <div className="hidden md:block">
               <AnimatedSection animation="fade-up">
                 <div className="text-center space-y-16">
-                  {/* Fun Badge Desktop */}
-                  <div className="relative inline-flex items-center">
-                    <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-full blur-xl opacity-50 animate-pulse" style={{ animationDuration: '3s' }}></div>
-                    <div className="relative bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-black text-lg shadow-2xl border-2 border-orange-200">
-                      <div className="flex items-center">
-                        <Star className="w-5 h-5 mr-3 fill-current animate-bounce" />
-                        <span>🎮 DIVERSÃO + APRENDIZADO 🎮</span>
-                      </div>
-                    </div>
-                  </div>
+                   {/* Professional Badge Desktop */}
+                   <div className="relative inline-flex items-center">
+                     <div className="relative bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg">
+                       <span>Plataforma Educacional Premium</span>
+                     </div>
+                   </div>
                   
-                  {/* Fun Title Desktop */}
-                  <div className="relative">
-                    <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto relative z-10">
-                      <span className="block mb-6" style={{textShadow: '5px 5px 15px rgba(0,0,0,0.8), 0 0 40px rgba(255,165,0,0.8)'}}>Aulas Divertidas + Internet Ultra</span>
-                    </h1>
-                    
-                    {/* Title Glow Effects */}
-                    <div className="absolute inset-0 text-6xl lg:text-7xl font-black leading-tight pointer-events-none">
-                      <span className="block text-transparent bg-gradient-to-r from-orange-300/60 to-orange-200/60 bg-clip-text mb-6 blur-md">Aulas Divertidas + Internet Ultra</span>
-                    </div>
-                    <div className="absolute inset-0 text-6xl lg:text-7xl font-black leading-tight pointer-events-none">
-                      <span className="block text-transparent bg-gradient-to-r from-white/30 to-orange-200/30 bg-clip-text mb-6 blur-sm">Aulas Divertidas + Internet Ultra</span>
-                    </div>
-                  </div>
+                   {/* Professional Title Desktop */}
+                   <div className="relative">
+                     <h1 className="text-6xl lg:text-7xl font-bold leading-tight text-white max-w-4xl mx-auto relative z-10">
+                       <span className="block mb-6">Transforme o Aprendizado</span>
+                     </h1>
+                   </div>
                   
-                  {/* Fun Subtitle Desktop */}
-                  <p className="text-2xl lg:text-3xl text-white/95 font-bold max-w-3xl mx-auto" style={{textShadow: '3px 3px 10px rgba(0,0,0,0.7), 0 0 25px rgba(255,165,0,0.5)'}}>
-                    🎮 Plataforma gamificada que as crianças AMAM!
-                  </p>
+                   {/* Professional Subtitle Desktop */}
+                   <p className="text-2xl lg:text-3xl text-white/95 font-medium max-w-3xl mx-auto">
+                     Desperte a paixão pelo conhecimento com nossa plataforma inovadora.
+                   </p>
 
                   {/* Fun Cards Desktop with Custom Icons */}
                   <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto mt-16">
-                    {[
-                      { image: iconWifiFun, text: "Internet ULTRA", gradient: "from-orange-500/90 to-orange-600/80", glow: "shadow-orange-500/40" },
-                      { image: iconTvFun, text: "Aulas Animadas", gradient: "from-orange-400/90 to-orange-500/80", glow: "shadow-orange-400/40" },
-                      { image: iconMusicFun, text: "Sons & Músicas", gradient: "from-orange-600/90 to-red-500/80", glow: "shadow-orange-600/40" },
-                      { image: iconShieldFun, text: "100% Seguro", gradient: "from-orange-500/90 to-red-600/80", glow: "shadow-orange-500/40" }
-                    ].map((card, index) => (
-                      <div key={index} className={`group relative bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-8 flex flex-col items-center space-y-5 border border-orange-200/30 shadow-2xl ${card.glow} hover:scale-115 hover:-translate-y-4 transition-all duration-500 hover:rotate-3 overflow-hidden`}>
-                        {/* Card Background Glow */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
-                        {/* Multiple Floating Sparkles */}
-                        <div className="absolute top-3 right-3 w-2 h-2 bg-yellow-300/80 rounded-full opacity-0 group-hover:opacity-100 animate-ping"></div>
-                        <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
-                        <div className="absolute top-1/2 right-2 w-1 h-1 bg-orange-200/70 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
-                        
-                        <div className="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center shadow-xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 relative z-10 overflow-hidden">
-                          <img src={card.image} alt={card.text} className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-500" />
-                        </div>
-                        <span className="font-bold text-lg text-white text-center drop-shadow-xl relative z-10">{card.text}</span>
+                     {[
+                       { image: iconWifi, text: "Internet Premium", gradient: "from-white/20 to-white/10" },
+                       { image: iconTv, text: "Conteúdo Digital", gradient: "from-white/20 to-white/10" },
+                       { image: iconMusic, text: "Experiência Interativa", gradient: "from-white/20 to-white/10" },
+                       { image: iconShield, text: "Ambiente Seguro", gradient: "from-white/20 to-white/10" }
+                     ].map((card, index) => (
+                      <div key={index} className={`group relative bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-8 flex flex-col items-center space-y-5 border border-white/30 shadow-lg hover:scale-105 hover:-translate-y-2 transition-all duration-300 overflow-hidden`}>
+                         <div className="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 relative z-10">
+                           <img src={card.image} alt={card.text} className="w-16 h-16 object-contain" />
+                         </div>
+                         <span className="font-semibold text-lg text-white text-center relative z-10">{card.text}</span>
                       </div>
                     ))}
                   </div>
 
-                  {/* Fun Call-to-Action Button Desktop */}
-                  <div className="relative mt-16">
-                    <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-xl blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s' }}></div>
-                    <TouchButton 
-                      onClick={handleWhatsAppClick} 
-                      className="relative bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:from-orange-300 hover:via-orange-400 hover:to-orange-500 text-white px-12 py-5 rounded-xl font-black text-2xl shadow-2xl border-2 border-orange-200 hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden group"
-                    >
-                      {/* Multiple Shine Effects */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent translate-x-[-300%] group-hover:translate-x-[300%] transition-transform duration-1000"></div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-300%] group-hover:translate-x-[300%] transition-transform duration-800" style={{ animationDelay: '0.2s' }}></div>
-                      <span className="relative z-10">🎮 QUERO DIVERSÃO + INTERNET!</span>
-                    </TouchButton>
-                  </div>
+                   {/* Professional Call-to-Action Button Desktop */}
+                   <div className="relative mt-16">
+                     <TouchButton 
+                       onClick={handleWhatsAppClick} 
+                       className="relative bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-12 py-5 rounded-xl font-semibold text-2xl shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300"
+                     >
+                       <span className="relative z-10">Comece Agora - É Grátis</span>
+                     </TouchButton>
+                   </div>
 
                   {/* Spectacular Stats Desktop */}
                   <div className="flex justify-center gap-12 text-center max-w-4xl mx-auto mt-16">
