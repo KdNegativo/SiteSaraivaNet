@@ -18,13 +18,10 @@ const Index = () => {
   const parallaxOffset = useParallax(0.5);
   const prefersReducedMotion = useReducedMotion();
   
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault();
-    console.log('Scrolling to:', targetId); // Debug log
+  const handleSmoothScroll = (targetId: string) => {
     const targetElement = document.getElementById(targetId);
-    console.log('Target element found:', targetElement); // Debug log
     if (targetElement) {
-      const headerHeight = 80; // Account for fixed header
+      const headerHeight = 80;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
       
@@ -32,8 +29,6 @@ const Index = () => {
         top: offsetPosition,
         behavior: prefersReducedMotion ? 'auto' : 'smooth'
       });
-    } else {
-      console.error('Element not found:', targetId);
     }
   };
 
@@ -101,11 +96,11 @@ const Index = () => {
           </div>
           
           <nav className="flex items-center space-x-6">
-            <TouchButton onClick={(e) => handleSmoothScroll(e as any, 'inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</TouchButton>
-            <TouchButton onClick={(e) => handleSmoothScroll(e as any, 'planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</TouchButton>
-            <TouchButton onClick={(e) => handleSmoothScroll(e as any, 'cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</TouchButton>
-            <TouchButton onClick={(e) => handleSmoothScroll(e as any, 'sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</TouchButton>
-            <TouchButton onClick={(e) => handleSmoothScroll(e as any, 'contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</TouchButton>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -830,11 +825,11 @@ const Index = () => {
             <div>
               <h4 className="text-2xl font-bold mb-6 text-orange-400">Links Rápidos</h4>
               <ul className="space-y-3">
-                <li><a href="#inicio" onClick={e => handleSmoothScroll(e, 'inicio')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</a></li>
-                <li><a href="#planos" onClick={e => handleSmoothScroll(e, 'planos')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</a></li>
-                <li><a href="#cobertura" onClick={e => handleSmoothScroll(e, 'cobertura')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</a></li>
-                <li><a href="#sobre" onClick={e => handleSmoothScroll(e, 'sobre')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</a></li>
-                <li><a href="#contato" onClick={e => handleSmoothScroll(e, 'contato')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</a></li>
+                <li><TouchButton onClick={() => handleSmoothScroll('inicio')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</TouchButton></li>
+                <li><TouchButton onClick={() => handleSmoothScroll('planos')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</TouchButton></li>
+                <li><TouchButton onClick={() => handleSmoothScroll('cobertura')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</TouchButton></li>
+                <li><TouchButton onClick={() => handleSmoothScroll('sobre')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</TouchButton></li>
+                <li><TouchButton onClick={() => handleSmoothScroll('contato')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</TouchButton></li>
               </ul>
             </div>
 
