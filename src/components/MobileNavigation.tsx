@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
-  console.log('MobileNavigation rendering, isOpen:', isOpen);
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -40,10 +38,7 @@ const MobileNavigation = () => {
       <Button
         variant="ghost"
         size="icon"
-        onClick={() => {
-          console.log('Menu button clicked, current isOpen:', isOpen);
-          setIsOpen(!isOpen);
-        }}
+        onClick={() => setIsOpen(!isOpen)}
         className="w-10 h-10 text-white hover:bg-white/20 transition-colors rounded-full"
       >
         <Menu className="h-5 w-5" />

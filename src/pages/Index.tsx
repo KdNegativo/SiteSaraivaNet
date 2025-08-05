@@ -803,9 +803,9 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-gradient-to-b from-gray-800 to-gray-900 dark:from-gray-900 dark:to-black text-white py-12 sm:py-16 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
+            <div className="flex-1 max-w-2xl">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Wifi className="w-6 h-6 text-white" />
@@ -822,24 +822,13 @@ const Index = () => {
               </div>
             </div>
 
-            <div>
-              <h4 className="text-2xl font-bold mb-6 text-orange-400">Links Rápidos</h4>
-              <ul className="space-y-3">
-                <li><TouchButton onClick={() => handleSmoothScroll('inicio')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Início</TouchButton></li>
-                <li><TouchButton onClick={() => handleSmoothScroll('planos')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Planos</TouchButton></li>
-                <li><TouchButton onClick={() => handleSmoothScroll('cobertura')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Cobertura</TouchButton></li>
-                <li><TouchButton onClick={() => handleSmoothScroll('sobre')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Sobre Nós</TouchButton></li>
-                <li><TouchButton onClick={() => handleSmoothScroll('contato')} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">Contato</TouchButton></li>
-              </ul>
-            </div>
-
-            <div>
+            <div className="flex-shrink-0">
               <h4 className="text-2xl font-bold mb-6 text-orange-400">Contato</h4>
               <ul className="space-y-4">
                 <li className="flex items-center space-x-3">
                   <TouchButton 
                     onClick={handlePhoneClick}
-                    className="flex items-center space-x-3 text-lg hover:text-orange-400 transition-colors"
+                    className="flex items-center space-x-3 text-lg hover:text-orange-400 transition-colors text-left"
                   >
                     <Phone className="w-5 h-5 text-orange-400" />
                     <span>(89) 99439-5789</span>
