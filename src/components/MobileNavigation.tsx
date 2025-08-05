@@ -1,21 +1,20 @@
-
 import { useState } from "react";
 import { Menu, X, Home, CreditCard, MapPin, Heart, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
-  console.log('MobileNavigation renderizando, isOpen:', isOpen);
 
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault();
+  const handleSmoothScroll = (targetId: string) => {
     setIsOpen(false); // Fecha o menu após clicar
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+      const headerHeight = 80;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       });
     }
   };
@@ -35,22 +34,30 @@ const MobileNavigation = () => {
     { id: 'contato', label: 'Contato', icon: Phone },
   ];
 
+  const toggleMenu = () => {
+    console.log('Menu toggle clicked!', !isOpen);
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={() => {
-          console.log('Botão do menu clicado! Estado atual:', isOpen);
-          setIsOpen(!isOpen);
-          console.log('Novo estado será:', !isOpen);
+      {/* Botão do Menu */}
+      <button
+        onClick={toggleMenu}
+        className="relative z-60 w-10 h-10 bg-transparent border-2 border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all duration-200 active:scale-95"
+        style={{ 
+          WebkitTapHighlightColor: 'transparent',
+          touchAction: 'manipulation'
         }}
-        className="w-10 h-10 text-white hover:bg-white/20 transition-colors rounded-full"
       >
-        <Menu className="h-5 w-5" />
-      </Button>
+        {isOpen ? (
+          <X className="h-5 w-5" />
+        ) : (
+          <Menu className="h-5 w-5" />
+        )}
+      </button>
 
-      {/* Sobreposição */}
+      {/* Overlay */}
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 z-40"
@@ -58,46 +65,43 @@ const MobileNavigation = () => {
         />
       )}
 
-      {/* Menu */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-orange-600 to-red-600 dark:from-gray-800 dark:to-gray-900 z-50 transform transition-transform duration-300 ${
+      {/* Menu Lateral */}
+      <div className={`fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-gradient-to-b from-orange-600 to-red-600 z-50 transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
-        <div className="p-6">
+        <div className="p-6 h-full overflow-y-auto">
           <div className="flex items-center justify-between mb-8">
             <div>
               <h1 className="text-lg font-bold text-white">SaraivaNet</h1>
               <h2 className="text-sm text-white/80">Menu</h2>
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
+            <button
               onClick={() => setIsOpen(false)}
-              className="w-8 h-8 text-white hover:bg-white/20 transition-colors rounded-full"
+              className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
             >
               <X className="h-5 w-5" />
-            </Button>
+            </button>
           </div>
 
           <nav className="space-y-4">
             {menuItems.map((item) => (
-              <a
+              <button
                 key={item.id}
-                href={`#${item.id}`}
-                onClick={(e) => handleSmoothScroll(e, item.id)}
-                className="flex items-center space-x-3 p-3 text-white hover:bg-white/20 rounded-lg transition-colors"
+                onClick={() => handleSmoothScroll(item.id)}
+                className="w-full flex items-center space-x-3 p-3 text-white hover:bg-white/20 rounded-lg transition-colors text-left"
               >
                 <item.icon className="w-5 h-5" />
                 <span className="font-medium">{item.label}</span>
-              </a>
+              </button>
             ))}
           </nav>
 
           <div className="mt-8 pt-8 border-t border-white/20">
             <div className="text-center">
               <p className="text-white/80 text-sm mb-4">Entre em contato</p>
-              <Button 
+              <button 
                 onClick={handleWhatsAppClick}
-                className="w-full bg-white text-orange-600 hover:bg-orange-50 font-bold py-3 rounded-xl flex items-center justify-center space-x-2"
+                className="w-full bg-white text-orange-600 hover:bg-orange-50 font-bold py-3 rounded-xl flex items-center justify-center space-x-2 transition-colors"
               >
                 <img 
                   src="/lovable-uploads/981f602c-b0d2-4161-8119-dfd91ef1c234.png" 
@@ -105,7 +109,7 @@ const MobileNavigation = () => {
                   className="w-5 h-5"
                 />
                 <span>WhatsApp</span>
-              </Button>
+              </button>
             </div>
           </div>
         </div>
