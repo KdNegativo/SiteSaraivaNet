@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Home, CreditCard, MapPin, Heart, Phone } from "lucide-react";
 
 const MobileNavigation = () => {
@@ -33,6 +33,20 @@ const MobileNavigation = () => {
     { id: 'sobre', label: 'Sobre', icon: Heart },
     { id: 'contato', label: 'Contato', icon: Phone },
   ];
+
+  // Bloqueia o scroll quando o menu está aberto
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    // Cleanup quando o componente desmontar
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   const toggleMenu = () => {
     console.log('Menu toggle clicked!', !isOpen);
