@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Home, CreditCard, MapPin, Heart, Phone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Menu, X, Home, CreditCard, MapPin, Heart, Phone, Smartphone } from "lucide-react";
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleSmoothScroll = (targetId: string) => {
     setIsOpen(false); // Fecha o menu após clicar
@@ -97,18 +99,28 @@ const MobileNavigation = () => {
             </button>
           </div>
 
-          <nav className="space-y-4">
-            {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleSmoothScroll(item.id)}
-                className="w-full flex items-center space-x-3 p-3 text-white hover:bg-white/20 rounded-lg transition-colors text-left"
-              >
-                <item.icon className="w-5 h-5" />
-                <span className="font-medium">{item.label}</span>
-              </button>
-            ))}
-          </nav>
+          <div className="space-y-4">
+            <button
+              onClick={() => { setIsOpen(false); navigate('/chips'); }}
+              className="w-full flex items-center space-x-3 p-3 text-white bg-white/15 hover:bg-white/25 rounded-lg transition-colors text-left"
+            >
+              <Smartphone className="w-5 h-5" />
+              <span className="font-semibold">Chips</span>
+            </button>
+
+            <nav className="space-y-4">
+              {menuItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleSmoothScroll(item.id)}
+                  className="w-full flex items-center space-x-3 p-3 text-white hover:bg-white/20 rounded-lg transition-colors text-left"
+                >
+                  <item.icon className="w-5 h-5" />
+                  <span className="font-medium">{item.label}</span>
+                </button>
+              ))}
+            </nav>
+          </div>
 
           <div className="mt-8 pt-8 border-t border-white/20">
             <div className="text-center">
