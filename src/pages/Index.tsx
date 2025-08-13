@@ -13,6 +13,7 @@ import MobilePlansCarousel from "@/components/MobilePlansCarousel";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -101,6 +102,7 @@ const Index = () => {
             <TouchButton onClick={() => handleSmoothScroll('cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</TouchButton>
             <TouchButton onClick={() => handleSmoothScroll('sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</TouchButton>
             <TouchButton onClick={() => handleSmoothScroll('contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</TouchButton>
+            <Link to="/chips"><TouchButton className="text-white hover:text-orange-200 transition-colors font-semibold">Chips</TouchButton></Link>
           </nav>
 
           <div className="flex items-center space-x-4">

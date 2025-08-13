@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Smartphone, Infinity as InfinityIcon, ArrowRight, CheckCircle } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const WHATSAPP_PHONE = "5589994395789";
 const WHATSAPP_MSG = "Olá! Quero pedir meu Chip com dados acumulativos.";
@@ -139,6 +140,42 @@ const Chips = () => {
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-12 md:py-16 bg-muted/20">
+          <div className="mx-auto max-w-6xl px-6">
+            <header className="mb-8 text-center">
+              <h2 className="text-3xl font-bold md:text-4xl">Perguntas Frequentes</h2>
+              <p className="mt-2 text-muted-foreground">Tire suas dúvidas sobre os planos de chips com dados acumulativos.</p>
+            </header>
+            <Accordion type="single" collapsible className="mx-auto max-w-3xl">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>É necessário pagar alguma taxa para aderir ao plano?</AccordionTrigger>
+                <AccordionContent>
+                  Não. Você adquire o chip e, após a primeira recarga, a ativação ocorre automaticamente. A confirmação chega por SMS ou App.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Como faço a portabilidade?</AccordionTrigger>
+                <AccordionContent>
+                  Pelo App ou suporte via WhatsApp. Solicitamos dados básicos e, em até 5 dias úteis após autorização da operadora atual, seu número estará ativo.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Como é feita a renovação do plano?</AccordionTrigger>
+                <AccordionContent>
+                  É automática no dia seguinte ao vencimento (ciclo de 30 dias). Você pode alterar ou cancelar pelo App a qualquer momento.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>É possível fazer ligações internacionais (DDI)?</AccordionTrigger>
+                <AccordionContent>
+                  Não. Os planos focam em dados móveis. Para DDI, utilize apps de chamada com a franquia de internet.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
       </main>
