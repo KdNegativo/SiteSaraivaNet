@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Smartphone, Infinity as InfinityIcon, ArrowRight, CheckCircle } from "lucide-react";
+import { Smartphone, Infinity as InfinityIcon, ArrowRight, CheckCircle, Lock, PieChart, Layers, Receipt, Rocket } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -29,54 +29,40 @@ const Chips = () => {
 
       <main className="min-h-screen bg-background text-foreground">
         {/* Hero */}
-        <section className="relative overflow-hidden">
-          <div className="mx-auto max-w-6xl px-6 pt-24 pb-12 md:pt-32 md:pb-16">
-            <div className="grid gap-10 md:grid-cols-2 md:items-center">
-              <div>
-                <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-                  <InfinityIcon className="mr-2 h-4 w-4" /> Dados acumulam todo mês
-                </div>
-                <h1 className="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl">
+        <section className="relative min-h-[70vh] md:min-h-[75vh] overflow-hidden">
+          <div className="absolute inset-0 -z-10">
+            <img
+              src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png"
+              alt="Fundo com smartphone representando conectividade móvel"
+              className="h-full w-full object-cover opacity-20"
+            />
+            <div className="absolute inset-0 bg-foreground/70" />
+          </div>
+
+          <div className="mx-auto max-w-6xl px-6 pt-28 pb-16 md:pt-36 md:pb-24">
+            <div className="max-w-2xl text-left text-background">
+              <span className="inline-flex items-center rounded-full bg-background/10 px-4 py-2 text-sm font-semibold backdrop-blur">
+                <InfinityIcon className="mr-2 h-4 w-4" /> Dados acumulam todo mês
+              </span>
+              <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
+                A era digital chegou, você está pronto?
+                <span className="block text-background/80 mt-2 text-2xl md:text-3xl">
                   Chips SaraivaNet com dados que acumulam
-                </h1>
-                <p className="mt-4 text-muted-foreground text-lg">
-                  Assine, use quando precisar e acumule o que sobrar. Planos simples, cobertura nacional e suporte de quem você confia.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <a href={waUrl} target="_blank" rel="noreferrer">
-                    <Button size="lg" className="gap-2">
-                      Pedir Chip
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </a>
-                  <Link to="/">
-                    <Button variant="outline" size="lg">Voltar à Home</Button>
-                  </Link>
-                </div>
-
-                <ul className="mt-8 grid gap-3 text-sm text-muted-foreground md:grid-cols-2">
-                  {[
-                    "Dados que não vencem: acumulam mês a mês",
-                    "Planos flexíveis e sem burocracia",
-                    "Cobertura 4G ampla para o dia a dia",
-                    "Ativação rápida e suporte local",
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle className="mt-0.5 h-5 w-5 text-primary" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="relative">
-                <div className="absolute -inset-6 rounded-3xl bg-primary/10 blur-2xl" aria-hidden="true" />
-                <img
-                  src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png"
-                  alt="Mockup do chip SaraivaNet com destaque para dados acumulativos"
-                  className="relative z-10 mx-auto h-auto w-full max-w-md rounded-2xl"
-                  loading="eager"
-                />
+                </span>
+              </h1>
+              <p className="mt-4 text-background/80 text-lg">
+                Sem burocracia e sem letras miúdas. Assine, use quando precisar e acumule o que sobrar.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href={waUrl} target="_blank" rel="noreferrer">
+                  <Button size="lg" className="gap-2">
+                    Pedir Chip
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </a>
+                <Link to="/">
+                  <Button variant="outline" size="lg">Voltar à Home</Button>
+                </Link>
               </div>
             </div>
           </div>
