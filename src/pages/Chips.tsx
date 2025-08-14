@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Smartphone, Infinity as InfinityIcon, ArrowRight, CheckCircle } from "lucide-react";
+import { Smartphone, Infinity as InfinityIcon, ArrowRight, CheckCircle, Shield, CreditCard, FileText, Star } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -27,64 +27,132 @@ const Chips = () => {
         <link rel="canonical" href={canonical} />
       </Helmet>
 
-      <main className="min-h-screen bg-background text-foreground">
-        {/* Hero */}
-        <section className="relative overflow-hidden">
-          <div className="mx-auto max-w-6xl px-6 pt-24 pb-12 md:pt-32 md:pb-16">
-            <div className="grid gap-10 md:grid-cols-2 md:items-center">
-              <div>
-                <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-                  <InfinityIcon className="mr-2 h-4 w-4" /> Dados acumulam todo mês
+      <main className="min-h-screen">
+        {/* Hero Section - Black Background */}
+        <section className="relative overflow-hidden bg-black text-white">
+          <div className="mx-auto max-w-7xl px-6 pt-24 pb-12 md:pt-32 md:pb-16">
+            <div className="grid gap-10 lg:grid-cols-3 lg:items-center">
+              {/* Left Side Card */}
+              <div className="hidden lg:block">
+                <Card className="bg-gray-900/80 border-gray-700 text-white p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="rounded-lg bg-blue-600 p-2">
+                      <Shield className="h-5 w-5 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold">Segurança</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    Dados seguros e protegidos com tecnologia de ponta
+                  </p>
+                </Card>
+              </div>
+
+              {/* Center Content */}
+              <div className="text-center">
+                <div className="inline-flex items-center rounded-full bg-blue-600/20 px-4 py-2 text-sm font-medium text-blue-400 mb-6">
+                  <InfinityIcon className="mr-2 h-4 w-4" /> Dados acumulativos
                 </div>
-                <h1 className="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl">
-                  Chips SaraivaNet com dados que acumulam
+                <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl mb-6">
+                  Chips SaraivaNet
                 </h1>
-                <p className="mt-4 text-muted-foreground text-lg">
-                  Assine, use quando precisar e acumule o que sobrar. Planos simples, cobertura nacional e suporte de quem você confia.
+                <p className="text-gray-300 text-lg mb-8 max-w-md mx-auto">
+                  Internet móvel com dados que acumulam mês a mês. Nunca perca seus dados novamente.
                 </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <a href={waUrl} target="_blank" rel="noreferrer">
-                    <Button size="lg" className="gap-2">
-                      Pedir Chip
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </a>
-                  <Link to="/">
-                    <Button variant="outline" size="lg">Voltar à Home</Button>
-                  </Link>
+                <a href={waUrl} target="_blank" rel="noreferrer">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
+                    Pedir Chip
+                  </Button>
+                </a>
+              </div>
+
+              {/* Right Side Card */}
+              <div className="hidden lg:block">
+                <Card className="bg-gray-900/80 border-gray-700 text-white p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="rounded-lg bg-green-600 p-2">
+                      <CreditCard className="h-5 w-5 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold">Acumulativo</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    Seus dados não utilizados acumulam para o próximo mês
+                  </p>
+                </Card>
+              </div>
+            </div>
+
+            {/* Mobile Cards */}
+            <div className="grid gap-4 mt-12 md:grid-cols-2 lg:hidden">
+              <Card className="bg-gray-900/80 border-gray-700 text-white p-4">
+                <div className="flex items-center gap-3">
+                  <Shield className="h-5 w-5 text-blue-400" />
+                  <span className="font-semibold">Segurança</span>
                 </div>
-
-                <ul className="mt-8 grid gap-3 text-sm text-muted-foreground md:grid-cols-2">
-                  {[
-                    "Dados que não vencem: acumulam mês a mês",
-                    "Planos flexíveis e sem burocracia",
-                    "Cobertura 4G ampla para o dia a dia",
-                    "Ativação rápida e suporte local",
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle className="mt-0.5 h-5 w-5 text-primary" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="relative">
-                <div className="absolute -inset-6 rounded-3xl bg-primary/10 blur-2xl" aria-hidden="true" />
-                <img
-                  src="/lovable-uploads/935d3409-f4aa-423b-937b-2d4df265cbed.png"
-                  alt="Mockup do chip SaraivaNet com destaque para dados acumulativos"
-                  className="relative z-10 mx-auto h-auto w-full max-w-md rounded-2xl"
-                  loading="eager"
-                />
-              </div>
+              </Card>
+              <Card className="bg-gray-900/80 border-gray-700 text-white p-4">
+                <div className="flex items-center gap-3">
+                  <CreditCard className="h-5 w-5 text-green-400" />
+                  <span className="font-semibold">Acumulativo</span>
+                </div>
+              </Card>
             </div>
           </div>
         </section>
 
-        {/* Planos */}
-        <section className="py-12 md:py-16">
-          <div className="mx-auto max-w-6xl px-6">
+        {/* Coming Soon Banner */}
+        <section className="bg-yellow-500 text-black py-3">
+          <div className="mx-auto max-w-7xl px-6 text-center">
+            <p className="font-semibold">🚀 Em breve: Novos planos com ainda mais benefícios!</p>
+          </div>
+        </section>
+
+        {/* We Are Different Section */}
+        <section className="py-12 md:py-16 bg-background">
+          <div className="mx-auto max-w-7xl px-6">
+            <AnimatedSection animation="fade-up">
+              <header className="mb-12 text-center">
+                <h2 className="text-3xl font-bold md:text-4xl text-foreground">Somos diferentes</h2>
+                <p className="mt-2 text-muted-foreground">Descubra por que escolher nossos chips</p>
+              </header>
+
+              <div className="grid gap-8 md:grid-cols-3">
+                <Card className="p-8 text-center border-2 hover:border-primary transition-colors">
+                  <div className="rounded-full bg-blue-100 p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <Shield className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Segurança</h3>
+                  <p className="text-muted-foreground">
+                    Proteção total dos seus dados com criptografia avançada e tecnologia de ponta
+                  </p>
+                </Card>
+
+                <Card className="p-8 text-center border-2 hover:border-primary transition-colors">
+                  <div className="rounded-full bg-green-100 p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <InfinityIcon className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Acumulativo</h3>
+                  <p className="text-muted-foreground">
+                    Dados não utilizados acumulam automaticamente para o próximo mês. Nunca perca nada!
+                  </p>
+                </Card>
+
+                <Card className="p-8 text-center border-2 hover:border-primary transition-colors">
+                  <div className="rounded-full bg-purple-100 p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <FileText className="h-8 w-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Faturas</h3>
+                  <p className="text-muted-foreground">
+                    Controle total com faturas detalhadas e transparentes. Sem surpresas na sua conta
+                  </p>
+                </Card>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* Plans Section */}
+        <section className="py-12 md:py-16 bg-muted/20">
+          <div className="mx-auto max-w-7xl px-6">
             <AnimatedSection animation="fade-up">
               <header className="mb-8 text-center">
                 <h2 className="text-3xl font-bold md:text-4xl">Escolha seu plano</h2>
@@ -93,9 +161,10 @@ const Chips = () => {
 
               <div className="grid gap-6 md:grid-cols-3">
                 {plans.map((plan) => (
-                  <Card key={plan.id} className={`p-6 ${plan.best ? "ring-2 ring-primary" : ""}`}>
+                  <Card key={plan.id} className={`p-6 ${plan.best ? "ring-2 ring-primary bg-primary/5" : ""}`}>
                     {plan.best && (
-                      <div className="mb-3 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                      <div className="mb-3 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                        <Star className="mr-1 h-3 w-3" />
                         Mais popular
                       </div>
                     )}
@@ -105,12 +174,12 @@ const Chips = () => {
                       </div>
                       <h3 className="text-xl font-semibold">{plan.title}</h3>
                     </div>
-                    <p className="mt-4 text-4xl font-extrabold">{plan.data}</p>
-                    <p className="mt-1 text-muted-foreground">{plan.price}</p>
+                    <p className="mt-4 text-4xl font-extrabold text-primary">{plan.data}</p>
+                    <p className="mt-1 text-muted-foreground text-lg">{plan.price}</p>
                     <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" />Dados acumulam</li>
-                      <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" />Cobertura nacional</li>
-                      <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" />Sem fidelidade</li>
+                      <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" />Dados acumulam</li>
+                      <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" />Cobertura nacional</li>
+                      <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" />Sem fidelidade</li>
                     </ul>
                     <a href={waUrl} target="_blank" rel="noreferrer" className="mt-6 block">
                       <Button className="w-full">Pedir este plano</Button>
@@ -119,25 +188,52 @@ const Chips = () => {
                 ))}
               </div>
             </AnimatedSection>
+          </div>
+        </section>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2 md:items-center">
-              <img
-                src="/lovable-uploads/01df9255-1f15-4131-86c5-638e9796ee23.png"
-                alt="Promoções e vantagens dos chips SaraivaNet"
-                className="h-auto w-full rounded-2xl"
-                loading="lazy"
-              />
+        {/* About Section */}
+        <section className="py-12 md:py-16 bg-background">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="grid gap-12 md:grid-cols-2 md:items-center">
               <div>
-                <h3 className="text-2xl font-bold">Como funciona o acúmulo de dados?</h3>
-                <p className="mt-2 text-muted-foreground">
-                  Simples: se você não usar toda a franquia no mês, o restante vai para o próximo. Assim você nunca perde seus dados.
+                <h2 className="text-3xl font-bold md:text-4xl mb-6">Sobre nossos chips</h2>
+                <p className="text-muted-foreground text-lg mb-6">
+                  Na SaraivaNet, oferecemos chips com tecnologia inovadora de dados acumulativos. 
+                  Isso significa que você nunca perde o que pagou - todos os dados não utilizados 
+                  são automaticamente transferidos para o próximo mês.
                 </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                    <span>Ativação em até 24 horas</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                    <span>Suporte técnico especializado</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                    <span>Cobertura 4G em todo o país</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-green-500" />
+                    <span>Sem taxas de cancelamento</span>
+                  </li>
+                </ul>
                 <a href={waUrl} target="_blank" rel="noreferrer">
-                  <Button className="mt-4 gap-2">
-                    Tirar dúvidas no WhatsApp
+                  <Button className="gap-2" size="lg">
+                    Falar com especialista
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </a>
+              </div>
+              <div className="relative">
+                <img
+                  src="/lovable-uploads/01df9255-1f15-4131-86c5-638e9796ee23.png"
+                  alt="Chips SaraivaNet com dados acumulativos"
+                  className="h-auto w-full rounded-2xl shadow-lg"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
