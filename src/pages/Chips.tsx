@@ -30,7 +30,11 @@ import {
   Globe,
   HeartHandshake,
   Headphones,
-  MessageCircle
+  MessageCircle,
+  Layers,
+  Cpu,
+  Database,
+  Settings
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -267,189 +271,439 @@ const Chips = () => {
           </div>
         </section>
 
-        {/* Premium Benefits Showcase */}
-        <section className="py-24 md:py-32 relative overflow-hidden">
-          {/* Ultra premium background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,102,0,0.03)_0%,_transparent_70%)]"></div>
-          
+        {/* Mega Stats Section - Ultra Premium */}
+        <section className="py-32 md:py-40 relative overflow-hidden bg-gradient-to-br from-foreground via-foreground/98 to-foreground">
+          {/* Ultra Dynamic Background */}
+          <div className="absolute inset-0">
+            {/* Animated mesh gradient */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,102,0,0.15)_0%,_transparent_50%),radial-gradient(ellipse_at_bottom_right,_rgba(255,102,0,0.1)_0%,_transparent_50%),radial-gradient(ellipse_at_center,_rgba(255,102,0,0.05)_0%,_transparent_70%)]"></div>
+            
+            {/* Floating tech elements */}
+            <div className="absolute top-1/4 left-10 opacity-20">
+              <div className="w-16 h-16 border-2 border-primary/30 rounded-lg animate-spin" style={{animationDuration: '20s'}}></div>
+            </div>
+            <div className="absolute top-3/4 right-16 opacity-15">
+              <div className="w-24 h-24 border border-accent/40 rounded-full animate-pulse" style={{animationDuration: '3s'}}></div>
+            </div>
+            <div className="absolute bottom-1/3 left-1/4 opacity-10">
+              <div className="w-20 h-20 bg-primary/10 rounded-xl animate-float" style={{animationDuration: '8s'}}></div>
+            </div>
+            
+            {/* Dynamic lines */}
+            <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 1000">
+              <defs>
+                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3"/>
+                  <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.1"/>
+                </linearGradient>
+              </defs>
+              <path d="M100,200 Q300,50 500,200 T900,150" stroke="url(#lineGradient)" strokeWidth="2" fill="none" className="animate-pulse"/>
+              <path d="M50,600 Q400,450 700,600 T950,550" stroke="url(#lineGradient)" strokeWidth="1.5" fill="none" className="animate-pulse" style={{animationDelay: '1s'}}/>
+            </svg>
+          </div>
+
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <AnimatedSection className="text-center mb-20">
-              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-ultra border border-primary/20 mb-8">
-                <Gem className="w-5 h-5 text-primary animate-pulse" />
-                <span className="text-primary font-bold text-sm tracking-wide">DIFERENCIAIS EXCLUSIVOS</span>
+              <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full glass-ultra border border-primary/30 mb-10">
+                <Database className="w-6 h-6 text-primary animate-pulse" />
+                <span className="text-primary font-bold text-sm tracking-wide">NÚMEROS QUE IMPRESSIONAM</span>
+                <TrendingUp className="w-6 h-6 text-accent animate-pulse delay-500" />
               </div>
               
-              <h2 className="text-5xl md:text-6xl font-black mb-8 text-foreground">
-                Por que somos{' '}
-                <span className="gradient-luxury bg-clip-text text-transparent animate-gradient-shift">únicos</span>
+              <h2 className="text-6xl md:text-7xl font-black mb-10 text-primary leading-tight">
+                Liderança{' '}
+                <span className="text-luxury animate-gradient-shift">comprovada</span>
               </h2>
-              <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Tecnologia revolucionária que transforma sua experiência móvel
+              <p className="text-2xl text-primary-foreground/70 max-w-4xl mx-auto leading-relaxed">
+                Milhares de clientes já descobriram a revolução dos dados acumulativos
               </p>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
               {[
                 {
-                  icon: InfinityIcon,
-                  title: "Dados Eternos",
-                  description: "Seus dados nunca mais expiram. Acumule infinitamente e use quando quiser.",
-                  color: "from-blue-500 to-cyan-500",
-                  bgColor: "from-blue-500/10 to-cyan-500/10"
+                  number: "50K+",
+                  label: "Clientes Ativos",
+                  description: "Satisfeitos com nossos serviços",
+                  icon: Users,
+                  color: "from-blue-400 to-cyan-400",
+                  delay: 0
                 },
                 {
-                  icon: Rocket,
-                  title: "Velocidade 5G",
-                  description: "Internet ultra-rápida com cobertura nacional e tecnologia de ponta.",
-                  color: "from-purple-500 to-pink-500",
-                  bgColor: "from-purple-500/10 to-pink-500/10"
+                  number: "99.9%",
+                  label: "Uptime",
+                  description: "Disponibilidade garantida",
+                  icon: Wifi,
+                  color: "from-green-400 to-emerald-400",
+                  delay: 200
                 },
                 {
-                  icon: Shield,
-                  title: "Proteção Total",
-                  description: "Sem taxas ocultas, sem surpresas. Transparência total em todos os serviços.",
-                  color: "from-green-500 to-emerald-500",
-                  bgColor: "from-green-500/10 to-emerald-500/10"
+                  number: "1TB+",
+                  label: "Dados Salvos",
+                  description: "Acumulados pelos clientes",
+                  icon: Database,
+                  color: "from-purple-400 to-pink-400",
+                  delay: 400
                 },
                 {
-                  icon: Crown,
-                  title: "Suporte Real",
-                  description: "Atendimento humanizado 24/7 com especialistas dedicados ao seu sucesso.",
-                  color: "from-orange-500 to-red-500",
-                  bgColor: "from-orange-500/10 to-red-500/10"
+                  number: "24/7",
+                  label: "Suporte Premium",
+                  description: "Atendimento especializado",
+                  icon: Headphones,
+                  color: "from-orange-400 to-red-400",
+                  delay: 600
                 }
-              ].map((benefit, index) => (
-                <AnimatedSection key={index} className={`delay-${index * 200}`} animation="fade-up">
-                  <div className={`card-luxury p-8 rounded-3xl bg-gradient-to-br ${benefit.bgColor} border-2 border-primary/10 group hover-luxe relative overflow-hidden`}>
-                    {/* Animated background overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+              ].map((stat, index) => (
+                <AnimatedSection key={index} className={`delay-${stat.delay}`} animation="scale-in">
+                  <div className="group relative">
+                    {/* Glow effect */}
+                    <div className={`absolute -inset-4 bg-gradient-to-r ${stat.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
                     
-                    <div className="relative z-10">
-                      <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.color} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                        <div className="w-full h-full bg-background rounded-2xl flex items-center justify-center">
-                          <benefit.icon className="w-10 h-10 text-primary" />
+                    <div className="relative card-luxury p-8 rounded-3xl border-2 border-primary/20 text-center hover-luxe">
+                      {/* Animated background */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl`}></div>
+                      
+                      <div className="relative z-10">
+                        {/* Icon */}
+                        <div className={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${stat.color} p-0.5 group-hover:scale-110 transition-transform duration-300`}>
+                          <div className="w-full h-full bg-foreground rounded-2xl flex items-center justify-center">
+                            <stat.icon className="w-10 h-10 text-primary" />
+                          </div>
                         </div>
-                      </div>
-                      
-                      <h3 className="text-2xl font-bold mb-4 text-card-foreground">{benefit.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                      
-                      <div className="mt-6 flex items-center gap-2 text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-sm">Saiba mais</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        
+                        {/* Number */}
+                        <div className={`text-5xl font-black mb-3 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+                          {stat.number}
+                        </div>
+                        
+                        {/* Label */}
+                        <h3 className="text-xl font-bold text-primary mb-2">{stat.label}</h3>
+                        
+                        {/* Description */}
+                        <p className="text-primary-foreground/70 text-sm">{stat.description}</p>
+                        
+                        {/* Animated progress bar */}
+                        <div className="mt-6 w-full h-1 bg-primary/20 rounded-full overflow-hidden">
+                          <div className={`h-full bg-gradient-to-r ${stat.color} rounded-full animate-[slideIn_2s_ease-out_${stat.delay}ms_forwards] w-0 group-hover:w-full transition-all duration-1000`}></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </AnimatedSection>
               ))}
             </div>
+
+            {/* Premium Technology Showcase */}
+            <AnimatedSection className="text-center" animation="fade-up">
+              <div className="relative inline-block">
+                <div className="absolute -inset-8 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-75 animate-pulse"></div>
+                <div className="relative glass-ultra p-12 rounded-3xl border-2 border-primary/30">
+                  <div className="grid md:grid-cols-3 gap-8 items-center">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3 text-primary">
+                        <Cpu className="w-8 h-8" />
+                        <span className="text-xl font-bold">IA Avançada</span>
+                      </div>
+                      <p className="text-primary-foreground/70">
+                        Algoritmos inteligentes otimizam automaticamente seu uso de dados
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3 text-primary">
+                        <Layers className="w-8 h-8" />
+                        <span className="text-xl font-bold">Multi-Rede</span>
+                      </div>
+                      <p className="text-primary-foreground/70">
+                        Conectividade simultânea em múltiplas redes para máxima performance
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3 text-primary">
+                        <Settings className="w-8 h-8 animate-spin" style={{animationDuration: '10s'}} />
+                        <span className="text-xl font-bold">Auto-Config</span>
+                      </div>
+                      <p className="text-primary-foreground/70">
+                        Configuração automática para máxima velocidade e estabilidade
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-10 flex justify-center">
+                    <a href={waUrl} target="_blank" rel="noreferrer" className="group">
+                      <Button className="btn-luxury px-12 py-6 rounded-2xl font-black text-xl flex items-center gap-4 shadow-2xl hover:shadow-primary/30">
+                        <Rocket className="w-6 h-6" />
+                        <span>Experimentar Tecnologia</span>
+                        <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 
-        {/* FAQ Section - Premium Dark Design */}
-        <section className="py-20 md:py-32 bg-gradient-to-b from-foreground to-foreground/95 text-primary-foreground relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(255,102,0,0.1)_0%,_transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(255,102,0,0.05)_0%,_transparent_50%)]"></div>
+        {/* Ultra Premium FAQ Section */}
+        <section className="py-32 md:py-40 bg-gradient-to-br from-foreground via-foreground/98 to-foreground relative overflow-hidden">
+          {/* Ultra Dynamic Background with Mesh Gradients */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,102,0,0.15)_0%,_transparent_50%),radial-gradient(ellipse_at_bottom_right,_rgba(255,102,0,0.1)_0%,_transparent_50%),radial-gradient(ellipse_at_center,_rgba(255,102,0,0.05)_0%,_transparent_70%)]"></div>
+            
+            {/* Animated geometric shapes */}
+            <div className="absolute top-20 left-20 w-32 h-32 border border-primary/20 rounded-full animate-float opacity-30" style={{animationDuration: '15s'}}></div>
+            <div className="absolute bottom-32 right-32 w-24 h-24 bg-accent/10 rounded-lg animate-float opacity-40" style={{animationDuration: '12s', animationDelay: '2s'}}></div>
+            <div className="absolute top-1/3 right-20 w-20 h-20 border-2 border-primary/30 rounded-xl animate-float opacity-25" style={{animationDuration: '18s', animationDelay: '1s'}}></div>
+            
+            {/* Dynamic light rays */}
+            <div className="absolute top-0 left-1/4 w-0.5 h-40 bg-gradient-to-b from-primary/30 to-transparent transform rotate-12 animate-pulse"></div>
+            <div className="absolute bottom-0 right-1/3 w-0.5 h-32 bg-gradient-to-t from-accent/30 to-transparent transform -rotate-12 animate-pulse delay-1000"></div>
+          </div>
           
-          <div className="max-w-4xl mx-auto px-6 relative z-10">
-            <AnimatedSection className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-6">
-                <FileText className="w-4 h-4" />
-                <span className="text-sm font-medium">Dúvidas Frequentes</span>
+          <div className="max-w-5xl mx-auto px-6 relative z-10">
+            <AnimatedSection className="text-center mb-24">
+              <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full glass-ultra border border-primary/30 mb-12">
+                <FileText className="w-6 h-6 text-primary animate-pulse" />
+                <span className="text-primary font-bold text-sm tracking-wide">ESCLARECIMENTOS</span>
+                <Sparkles className="w-6 h-6 text-accent animate-pulse delay-500" />
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-                Perguntas Frequentes
+              <h2 className="text-6xl md:text-7xl font-black mb-12 text-primary leading-tight">
+                Dúvidas{' '}
+                <span className="text-luxury animate-gradient-shift">esclarecidas</span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Tire suas dúvidas sobre os planos de chips com dados acumulativos.
+              <p className="text-2xl text-primary-foreground/70 max-w-4xl mx-auto leading-relaxed">
+                Respostas diretas para as perguntas mais importantes sobre nossos chips premium
               </p>
             </AnimatedSection>
 
-            <AnimatedSection>
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="item-1" className="border border-border/20 rounded-xl bg-card/10 backdrop-blur-sm hover:bg-card/20 transition-all duration-300">
-                  <AccordionTrigger className="px-6 py-5 text-left hover:no-underline rounded-t-xl [&[data-state=open]]:border-b [&[data-state=open]]:border-border/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                        <DollarSign className="w-4 h-4 text-primary" />
+            <AnimatedSection animation="scale-in">
+              <Accordion type="single" collapsible className="space-y-6">
+                {[
+                  {
+                    id: "item-1",
+                    icon: DollarSign,
+                    question: "É necessário pagar alguma taxa para aderir ao plano?",
+                    answer: "Não, não cobramos nenhuma taxa de adesão. Você paga apenas a mensalidade do seu plano escolhido. Nossa política é de total transparência: sem surpresas, sem taxas ocultas.",
+                    color: "from-green-400 to-emerald-400"
+                  },
+                  {
+                    id: "item-2",
+                    icon: Smartphone,
+                    question: "Como é feita a portabilidade do número?",
+                    answer: "A portabilidade é feita de forma simples e gratuita. Nossa equipe técnica te auxilia em todo o processo, que leva até 3 dias úteis para ser concluído. Você não fica sem linha durante o processo.",
+                    color: "from-blue-400 to-cyan-400"
+                  },
+                  {
+                    id: "item-3",
+                    icon: Clock,
+                    question: "Como é feita a renovação do plano?",
+                    answer: "A renovação é automática todo mês na data de vencimento do seu plano. Os dados não utilizados são automaticamente transferidos para o próximo ciclo, sem limite de acúmulo.",
+                    color: "from-purple-400 to-pink-400"
+                  },
+                  {
+                    id: "item-4",
+                    icon: Lock,
+                    question: "Posso cancelar meu plano a qualquer momento?",
+                    answer: "Sim, você pode cancelar seu plano a qualquer momento sem taxa de cancelamento. O cancelamento é efetivado no final do período já pago, garantindo que você não perca o que pagou.",
+                    color: "from-orange-400 to-red-400"
+                  },
+                  {
+                    id: "item-5",
+                    icon: InfinityIcon,
+                    question: "Como funciona o acúmulo de dados?",
+                    answer: "Nossa tecnologia exclusiva permite que todos os dados não utilizados no mês sejam automaticamente transferidos para o próximo período, sem limite de acúmulo. É como uma conta poupança de internet!",
+                    color: "from-indigo-400 to-violet-400"
+                  }
+                ].map((faq, index) => (
+                  <AccordionItem 
+                    key={faq.id} 
+                    value={faq.id} 
+                    className="border-2 border-primary/20 rounded-3xl glass-ultra hover:border-primary/40 transition-all duration-500 group overflow-hidden"
+                  >
+                    <AccordionTrigger className="px-8 py-6 text-left hover:no-underline rounded-t-3xl [&[data-state=open]]:border-b [&[data-state=open]]:border-primary/20 group-hover:bg-primary/5 transition-all duration-300">
+                      <div className="flex items-center gap-6 w-full">
+                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${faq.color} p-0.5 group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                          <div className="w-full h-full bg-foreground rounded-2xl flex items-center justify-center">
+                            <faq.icon className="w-8 h-8 text-primary" />
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <span className="text-xl md:text-2xl font-bold text-primary leading-tight">
+                            {faq.question}
+                          </span>
+                        </div>
+                        <div className="flex-shrink-0">
+                          <ArrowRight className="w-6 h-6 text-primary transform group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
                       </div>
-                      <span className="text-lg font-semibold text-primary-foreground">
-                        É necessário pagar alguma taxa para aderir ao plano?
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-5 text-muted-foreground text-base leading-relaxed">
-                    Não, não cobramos nenhuma taxa de adesão. Você paga apenas a mensalidade do seu plano escolhido.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-2" className="border border-border/20 rounded-xl bg-card/10 backdrop-blur-sm hover:bg-card/20 transition-all duration-300">
-                  <AccordionTrigger className="px-6 py-5 text-left hover:no-underline rounded-t-xl [&[data-state=open]]:border-b [&[data-state=open]]:border-border/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                        <Smartphone className="w-4 h-4 text-primary" />
+                    </AccordionTrigger>
+                    <AccordionContent className="px-8 pb-8 text-primary-foreground/80 text-lg leading-relaxed">
+                      <div className="pl-22">
+                        {faq.answer}
                       </div>
-                      <span className="text-lg font-semibold text-primary-foreground">
-                        Como é feito a portabilidade do número?
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-5 text-muted-foreground text-base leading-relaxed">
-                    A portabilidade é feita de forma simples e gratuita. Nossa equipe técnica te auxilia em todo o processo, que leva até 3 dias úteis para ser concluído.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-3" className="border border-border/20 rounded-xl bg-card/10 backdrop-blur-sm hover:bg-card/20 transition-all duration-300">
-                  <AccordionTrigger className="px-6 py-5 text-left hover:no-underline rounded-t-xl [&[data-state=open]]:border-b [&[data-state=open]]:border-border/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                        <Clock className="w-4 h-4 text-primary" />
-                      </div>
-                      <span className="text-lg font-semibold text-primary-foreground">
-                        Como é feita a renovação do plano?
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-5 text-muted-foreground text-base leading-relaxed">
-                    A renovação é automática todo mês na data de vencimento do seu plano. Os dados não utilizados são automaticamente transferidos para o próximo ciclo.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-4" className="border border-border/20 rounded-xl bg-card/10 backdrop-blur-sm hover:bg-card/20 transition-all duration-300">
-                  <AccordionTrigger className="px-6 py-5 text-left hover:no-underline rounded-t-xl [&[data-state=open]]:border-b [&[data-state=open]]:border-border/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                        <Lock className="w-4 h-4 text-primary" />
-                      </div>
-                      <span className="text-lg font-semibold text-primary-foreground">
-                        Posso cancelar meu plano a qualquer momento?
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-5 text-muted-foreground text-base leading-relaxed">
-                    Sim, você pode cancelar seu plano a qualquer momento sem taxa de cancelamento. O cancelamento é efetivado no final do período já pago.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-5" className="border border-border/20 rounded-xl bg-card/10 backdrop-blur-sm hover:bg-card/20 transition-all duration-300">
-                  <AccordionTrigger className="px-6 py-5 text-left hover:no-underline rounded-t-xl [&[data-state=open]]:border-b [&[data-state=open]]:border-border/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                        <InfinityIcon className="w-4 h-4 text-primary" />
-                      </div>
-                      <span className="text-lg font-semibold text-primary-foreground">
-                        Como funciona o acúmulo de dados?
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-5 text-muted-foreground text-base leading-relaxed">
-                    Nossa tecnologia exclusiva permite que todos os dados não utilizados no mês sejam automaticamente transferidos para o próximo período, sem limite de acúmulo.
-                  </AccordionContent>
-                </AccordionItem>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
               </Accordion>
+            </AnimatedSection>
+
+            {/* Premium support section */}
+            <AnimatedSection className="text-center mt-20" animation="fade-up">
+              <div className="relative inline-block">
+                <div className="absolute -inset-6 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-75 animate-pulse"></div>
+                <div className="relative glass-ultra p-10 rounded-3xl border-2 border-primary/30">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="text-left flex-1">
+                      <h3 className="text-3xl font-black text-primary mb-3">Ainda precisa de ajuda?</h3>
+                      <p className="text-primary-foreground/70 text-lg">
+                        Nossa equipe de especialistas está pronta para esclarecer qualquer dúvida e te ajudar a escolher o plano ideal
+                      </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <a href={waUrl} target="_blank" rel="noreferrer" className="group">
+                        <Button className="btn-luxury px-10 py-5 rounded-2xl font-black text-lg flex items-center gap-3 shadow-2xl hover:shadow-primary/25">
+                          <MessageCircle className="w-6 h-6" />
+                          <span>Falar no WhatsApp</span>
+                          <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+                        </Button>
+                      </a>
+                      <Button variant="outline" className="glass-ultra border-2 border-primary/30 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary/10 transition-all duration-300">
+                        <Headphones className="w-6 h-6 mr-3" />
+                        Suporte Técnico
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* Ultimate CTA Section - Most Premium */}
+        <section className="py-40 md:py-52 relative overflow-hidden bg-gradient-to-br from-background via-secondary/10 to-background">
+          {/* Ultra Premium Background with 3D Effects */}
+          <div className="absolute inset-0">
+            {/* Multiple layered gradients for depth */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,102,0,0.2)_0%,_transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,102,0,0.15)_0%,_transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,_rgba(255,102,0,0.1)_0deg,_transparent_60deg,_rgba(255,102,0,0.05)_120deg,_transparent_180deg)]"></div>
+            
+            {/* 3D Floating Elements */}
+            <div className="absolute top-1/4 left-1/4">
+              <div className="w-64 h-64 gradient-luxury rounded-full blur-3xl opacity-20 animate-float" style={{animationDuration: '20s'}}></div>
+            </div>
+            <div className="absolute bottom-1/3 right-1/4">
+              <div className="w-80 h-80 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-3xl opacity-30 animate-float" style={{animationDuration: '25s', animationDelay: '3s'}}></div>
+            </div>
+            
+            {/* Animated particles field */}
+            {Array.from({ length: 15 }, (_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-primary/20 rounded-full animate-float opacity-60"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDuration: `${8 + Math.random() * 10}s`,
+                  animationDelay: `${Math.random() * 5}s`
+                }}
+              />
+            ))}
+          </div>
+
+          <div className="max-w-6xl mx-auto px-6 relative z-10">
+            <AnimatedSection className="text-center" animation="scale-in">
+              <div className="relative">
+                {/* Ultra premium glow effect */}
+                <div className="absolute -inset-12 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-full blur-3xl opacity-50 animate-pulse"></div>
+                
+                <div className="relative space-y-12">
+                  {/* Premium badge */}
+                  <div className="inline-flex items-center gap-4 px-10 py-5 rounded-full glass-ultra border-2 border-primary/40 shadow-2xl">
+                    <Crown className="w-8 h-8 text-primary animate-pulse" />
+                    <span className="text-primary font-black text-lg tracking-wide">REVOLUÇÃO MÓVEL</span>
+                    <Sparkles className="w-8 h-8 text-accent animate-pulse delay-500" />
+                  </div>
+
+                  {/* Hero title */}
+                  <div className="space-y-8">
+                    <h2 className="text-7xl md:text-8xl lg:text-9xl font-black leading-[0.85] text-balance">
+                      <span className="block text-foreground mb-4">Pronto para</span>
+                      <span className="block gradient-luxury bg-clip-text text-transparent animate-gradient-shift text-shadow-elegant">
+                        revolucionar
+                      </span>
+                      <span className="block text-foreground mt-4">sua conexão?</span>
+                    </h2>
+                    
+                    <p className="text-3xl md:text-4xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                      Junte-se a milhares de clientes que já descobriram o futuro da conectividade móvel
+                    </p>
+                  </div>
+
+                  {/* Ultra Premium CTA Buttons */}
+                  <div className="flex flex-col lg:flex-row gap-8 items-center justify-center pt-8">
+                    <a href={waUrl} target="_blank" rel="noreferrer" className="group">
+                      <Button className="relative overflow-hidden bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] hover:bg-[length:100%_100%] px-16 py-8 rounded-3xl font-black text-2xl md:text-3xl flex items-center gap-6 shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:scale-110 text-primary-foreground">
+                        {/* Animated background */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent animate-gradient-shift"></div>
+                        
+                        {/* Content */}
+                        <div className="relative z-10 flex items-center gap-6">
+                          <div className="relative">
+                            <MessageCircle className="w-10 h-10" />
+                            <div className="absolute -inset-2 border-2 border-white/30 rounded-full animate-ping"></div>
+                          </div>
+                          <span>Falar com especialista agora</span>
+                          <ArrowRight className="w-10 h-10 group-hover:translate-x-2 transition-transform duration-300" />
+                        </div>
+                      </Button>
+                    </a>
+                    
+                    <div className="text-center space-y-3">
+                      <p className="text-sm text-muted-foreground font-medium">Ou explore nossos serviços</p>
+                      <Link to="/" className="group">
+                        <Button variant="outline" className="glass-ultra border-3 border-primary/40 px-12 py-6 rounded-2xl font-bold text-xl hover:bg-primary/10 transition-all duration-300 hover:scale-105">
+                          <Globe className="w-8 h-8 mr-4" />
+                          Ver cobertura
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Premium guarantee badges */}
+                  <div className="grid md:grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto">
+                    {[
+                      {
+                        icon: Shield,
+                        title: "Garantia Total",
+                        desc: "30 dias para testar"
+                      },
+                      {
+                        icon: Award,
+                        title: "Qualidade Premium",
+                        desc: "Tecnologia certificada"
+                      },
+                      {
+                        icon: HeartHandshake,
+                        title: "Suporte Dedicado",
+                        desc: "Atendimento 24/7"
+                      }
+                    ].map((guarantee, index) => (
+                      <div key={index} className="flex items-center gap-4 p-6 rounded-2xl glass-ultra border border-primary/20 hover:border-primary/40 transition-all duration-300 group">
+                        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <guarantee.icon className="w-7 h-7 text-primary" />
+                        </div>
+                        <div className="text-left">
+                          <h4 className="font-bold text-card-foreground">{guarantee.title}</h4>
+                          <p className="text-sm text-muted-foreground">{guarantee.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </AnimatedSection>
           </div>
         </section>

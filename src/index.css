@@ -346,10 +346,114 @@
     animation: float 3s ease-in-out infinite;
   }
 
-  /* Floating Animation */
+  /* Slide In Animation for progress bars */
+  @keyframes slideIn {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+
+  /* Enhanced floating animation */
   @keyframes floating {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-8px); }
+  }
+
+  /* Tech elements rotation */
+  @keyframes techRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Pulse with scale */
+  @keyframes pulseScale {
+    0%, 100% { 
+      transform: scale(1); 
+      opacity: 1;
+    }
+    50% { 
+      transform: scale(1.05); 
+      opacity: 0.8;
+    }
+  }
+
+  /* Enhanced glassmorphism with movement */
+  .glass-dynamic {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+  }
+
+  .glass-dynamic:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  /* Animated border effect */
+  .border-animated {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .border-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+    animation: borderMove 3s linear infinite;
+  }
+
+  @keyframes borderMove {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  /* Enhanced button hover effects */
+  .btn-ultra {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-ultra::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .btn-ultra:hover::before {
+    opacity: 1;
+  }
+
+  .btn-ultra > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Card reveal animation */
+  @keyframes cardReveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Smooth color transitions */
+  .color-transition {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
   }
 }
 
