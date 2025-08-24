@@ -72,25 +72,29 @@
     @apply bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 transition-all duration-300;
   }
 
-  /* Gradient Backgrounds */
+  /* Gradients modernos com HSL correto */
   .gradient-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, hsl(20 100% 50%) 0%, hsl(24 100% 55%) 100%);
   }
 
   .gradient-blue {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, hsl(200 100% 70%) 0%, hsl(180 100% 50%) 100%);
   }
 
   .gradient-purple {
-    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    background: linear-gradient(135deg, hsl(260 60% 70%) 0%, hsl(320 60% 85%) 100%);
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent;
+    background: linear-gradient(135deg, hsl(220 90% 50%) 0%, hsl(260 90% 60%) 50%, hsl(220 90% 70%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
+  /* Gradiente animado corrigido */
   .gradient-animated {
-    background: linear-gradient(-45deg, #667eea, #764ba2, #4facfe, #00f2fe);
+    background: linear-gradient(-45deg, hsl(20 100% 50%), hsl(24 100% 55%), hsl(200 100% 70%), hsl(180 100% 50%));
     background-size: 300% 300%;
     animation: gradient-shift 6s ease infinite;
   }
@@ -229,9 +233,9 @@
     transition: all 0.2s ease-out;
   }
 
-  /* Premium gradient effects */
+  /* Premium gradient effects corrigido */
   .gradient-premium-mobile {
-    background: linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #cc3300 70%, #990000 100%);
+    background: linear-gradient(135deg, hsl(20 100% 50%) 0%, hsl(15 100% 45%) 30%, hsl(10 100% 40%) 70%, hsl(5 100% 30%) 100%);
   }
 
   /* Shimmer Animation */
@@ -284,7 +288,7 @@
       0 12px 24px rgba(0, 0, 0, 0.25),
       0 6px 12px rgba(0, 0, 0, 0.2),
       inset 0 2px 0 rgba(255, 255, 255, 0.5),
-      0 0 30px rgba(255, 102, 0, 0.4);
+      0 0 30px hsl(20 100% 50% / 0.4);
   }
 
   .btn-3d:active {
@@ -305,13 +309,13 @@
       box-shadow: 
         0 6px 12px rgba(0, 0, 0, 0.2),
         0 3px 6px rgba(0, 0, 0, 0.15),
-        0 0 0 rgba(255, 102, 0, 0);
+        0 0 0 hsl(20 100% 50% / 0);
     }
     50% {
       box-shadow: 
         0 6px 12px rgba(0, 0, 0, 0.2),
         0 3px 6px rgba(0, 0, 0, 0.15),
-        0 0 30px rgba(255, 102, 0, 0.6);
+        0 0 30px hsl(20 100% 50% / 0.6);
     }
   }
 
@@ -509,21 +513,21 @@ body {
 /* Enhanced gradients */
 .gradient-luxury {
   background: linear-gradient(135deg, 
-    #ff6600 0%, 
-    #ff5722 15%, 
-    #e65100 30%, 
-    #d84315 45%, 
-    #bf360c 60%, 
-    #a6300c 75%, 
-    #8f280a 90%, 
-    #782108 100%);
+    hsl(20 100% 50%) 0%, 
+    hsl(15 100% 45%) 15%, 
+    hsl(22 100% 45%) 30%, 
+    hsl(18 100% 42%) 45%, 
+    hsl(16 100% 38%) 60%, 
+    hsl(14 100% 35%) 75%, 
+    hsl(12 100% 32%) 90%, 
+    hsl(10 100% 28%) 100%);
   background-size: 400% 400%;
   animation: gradient-shift 8s ease infinite;
 }
 
 /* Premium text effects */
 .text-luxury {
-  background: linear-gradient(135deg, #ffffff 0%, #fff3e0 50%, #ffe0b2 100%);
+  background: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(36 100% 95%) 50%, hsl(36 100% 85%) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -559,7 +563,7 @@ body {
   box-shadow: 
     0 15px 45px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    0 0 50px rgba(255, 102, 0, 0.1);
+    0 0 50px hsl(20 100% 50% / 0.1);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -568,7 +572,7 @@ body {
   box-shadow: 
     0 25px 60px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    0 0 80px rgba(255, 102, 0, 0.2);
+    0 0 80px hsl(20 100% 50% / 0.2);
 }
 
 /* Rounded corners enhancement */
@@ -578,19 +582,19 @@ body {
 
 /* Premium button effects */
 .btn-luxury {
-  background: linear-gradient(135deg, #ffd54f 0%, #ffb300 50%, #ff8f00 100%);
+  background: linear-gradient(135deg, hsl(48 100% 70%) 0%, hsl(45 100% 60%) 50%, hsl(38 100% 50%) 100%);
   border: 3px solid rgba(255, 255, 255, 0.4);
   box-shadow: 
-    0 10px 30px rgba(255, 143, 0, 0.4),
+    0 10px 30px hsl(38 100% 50% / 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-luxury:hover {
-  background: linear-gradient(135deg, #fff176 0%, #ffc107 50%, #ffa000 100%);
+  background: linear-gradient(135deg, hsl(48 100% 75%) 0%, hsl(45 100% 65%) 50%, hsl(45 100% 62%) 100%);
   transform: translateY(-6px) scale(1.05);
   box-shadow: 
-    0 15px 40px rgba(255, 143, 0, 0.5),
+    0 15px 40px hsl(38 100% 50% / 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    0 0 30px rgba(255, 193, 7, 0.6);
+    0 0 30px hsl(45 100% 65% / 0.6);
 }
