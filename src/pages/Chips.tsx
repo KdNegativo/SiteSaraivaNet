@@ -137,7 +137,7 @@ const Chips = () => {
                 <div className="space-y-4">
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.9] text-balance">
                     <span className="block text-foreground mb-2">O futuro da</span>
-                    <span className="block gradient-luxury bg-clip-text text-transparent animate-gradient-shift text-shadow-elegant">
+                    <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                       conectividade
                     </span>
                     <span className="block text-foreground mt-2">móvel</span>
@@ -312,7 +312,7 @@ const Chips = () => {
               
               <h2 className="text-6xl md:text-7xl font-black mb-10 text-primary leading-tight">
                 Liderança{' '}
-                <span className="text-luxury animate-gradient-shift">comprovada</span>
+                <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">comprovada</span>
               </h2>
               <p className="text-2xl text-primary-foreground/70 max-w-4xl mx-auto leading-relaxed">
                 Milhares de clientes já descobriram a revolução dos dados acumulativos
@@ -471,7 +471,7 @@ const Chips = () => {
               
               <h2 className="text-6xl md:text-7xl font-black mb-12 text-primary leading-tight">
                 Dúvidas{' '}
-                <span className="text-luxury animate-gradient-shift">esclarecidas</span>
+                <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">esclarecidas</span>
               </h2>
               <p className="text-2xl text-primary-foreground/70 max-w-4xl mx-auto leading-relaxed">
                 Respostas diretas para as perguntas mais importantes sobre nossos chips premium
@@ -631,7 +631,7 @@ const Chips = () => {
                   <div className="space-y-8">
                     <h2 className="text-7xl md:text-8xl lg:text-9xl font-black leading-[0.85] text-balance">
                       <span className="block text-foreground mb-4">Pronto para</span>
-                      <span className="block gradient-luxury bg-clip-text text-transparent animate-gradient-shift text-shadow-elegant">
+                      <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                         revolucionar
                       </span>
                       <span className="block text-foreground mt-4">sua conexão?</span>
@@ -728,7 +728,7 @@ const Chips = () => {
               
               <h2 className="text-6xl md:text-7xl font-black mb-10 text-foreground leading-tight">
                 Planos que{' '}
-                <span className="gradient-luxury bg-clip-text text-transparent animate-gradient-shift text-shadow-elegant">
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                   revolucionam
                 </span>
               </h2>
@@ -799,7 +799,7 @@ const Chips = () => {
                           <h3 className="text-3xl font-black mb-4 text-card-foreground">{plan.title}</h3>
                           <div className={`text-7xl font-black mb-3 ${
                             plan.best 
-                              ? "gradient-luxury bg-clip-text text-transparent animate-gradient-shift" 
+                              ? "bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent" 
                               : "text-primary"
                           }`}>
                             {plan.data}
