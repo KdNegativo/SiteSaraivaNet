@@ -91,103 +91,79 @@ const Chips = () => {
         <link rel="canonical" href={canonical} />
       </Helmet>
 
-      <main className="min-h-screen bg-slate-900 overflow-hidden">
-        {/* Ultra Modern Hero Section - Dynamic Dark Theme */}
-        <section className="relative py-24 md:py-40 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 overflow-hidden">
-          {/* Enhanced Gradient Blobs with Movement */}
+      <main className="min-h-screen bg-slate-950 overflow-hidden">
+        {/* Elegant Dark Hero Section */}
+        <section className="relative py-24 md:py-40 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
+          {/* Subtle Background Elements */}
           <div className="absolute inset-0">
-            {/* Animated floating gradients */}
-            <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-orange-500/40 via-pink-500/30 to-purple-500/40 rounded-full blur-3xl animate-float opacity-80"></div>
-            <div className="absolute bottom-32 right-32 w-80 h-80 bg-gradient-to-r from-cyan-400/40 via-blue-500/30 to-indigo-500/40 rounded-full blur-3xl animate-float delay-1000 opacity-80"></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/30 via-pink-500/25 to-orange-500/30 rounded-full blur-2xl animate-pulse -translate-x-1/2 -translate-y-1/2 opacity-60"></div>
-            <div className="absolute top-10 right-10 w-48 h-48 bg-gradient-to-r from-green-400/25 to-cyan-400/25 rounded-full blur-3xl animate-pulse delay-500 opacity-70"></div>
-            <div className="absolute bottom-10 left-10 w-56 h-56 bg-gradient-to-r from-yellow-400/20 to-orange-400/25 rounded-full blur-3xl animate-float delay-2000 opacity-60"></div>
+            {/* Single elegant gradient */}
+            <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-gradient-to-r from-slate-800/20 to-slate-700/10 rounded-full blur-3xl"></div>
             
-            {/* Enhanced grid with glow */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+            {/* Minimal grid */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:80px_80px]"></div>
           </div>
 
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               {/* Modern Left Content */}
               <AnimatedSection className="space-y-10">
-                {/* Modern Badge */}
-                <div className="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
-                  <div className="w-3 h-3 bg-gradient-to-r from-orange-400 to-pink-400 rounded-full animate-pulse"></div>
-                  <span className="text-white font-bold text-sm tracking-wider">REVOLUÇÃO CONECTADA</span>
-                  <Sparkles className="w-4 h-4 text-cyan-400 animate-pulse" />
+                {/* Elegant Badge */}
+                <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm">
+                  <div className="w-2 h-2 bg-slate-400 rounded-full"></div>
+                  <span className="text-slate-300 font-medium text-sm tracking-wide">CONECTIVIDADE PREMIUM</span>
                 </div>
 
-                {/* Hero Title - Ultra Modern Style */}
+                {/* Clean Hero Title */}
                 <div className="space-y-8">
-                  <h1 className="text-6xl md:text-7xl lg:text-9xl font-black leading-[0.85] text-balance relative">
-                    <span className="block text-white mb-6 relative">
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.9] text-balance">
+                    <span className="block text-white mb-4">
                       Dados que
-                      <div className="absolute -inset-2 bg-gradient-to-r from-white/5 to-transparent rounded-2xl blur-xl"></div>
                     </span>
-                    <span className="block relative">
-                      <span className="bg-gradient-to-r from-orange-400 via-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-gradient-x bg-300%">
-                        nunca acabam
-                      </span>
-                      <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/20 via-pink-500/20 to-cyan-500/20 rounded-3xl blur-2xl animate-pulse"></div>
+                    <span className="block text-slate-400">
+                      nunca acabam
                     </span>
                   </h1>
                   
-                  <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-2xl relative">
-                    <span className="relative z-10">
-                      Tecnologia premium que 
-                      <span className="text-orange-400 font-bold"> revoluciona </span>
-                      sua conectividade.
+                  <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-2xl">
+                    Tecnologia premium que revoluciona sua conectividade.
+                    <span className="text-white font-semibold block mt-2">
+                      Acumule dados infinitamente.
                     </span>
-                    <span className="text-white font-bold block mt-3 text-2xl md:text-3xl relative z-10">
-                      🚀 Acumule dados infinitamente.
-                    </span>
-                    <div className="absolute -inset-4 bg-gradient-to-r from-slate-800/50 to-transparent rounded-2xl blur-xl"></div>
                   </p>
                 </div>
 
-                {/* Enhanced Feature Pills with Motion */}
+                {/* Clean Feature Pills */}
                 <div className="flex flex-wrap gap-4 py-8">
                   {[
-                    { text: "🚀 Ativação 24h", color: "from-orange-500/30 to-pink-500/30", glow: "from-orange-400/50 to-pink-400/50" },
-                    { text: "♾️ Dados infinitos", color: "from-cyan-500/30 to-blue-500/30", glow: "from-cyan-400/50 to-blue-400/50" },
-                    { text: "🛡️ Sem surpresas", color: "from-purple-500/30 to-pink-500/30", glow: "from-purple-400/50 to-pink-400/50" },
-                    { text: "⚡ 5G nacional", color: "from-green-500/30 to-cyan-500/30", glow: "from-green-400/50 to-cyan-400/50" }
+                    { text: "Ativação 24h", icon: Clock },
+                    { text: "Dados infinitos", icon: InfinityIcon },
+                    { text: "Sem surpresas", icon: Shield },
+                    { text: "5G nacional", icon: Wifi }
                   ].map((pill, idx) => (
-                    <div key={idx} className="relative group">
-                      <div className={`absolute -inset-2 bg-gradient-to-r ${pill.glow} rounded-full blur opacity-0 group-hover:opacity-60 transition-all duration-500 animate-pulse`}></div>
-                      <div className={`relative px-8 py-4 rounded-full bg-gradient-to-r ${pill.color} border border-white/20 backdrop-blur-md hover:scale-110 transition-all duration-500 hover:shadow-2xl cursor-pointer`}>
-                        <span className="text-white font-bold text-sm tracking-wide drop-shadow-lg">{pill.text}</span>
-                      </div>
+                    <div key={idx} className="flex items-center gap-3 px-6 py-3 rounded-full bg-slate-800/60 border border-slate-700 hover:bg-slate-800 transition-all duration-300">
+                      <pill.icon className="w-4 h-4 text-slate-400" />
+                      <span className="text-slate-300 font-medium text-sm">{pill.text}</span>
                     </div>
                   ))}
                 </div>
 
-                {/* Ultra Modern CTA with Enhanced Effects */}
-                <div className="flex flex-col sm:flex-row gap-8 pt-8">
-                  <a href={waUrl} target="_blank" rel="noreferrer" className="group relative">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/60 via-pink-500/60 to-purple-500/60 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 animate-pulse"></div>
-                    <button className="relative overflow-hidden bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 px-16 py-8 rounded-3xl font-black text-xl text-white shadow-2xl hover:shadow-orange-500/50 transition-all duration-500 hover:scale-110 bg-300% animate-gradient-x">
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-                      <div className="relative z-10 flex items-center gap-4">
-                        <div className="relative">
-                          <MessageCircle className="w-7 h-7 group-hover:rotate-12 transition-transform duration-500" />
-                          <div className="absolute -inset-2 bg-white/30 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <span className="tracking-wide">Falar no WhatsApp</span>
-                        <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform duration-500" />
+                {/* Clean CTAs */}
+                <div className="flex flex-col sm:flex-row gap-6 pt-8">
+                  <a href={waUrl} target="_blank" rel="noreferrer" className="group">
+                    <button className="bg-white text-slate-900 px-12 py-4 rounded-2xl font-semibold text-lg hover:bg-slate-100 transition-all duration-300 shadow-lg">
+                      <div className="flex items-center gap-3">
+                        <MessageCircle className="w-5 h-5" />
+                        <span>Falar no WhatsApp</span>
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </button>
                   </a>
                   
-                  <Link to="/" className="group relative">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/40 to-blue-500/40 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                    <button className="relative px-16 py-8 rounded-3xl font-bold text-xl text-white border-2 border-white/30 bg-white/10 backdrop-blur-md hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/25">
-                      <div className="flex items-center gap-4">
-                        <Globe className="w-7 h-7 group-hover:rotate-180 transition-transform duration-500" />
-                        <span className="tracking-wide">Ver cobertura</span>
+                  <Link to="/" className="group">
+                    <button className="px-12 py-4 rounded-2xl font-semibold text-lg text-white border border-slate-700 bg-slate-800/50 hover:bg-slate-800 transition-all duration-300">
+                      <div className="flex items-center gap-3">
+                        <Globe className="w-5 h-5" />
+                        <span>Ver cobertura</span>
                       </div>
                     </button>
                   </Link>
@@ -239,29 +215,24 @@ const Chips = () => {
           </div>
         </section>
 
-        {/* Modern Plans Section */}
-        <section className="py-32 md:py-40 bg-slate-900 relative overflow-hidden">
-          {/* Background effects */}
+        {/* Elegant Plans Section */}
+        <section className="py-32 md:py-40 bg-slate-950 relative">
+          {/* Minimal background */}
           <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-slate-900/30 rounded-full blur-3xl"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <AnimatedSection className="text-center mb-24">
-              <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-10">
-                <Crown className="w-6 h-6 text-orange-400 animate-pulse" />
-                <span className="text-white font-bold text-sm tracking-wide">PLANOS PREMIUM</span>
-                <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse delay-500" />
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-800/50 border border-slate-700 mb-10">
+                <Crown className="w-5 h-5 text-slate-400" />
+                <span className="text-slate-300 font-medium text-sm tracking-wide">PLANOS PREMIUM</span>
               </div>
               
-              <h2 className="text-6xl md:text-7xl font-black mb-10 text-white leading-tight">
-                Escolha seu{' '}
-                <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
-                  futuro
-                </span>
+              <h2 className="text-5xl md:text-6xl font-bold mb-10 text-white leading-tight">
+                Escolha seu <span className="text-slate-400">plano</span>
               </h2>
-              <p className="text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
                 Planos desenvolvidos com tecnologia de ponta para uma experiência móvel única
               </p>
             </AnimatedSection>
