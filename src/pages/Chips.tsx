@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Smartphone, Infinity as InfinityIcon, ArrowRight, CheckCircle, Shield, CreditCard, FileText, Star } from "lucide-react";
+import { Smartphone, Infinity as InfinityIcon, ArrowRight, CheckCircle, Shield, CreditCard, FileText, Star, Zap, Award, Users, Trophy, Wifi, Lock, Clock, DollarSign } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -27,192 +27,362 @@ const Chips = () => {
         <link rel="canonical" href={canonical} />
       </Helmet>
 
-      <main className="min-h-screen">
-        {/* Hero Section - Modern Black Design */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800">
-          {/* Background Effects */}
+      <main className="min-h-screen bg-black">
+        {/* Premium Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black text-white">
+          {/* Advanced Background Effects */}
           <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-blue-600/10 to-transparent rounded-full"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-black to-blue-900/50"></div>
+            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse"></div>
+            <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-cyan-500/5 via-blue-500/5 to-transparent rounded-full"></div>
+            
+            {/* Animated Grid Pattern */}
+            <div className="absolute inset-0 opacity-[0.02]">
+              <div className="w-full h-full" style={{
+                backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+                backgroundSize: '50px 50px'
+              }}></div>
+            </div>
           </div>
-          
-          <div className="relative mx-auto max-w-7xl px-6 pt-24 pb-16 md:pt-32 md:pb-20">
-            <div className="grid gap-12 lg:grid-cols-3 lg:items-center">
-              {/* Left Side Card */}
-              <div className="hidden lg:block animate-fade-in">
-                <Card className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl border-gray-700/50 text-white p-8 hover-scale group transition-all duration-500 hover:border-blue-500/50">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg shadow-blue-500/25 group-hover:shadow-blue-500/40 transition-all duration-300">
-                      <Shield className="h-6 w-6 text-white" />
+
+          <div className="relative w-full max-w-7xl mx-auto px-6 py-20">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
+              
+              {/* Left Premium Card */}
+              <div className="lg:col-span-3 hidden lg:block">
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-all duration-700"></div>
+                  <Card className="relative bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-xl border border-slate-700/50 text-white p-8 rounded-2xl hover:border-blue-500/50 transition-all duration-500 group-hover:transform group-hover:scale-[1.02]">
+                    <div className="absolute top-4 right-4">
+                      <Lock className="h-5 w-5 text-blue-400 opacity-60" />
                     </div>
-                    <h3 className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Segurança</h3>
-                  </div>
-                  <p className="text-gray-300 leading-relaxed">
-                    Dados seguros e protegidos com tecnologia de ponta e criptografia militar
-                  </p>
-                  <div className="mt-4 h-1 w-0 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-700"></div>
-                </Card>
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-blue-500 rounded-xl blur-md opacity-50"></div>
+                        <div className="relative bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl shadow-lg">
+                          <Shield className="h-6 w-6 text-white" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Máxima Segurança</h3>
+                        <p className="text-slate-400 text-sm">Criptografia militar</p>
+                      </div>
+                    </div>
+                    <p className="text-slate-300 leading-relaxed text-sm">
+                      Proteção de dados com tecnologia blockchain e criptografia AES-256. Seus dados estão sempre seguros.
+                    </p>
+                    <div className="mt-6 h-1 w-0 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 group-hover:w-full transition-all duration-1000 rounded-full"></div>
+                  </Card>
+                </div>
               </div>
 
-              {/* Center Content */}
-              <div className="text-center animate-scale-in">
-                <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-600/30 to-purple-600/30 backdrop-blur-sm border border-blue-500/30 px-6 py-3 text-sm font-semibold text-blue-300 mb-8 hover-scale">
-                  <InfinityIcon className="mr-2 h-5 w-5 animate-pulse" />
-                  <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">Dados acumulativos</span>
+              {/* Center Hero Content */}
+              <div className="lg:col-span-6 text-center space-y-8">
+                {/* Premium Badge */}
+                <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-blue-500/30 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 backdrop-blur-sm">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-blue-400 rounded-full blur-sm opacity-50 animate-pulse"></div>
+                    <div className="relative w-2 h-2 bg-blue-400 rounded-full"></div>
+                  </div>
+                  <span className="text-sm font-semibold bg-gradient-to-r from-blue-300 via-purple-300 to-blue-300 bg-clip-text text-transparent">
+                    DADOS ACUMULATIVOS INFINITOS
+                  </span>
+                  <InfinityIcon className="h-4 w-4 text-blue-400" />
                 </div>
-                
-                <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-8">
-                  <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent animate-fade-in">
-                    Chips
-                  </span>
-                  <br />
-                  <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-fade-in delay-200">
-                    SaraivaNet
-                  </span>
-                </h1>
-                
-                <p className="text-gray-300 text-xl mb-10 max-w-lg mx-auto leading-relaxed animate-fade-in delay-300">
-                  Internet móvel revolucionária com dados que 
-                  <span className="text-blue-400 font-semibold"> acumulam infinitamente</span>. 
-                  Nunca perca seus dados novamente.
+
+                {/* Main Title */}
+                <div className="space-y-4">
+                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none">
+                    <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                      CHIPS
+                    </span>
+                    <span className="block bg-gradient-to-r from-blue-400 via-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent animate-pulse">
+                      PREMIUM
+                    </span>
+                  </h1>
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent h-px blur-sm"></div>
+                    <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+                  </div>
+                </div>
+
+                {/* Subtitle */}
+                <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                  A revolução em conectividade móvel. Dados que 
+                  <span className="font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> nunca expiram</span>, 
+                  velocidade <span className="font-bold text-white">5G</span> e cobertura nacional.
                 </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-500">
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-4">
                   <a href={waUrl} target="_blank" rel="noreferrer">
-                    <Button size="lg" className="group relative bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 transition-all duration-300 hover-scale border-0">
-                      <span className="relative z-10 flex items-center gap-2">
-                        Pedir Chip Agora
-                        <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
-                    </Button>
+                    <div className="relative group">
+                      <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur-lg opacity-50 group-hover:opacity-100 transition-all duration-500"></div>
+                      <Button className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:from-blue-500 hover:via-purple-500 hover:to-blue-500 text-white font-bold px-12 py-6 text-lg rounded-2xl border-0 shadow-2xl group-hover:scale-105 transition-all duration-300">
+                        <span className="flex items-center gap-3">
+                          <Zap className="h-6 w-6" />
+                          PEDIR AGORA
+                          <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </Button>
+                    </div>
                   </a>
                   <Link to="/">
-                    <Button variant="outline" size="lg" className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-8 py-4 rounded-xl transition-all duration-300">
-                      ← Voltar à Home
+                    <Button variant="outline" className="border-2 border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white hover:border-slate-500 px-8 py-6 text-lg rounded-2xl font-semibold transition-all duration-300">
+                      ← Voltar
                     </Button>
                   </Link>
                 </div>
+
+                {/* Stats Row */}
+                <div className="grid grid-cols-3 gap-8 pt-12 max-w-lg mx-auto">
+                  <div className="text-center">
+                    <div className="text-3xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">99%</div>
+                    <div className="text-slate-400 text-sm font-medium">Cobertura</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">24/7</div>
+                    <div className="text-slate-400 text-sm font-medium">Suporte</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-black bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">∞</div>
+                    <div className="text-slate-400 text-sm font-medium">Dados</div>
+                  </div>
+                </div>
               </div>
 
-              {/* Right Side Card */}
-              <div className="hidden lg:block animate-fade-in delay-200">
-                <Card className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl border-gray-700/50 text-white p-8 hover-scale group transition-all duration-500 hover:border-green-500/50">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 p-3 shadow-lg shadow-green-500/25 group-hover:shadow-green-500/40 transition-all duration-300">
-                      <InfinityIcon className="h-6 w-6 text-white" />
+              {/* Right Premium Card */}
+              <div className="lg:col-span-3 hidden lg:block">
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-all duration-700"></div>
+                  <Card className="relative bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-xl border border-slate-700/50 text-white p-8 rounded-2xl hover:border-green-500/50 transition-all duration-500 group-hover:transform group-hover:scale-[1.02]">
+                    <div className="absolute top-4 right-4">
+                      <Clock className="h-5 w-5 text-green-400 opacity-60" />
                     </div>
-                    <h3 className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Acumulativo</h3>
-                  </div>
-                  <p className="text-gray-300 leading-relaxed">
-                    Seus dados não utilizados acumulam automaticamente para o próximo mês
-                  </p>
-                  <div className="mt-4 h-1 w-0 bg-gradient-to-r from-green-500 to-emerald-500 group-hover:w-full transition-all duration-700"></div>
-                </Card>
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-green-500 rounded-xl blur-md opacity-50"></div>
+                        <div className="relative bg-gradient-to-br from-green-500 to-emerald-600 p-3 rounded-xl shadow-lg">
+                          <InfinityIcon className="h-6 w-6 text-white" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent">Dados Infinitos</h3>
+                        <p className="text-slate-400 text-sm">Acumula para sempre</p>
+                      </div>
+                    </div>
+                    <p className="text-slate-300 leading-relaxed text-sm">
+                      Tecnologia exclusiva que acumula dados não utilizados indefinidamente. Nunca perca o que pagou.
+                    </p>
+                    <div className="mt-6 h-1 w-0 bg-gradient-to-r from-green-500 via-emerald-500 to-green-500 group-hover:w-full transition-all duration-1000 rounded-full"></div>
+                  </Card>
+                </div>
               </div>
             </div>
 
             {/* Mobile Cards */}
-            <div className="grid gap-6 mt-16 md:grid-cols-2 lg:hidden animate-fade-in delay-700">
-              <Card className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl border-gray-700/50 text-white p-6 hover-scale group">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 lg:hidden">
+              <Card className="bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl border border-slate-700/50 text-white p-6 rounded-xl hover:border-blue-500/50 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <div className="rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 p-2 shadow-lg shadow-blue-500/25">
+                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-lg">
                     <Shield className="h-5 w-5 text-white" />
                   </div>
-                  <span className="font-bold text-lg bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">Segurança</span>
+                  <div>
+                    <h3 className="font-bold text-lg text-white">Segurança Total</h3>
+                    <p className="text-slate-400 text-sm">Proteção militar</p>
+                  </div>
                 </div>
               </Card>
-              <Card className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl border-gray-700/50 text-white p-6 hover-scale group">
+              <Card className="bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl border border-slate-700/50 text-white p-6 rounded-xl hover:border-green-500/50 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <div className="rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 p-2 shadow-lg shadow-green-500/25">
+                  <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-3 rounded-lg">
                     <InfinityIcon className="h-5 w-5 text-white" />
                   </div>
-                  <span className="font-bold text-lg bg-gradient-to-r from-white to-green-300 bg-clip-text text-transparent">Acumulativo</span>
+                  <div>
+                    <h3 className="font-bold text-lg text-white">Dados Infinitos</h3>
+                    <p className="text-slate-400 text-sm">Acumula para sempre</p>
+                  </div>
                 </div>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Coming Soon Banner */}
-        <section className="relative bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 text-black py-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-          <div className="relative mx-auto max-w-7xl px-6 text-center">
-            <p className="font-bold text-lg flex items-center justify-center gap-2 animate-fade-in">
-              <span className="text-2xl animate-pulse">🚀</span>
-              <span className="bg-gradient-to-r from-yellow-900 to-yellow-800 bg-clip-text text-transparent">
-                Em breve: Novos planos com ainda mais benefícios e velocidade 5G!
-              </span>
-              <span className="text-2xl animate-pulse delay-500">✨</span>
-            </p>
+        {/* Premium Coming Soon Banner */}
+        <section className="relative bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-400 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
+          <div className="absolute inset-0">
+            <div className="w-full h-full opacity-10" style={{
+              backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px)`
+            }}></div>
+          </div>
+          <div className="relative py-6 text-center">
+            <div className="max-w-6xl mx-auto px-6">
+              <div className="flex items-center justify-center gap-4 text-black">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-black rounded-full animate-bounce"></div>
+                  <div className="w-3 h-3 bg-black rounded-full animate-bounce delay-100"></div>
+                  <div className="w-3 h-3 bg-black rounded-full animate-bounce delay-200"></div>
+                </div>
+                <p className="font-black text-xl md:text-2xl tracking-wide">
+                  🚀 EM BREVE: VELOCIDADE 5G + PLANOS ILIMITADOS ✨
+                </p>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-black rounded-full animate-bounce delay-300"></div>
+                  <div className="w-3 h-3 bg-black rounded-full animate-bounce delay-400"></div>
+                  <div className="w-3 h-3 bg-black rounded-full animate-bounce delay-500"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* We Are Different Section */}
-        <section className="py-20 md:py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
-          <div className="mx-auto max-w-7xl px-6">
+        {/* Premium Why We're Different Section */}
+        <section className="py-24 md:py-32 bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden">
+          {/* Background Elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-cyan-100/30 to-transparent rounded-full"></div>
+
+          <div className="relative max-w-7xl mx-auto px-6">
             <AnimatedSection animation="fade-up">
-              <header className="mb-16 text-center">
-                <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-100 to-purple-100 px-6 py-2 text-sm font-semibold text-blue-600 mb-6 animate-fade-in">
-                  <Star className="mr-2 h-4 w-4" />
-                  Por que somos únicos
+              {/* Section Header */}
+              <div className="text-center mb-20">
+                <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-100/80 to-purple-100/80 backdrop-blur-sm border border-blue-200/50 mb-8">
+                  <Trophy className="h-5 w-5 text-blue-600" />
+                  <span className="font-bold text-blue-700">POR QUE SOMOS LÍDERES</span>
                 </div>
-                <h2 className="text-4xl md:text-6xl font-black mb-6 animate-fade-in delay-200">
+                
+                <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
                   <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent">
-                    Somos diferentes
+                    SOMOS
+                  </span>
+                  <br />
+                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    DIFERENTES
                   </span>
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in delay-300">
-                  Tecnologia de ponta, inovação constante e o melhor atendimento do mercado
-                </p>
-              </header>
+                
+                <div className="max-w-3xl mx-auto">
+                  <p className="text-2xl text-slate-600 leading-relaxed">
+                    Tecnologia revolucionária, inovação constante e atendimento premium que supera todas as expectativas
+                  </p>
+                </div>
+              </div>
 
-              <div className="grid gap-8 md:grid-cols-3">
-                <Card className="group relative p-10 text-center border-0 bg-gradient-to-br from-white to-blue-50/50 hover:from-blue-50 hover:to-purple-50 shadow-lg hover:shadow-xl transition-all duration-500 hover-scale animate-fade-in">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative">
-                    <div className="rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 p-6 w-20 h-20 mx-auto mb-6 shadow-lg shadow-blue-500/25 group-hover:shadow-blue-500/40 group-hover:scale-110 transition-all duration-300">
-                      <Shield className="h-8 w-8 text-white mx-auto" />
+              {/* Premium Cards Grid */}
+              <div className="grid gap-8 md:gap-12 md:grid-cols-3">
+                {/* Security Card */}
+                <div className="group relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                  <Card className="relative bg-gradient-to-br from-white via-blue-50/50 to-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:transform group-hover:scale-[1.02] rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="relative p-10 text-center">
+                      {/* Icon Container */}
+                      <div className="relative mb-8">
+                        <div className="absolute inset-0 bg-blue-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
+                        <div className="relative bg-gradient-to-br from-blue-500 via-blue-600 to-purple-600 p-6 w-24 h-24 mx-auto rounded-3xl shadow-2xl shadow-blue-500/25 group-hover:shadow-blue-500/50 group-hover:scale-110 transition-all duration-500">
+                          <Shield className="h-12 w-12 text-white mx-auto" />
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-3xl font-black mb-6 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
+                        SEGURANÇA TOTAL
+                      </h3>
+                      
+                      <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                        Proteção de dados com criptografia militar AES-256, blockchain e monitoramento 24/7. 
+                        <span className="font-bold text-blue-600"> Seus dados nunca estiveram tão seguros.</span>
+                      </p>
+                      
+                      <div className="space-y-3">
+                        {['Criptografia AES-256', 'Blockchain Security', 'Monitoramento 24/7'].map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-3 justify-center">
+                            <CheckCircle className="h-5 w-5 text-blue-500" />
+                            <span className="text-slate-700 font-medium">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      <div className="mt-8 h-1 w-0 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 group-hover:w-full transition-all duration-1000 mx-auto rounded-full"></div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">Segurança</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Proteção total dos seus dados com criptografia avançada e tecnologia de ponta. 
-                      Sua privacidade é nossa prioridade máxima.
-                    </p>
-                    <div className="mt-6 h-1 w-0 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-700 mx-auto"></div>
-                  </div>
-                </Card>
+                  </Card>
+                </div>
 
-                <Card className="group relative p-10 text-center border-0 bg-gradient-to-br from-white to-green-50/50 hover:from-green-50 hover:to-emerald-50 shadow-lg hover:shadow-xl transition-all duration-500 hover-scale animate-fade-in delay-200">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-600/5 to-emerald-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative">
-                    <div className="rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 p-6 w-20 h-20 mx-auto mb-6 shadow-lg shadow-green-500/25 group-hover:shadow-green-500/40 group-hover:scale-110 transition-all duration-300">
-                      <InfinityIcon className="h-8 w-8 text-white mx-auto" />
+                {/* Accumulative Card */}
+                <div className="group relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                  <Card className="relative bg-gradient-to-br from-white via-green-50/50 to-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:transform group-hover:scale-[1.02] rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="relative p-10 text-center">
+                      {/* Icon Container */}
+                      <div className="relative mb-8">
+                        <div className="absolute inset-0 bg-green-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
+                        <div className="relative bg-gradient-to-br from-green-500 via-emerald-600 to-teal-600 p-6 w-24 h-24 mx-auto rounded-3xl shadow-2xl shadow-green-500/25 group-hover:shadow-green-500/50 group-hover:scale-110 transition-all duration-500">
+                          <InfinityIcon className="h-12 w-12 text-white mx-auto" />
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-3xl font-black mb-6 bg-gradient-to-r from-gray-900 to-green-900 bg-clip-text text-transparent">
+                        DADOS INFINITOS
+                      </h3>
+                      
+                      <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                        Tecnologia exclusiva que acumula dados não utilizados indefinidamente. 
+                        <span className="font-bold text-green-600"> Nunca perca o que investiu.</span>
+                      </p>
+                      
+                      <div className="space-y-3">
+                        {['Acúmulo Infinito', 'Sem Perda de Dados', 'Tecnologia Exclusiva'].map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-3 justify-center">
+                            <CheckCircle className="h-5 w-5 text-green-500" />
+                            <span className="text-slate-700 font-medium">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      <div className="mt-8 h-1 w-0 bg-gradient-to-r from-green-500 via-emerald-500 to-green-500 group-hover:w-full transition-all duration-1000 mx-auto rounded-full"></div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-green-900 bg-clip-text text-transparent">Acumulativo</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Dados não utilizados acumulam automaticamente para o próximo mês. 
-                      Tecnologia inovadora que maximiza seu investimento.
-                    </p>
-                    <div className="mt-6 h-1 w-0 bg-gradient-to-r from-green-500 to-emerald-500 group-hover:w-full transition-all duration-700 mx-auto"></div>
-                  </div>
-                </Card>
+                  </Card>
+                </div>
 
-                <Card className="group relative p-10 text-center border-0 bg-gradient-to-br from-white to-purple-50/50 hover:from-purple-50 hover:to-pink-50 shadow-lg hover:shadow-xl transition-all duration-500 hover-scale animate-fade-in delay-400">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-pink-600/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative">
-                    <div className="rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 p-6 w-20 h-20 mx-auto mb-6 shadow-lg shadow-purple-500/25 group-hover:shadow-purple-500/40 group-hover:scale-110 transition-all duration-300">
-                      <FileText className="h-8 w-8 text-white mx-auto" />
+                {/* Premium Support Card */}
+                <div className="group relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-purple-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                  <Card className="relative bg-gradient-to-br from-white via-purple-50/50 to-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:transform group-hover:scale-[1.02] rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="relative p-10 text-center">
+                      {/* Icon Container */}
+                      <div className="relative mb-8">
+                        <div className="absolute inset-0 bg-purple-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
+                        <div className="relative bg-gradient-to-br from-purple-500 via-pink-600 to-purple-600 p-6 w-24 h-24 mx-auto rounded-3xl shadow-2xl shadow-purple-500/25 group-hover:shadow-purple-500/50 group-hover:scale-110 transition-all duration-500">
+                          <Users className="h-12 w-12 text-white mx-auto" />
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-3xl font-black mb-6 bg-gradient-to-r from-gray-900 to-purple-900 bg-clip-text text-transparent">
+                        SUPORTE PREMIUM
+                      </h3>
+                      
+                      <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                        Atendimento especializado 24/7 com técnicos certificados e tempos de resposta ultra-rápidos. 
+                        <span className="font-bold text-purple-600"> Experiência VIP garantida.</span>
+                      </p>
+                      
+                      <div className="space-y-3">
+                        {['Suporte 24/7', 'Técnicos Certificados', 'Resposta Imediata'].map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-3 justify-center">
+                            <CheckCircle className="h-5 w-5 text-purple-500" />
+                            <span className="text-slate-700 font-medium">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      <div className="mt-8 h-1 w-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 group-hover:w-full transition-all duration-1000 mx-auto rounded-full"></div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-purple-900 bg-clip-text text-transparent">Faturas</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Controle total com faturas detalhadas e transparentes. 
-                      Sem surpresas, sem taxas ocultas na sua conta.
-                    </p>
-                    <div className="mt-6 h-1 w-0 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-700 mx-auto"></div>
-                  </div>
-                </Card>
+                  </Card>
+                </div>
               </div>
             </AnimatedSection>
           </div>
