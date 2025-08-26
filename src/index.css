@@ -598,3 +598,102 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.8),
     0 0 30px hsl(45 100% 65% / 0.6);
 }
+
+/* Innovative Animation Keyframes */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes morphBorder {
+  0%, 100% { 
+    border-radius: 2rem;
+    transform: rotate(0deg);
+  }
+  25% { 
+    border-radius: 3rem 1rem 3rem 1rem;
+    transform: rotate(1deg);
+  }
+  50% { 
+    border-radius: 1rem 3rem 1rem 3rem;
+    transform: rotate(0deg);
+  }
+  75% { 
+    border-radius: 3rem 1rem 3rem 1rem;
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 20px rgba(255,165,0,0.5); }
+  50% { text-shadow: 0 0 30px rgba(255,165,0,0.8), 0 0 40px rgba(255,102,0,0.6); }
+}
+
+/* Enhanced Glassmorphism */
+.glass-dynamic {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-dynamic:hover {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(255, 165, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Perspective and 3D Effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-3d {
+  transform-style: preserve-3d;
+}
+
+/* Custom Animations */
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-text-glow {
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+.animate-morph-border {
+  animation: morphBorder 8s ease-in-out infinite;
+}
+
+/* Interactive Hover States */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient Text Enhanced */
+.gradient-text {
+  background: linear-gradient(135deg, #ff6600, #ff8c00, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.3));
+}

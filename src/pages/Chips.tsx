@@ -17,12 +17,15 @@ import {
   X,
   Wifi,
   MapPin,
-  Smartphone
+  Smartphone,
+  Sparkles,
+  TrendingUp,
+  Heart
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import AnimatedSection from "@/components/AnimatedSection";
 import TouchButton from "@/components/TouchButton";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const WHATSAPP_PHONE = "5589994395789";
 const WHATSAPP_MSG = "Olá! Quero contratar um plano de dados móveis.";
@@ -30,6 +33,8 @@ const WHATSAPP_MSG = "Olá! Quero contratar um plano de dados móveis.";
 const Chips = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const heroRef = useRef<HTMLElement>(null);
   
   const canonical = typeof window !== "undefined" ? `${window.location.origin}/chips` : "/chips";
   const waUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
@@ -38,8 +43,18 @@ const Chips = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+    
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   const plans = [
@@ -137,15 +152,27 @@ const Chips = () => {
         <link rel="canonical" href={canonical} />
       </Helmet>
 
-      {/* Elegant Background Pattern */}
-      <div className="absolute inset-0" style={{
-        backgroundImage: `
-          radial-gradient(circle at 20% 20%, rgba(255, 102, 0, 0.05) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.03) 0%, transparent 50%),
-          radial-gradient(circle at 40% 60%, rgba(255, 140, 0, 0.02) 0%, transparent 50%)
-        `,
-        backgroundSize: '800px 800px, 600px 600px, 400px 400px'
-      }}></div>
+      {/* Interactive Background with Mouse Following */}
+      <div 
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          background: `
+            radial-gradient(800px circle at ${mousePosition.x}px ${mousePosition.y}px, 
+              rgba(255, 102, 0, 0.15), 
+              rgba(255, 165, 0, 0.08) 40%, 
+              transparent 80%
+            )
+          `
+        }}
+      />
+      
+      {/* Dynamic Geometric Shapes */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-orange-400/20 to-red-400/10 transform rotate-45 animate-pulse rounded-2xl" />
+        <div className="absolute top-1/3 right-20 w-24 h-24 bg-gradient-to-bl from-yellow-400/15 to-orange-400/8 transform -rotate-12 animate-bounce rounded-full" style={{ animationDuration: '3s' }} />
+        <div className="absolute bottom-40 left-1/4 w-40 h-40 bg-gradient-to-tr from-orange-300/12 to-pink-300/6 transform rotate-12 animate-float rounded-3xl" style={{ animationDuration: '6s' }} />
+        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-gradient-to-tl from-red-400/18 to-orange-400/10 transform -rotate-45 animate-pulse rounded-xl" style={{ animationDuration: '4s' }} />
+      </div>
 
       {/* Header igual ao site principal */}
       <header style={{background: '#ff6600', borderBottomColor: '#ff4400'}} className="fixed top-0 left-0 right-0 shadow-xl px-4 py-3 border-b-4 z-50">
@@ -206,25 +233,76 @@ const Chips = () => {
         </div>
       </header>
 
-      {/* Hero Section no estilo do site */}
-      <section className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
+      {/* Innovative Hero Section */}
+      <section 
+        ref={heroRef}
+        className="relative overflow-hidden min-h-screen flex items-center" 
+        style={{
+          background: `
+            linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%),
+            radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 70%)
+          `
+        }}
+      >
         
-        {/* Sophisticated Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%)
-          `,
-          backgroundSize: '80px 80px, 60px 60px, 120px 120px'
-        }}></div>
+        {/* 3D Perspective Background */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            background: `
+              linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%),
+              repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 100px,
+                rgba(255,255,255,0.03) 100px,
+                rgba(255,255,255,0.03) 102px
+              )
+            `,
+            transform: `perspective(1000px) rotateX(20deg) translateZ(0)`,
+            transformOrigin: 'center bottom'
+          }}
+        />
         
-        {/* Elegant Floating Elements */}
+        {/* Interactive Floating Elements with 3D Effect */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-orange-300/25 to-yellow-300/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s' }}></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-red-300/20 to-pink-300/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s', animationDelay: '3s' }}></div>
-          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-yellow-300/15 to-orange-300/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '5s' }}></div>
+          <div 
+            className="absolute w-96 h-96 rounded-full blur-3xl"
+            style={{
+              top: '10%',
+              right: '15%',
+              background: 'radial-gradient(circle, rgba(255,204,0,0.4) 0%, rgba(255,102,0,0.2) 50%, transparent 100%)',
+              transform: `translateX(${mousePosition.x * 0.02}px) translateY(${mousePosition.y * 0.02}px)`,
+              animation: 'float 8s ease-in-out infinite'
+            }}
+          />
+          <div 
+            className="absolute w-80 h-80 rounded-full blur-3xl"
+            style={{
+              bottom: '15%',
+              left: '10%',
+              background: 'radial-gradient(circle, rgba(255,64,0,0.3) 0%, rgba(255,102,0,0.15) 50%, transparent 100%)',
+              transform: `translateX(${mousePosition.x * -0.015}px) translateY(${mousePosition.y * -0.015}px)`,
+              animation: 'float 10s ease-in-out infinite 3s'
+            }}
+          />
+          <div 
+            className="absolute w-64 h-64 rounded-full blur-2xl"
+            style={{
+              top: '50%',
+              left: '60%',
+              background: 'radial-gradient(circle, rgba(255,165,0,0.25) 0%, rgba(255,140,0,0.1) 50%, transparent 100%)',
+              transform: `translateX(${mousePosition.x * 0.01}px) translateY(${mousePosition.y * 0.01}px)`,
+              animation: 'float 12s ease-in-out infinite 5s'
+            }}
+          />
+        </div>
+        
+        {/* Geometric Patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-32 left-32 w-16 h-16 border-2 border-white/20 rotate-45 animate-spin" style={{ animationDuration: '20s' }} />
+          <div className="absolute bottom-32 right-32 w-12 h-12 border border-white/15 rounded-full animate-pulse" />
+          <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-white/10 transform rotate-45 animate-bounce" style={{ animationDuration: '4s' }} />
         </div>
         
         {/* Main Content */}
@@ -235,30 +313,66 @@ const Chips = () => {
             <div className="md:hidden">
               <AnimatedSection animation="fade-up">
                 <div className="text-center space-y-8">
-                  {/* Elegant Badge */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-5 py-3 rounded-full font-bold text-sm shadow-xl border-2 border-yellow-200/50">
-                    <Smartphone className="w-4 h-4 mr-2 fill-current" />
-                    <span>📱 Planos de Celular</span>
-                  </div>
-                  
-                  {/* Luxurious Title */}
-                  <h1 className="text-4xl font-black leading-tight text-white font-playfair">
-                    <span className="block mb-2" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)'}}>Planos de Celular</span>
-                    <span className="block" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)'}}>sem Complicação</span>
-                  </h1>
-                  
-                  {/* Elegant Subtitle */}
-                  <p className="text-lg text-white/95 font-medium" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.6)'}}>
-                    🚀 Internet 5G premium com preços transparentes
-                  </p>
+                   {/* Innovative Badge with Animation */}
+                   <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-5 py-3 rounded-full font-bold text-sm shadow-xl border-2 border-yellow-200/50 relative overflow-hidden group">
+                     <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                     <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
+                     <span>✨ Planos Premium</span>
+                   </div>
+                   
+                   {/* 3D Text Effect Title */}
+                   <div className="relative">
+                     <h1 className="text-4xl font-black leading-tight text-white relative z-10">
+                       <span 
+                         className="block mb-2 relative"
+                         style={{
+                           textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)',
+                           filter: 'drop-shadow(0 0 20px rgba(255,165,0,0.6))'
+                         }}
+                       >
+                         Planos de Celular
+                         <span className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 bg-clip-text text-transparent opacity-50 blur-sm">
+                           Planos de Celular
+                         </span>
+                       </span>
+                       <span 
+                         className="block relative"
+                         style={{
+                           textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)',
+                           filter: 'drop-shadow(0 0 20px rgba(255,165,0,0.6))'
+                         }}
+                       >
+                         sem Complicação
+                         <span className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 bg-clip-text text-transparent opacity-50 blur-sm">
+                           sem Complicação
+                         </span>
+                       </span>
+                     </h1>
+                   </div>
+                   
+                   {/* Animated Subtitle */}
+                   <div className="relative overflow-hidden">
+                     <p className="text-lg text-white/95 font-medium relative z-10" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.6)'}}>
+                       <span className="inline-block animate-bounce mr-2">🚀</span>
+                       <span className="relative">
+                         Internet 5G premium com preços transparentes
+                         <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 animate-pulse" />
+                       </span>
+                     </p>
+                   </div>
 
-                  {/* Beautiful Button */}
-                  <TouchButton 
-                    onClick={() => window.open(waUrl, '_blank')} 
-                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-2xl font-black text-lg shadow-2xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/30"
-                  >
-                    📱 Contratar Agora
-                  </TouchButton>
+                   {/* Morphing Button */}
+                   <TouchButton 
+                     onClick={() => window.open(waUrl, '_blank')} 
+                     className="group relative w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-2xl font-black text-lg shadow-2xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/30 overflow-hidden"
+                   >
+                     <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/40 to-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                     <span className="relative z-10 flex items-center justify-center">
+                       <Heart className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                       Contratar Agora
+                       <TrendingUp className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                     </span>
+                   </TouchButton>
 
                   <p className="text-sm text-white/80 mt-4">
                     ✓ Sem taxa de adesão • ✓ Chip grátis em casa • ✓ 7 dias para testar
@@ -271,29 +385,64 @@ const Chips = () => {
             <div className="hidden md:block">
               <AnimatedSection animation="fade-up">
                 <div className="text-center space-y-12">
-                  {/* Elegant Badge Desktop */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-xl border-2 border-yellow-200/50">
-                    <Smartphone className="w-5 h-5 mr-3 fill-current" />
-                    <span>📱 Planos de Celular</span>
-                  </div>
-                  
-                  {/* Sophisticated Title */}
-                  <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto font-playfair">
-                    <span className="block mb-4" style={{textShadow: '5px 5px 20px rgba(0,0,0,0.8), 0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,165,0,0.4)'}}>Planos de Celular sem Complicação</span>
-                  </h1>
-                  
-                  {/* Beautiful Subtitle */}
-                  <p className="text-2xl lg:text-3xl text-white/95 font-medium max-w-3xl mx-auto" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.6)'}}>
-                    🚀 Internet 5G premium com preços transparentes
-                  </p>
+                   {/* Premium Badge Desktop with Shimmer */}
+                   <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-xl border-2 border-yellow-200/50 relative overflow-hidden group">
+                     <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/60 to-white/30 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                     <Sparkles className="w-5 h-5 mr-3 animate-spin" style={{ animationDuration: '3s' }} />
+                     <span className="relative z-10">✨ Planos Premium</span>
+                   </div>
+                   
+                   {/* Ultra 3D Title Effect */}
+                   <div className="relative perspective-1000">
+                     <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto relative z-10">
+                       <span 
+                         className="block mb-4 relative group"
+                         style={{
+                           textShadow: '5px 5px 20px rgba(0,0,0,0.8), 0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,165,0,0.4)',
+                           filter: 'drop-shadow(0 0 30px rgba(255,165,0,0.8))',
+                           transform: 'rotateX(10deg) rotateY(-5deg)'
+                         }}
+                       >
+                         Planos de Celular sem Complicação
+                         <span className="absolute inset-0 bg-gradient-to-r from-yellow-200 via-orange-200 to-red-200 bg-clip-text text-transparent opacity-40 blur-sm transform translate-y-1 translate-x-1">
+                           Planos de Celular sem Complicação
+                         </span>
+                         <span className="absolute inset-0 bg-gradient-to-r from-yellow-100 via-orange-100 to-red-100 bg-clip-text text-transparent opacity-20 blur-md transform translate-y-2 translate-x-2">
+                           Planos de Celular sem Complicação
+                         </span>
+                       </span>
+                     </h1>
+                   </div>
+                   
+                   {/* Interactive Subtitle */}
+                   <div className="relative overflow-hidden max-w-3xl mx-auto">
+                     <p className="text-2xl lg:text-3xl text-white/95 font-medium relative z-10 group" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.6)'}}>
+                       <span className="inline-block animate-bounce mr-3" style={{ animationDuration: '2s' }}>🚀</span>
+                       <span className="relative">
+                         Internet 5G premium com preços transparentes
+                         <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 group-hover:w-full transition-all duration-1000 rounded-full" />
+                       </span>
+                     </p>
+                   </div>
 
-                  {/* Stunning Button */}
-                  <TouchButton 
-                    onClick={() => window.open(waUrl, '_blank')} 
-                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-16 py-6 rounded-2xl font-black text-2xl shadow-2xl border-3 border-yellow-200/50 hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-yellow-500/40"
-                  >
-                    📱 Contratar Agora
-                  </TouchButton>
+                   {/* Ultimate Interactive Button */}
+                   <TouchButton 
+                     onClick={() => window.open(waUrl, '_blank')} 
+                     className="group relative bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-16 py-6 rounded-2xl font-black text-2xl shadow-2xl border-3 border-yellow-200/50 hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-yellow-500/40 overflow-hidden"
+                     style={{
+                       background: 'linear-gradient(45deg, #ffd700, #ff8c00, #ff4500, #ff6347)',
+                       backgroundSize: '400% 400%',
+                       animation: 'gradientShift 3s ease infinite'
+                     }}
+                   >
+                     <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/60 to-white/30 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse transition-opacity duration-500" />
+                     <span className="relative z-10 flex items-center justify-center">
+                       <Heart className="w-6 h-6 mr-3 group-hover:animate-pulse group-hover:text-red-600 transition-colors" />
+                       Contratar Agora
+                       <TrendingUp className="w-6 h-6 ml-3 group-hover:rotate-12 group-hover:scale-110 transition-transform" />
+                     </span>
+                   </TouchButton>
 
                   <p className="text-lg text-white/80 mt-6">
                     ✓ Sem taxa de adesão • ✓ Chip grátis em casa • ✓ 7 dias para testar
@@ -305,17 +454,61 @@ const Chips = () => {
         </div>
       </section>
 
-      {/* Diferenciais - no estilo do site */}
+      {/* Innovative Benefits Section */}
       <section className="relative overflow-hidden py-20 px-4" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
         
-        {/* Sophisticated Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-blue-500/8"></div>
+        {/* Interactive Mesh Background */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,102,0,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,102,0,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+            transform: `translateX(${mousePosition.x * 0.01}px) translateY(${mousePosition.y * 0.01}px)`
+          }}
+        />
         
-        {/* Elegant Floating Elements */}
+        {/* Dynamic Floating Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-64 h-64 bg-orange-400/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s' }}></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-400/12 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '3s' }}></div>
-          <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-purple-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s', animationDelay: '6s' }}></div>
+          <div 
+            className="absolute w-64 h-64 rounded-full blur-3xl"
+            style={{
+              top: '10%',
+              right: '15%',
+              background: 'radial-gradient(circle, rgba(255,165,0,0.2) 0%, rgba(255,102,0,0.1) 50%, transparent 100%)',
+              transform: `translateX(${mousePosition.x * 0.02}px) translateY(${mousePosition.y * 0.02}px) rotate(${mousePosition.x * 0.05}deg)`,
+              animation: 'float 10s ease-in-out infinite'
+            }}
+          />
+          <div 
+            className="absolute w-80 h-80 rounded-full blur-3xl"
+            style={{
+              bottom: '15%',
+              left: '10%',
+              background: 'radial-gradient(circle, rgba(0,150,255,0.15) 0%, rgba(0,100,200,0.08) 50%, transparent 100%)',
+              transform: `translateX(${mousePosition.x * -0.015}px) translateY(${mousePosition.y * -0.015}px) rotate(${mousePosition.x * -0.03}deg)`,
+              animation: 'float 12s ease-in-out infinite 3s'
+            }}
+          />
+          <div 
+            className="absolute w-48 h-48 rounded-full blur-2xl"
+            style={{
+              top: '40%',
+              right: '30%',
+              background: 'radial-gradient(circle, rgba(128,0,255,0.12) 0%, rgba(100,0,200,0.06) 50%, transparent 100%)',
+              transform: `translateX(${mousePosition.x * 0.008}px) translateY(${mousePosition.y * 0.008}px) rotate(${mousePosition.x * 0.02}deg)`,
+              animation: 'float 8s ease-in-out infinite 6s'
+            }}
+          />
+        </div>
+        
+        {/* Geometric Accent Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-32 left-32 w-20 h-20 border-2 border-orange-400/30 transform rotate-45 animate-spin" style={{ animationDuration: '25s' }} />
+          <div className="absolute bottom-40 right-20 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse" style={{ animationDuration: '3s' }} />
+          <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-400/10 transform rotate-12 animate-bounce rounded-lg" style={{ animationDuration: '4s' }} />
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
@@ -345,16 +538,44 @@ const Chips = () => {
                 delay={index * 200}
                 className="group"
               >
-                <div className="glass-dynamic rounded-4xl p-10 text-center hover:scale-105 transition-all duration-500">
-                  <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-                    <benefit.icon className="w-10 h-10 text-orange-400 group-hover:animate-bounce" />
+                <div className="relative glass-dynamic rounded-4xl p-10 text-center hover:scale-105 transition-all duration-500 overflow-hidden">
+                  {/* Card Background Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-orange-500/10 rounded-4xl" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-4xl" />
+                  
+                  {/* Animated Border */}
+                  <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-orange-400/30 via-yellow-400/30 to-red-400/30 p-px opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="w-full h-full bg-gradient-to-br from-slate-900/90 to-slate-800/90 rounded-4xl" />
                   </div>
-                  <h3 className="text-2xl font-bold font-playfair mb-6 text-white group-hover:text-orange-300 transition-colors">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-lg text-slate-300 leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  
+                  <div className="relative z-10">
+                    {/* Interactive Icon */}
+                    <div className="relative w-20 h-20 mx-auto mb-8">
+                      <div className="absolute inset-0 bg-gradient-to-br from-orange-400/30 to-red-400/20 rounded-full group-hover:scale-110 transition-transform duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 to-yellow-500/30 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="relative w-full h-full flex items-center justify-center">
+                        <benefit.icon className="w-10 h-10 text-orange-400 group-hover:text-orange-300 group-hover:scale-110 transition-all duration-300 group-hover:drop-shadow-lg" style={{ filter: 'drop-shadow(0 0 10px rgba(255,165,0,0.5))' }} />
+                      </div>
+                    </div>
+                    
+                    {/* Dynamic Title */}
+                    <h3 className="text-2xl font-bold mb-6 text-white group-hover:text-orange-300 transition-colors duration-300 relative">
+                      {benefit.title}
+                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 group-hover:w-full transition-all duration-500" />
+                    </h3>
+                    
+                    {/* Enhanced Description */}
+                    <p className="text-lg text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">
+                      {benefit.description}
+                    </p>
+                  </div>
+                  
+                  {/* Floating Particles Effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-orange-400 rounded-full animate-ping" style={{ animationDelay: '0.5s' }} />
+                    <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-yellow-400 rounded-full animate-ping" style={{ animationDelay: '1s' }} />
+                    <div className="absolute top-1/2 right-8 w-1 h-1 bg-red-400 rounded-full animate-ping" style={{ animationDelay: '1.5s' }} />
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
