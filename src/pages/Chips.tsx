@@ -4,17 +4,17 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { 
-  Smartphone, 
   CheckCircle, 
-  Shield, 
-  Clock, 
   MessageCircle, 
   Phone,
   Wifi,
-  DollarSign,
   Users,
   Award,
-  ArrowRight
+  ArrowRight,
+  Clock,
+  Shield,
+  Star,
+  Zap
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -106,113 +106,131 @@ const Chips = () => {
         <link rel="canonical" href={canonical} />
       </Helmet>
 
-      <main className="min-h-screen bg-white">
-        {/* Cabeçalho Simples */}
-        <header className="bg-blue-900 text-white py-6">
-          <div className="max-w-6xl mx-auto px-4">
+      <main className="min-h-screen bg-background">
+        {/* Cabeçalho Moderno */}
+        <header className="gradient-primary text-white py-8 shadow-xl">
+          <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between">
-              <Link to="/" className="text-2xl font-bold">SaraivaNet</Link>
-              <div className="flex items-center gap-4 text-lg">
-                <Phone className="w-5 h-5" />
-                <span>(85) 9999-5789</span>
+              <Link to="/" className="text-3xl font-bold font-playfair hover:scale-105 transition-transform">
+                SaraivaNet
+              </Link>
+              <div className="flex items-center gap-6 text-xl font-medium">
+                <Phone className="w-6 h-6" />
+                <span className="hidden md:inline">(85) 9999-5789</span>
+                <span className="md:hidden">Ligue</span>
               </div>
             </div>
           </div>
         </header>
 
-        {/* Seção Principal */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Planos de Celular com Internet de Qualidade
+        {/* Seção Hero Moderna */}
+        <section className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/20"></div>
+          <div className="max-w-7xl mx-auto px-4 text-center relative">
+            <div className="max-w-5xl mx-auto">
+              <h1 className="text-5xl md:text-7xl font-bold font-playfair text-primary mb-8 leading-tight animate-fade-in">
+                Planos de Celular
+                <span className="block text-accent">Sem Complicação</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-                Escolha o plano ideal para você e sua família. <br />
-                <strong>Sem complicação, sem letra miúda.</strong>
+              <p className="text-2xl md:text-3xl text-foreground/80 mb-12 leading-relaxed animate-fade-in delay-100">
+                Internet de qualidade para toda família<br />
+                <strong className="text-primary">Transparência total, sem pegadinhas</strong>
               </p>
               
-              {/* Benefícios Principais */}
-              <div className="grid md:grid-cols-3 gap-6 mb-12">
-                <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Sem Surpresas</h3>
-                  <p className="text-gray-600">Valor fixo todo mês, sem taxas escondidas</p>
+              {/* Benefícios Modernos */}
+              <div className="grid md:grid-cols-3 gap-8 mb-16">
+                <div className="glass-card p-8 rounded-2xl hover-float animate-fade-in delay-200">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Shield className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 font-playfair">100% Transparente</h3>
+                  <p className="text-lg text-foreground/70">Valor fixo todo mês, sem taxas escondidas ou surpresas</p>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <Wifi className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Internet Rápida</h3>
-                  <p className="text-gray-600">4G e 5G em todo o Brasil</p>
+                <div className="glass-card p-8 rounded-2xl hover-float animate-fade-in delay-300">
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Zap className="w-8 h-8 text-accent" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 font-playfair">Velocidade Total</h3>
+                  <p className="text-lg text-foreground/70">5G premium em todo Brasil, internet que não trava</p>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm border">
-                  <Users className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Atendimento Humano</h3>
-                  <p className="text-gray-600">Pessoas reais te ajudam sempre</p>
+                <div className="glass-card p-8 rounded-2xl hover-float animate-fade-in delay-500">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 font-playfair">Atendimento Real</h3>
+                  <p className="text-lg text-foreground/70">Pessoas de verdade te ajudam, sem robôs</p>
                 </div>
               </div>
 
               <a href={waUrl} target="_blank" rel="noreferrer">
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-12 py-6 text-xl rounded-lg">
-                  <MessageCircle className="w-6 h-6 mr-3" />
-                  Falar com Atendente no WhatsApp
-                  <ArrowRight className="w-6 h-6 ml-3" />
+                <Button size="lg" className="btn-ultra text-white px-16 py-8 text-2xl rounded-2xl font-bold shadow-2xl animate-bounce-in delay-700">
+                  <MessageCircle className="w-8 h-8 mr-4" />
+                  Conversar no WhatsApp Agora
+                  <ArrowRight className="w-8 h-8 ml-4" />
                 </Button>
               </a>
             </div>
           </div>
         </section>
 
-        {/* Seção de Planos */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Nossos Planos
+        {/* Seção de Planos Premium */}
+        <section className="py-20 bg-secondary/20">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-bold font-playfair text-primary mb-6">
+                Escolha Seu Plano
               </h2>
-              <p className="text-xl text-gray-600">
-                Escolha o que melhor se adapta ao seu uso
+              <p className="text-2xl text-foreground/80">
+                Preços justos, sem pegadinhas
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {plans.map((plan) => (
-                <Card key={plan.id} className={`relative p-8 ${plan.recommended ? 'border-2 border-blue-500 shadow-lg' : 'border border-gray-200'}`}>
+            <div className="grid lg:grid-cols-3 gap-8">
+              {plans.map((plan, index) => (
+                <Card key={plan.id} className={`relative p-10 rounded-3xl transition-all duration-500 hover:scale-105 ${
+                  plan.recommended 
+                    ? 'glass-ultra border-2 border-primary shadow-2xl animate-bounce-in' 
+                    : 'glass-card border border-border/50 animate-fade-in'
+                }`} style={{animationDelay: `${index * 200}ms`}}>
                   {plan.recommended && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-blue-500 text-white px-4 py-2 text-sm font-semibold">
-                        <Award className="w-4 h-4 mr-1" />
-                        Mais Escolhido
+                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                      <Badge className="bg-primary text-primary-foreground px-6 py-3 text-lg font-bold rounded-full shadow-lg">
+                        <Star className="w-5 h-5 mr-2" />
+                        Mais Popular
                       </Badge>
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.title}</h3>
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold text-blue-600">{plan.price}</span>
-                      <span className="text-gray-600 ml-2">{plan.period}</span>
+                  <div className="text-center mb-8">
+                    <h3 className="text-3xl font-bold font-playfair text-foreground mb-4">{plan.title}</h3>
+                    <div className="mb-6">
+                      <span className="text-5xl font-bold text-primary">{plan.price}</span>
+                      <span className="text-foreground/60 ml-2 text-lg">{plan.period}</span>
                     </div>
-                    <div className="text-3xl font-bold text-gray-900 mb-4">{plan.data}</div>
+                    <div className="text-4xl font-bold text-accent mb-6 bg-accent/10 py-4 px-6 rounded-2xl">{plan.data}</div>
                   </div>
 
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                  <ul className="space-y-4 mb-10">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start gap-4">
+                        <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                        </div>
+                        <span className="text-lg text-foreground/80 leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   <a href={waUrl} target="_blank" rel="noreferrer" className="block">
                     <Button 
-                      className={`w-full py-3 text-lg ${
+                      className={`w-full py-6 text-xl font-bold rounded-2xl transition-all duration-300 ${
                         plan.recommended 
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                          : 'bg-gray-100 hover:bg-gray-200 text-gray-900 border border-gray-300'
+                          ? 'btn-ultra text-white shadow-xl hover:shadow-2xl' 
+                          : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 border-2 border-primary/20'
                       }`}
                     >
-                      Contratar este Plano
+                      Contratar Agora
+                      <ArrowRight className="w-6 h-6 ml-3" />
                     </Button>
                   </a>
                 </Card>
@@ -221,74 +239,89 @@ const Chips = () => {
           </div>
         </section>
 
-        {/* Como Funciona */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        {/* Como Funciona - Moderno */}
+        <section className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>
+          <div className="max-w-6xl mx-auto px-4 relative">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-bold font-playfair text-primary mb-6">
                 Como Funciona
               </h2>
-              <p className="text-xl text-gray-600">
-                Em 3 passos simples você já está conectado
+              <p className="text-2xl text-foreground/80">
+                3 passos simples para ter internet de qualidade
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  1
+            <div className="grid md:grid-cols-3 gap-12">
+              <div className="text-center group animate-fade-in delay-100">
+                <div className="relative mb-8">
+                  <div className="w-24 h-24 gradient-primary text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                    1
+                  </div>
+                  <div className="absolute -inset-4 bg-primary/20 rounded-full blur-xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Escolha seu Plano</h3>
-                <p className="text-gray-600">
-                  Clique no WhatsApp e fale com nosso atendente. 
-                  Ele vai te ajudar a escolher o melhor plano.
+                <h3 className="text-2xl font-bold font-playfair mb-4 text-foreground">Escolha seu Plano</h3>
+                <p className="text-lg text-foreground/70 leading-relaxed">
+                  Clique no WhatsApp e converse com nossa equipe. 
+                  Vamos te ajudar a encontrar o plano perfeito.
                 </p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  2
+              <div className="text-center group animate-fade-in delay-200">
+                <div className="relative mb-8">
+                  <div className="w-24 h-24 gradient-primary text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                    2
+                  </div>
+                  <div className="absolute -inset-4 bg-accent/20 rounded-full blur-xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Receba o Chip</h3>
-                <p className="text-gray-600">
-                  Enviamos o chip pelos Correios direto na sua casa, 
-                  sem custo adicional.
+                <h3 className="text-2xl font-bold font-playfair mb-4 text-foreground">Receba o Chip</h3>
+                <p className="text-lg text-foreground/70 leading-relaxed">
+                  Enviamos seu chip pelos Correios, diretamente na sua casa, 
+                  sem nenhum custo adicional.
                 </p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  3
+              <div className="text-center group animate-fade-in delay-300">
+                <div className="relative mb-8">
+                  <div className="w-24 h-24 gradient-primary text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                    3
+                  </div>
+                  <div className="absolute -inset-4 bg-primary/20 rounded-full blur-xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Pronto para Usar</h3>
-                <p className="text-gray-600">
+                <h3 className="text-2xl font-bold font-playfair mb-4 text-foreground">Use e Aproveite</h3>
+                <p className="text-lg text-foreground/70 leading-relaxed">
                   Coloque o chip no celular e pronto! 
-                  Sua internet já está funcionando.
+                  Internet rápida funcionando na hora.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Perguntas Frequentes */}
-        <section className="py-16">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Perguntas Frequentes
+        {/* Perguntas Frequentes Premium */}
+        <section className="py-20 bg-secondary/10">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-bold font-playfair text-primary mb-6">
+                Dúvidas Frequentes
               </h2>
-              <p className="text-xl text-gray-600">
-                Tire suas dúvidas sobre nossos planos
+              <p className="text-2xl text-foreground/80">
+                Tudo que você precisa saber
               </p>
             </div>
 
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="space-y-6">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-6">
-                  <AccordionTrigger className="text-left text-lg font-semibold py-6 hover:no-underline">
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`} 
+                  className="glass-card border-2 border-border/20 rounded-2xl px-8 animate-fade-in"
+                  style={{animationDelay: `${index * 100}ms`}}
+                >
+                  <AccordionTrigger className="text-left text-xl font-bold font-playfair py-8 hover:no-underline text-foreground hover:text-primary transition-colors">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-700 text-base leading-relaxed pb-6">
+                  <AccordionContent className="text-foreground/80 text-lg leading-relaxed pb-8">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -297,46 +330,51 @@ const Chips = () => {
           </div>
         </section>
 
-        {/* Chamada Final */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Pronto para se Conectar?
+        {/* Chamada Final Premium */}
+        <section className="py-20 gradient-primary text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="max-w-6xl mx-auto px-4 text-center relative">
+            <h2 className="text-4xl md:text-6xl font-bold font-playfair mb-8 animate-fade-in">
+              Vamos Começar?
             </h2>
-            <p className="text-xl mb-8 leading-relaxed">
-              Nosso time está esperando para te ajudar a escolher o melhor plano. <br />
-              <strong>Atendimento de segunda a sexta, das 8h às 18h.</strong>
+            <p className="text-xl md:text-2xl mb-12 leading-relaxed opacity-90 animate-fade-in delay-100">
+              Nossa equipe está pronta para te atender agora mesmo <br />
+              <strong className="text-2xl">Segunda a sexta, das 8h às 18h</strong>
             </p>
             
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col lg:flex-row gap-8 justify-center items-center animate-bounce-in delay-200">
               <a href={waUrl} target="_blank" rel="noreferrer">
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg">
-                  <MessageCircle className="w-6 h-6 mr-3" />
-                  Conversar no WhatsApp
+                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-12 py-6 text-2xl font-bold rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
+                  <MessageCircle className="w-8 h-8 mr-4" />
+                  Falar no WhatsApp Agora
+                  <ArrowRight className="w-8 h-8 ml-4" />
                 </Button>
               </a>
               
-              <div className="flex items-center gap-3 text-lg">
-                <Phone className="w-5 h-5" />
-                <span>ou ligue: (85) 9999-5789</span>
+              <div className="flex items-center gap-4 text-xl bg-white/10 backdrop-blur-md px-8 py-4 rounded-2xl border border-white/20">
+                <Phone className="w-6 h-6" />
+                <span className="font-medium">Ou ligue: (85) 9999-5789</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Rodapé */}
-        <footer className="py-8 bg-gray-100 border-t">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="text-gray-600">
-                © 2024 SaraivaNet - Todos os direitos reservados
+        {/* Rodapé Moderno */}
+        <footer className="py-12 bg-foreground/5 border-t border-border/20">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold font-playfair text-primary mb-2">SaraivaNet</div>
+                <div className="text-foreground/60 text-lg">
+                  © 2024 - Conectando famílias com qualidade
+                </div>
               </div>
-              <div className="flex items-center gap-6">
-                <Link to="/" className="text-blue-600 hover:underline">
-                  Página Inicial
+              <div className="flex flex-col lg:flex-row items-center gap-6 text-lg">
+                <Link to="/" className="text-primary hover:text-accent font-semibold transition-colors">
+                  Voltar ao Início
                 </Link>
-                <span className="text-gray-400">|</span>
-                <span className="text-gray-600">CNPJ: 00.000.000/0001-00</span>
+                <span className="hidden lg:inline text-foreground/40">•</span>
+                <span className="text-foreground/60">CNPJ: 00.000.000/0001-00</span>
               </div>
             </div>
           </div>
