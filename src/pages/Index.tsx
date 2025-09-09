@@ -149,7 +149,7 @@ const Index = () => {
               </div>
 
               {/* Carousel - Maior */}
-              <div className="h-80 w-full rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-2xl mt-12 border-4 border-white/20">
+              <div className="h-[420px] w-full rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-2xl mt-12 border-4 border-white/20">
                 <HeroCarousel />
               </div>
 
@@ -261,7 +261,7 @@ const Index = () => {
               {/* Right Content - Carousel maior */}
               <div className="col-span-5">
                 <AnimatedSection animation="slide-right">
-                  <div className="h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
+                  <div className="h-[650px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                     <HeroCarousel />
                   </div>
                 </AnimatedSection>
