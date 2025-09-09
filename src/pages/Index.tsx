@@ -115,235 +115,191 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - ULTRA MODERNA E CHAMATIVA */}
+      {/* Hero Section - ULTRA MODERNA E PROFISSIONAL */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-orange-400 via-orange-300 to-yellow-200">
         
-        {/* Background Moderno com Gradiente Suave */}
+        {/* Background Limpo e Moderno */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-yellow-300/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-yellow-300/15"></div>
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              radial-gradient(circle at 25% 25%, rgba(255,255,255,0.4) 1px, transparent 1px),
-              radial-gradient(circle at 75% 75%, rgba(255,255,255,0.3) 1px, transparent 1px),
-              linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)
+              linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+              linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+              linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+              linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%)
             `,
-            backgroundSize: '60px 60px, 80px 80px, 120px 120px'
+            backgroundSize: '60px 60px',
+            backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
           }}></div>
         </div>
         
-        {/* Floating Elements Suaves */}
+        {/* Floating Elements Minimalistas */}
         {!prefersReducedMotion && (
-          <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-white/20 to-yellow-200/30 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-orange-200/40 to-white/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s', animationDelay: '3s' }}></div>
-            <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-yellow-200/30 to-orange-200/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '5s' }}></div>
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-white/10 to-yellow-200/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s' }}></div>
+            <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-orange-200/15 to-white/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '4s' }}></div>
           </div>
         )}
         
-        {/* Main Content */}
-        <div className="relative z-10 w-full px-6 py-12">
+        {/* Container Principal */}
+        <div className="relative z-10 w-full px-6 py-20">
           <div className="max-w-7xl mx-auto">
             
-            {/* Mobile Version */}
-            <div className="md:hidden">
+            {/* Layout Unificado - Mobile e Desktop */}
+            <div className="text-center space-y-16">
+              
+              {/* Título Principal com Tipografia Elegante */}
               <AnimatedSection animation="fade-up" delay={200}>
-                <div className="text-center space-y-8">
+                <div className="space-y-8">
+                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-tight font-poppins">
+                    <span className="block bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text text-transparent drop-shadow-2xl">Internet</span>
+                    <span className="block text-orange-800 text-4xl md:text-6xl my-4 font-bold">+</span>
+                    <span className="block bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text text-transparent drop-shadow-2xl">SaraivaTV</span>
+                  </h1>
                   
-                  {/* Título Gigante Mobile */}
-                  <div className="space-y-4">
-                    <h1 className="text-5xl font-black leading-tight text-white font-poppins drop-shadow-2xl">
-                      <span className="block text-6xl bg-gradient-to-r from-white to-yellow-100 bg-clip-text text-transparent">Internet</span>
-                      <span className="block text-orange-900 text-4xl">+</span>
-                      <span className="block text-6xl bg-gradient-to-r from-white to-yellow-100 bg-clip-text text-transparent">SaraivaTV</span>
-                    </h1>
-                    
-                    {/* Subtítulo Explicativo */}
-                    <p className="text-xl font-bold text-orange-800 max-w-md mx-auto leading-relaxed font-inter">
-                      Fibra ultrarrápida + TV Premium no mesmo pacote
-                    </p>
-                    <p className="text-lg text-orange-700 font-medium font-inter">
-                      🚀 A revolução digital chegou em Eliseu Martins
-                    </p>
-                  </div>
-
-                  {/* Cards Melhorados Mobile */}
-                  <div className="grid grid-cols-2 gap-6 mt-12">
-                    {[
-                      { icon: Wifi, text: "Internet ULTRA", desc: "300MB Fibra", gradient: "from-orange-500 to-red-500", highlight: true },
-                      { icon: Tv, text: "TV Premium", desc: "App Gratuito", gradient: "from-blue-500 to-purple-500" },
-                      { icon: Music, text: "Rádios 24h", desc: "Sem Limites", gradient: "from-green-500 to-emerald-500" },
-                      { icon: Shield, text: "Suporte VIP", desc: "24h Online", gradient: "from-purple-500 to-pink-500" }
-                    ].map((card, index) => (
-                      <AnimatedSection key={index} animation="scale-in" delay={400 + (index * 100)}>
-                        <div className={`${card.highlight ? 'scale-110 border-4 border-yellow-300' : ''} bg-gradient-to-br ${card.gradient}/90 backdrop-blur-xl rounded-3xl p-6 flex flex-col items-center space-y-4 border border-white/40 shadow-2xl hover:scale-110 hover:-translate-y-3 transition-all duration-500 hover:shadow-3xl group cursor-pointer`}>
-                          <div className={`${card.highlight ? 'w-16 h-16 bg-yellow-200/40' : 'w-14 h-14 bg-white/30'} backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl group-hover:rotate-12 transition-all duration-300`}>
-                            <card.icon className={`${card.highlight ? 'w-8 h-8' : 'w-7 h-7'} text-white drop-shadow-lg`} />
-                          </div>
-                          <div className="text-center">
-                            <span className={`font-black ${card.highlight ? 'text-lg' : 'text-base'} text-white drop-shadow-2xl block font-poppins`}>{card.text}</span>
-                            <span className="text-sm text-white/90 font-medium font-inter">{card.desc}</span>
-                          </div>
-                          {card.highlight && (
-                            <div className="absolute -top-2 -right-2 bg-yellow-400 text-orange-800 text-xs font-black px-2 py-1 rounded-full animate-pulse">
-                              DESTAQUE
-                            </div>
-                          )}
-                        </div>
-                      </AnimatedSection>
-                    ))}
-                  </div>
-
-                  {/* Botão Principal Mobile MELHORADO */}
-                  <AnimatedSection animation="bounce-in" delay={800}>
-                    <TouchButton 
-                      onClick={handleWhatsAppClick} 
-                      className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white px-10 py-6 rounded-2xl font-black text-xl shadow-2xl border-4 border-orange-300 hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-3xl relative overflow-hidden group"
-                    >
-                      <span className="relative z-10 flex items-center justify-center gap-3">
-                        <span className="text-2xl animate-bounce">🚀</span>
-                        Contratar Agora
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    </TouchButton>
-                  </AnimatedSection>
-
-                  {/* Stats Modernos Mobile */}
-                  <AnimatedSection animation="fade-up" delay={1000}>
-                    <div className="grid grid-cols-2 gap-4 mt-8">
-                      {[
-                        { icon: Users, value: 1000, label: "Clientes", suffix: "+" },
-                        { icon: Zap, value: 99, label: "Uptime", suffix: "%" },
-                        { icon: Tv, value: 20, label: "Canais", suffix: "+" },
-                        { icon: Clock, value: 24, label: "Online", suffix: "h" }
-                      ].map((stat, index) => (
-                        <div key={index} className="bg-white/25 backdrop-blur-lg rounded-2xl p-4 border-2 border-white/30 shadow-xl hover:bg-white/30 hover:scale-105 transition-all duration-300 group">
-                          <div className="flex flex-col items-center space-y-2">
-                            <div className="w-10 h-10 bg-orange-500/80 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                              <stat.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </AnimatedSection>
+                  {/* Subtítulo Elegante */}
+                  <p className="text-2xl md:text-3xl font-bold text-orange-800 font-poppins max-w-4xl mx-auto leading-relaxed">
+                    Internet ultrarrápida + App gratuito
+                  </p>
+                  <p className="text-lg md:text-xl text-orange-700 font-medium font-inter max-w-3xl mx-auto">
+                    A revolução digital chegou em Eliseu Martins com fibra óptica de 300MB
+                  </p>
                 </div>
               </AnimatedSection>
-            </div>
 
-            {/* Desktop Version */}
-            <div className="hidden md:block">
-              <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-20">
-                
-                {/* Conteúdo Principal */}
-                <div className="space-y-12">
-                  <AnimatedSection animation="slide-left" delay={200}>
-                    <div className="space-y-8">
+              {/* Cards Redesenhados e Profissionais */}
+              <AnimatedSection animation="fade-up" delay={400}>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
+                  {[
+                    { 
+                      icon: Wifi, 
+                      text: "Internet ULTRA", 
+                      desc: "300MB Fibra Óptica", 
+                      gradient: "from-orange-600 to-red-600", 
+                      highlight: true,
+                      bgColor: "bg-orange-100/80",
+                      textColor: "text-orange-900"
+                    },
+                    { 
+                      icon: Tv, 
+                      text: "SaraivaTV", 
+                      desc: "App Premium Grátis", 
+                      gradient: "from-blue-500 to-blue-600",
+                      bgColor: "bg-blue-50/80",
+                      textColor: "text-blue-900"
+                    },
+                    { 
+                      icon: Music, 
+                      text: "Rádios 24h", 
+                      desc: "Locais e Nacionais", 
+                      gradient: "from-green-500 to-green-600",
+                      bgColor: "bg-green-50/80",
+                      textColor: "text-green-900"
+                    },
+                    { 
+                      icon: Shield, 
+                      text: "Suporte VIP", 
+                      desc: "Atendimento 24h", 
+                      gradient: "from-purple-500 to-purple-600",
+                      bgColor: "bg-purple-50/80",
+                      textColor: "text-purple-900"
+                    }
+                  ].map((card, index) => (
+                    <div key={index} className={`${card.highlight ? 'scale-110 lg:scale-125 border-4 border-orange-300 shadow-2xl' : 'border-2 border-white/30 shadow-xl'} ${card.bgColor} backdrop-blur-sm rounded-3xl p-6 lg:p-8 flex flex-col items-center space-y-4 lg:space-y-6 hover:scale-105 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl group cursor-pointer relative`}>
                       
-                      {/* Título Gigante Desktop */}
-                      <h1 className="text-7xl lg:text-8xl font-black leading-tight font-poppins">
-                        <span className="block bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text text-transparent drop-shadow-2xl">Internet</span>
-                        <span className="block text-orange-900 text-5xl text-center my-4">+</span>
-                        <span className="block bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text text-transparent drop-shadow-2xl">SaraivaTV</span>
-                      </h1>
+                      {/* Ícone Grande */}
+                      <div className={`w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br ${card.gradient} rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300`}>
+                        <card.icon className="w-8 h-8 lg:w-10 lg:h-10 text-white drop-shadow-lg" />
+                      </div>
                       
-                      {/* Subtítulo Explicativo Desktop */}
-                      <div className="space-y-4">
-                        <p className="text-3xl font-black text-orange-800 font-poppins leading-relaxed">
-                          Fibra ultrarrápida + TV Premium no mesmo pacote
-                        </p>
-                        <p className="text-xl text-orange-700 font-bold font-inter max-w-2xl">
-                          🚀 A revolução digital chegou em Eliseu Martins! Internet de 300MB + App SaraivaTV gratuito para toda família.
+                      {/* Conteúdo */}
+                      <div className="text-center space-y-2">
+                        <h3 className={`font-black text-lg lg:text-xl ${card.textColor} font-poppins`}>
+                          {card.text}
+                        </h3>
+                        <p className={`text-sm lg:text-base ${card.textColor} opacity-80 font-inter font-medium`}>
+                          {card.desc}
                         </p>
                       </div>
-                    </div>
-                  </AnimatedSection>
-
-                  {/* Cards Premium Desktop */}
-                  <AnimatedSection animation="fade-up" delay={400}>
-                    <div className="grid grid-cols-2 gap-6">
-                      {[
-                        { icon: Wifi, text: "Internet ULTRA", desc: "300MB Fibra Óptica", gradient: "from-orange-500 to-red-500", highlight: true },
-                        { icon: Tv, text: "TV Premium", desc: "App Exclusivo Grátis", gradient: "from-blue-500 to-purple-500" },
-                        { icon: Music, text: "Rádios 24h", desc: "Locais e Nacionais", gradient: "from-green-500 to-emerald-500" },
-                        { icon: Shield, text: "Suporte VIP", desc: "Atendimento 24h", gradient: "from-purple-500 to-pink-500" }
-                      ].map((card, index) => (
-                        <div key={index} className={`${card.highlight ? 'scale-105 border-4 border-yellow-300 relative' : ''} bg-gradient-to-br ${card.gradient}/90 backdrop-blur-xl rounded-4xl p-8 flex flex-col items-center space-y-6 border border-white/50 shadow-2xl hover:scale-110 hover:-translate-y-3 transition-all duration-700 hover:shadow-3xl group cursor-pointer`}>
-                          <div className={`${card.highlight ? 'w-20 h-20 bg-yellow-200/40' : 'w-16 h-16 bg-white/30'} backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl group-hover:rotate-12 transition-all duration-300`}>
-                            <card.icon className={`${card.highlight ? 'w-10 h-10' : 'w-8 h-8'} text-white drop-shadow-lg`} />
-                          </div>
-                          <div className="text-center">
-                            <span className={`font-black ${card.highlight ? 'text-2xl' : 'text-xl'} text-white drop-shadow-2xl block font-poppins`}>{card.text}</span>
-                            <span className="text-base text-white/90 font-medium font-inter mt-2 block">{card.desc}</span>
-                          </div>
-                          {card.highlight && (
-                            <div className="absolute -top-3 -right-3 bg-yellow-400 text-orange-800 text-sm font-black px-3 py-1 rounded-full animate-pulse shadow-lg">
-                              ⭐ PRINCIPAL
-                            </div>
-                          )}
+                      
+                      {/* Badge de Destaque */}
+                      {card.highlight && (
+                        <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-400 text-orange-900 text-xs lg:text-sm font-black px-3 py-1 rounded-full animate-pulse shadow-lg">
+                          ⭐ PRINCIPAL
                         </div>
-                      ))}
+                      )}
                     </div>
-                  </AnimatedSection>
-
-                  {/* Botão Principal Desktop MELHORADO */}
-                  <AnimatedSection animation="bounce-in" delay={600}>
-                    <div className="text-center">
-                      <TouchButton 
-                        onClick={handleWhatsAppClick} 
-                        className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white px-16 py-8 rounded-3xl font-black text-3xl shadow-2xl border-4 border-orange-300 hover:scale-110 hover:-translate-y-3 transition-all duration-700 hover:shadow-3xl relative overflow-hidden group inline-flex items-center gap-4"
-                      >
-                        <span className="relative z-10 flex items-center gap-4">
-                          <span className="text-4xl animate-bounce">🚀</span>
-                          <span className="font-poppins">Contratar Agora</span>
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-300 opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                      </TouchButton>
-                    </div>
-                  </AnimatedSection>
-
-                  {/* Stats Premium Desktop */}
-                  <AnimatedSection animation="slide-left" delay={800}>
-                    <div className="flex justify-between gap-6">
-                      {[
-                        { icon: Users, value: 1000, label: "Clientes Conectados", suffix: "+" },
-                        { icon: Zap, value: 99, label: "Uptime Garantido", suffix: "%" },
-                        { icon: Tv, value: 20, label: "Canais Premium", suffix: "+" },
-                        { icon: Clock, value: 24, label: "Suporte Online", suffix: "h" }
-                      ].map((stat, index) => (
-                        <div key={index} className="bg-white/25 backdrop-blur-lg rounded-2xl p-6 border-2 border-white/30 shadow-xl hover:bg-white/30 hover:scale-105 transition-all duration-500 group flex-1 text-center">
-                          <div className="flex flex-col items-center space-y-3">
-                            <div className="w-14 h-14 bg-orange-500/80 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                              <stat.icon className="w-7 h-7 text-white" />
-                            </div>
-                            <div>
-                              <StatsCounter endValue={stat.value} label="" suffix={stat.suffix} />
-                              <div className="text-orange-800 font-bold text-sm font-inter mt-1">{stat.label}</div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </AnimatedSection>
+                  ))}
                 </div>
+              </AnimatedSection>
 
-                {/* Mockup de Devices */}
-                <AnimatedSection animation="slide-right" delay={600}>
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200/40 to-yellow-200/30 rounded-3xl blur-3xl"></div>
-                    <div className="relative z-10 p-8">
-                      <img 
-                        src={devicesMockup} 
-                        alt="Mockup mostrando internet e TV em notebook, celular e smart TV" 
-                        className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full font-black text-sm shadow-lg animate-pulse">
-                        ✅ Disponível Agora!
+              {/* Botão Principal Padronizado */}
+              <AnimatedSection animation="bounce-in" delay={600}>
+                <div className="flex justify-center">
+                  <TouchButton 
+                    onClick={handleWhatsAppClick} 
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-12 lg:px-16 py-6 lg:py-8 rounded-2xl font-black text-xl lg:text-3xl shadow-2xl hover:scale-110 hover:shadow-3xl transition-all duration-500 relative overflow-hidden group font-poppins"
+                  >
+                    <span className="relative z-10 flex items-center gap-4">
+                      <span className="text-2xl lg:text-4xl">🚀</span>
+                      <span>Contratar Agora</span>
+                    </span>
+                    {/* Efeito de Brilho no Hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                  </TouchButton>
+                </div>
+              </AnimatedSection>
+
+              {/* Stats Minimalistas e Modernos */}
+              <AnimatedSection animation="fade-up" delay={800}>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
+                  {[
+                    { icon: Users, value: 1000, label: "Clientes", suffix: "+", color: "orange" },
+                    { icon: Zap, value: 99, label: "Uptime", suffix: "%", color: "green" },
+                    { icon: Tv, value: 20, label: "Canais", suffix: "+", color: "blue" },
+                    { icon: Clock, value: 24, label: "Suporte", suffix: "h", color: "purple" }
+                  ].map((stat, index) => {
+                    const colorClasses = {
+                      orange: { bg: "bg-orange-50/90", icon: "bg-orange-500", text: "text-orange-900" },
+                      green: { bg: "bg-green-50/90", icon: "bg-green-500", text: "text-green-900" },
+                      blue: { bg: "bg-blue-50/90", icon: "bg-blue-500", text: "text-blue-900" },
+                      purple: { bg: "bg-purple-50/90", icon: "bg-purple-500", text: "text-purple-900" }
+                    }[stat.color];
+
+                    return (
+                      <div key={index} className={`${colorClasses.bg} backdrop-blur-sm rounded-2xl p-6 lg:p-8 border-2 border-white/40 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-400 group text-center`}>
+                        
+                        {/* Ícone */}
+                        <div className={`w-12 h-12 lg:w-16 lg:h-16 ${colorClasses.icon} rounded-xl lg:rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
+                          <stat.icon className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+                        </div>
+                        
+                        {/* Stats */}
+                        <div className="space-y-2">
+                          <div className={`text-3xl lg:text-4xl font-black ${colorClasses.text} font-poppins`}>
+                            <StatsCounter endValue={stat.value} label="" suffix={stat.suffix} />
+                          </div>
+                          <div className={`text-sm lg:text-base ${colorClasses.text} opacity-80 font-bold font-inter`}>
+                            {stat.label}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </AnimatedSection>
-              </div>
+                    );
+                  })}
+                </div>
+              </AnimatedSection>
+
+              {/* Call to Action Final */}
+              <AnimatedSection animation="fade-up" delay={1000}>
+                <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 lg:p-12 border-2 border-white/30 shadow-2xl max-w-4xl mx-auto">
+                  <p className="text-xl lg:text-2xl font-bold text-orange-800 font-inter leading-relaxed">
+                    💡 <span className="font-black">Transforme sua conexão hoje!</span><br/>
+                    <span className="text-lg lg:text-xl opacity-90">
+                      Junte-se a mais de 1000 famílias que confiam na SaraivaNet
+                    </span>
+                  </p>
+                </div>
+              </AnimatedSection>
             </div>
           </div>
         </div>
