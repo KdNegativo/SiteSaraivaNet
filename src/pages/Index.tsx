@@ -14,6 +14,9 @@ import ResponsiveImage from "@/components/ResponsiveImage";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
+import teamPhoto from "@/assets/team-photo.jpg";
+import facilityPhoto from "@/assets/facility-photo.jpg";
+import happyClients from "@/assets/happy-clients.jpg";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -45,15 +48,15 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fff9f5 0%, #ffeee0 25%, #ffe5d0 50%, #ffddc0 75%, #ffd5b0 100%)'}}>
-      {/* Elegant Background Pattern */}
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      {/* Suave Background Pattern */}
       <div className="absolute inset-0" style={{
         backgroundImage: `
-          radial-gradient(circle at 20% 20%, rgba(255, 102, 0, 0.05) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.03) 0%, transparent 50%),
-          radial-gradient(circle at 40% 60%, rgba(255, 140, 0, 0.02) 0%, transparent 50%)
+          radial-gradient(circle at 20% 20%, rgba(255, 102, 0, 0.02) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.02) 0%, transparent 50%),
+          linear-gradient(135deg, transparent 40%, rgba(156, 163, 175, 0.01) 50%, transparent 60%)
         `,
-        backgroundSize: '800px 800px, 600px 600px, 400px 400px'
+        backgroundSize: '600px 600px, 800px 800px, 400px 400px'
       }}></div>
       {/* Floating Components */}
       <ChatBot />
@@ -176,13 +179,13 @@ const Index = () => {
                     ))}
                   </div>
 
-                  {/* Beautiful Button */}
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-2xl font-black text-lg shadow-2xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/30"
-                  >
-                    🚀 Contratar Agora
-                  </TouchButton>
+                   {/* Beautiful Button */}
+                   <TouchButton 
+                     onClick={handleWhatsAppClick} 
+                     className="w-full btn-contratar"
+                   >
+                     🚀 Contratar Agora
+                   </TouchButton>
 
                   {/* Elegant Stats */}
                   <div className="grid grid-cols-2 gap-3 text-center">
@@ -238,13 +241,13 @@ const Index = () => {
                     ))}
                   </div>
 
-                  {/* Stunning Button */}
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-16 py-6 rounded-2xl font-black text-2xl shadow-2xl border-3 border-yellow-200/50 hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-yellow-500/40"
-                  >
-                    🚀 Contratar Agora
-                  </TouchButton>
+                   {/* Stunning Button */}
+                   <TouchButton 
+                     onClick={handleWhatsAppClick} 
+                     className="btn-contratar text-2xl px-16 py-6"
+                   >
+                     🚀 Contratar Agora
+                   </TouchButton>
 
                   {/* Beautiful Stats Desktop */}
                   <div className="flex justify-center gap-12 text-center max-w-3xl mx-auto">
@@ -267,17 +270,16 @@ const Index = () => {
       </section>
 
       {/* Plans Section - Clean & Beautiful */}
-      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
+      <section id="planos" className="relative overflow-hidden py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-blue-50">
         
         {/* Sophisticated Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-blue-500/8"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/3 via-transparent to-blue-500/3"></div>
         
         {/* Elegant Floating Elements */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-64 h-64 bg-orange-400/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s' }}></div>
-            <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-400/12 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '3s' }}></div>
-            <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-purple-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s', animationDelay: '6s' }}></div>
+            <div className="absolute top-20 right-20 w-64 h-64 bg-orange-400/8 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s' }}></div>
+            <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-400/6 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '3s' }}></div>
           </div>
         )}
         
@@ -291,10 +293,10 @@ const Index = () => {
               </div>
               
               {/* Beautiful Title */}
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.8)'}}>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-800 mb-6 font-poppins">
                 Internet + SaraivaTV
               </h2>
-              <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed font-inter">
                 O plano completo que vai transformar sua experiência digital
               </p>
               
@@ -305,17 +307,17 @@ const Index = () => {
             </div>
           </AnimatedSection>
 
-          {/* Beautiful Plan Card */}
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-2xl overflow-hidden border border-orange-500/30 hover:border-orange-500/50 hover:scale-102 transform transition-all duration-500 group">
+          {/* Beautiful Plan Card - DESTACADO */}
+          <div className="card-ultra overflow-hidden group">
             
             {/* Plan Header */}
-            <div className="bg-gradient-to-r from-orange-500 to-red-500 p-8 text-white text-center group-hover:from-orange-400 group-hover:to-red-400 transition-all duration-500">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Wifi className="w-10 h-10 text-white" />
+            <div className="bg-gradient-to-r from-orange-500 to-red-500 p-10 text-white text-center group-hover:from-orange-400 group-hover:to-red-400 transition-all duration-500">
+              <div className="w-24 h-24 bg-white/30 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                <Wifi className="w-12 h-12 text-white" />
               </div>
-              <h3 className="text-3xl font-black mb-3" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>Plano Completo</h3>
-              <div className="text-5xl font-black mb-3" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>300MB</div>
-              <div className="text-xl opacity-95 font-medium">Fibra Óptica + SaraivaTV Grátis</div>
+              <h3 className="text-4xl font-black mb-4 font-poppins" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>Internet ULTRA</h3>
+              <div className="text-6xl font-black mb-4 font-poppins" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>300MB</div>
+              <div className="text-2xl opacity-95 font-medium font-inter">Fibra Óptica + SaraivaTV Grátis</div>
             </div>
 
             {/* Plan Content */}
@@ -339,7 +341,7 @@ const Index = () => {
 
                   <TouchButton 
                     onClick={handleWhatsAppClick} 
-                    className="w-full lg:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-black py-4 px-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+                    className="w-full lg:w-auto btn-contratar"
                   >
                     🚀 Contratar Agora
                   </TouchButton>
@@ -388,7 +390,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <TouchButton 
                 onClick={handleWhatsAppClick} 
-                className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 font-black rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+                className="w-full lg:w-auto btn-contratar"
               >
                 💬 WhatsApp
               </TouchButton>
@@ -430,7 +432,7 @@ const Index = () => {
           <div className="text-center">
             <TouchButton 
               onClick={handleWhatsAppClick}
-              className="inline-flex items-center space-x-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="btn-contratar inline-flex items-center space-x-3"
             >
               <span>💬</span>
               <span>Verificar Disponibilidade</span>
@@ -562,7 +564,7 @@ const Index = () => {
                 Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
               </p>
               <div className="flex justify-center">
-              <TouchButton onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-5 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3">
+              <TouchButton onClick={handleWhatsAppClick} className="bg-white/20 backdrop-blur-lg text-white border border-white/30 hover:bg-white/30 px-10 py-5 text-xl font-black rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3 btn-contratar">
                 <span className="text-2xl">💬</span>
                 Entrar em Contato
               </TouchButton>
@@ -612,50 +614,110 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section - Simplified */}
-      <section id="sobre" className="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Sobre a SaraivaNet</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Há 22 anos conectando Eliseu Martins com o mundo digital
+      {/* About Section - Com Fotos Reais */}
+      <section id="sobre" className="py-20 px-4 bg-gradient-to-br from-white via-slate-50 to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-black text-gray-800 mb-6 font-poppins">Sobre a SaraivaNet</h2>
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-inter">
+              Há <span className="font-black text-orange-500">22 anos</span> conectando Eliseu Martins com o mundo digital
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-800 mb-6">Nossa História</h3>
-              <p className="text-gray-600 mb-6 text-lg">
+          {/* Seção com Fotos da Equipe */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            <div className="order-2 lg:order-1">
+              <h3 className="text-4xl font-black text-gray-800 mb-8 font-poppins">Nossa Equipe</h3>
+              <p className="text-gray-600 mb-6 text-xl font-inter leading-relaxed">
                 Fundada em 2003, a SaraivaNet nasceu do sonho de democratizar o acesso à internet de qualidade em Eliseu Martins.
               </p>
-              <p className="text-gray-600 mb-8 text-lg">
-                Hoje somos referência em conectividade na região, sempre mantendo nosso compromisso com a excelência no atendimento.
+              <p className="text-gray-600 mb-10 text-xl font-inter leading-relaxed">
+                Nossa equipe técnica especializada trabalha 24h para garantir que você tenha sempre a melhor conexão.
               </p>
 
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="text-3xl font-bold text-orange-500">1000+</div>
-                  <div className="text-sm text-gray-600 font-medium">Clientes Ativos</div>
+              <div className="grid grid-cols-2 gap-8">
+                <div className="text-center p-8 card-premium">
+                  <div className="text-5xl font-black text-orange-500 mb-3 font-poppins">1000+</div>
+                  <div className="text-lg text-gray-600 font-bold font-inter">Clientes Conectados</div>
                 </div>
-                <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
-                  <div className="text-3xl font-bold text-orange-500">22</div>
-                  <div className="text-sm text-gray-600 font-medium">Anos de Experiência</div>
+                <div className="text-center p-8 card-premium">
+                  <div className="text-5xl font-black text-orange-500 mb-3 font-poppins">22</div>
+                  <div className="text-lg text-gray-600 font-bold font-inter">Anos de Tradição</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-10 shadow-xl">
-              <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-                Tecnologia que Conecta Corações
-              </h3>
-              <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed">
-                Na SaraivaNet, acreditamos que internet é conexão humana. É o avô vendo o neto pela primeira vez por videochamada, é o estudante acessando conhecimento.
-              </p>
-              <div className="text-center">
-                <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-lg">
-                  <Heart className="w-6 h-6 mr-2" />
-                  Feito com amor no Piauí desde 2003
+            <div className="order-1 lg:order-2">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
+                <img 
+                  src={teamPhoto} 
+                  alt="Equipe técnica da SaraivaNet em ação" 
+                  className="w-full h-80 lg:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-orange-600/80 via-transparent to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <h4 className="text-2xl font-black mb-2 font-poppins">Equipe Especializada</h4>
+                  <p className="text-lg opacity-90 font-inter">Técnicos certificados prontos para te atender</p>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Seção das Instalações */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            <div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
+                <img 
+                  src={facilityPhoto} 
+                  alt="Infraestrutura moderna da SaraivaNet" 
+                  className="w-full h-80 lg:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/80 via-transparent to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <h4 className="text-2xl font-black mb-2 font-poppins">Infraestrutura Premium</h4>
+                  <p className="text-lg opacity-90 font-inter">Equipamentos de última geração</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-4xl font-black text-gray-800 mb-8 font-poppins">Tecnologia de Ponta</h3>
+              <p className="text-gray-600 mb-6 text-xl font-inter leading-relaxed">
+                Investimos constantemente em infraestrutura para oferecer a você internet fibra óptica com velocidade real garantida.
+              </p>
+              <p className="text-gray-600 mb-10 text-xl font-inter leading-relaxed">
+                Nossa central técnica conta com equipamentos de última geração e monitoramento 24h para garantir estabilidade total.
+              </p>
+
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-10 shadow-xl">
+                <h4 className="text-3xl font-black text-gray-800 mb-6 text-center font-poppins">
+                  Tecnologia que Conecta Corações
+                </h4>
+                <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed font-inter">
+                  Na SaraivaNet, acreditamos que internet é conexão humana. É o avô vendo o neto pela primeira vez por videochamada, é o estudante acessando conhecimento.
+                </p>
+                <div className="text-center">
+                  <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-lg">
+                    <Heart className="w-6 h-6 mr-2" />
+                    Feito com amor no Piauí desde 2003
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Seção Clientes Satisfeitos */}
+          <div className="text-center">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 max-w-4xl mx-auto">
+              <img 
+                src={happyClients} 
+                alt="Família feliz usando internet SaraivaNet" 
+                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-600/80 via-transparent to-transparent"></div>
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-center">
+                <h4 className="text-3xl font-black mb-3 font-poppins">Famílias Conectadas</h4>
+                <p className="text-xl opacity-90 font-inter max-w-2xl">Mais de 1000 famílias confiam na SaraivaNet para se conectar com o que mais importa</p>
               </div>
             </div>
           </div>
@@ -794,7 +856,7 @@ const Index = () => {
             </div>
             <TouchButton 
               onClick={handleWhatsAppClick} 
-              className="bg-white text-purple-600 hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 inline-flex items-center"
+              className="btn-contratar inline-flex items-center"
             >
               <Phone className="w-6 h-6 mr-3" />
               💬 Falar no WhatsApp
