@@ -115,192 +115,163 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - ULTRA MODERNA E PROFISSIONAL */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-orange-400 via-orange-300 to-yellow-200">
+      {/* Hero Section - MODERNA, LIMPA E IMPACTANTE */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-orange-500 via-orange-600 to-red-500">
         
-        {/* Background Limpo e Moderno */}
+        {/* Background Limpo - Apenas Gradiente */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-yellow-300/15"></div>
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
-              linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
-              linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
-              linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%)
-            `,
-            backgroundSize: '60px 60px',
-            backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
-          }}></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
         </div>
         
-        {/* Floating Elements Minimalistas */}
+        {/* Elementos Flutuantes Minimalistas */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-white/10 to-yellow-200/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-orange-200/15 to-white/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '4s' }}></div>
+            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float" style={{ animationDuration: '20s' }}></div>
+            <div className="absolute bottom-1/3 left-1/5 w-80 h-80 bg-red-300/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '25s', animationDelay: '5s' }}></div>
           </div>
         )}
         
         {/* Container Principal */}
         <div className="relative z-10 w-full px-6 py-20">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto text-center">
             
-            {/* Layout Unificado - Mobile e Desktop */}
-            <div className="text-center space-y-16">
-              
-              {/* Título Principal com Tipografia Elegante */}
-              <AnimatedSection animation="fade-up" delay={200}>
-                <div className="space-y-8">
-                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-tight font-poppins">
-                    <span className="block bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text text-transparent drop-shadow-2xl">Internet</span>
-                    <span className="block text-orange-800 text-4xl md:text-6xl my-4 font-bold">+</span>
-                    <span className="block bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text text-transparent drop-shadow-2xl">SaraivaTV</span>
-                  </h1>
-                  
-                  {/* Subtítulo Elegante */}
-                  <p className="text-2xl md:text-3xl font-bold text-orange-800 font-poppins max-w-4xl mx-auto leading-relaxed">
-                    Internet ultrarrápida + App gratuito
-                  </p>
-                  <p className="text-lg md:text-xl text-orange-700 font-medium font-inter max-w-3xl mx-auto">
-                    A revolução digital chegou em Eliseu Martins com fibra óptica de 300MB
-                  </p>
-                </div>
-              </AnimatedSection>
+            {/* Título Principal com Sombra Sutil */}
+            <AnimatedSection animation="fade-up" delay={200}>
+              <div className="space-y-8 mb-16">
+                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white font-poppins leading-tight">
+                  <span className="block drop-shadow-lg" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>Internet</span>
+                  <span className="block text-yellow-100 text-4xl md:text-6xl my-6 font-bold">+</span>
+                  <span className="block drop-shadow-lg" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>SaraivaTV</span>
+                </h1>
+                
+                {/* Subtítulo em Bege Claro */}
+                <p className="text-2xl md:text-3xl text-orange-100 font-bold font-poppins max-w-4xl mx-auto leading-relaxed">
+                  Internet ultrarrápida + App de TV gratuito
+                </p>
+                <p className="text-lg md:text-xl text-orange-50 font-medium font-inter max-w-3xl mx-auto">
+                  A melhor conexão de fibra óptica de Eliseu Martins com entretenimento incluído
+                </p>
+              </div>
+            </AnimatedSection>
 
-              {/* Cards Redesenhados e Profissionais */}
-              <AnimatedSection animation="fade-up" delay={400}>
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
-                  {[
-                    { 
-                      icon: Wifi, 
-                      text: "Internet ULTRA", 
-                      desc: "300MB Fibra Óptica", 
-                      gradient: "from-orange-600 to-red-600", 
-                      highlight: true,
-                      bgColor: "bg-orange-100/80",
-                      textColor: "text-orange-900"
-                    },
-                    { 
-                      icon: Tv, 
-                      text: "SaraivaTV", 
-                      desc: "App Premium Grátis", 
-                      gradient: "from-blue-500 to-blue-600",
-                      bgColor: "bg-blue-50/80",
-                      textColor: "text-blue-900"
-                    },
-                    { 
-                      icon: Music, 
-                      text: "Rádios 24h", 
-                      desc: "Locais e Nacionais", 
-                      gradient: "from-green-500 to-green-600",
-                      bgColor: "bg-green-50/80",
-                      textColor: "text-green-900"
-                    },
-                    { 
-                      icon: Shield, 
-                      text: "Suporte VIP", 
-                      desc: "Atendimento 24h", 
-                      gradient: "from-purple-500 to-purple-600",
-                      bgColor: "bg-purple-50/80",
-                      textColor: "text-purple-900"
-                    }
-                  ].map((card, index) => (
-                    <div key={index} className={`${card.highlight ? 'scale-110 lg:scale-125 border-4 border-orange-300 shadow-2xl' : 'border-2 border-white/30 shadow-xl'} ${card.bgColor} backdrop-blur-sm rounded-3xl p-6 lg:p-8 flex flex-col items-center space-y-4 lg:space-y-6 hover:scale-105 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl group cursor-pointer relative`}>
-                      
-                      {/* Ícone Grande */}
-                      <div className={`w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br ${card.gradient} rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300`}>
-                        <card.icon className="w-8 h-8 lg:w-10 lg:h-10 text-white drop-shadow-lg" />
-                      </div>
-                      
-                      {/* Conteúdo */}
-                      <div className="text-center space-y-2">
-                        <h3 className={`font-black text-lg lg:text-xl ${card.textColor} font-poppins`}>
-                          {card.text}
-                        </h3>
-                        <p className={`text-sm lg:text-base ${card.textColor} opacity-80 font-inter font-medium`}>
-                          {card.desc}
-                        </p>
-                      </div>
-                      
-                      {/* Badge de Destaque */}
-                      {card.highlight && (
-                        <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-400 text-orange-900 text-xs lg:text-sm font-black px-3 py-1 rounded-full animate-pulse shadow-lg">
-                          ⭐ PRINCIPAL
-                        </div>
-                      )}
+            {/* Cards com Fundo Branco */}
+            <AnimatedSection animation="fade-up" delay={400}>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto mb-16">
+                {[
+                  { 
+                    icon: Wifi, 
+                    text: "Internet ULTRA", 
+                    desc: "300MB Fibra Óptica", 
+                    color: "orange-500",
+                    highlight: true
+                  },
+                  { 
+                    icon: Tv, 
+                    text: "SaraivaTV", 
+                    desc: "App Premium Grátis", 
+                    color: "blue-500"
+                  },
+                  { 
+                    icon: Music, 
+                    text: "Rádios 24h", 
+                    desc: "Locais e Nacionais", 
+                    color: "green-500"
+                  },
+                  { 
+                    icon: Shield, 
+                    text: "Suporte VIP", 
+                    desc: "Atendimento 24h", 
+                    color: "purple-500"
+                  }
+                ].map((card, index) => (
+                  <div key={index} className={`${card.highlight ? 'lg:scale-110 lg:row-span-2 lg:col-span-2 lg:order-first' : ''} bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 group cursor-pointer`}>
+                    
+                    {/* Ícone Grande com Cor Sólida */}
+                    <div className={`w-16 h-16 lg:w-20 lg:h-20 bg-${card.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-md`}>
+                      <card.icon className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
                     </div>
-                  ))}
-                </div>
-              </AnimatedSection>
-
-              {/* Botão Principal Padronizado */}
-              <AnimatedSection animation="bounce-in" delay={600}>
-                <div className="flex justify-center">
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="bg-orange-500 hover:bg-orange-600 text-white px-12 lg:px-16 py-6 lg:py-8 rounded-2xl font-black text-xl lg:text-3xl shadow-2xl hover:scale-110 hover:shadow-3xl transition-all duration-500 relative overflow-hidden group font-poppins"
-                  >
-                    <span className="relative z-10 flex items-center gap-4">
-                      <span className="text-2xl lg:text-4xl">🚀</span>
-                      <span>Contratar Agora</span>
-                    </span>
-                    {/* Efeito de Brilho no Hover */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  </TouchButton>
-                </div>
-              </AnimatedSection>
-
-              {/* Stats Minimalistas e Modernos */}
-              <AnimatedSection animation="fade-up" delay={800}>
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
-                  {[
-                    { icon: Users, value: 1000, label: "Clientes", suffix: "+", color: "orange" },
-                    { icon: Zap, value: 99, label: "Uptime", suffix: "%", color: "green" },
-                    { icon: Tv, value: 20, label: "Canais", suffix: "+", color: "blue" },
-                    { icon: Clock, value: 24, label: "Suporte", suffix: "h", color: "purple" }
-                  ].map((stat, index) => {
-                    const colorClasses = {
-                      orange: { bg: "bg-orange-50/90", icon: "bg-orange-500", text: "text-orange-900" },
-                      green: { bg: "bg-green-50/90", icon: "bg-green-500", text: "text-green-900" },
-                      blue: { bg: "bg-blue-50/90", icon: "bg-blue-500", text: "text-blue-900" },
-                      purple: { bg: "bg-purple-50/90", icon: "bg-purple-500", text: "text-purple-900" }
-                    }[stat.color];
-
-                    return (
-                      <div key={index} className={`${colorClasses.bg} backdrop-blur-sm rounded-2xl p-6 lg:p-8 border-2 border-white/40 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-400 group text-center`}>
-                        
-                        {/* Ícone */}
-                        <div className={`w-12 h-12 lg:w-16 lg:h-16 ${colorClasses.icon} rounded-xl lg:rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
-                          <stat.icon className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
-                        </div>
-                        
-                        {/* Stats */}
-                        <div className="space-y-2">
-                          <div className={`text-3xl lg:text-4xl font-black ${colorClasses.text} font-poppins`}>
-                            <StatsCounter endValue={stat.value} label="" suffix={stat.suffix} />
-                          </div>
-                          <div className={`text-sm lg:text-base ${colorClasses.text} opacity-80 font-bold font-inter`}>
-                            {stat.label}
-                          </div>
-                        </div>
+                    
+                    {/* Conteúdo */}
+                    <div className="text-center space-y-3">
+                      <h3 className={`font-black text-lg lg:text-xl text-gray-800 font-poppins ${card.highlight ? 'lg:text-2xl' : ''}`}>
+                        {card.text}
+                      </h3>
+                      <p className={`text-sm lg:text-base text-gray-600 font-inter font-medium ${card.highlight ? 'lg:text-lg' : ''}`}>
+                        {card.desc}
+                      </p>
+                    </div>
+                    
+                    {/* Badge Principal */}
+                    {card.highlight && (
+                      <div className="mt-4 inline-flex items-center bg-orange-100 text-orange-800 text-sm font-black px-3 py-1 rounded-full">
+                        ⭐ PRINCIPAL
                       </div>
-                    );
-                  })}
-                </div>
-              </AnimatedSection>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
 
-              {/* Call to Action Final */}
-              <AnimatedSection animation="fade-up" delay={1000}>
-                <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 lg:p-12 border-2 border-white/30 shadow-2xl max-w-4xl mx-auto">
-                  <p className="text-xl lg:text-2xl font-bold text-orange-800 font-inter leading-relaxed">
-                    💡 <span className="font-black">Transforme sua conexão hoje!</span><br/>
-                    <span className="text-lg lg:text-xl opacity-90">
-                      Junte-se a mais de 1000 famílias que confiam na SaraivaNet
-                    </span>
-                  </p>
-                </div>
-              </AnimatedSection>
-            </div>
+            {/* Botão Principal Centralizado */}
+            <AnimatedSection animation="bounce-in" delay={600}>
+              <div className="mb-16">
+                <TouchButton 
+                  onClick={handleWhatsAppClick} 
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-12 lg:px-16 py-6 lg:py-8 rounded-2xl font-black text-xl lg:text-3xl shadow-2xl hover:scale-110 hover:shadow-3xl transition-all duration-500 relative overflow-hidden group font-poppins"
+                >
+                  <span className="relative z-10 flex items-center gap-4">
+                    <span className="text-2xl lg:text-4xl animate-bounce">🚀</span>
+                    <span>Contratar Agora</span>
+                  </span>
+                  {/* Efeito de Brilho no Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 bg-orange-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
+                </TouchButton>
+              </div>
+            </AnimatedSection>
+
+            {/* Stats Minimalistas Horizontais */}
+            <AnimatedSection animation="fade-up" delay={800}>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
+                {[
+                  { icon: Users, value: 1000, label: "Clientes", suffix: "+", color: "text-orange-600" },
+                  { icon: Zap, value: 99, label: "Uptime", suffix: "%", color: "text-green-600" },
+                  { icon: Tv, value: 20, label: "Canais", suffix: "+", color: "text-blue-600" },
+                  { icon: Clock, value: 24, label: "Suporte", suffix: "h", color: "text-purple-600" }
+                ].map((stat, index) => (
+                  <div key={index} className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/30 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-400 group text-center">
+                    
+                    {/* Ícone Simples */}
+                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <stat.icon className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
+                    </div>
+                    
+                    {/* Stats em Branco */}
+                    <div className="space-y-2">
+                      <div className="text-3xl lg:text-4xl font-black text-white font-poppins">
+                        <StatsCounter endValue={stat.value} label="" suffix={stat.suffix} />
+                      </div>
+                      <div className="text-sm lg:text-base text-white/90 font-bold font-inter">
+                        {stat.label}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+
+            {/* Call to Action Final Sutil */}
+            <AnimatedSection animation="fade-up" delay={1000}>
+              <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/20 shadow-lg max-w-4xl mx-auto">
+                <p className="text-xl lg:text-2xl font-bold text-white font-inter leading-relaxed">
+                  <span className="text-yellow-200">✨</span> <span className="font-black">Transforme sua conexão hoje!</span>
+                </p>
+                <p className="text-lg lg:text-xl text-white/90 font-medium font-inter mt-4">
+                  Junte-se a mais de 1000 famílias conectadas com a SaraivaNet
+                </p>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
