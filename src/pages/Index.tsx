@@ -113,73 +113,72 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Premium Refinado */}
+      {/* Hero Section - Layout Expandido */}
       <section id="inicio" className="relative overflow-hidden h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff8833 25%, #ffaa66 50%, #ffcc99 75%, #ffe6cc 100%)'}}>
         
         {/* Mobile Version */}
-        <div className="md:hidden w-full h-full px-8 py-28 flex flex-col justify-center">
+        <div className="md:hidden w-full h-full px-6 py-24 flex flex-col justify-center">
           <div className="relative z-10 h-full flex flex-col justify-between">
             <AnimatedSection animation="fade-up">
-              <div className="space-y-16">
-                {/* Badge Premium */}
+              <div className="space-y-12">
+                {/* Badge */}
                 <div className="text-center">
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-10 py-5 rounded-full font-black text-lg shadow-2xl">
-                    <Star className="w-6 h-6 mr-4 fill-current" />
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-8 py-4 rounded-full font-bold text-base shadow-lg">
+                    <Star className="w-5 h-5 mr-3" />
                     Internet + TV Grátis
                   </div>
                 </div>
 
-                {/* Title Premium */}
-                <div className="text-center space-y-6">
-                  <h1 className="text-6xl font-black text-white leading-[1.1] tracking-tight" style={{textShadow: '3px 3px 15px rgba(0,0,0,0.7)'}}>
-                    Internet +<br />
-                    <span className="text-yellow-300">SaraivaTV</span>
+                {/* Title */}
+                <div className="text-center px-4">
+                  <h1 className="text-5xl font-black text-white leading-tight mb-6" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>
+                    Internet + SaraivaTV
                   </h1>
-                  <p className="text-2xl text-white/95 font-light tracking-wide leading-relaxed">
-                    Internet ultrarrápida + App gratuito
+                  <p className="text-xl text-white/90 font-medium">
+                    🚀 Internet ultrarrápida + App gratuito
                   </p>
                 </div>
 
-                {/* Carousel Premium - Muito Maior */}
-                <div className="h-96 w-full rounded-[2rem] overflow-hidden shadow-2xl">
+                {/* Carousel Mobile - Muito Maior */}
+                <div className="h-80 w-full rounded-3xl overflow-hidden mx-4">
                   <HeroCarousel />
                 </div>
 
-                {/* Benefits Minimalistas */}
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="bg-orange-500 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-8 h-8 bg-white/40 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Wifi className="w-4 h-4 text-white" />
+                {/* Benefits Grid - Espaçado */}
+                <div className="grid grid-cols-2 gap-6 px-4">
+                  <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 text-center shadow-lg">
+                    <div className="w-14 h-14 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Wifi className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-white font-semibold text-base">Internet Ultra</div>
+                    <div className="text-white font-bold text-lg">Internet ULTRA</div>
                   </div>
-                  <div className="bg-blue-500 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-8 h-8 bg-white/40 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Tv className="w-4 h-4 text-white" />
+                  <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl p-8 text-center shadow-lg">
+                    <div className="w-14 h-14 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Tv className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-white font-semibold text-base">TV Premium</div>
+                    <div className="text-white font-bold text-lg">TV Premium</div>
                   </div>
-                  <div className="bg-green-500 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-8 h-8 bg-white/40 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Music className="w-4 h-4 text-white" />
+                  <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-8 text-center shadow-lg">
+                    <div className="w-14 h-14 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Music className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-white font-semibold text-base">Rádios 24h</div>
+                    <div className="text-white font-bold text-lg">Rádios 24h</div>
                   </div>
-                  <div className="bg-purple-500 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-8 h-8 bg-white/40 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Shield className="w-4 h-4 text-white" />
+                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 text-center shadow-lg">
+                    <div className="w-14 h-14 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Shield className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-white font-semibold text-base">Suporte VIP</div>
+                    <div className="text-white font-bold text-lg">Suporte VIP</div>
                   </div>
                 </div>
 
-                {/* CTA Premium */}
-                <div className="text-center pt-4">
+                {/* CTA Button */}
+                <div className="text-center px-4">
                   <TouchButton 
                     onClick={handleWhatsAppClick}
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white font-black text-2xl px-16 py-6 rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-105 transition-all duration-300 inline-flex items-center hover:brightness-110"
+                    className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black text-xl px-12 py-5 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center"
                   >
-                    Contratar Agora
+                    🚀 Contratar Agora
                   </TouchButton>
                 </div>
               </div>
@@ -189,73 +188,72 @@ const Index = () => {
 
         {/* Desktop Version */}
         <div className="hidden md:block w-full h-full">
-          <div className="max-w-[1600px] mx-auto px-16 h-full flex items-center">
-            <div className="grid grid-cols-12 gap-20 items-center w-full">
+          <div className="max-w-[1400px] mx-auto px-12 h-full flex items-center">
+            <div className="grid grid-cols-12 gap-16 items-center w-full min-h-[800px]">
               
-              {/* Left Content - Premium */}
-              <div className="col-span-5 space-y-16 py-24">
+              {/* Left Content - Expandido */}
+              <div className="col-span-5 space-y-12 py-20">
                 <AnimatedSection animation="fade-up">
-                  {/* Badge Premium */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-10 py-5 rounded-full font-black text-xl shadow-2xl">
-                    <Star className="w-7 h-7 mr-4 fill-current" />
+                  {/* Badge */}
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-lg">
+                    <Star className="w-6 h-6 mr-3" />
                     Internet + TV Grátis
                   </div>
                   
-                  {/* Title & Subtitle Premium */}
-                  <div className="space-y-10">
-                    <h1 className="text-7xl xl:text-8xl font-black text-white leading-[0.9] tracking-tight" style={{textShadow: '4px 4px 20px rgba(0,0,0,0.8)'}}>
-                      Internet +<br />
-                      <span className="text-yellow-300">SaraivaTV</span>
+                  {/* Title & Subtitle */}
+                  <div className="space-y-8">
+                    <h1 className="text-6xl xl:text-7xl font-black text-white leading-tight" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.5)'}}>
+                      Internet + SaraivaTV
                     </h1>
-                    <p className="text-3xl xl:text-4xl text-white/95 font-light leading-relaxed tracking-wide max-w-2xl">
-                      Internet ultrarrápida + App gratuito
+                    <p className="text-2xl xl:text-3xl text-white/90 font-medium leading-relaxed">
+                      🚀 Internet ultrarrápida + App gratuito
                     </p>
                   </div>
 
-                  {/* Benefits Minimalistas */}
-                  <div className="grid grid-cols-2 gap-6 max-w-lg">
-                    <div className="bg-orange-500 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                      <div className="w-10 h-10 bg-white/40 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Wifi className="w-5 h-5 text-white" />
+                  {/* Benefits Grid - Muito Espaçado */}
+                  <div className="grid grid-cols-2 gap-8">
+                    <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-10 text-center shadow-xl hover:scale-105 transition-all duration-300">
+                      <div className="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Wifi className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-white font-semibold text-lg">Internet Ultra</div>
+                      <div className="text-white font-bold text-xl">Internet ULTRA</div>
                     </div>
-                    <div className="bg-blue-500 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                      <div className="w-10 h-10 bg-white/40 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Tv className="w-5 h-5 text-white" />
+                    <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl p-10 text-center shadow-xl hover:scale-105 transition-all duration-300">
+                      <div className="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Tv className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-white font-semibold text-lg">TV Premium</div>
+                      <div className="text-white font-bold text-xl">TV Premium</div>
                     </div>
-                    <div className="bg-green-500 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                      <div className="w-10 h-10 bg-white/40 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Music className="w-5 h-5 text-white" />
+                    <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-10 text-center shadow-xl hover:scale-105 transition-all duration-300">
+                      <div className="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Music className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-white font-semibold text-lg">Rádios 24h</div>
+                      <div className="text-white font-bold text-xl">Rádios 24h</div>
                     </div>
-                    <div className="bg-purple-500 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                      <div className="w-10 h-10 bg-white/40 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Shield className="w-5 h-5 text-white" />
+                    <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-10 text-center shadow-xl hover:scale-105 transition-all duration-300">
+                      <div className="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Shield className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-white font-semibold text-lg">Suporte VIP</div>
+                      <div className="text-white font-bold text-xl">Suporte VIP</div>
                     </div>
                   </div>
 
-                  {/* CTA Premium */}
-                  <div className="pt-12">
+                  {/* CTA Button - Grande */}
+                  <div className="pt-8">
                     <TouchButton 
                       onClick={handleWhatsAppClick}
-                      className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white font-black text-3xl px-20 py-8 rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-105 transition-all duration-300 inline-flex items-center hover:brightness-110"
+                      className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black text-2xl px-16 py-6 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center"
                     >
-                      Contratar Agora
+                      🚀 Contratar Agora
                     </TouchButton>
                   </div>
                 </AnimatedSection>
               </div>
 
-              {/* Right Content - Carousel Premium */}
-              <div className="col-span-7 h-full flex items-center py-24">
+              {/* Right Content - Carousel Gigante */}
+              <div className="col-span-7 h-full flex items-center py-20">
                 <AnimatedSection animation="slide-right">
-                  <div className="h-[750px] w-full rounded-[3rem] overflow-hidden shadow-2xl">
+                  <div className="h-[700px] w-full rounded-3xl overflow-hidden shadow-2xl">
                     <HeroCarousel />
                   </div>
                 </AnimatedSection>
@@ -264,29 +262,25 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Stats Bar Premium - Fundo Branco Translúcido */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/20 backdrop-blur-md py-12">
-          <div className="max-w-6xl mx-auto px-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                <Users className="w-10 h-10 text-orange-600 mx-auto mb-4" />
-                <div className="text-orange-600 font-black text-4xl mb-2">1000+</div>
-                <div className="text-gray-700 text-lg font-medium">Clientes</div>
+        {/* Stats Bar - Expandida */}
+        <div className="absolute bottom-0 left-0 right-0 bg-black/20 backdrop-blur-sm py-10">
+          <div className="max-w-6xl mx-auto px-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="bg-orange-800/80 rounded-3xl p-8 text-center shadow-lg backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-3xl mb-2">1000+</div>
+                <div className="text-white/90 text-lg font-medium">Clientes</div>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                <Zap className="w-10 h-10 text-blue-600 mx-auto mb-4" />
-                <div className="text-blue-600 font-black text-4xl mb-2">99%</div>
-                <div className="text-gray-700 text-lg font-medium">Uptime</div>
+              <div className="bg-orange-800/80 rounded-3xl p-8 text-center shadow-lg backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-3xl mb-2">99%</div>
+                <div className="text-white/90 text-lg font-medium">Uptime</div>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                <Tv className="w-10 h-10 text-green-600 mx-auto mb-4" />
-                <div className="text-green-600 font-black text-4xl mb-2">20+</div>
-                <div className="text-gray-700 text-lg font-medium">Canais</div>
+              <div className="bg-orange-800/80 rounded-3xl p-8 text-center shadow-lg backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-3xl mb-2">20+</div>
+                <div className="text-white/90 text-lg font-medium">Canais</div>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                <Clock className="w-10 h-10 text-purple-600 mx-auto mb-4" />
-                <div className="text-purple-600 font-black text-4xl mb-2">24h</div>
-                <div className="text-gray-700 text-lg font-medium">Online</div>
+              <div className="bg-orange-800/80 rounded-3xl p-8 text-center shadow-lg backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-3xl mb-2">24h</div>
+                <div className="text-white/90 text-lg font-medium">Online</div>
               </div>
             </div>
           </div>
