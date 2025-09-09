@@ -112,68 +112,63 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Claro Style com benefícios SaraivaNet */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
+      {/* Hero Section - Grande Provedor Style */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff8833 25%, #ffaa66 50%, #ffcc99 75%, #ffe6cc 100%)'}}>
         
         {/* Mobile Version */}
-        <div className="md:hidden w-full px-4 py-12">
+        <div className="md:hidden w-full px-4 py-20">
           <div className="relative z-10">
-            {/* Limited Time Badge */}
-            <div className="absolute top-4 right-4 bg-white text-orange-600 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-              Por tempo limitado
-            </div>
-            
             <AnimatedSection animation="fade-up">
-              <div className="space-y-6">
-                {/* Strong Title */}
+              <div className="space-y-8">
+                {/* Promotion Badge */}
+                <div className="inline-flex items-center bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                  <Zap className="w-4 h-4 mr-2" />
+                  Instalação grátis + WiFi 6
+                </div>
+                
+                {/* Title & Slogan */}
                 <div>
-                  <h1 className="text-4xl font-black text-white leading-tight" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
-                    SaraivaNet tá na sua -<br />
-                    <span className="text-yellow-300">com bônus especial.</span>
+                  <h1 className="text-4xl font-black text-white leading-tight mb-2" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>
+                    Internet que conecta
+                    <br />
+                    <span className="text-yellow-300">sua família</span>
                   </h1>
+                  <p className="text-lg text-white/90 font-medium">
+                    Fibra óptica com velocidade real para toda casa
+                  </p>
                 </div>
 
-                {/* Main Benefits - Claro Style */}
-                <div className="bg-orange-600 rounded-2xl p-6 text-center border-2 border-orange-400">
-                  <div className="text-white/90 text-sm mb-1">De 100MB Para</div>
-                  <div className="text-yellow-300 font-black text-4xl">300MB</div>
-                  <div className="text-white/80 text-sm">Fibra Óptica + WiFi 6</div>
-                  <div className="flex justify-center items-center space-x-4 mt-3 text-white">
-                    <div className="flex items-center">
-                      <Wifi className="w-4 h-4 mr-1" />
-                      <span className="text-xs">Ultra</span>
-                    </div>
-                    <span>+</span>
-                    <div className="flex items-center">
-                      <Tv className="w-4 h-4 mr-1" />
-                      <span className="text-xs">SaraivaTV</span>
-                    </div>
-                    <span>+</span>
-                    <div className="flex items-center">
-                      <Shield className="w-4 h-4 mr-1" />
-                      <span className="text-xs">Suporte</span>
-                    </div>
+                {/* Plan Highlight */}
+                <div className="bg-white/95 rounded-2xl p-6 text-center shadow-xl">
+                  <div className="text-orange-600 font-bold text-sm mb-1">Plano Fibra</div>
+                  <div className="text-orange-600 font-black text-4xl">300MB</div>
+                  <div className="text-orange-600 font-medium">+ SaraivaTV Grátis</div>
+                  
+                  <div className="flex justify-center items-baseline mt-4 mb-4">
+                    <span className="text-orange-600 text-xl">R$</span>
+                    <span className="text-orange-600 font-black text-5xl">79</span>
+                    <span className="text-orange-600 text-xl">,90</span>
+                    <span className="text-orange-600/70 text-sm ml-1">/mês</span>
                   </div>
                 </div>
 
-                {/* Price and Benefits Grid */}
-                <div className="grid grid-cols-3 gap-3">
-                  <div className="bg-white rounded-xl p-4 text-center">
-                    <div className="text-orange-600 text-xs">R$</div>
-                    <div className="text-orange-600 font-black text-2xl">79</div>
-                    <div className="text-orange-600 text-xs">,90/mês</div>
+                {/* Benefits List */}
+                <div className="space-y-3">
+                  <div className="flex items-center text-white">
+                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-300" />
+                    <span>Fibra óptica até sua casa</span>
                   </div>
-
-                  <div className="bg-white rounded-xl p-4 text-center">
-                    <div className="text-orange-600 font-bold text-sm">Instalação</div>
-                    <div className="text-orange-600 font-black text-lg">GRÁTIS</div>
-                    <div className="text-orange-600 text-xs">🎁</div>
+                  <div className="flex items-center text-white">
+                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-300" />
+                    <span>WiFi 6 de última geração</span>
                   </div>
-
-                  <div className="bg-white rounded-xl p-4 text-center">
-                    <div className="text-orange-600 font-bold text-sm">Suporte</div>
-                    <div className="text-orange-600 font-black text-lg">24h</div>
-                    <div className="text-orange-600 text-xs">📞</div>
+                  <div className="flex items-center text-white">
+                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-300" />
+                    <span>SaraivaTV com 20+ canais</span>
+                  </div>
+                  <div className="flex items-center text-white">
+                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-300" />
+                    <span>Suporte técnico 24 horas</span>
                   </div>
                 </div>
 
@@ -181,18 +176,32 @@ const Index = () => {
                 <div className="flex justify-center">
                   <img 
                     src={heroYoungMan} 
-                    alt="Cliente feliz SaraivaNet" 
-                    className="w-32 h-32 object-cover rounded-full shadow-lg border-4 border-white/20"
+                    alt="Cliente satisfeito SaraivaNet" 
+                    className="w-40 h-40 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
 
                 {/* CTA Button */}
                 <TouchButton 
                   onClick={handleWhatsAppClick}
-                  className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black text-xl py-4 rounded-2xl shadow-xl hover:scale-105 transition-all duration-300"
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white font-black text-xl py-4 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
                 >
-                  Contratar
+                  Contratar Agora
                 </TouchButton>
+
+                {/* Special Offers */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-white/90 rounded-xl p-4 text-center">
+                    <div className="text-orange-600 text-2xl mb-1">🎁</div>
+                    <div className="text-orange-600 font-bold text-sm">Instalação</div>
+                    <div className="text-orange-600 font-black">GRÁTIS</div>
+                  </div>
+                  <div className="bg-white/90 rounded-xl p-4 text-center">
+                    <div className="text-orange-600 text-2xl mb-1">📶</div>
+                    <div className="text-orange-600 font-bold text-sm">WiFi 6</div>
+                    <div className="text-orange-600 font-black">INCLUSO</div>
+                  </div>
+                </div>
               </div>
             </AnimatedSection>
           </div>
@@ -200,78 +209,92 @@ const Index = () => {
 
         {/* Desktop Version */}
         <div className="hidden md:block w-full">
-          <div className="max-w-7xl mx-auto px-6 py-12">
+          <div className="max-w-7xl mx-auto px-6 py-20">
             <div className="grid grid-cols-12 gap-12 items-center min-h-[600px]">
-              
-              {/* Limited Time Badge */}
-              <div className="absolute top-20 right-8 bg-white text-orange-600 px-4 py-2 rounded-full font-bold shadow-lg z-20 flex items-center">
-                <Clock className="w-4 h-4 mr-2" />
-                Por tempo limitado
-              </div>
               
               {/* Left Content */}
               <div className="col-span-7 space-y-8">
                 <AnimatedSection animation="fade-up">
-                  {/* Strong Title */}
-                  <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.8)'}}>
-                    SaraivaNet tá na sua -<br />
-                    <span className="text-yellow-300">com bônus especial.</span>
-                  </h1>
+                  {/* Promotion Badge */}
+                  <div className="inline-flex items-center bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-bold shadow-lg">
+                    <Zap className="w-5 h-5 mr-3" />
+                    Instalação grátis + WiFi 6 incluso
+                  </div>
+                  
+                  {/* Title & Slogan */}
+                  <div>
+                    <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-4" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.5)'}}>
+                      Internet que conecta
+                      <br />
+                      <span className="text-yellow-300">sua família</span>
+                    </h1>
+                    <p className="text-xl text-white/90 font-medium max-w-lg">
+                      Fibra óptica com velocidade real garantida para toda sua casa
+                    </p>
+                  </div>
 
-                  {/* Main Benefits */}
-                  <div className="bg-orange-600 rounded-3xl p-8 border-2 border-orange-400 max-w-xl">
+                  {/* Plan Highlight */}
+                  <div className="bg-white/95 rounded-3xl p-8 max-w-md shadow-2xl">
                     <div className="text-center">
-                      <div className="text-white/90 text-lg mb-2">De 100MB Para</div>
-                      <div className="text-yellow-300 font-black text-6xl mb-2">300MB</div>
-                      <div className="text-white text-lg mb-4">Fibra Óptica + WiFi 6</div>
+                      <div className="text-orange-600 font-bold text-lg mb-2">Plano Fibra Premium</div>
+                      <div className="text-orange-600 font-black text-6xl mb-2">300MB</div>
+                      <div className="text-orange-600 font-medium text-lg mb-6">+ SaraivaTV Grátis</div>
                       
-                      <div className="flex justify-center items-center space-x-6 text-white">
-                        <div className="flex items-center">
-                          <Wifi className="w-6 h-6 mr-2" />
-                          <span>Internet Ultra</span>
-                        </div>
-                        <span className="text-2xl">+</span>
-                        <div className="flex items-center">
-                          <Tv className="w-6 h-6 mr-2" />
-                          <span>SaraivaTV</span>
-                        </div>
-                        <span className="text-2xl">+</span>
-                        <div className="flex items-center">
-                          <Shield className="w-6 h-6 mr-2" />
-                          <span>Suporte VIP</span>
-                        </div>
+                      <div className="flex justify-center items-baseline">
+                        <span className="text-orange-600 text-2xl">R$</span>
+                        <span className="text-orange-600 font-black text-6xl">79</span>
+                        <span className="text-orange-600 text-2xl">,90</span>
+                        <span className="text-orange-600/70 text-lg ml-2">/mês</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Benefits Grid */}
-                  <div className="grid grid-cols-3 gap-4 max-w-xl">
-                    <div className="bg-white rounded-2xl p-6 text-center shadow-xl">
-                      <div className="text-orange-600 text-sm">R$</div>
-                      <div className="text-orange-600 font-black text-4xl">79</div>
-                      <div className="text-orange-600 text-sm">,90/mês</div>
+                  {/* Benefits List */}
+                  <div className="grid grid-cols-2 gap-4 max-w-2xl">
+                    <div className="flex items-center text-white">
+                      <CheckCircle className="w-6 h-6 mr-3 text-yellow-300" />
+                      <span className="text-lg">Fibra óptica até sua casa</span>
                     </div>
-
-                    <div className="bg-white rounded-2xl p-6 text-center shadow-xl">
-                      <div className="text-orange-600 font-bold">Instalação</div>
-                      <div className="text-orange-600 font-black text-2xl">GRÁTIS</div>
-                      <div className="text-2xl">🎁</div>
+                    <div className="flex items-center text-white">
+                      <CheckCircle className="w-6 h-6 mr-3 text-yellow-300" />
+                      <span className="text-lg">WiFi 6 de última geração</span>
                     </div>
-
-                    <div className="bg-white rounded-2xl p-6 text-center shadow-xl">
-                      <div className="text-orange-600 font-bold">Suporte</div>
-                      <div className="text-orange-600 font-black text-2xl">24h</div>
-                      <div className="text-2xl">📞</div>
+                    <div className="flex items-center text-white">
+                      <CheckCircle className="w-6 h-6 mr-3 text-yellow-300" />
+                      <span className="text-lg">SaraivaTV com 20+ canais</span>
+                    </div>
+                    <div className="flex items-center text-white">
+                      <CheckCircle className="w-6 h-6 mr-3 text-yellow-300" />
+                      <span className="text-lg">Suporte técnico 24 horas</span>
                     </div>
                   </div>
 
                   {/* CTA Button */}
                   <TouchButton 
                     onClick={handleWhatsAppClick}
-                    className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black text-2xl px-12 py-4 rounded-2xl shadow-xl hover:scale-105 transition-all duration-300"
+                    className="bg-orange-600 hover:bg-orange-700 text-white font-black text-2xl px-12 py-5 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300"
                   >
-                    Contratar
+                    Contratar Agora
                   </TouchButton>
+
+                  {/* Special Offers */}
+                  <div className="flex gap-6">
+                    <div className="bg-white/90 rounded-2xl p-6 text-center shadow-lg">
+                      <div className="text-orange-600 text-3xl mb-2">🎁</div>
+                      <div className="text-orange-600 font-bold">Instalação</div>
+                      <div className="text-orange-600 font-black text-xl">GRÁTIS</div>
+                    </div>
+                    <div className="bg-white/90 rounded-2xl p-6 text-center shadow-lg">
+                      <div className="text-orange-600 text-3xl mb-2">📶</div>
+                      <div className="text-orange-600 font-bold">WiFi 6</div>
+                      <div className="text-orange-600 font-black text-xl">INCLUSO</div>
+                    </div>
+                    <div className="bg-white/90 rounded-2xl p-6 text-center shadow-lg">
+                      <div className="text-orange-600 text-3xl mb-2">📺</div>
+                      <div className="text-orange-600 font-bold">TV</div>
+                      <div className="text-orange-600 font-black text-xl">GRÁTIS</div>
+                    </div>
+                  </div>
                 </AnimatedSection>
               </div>
 
@@ -280,8 +303,8 @@ const Index = () => {
                 <AnimatedSection animation="slide-right">
                   <img 
                     src={heroYoungMan} 
-                    alt="Cliente feliz usando SaraivaNet" 
-                    className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-3xl shadow-2xl"
+                    alt="Família feliz usando internet SaraivaNet" 
+                    className="w-full max-w-lg h-auto object-cover rounded-3xl shadow-2xl"
                   />
                 </AnimatedSection>
               </div>
@@ -289,25 +312,29 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Benefits Bar */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/20 backdrop-blur-sm py-4">
+        {/* Stats Bar - Diferenciais */}
+        <div className="absolute bottom-0 left-0 right-0 bg-white/10 backdrop-blur-sm py-6">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="flex justify-center items-center space-x-8 text-white/90 text-sm">
-              <div className="flex items-center">
-                <Users className="w-4 h-4 mr-2" />
-                <span>1000+ Clientes</span>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-white/90 rounded-xl p-4 text-center shadow-lg">
+                <Users className="w-6 h-6 text-orange-600 mx-auto mb-2" />
+                <div className="text-orange-600 font-black text-xl">1000+</div>
+                <div className="text-orange-600 text-sm font-medium">Clientes</div>
               </div>
-              <div className="flex items-center">
-                <Zap className="w-4 h-4 mr-2" />
-                <span>99% Uptime</span>
+              <div className="bg-white/90 rounded-xl p-4 text-center shadow-lg">
+                <Zap className="w-6 h-6 text-orange-600 mx-auto mb-2" />
+                <div className="text-orange-600 font-black text-xl">99%</div>
+                <div className="text-orange-600 text-sm font-medium">Uptime</div>
               </div>
-              <div className="flex items-center">
-                <Tv className="w-4 h-4 mr-2" />
-                <span>20+ Canais</span>
+              <div className="bg-white/90 rounded-xl p-4 text-center shadow-lg">
+                <Tv className="w-6 h-6 text-orange-600 mx-auto mb-2" />
+                <div className="text-orange-600 font-black text-xl">20+</div>
+                <div className="text-orange-600 text-sm font-medium">Canais</div>
               </div>
-              <div className="flex items-center">
-                <Headphones className="w-4 h-4 mr-2" />
-                <span>Suporte 24h</span>
+              <div className="bg-white/90 rounded-xl p-4 text-center shadow-lg">
+                <Headphones className="w-6 h-6 text-orange-600 mx-auto mb-2" />
+                <div className="text-orange-600 font-black text-xl">24h</div>
+                <div className="text-orange-600 text-sm font-medium">Suporte</div>
               </div>
             </div>
           </div>
