@@ -4,37 +4,46 @@
 @tailwind utilities;
 
 @layer base {
-  /* FORÇA O SITE A SEMPRE SER LARANJA - MODO CLARO TRAVADO */
+  /* PALETA REFINADA - LARANJA PRINCIPAL COM SECUNDÁRIAS SUAVES */
   :root {
-    --background: 24 100% 96%;
-    --foreground: 16 100% 10%;
+    --background: 0 0% 98%;
+    --foreground: 210 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 16 100% 15%;
+    --card-foreground: 210 20% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 16 100% 15%;
+    --popover-foreground: 210 20% 20%;
 
     --primary: 20 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 24 100% 92%;
-    --secondary-foreground: 16 100% 20%;
+    --secondary: 210 25% 95%;
+    --secondary-foreground: 210 25% 25%;
 
-    --muted: 24 100% 94%;
-    --muted-foreground: 16 60% 40%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 20 100% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 200 100% 85%;
+    --accent-foreground: 200 100% 25%;
+
+    --purple-accent: 260 60% 75%;
+    --purple-accent-foreground: 260 60% 25%;
+
+    --gray-light: 210 15% 92%;
+    --gray-light-foreground: 210 15% 35%;
+
+    --blue-light: 200 80% 90%;
+    --blue-light-foreground: 200 80% 30%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 24 80% 85%;
-    --input: 24 80% 88%;
+    --border: 210 15% 88%;
+    --input: 210 15% 90%;
     --ring: 20 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 }
 
@@ -50,7 +59,11 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair font-bold;
+    @apply font-poppins font-bold;
+  }
+
+  p, span, div:not(.font-poppins) {
+    @apply font-inter;
   }
 }
 
@@ -112,42 +125,66 @@
     @apply transition-transform duration-300 hover:-translate-y-2;
   }
 
-  /* Card Enhancements */
+  /* Cards Refinados */
   .card-premium {
-    @apply bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 
-           border border-gray-200/50 dark:border-gray-700/50 
-           shadow-xl hover:shadow-2xl 
-           transition-all duration-300 
-           hover:scale-[1.02] hover:-translate-y-1;
+    @apply bg-gradient-to-br from-white to-gray-50/50
+           border border-gray-200/60
+           shadow-lg hover:shadow-xl 
+           transition-all duration-300 ease-out
+           hover:scale-[1.02] hover:-translate-y-1
+           rounded-2xl;
   }
 
-  .card-glass {
-    @apply bg-white/70 dark:bg-gray-900/70 
-           backdrop-blur-xl 
-           border border-white/20 dark:border-gray-700/20 
-           shadow-2xl 
-           transition-all duration-300 
-           hover:bg-white/80 dark:hover:bg-gray-900/80;
+  .card-ultra {
+    @apply bg-gradient-to-br from-orange-50 to-orange-100/80
+           border-2 border-orange-200
+           shadow-2xl hover:shadow-2xl 
+           transition-all duration-500 ease-out
+           hover:scale-[1.05] hover:-translate-y-3
+           rounded-3xl transform-gpu;
   }
 
-  /* Button Enhancements */
-  .btn-premium {
-    @apply relative overflow-hidden 
-           bg-gradient-to-r from-blue-600 to-purple-600 
-           hover:from-blue-700 hover:to-purple-700 
-           text-white font-semibold 
-           transition-all duration-300 
-           hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25;
+  /* Custom shadow-3xl para efeitos premium */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
   }
 
-  .btn-premium::before {
+  .hover\:shadow-3xl:hover {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-glass-soft {
+    @apply bg-white/60 backdrop-blur-lg 
+           border border-white/40
+           shadow-xl hover:shadow-2xl
+           transition-all duration-300 ease-out
+           hover:bg-white/70 hover:scale-[1.01]
+           rounded-2xl;
+  }
+
+  /* Botão Unificado "Contratar Agora" */
+  .btn-contratar {
+    @apply relative overflow-hidden font-poppins font-black
+           bg-gradient-to-r from-orange-500 to-red-500 
+           hover:from-orange-400 hover:to-red-400 
+           text-white shadow-lg
+           transition-all duration-300 ease-out
+           hover:scale-105 hover:shadow-xl hover:-translate-y-1
+           rounded-xl px-8 py-4 text-lg;
+  }
+
+  .btn-contratar::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
-           translate-x-[-100%] transition-transform duration-700;
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
+           translate-x-[-100%] transition-transform duration-500;
   }
 
-  .btn-premium:hover::before {
+  .btn-contratar:hover::before {
     @apply translate-x-[100%];
+  }
+
+  .btn-contratar:active {
+    @apply scale-95 shadow-md translate-y-0;
   }
 
   /* Text Enhancements */
