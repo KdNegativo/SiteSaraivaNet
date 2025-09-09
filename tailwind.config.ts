@@ -36,16 +36,28 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					50: '#eff6ff',
-					100: '#dbeafe',
-					200: '#bfdbfe',
-					300: '#93c5fd',
-					400: '#60a5fa',
-					500: '#3b82f6',
-					600: '#2563eb',
-					700: '#1d4ed8',
-					800: '#1e40af',
-					900: '#1e3a8a',
+					50: '#fef7ed',
+					100: '#fdedd6',
+					200: '#fbd7ac',
+					300: '#f8bb77',
+					400: '#f59540',
+					500: '#f3761a',
+					600: '#e45910',
+					700: '#bd420f',
+					800: '#963515',
+					900: '#782e14',
+				},
+				orange: {
+					50: '#fff7ed',
+					100: '#ffedd5',
+					200: '#fed7aa',
+					300: '#fdba74',
+					400: '#fb923c',
+					500: '#f97316',
+					600: '#ea580c',
+					700: '#c2410c',
+					800: '#9a3412',
+					900: '#7c2d12',
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -81,12 +93,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Gradients modernos
+				// LUXURY GRADIENTS
 				gradient: {
-					primary: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-					secondary: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-					blue: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-					purple: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
+					luxury: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)',
+					premium: 'linear-gradient(135deg, #ffb347 0%, #ff8c42 25%, #ff6633 50%, #ff4500 75%, #ff2500 100%)',
+					gold: 'linear-gradient(135deg, #ffd700 0%, #ffb347 25%, #ff8c42 50%, #ff6600 100%)',
+					sunset: 'linear-gradient(135deg, #ff9a56 0%, #ff6b35 50%, #f54021 100%)',
+					fire: 'linear-gradient(135deg, #ff4500 0%, #ff6347 50%, #ff7f50 100%)',
 				}
 			},
 			borderRadius: {
