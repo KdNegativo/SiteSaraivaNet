@@ -138,47 +138,34 @@ const Index = () => {
                   <HeroCarousel />
                 </div>
 
-                {/* Plan & Price */}
-                <div className="bg-white/95 rounded-2xl p-6 text-center shadow-xl">
-                  <div className="text-orange-600 font-bold text-lg mb-1">Internet Fibra</div>
-                  <div className="text-orange-600 font-black text-5xl mb-2">300MB</div>
-                  
-                  <div className="flex justify-center items-baseline mb-4">
-                    <span className="text-orange-600 text-xl">R$</span>
-                    <span className="text-orange-600 font-black text-5xl">79</span>
-                    <span className="text-orange-600 text-xl">,90</span>
-                    <span className="text-orange-600/70 text-sm ml-1">/mês</span>
+                {/* Benefits Grid - Mobile */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg border-2 border-orange-500">
+                    <div className="text-white text-3xl mb-3">🎁</div>
+                    <div className="text-white font-bold text-lg">Instalação</div>
+                    <div className="text-white font-black text-xl">GRÁTIS</div>
                   </div>
-                </div>
-
-                {/* Benefits Grid */}
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-white/90 rounded-xl p-4 text-center">
-                    <div className="text-orange-600 text-2xl mb-1">🎁</div>
-                    <div className="text-orange-600 font-bold text-sm">Instalação</div>
-                    <div className="text-orange-600 font-black">GRÁTIS</div>
+                  <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg border-2 border-orange-500">
+                    <div className="text-white text-3xl mb-3">📺</div>
+                    <div className="text-white font-bold text-lg">SaraivaTV</div>
+                    <div className="text-white font-black text-xl">GRÁTIS</div>
                   </div>
-                  <div className="bg-white/90 rounded-xl p-4 text-center">
-                    <div className="text-orange-600 text-2xl mb-1">📺</div>
-                    <div className="text-orange-600 font-bold text-sm">SaraivaTV</div>
-                    <div className="text-orange-600 font-black">GRÁTIS</div>
+                  <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg border-2 border-orange-500">
+                    <div className="text-white text-3xl mb-3">📶</div>
+                    <div className="text-white font-bold text-lg">WiFi 6</div>
+                    <div className="text-white font-black text-xl">INCLUSO</div>
                   </div>
-                  <div className="bg-white/90 rounded-xl p-4 text-center">
-                    <div className="text-orange-600 text-2xl mb-1">📶</div>
-                    <div className="text-orange-600 font-bold text-sm">WiFi 6</div>
-                    <div className="text-orange-600 font-black">INCLUSO</div>
-                  </div>
-                  <div className="bg-white/90 rounded-xl p-4 text-center">
-                    <div className="text-orange-600 text-2xl mb-1">🛠️</div>
-                    <div className="text-orange-600 font-bold text-sm">Suporte</div>
-                    <div className="text-orange-600 font-black">24H</div>
+                  <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg border-2 border-orange-500">
+                    <div className="text-white text-3xl mb-3">🛠️</div>
+                    <div className="text-white font-bold text-lg">Suporte</div>
+                    <div className="text-white font-black text-xl">24H</div>
                   </div>
                 </div>
 
                 {/* CTA Button */}
                 <TouchButton 
                   onClick={handleWhatsAppClick}
-                  className="w-full bg-orange-600 hover:bg-orange-700 text-white font-black text-xl py-4 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
+                  className="w-full bg-white hover:bg-gray-100 text-orange-600 font-black text-xl py-5 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 border-2 border-orange-200"
                 >
                   Contratar Agora
                 </TouchButton>
@@ -190,66 +177,51 @@ const Index = () => {
         {/* Desktop Version */}
         <div className="hidden md:block w-full">
           <div className="max-w-7xl mx-auto px-6 py-20">
-            <div className="grid grid-cols-12 gap-12 items-center min-h-[600px]">
+            <div className="grid grid-cols-12 gap-16 items-center min-h-[600px]">
               
               {/* Left Content */}
-              <div className="col-span-6 space-y-8">
+              <div className="col-span-6 space-y-10">
                 <AnimatedSection animation="fade-up">
                   {/* Title & Subtitle */}
                   <div>
-                    <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-4" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.5)'}}>
+                    <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-6" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.5)'}}>
                       Internet que conecta
                       <br />
                       <span className="text-yellow-300">sua família</span>
                     </h1>
-                    <p className="text-xl text-white/90 font-medium max-w-lg">
+                    <p className="text-2xl text-white/90 font-medium max-w-lg">
                       Fibra óptica com velocidade real garantida para toda sua casa
                     </p>
                   </div>
 
-                  {/* Speed Highlight */}
-                  <div className="bg-white/95 rounded-3xl p-8 max-w-sm shadow-2xl">
-                    <div className="text-center">
-                      <div className="text-orange-600 font-bold text-lg mb-2">Internet Fibra</div>
-                      <div className="text-orange-600 font-black text-6xl mb-4">300MB</div>
-                      
-                      <div className="flex justify-center items-baseline">
-                        <span className="text-orange-600 text-2xl">R$</span>
-                        <span className="text-orange-600 font-black text-6xl">79</span>
-                        <span className="text-orange-600 text-2xl">,90</span>
-                        <span className="text-orange-600/70 text-lg ml-2">/mês</span>
-                      </div>
+                  {/* Benefits Grid - Desktop */}
+                  <div className="grid grid-cols-2 gap-6 max-w-2xl">
+                    <div className="bg-orange-600 rounded-3xl p-8 text-center shadow-xl border-2 border-orange-500 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                      <div className="text-white text-4xl mb-4">🎁</div>
+                      <div className="text-white font-bold text-xl mb-2">Instalação</div>
+                      <div className="text-white font-black text-2xl">GRÁTIS</div>
                     </div>
-                  </div>
-
-                  {/* Benefits Grid */}
-                  <div className="grid grid-cols-2 gap-4 max-w-lg">
-                    <div className="bg-white/90 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300">
-                      <div className="text-orange-600 text-3xl mb-2">🎁</div>
-                      <div className="text-orange-600 font-bold">Instalação</div>
-                      <div className="text-orange-600 font-black text-xl">GRÁTIS</div>
+                    <div className="bg-orange-600 rounded-3xl p-8 text-center shadow-xl border-2 border-orange-500 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                      <div className="text-white text-4xl mb-4">📺</div>
+                      <div className="text-white font-bold text-xl mb-2">SaraivaTV</div>
+                      <div className="text-white font-black text-2xl">GRÁTIS</div>
                     </div>
-                    <div className="bg-white/90 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300">
-                      <div className="text-orange-600 text-3xl mb-2">📺</div>
-                      <div className="text-orange-600 font-bold">SaraivaTV</div>
-                      <div className="text-orange-600 font-black text-xl">GRÁTIS</div>
+                    <div className="bg-orange-600 rounded-3xl p-8 text-center shadow-xl border-2 border-orange-500 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                      <div className="text-white text-4xl mb-4">📶</div>
+                      <div className="text-white font-bold text-xl mb-2">WiFi 6</div>
+                      <div className="text-white font-black text-2xl">INCLUSO</div>
                     </div>
-                    <div className="bg-white/90 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300">
-                      <div className="text-orange-600 text-3xl mb-2">📶</div>
-                      <div className="text-orange-600 font-bold">WiFi 6</div>
-                      <div className="text-orange-600 font-black text-xl">INCLUSO</div>
-                    </div>
-                    <div className="bg-white/90 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300">
-                      <div className="text-orange-600 text-3xl mb-2">🛠️</div>
-                      <div className="text-orange-600 font-bold">Suporte</div>
-                      <div className="text-orange-600 font-black text-xl">24H</div>
+                    <div className="bg-orange-600 rounded-3xl p-8 text-center shadow-xl border-2 border-orange-500 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                      <div className="text-white text-4xl mb-4">🛠️</div>
+                      <div className="text-white font-bold text-xl mb-2">Suporte</div>
+                      <div className="text-white font-black text-2xl">24H</div>
                     </div>
                   </div>
 
                   {/* CTA Button */}
                   <TouchButton 
                     onClick={handleWhatsAppClick}
-                    className="bg-orange-600 hover:bg-orange-700 text-white font-black text-2xl px-12 py-5 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300"
+                    className="bg-white hover:bg-gray-100 text-orange-600 font-black text-2xl px-16 py-6 rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl border-2 border-orange-200 transition-all duration-300"
                   >
                     Contratar Agora
                   </TouchButton>
@@ -269,28 +241,28 @@ const Index = () => {
         </div>
 
         {/* Stats Bar - Diferenciais */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/15 backdrop-blur-sm py-6">
+        <div className="absolute bottom-0 left-0 right-0 bg-white/15 backdrop-blur-sm py-8">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white/90 rounded-xl p-4 text-center shadow-lg hover:scale-105 transition-all duration-300">
-                <Users className="w-6 h-6 text-orange-600 mx-auto mb-2" />
-                <div className="text-orange-600 font-black text-xl">1000+</div>
-                <div className="text-orange-600 text-sm font-medium">Clientes</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 border-2 border-orange-500">
+                <Users className="w-8 h-8 text-white mx-auto mb-3" />
+                <div className="text-white font-black text-2xl">1000+</div>
+                <div className="text-white/90 text-sm font-medium">Clientes</div>
               </div>
-              <div className="bg-white/90 rounded-xl p-4 text-center shadow-lg hover:scale-105 transition-all duration-300">
-                <Zap className="w-6 h-6 text-orange-600 mx-auto mb-2" />
-                <div className="text-orange-600 font-black text-xl">99%</div>
-                <div className="text-orange-600 text-sm font-medium">Uptime</div>
+              <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 border-2 border-orange-500">
+                <Zap className="w-8 h-8 text-white mx-auto mb-3" />
+                <div className="text-white font-black text-2xl">99%</div>
+                <div className="text-white/90 text-sm font-medium">Uptime</div>
               </div>
-              <div className="bg-white/90 rounded-xl p-4 text-center shadow-lg hover:scale-105 transition-all duration-300">
-                <Tv className="w-6 h-6 text-orange-600 mx-auto mb-2" />
-                <div className="text-orange-600 font-black text-xl">20+</div>
-                <div className="text-orange-600 text-sm font-medium">Canais</div>
+              <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 border-2 border-orange-500">
+                <Tv className="w-8 h-8 text-white mx-auto mb-3" />
+                <div className="text-white font-black text-2xl">20+</div>
+                <div className="text-white/90 text-sm font-medium">Canais</div>
               </div>
-              <div className="bg-white/90 rounded-xl p-4 text-center shadow-lg hover:scale-105 transition-all duration-300">
-                <Clock className="w-6 h-6 text-orange-600 mx-auto mb-2" />
-                <div className="text-orange-600 font-black text-xl">24h</div>
-                <div className="text-orange-600 text-sm font-medium">Online</div>
+              <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 border-2 border-orange-500">
+                <Clock className="w-8 h-8 text-white mx-auto mb-3" />
+                <div className="text-white font-black text-2xl">24h</div>
+                <div className="text-white/90 text-sm font-medium">Online</div>
               </div>
             </div>
           </div>
