@@ -113,7 +113,7 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Estilo Referência com melhor espaçamento */}
+      {/* Hero Section - Estilo Referência com melhor proporção */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: '#ff6600'}}>
         
         {/* Mobile Version */}
@@ -138,36 +138,36 @@ const Index = () => {
                 </p>
               </div>
 
-              {/* Carousel */}
-              <div className="h-72 w-full rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-lg mt-12">
+              {/* Carousel - Menor altura */}
+              <div className="h-48 w-full rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-lg mt-12">
                 <HeroCarousel />
               </div>
 
-              {/* Benefits Cards - Em linha com mais espaço */}
-              <div className="grid grid-cols-2 gap-6 max-w-lg mx-auto mt-16">
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 text-center shadow-xl">
-                  <div className="w-14 h-14 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Wifi className="w-7 h-7 text-white" />
+              {/* Benefits Cards - Formato vertical como na referência */}
+              <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mt-16">
+                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-6 text-center shadow-xl h-32">
+                  <div className="w-10 h-10 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <Wifi className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-lg">Internet ULTRA</div>
+                  <div className="text-white font-bold text-sm leading-tight">Internet<br/>ULTRA</div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 text-center shadow-xl">
-                  <div className="w-14 h-14 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Tv className="w-7 h-7 text-white" />
+                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-6 text-center shadow-xl h-32">
+                  <div className="w-10 h-10 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <Tv className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-lg">TV Premium</div>
+                  <div className="text-white font-bold text-sm leading-tight">TV<br/>Premium</div>
                 </div>
-                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-8 text-center shadow-xl">
-                  <div className="w-14 h-14 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Music className="w-7 h-7 text-white" />
+                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-6 text-center shadow-xl h-32">
+                  <div className="w-10 h-10 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <Music className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-lg">Rádios 24h</div>
+                  <div className="text-white font-bold text-sm leading-tight">Rádios<br/>24h</div>
                 </div>
-                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 text-center shadow-xl">
-                  <div className="w-14 h-14 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-7 h-7 text-white" />
+                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-6 text-center shadow-xl h-32">
+                  <div className="w-10 h-10 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <Shield className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-lg">Suporte VIP</div>
+                  <div className="text-white font-bold text-sm leading-tight">Suporte<br/>VIP</div>
                 </div>
               </div>
 
@@ -184,13 +184,13 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Desktop Version - Layout com muito mais espaçamento */}
+        {/* Desktop Version - Layout melhorado */}
         <div className="hidden md:block w-full">
           <div className="max-w-7xl mx-auto px-8 py-24">
-            <div className="grid grid-cols-12 gap-16 items-center min-h-[800px]">
+            <div className="grid grid-cols-12 gap-16 items-center min-h-[700px]">
               
               {/* Left Content */}
-              <div className="col-span-6 space-y-12">
+              <div className="col-span-7 space-y-12">
                 <AnimatedSection animation="fade-up">
                   {/* Badge */}
                   <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-8 py-4 rounded-full font-bold shadow-lg text-xl">
@@ -208,31 +208,31 @@ const Index = () => {
                     </p>
                   </div>
 
-                  {/* Benefits Cards - Em linha horizontal com muito espaço */}
-                  <div className="grid grid-cols-4 gap-8 mt-16">
-                    <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-10 text-center shadow-xl hover:scale-105 transition-all duration-300">
-                      <div className="w-18 h-18 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <Wifi className="w-10 h-10 text-white" />
+                  {/* Benefits Cards - Formato vertical como na referência */}
+                  <div className="grid grid-cols-4 gap-6 mt-16">
+                    <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-48">
+                      <div className="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Wifi className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-white font-bold text-xl">Internet ULTRA</div>
+                      <div className="text-white font-bold text-lg leading-tight">Internet<br/>ULTRA</div>
                     </div>
-                    <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-10 text-center shadow-xl hover:scale-105 transition-all duration-300">
-                      <div className="w-18 h-18 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <Tv className="w-10 h-10 text-white" />
+                    <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-48">
+                      <div className="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Tv className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-white font-bold text-xl">TV Premium</div>
+                      <div className="text-white font-bold text-lg leading-tight">TV<br/>Premium</div>
                     </div>
-                    <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-10 text-center shadow-xl hover:scale-105 transition-all duration-300">
-                      <div className="w-18 h-18 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <Music className="w-10 h-10 text-white" />
+                    <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-48">
+                      <div className="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Music className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-white font-bold text-xl">Rádios 24h</div>
+                      <div className="text-white font-bold text-lg leading-tight">Rádios<br/>24h</div>
                     </div>
-                    <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-10 text-center shadow-xl hover:scale-105 transition-all duration-300">
-                      <div className="w-18 h-18 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <Shield className="w-10 h-10 text-white" />
+                    <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-48">
+                      <div className="w-16 h-16 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Shield className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-white font-bold text-xl">Suporte VIP</div>
+                      <div className="text-white font-bold text-lg leading-tight">Suporte<br/>VIP</div>
                     </div>
                   </div>
 
@@ -248,10 +248,10 @@ const Index = () => {
                 </AnimatedSection>
               </div>
 
-              {/* Right Content - Carousel */}
-              <div className="col-span-6">
+              {/* Right Content - Carousel menor */}
+              <div className="col-span-5">
                 <AnimatedSection animation="slide-right">
-                  <div className="h-[700px] w-full rounded-3xl overflow-hidden shadow-2xl">
+                  <div className="h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl">
                     <HeroCarousel />
                   </div>
                 </AnimatedSection>
