@@ -15,6 +15,13 @@ import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
 
+// Import images
+import routerTechnologyImg from "@/assets/router-technology.jpg";
+import dataCenterImg from "@/assets/data-center.jpg";
+import connectedWorldImg from "@/assets/connected-world.jpg";
+import streamingEntertainmentImg from "@/assets/streaming-entertainment.jpg";
+import familyTechnologyImg from "@/assets/family-technology.jpg";
+
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
   const prefersReducedMotion = useReducedMotion();
@@ -113,6 +120,16 @@ const Index = () => {
 
       {/* Hero Section - Beautiful & Elegant */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
+        
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <ResponsiveImage 
+            src={connectedWorldImg}
+            alt="Conexão tecnológica global"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+        </div>
         
         {/* Sophisticated Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
@@ -474,6 +491,13 @@ const Index = () => {
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0">
+                <ResponsiveImage 
+                  src={streamingEntertainmentImg}
+                  alt="Streaming e entretenimento"
+                  className="w-full h-full object-cover opacity-10"
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-200/20 to-transparent animate-shimmer"></div>
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Tv className="w-12 h-12 text-orange-500" />
@@ -512,6 +536,13 @@ const Index = () => {
             </Card>
 
             <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0">
+                <ResponsiveImage 
+                  src={familyTechnologyImg}
+                  alt="Família usando tecnologia"
+                  className="w-full h-full object-cover opacity-10"
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-200/20 to-transparent animate-shimmer"></div>
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Smartphone className="w-12 h-12 text-blue-500" />
@@ -531,6 +562,13 @@ const Index = () => {
             </Card>
 
             <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0">
+                <ResponsiveImage 
+                  src={routerTechnologyImg}
+                  alt="Tecnologia de roteador avançada"
+                  className="w-full h-full object-cover opacity-10"
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-200/20 to-transparent animate-shimmer"></div>
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Zap className="w-12 h-12 text-purple-500" />
@@ -644,17 +682,26 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-10 shadow-xl">
-              <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-                Tecnologia que Conecta Corações
-              </h3>
-              <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed">
-                Na SaraivaNet, acreditamos que internet é conexão humana. É o avô vendo o neto pela primeira vez por videochamada, é o estudante acessando conhecimento.
-              </p>
-              <div className="text-center">
-                <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-lg">
-                  <Heart className="w-6 h-6 mr-2" />
-                  Feito com amor no Piauí desde 2003
+            <div className="relative bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-10 shadow-xl overflow-hidden">
+              <div className="absolute inset-0">
+                <ResponsiveImage 
+                  src={dataCenterImg}
+                  alt="Data center moderno e tecnológico"
+                  className="w-full h-full object-cover opacity-15"
+                />
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+                  Tecnologia que Conecta Corações
+                </h3>
+                <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed">
+                  Na SaraivaNet, acreditamos que internet é conexão humana. É o avô vendo o neto pela primeira vez por videochamada, é o estudante acessando conhecimento.
+                </p>
+                <div className="text-center">
+                  <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
+                    <Heart className="w-6 h-6 mr-2" />
+                    Feito com amor no Piauí desde 2003
+                  </div>
                 </div>
               </div>
             </div>
