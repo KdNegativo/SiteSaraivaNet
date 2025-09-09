@@ -14,6 +14,7 @@ import ResponsiveImage from "@/components/ResponsiveImage";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
+import heroYoungMan from "@/assets/hero-young-man.jpg";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -111,156 +112,159 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Beautiful & Elegant */}
+      {/* Hero Section - Claro Style */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
         
-        {/* Sophisticated Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%)
-          `,
-          backgroundSize: '80px 80px, 60px 60px, 120px 120px'
-        }}></div>
-        
-        {/* Elegant Floating Elements */}
-        {!prefersReducedMotion && (
-          <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-orange-300/25 to-yellow-300/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-red-300/20 to-pink-300/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s', animationDelay: '3s' }}></div>
-            <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-yellow-300/15 to-orange-300/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '5s' }}></div>
-          </div>
-        )}
-        
-        {/* Main Content */}
-        <div className="relative z-10 w-full px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            
-            {/* Mobile Version */}
-            <div className="md:hidden">
-              <AnimatedSection animation="fade-up">
-                <div className="text-center space-y-8">
-                  {/* Elegant Badge */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-5 py-3 rounded-full font-bold text-sm shadow-xl border-2 border-yellow-200/50">
-                    <Star className="w-4 h-4 mr-2 fill-current animate-pulse" />
-                    <span>🔥 Internet + TV Grátis</span>
-                  </div>
-                  
-                  {/* Luxurious Title */}
-                  <h1 className="text-4xl font-black leading-tight text-white font-playfair">
-                    <span className="block mb-2" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)'}}>Internet</span>
-                    <span className="block" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)'}}>+ SaraivaTV</span>
-                  </h1>
-                  
-                  {/* Elegant Subtitle */}
-                  <p className="text-lg text-white/95 font-medium" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.6)'}}>
-                    🚀 Internet ultrarrápida + App gratuito
-                  </p>
-
-                  {/* Beautiful Cards */}
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
-                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
-                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
-                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
-                    ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-5 flex flex-col items-center space-y-3 border border-white/40 shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20`}>
-                        <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl">
-                          <card.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <span className="font-bold text-sm text-white text-center drop-shadow-2xl">{card.text}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Beautiful Button */}
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-2xl font-black text-lg shadow-2xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/30"
-                  >
-                    🚀 Contratar Agora
-                  </TouchButton>
-
-                  {/* Elegant Stats */}
-                  <div className="grid grid-cols-2 gap-3 text-center">
-                    {[
-                      { value: 1000, label: "Clientes", suffix: "+" },
-                      { value: 99, label: "Uptime", suffix: "%" },
-                      { value: 20, label: "Canais", suffix: "+" },
-                      { value: 24, label: "Online", suffix: "h" }
-                    ].map((stat, index) => (
-                      <div key={index} className="bg-white/20 backdrop-blur-lg rounded-xl p-3 border border-white/30 shadow-lg hover:bg-white/25 hover:scale-105 transition-all duration-300">
-                        <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </AnimatedSection>
+        {/* Mobile Version */}
+        <div className="md:hidden w-full px-4 py-12">
+          <div className="relative z-10">
+            {/* Limited Time Badge */}
+            <div className="absolute top-4 right-4 bg-white/90 text-orange-600 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+              Por tempo limitado
             </div>
-
-            {/* Desktop Version */}
-            <div className="hidden md:block">
-              <AnimatedSection animation="fade-up">
-                <div className="text-center space-y-12">
-                  {/* Elegant Badge Desktop */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-xl border-2 border-yellow-200/50">
-                    <Star className="w-5 h-5 mr-3 fill-current animate-pulse" />
-                    <span>🔥 Internet + TV Grátis</span>
-                  </div>
-                  
-                  {/* Sophisticated Title */}
-                  <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto font-playfair">
-                    <span className="block mb-4" style={{textShadow: '5px 5px 20px rgba(0,0,0,0.8), 0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,165,0,0.4)'}}>Internet + SaraivaTV</span>
+            
+            <AnimatedSection animation="fade-up">
+              <div className="space-y-6">
+                {/* Strong Title */}
+                <div>
+                  <h1 className="text-3xl font-black text-white leading-tight" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
+                    SaraivaNet está na sua -<br />
+                    <span className="text-yellow-300">com bônus especial.</span>
                   </h1>
-                  
-                  {/* Beautiful Subtitle */}
-                  <p className="text-2xl lg:text-3xl text-white/95 font-medium max-w-3xl mx-auto" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.6)'}}>
-                    🚀 Internet ultrarrápida + App gratuito
-                  </p>
+                </div>
 
-                  {/* Stunning Cards */}
-                  <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
-                    {[
-                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
-                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
-                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
-                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
-                    ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-4xl p-10 flex flex-col items-center space-y-5 border border-white/50 shadow-2xl hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-white/30`}>
-                        <div className="w-20 h-20 bg-white/35 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl hover:rotate-12 transition-transform duration-300">
-                          <card.icon className="w-8 h-8 text-white" />
-                        </div>
-                        <span className="font-bold text-xl text-white text-center drop-shadow-2xl">{card.text}</span>
-                      </div>
-                    ))}
+                {/* Person Photo */}
+                <div className="flex justify-center my-6">
+                  <img 
+                    src={heroYoungMan} 
+                    alt="Jovem feliz usando internet SaraivaNet" 
+                    className="w-48 h-48 object-cover rounded-2xl shadow-2xl"
+                  />
+                </div>
+
+                {/* Benefit Cards */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-orange-600/90 rounded-2xl p-4 text-center border border-orange-400">
+                    <div className="text-white font-bold text-lg">De 100MB</div>
+                    <div className="text-white/90 text-sm">Para</div>
+                    <div className="text-yellow-300 font-black text-2xl">300MB</div>
+                    <div className="text-white/80 text-xs mt-1">sendo 5GB para apps</div>
+                    <div className="flex justify-center space-x-1 mt-2">
+                      <Wifi className="w-4 h-4 text-white" />
+                      <Tv className="w-4 h-4 text-white" />
+                      <Music className="w-4 h-4 text-white" />
+                    </div>
                   </div>
 
-                  {/* Stunning Button */}
-                  <TouchButton 
-                    onClick={handleWhatsAppClick} 
-                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-16 py-6 rounded-2xl font-black text-2xl shadow-2xl border-3 border-yellow-200/50 hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-yellow-500/40"
-                  >
-                    🚀 Contratar Agora
-                  </TouchButton>
+                  <div className="bg-white/95 rounded-2xl p-4 text-center">
+                    <div className="text-orange-600 font-bold text-sm">+</div>
+                    <div className="text-orange-600 font-black text-xl">SaraivaTV</div>
+                    <div className="text-orange-600 font-bold text-sm">ilimitado</div>
+                    <div className="text-orange-600 font-bold text-sm">pra tudo</div>
+                    <div className="text-2xl mt-2">📺</div>
+                  </div>
 
-                  {/* Beautiful Stats Desktop */}
-                  <div className="flex justify-center gap-12 text-center max-w-3xl mx-auto">
-                    {[
-                      { value: 1000, label: "Clientes", suffix: "+" },
-                      { value: 99, label: "Uptime", suffix: "%" },
-                      { value: 20, label: "Canais", suffix: "+" },
-                      { value: 24, label: "Online", suffix: "h" }
-                    ].map((stat, index) => (
-                      <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-xl hover:bg-white/25 hover:scale-110 hover:-translate-y-1 transition-all duration-500">
-                        <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
-                      </div>
-                    ))}
+                  <div className="bg-white/95 rounded-2xl p-4 text-center">
+                    <div className="text-orange-600 text-xs">R$</div>
+                    <div className="text-orange-600 font-black text-3xl">79</div>
+                    <div className="text-orange-600 text-xs">,90/mês</div>
+                    <div className="text-orange-600 font-bold text-sm mt-1">+</div>
+                  </div>
+
+                  <div className="bg-white/95 rounded-2xl p-4 text-center">
+                    <div className="text-orange-600 font-bold text-lg">Instalação</div>
+                    <div className="text-orange-600 font-black text-xl">grátis</div>
+                    <div className="text-2xl mt-2">🎁</div>
                   </div>
                 </div>
-              </AnimatedSection>
+
+                {/* CTA Button */}
+                <TouchButton 
+                  onClick={handleWhatsAppClick}
+                  className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black text-lg py-4 rounded-2xl shadow-xl transition-all duration-300"
+                >
+                  Contratar
+                </TouchButton>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+
+        {/* Desktop Version */}
+        <div className="hidden md:block w-full">
+          <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="grid grid-cols-12 gap-8 items-center min-h-[600px]">
+              
+              {/* Limited Time Badge */}
+              <div className="absolute top-20 right-8 bg-white/90 text-orange-600 px-6 py-3 rounded-full font-bold shadow-lg z-20">
+                Por tempo limitado
+              </div>
+              
+              {/* Left Content */}
+              <div className="col-span-6 space-y-8">
+                <AnimatedSection animation="fade-up">
+                  {/* Strong Title */}
+                  <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.8)'}}>
+                    SaraivaNet está na sua -<br />
+                    <span className="text-yellow-300">com bônus especial.</span>
+                  </h1>
+
+                  {/* Benefit Cards */}
+                  <div className="grid grid-cols-2 gap-4 max-w-md">
+                    <div className="bg-orange-600/90 rounded-2xl p-6 text-center border border-orange-400">
+                      <div className="text-white font-bold text-xl">De 100MB</div>
+                      <div className="text-white/90">Para</div>
+                      <div className="text-yellow-300 font-black text-4xl">300MB</div>
+                      <div className="text-white/80 text-sm mt-2">sendo 5GB para apps</div>
+                      <div className="flex justify-center space-x-2 mt-3">
+                        <Wifi className="w-5 h-5 text-white" />
+                        <Tv className="w-5 h-5 text-white" />
+                        <Music className="w-5 h-5 text-white" />
+                      </div>
+                    </div>
+
+                    <div className="bg-white/95 rounded-2xl p-6 text-center">
+                      <div className="text-orange-600 font-bold text-lg">+</div>
+                      <div className="text-orange-600 font-black text-2xl">SaraivaTV</div>
+                      <div className="text-orange-600 font-bold">ilimitado</div>
+                      <div className="text-orange-600 font-bold">pra tudo</div>
+                      <div className="text-3xl mt-2">📺</div>
+                    </div>
+
+                    <div className="bg-white/95 rounded-2xl p-6 text-center">
+                      <div className="text-orange-600">R$</div>
+                      <div className="text-orange-600 font-black text-5xl">79</div>
+                      <div className="text-orange-600">,90/mês</div>
+                      <div className="text-orange-600 font-bold text-lg mt-1">+</div>
+                    </div>
+
+                    <div className="bg-white/95 rounded-2xl p-6 text-center">
+                      <div className="text-orange-600 font-bold text-xl">Instalação</div>
+                      <div className="text-orange-600 font-black text-2xl">grátis</div>
+                      <div className="text-4xl mt-2">🎁</div>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <TouchButton 
+                    onClick={handleWhatsAppClick}
+                    className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black text-2xl px-12 py-4 rounded-2xl shadow-xl hover:scale-105 transition-all duration-300"
+                  >
+                    Contratar
+                  </TouchButton>
+                </AnimatedSection>
+              </div>
+
+              {/* Right Content - Hero Image */}
+              <div className="col-span-6 flex justify-center">
+                <AnimatedSection animation="slide-right">
+                  <img 
+                    src={heroYoungMan} 
+                    alt="Jovem feliz usando internet SaraivaNet" 
+                    className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-3xl shadow-2xl"
+                  />
+                </AnimatedSection>
+              </div>
             </div>
           </div>
         </div>
