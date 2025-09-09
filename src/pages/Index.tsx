@@ -135,13 +135,7 @@ const Index = () => {
 
       {/* Hero Section - Modern & Premium */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{
-        background: `
-          linear-gradient(135deg, rgba(249, 115, 22, 0.95) 0%, rgba(239, 68, 68, 0.9) 25%, rgba(220, 38, 38, 0.85) 50%, rgba(185, 28, 28, 0.9) 75%, rgba(153, 27, 27, 0.95) 100%),
-          url(${familyUsingInternet})
-        `,
-        backgroundSize: 'cover, cover',
-        backgroundPosition: 'center, right center',
-        backgroundBlendMode: 'overlay, normal'
+        background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'
       }}>
         
         {/* Modern Overlay Effects */}
@@ -191,28 +185,19 @@ const Index = () => {
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                   {/* Premium Cards with Real Images */}
+                   {/* Beautiful Cards */}
                    <div className="grid grid-cols-2 gap-4">
                      {[
-                       { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/90 to-red-500/80", image: womanWorkingOnline },
-                       { icon: Tv, text: "TV Premium", gradient: "from-blue-500/90 to-purple-500/80", image: friendsStreamingTv },
-                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/90 to-emerald-500/80", image: gamerOnline },
-                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/90 to-pink-500/80", image: businessVideoCall }
+                       { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
+                       { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
+                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
+                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
                      ].map((card, index) => (
-                       <div key={index} className="relative overflow-hidden rounded-3xl group hover:scale-110 hover:-translate-y-2 transition-all duration-500 shadow-2xl">
-                         <div className="absolute inset-0">
-                           <ResponsiveImage 
-                             src={card.image} 
-                             alt={card.text}
-                             className="w-full h-full object-cover"
-                           />
+                       <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-5 flex flex-col items-center space-y-3 border border-white/40 shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20`}>
+                         <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl">
+                           <card.icon className="w-6 h-6 text-white" />
                          </div>
-                         <div className={`relative bg-gradient-to-br ${card.gradient} backdrop-blur-sm p-5 flex flex-col items-center space-y-3 border border-white/50 h-full`}>
-                           <div className="w-12 h-12 bg-white/40 backdrop-blur-lg rounded-2xl flex items-center justify-center shadow-2xl">
-                             <card.icon className="w-6 h-6 text-white" />
-                           </div>
-                           <span className="font-bold text-sm text-white text-center drop-shadow-2xl">{card.text}</span>
-                         </div>
+                         <span className="font-bold text-sm text-white text-center drop-shadow-2xl">{card.text}</span>
                        </div>
                      ))}
                    </div>
@@ -262,28 +247,19 @@ const Index = () => {
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                   {/* Premium Cards Desktop with Real Images */}
+                   {/* Stunning Cards */}
                    <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
                      {[
-                       { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/90 to-red-500/80", image: womanWorkingOnline },
-                       { icon: Tv, text: "TV Premium", gradient: "from-blue-500/90 to-purple-500/80", image: friendsStreamingTv },
-                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/90 to-emerald-500/80", image: gamerOnline },
-                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/90 to-pink-500/80", image: businessVideoCall }
+                       { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
+                       { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
+                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
+                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
                      ].map((card, index) => (
-                       <div key={index} className="relative overflow-hidden rounded-4xl group hover:scale-110 hover:-translate-y-3 transition-all duration-700 shadow-2xl">
-                         <div className="absolute inset-0">
-                           <ResponsiveImage 
-                             src={card.image} 
-                             alt={card.text}
-                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                           />
+                       <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-4xl p-10 flex flex-col items-center space-y-5 border border-white/50 shadow-2xl hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-white/30`}>
+                         <div className="w-20 h-20 bg-white/35 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl hover:rotate-12 transition-transform duration-300">
+                           <card.icon className="w-8 h-8 text-white" />
                          </div>
-                         <div className={`relative bg-gradient-to-br ${card.gradient} backdrop-blur-sm p-10 flex flex-col items-center space-y-5 border border-white/60 h-full`}>
-                           <div className="w-20 h-20 bg-white/50 backdrop-blur-lg rounded-3xl flex items-center justify-center shadow-2xl hover:rotate-12 transition-transform duration-300">
-                             <card.icon className="w-8 h-8 text-white" />
-                           </div>
-                           <span className="font-bold text-xl text-white text-center drop-shadow-2xl">{card.text}</span>
-                         </div>
+                         <span className="font-bold text-xl text-white text-center drop-shadow-2xl">{card.text}</span>
                        </div>
                      ))}
                    </div>
@@ -318,13 +294,7 @@ const Index = () => {
 
       {/* Plans Section - Modern & Premium */}
       <section id="planos" className="relative overflow-hidden py-20 px-4" style={{
-        background: `
-          linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 25%, rgba(51, 65, 85, 0.85) 50%, rgba(71, 85, 105, 0.9) 75%, rgba(100, 116, 139, 0.95) 100%),
-          url(${businessVideoCall})
-        `,
-        backgroundSize: 'cover, cover',
-        backgroundPosition: 'center, center',
-        backgroundBlendMode: 'overlay, normal'
+        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'
       }}>
         
         {/* Modern Overlay Effects */}
