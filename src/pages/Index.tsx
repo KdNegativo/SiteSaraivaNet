@@ -14,10 +14,7 @@ import ResponsiveImage from "@/components/ResponsiveImage";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
-import supportAgent from "@/assets/support-agent.jpg";
-import familyInternet from "@/assets/family-internet.jpg";
-import youngStreaming from "@/assets/young-streaming.jpg";
-import radioListener from "@/assets/radio-listener.jpg";
+import heroFamily from "@/assets/hero-family.jpg";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -152,6 +149,16 @@ const Index = () => {
                     <span>🔥 Internet + TV Grátis</span>
                   </div>
                   
+                  {/* Hero Image */}
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30">
+                    <img 
+                      src={heroFamily} 
+                      alt="Família feliz usando internet" 
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                  </div>
+                  
                   {/* Luxurious Title */}
                   <h1 className="text-4xl font-black leading-tight text-white font-playfair">
                     <span className="block mb-2" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)'}}>Internet</span>
@@ -163,37 +170,6 @@ const Index = () => {
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                   {/* Clean Cards com Fotos Reais */}
-                   <div className="grid grid-cols-2 gap-3">
-                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border border-orange-200 shadow-lg hover:scale-105 transition-all duration-300">
-                       <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg border-2 border-orange-100">
-                         <img src={familyInternet} alt="Família usando internet" className="w-full h-full object-cover" />
-                       </div>
-                       <span className="font-bold text-sm text-gray-800 text-center">Internet ULTRA</span>
-                     </div>
-                     
-                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border border-orange-200 shadow-lg hover:scale-105 transition-all duration-300">
-                       <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg border-2 border-orange-100">
-                         <img src={youngStreaming} alt="Jovem assistindo TV" className="w-full h-full object-cover" />
-                       </div>
-                       <span className="font-bold text-sm text-gray-800 text-center">SaraivaTV</span>
-                     </div>
-                     
-                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border border-orange-200 shadow-lg hover:scale-105 transition-all duration-300">
-                       <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg border-2 border-orange-100">
-                         <img src={radioListener} alt="Pessoa ouvindo rádio" className="w-full h-full object-cover" />
-                       </div>
-                       <span className="font-bold text-sm text-gray-800 text-center">Rádios 24h</span>
-                     </div>
-                     
-                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center space-y-2 border border-orange-200 shadow-lg hover:scale-105 transition-all duration-300">
-                       <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg border-2 border-orange-100">
-                         <img src={supportAgent} alt="Atendente sorrindo" className="w-full h-full object-cover" />
-                       </div>
-                       <span className="font-bold text-sm text-gray-800 text-center">Suporte VIP</span>
-                     </div>
-                   </div>
-
                   {/* Beautiful Button */}
                   <TouchButton 
                     onClick={handleWhatsAppClick} 
@@ -202,24 +178,44 @@ const Index = () => {
                     🚀 Contratar Agora
                   </TouchButton>
 
-                   {/* Diferenciais Clean */}
-                   <div className="grid grid-cols-2 gap-3 text-center">
-                     {[
-                       { value: 1000, label: "Clientes", suffix: "+", icon: Users },
-                       { value: 99, label: "Uptime", suffix: "%", icon: Shield },
-                       { value: 20, label: "Canais", suffix: "+", icon: Tv },
-                       { value: 24, label: "Online", suffix: "h", icon: Clock }
-                     ].map((stat, index) => (
-                       <div key={index} className="bg-white/90 backdrop-blur-lg rounded-xl p-3 border border-orange-200 shadow-lg hover:bg-white hover:scale-105 transition-all duration-300">
-                         <div className="flex items-center justify-center space-x-2">
-                           <stat.icon className="w-4 h-4 text-orange-600" />
-                           <div className="text-gray-800">
-                             <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
-                           </div>
-                         </div>
-                       </div>
-                     ))}
-                   </div>
+                  {/* Linha de Benefícios */}
+                  <div className="flex justify-center items-center space-x-6 text-white">
+                    <div className="flex items-center space-x-2">
+                      <Zap className="w-5 h-5 text-yellow-300" />
+                      <span className="text-sm font-semibold">Fibra</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Tv className="w-5 h-5 text-blue-300" />
+                      <span className="text-sm font-semibold">Streaming</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Clock className="w-5 h-5 text-green-300" />
+                      <span className="text-sm font-semibold">24h</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Shield className="w-5 h-5 text-purple-300" />
+                      <span className="text-sm font-semibold">Suporte VIP</span>
+                    </div>
+                  </div>
+
+                  {/* Diferenciais Clean */}
+                  <div className="grid grid-cols-2 gap-3 text-center">
+                    {[
+                      { value: 1000, label: "Clientes", suffix: "+", icon: Users },
+                      { value: 99, label: "Uptime", suffix: "%", icon: Shield },
+                      { value: 20, label: "Canais", suffix: "+", icon: Tv },
+                      { value: 24, label: "Online", suffix: "h", icon: Clock }
+                    ].map((stat, index) => (
+                      <div key={index} className="bg-white/90 backdrop-blur-lg rounded-xl p-3 border border-orange-200 shadow-lg hover:bg-white hover:scale-105 transition-all duration-300">
+                        <div className="flex items-center justify-center space-x-2">
+                          <stat.icon className="w-4 h-4 text-orange-600" />
+                          <div className="text-gray-800">
+                            <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </AnimatedSection>
             </div>
@@ -234,6 +230,19 @@ const Index = () => {
                     <span>🔥 Internet + TV Grátis</span>
                   </div>
                   
+                  {/* Hero Image Grande */}
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 max-w-4xl mx-auto">
+                    <img 
+                      src={heroFamily} 
+                      alt="Família feliz usando internet em casa" 
+                      className="w-full h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <p className="text-lg font-semibold drop-shadow-2xl">Conecte sua família ao futuro</p>
+                    </div>
+                  </div>
+                  
                   {/* Sophisticated Title */}
                   <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto font-playfair">
                     <span className="block mb-4" style={{textShadow: '5px 5px 20px rgba(0,0,0,0.8), 0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,165,0,0.4)'}}>Internet + SaraivaTV</span>
@@ -244,37 +253,6 @@ const Index = () => {
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                   {/* Cards Clean com Fotos Reais Desktop */}
-                   <div className="grid grid-cols-4 gap-6 max-w-4xl mx-auto">
-                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-6 flex flex-col items-center space-y-4 border border-orange-200 shadow-lg hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-                       <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-3 border-orange-100">
-                         <img src={familyInternet} alt="Família usando internet" className="w-full h-full object-cover" />
-                       </div>
-                       <span className="font-bold text-lg text-gray-800 text-center">Internet ULTRA</span>
-                     </div>
-                     
-                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-6 flex flex-col items-center space-y-4 border border-orange-200 shadow-lg hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-                       <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-3 border-orange-100">
-                         <img src={youngStreaming} alt="Jovem assistindo TV" className="w-full h-full object-cover" />
-                       </div>
-                       <span className="font-bold text-lg text-gray-800 text-center">SaraivaTV</span>
-                     </div>
-                     
-                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-6 flex flex-col items-center space-y-4 border border-orange-200 shadow-lg hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-                       <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-3 border-orange-100">
-                         <img src={radioListener} alt="Pessoa ouvindo rádio" className="w-full h-full object-cover" />
-                       </div>
-                       <span className="font-bold text-lg text-gray-800 text-center">Rádios 24h</span>
-                     </div>
-                     
-                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-6 flex flex-col items-center space-y-4 border border-orange-200 shadow-lg hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-                       <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-3 border-orange-100">
-                         <img src={supportAgent} alt="Atendente sorrindo" className="w-full h-full object-cover" />
-                       </div>
-                       <span className="font-bold text-lg text-gray-800 text-center">Suporte VIP</span>
-                     </div>
-                   </div>
-
                   {/* Stunning Button */}
                   <TouchButton 
                     onClick={handleWhatsAppClick} 
@@ -283,24 +261,44 @@ const Index = () => {
                     🚀 Contratar Agora
                   </TouchButton>
 
-                   {/* Diferenciais Clean Desktop */}
-                   <div className="flex justify-center gap-8 text-center max-w-4xl mx-auto">
-                     {[
-                       { value: 1000, label: "Clientes", suffix: "+", icon: Users },
-                       { value: 99, label: "Uptime", suffix: "%", icon: Shield },
-                       { value: 20, label: "Canais", suffix: "+", icon: Tv },
-                       { value: 24, label: "Online", suffix: "h", icon: Clock }
-                     ].map((stat, index) => (
-                       <div key={index} className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 border border-orange-200 shadow-lg hover:bg-white hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-                         <div className="flex flex-col items-center space-y-2">
-                           <stat.icon className="w-6 h-6 text-orange-600" />
-                           <div className="text-gray-800">
-                             <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
-                           </div>
-                         </div>
-                       </div>
-                     ))}
-                   </div>
+                  {/* Linha de Benefícios */}
+                  <div className="flex justify-center items-center space-x-12 text-white">
+                    <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <Zap className="w-6 h-6 text-yellow-300" />
+                      <span className="text-lg font-semibold">Fibra Óptica</span>
+                    </div>
+                    <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <Tv className="w-6 h-6 text-blue-300" />
+                      <span className="text-lg font-semibold">Streaming</span>
+                    </div>
+                    <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <Clock className="w-6 h-6 text-green-300" />
+                      <span className="text-lg font-semibold">24h Online</span>
+                    </div>
+                    <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <Shield className="w-6 h-6 text-purple-300" />
+                      <span className="text-lg font-semibold">Suporte VIP</span>
+                    </div>
+                  </div>
+
+                  {/* Diferenciais Clean Desktop */}
+                  <div className="flex justify-center gap-8 text-center max-w-4xl mx-auto">
+                    {[
+                      { value: 1000, label: "Clientes", suffix: "+", icon: Users },
+                      { value: 99, label: "Uptime", suffix: "%", icon: Shield },
+                      { value: 20, label: "Canais", suffix: "+", icon: Tv },
+                      { value: 24, label: "Online", suffix: "h", icon: Clock }
+                    ].map((stat, index) => (
+                      <div key={index} className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 border border-orange-200 shadow-lg hover:bg-white hover:scale-105 hover:-translate-y-1 transition-all duration-300">
+                        <div className="flex flex-col items-center space-y-2">
+                          <stat.icon className="w-6 h-6 text-orange-600" />
+                          <div className="text-gray-800">
+                            <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </AnimatedSection>
             </div>
