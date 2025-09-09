@@ -15,14 +15,6 @@ import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
 
-// Import real images
-import familyUsingInternet from "@/assets/family-using-internet.jpg";
-import womanWorkingOnline from "@/assets/woman-working-online.jpg";
-import friendsStreamingTv from "@/assets/friends-streaming-tv.jpg";
-import gamerOnline from "@/assets/gamer-online.jpg";
-import businessVideoCall from "@/assets/business-video-call.jpg";
-import heroTechBackground from "@/assets/hero-tech-background.jpg";
-
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
   const prefersReducedMotion = useReducedMotion();
@@ -53,29 +45,15 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%)'}}>
-      {/* Modern Tech Background Pattern */}
-      <div className="absolute inset-0 opacity-30" style={{
-        backgroundImage: `
-          url(${heroTechBackground}),
-          linear-gradient(45deg, rgba(249, 115, 22, 0.1) 0%, rgba(239, 68, 68, 0.1) 50%, rgba(59, 130, 246, 0.1) 100%),
-          radial-gradient(circle at 25% 25%, rgba(249, 115, 22, 0.2) 0%, transparent 50%),
-          radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)
-        `,
-        backgroundSize: 'cover, 100% 100%, 800px 800px, 600px 600px',
-        backgroundPosition: 'center, center, top left, bottom right',
-        backgroundBlendMode: 'overlay, normal, multiply, screen'
-      }}></div>
-      
-      {/* Animated Tech Particles */}
+    <div className="min-h-screen relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fff9f5 0%, #ffeee0 25%, #ffe5d0 50%, #ffddc0 75%, #ffd5b0 100%)'}}>
+      {/* Elegant Background Pattern */}
       <div className="absolute inset-0" style={{
         backgroundImage: `
-          radial-gradient(circle at 20% 30%, rgba(249, 115, 22, 0.1) 2px, transparent 2px),
-          radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.08) 1px, transparent 1px),
-          radial-gradient(circle at 60% 20%, rgba(34, 197, 94, 0.06) 1.5px, transparent 1.5px)
+          radial-gradient(circle at 20% 20%, rgba(255, 102, 0, 0.05) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.03) 0%, transparent 50%),
+          radial-gradient(circle at 40% 60%, rgba(255, 140, 0, 0.02) 0%, transparent 50%)
         `,
-        backgroundSize: '100px 100px, 80px 80px, 120px 120px',
-        animation: 'drift 20s linear infinite'
+        backgroundSize: '800px 800px, 600px 600px, 400px 400px'
       }}></div>
       {/* Floating Components */}
       <ChatBot />
@@ -133,22 +111,18 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Modern & Premium */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{
-        background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'
-      }}>
+      {/* Hero Section - Beautiful & Elegant */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
         
-        {/* Modern Overlay Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
-        
-        {/* Tech Grid Pattern */}
-        <div className="absolute inset-0 opacity-20" style={{
+        {/* Sophisticated Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
+        <div className="absolute inset-0" style={{
           backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%)
           `,
-          backgroundSize: '50px 50px'
+          backgroundSize: '80px 80px, 60px 60px, 120px 120px'
         }}></div>
         
         {/* Elegant Floating Elements */}
@@ -185,22 +159,22 @@ const Index = () => {
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                   {/* Beautiful Cards */}
-                   <div className="grid grid-cols-2 gap-4">
-                     {[
-                       { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
-                       { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
-                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
-                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
-                     ].map((card, index) => (
-                       <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-5 flex flex-col items-center space-y-3 border border-white/40 shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20`}>
-                         <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl">
-                           <card.icon className="w-6 h-6 text-white" />
-                         </div>
-                         <span className="font-bold text-sm text-white text-center drop-shadow-2xl">{card.text}</span>
-                       </div>
-                     ))}
-                   </div>
+                  {/* Beautiful Cards */}
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
+                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
+                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
+                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                    ].map((card, index) => (
+                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-5 flex flex-col items-center space-y-3 border border-white/40 shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20`}>
+                        <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl">
+                          <card.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="font-bold text-sm text-white text-center drop-shadow-2xl">{card.text}</span>
+                      </div>
+                    ))}
+                  </div>
 
                   {/* Beautiful Button */}
                   <TouchButton 
@@ -247,22 +221,22 @@ const Index = () => {
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                   {/* Stunning Cards */}
-                   <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
-                     {[
-                       { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
-                       { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
-                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
-                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
-                     ].map((card, index) => (
-                       <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-4xl p-10 flex flex-col items-center space-y-5 border border-white/50 shadow-2xl hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-white/30`}>
-                         <div className="w-20 h-20 bg-white/35 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl hover:rotate-12 transition-transform duration-300">
-                           <card.icon className="w-8 h-8 text-white" />
-                         </div>
-                         <span className="font-bold text-xl text-white text-center drop-shadow-2xl">{card.text}</span>
-                       </div>
-                     ))}
-                   </div>
+                  {/* Stunning Cards */}
+                  <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
+                    {[
+                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
+                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
+                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
+                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                    ].map((card, index) => (
+                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-4xl p-10 flex flex-col items-center space-y-5 border border-white/50 shadow-2xl hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-white/30`}>
+                        <div className="w-20 h-20 bg-white/35 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl hover:rotate-12 transition-transform duration-300">
+                          <card.icon className="w-8 h-8 text-white" />
+                        </div>
+                        <span className="font-bold text-xl text-white text-center drop-shadow-2xl">{card.text}</span>
+                      </div>
+                    ))}
+                  </div>
 
                   {/* Stunning Button */}
                   <TouchButton 
@@ -292,13 +266,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - Modern & Premium */}
-      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{
-        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'
-      }}>
+      {/* Plans Section - Clean & Beautiful */}
+      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
         
-        {/* Modern Overlay Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-blue-500/10"></div>
+        {/* Sophisticated Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-blue-500/8"></div>
         
         {/* Elegant Floating Elements */}
         {!prefersReducedMotion && (
