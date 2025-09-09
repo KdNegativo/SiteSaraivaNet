@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun, Globe, Signal, PlayCircle, Gamepad2, Video, Home } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Wifi, Tv, Music, Headphones, Smartphone, Zap, Users, Heart, Star, Shield, Award, CheckCircle, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import RealMap from "@/components/RealMap";
@@ -14,10 +14,14 @@ import ResponsiveImage from "@/components/ResponsiveImage";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
-import familyImage from "@/assets/family-internet-happy.jpg";
-import womanVideoImage from "@/assets/woman-video-call.jpg";
-import friendsStreamingImage from "@/assets/friends-streaming.jpg";
-import gamerImage from "@/assets/gamer-setup.jpg";
+
+// Import real images
+import familyUsingInternet from "@/assets/family-using-internet.jpg";
+import womanWorkingOnline from "@/assets/woman-working-online.jpg";
+import friendsStreamingTv from "@/assets/friends-streaming-tv.jpg";
+import gamerOnline from "@/assets/gamer-online.jpg";
+import businessVideoCall from "@/assets/business-video-call.jpg";
+import heroTechBackground from "@/assets/hero-tech-background.jpg";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -49,15 +53,29 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fff9f5 0%, #ffeee0 25%, #ffe5d0 50%, #ffddc0 75%, #ffd5b0 100%)'}}>
-      {/* Elegant Background Pattern */}
+    <div className="min-h-screen relative overflow-hidden" style={{background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%)'}}>
+      {/* Modern Tech Background Pattern */}
+      <div className="absolute inset-0 opacity-30" style={{
+        backgroundImage: `
+          url(${heroTechBackground}),
+          linear-gradient(45deg, rgba(249, 115, 22, 0.1) 0%, rgba(239, 68, 68, 0.1) 50%, rgba(59, 130, 246, 0.1) 100%),
+          radial-gradient(circle at 25% 25%, rgba(249, 115, 22, 0.2) 0%, transparent 50%),
+          radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)
+        `,
+        backgroundSize: 'cover, 100% 100%, 800px 800px, 600px 600px',
+        backgroundPosition: 'center, center, top left, bottom right',
+        backgroundBlendMode: 'overlay, normal, multiply, screen'
+      }}></div>
+      
+      {/* Animated Tech Particles */}
       <div className="absolute inset-0" style={{
         backgroundImage: `
-          radial-gradient(circle at 20% 20%, rgba(255, 102, 0, 0.05) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.03) 0%, transparent 50%),
-          radial-gradient(circle at 40% 60%, rgba(255, 140, 0, 0.02) 0%, transparent 50%)
+          radial-gradient(circle at 20% 30%, rgba(249, 115, 22, 0.1) 2px, transparent 2px),
+          radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+          radial-gradient(circle at 60% 20%, rgba(34, 197, 94, 0.06) 1.5px, transparent 1.5px)
         `,
-        backgroundSize: '800px 800px, 600px 600px, 400px 400px'
+        backgroundSize: '100px 100px, 80px 80px, 120px 120px',
+        animation: 'drift 20s linear infinite'
       }}></div>
       {/* Floating Components */}
       <ChatBot />
@@ -115,18 +133,22 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Beautiful & Elegant */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
+      {/* Hero Section - Modern & Premium */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{
+        background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'
+      }}>
         
-        {/* Sophisticated Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
-        <div className="absolute inset-0" style={{
+        {/* Modern Overlay Effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+        
+        {/* Tech Grid Pattern */}
+        <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `
-            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%)
+            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '80px 80px, 60px 60px, 120px 120px'
+          backgroundSize: '50px 50px'
         }}></div>
         
         {/* Elegant Floating Elements */}
@@ -163,25 +185,22 @@ const Index = () => {
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Beautiful Cards */}
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { icon: Signal, text: "Fibra Óptica", gradient: "from-orange-500/80 to-red-500/70", description: "Ultra-rápida" },
-                      { icon: PlayCircle, text: "Streaming HD", gradient: "from-blue-500/80 to-purple-500/70", description: "SaraivaTV" },
-                      { icon: Globe, text: "24/7 Online", gradient: "from-green-500/80 to-emerald-500/70", description: "Sem limites" },
-                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70", description: "Atendimento" }
-                    ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-4 flex flex-col items-center space-y-3 border border-white/40 shadow-2xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:shadow-white/20`}>
-                        <div className="w-10 h-10 bg-white/30 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
-                          <card.icon className="w-5 h-5 text-white" />
-                        </div>
-                        <div className="text-center">
-                          <span className="font-bold text-xs text-white block drop-shadow-lg">{card.text}</span>
-                          <span className="text-xs text-white/80 font-medium drop-shadow-sm">{card.description}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                   {/* Beautiful Cards */}
+                   <div className="grid grid-cols-2 gap-4">
+                     {[
+                       { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
+                       { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
+                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
+                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                     ].map((card, index) => (
+                       <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-5 flex flex-col items-center space-y-3 border border-white/40 shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20`}>
+                         <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl">
+                           <card.icon className="w-6 h-6 text-white" />
+                         </div>
+                         <span className="font-bold text-sm text-white text-center drop-shadow-2xl">{card.text}</span>
+                       </div>
+                     ))}
+                   </div>
 
                   {/* Beautiful Button */}
                   <TouchButton 
@@ -228,25 +247,22 @@ const Index = () => {
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Stunning Cards */}
-                  <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
-                    {[
-                      { icon: Signal, text: "Fibra Óptica", gradient: "from-orange-500/90 to-red-500/80", description: "Ultra-rápida" },
-                      { icon: PlayCircle, text: "Streaming HD", gradient: "from-blue-500/90 to-purple-500/80", description: "SaraivaTV" },
-                      { icon: Globe, text: "24/7 Online", gradient: "from-green-500/90 to-emerald-500/80", description: "Sem limites" },
-                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/90 to-pink-500/80", description: "Atendimento" }
-                    ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-8 flex flex-col items-center space-y-4 border border-white/60 shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-white/40`}>
-                        <div className="w-16 h-16 bg-white/40 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl hover:rotate-6 transition-transform duration-300">
-                          <card.icon className="w-7 h-7 text-white" />
-                        </div>
-                        <div className="text-center">
-                          <span className="font-bold text-lg text-white block drop-shadow-lg">{card.text}</span>
-                          <span className="text-sm text-white/90 font-medium drop-shadow-sm">{card.description}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                   {/* Stunning Cards */}
+                   <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
+                     {[
+                       { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
+                       { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
+                       { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
+                       { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                     ].map((card, index) => (
+                       <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-4xl p-10 flex flex-col items-center space-y-5 border border-white/50 shadow-2xl hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-white/30`}>
+                         <div className="w-20 h-20 bg-white/35 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl hover:rotate-12 transition-transform duration-300">
+                           <card.icon className="w-8 h-8 text-white" />
+                         </div>
+                         <span className="font-bold text-xl text-white text-center drop-shadow-2xl">{card.text}</span>
+                       </div>
+                     ))}
+                   </div>
 
                   {/* Stunning Button */}
                   <TouchButton 
@@ -276,136 +292,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Real People Section - Showcasing real usage */}
-      <section className="relative py-20 px-4 bg-gradient-to-b from-white to-orange-50">
-        <div className="max-w-7xl mx-auto">
-          <AnimatedSection animation="fade-up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-black text-gray-800 mb-6">
-                Pessoas Reais, Conexões Reais
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Veja como nossa internet transforma o dia a dia das famílias em Eliseu Martins
-              </p>
-            </div>
-
-            {/* Desktop Layout */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  image: familyImage,
-                  title: "Família Conectada",
-                  description: "Internet rápida para toda família se divertir",
-                  icon: Home,
-                  gradient: "from-orange-500 to-red-500"
-                },
-                {
-                  image: womanVideoImage,
-                  title: "Home Office",
-                  description: "Trabalhe de casa com internet estável",
-                  icon: Video,
-                  gradient: "from-blue-500 to-purple-500"
-                },
-                {
-                  image: friendsStreamingImage,
-                  title: "Streaming Premium",
-                  description: "Assista filmes e séries sem travamentos",
-                  icon: PlayCircle,
-                  gradient: "from-green-500 to-emerald-500"
-                },
-                {
-                  image: gamerImage,
-                  title: "Gaming Online",
-                  description: "Jogue online com ping baixo e velocidade",
-                  icon: Gamepad2,
-                  gradient: "from-purple-500 to-pink-500"
-                }
-              ].map((item, index) => (
-                <div key={index} className="people-card group relative overflow-hidden rounded-2xl shadow-2xl">
-                  <div className="relative h-80 overflow-hidden image-overlay">
-                    <img 
-                      src={item.image} 
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    
-                    {/* Icon */}
-                    <div className={`icon-container absolute top-4 right-4 w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
-                      <item.icon className="w-6 h-6 text-white" />
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-xl font-bold text-white mb-2 text-shadow-elegant">{item.title}</h3>
-                      <p className="text-white/90 text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile Layout */}
-            <div className="md:hidden space-y-6">
-              {[
-                {
-                  image: familyImage,
-                  title: "Família Conectada",
-                  description: "Internet rápida para toda família",
-                  icon: Home,
-                  gradient: "from-orange-500 to-red-500"
-                },
-                {
-                  image: womanVideoImage,
-                  title: "Home Office",
-                  description: "Trabalhe de casa com estabilidade",
-                  icon: Video,
-                  gradient: "from-blue-500 to-purple-500"
-                }
-              ].map((item, index) => (
-                <div key={index} className="relative overflow-hidden rounded-2xl shadow-xl">
-                  <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    
-                    {/* Icon */}
-                    <div className={`absolute top-4 right-4 w-10 h-10 bg-gradient-to-br ${item.gradient} rounded-lg flex items-center justify-center shadow-lg`}>
-                      <item.icon className="w-5 h-5 text-white" />
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
-                      <p className="text-white/90 text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Call to Action */}
-            <div className="text-center mt-16">
-              <TouchButton 
-                onClick={handleWhatsAppClick} 
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                <Users className="w-5 h-5 mr-2 inline" />
-                Junte-se a mais de 1000 famílias
-              </TouchButton>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Plans Section - Clean & Beautiful */}
-      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
+      {/* Plans Section - Modern & Premium */}
+      <section id="planos" className="relative overflow-hidden py-20 px-4" style={{
+        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'
+      }}>
         
-        {/* Sophisticated Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-blue-500/8"></div>
+        {/* Modern Overlay Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-blue-500/10"></div>
         
         {/* Elegant Floating Elements */}
         {!prefersReducedMotion && (
