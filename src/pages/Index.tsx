@@ -15,13 +15,6 @@ import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
 
-// Import images
-import routerTechnologyImg from "@/assets/router-technology.jpg";
-import dataCenterImg from "@/assets/data-center.jpg";
-import connectedWorldImg from "@/assets/connected-world.jpg";
-import streamingEntertainmentImg from "@/assets/streaming-entertainment.jpg";
-import familyTechnologyImg from "@/assets/family-technology.jpg";
-
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
   const prefersReducedMotion = useReducedMotion();
@@ -118,28 +111,19 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Beautiful & Elegant */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff5722 25%, #e65100 50%, #d84315 75%, #bf360c 100%)'}}>
+      {/* Hero Section - Modern & Premium */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 30%, #ff3300 70%, #cc2200 100%)'}}>
         
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <ResponsiveImage 
-            src={connectedWorldImg}
-            alt="Conexão tecnológica global"
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
-        </div>
-        
-        {/* Sophisticated Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
+        {/* Modern Background Effects with Texture */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%)
+            radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 1px, transparent 2px),
+            radial-gradient(circle at 80% 70%, rgba(255,255,255,0.06) 1px, transparent 2px),
+            linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.03) 50%, transparent 60%),
+            repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.02) 2px, rgba(255,255,255,0.02) 4px)
           `,
-          backgroundSize: '80px 80px, 60px 60px, 120px 120px'
+          backgroundSize: '60px 60px, 80px 80px, 200px 200px, 40px 40px'
         }}></div>
         
         {/* Elegant Floating Elements */}
@@ -165,52 +149,64 @@ const Index = () => {
                     <span>🔥 Internet + TV Grátis</span>
                   </div>
                   
-                  {/* Luxurious Title */}
-                  <h1 className="text-4xl font-black leading-tight text-white font-playfair">
-                    <span className="block mb-2" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)'}}>Internet</span>
-                    <span className="block" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.4)'}}>+ SaraivaTV</span>
+                  {/* Enhanced Title */}
+                  <h1 className="text-5xl font-black leading-tight text-white font-playfair mb-6">
+                    <span className="block mb-2" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.7), 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(255,165,0,0.2)'}}>Internet</span>
+                    <span className="block" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.7), 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(255,165,0,0.2)'}}>+ SaraivaTV</span>
                   </h1>
                   
-                  {/* Elegant Subtitle */}
-                  <p className="text-lg text-white/95 font-medium" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.6)'}}>
+                  {/* Enhanced Subtitle */}
+                  <p className="text-xl text-white/95 font-semibold mb-10" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.6)'}}>
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Beautiful Cards */}
+                  {/* Enhanced Cards */}
                   <div className="grid grid-cols-2 gap-4">
                     {[
-                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
-                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
-                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
-                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500 to-red-500", featured: true },
+                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500 to-blue-600" },
+                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500 to-green-600" },
+                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500 to-purple-600" }
                     ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-3xl p-5 flex flex-col items-center space-y-3 border border-white/40 shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20`}>
-                        <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-2xl">
-                          <card.icon className="w-6 h-6 text-white" />
+                      <div key={index} className={`${card.featured ? 'col-span-2' : ''} bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-[20px] p-6 flex flex-col items-center space-y-4 border border-white/30 shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-500`}>
+                        <div className={`${card.featured ? 'w-16 h-16' : 'w-12 h-12'} bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg`}>
+                          <card.icon className={`${card.featured ? 'w-8 h-8' : 'w-6 h-6'} text-white`} />
                         </div>
-                        <span className="font-bold text-sm text-white text-center drop-shadow-2xl">{card.text}</span>
+                        <span className={`font-bold ${card.featured ? 'text-lg' : 'text-sm'} text-white text-center`}>{card.text}</span>
+                        {card.featured && (
+                          <div className="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+                            DESTAQUE
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
 
-                  {/* Beautiful Button */}
+                  {/* Enhanced Button */}
                   <TouchButton 
                     onClick={handleWhatsAppClick} 
-                    className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-8 py-4 rounded-2xl font-black text-lg shadow-2xl border-2 border-yellow-200/50 hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/30"
+                    className="w-full bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 hover:from-orange-400 hover:via-orange-500 hover:to-red-400 text-white px-10 py-5 rounded-[20px] font-black text-lg shadow-xl border border-white/20 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-500"
+                    style={{
+                      filter: 'drop-shadow(0 0 20px rgba(255, 102, 0, 0.3))',
+                      textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                    }}
                   >
                     🚀 Contratar Agora
                   </TouchButton>
 
-                  {/* Elegant Stats */}
-                  <div className="grid grid-cols-2 gap-3 text-center">
+                  {/* Enhanced Stats */}
+                  <div className="flex flex-wrap justify-center gap-4 text-center">
                     {[
-                      { value: 1000, label: "Clientes", suffix: "+" },
-                      { value: 99, label: "Uptime", suffix: "%" },
-                      { value: 20, label: "Canais", suffix: "+" },
-                      { value: 24, label: "Online", suffix: "h" }
+                      { value: 1000, label: "Clientes", suffix: "+", icon: Users },
+                      { value: 99, label: "Uptime", suffix: "%", icon: Shield },
+                      { value: 20, label: "Canais", suffix: "+", icon: Tv },
+                      { value: 24, label: "Online", suffix: "h", icon: Clock }
                     ].map((stat, index) => (
-                      <div key={index} className="bg-white/20 backdrop-blur-lg rounded-xl p-3 border border-white/30 shadow-lg hover:bg-white/25 hover:scale-105 transition-all duration-300">
-                        <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                      <div key={index} className="bg-white/70 backdrop-blur-lg rounded-[20px] p-4 border border-white/40 shadow-lg hover:bg-white/80 hover:scale-105 hover:-translate-y-1 transition-all duration-300 flex-1 min-w-[80px]">
+                        <div className="flex flex-col items-center space-y-2">
+                          <stat.icon className="w-6 h-6 text-orange-600" />
+                          <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -228,51 +224,63 @@ const Index = () => {
                     <span>🔥 Internet + TV Grátis</span>
                   </div>
                   
-                  {/* Sophisticated Title */}
-                  <h1 className="text-6xl lg:text-7xl font-black leading-tight text-white max-w-4xl mx-auto font-playfair">
-                    <span className="block mb-4" style={{textShadow: '5px 5px 20px rgba(0,0,0,0.8), 0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,165,0,0.4)'}}>Internet + SaraivaTV</span>
+                  {/* Enhanced Title Desktop */}
+                  <h1 className="text-7xl lg:text-8xl font-black leading-tight text-white max-w-4xl mx-auto font-playfair mb-8">
+                    <span className="block mb-4" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.7), 0 0 40px rgba(255,255,255,0.3), 0 0 80px rgba(255,165,0,0.2)'}}>Internet + SaraivaTV</span>
                   </h1>
                   
-                  {/* Beautiful Subtitle */}
-                  <p className="text-2xl lg:text-3xl text-white/95 font-medium max-w-3xl mx-auto" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.6)'}}>
+                  {/* Enhanced Subtitle Desktop */}
+                  <p className="text-3xl lg:text-4xl text-white/95 font-semibold max-w-3xl mx-auto mb-12" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.6)'}}>
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Stunning Cards */}
+                  {/* Enhanced Cards Desktop */}
                   <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
                     {[
-                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500/80 to-red-500/70" },
-                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500/80 to-purple-500/70" },
-                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500/80 to-emerald-500/70" },
-                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500/80 to-pink-500/70" }
+                      { icon: Wifi, text: "Internet ULTRA", gradient: "from-orange-500 to-red-500", featured: true },
+                      { icon: Tv, text: "TV Premium", gradient: "from-blue-500 to-blue-600" },
+                      { icon: Music, text: "Rádios 24h", gradient: "from-green-500 to-green-600" },
+                      { icon: Shield, text: "Suporte VIP", gradient: "from-purple-500 to-purple-600" }
                     ].map((card, index) => (
-                      <div key={index} className={`bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-4xl p-10 flex flex-col items-center space-y-5 border border-white/50 shadow-2xl hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-white/30`}>
-                        <div className="w-20 h-20 bg-white/35 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl hover:rotate-12 transition-transform duration-300">
-                          <card.icon className="w-8 h-8 text-white" />
+                      <div key={index} className={`${card.featured ? 'transform scale-110' : ''} bg-gradient-to-br ${card.gradient} backdrop-blur-xl rounded-[20px] p-10 flex flex-col items-center space-y-6 border border-white/30 shadow-lg hover:shadow-xl hover:scale-110 hover:-translate-y-2 transition-all duration-500`}>
+                        <div className={`${card.featured ? 'w-24 h-24' : 'w-20 h-20'} bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-lg hover:rotate-12 transition-transform duration-300`}>
+                          <card.icon className={`${card.featured ? 'w-10 h-10' : 'w-8 h-8'} text-white`} />
                         </div>
-                        <span className="font-bold text-xl text-white text-center drop-shadow-2xl">{card.text}</span>
+                        <span className={`font-bold ${card.featured ? 'text-2xl' : 'text-xl'} text-white text-center`}>{card.text}</span>
+                        {card.featured && (
+                          <div className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">
+                            🔥 DESTAQUE
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
 
-                  {/* Stunning Button */}
+                  {/* Enhanced Button Desktop */}
                   <TouchButton 
                     onClick={handleWhatsAppClick} 
-                    className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 text-gray-900 px-16 py-6 rounded-2xl font-black text-2xl shadow-2xl border-3 border-yellow-200/50 hover:scale-115 hover:-translate-y-3 transition-all duration-700 hover:shadow-2xl hover:shadow-yellow-500/40"
+                    className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 hover:from-orange-400 hover:via-orange-500 hover:to-red-400 text-white px-20 py-7 rounded-[20px] font-black text-2xl shadow-xl border border-white/20 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/40 transition-all duration-500"
+                    style={{
+                      filter: 'drop-shadow(0 0 30px rgba(255, 102, 0, 0.4))',
+                      textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                    }}
                   >
                     🚀 Contratar Agora
                   </TouchButton>
 
-                  {/* Beautiful Stats Desktop */}
-                  <div className="flex justify-center gap-12 text-center max-w-3xl mx-auto">
+                  {/* Enhanced Stats Desktop */}
+                  <div className="flex justify-center gap-8 text-center max-w-4xl mx-auto">
                     {[
-                      { value: 1000, label: "Clientes", suffix: "+" },
-                      { value: 99, label: "Uptime", suffix: "%" },
-                      { value: 20, label: "Canais", suffix: "+" },
-                      { value: 24, label: "Online", suffix: "h" }
+                      { value: 1000, label: "Clientes", suffix: "+", icon: Users },
+                      { value: 99, label: "Uptime", suffix: "%", icon: Shield },
+                      { value: 20, label: "Canais", suffix: "+", icon: Tv },
+                      { value: 24, label: "Online", suffix: "h", icon: Clock }
                     ].map((stat, index) => (
-                      <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-xl hover:bg-white/25 hover:scale-110 hover:-translate-y-1 transition-all duration-500">
-                        <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                      <div key={index} className="bg-white/70 backdrop-blur-lg rounded-[20px] p-8 border border-white/40 shadow-lg hover:bg-white/80 hover:scale-105 hover:-translate-y-1 transition-all duration-500 flex-1 max-w-[200px]">
+                        <div className="flex flex-col items-center space-y-3">
+                          <stat.icon className="w-8 h-8 text-orange-600" />
+                          <StatsCounter endValue={stat.value} label={stat.label} suffix={stat.suffix} />
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -491,13 +499,6 @@ const Index = () => {
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
-              <div className="absolute inset-0">
-                <ResponsiveImage 
-                  src={streamingEntertainmentImg}
-                  alt="Streaming e entretenimento"
-                  className="w-full h-full object-cover opacity-10"
-                />
-              </div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-200/20 to-transparent animate-shimmer"></div>
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Tv className="w-12 h-12 text-orange-500" />
@@ -536,13 +537,6 @@ const Index = () => {
             </Card>
 
             <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
-              <div className="absolute inset-0">
-                <ResponsiveImage 
-                  src={familyTechnologyImg}
-                  alt="Família usando tecnologia"
-                  className="w-full h-full object-cover opacity-10"
-                />
-              </div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-200/20 to-transparent animate-shimmer"></div>
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Smartphone className="w-12 h-12 text-blue-500" />
@@ -562,13 +556,6 @@ const Index = () => {
             </Card>
 
             <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
-              <div className="absolute inset-0">
-                <ResponsiveImage 
-                  src={routerTechnologyImg}
-                  alt="Tecnologia de roteador avançada"
-                  className="w-full h-full object-cover opacity-10"
-                />
-              </div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-200/20 to-transparent animate-shimmer"></div>
               <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
                 <Zap className="w-12 h-12 text-purple-500" />
@@ -682,26 +669,17 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="relative bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-10 shadow-xl overflow-hidden">
-              <div className="absolute inset-0">
-                <ResponsiveImage 
-                  src={dataCenterImg}
-                  alt="Data center moderno e tecnológico"
-                  className="w-full h-full object-cover opacity-15"
-                />
-              </div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-                  Tecnologia que Conecta Corações
-                </h3>
-                <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed">
-                  Na SaraivaNet, acreditamos que internet é conexão humana. É o avô vendo o neto pela primeira vez por videochamada, é o estudante acessando conhecimento.
-                </p>
-                <div className="text-center">
-                  <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
-                    <Heart className="w-6 h-6 mr-2" />
-                    Feito com amor no Piauí desde 2003
-                  </div>
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-10 shadow-xl">
+              <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+                Tecnologia que Conecta Corações
+              </h3>
+              <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed">
+                Na SaraivaNet, acreditamos que internet é conexão humana. É o avô vendo o neto pela primeira vez por videochamada, é o estudante acessando conhecimento.
+              </p>
+              <div className="text-center">
+                <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-lg">
+                  <Heart className="w-6 h-6 mr-2" />
+                  Feito com amor no Piauí desde 2003
                 </div>
               </div>
             </div>
