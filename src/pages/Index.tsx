@@ -113,62 +113,74 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Grande Provedor com Carrossel */}
+      {/* Hero Section - Estilo Otimizado */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff8833 25%, #ffaa66 50%, #ffcc99 75%, #ffe6cc 100%)'}}>
         
         {/* Mobile Version */}
-        <div className="md:hidden w-full px-4 py-20">
+        <div className="md:hidden w-full px-4 py-16">
           <div className="relative z-10">
             <AnimatedSection animation="fade-up">
-              <div className="space-y-8">
+              <div className="space-y-6">
+                {/* Badge */}
+                <div className="text-center">
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-6 py-3 rounded-full font-bold text-sm shadow-lg">
+                    <Star className="w-4 h-4 mr-2" />
+                    Internet + TV Grátis
+                  </div>
+                </div>
+
                 {/* Title */}
-                <div>
-                  <h1 className="text-4xl font-black text-white leading-tight mb-3" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>
-                    Internet que conecta
-                    <br />
-                    <span className="text-yellow-300">sua família</span>
+                <div className="text-center">
+                  <h1 className="text-4xl font-black text-white leading-tight mb-2" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>
+                    Internet + SaraivaTV
                   </h1>
                   <p className="text-lg text-white/90 font-medium">
-                    Fibra óptica com velocidade real para toda casa
+                    🚀 Internet ultrarrápida + App gratuito
                   </p>
                 </div>
 
-                {/* Carousel Mobile */}
-                <div className="h-48 w-full">
+                {/* Carousel Mobile - Maior */}
+                <div className="h-64 w-full rounded-2xl overflow-hidden">
                   <HeroCarousel />
                 </div>
 
-                {/* Benefits Grid - Mobile */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg border-2 border-orange-500">
-                    <div className="text-white text-3xl mb-3">🎁</div>
-                    <div className="text-white font-bold text-lg">Instalação</div>
-                    <div className="text-white font-black text-xl">GRÁTIS</div>
+                {/* Benefits Grid - Ícones Menores */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-4 text-center shadow-lg">
+                    <div className="w-10 h-10 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-2">
+                      <Wifi className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="text-white font-bold text-sm">Internet ULTRA</div>
                   </div>
-                  <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg border-2 border-orange-500">
-                    <div className="text-white text-3xl mb-3">📺</div>
-                    <div className="text-white font-bold text-lg">SaraivaTV</div>
-                    <div className="text-white font-black text-xl">GRÁTIS</div>
+                  <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl p-4 text-center shadow-lg">
+                    <div className="w-10 h-10 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-2">
+                      <Tv className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="text-white font-bold text-sm">TV Premium</div>
                   </div>
-                  <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg border-2 border-orange-500">
-                    <div className="text-white text-3xl mb-3">📶</div>
-                    <div className="text-white font-bold text-lg">WiFi 6</div>
-                    <div className="text-white font-black text-xl">INCLUSO</div>
+                  <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-4 text-center shadow-lg">
+                    <div className="w-10 h-10 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-2">
+                      <Music className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="text-white font-bold text-sm">Rádios 24h</div>
                   </div>
-                  <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg border-2 border-orange-500">
-                    <div className="text-white text-3xl mb-3">🛠️</div>
-                    <div className="text-white font-bold text-lg">Suporte</div>
-                    <div className="text-white font-black text-xl">24H</div>
+                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-4 text-center shadow-lg">
+                    <div className="w-10 h-10 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-2">
+                      <Shield className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="text-white font-bold text-sm">Suporte VIP</div>
                   </div>
                 </div>
 
-                {/* CTA Button */}
-                <TouchButton 
-                  onClick={handleWhatsAppClick}
-                  className="w-full bg-white hover:bg-gray-100 text-orange-600 font-black text-xl py-5 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 border-2 border-orange-200"
-                >
-                  Contratar Agora
-                </TouchButton>
+                {/* CTA Button - Estilo da Referência */}
+                <div className="text-center">
+                  <TouchButton 
+                    onClick={handleWhatsAppClick}
+                    className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black text-lg px-8 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center"
+                  >
+                    🚀 Contratar Agora
+                  </TouchButton>
+                </div>
               </div>
             </AnimatedSection>
           </div>
@@ -176,62 +188,70 @@ const Index = () => {
 
         {/* Desktop Version */}
         <div className="hidden md:block w-full">
-          <div className="max-w-7xl mx-auto px-6 py-20">
-            <div className="grid grid-cols-12 gap-16 items-center min-h-[600px]">
+          <div className="max-w-7xl mx-auto px-6 py-16">
+            <div className="grid grid-cols-12 gap-8 items-center min-h-[700px]">
               
-              {/* Left Content */}
-              <div className="col-span-6 space-y-10">
+              {/* Left Content - Compactado */}
+              <div className="col-span-5 space-y-6">
                 <AnimatedSection animation="fade-up">
+                  {/* Badge */}
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-6 py-3 rounded-full font-bold shadow-lg">
+                    <Star className="w-5 h-5 mr-2" />
+                    Internet + TV Grátis
+                  </div>
+                  
                   {/* Title & Subtitle */}
                   <div>
-                    <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-6" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.5)'}}>
-                      Internet que conecta
-                      <br />
-                      <span className="text-yellow-300">sua família</span>
+                    <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-4" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.5)'}}>
+                      Internet + SaraivaTV
                     </h1>
-                    <p className="text-2xl text-white/90 font-medium max-w-lg">
-                      Fibra óptica com velocidade real garantida para toda sua casa
+                    <p className="text-xl text-white/90 font-medium">
+                      🚀 Internet ultrarrápida + App gratuito
                     </p>
                   </div>
 
-                  {/* Benefits Grid - Desktop */}
-                  <div className="grid grid-cols-2 gap-6 max-w-2xl">
-                    <div className="bg-orange-600 rounded-3xl p-8 text-center shadow-xl border-2 border-orange-500 hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                      <div className="text-white text-4xl mb-4">🎁</div>
-                      <div className="text-white font-bold text-xl mb-2">Instalação</div>
-                      <div className="text-white font-black text-2xl">GRÁTIS</div>
+                  {/* Benefits Grid - Compacto com Ícones Menores */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-6 text-center shadow-xl hover:scale-105 transition-all duration-300">
+                      <div className="w-12 h-12 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                        <Wifi className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-white font-bold text-lg">Internet ULTRA</div>
                     </div>
-                    <div className="bg-orange-600 rounded-3xl p-8 text-center shadow-xl border-2 border-orange-500 hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                      <div className="text-white text-4xl mb-4">📺</div>
-                      <div className="text-white font-bold text-xl mb-2">SaraivaTV</div>
-                      <div className="text-white font-black text-2xl">GRÁTIS</div>
+                    <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl p-6 text-center shadow-xl hover:scale-105 transition-all duration-300">
+                      <div className="w-12 h-12 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                        <Tv className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-white font-bold text-lg">TV Premium</div>
                     </div>
-                    <div className="bg-orange-600 rounded-3xl p-8 text-center shadow-xl border-2 border-orange-500 hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                      <div className="text-white text-4xl mb-4">📶</div>
-                      <div className="text-white font-bold text-xl mb-2">WiFi 6</div>
-                      <div className="text-white font-black text-2xl">INCLUSO</div>
+                    <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-6 text-center shadow-xl hover:scale-105 transition-all duration-300">
+                      <div className="w-12 h-12 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                        <Music className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-white font-bold text-lg">Rádios 24h</div>
                     </div>
-                    <div className="bg-orange-600 rounded-3xl p-8 text-center shadow-xl border-2 border-orange-500 hover:scale-105 hover:shadow-2xl transition-all duration-300">
-                      <div className="text-white text-4xl mb-4">🛠️</div>
-                      <div className="text-white font-bold text-xl mb-2">Suporte</div>
-                      <div className="text-white font-black text-2xl">24H</div>
+                    <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-6 text-center shadow-xl hover:scale-105 transition-all duration-300">
+                      <div className="w-12 h-12 bg-white/30 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                        <Shield className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-white font-bold text-lg">Suporte VIP</div>
                     </div>
                   </div>
 
-                  {/* CTA Button */}
+                  {/* CTA Button - Estilo da Referência */}
                   <TouchButton 
                     onClick={handleWhatsAppClick}
-                    className="bg-white hover:bg-gray-100 text-orange-600 font-black text-2xl px-16 py-6 rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl border-2 border-orange-200 transition-all duration-300"
+                    className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black text-xl px-10 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center"
                   >
-                    Contratar Agora
+                    🚀 Contratar Agora
                   </TouchButton>
                 </AnimatedSection>
               </div>
 
-              {/* Right Content - Carousel */}
-              <div className="col-span-6">
+              {/* Right Content - Carousel Maior */}
+              <div className="col-span-7">
                 <AnimatedSection animation="slide-right">
-                  <div className="h-96 lg:h-[500px] w-full">
+                  <div className="h-[500px] lg:h-[600px] w-full rounded-3xl overflow-hidden">
                     <HeroCarousel />
                   </div>
                 </AnimatedSection>
@@ -240,27 +260,23 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Stats Bar - Diferenciais */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/15 backdrop-blur-sm py-8">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 border-2 border-orange-500">
-                <Users className="w-8 h-8 text-white mx-auto mb-3" />
+        {/* Stats Bar - Estilo da Referência */}
+        <div className="absolute bottom-0 left-0 right-0 bg-black/20 backdrop-blur-sm py-6">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-orange-800/80 rounded-2xl p-4 text-center shadow-lg backdrop-blur-sm">
                 <div className="text-white font-black text-2xl">1000+</div>
                 <div className="text-white/90 text-sm font-medium">Clientes</div>
               </div>
-              <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 border-2 border-orange-500">
-                <Zap className="w-8 h-8 text-white mx-auto mb-3" />
+              <div className="bg-orange-800/80 rounded-2xl p-4 text-center shadow-lg backdrop-blur-sm">
                 <div className="text-white font-black text-2xl">99%</div>
                 <div className="text-white/90 text-sm font-medium">Uptime</div>
               </div>
-              <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 border-2 border-orange-500">
-                <Tv className="w-8 h-8 text-white mx-auto mb-3" />
+              <div className="bg-orange-800/80 rounded-2xl p-4 text-center shadow-lg backdrop-blur-sm">
                 <div className="text-white font-black text-2xl">20+</div>
                 <div className="text-white/90 text-sm font-medium">Canais</div>
               </div>
-              <div className="bg-orange-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 border-2 border-orange-500">
-                <Clock className="w-8 h-8 text-white mx-auto mb-3" />
+              <div className="bg-orange-800/80 rounded-2xl p-4 text-center shadow-lg backdrop-blur-sm">
                 <div className="text-white font-black text-2xl">24h</div>
                 <div className="text-white/90 text-sm font-medium">Online</div>
               </div>
