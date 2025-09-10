@@ -199,8 +199,8 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-8 py-24">
             <div className="grid grid-cols-12 gap-8 items-center min-h-[700px]">
               
-              {/* Left Content - agora menor */}
-              <div className="col-span-4 space-y-12">
+              {/* Left Content - tamanho equilibrado */}
+              <div className="col-span-5 space-y-12">
                 <AnimatedSection animation="fade-up">
                   {/* Badge */}
                   <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-8 py-4 rounded-full font-bold shadow-lg text-xl">
@@ -258,8 +258,8 @@ const Index = () => {
                 </AnimatedSection>
               </div>
 
-              {/* Right Content - Carousel maior e mais largo */}
-              <div className="col-span-8">
+              {/* Right Content - Carousel balanceado */}
+              <div className="col-span-7">
                 <AnimatedSection animation="slide-right">
                   <div className="h-[650px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                     <HeroCarousel />
