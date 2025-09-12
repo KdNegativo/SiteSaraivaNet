@@ -195,13 +195,13 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Desktop Version - Layout otimizado e mais amplo */}
+        {/* Desktop Version - Layout panorâmico com carrossel 70% */}
         <div className="hidden md:block w-full">
-          <div className="max-w-[1400px] mx-auto px-12 py-24">
-            <div className="grid grid-cols-12 gap-8 items-center min-h-[800px]">
+          <div className="max-w-[1600px] mx-auto px-16 py-20">
+            <div className="grid grid-cols-12 gap-12 items-center min-h-[700px]">
               
-              {/* Left Content - Mais compacto para dar espaço ao carrossel */}
-              <div className="col-span-4 space-y-8 pr-8">
+              {/* Left Content - Texto alinhado à esquerda com espaçamento generoso */}
+              <div className="col-span-3 space-y-10 pl-8">
                 <AnimatedSection animation="fade-up">
                   {/* Badge */}
                   <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-6 py-3 rounded-full font-bold shadow-lg text-lg">
@@ -209,23 +209,23 @@ const Index = () => {
                     Internet + TV Grátis
                   </div>
                   
-                  {/* Title & Subtitle - Ainda mais destacado */}
-                  <div className="space-y-6">
-                    <h1 className="text-6xl xl:text-7xl 2xl:text-8xl font-black text-white leading-tight" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.7)'}}>
+                  {/* Title & Subtitle - Alinhado à esquerda */}
+                  <div className="space-y-6 text-left">
+                    <h1 className="text-5xl xl:text-6xl 2xl:text-7xl font-black text-white leading-tight" style={{textShadow: '4px 4px 16px rgba(0,0,0,0.7)'}}>
                       Internet + SaraivaTV
                     </h1>
-                    <p className="text-2xl xl:text-3xl text-white/95 font-medium" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>
+                    <p className="text-xl xl:text-2xl text-white/95 font-medium" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>
                       🚀 Internet ultrarrápida + App gratuito
                     </p>
                   </div>
 
-                  {/* CTA Button - Mais chamativo com sombra e espaçamento */}
-                  <div className="mt-12">
+                  {/* CTA Button - Centralizado na coluna com respiro extra */}
+                  <div className="mt-12 pt-8 text-center">
                     <TouchButton 
                       onClick={handleWhatsAppClick}
-                      className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black text-2xl xl:text-3xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-300 inline-flex items-center border-4 border-white/30"
+                      className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black text-xl xl:text-2xl px-10 py-5 rounded-full shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-300 inline-flex items-center border-4 border-white/30"
                       style={{
-                        boxShadow: '0 15px 35px rgba(0,0,0,0.3), 0 5px 15px rgba(255,165,0,0.4), inset 0 2px 0 rgba(255,255,255,0.7)'
+                        boxShadow: '0 20px 40px rgba(0,0,0,0.3), 0 8px 20px rgba(255,165,0,0.4), inset 0 2px 0 rgba(255,255,255,0.7)'
                       }}
                     >
                       🚀 Contratar Agora
@@ -234,43 +234,43 @@ const Index = () => {
                 </AnimatedSection>
               </div>
 
-              {/* Right Content - Carrossel muito maior (8 colunas = 66.7% da largura) */}
-              <div className="col-span-8">
+              {/* Right Content - Carrossel panorâmico 70% da largura (9 colunas) */}
+              <div className="col-span-9">
                 <AnimatedSection animation="slide-right">
-                  <div className="h-[600px] xl:h-[700px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
+                  <div className="h-[500px] xl:h-[600px] 2xl:h-[700px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                     <HeroCarousel />
                   </div>
                 </AnimatedSection>
               </div>
             </div>
 
-            {/* Benefits Cards - Mais espaçados e ocupando toda largura */}
-            <div className="mt-16 px-4">
+            {/* Benefits Cards - Posicionados abaixo, ocupando toda largura útil */}
+            <div className="mt-20 px-8">
               <AnimatedSection animation="fade-up">
-                <div className="grid grid-cols-4 gap-12 max-w-5xl mx-auto">
-                  <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-48 border-2 border-white/30 backdrop-blur-sm">
-                    <div className="w-12 h-12 bg-white/40 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20">
-                      <Wifi className="w-6 h-6 text-white" />
+                <div className="grid grid-cols-4 gap-16 max-w-6xl mx-auto">
+                  <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-52 border-2 border-white/30 backdrop-blur-sm">
+                    <div className="w-14 h-14 bg-white/40 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20">
+                      <Wifi className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-white font-bold text-lg leading-tight">Internet<br/>ULTRA</div>
+                    <div className="text-white font-bold text-xl leading-tight">Internet<br/>ULTRA</div>
                   </div>
-                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-48 border-2 border-white/30 backdrop-blur-sm">
-                    <div className="w-12 h-12 bg-white/40 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20">
-                      <Tv className="w-6 h-6 text-white" />
+                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-52 border-2 border-white/30 backdrop-blur-sm">
+                    <div className="w-14 h-14 bg-white/40 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20">
+                      <Tv className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-white font-bold text-lg leading-tight">TV<br/>Premium</div>
+                    <div className="text-white font-bold text-xl leading-tight">TV<br/>Premium</div>
                   </div>
-                  <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-48 border-2 border-white/30 backdrop-blur-sm">
-                    <div className="w-12 h-12 bg-white/40 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20">
-                      <Music className="w-6 h-6 text-white" />
+                  <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-52 border-2 border-white/30 backdrop-blur-sm">
+                    <div className="w-14 h-14 bg-white/40 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20">
+                      <Music className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-white font-bold text-lg leading-tight">Rádios<br/>24h</div>
+                    <div className="text-white font-bold text-xl leading-tight">Rádios<br/>24h</div>
                   </div>
-                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-48 border-2 border-white/30 backdrop-blur-sm">
-                    <div className="w-12 h-12 bg-white/40 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20">
-                      <Shield className="w-6 h-6 text-white" />
+                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition-all duration-300 h-52 border-2 border-white/30 backdrop-blur-sm">
+                    <div className="w-14 h-14 bg-white/40 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20">
+                      <Shield className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-white font-bold text-lg leading-tight">Suporte<br/>VIP</div>
+                    <div className="text-white font-bold text-xl leading-tight">Suporte<br/>VIP</div>
                   </div>
                 </div>
               </AnimatedSection>
