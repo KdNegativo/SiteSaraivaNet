@@ -128,8 +128,8 @@ const Index = () => {
         }}></div>
         
         {/* Mobile Version */}
-        <div className="lg:hidden w-full px-6 py-16">
-          <div className="relative z-10 text-center space-y-8">
+        <div className="lg:hidden w-full px-6" style={{paddingTop: 'clamp(80px, 12vh, 120px)', paddingBottom: 'clamp(80px, 12vh, 120px)', minHeight: '90vh'}}>
+          <div className="relative z-10 text-center space-y-8 flex flex-col justify-center min-h-full">
             <AnimatedSection animation="fade-up">
               {/* Badge pequeno */}
               <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold shadow-lg text-sm mb-4">
@@ -207,9 +207,9 @@ const Index = () => {
         </div>
 
         {/* Desktop Version - Layout 2 colunas */}
-        <div className="hidden lg:block w-full">
-          <div className="max-w-[1320px] mx-auto px-8" style={{paddingTop: '60px', paddingBottom: '60px'}}>
-            <div className="flex items-center" style={{gap: '48px'}}>
+        <div className="hidden lg:block w-full" style={{minHeight: '90vh'}}>
+          <div className="max-w-[1320px] mx-auto px-8 h-full" style={{paddingTop: 'clamp(100px, 15vh, 140px)', paddingBottom: 'clamp(100px, 15vh, 140px)'}}>
+            <div className="flex items-center justify-center h-full" style={{gap: '48px', minHeight: '70vh'}}>
               
               {/* Left Column - Textos/CTAs */}
               <div className="flex-1 space-y-6 pr-8">
