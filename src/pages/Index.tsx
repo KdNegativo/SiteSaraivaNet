@@ -128,76 +128,76 @@ const Index = () => {
         }}></div>
         
         {/* Mobile Version */}
-        <div className="lg:hidden w-full px-6 py-16">
-          <div className="relative z-10 text-center space-y-8">
+        <div className="lg:hidden w-full px-6 py-20">
+          <div className="relative z-10 text-center space-y-10">
             <AnimatedSection animation="fade-up">
-              {/* Badge pequeno */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold shadow-lg text-sm mb-4">
-                <Star className="w-3 h-3 mr-2" />
+              {/* Badge maior */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-5 py-3 rounded-full font-bold shadow-lg text-base mb-6">
+                <Star className="w-4 h-4 mr-2" />
                 Internet + TV Grátis
               </div>
 
-              {/* Title - Responsivo com clamp */}
-              <div className="space-y-4">
+              {/* Title maior no mobile */}
+              <div className="space-y-6">
                 <h1 className="font-black text-white leading-none" style={{
-                  fontSize: 'clamp(28px, 8vw, 40px)',
-                  lineHeight: '1.05',
+                  fontSize: 'clamp(36px, 10vw, 56px)',
+                  lineHeight: '0.95',
                   fontWeight: '800',
                   textShadow: '3px 3px 12px rgba(0,0,0,0.5)'
                 }}>
                   Internet + SaraivaTV
                 </h1>
                 
-                {/* Subtitle */}
-                <p className="text-white/95 font-medium max-w-[56ch] mx-auto" style={{
-                  fontSize: 'clamp(16px, 4vw, 18px)',
+                {/* Subtitle maior */}
+                <p className="text-white/95 font-semibold max-w-[56ch] mx-auto" style={{
+                  fontSize: 'clamp(18px, 5vw, 24px)',
                   textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
                 }}>
                   🚀 Internet ultrarrápida + App gratuito
                 </p>
               </div>
 
-              {/* Carousel - aspect-ratio 14/9 */}
-              <div className="w-full max-w-md mx-auto mt-8" style={{aspectRatio: '14/9'}}>
+              {/* Carousel maior no mobile */}
+              <div className="w-full max-w-lg mx-auto mt-10" style={{aspectRatio: '14/9'}}>
                 <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl border-2 border-white/20">
                   <HeroCarousel />
                 </div>
               </div>
 
-              {/* Benefits Cards empilhados */}
-              <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto mt-12">
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-4 text-center shadow-lg border border-white/20">
-                  <div className="w-6 h-6 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Wifi className="w-3 h-3 text-white" />
+              {/* Benefits Cards maiores */}
+              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto mt-16">
+                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
+                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Wifi className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-xs">Internet<br/>ULTRA</div>
+                  <div className="text-white font-bold text-sm">Internet<br/>ULTRA</div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-4 text-center shadow-lg border border-white/20">
-                  <div className="w-6 h-6 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Tv className="w-3 h-3 text-white" />
+                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-5 text-center shadow-lg border border-white/20">
+                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Tv className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-xs">TV<br/>Premium</div>
+                  <div className="text-white font-bold text-sm">TV<br/>Premium</div>
                 </div>
-                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-4 text-center shadow-lg border border-white/20">
-                  <div className="w-6 h-6 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Music className="w-3 h-3 text-white" />
+                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
+                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Music className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-xs">Rádios<br/>24h</div>
+                  <div className="text-white font-bold text-sm">Rádios<br/>24h</div>
                 </div>
-                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-4 text-center shadow-lg border border-white/20">
-                  <div className="w-6 h-6 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Shield className="w-3 h-3 text-white" />
+                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
+                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Shield className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-xs">Suporte<br/>VIP</div>
+                  <div className="text-white font-bold text-sm">Suporte<br/>VIP</div>
                 </div>
               </div>
 
-              {/* CTA Button */}
-              <div className="mt-12">
+              {/* CTA Button maior no mobile */}
+              <div className="mt-16">
                 <TouchButton 
                   onClick={handleWhatsAppClick}
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-8 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center"
-                  style={{height: '48px', fontSize: '18px'}}
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-10 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
+                  style={{height: '56px', fontSize: '20px'}}
                 >
                   🚀 Contratar Agora
                 </TouchButton>
@@ -208,46 +208,47 @@ const Index = () => {
 
         {/* Desktop Version - Layout 2 colunas */}
         <div className="hidden lg:block w-full">
-          <div className="max-w-[1320px] mx-auto px-8" style={{paddingTop: '60px', paddingBottom: '60px'}}>
-            <div className="flex items-center" style={{gap: '48px'}}>
+          <div className="max-w-[1480px] mx-auto px-12" style={{paddingTop: '80px', paddingBottom: '80px'}}>
+            <div className="flex items-center" style={{gap: '60px'}}>
               
               {/* Left Column - Textos/CTAs */}
-              <div className="flex-1 space-y-6 pr-8">
+              <div className="flex-1 space-y-8 pr-8">
                 <AnimatedSection animation="fade-up">
                   {/* Badge pequeno acima do H1 */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold shadow-lg text-sm mb-4">
-                    <Star className="w-3 h-3 mr-2" />
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-6 py-3 rounded-full font-bold shadow-lg text-base mb-6">
+                    <Star className="w-4 h-4 mr-2" />
                     Internet + TV Grátis
                   </div>
                   
                   {/* Title bem maior */}
-                  <div className="space-y-4">
+                  <div className="space-y-6">
                     <h1 className="text-white leading-none max-w-[56ch]" style={{
-                      fontSize: 'clamp(40px, 6vw, 72px)',
+                      fontSize: 'clamp(56px, 7.5vw, 96px)',
                       fontWeight: '800',
-                      lineHeight: '1.05',
+                      lineHeight: '0.95',
                       textShadow: '4px 4px 16px rgba(0,0,0,0.7)'
                     }}>
                       Internet + SaraivaTV
                     </h1>
                     
-                    {/* Subtitle 18-20px, max-width 56ch */}
-                    <p className="text-white/95 font-medium max-w-[56ch]" style={{
-                      fontSize: 'clamp(18px, 1.8vw, 20px)',
+                    {/* Subtitle maior */}
+                    <p className="text-white/95 font-semibold max-w-[56ch]" style={{
+                      fontSize: 'clamp(22px, 2.2vw, 28px)',
                       textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
                     }}>
                       🚀 Internet ultrarrápida + App gratuito
                     </p>
                   </div>
 
-                  {/* CTA Button mais evidente 48-52px altura */}
-                  <div className="mt-8 pt-4">
+                  {/* CTA Button maior e mais destacado */}
+                  <div className="mt-12 pt-6">
                     <TouchButton 
                       onClick={handleWhatsAppClick}
-                      className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black text-xl px-10 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
+                      className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-12 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
                       style={{
-                        height: '50px',
-                        boxShadow: '0 15px 35px rgba(0,0,0,0.3), 0 8px 15px rgba(255,165,0,0.4), inset 0 2px 0 rgba(255,255,255,0.7)'
+                        height: '68px',
+                        fontSize: '24px',
+                        boxShadow: '0 20px 40px rgba(0,0,0,0.4), 0 10px 20px rgba(255,165,0,0.5), inset 0 3px 0 rgba(255,255,255,0.8)'
                       }}
                     >
                       🚀 Contratar Agora
@@ -256,14 +257,14 @@ const Index = () => {
                 </AnimatedSection>
               </div>
 
-              {/* Right Column - Carrossel */}
-              <div className="w-[560px] flex-shrink-0">
+              {/* Right Column - Carrossel maior */}
+              <div className="w-[720px] flex-shrink-0">
                 <AnimatedSection animation="slide-right">
                   <div 
-                    className="w-full rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-gradient-to-br from-white/5 to-orange-200/10 backdrop-blur-sm max-w-full" 
+                    className="w-full rounded-3xl overflow-hidden shadow-2xl border-3 border-white/25 bg-gradient-to-br from-white/8 to-orange-200/15 backdrop-blur-sm max-w-full" 
                     style={{
                       aspectRatio: '14/9',
-                      boxShadow: '0 20px 40px rgba(0,0,0,0.25), 0 8px 20px rgba(255,102,0,0.2)'
+                      boxShadow: '0 25px 50px rgba(0,0,0,0.3), 0 12px 25px rgba(255,102,0,0.25)'
                     }}
                   >
                     <HeroCarousel />
