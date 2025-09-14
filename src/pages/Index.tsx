@@ -16,6 +16,7 @@ import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
 import saraivaLogo from "@/assets/saraiva-logo.png";
+import saraivaSymbolWhite from "@/assets/saraiva-symbol-white.png";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -65,12 +66,12 @@ const Index = () => {
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-12 h-8 bg-white rounded-lg flex items-center justify-center shadow-lg border border-white/30 p-1">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border border-white/20">
                 <img 
-                  src={saraivaLogo} 
-                  alt="SaraivaNet Logo" 
-                  className="w-full h-full object-contain"
+                  src={saraivaSymbolWhite} 
+                  alt="SaraivaNet Symbol" 
+                  className="w-6 h-6 object-contain"
                 />
               </div>
               <div>
@@ -90,11 +91,11 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-14 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg border border-white/30 p-1">
+            <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border border-white/20">
               <img 
-                src={saraivaLogo} 
-                alt="SaraivaNet Logo" 
-                className="w-full h-full object-contain"
+                src={saraivaSymbolWhite} 
+                alt="SaraivaNet Symbol" 
+                className="w-7 h-7 object-contain"
               />
             </div>
             <div>
