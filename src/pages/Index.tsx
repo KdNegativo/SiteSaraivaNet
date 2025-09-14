@@ -170,13 +170,13 @@ const Index = () => {
                   <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Wifi className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">Internet<br/>ULTRA</div>
+                  <div className="text-white font-bold text-sm">Internet<br/>Rápida</div>
                 </div>
                 <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-5 text-center shadow-lg border border-white/20">
                   <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Tv className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">TV<br/>Premium</div>
+                  <div className="text-white font-bold text-sm">aplicativo de<br/>tv</div>
                 </div>
                 <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
                   <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -282,13 +282,13 @@ const Index = () => {
                       <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
                         <Wifi className="w-4 h-4 text-white" />
                       </div>
-                      <div className="text-white font-bold text-sm leading-tight">Internet<br/>ULTRA</div>
+                      <div className="text-white font-bold text-sm leading-tight">Internet<br/>Rápida</div>
                     </div>
                     <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 h-32 border border-white/20 backdrop-blur-sm">
                       <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
                         <Tv className="w-4 h-4 text-white" />
                       </div>
-                      <div className="text-white font-bold text-sm leading-tight">TV<br/>Premium</div>
+                      <div className="text-white font-bold text-sm leading-tight">aplicativo de<br/>tv</div>
                     </div>
                     <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 h-32 border border-white/20 backdrop-blur-sm">
                       <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
