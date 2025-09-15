@@ -16,7 +16,6 @@ import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
 import saraivaLogo from "@/assets/saraiva-logo.png";
-import saraivaSymbol from "@/assets/saraiva-symbol.png";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -67,12 +66,11 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img 
-                src={saraivaSymbol} 
-                alt="SaraivaNet Symbol" 
-                className="w-10 h-10 object-contain"
-              />
+              <div className="w-8 h-8 bg-gradient-to-br from-white to-orange-100 rounded-xl flex items-center justify-center shadow-lg border border-white/30">
+                <Wifi className="w-4 h-4 text-orange-600" />
+              </div>
               <div>
+                <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
                   <span className="bg-gradient-to-r from-white/80 to-white/60 bg-clip-text text-transparent font-bold">Eliseu Martins - PI</span>
@@ -88,12 +86,11 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img 
-              src={saraivaSymbol} 
-              alt="SaraivaNet Symbol" 
-              className="w-12 h-12 object-contain"
-            />
+            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
+              <Wifi className="w-5 h-5 text-orange-600" />
+            </div>
             <div>
+              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
               <div className="text-xs text-orange-100 font-medium flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
                 Eliseu Martins - PI
@@ -211,11 +208,11 @@ const Index = () => {
 
         {/* Desktop Version - Layout 2 colunas */}
         <div className="hidden lg:block w-full">
-          <div className="max-w-7xl mx-auto px-6" style={{paddingTop: '80px', paddingBottom: '60px'}}>
-            <div className="flex items-center justify-between gap-12">
+          <div className="max-w-[1480px] mx-auto px-12" style={{paddingTop: '80px', paddingBottom: '80px'}}>
+            <div className="flex items-center" style={{gap: '60px'}}>
               
               {/* Left Column - Textos/CTAs */}
-              <div className="flex-1 space-y-8 max-w-xl">
+              <div className="flex-1 space-y-8 pr-8">
                 <AnimatedSection animation="fade-up">
                   {/* Badge pequeno acima do H1 */}
                   <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-6 py-3 rounded-full font-bold shadow-lg text-base mb-6">
@@ -225,8 +222,8 @@ const Index = () => {
                   
                   {/* Title bem maior */}
                   <div className="space-y-6">
-                    <h1 className="text-white leading-none" style={{
-                      fontSize: 'clamp(48px, 5vw, 64px)',
+                    <h1 className="text-white leading-none max-w-[56ch]" style={{
+                      fontSize: 'clamp(56px, 7.5vw, 96px)',
                       fontWeight: '800',
                       lineHeight: '0.95',
                       textShadow: '4px 4px 16px rgba(0,0,0,0.7)'
@@ -235,8 +232,8 @@ const Index = () => {
                     </h1>
                     
                     {/* Subtitle maior */}
-                    <p className="text-white/95 font-semibold" style={{
-                      fontSize: 'clamp(20px, 2vw, 24px)',
+                    <p className="text-white/95 font-semibold max-w-[56ch]" style={{
+                      fontSize: 'clamp(22px, 2.2vw, 28px)',
                       textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
                     }}>
                       🚀 Internet ultrarrápida + App gratuito
@@ -244,13 +241,13 @@ const Index = () => {
                   </div>
 
                   {/* CTA Button maior e mais destacado */}
-                  <div className="mt-10">
+                  <div className="mt-12 pt-6">
                     <TouchButton 
                       onClick={handleWhatsAppClick}
                       className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-12 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
                       style={{
-                        height: '60px',
-                        fontSize: '20px',
+                        height: '68px',
+                        fontSize: '24px',
                         boxShadow: '0 20px 40px rgba(0,0,0,0.4), 0 10px 20px rgba(255,165,0,0.5), inset 0 3px 0 rgba(255,255,255,0.8)'
                       }}
                     >
@@ -260,11 +257,11 @@ const Index = () => {
                 </AnimatedSection>
               </div>
 
-              {/* Right Column - Carrossel */}
-              <div className="flex-1 max-w-lg">
+              {/* Right Column - Carrossel maior */}
+              <div className="w-[720px] flex-shrink-0">
                 <AnimatedSection animation="slide-right">
                   <div 
-                    className="w-full rounded-3xl overflow-hidden shadow-2xl border-3 border-white/25 bg-gradient-to-br from-white/8 to-orange-200/15 backdrop-blur-sm" 
+                    className="w-full rounded-3xl overflow-hidden shadow-2xl border-3 border-white/25 bg-gradient-to-br from-white/8 to-orange-200/15 backdrop-blur-sm max-w-full" 
                     style={{
                       aspectRatio: '14/9',
                       boxShadow: '0 25px 50px rgba(0,0,0,0.3), 0 12px 25px rgba(255,102,0,0.25)'
@@ -276,11 +273,11 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Benefits Cards - Layout mais equilibrado */}
-            <div className="mt-12">
+            {/* Benefits Cards - 80% largura central */}
+            <div className="mt-16">
               <AnimatedSection animation="fade-up">
-                <div className="max-w-4xl mx-auto">
-                  <div className="grid grid-cols-4 gap-4">
+                <div className="w-4/5 mx-auto">
+                  <div className="grid grid-cols-4 gap-6">
                     <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 h-32 border border-white/20 backdrop-blur-sm">
                       <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
                         <Wifi className="w-4 h-4 text-white" />
@@ -312,9 +309,9 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Stats Bar - Stats na parte inferior */}
+        {/* Stats Bar - Aproximado do hero (margem superior 16-24px) */}
         <div className="absolute bottom-0 left-0 right-0" style={{paddingTop: '20px', paddingBottom: '32px'}}>
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="bg-amber-900/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl border border-amber-800/50">
                 <div className="text-white font-black text-4xl mb-2">964+</div>
@@ -352,7 +349,7 @@ const Index = () => {
           </div>
         )}
         
-        <div className="w-full px-6 relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <AnimatedSection animation="fade-up">
             <div className="text-center mb-16">
               {/* Simple Badge */}
@@ -471,7 +468,7 @@ const Index = () => {
 
       {/* Coverage Area - Simplified */}
       <section id="cobertura" className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 text-white">
-        <div className="w-full px-6">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               🗺️ Nossa Área de Cobertura
@@ -528,7 +525,7 @@ const Index = () => {
         <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-orange-300/40 to-red-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
         <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-tr from-purple-300/30 to-orange-300/40 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
         
-        <div className="w-full px-6 max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center text-orange-600 text-sm font-bold mb-6">
               <Tv className="w-4 h-4 mr-2" />
@@ -645,7 +642,7 @@ const Index = () => {
 
       {/* Stats Section - Simplified */}
       <section className="py-16 px-4 bg-gradient-to-r from-orange-500 via-orange-600 to-purple-600">
-        <div className="w-full px-6 text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Números Que Falam Por Si</h2>
           <p className="text-xl text-white/90 mb-12">
             Resultados conquistados com dedicação e compromisso
@@ -685,7 +682,7 @@ const Index = () => {
 
       {/* About Section - Simplified */}
       <section id="sobre" className="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
-        <div className="w-full px-6">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Sobre a SaraivaNet</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
@@ -735,7 +732,7 @@ const Index = () => {
 
       {/* Testimonials Section */}
       <section className="py-16 px-4 bg-gray-50 dark:bg-gray-800">
-        <div className="w-full px-6">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
@@ -785,7 +782,7 @@ const Index = () => {
           }}></div>
         </div>
 
-        <div className="w-full px-6 relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <AnimatedSection animation="fade-up">
             <div className="text-center mb-16">
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-bold mb-8 border border-white/30">
@@ -876,7 +873,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-gradient-to-b from-gray-800 to-gray-900 dark:from-gray-900 dark:to-black text-white py-12 sm:py-16 px-4 sm:px-6">
-        <div className="w-full px-6">
+        <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
             <div className="flex-1 max-w-2xl">
               <div className="flex items-center space-x-3 mb-6">
