@@ -15,7 +15,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
-import heroYoungMan from "@/assets/hero-young-man.jpg";
+import saraivaLogo from "@/assets/saraiva-logo.png";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -65,7 +65,7 @@ const Index = () => {
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-gradient-to-br from-white to-orange-100 rounded-xl flex items-center justify-center shadow-lg border border-white/30">
                 <Wifi className="w-4 h-4 text-orange-600" />
               </div>
@@ -176,7 +176,7 @@ const Index = () => {
                   <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Tv className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">aplicativo de<br/>tv</div>
+                  <div className="text-white font-bold text-sm">Aplicativo de<br/>TV</div>
                 </div>
                 <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
                   <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -288,7 +288,7 @@ const Index = () => {
                       <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
                         <Tv className="w-4 h-4 text-white" />
                       </div>
-                      <div className="text-white font-bold text-sm leading-tight">aplicativo de<br/>tv</div>
+                      <div className="text-white font-bold text-sm leading-tight">Aplicativo de<br/>TV</div>
                     </div>
                     <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 h-32 border border-white/20 backdrop-blur-sm">
                       <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
