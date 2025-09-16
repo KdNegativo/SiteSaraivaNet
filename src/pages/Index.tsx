@@ -66,8 +66,8 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl border-2 border-white">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-10 h-10 object-contain" />
+              <div className="w-14 h-14 flex items-center justify-center">
+                <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-12 h-12 object-contain drop-shadow-lg" />
               </div>
               <div>
                 <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
@@ -86,8 +86,8 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl border-2 border-white hover:scale-105 transition-transform duration-300">
-              <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-12 h-12 object-contain" />
+            <div className="w-16 h-16 flex items-center justify-center hover:scale-105 transition-transform duration-300">
+              <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-14 h-14 object-contain drop-shadow-xl" />
             </div>
             <div>
               <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
@@ -915,8 +915,8 @@ const Index = () => {
           <div className="border-t border-gray-700 mt-12 pt-8">
             {/* Logo centralizada */}
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-white/95 rounded-full flex items-center justify-center shadow-xl border border-white/20 backdrop-blur-sm">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-12 h-12 object-contain" />
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-9 h-9 object-contain drop-shadow-lg" />
               </div>
             </div>
             <p className="text-gray-400 text-lg text-center">
