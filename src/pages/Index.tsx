@@ -15,7 +15,8 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
-import saraivaLogo from "@/assets/saraiva-logo-new.png";
+import saraivaLogo from "@/assets/saraiva-logo.png";
+import saraivaSymbolWhite from "@/assets/saraiva-symbol-white.png";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -66,8 +67,12 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-white to-orange-100 rounded-xl flex items-center justify-center shadow-lg border border-white/30">
-                <Wifi className="w-4 h-4 text-orange-600" />
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border border-white/20">
+                <img 
+                  src={saraivaSymbolWhite} 
+                  alt="SaraivaNet Symbol" 
+                  className="w-6 h-6 object-contain"
+                />
               </div>
               <div>
                 <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
@@ -86,8 +91,12 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-              <Wifi className="w-5 h-5 text-orange-600" />
+            <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border border-white/20">
+              <img 
+                src={saraivaSymbolWhite} 
+                alt="SaraivaNet Symbol" 
+                className="w-7 h-7 object-contain"
+              />
             </div>
             <div>
               <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
@@ -112,17 +121,6 @@ const Index = () => {
           </div>
         </div>
       </header>
-
-      {/* Logo Destacada */}
-      <div className="fixed top-20 left-6 z-40">
-        <div className="w-24 h-24 bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-4 hover:scale-105 transition-all duration-300 border border-orange-200/50">
-          <img 
-            src={saraivaLogo} 
-            alt="SaraivaNet Logo" 
-            className="w-full h-full object-contain"
-          />
-        </div>
-      </div>
 
       {/* Hero Section - Fundo suavizado e mais elegante */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff5722 0%, #ff6600 20%, #ff7700 40%, #ff8800 60%, #ff9900 80%, #ffaa00 100%)'}}>
