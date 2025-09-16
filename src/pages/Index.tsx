@@ -15,7 +15,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
-import saraivaLogo from "@/assets/saraiva-logo.png";
+import saraivaLogo from "@/assets/saraiva-logo-official.png";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -66,8 +66,8 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white/95 rounded-full flex items-center justify-center shadow-lg border border-white/50 backdrop-blur-sm">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-8 h-8 object-contain" />
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl border-2 border-white">
+                <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-10 h-10 object-contain" />
               </div>
               <div>
                 <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
@@ -86,8 +86,8 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="w-14 h-14 bg-white/95 rounded-full flex items-center justify-center shadow-xl border border-white/50 backdrop-blur-sm hover:scale-105 transition-transform duration-300">
-              <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-10 h-10 object-contain" />
+            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl border-2 border-white hover:scale-105 transition-transform duration-300">
+              <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-12 h-12 object-contain" />
             </div>
             <div>
               <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
