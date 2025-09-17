@@ -66,8 +66,8 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-16 h-16 flex items-center justify-center">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-14 h-14 object-contain" style={{filter: 'drop-shadow(0 0 3px rgba(255,255,255,0.8)) drop-shadow(0 0 6px rgba(255,255,255,0.4))'}} />
+              <div className="flex items-center justify-center">
+                <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '55px', height: '55px', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.5))'}} />
               </div>
               <div>
                 <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
@@ -86,8 +86,8 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="w-16 h-16 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-14 h-14 object-contain" style={{filter: 'drop-shadow(0 0 3px rgba(255,255,255,0.8)) drop-shadow(0 0 6px rgba(255,255,255,0.4))'}} />
+            <div className="flex items-center justify-center hover:scale-105 transition-transform duration-300">
+              <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '55px', height: '55px', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.5))'}} />
             </div>
             <div>
               <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
@@ -915,8 +915,8 @@ const Index = () => {
           <div className="border-t border-gray-700 mt-12 pt-8">
             {/* Logo centralizada */}
             <div className="flex justify-center mb-6">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-9 h-9 object-contain" style={{filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.6))'}} />
+              <div className="flex items-center justify-center">
+                <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '35px', height: '35px', filter: 'drop-shadow(0 0 1px rgba(255,255,255,0.7))'}} />
               </div>
             </div>
             <p className="text-gray-400 text-lg text-center">
