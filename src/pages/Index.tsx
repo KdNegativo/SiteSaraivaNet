@@ -66,7 +66,7 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="flex items-center justify-center p-2 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="flex items-center justify-center hover:scale-105 transition-all duration-300">
                 <SmartLogo 
                   className="object-contain" 
                   style={{
@@ -101,7 +101,7 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-5">
-            <div className="flex items-center justify-center p-3 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:scale-105 hover:bg-white/20 transition-all duration-300 shadow-2xl">
+            <div className="flex items-center justify-center hover:scale-105 transition-all duration-300">
               <SmartLogo 
                 className="object-contain" 
                 style={{
@@ -944,7 +944,7 @@ const Index = () => {
           <div className="border-t border-gray-700 mt-12 pt-8">
             {/* Logo centralizada */}
             <div className="flex justify-center mb-8">
-              <div className="flex items-center justify-center p-2 bg-gradient-to-br from-orange-500/20 to-orange-600/30 rounded-xl backdrop-blur-sm border border-orange-400/30 shadow-xl">
+              <div className="flex items-center justify-center">
                 <SmartLogo 
                   className="object-contain" 
                   style={{
