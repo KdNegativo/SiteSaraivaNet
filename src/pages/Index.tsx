@@ -67,10 +67,27 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="flex items-center justify-center">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '40px', height: '40px', filter: 'drop-shadow(0 0 3px rgba(255,255,255,0.9))'}} />
+                <img 
+                  src={saraivaLogo} 
+                  alt="SaraivaNet Logo" 
+                  className="object-contain" 
+                  style={{
+                    width: '40px', 
+                    height: '40px', 
+                    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3)) drop-shadow(0 0 2px rgba(255,255,255,0.8))',
+                    imageRendering: 'crisp-edges'
+                  }} 
+                />
               </div>
               <div>
-                <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', opacity: '1', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
+                <span style={{
+                  fontSize: '18px', 
+                  fontWeight: 'bold', 
+                  color: '#ffffff', 
+                  textShadow: '1px 1px 0px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.6), 0 0 8px rgba(0,0,0,0.4)', 
+                  fontFamily: 'Poppins, sans-serif', 
+                  letterSpacing: '0.5px'
+                }}>SaraivaNet</span>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
                   <span className="bg-gradient-to-r from-white/80 to-white/60 bg-clip-text text-transparent font-bold">Eliseu Martins - PI</span>
@@ -87,10 +104,26 @@ const Index = () => {
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '60px', height: '60px', filter: 'drop-shadow(0 0 4px rgba(255,255,255,0.9))'}} />
+              <img 
+                src={saraivaLogo} 
+                alt="SaraivaNet Logo" 
+                className="object-contain" 
+                style={{
+                  width: '60px', 
+                  height: '60px', 
+                  filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.3)) drop-shadow(0 0 3px rgba(255,255,255,0.8))',
+                  imageRendering: 'crisp-edges'
+                }} 
+              />
             </div>
             <div>
-              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', opacity: '1', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
+              <span style={{
+                fontSize: '24px', 
+                fontWeight: 'bold', 
+                color: '#ffffff', 
+                textShadow: '1px 1px 0px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.7), 0 0 10px rgba(0,0,0,0.5)', 
+                fontFamily: 'Poppins, sans-serif'
+              }}>SaraivaNet</span>
               <div className="text-xs text-orange-100 font-medium flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
                 Eliseu Martins - PI
@@ -916,7 +949,17 @@ const Index = () => {
             {/* Logo centralizada */}
             <div className="flex justify-center mb-6">
               <div className="flex items-center justify-center">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '35px', height: '35px', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9))'}} />
+                <img 
+                  src={saraivaLogo} 
+                  alt="SaraivaNet Logo" 
+                  className="object-contain" 
+                  style={{
+                    width: '35px', 
+                    height: '35px', 
+                    filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.3)) drop-shadow(0 0 2px rgba(255,255,255,0.7))',
+                    imageRendering: 'crisp-edges'
+                  }} 
+                />
               </div>
             </div>
             <p className="text-gray-400 text-lg text-center">
