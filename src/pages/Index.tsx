@@ -15,7 +15,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
-import saraivaLogo from "@/assets/saraiva-logo-new.png";
+import { SmartLogo } from "@/components/SmartLogo";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -67,9 +67,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="flex items-center justify-center">
-                <img 
-                  src={saraivaLogo} 
-                  alt="SaraivaNet Logo" 
+                <SmartLogo 
                   className="object-contain" 
                   style={{
                     width: '40px', 
@@ -104,9 +102,7 @@ const Index = () => {
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <img 
-                src={saraivaLogo} 
-                alt="SaraivaNet Logo" 
+              <SmartLogo 
                 className="object-contain" 
                 style={{
                   width: '60px', 
@@ -949,9 +945,7 @@ const Index = () => {
             {/* Logo centralizada */}
             <div className="flex justify-center mb-6">
               <div className="flex items-center justify-center">
-                <img 
-                  src={saraivaLogo} 
-                  alt="SaraivaNet Logo" 
+                <SmartLogo 
                   className="object-contain" 
                   style={{
                     width: '35px', 
