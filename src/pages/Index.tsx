@@ -15,7 +15,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
-import saraivaLogo from "@/assets/saraiva-logo-official.png";
+import saraivaLogo from "@/assets/saraiva-logo-new.png";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
