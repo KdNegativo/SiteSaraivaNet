@@ -66,23 +66,23 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center p-2 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <SmartLogo 
                   className="object-contain" 
                   style={{
-                    width: '40px', 
-                    height: '40px', 
-                    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3)) drop-shadow(0 0 2px rgba(255,255,255,0.8))',
+                    width: '55px', 
+                    height: '55px', 
+                    filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.4)) drop-shadow(0 0 15px rgba(255,102,0,0.6)) drop-shadow(0 0 30px rgba(255,255,255,0.3))',
                     imageRendering: 'crisp-edges'
                   }} 
                 />
               </div>
               <div>
                 <span style={{
-                  fontSize: '18px', 
+                  fontSize: '20px', 
                   fontWeight: 'bold', 
                   color: '#ffffff', 
-                  textShadow: '1px 1px 0px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.6), 0 0 8px rgba(0,0,0,0.4)', 
+                  textShadow: '1px 1px 0px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.6), 0 0 12px rgba(255,102,0,0.4)', 
                   fontFamily: 'Poppins, sans-serif', 
                   letterSpacing: '0.5px'
                 }}>SaraivaNet</span>
@@ -100,24 +100,24 @@ const Index = () => {
 
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center justify-center hover:scale-105 transition-transform duration-300">
+          <div className="flex items-center space-x-5">
+            <div className="flex items-center justify-center p-3 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:scale-105 hover:bg-white/20 transition-all duration-300 shadow-2xl">
               <SmartLogo 
                 className="object-contain" 
                 style={{
-                  width: '60px', 
-                  height: '60px', 
-                  filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.3)) drop-shadow(0 0 3px rgba(255,255,255,0.8))',
+                  width: '85px', 
+                  height: '85px', 
+                  filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.4)) drop-shadow(0 0 25px rgba(255,102,0,0.7)) drop-shadow(0 0 50px rgba(255,255,255,0.3))',
                   imageRendering: 'crisp-edges'
                 }} 
               />
             </div>
             <div>
               <span style={{
-                fontSize: '24px', 
+                fontSize: '28px', 
                 fontWeight: 'bold', 
                 color: '#ffffff', 
-                textShadow: '1px 1px 0px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.7), 0 0 10px rgba(0,0,0,0.5)', 
+                textShadow: '2px 2px 0px rgba(0,0,0,0.8), 3px 3px 6px rgba(0,0,0,0.7), 0 0 20px rgba(255,102,0,0.5)', 
                 fontFamily: 'Poppins, sans-serif'
               }}>SaraivaNet</span>
               <div className="text-xs text-orange-100 font-medium flex items-center">
@@ -943,14 +943,14 @@ const Index = () => {
 
           <div className="border-t border-gray-700 mt-12 pt-8">
             {/* Logo centralizada */}
-            <div className="flex justify-center mb-6">
-              <div className="flex items-center justify-center">
+            <div className="flex justify-center mb-8">
+              <div className="flex items-center justify-center p-2 bg-gradient-to-br from-orange-500/20 to-orange-600/30 rounded-xl backdrop-blur-sm border border-orange-400/30 shadow-xl">
                 <SmartLogo 
                   className="object-contain" 
                   style={{
-                    width: '35px', 
-                    height: '35px', 
-                    filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.3)) drop-shadow(0 0 2px rgba(255,255,255,0.7))',
+                    width: '50px', 
+                    height: '50px', 
+                    filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.4)) drop-shadow(0 0 15px rgba(255,102,0,0.6)) drop-shadow(0 0 25px rgba(255,255,255,0.2))',
                     imageRendering: 'crisp-edges'
                   }} 
                 />
