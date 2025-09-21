@@ -70,8 +70,8 @@ const Index = () => {
                 <SmartLogo 
                   className="object-contain" 
                   style={{
-                    width: '120px', 
-                    height: '120px', 
+                    width: '180px', 
+                    height: '180px', 
                     filter: 'drop-shadow(0 6px 16px rgba(0,0,0,0.5)) drop-shadow(0 0 30px rgba(255,102,0,0.8)) drop-shadow(0 0 60px rgba(255,255,255,0.4)) brightness(1.1)',
                     imageRendering: 'crisp-edges'
                   }} 
@@ -105,8 +105,8 @@ const Index = () => {
               <SmartLogo 
                 className="object-contain" 
                 style={{
-                  width: '150px', 
-                  height: '150px', 
+                  width: '220px', 
+                  height: '220px', 
                   filter: 'drop-shadow(0 8px 20px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(255,102,0,0.9)) drop-shadow(0 0 80px rgba(255,255,255,0.4)) brightness(1.15)',
                   imageRendering: 'crisp-edges'
                 }} 
@@ -948,8 +948,8 @@ const Index = () => {
                 <SmartLogo 
                   className="object-contain" 
                   style={{
-                    width: '100px', 
-                    height: '100px', 
+                    width: '140px', 
+                    height: '140px', 
                     filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.5)) drop-shadow(0 0 25px rgba(255,102,0,0.8)) drop-shadow(0 0 50px rgba(255,255,255,0.3)) brightness(1.1)',
                     imageRendering: 'crisp-edges'
                   }} 
