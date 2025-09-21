@@ -15,7 +15,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Link } from "react-router-dom";
-import saraivaLogo from "@/assets/saraivanet-logo.png";
+import saraivaLogo from "@/assets/saraiva-logo-official.png";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -67,10 +67,11 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="flex items-center justify-center">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '120px', height: 'auto', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))'}} />
+                <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '55px', height: '55px', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.5))'}} />
               </div>
               <div>
-                <div className="text-xs text-orange-100 font-medium flex items-center mt-1">
+                <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
+                <div className="text-xs text-orange-100 font-medium flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
                   <span className="bg-gradient-to-r from-white/80 to-white/60 bg-clip-text text-transparent font-bold">Eliseu Martins - PI</span>
                 </div>
@@ -86,10 +87,11 @@ const Index = () => {
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '160px', height: 'auto', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))'}} />
+              <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '55px', height: '55px', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.5))'}} />
             </div>
             <div>
-              <div className="text-xs text-orange-100 font-medium flex items-center mt-2">
+              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
+              <div className="text-xs text-orange-100 font-medium flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
                 Eliseu Martins - PI
               </div>
