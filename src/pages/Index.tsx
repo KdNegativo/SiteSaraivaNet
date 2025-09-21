@@ -66,13 +66,13 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="flex items-center justify-center hover:scale-105 transition-all duration-300">
+              <div className="flex items-center justify-center hover:scale-110 transition-all duration-300 p-3 bg-gradient-to-br from-orange-500/10 to-orange-600/20 rounded-2xl backdrop-blur-sm border border-orange-400/30">
                 <SmartLogo 
                   className="object-contain" 
                   style={{
-                    width: '55px', 
-                    height: '55px', 
-                    filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.4)) drop-shadow(0 0 15px rgba(255,102,0,0.6)) drop-shadow(0 0 30px rgba(255,255,255,0.3))',
+                    width: '85px', 
+                    height: '85px', 
+                    filter: 'drop-shadow(0 6px 16px rgba(0,0,0,0.5)) drop-shadow(0 0 30px rgba(255,102,0,0.8)) drop-shadow(0 0 60px rgba(255,255,255,0.4)) brightness(1.1)',
                     imageRendering: 'crisp-edges'
                   }} 
                 />
@@ -101,13 +101,13 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-5">
-            <div className="flex items-center justify-center hover:scale-105 transition-all duration-300">
+            <div className="flex items-center justify-center hover:scale-110 transition-all duration-300 p-4 bg-gradient-to-br from-orange-500/15 to-orange-600/25 rounded-3xl backdrop-blur-sm border border-orange-400/40">
               <SmartLogo 
                 className="object-contain" 
                 style={{
-                  width: '85px', 
-                  height: '85px', 
-                  filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.4)) drop-shadow(0 0 25px rgba(255,102,0,0.7)) drop-shadow(0 0 50px rgba(255,255,255,0.3))',
+                  width: '120px', 
+                  height: '120px', 
+                  filter: 'drop-shadow(0 8px 20px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(255,102,0,0.9)) drop-shadow(0 0 80px rgba(255,255,255,0.4)) brightness(1.15)',
                   imageRendering: 'crisp-edges'
                 }} 
               />
@@ -944,13 +944,13 @@ const Index = () => {
           <div className="border-t border-gray-700 mt-12 pt-8">
             {/* Logo centralizada */}
             <div className="flex justify-center mb-8">
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center hover:scale-105 transition-all duration-300 p-3 bg-gradient-to-br from-orange-500/10 to-orange-600/20 rounded-2xl backdrop-blur-sm border border-orange-400/30">
                 <SmartLogo 
                   className="object-contain" 
                   style={{
-                    width: '50px', 
-                    height: '50px', 
-                    filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.4)) drop-shadow(0 0 15px rgba(255,102,0,0.6)) drop-shadow(0 0 25px rgba(255,255,255,0.2))',
+                    width: '80px', 
+                    height: '80px', 
+                    filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.5)) drop-shadow(0 0 25px rgba(255,102,0,0.8)) drop-shadow(0 0 50px rgba(255,255,255,0.3)) brightness(1.1)',
                     imageRendering: 'crisp-edges'
                   }} 
                 />
