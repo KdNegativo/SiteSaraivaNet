@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { BackgroundRemovalProcessor } from './BackgroundRemovalProcessor';
-import saraivaLogoOriginal from "@/assets/saraiva-logo-new.png";
+import saraivaLogoOriginal from "@/assets/saraiva-logo-blue.png";
 
 interface SmartLogoProps {
   className?: string;

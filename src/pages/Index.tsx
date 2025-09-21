@@ -67,15 +67,15 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="flex items-center justify-center hover:scale-110 transition-all duration-300 p-2 bg-gradient-to-br from-orange-500/10 to-orange-600/20 rounded-2xl backdrop-blur-sm border border-orange-400/30">
-                <SmartLogo 
-                  className="object-contain" 
-                  style={{
-                    width: '180px', 
-                    height: '180px', 
-                    filter: 'drop-shadow(0 6px 16px rgba(0,0,0,0.5)) drop-shadow(0 0 30px rgba(255,102,0,0.8)) drop-shadow(0 0 60px rgba(255,255,255,0.4)) brightness(1.1)',
-                    imageRendering: 'crisp-edges'
-                  }} 
-                />
+              <SmartLogo 
+                className="object-contain" 
+                style={{
+                  width: '250px', 
+                  height: '250px', 
+                  filter: 'drop-shadow(0 6px 16px rgba(0,0,0,0.5)) brightness(1.1)',
+                  imageRendering: 'crisp-edges'
+                }} 
+              />
               </div>
               <div>
                 <span style={{
@@ -102,15 +102,15 @@ const Index = () => {
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-5">
             <div className="flex items-center justify-center hover:scale-110 transition-all duration-300 p-3 bg-gradient-to-br from-orange-500/15 to-orange-600/25 rounded-3xl backdrop-blur-sm border border-orange-400/40">
-              <SmartLogo 
-                className="object-contain" 
-                style={{
-                  width: '220px', 
-                  height: '220px', 
-                  filter: 'drop-shadow(0 8px 20px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(255,102,0,0.9)) drop-shadow(0 0 80px rgba(255,255,255,0.4)) brightness(1.15)',
-                  imageRendering: 'crisp-edges'
-                }} 
-              />
+            <SmartLogo 
+              className="object-contain" 
+              style={{
+                width: '300px', 
+                height: '300px', 
+                filter: 'drop-shadow(0 8px 20px rgba(0,0,0,0.5)) brightness(1.15)',
+                imageRendering: 'crisp-edges'
+              }} 
+            />
             </div>
             <div>
               <span style={{
@@ -948,9 +948,9 @@ const Index = () => {
                 <SmartLogo 
                   className="object-contain" 
                   style={{
-                    width: '140px', 
-                    height: '140px', 
-                    filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.5)) drop-shadow(0 0 25px rgba(255,102,0,0.8)) drop-shadow(0 0 50px rgba(255,255,255,0.3)) brightness(1.1)',
+                    width: '180px', 
+                    height: '180px', 
+                    filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.5)) brightness(1.1)',
                     imageRendering: 'crisp-edges'
                   }} 
                 />
