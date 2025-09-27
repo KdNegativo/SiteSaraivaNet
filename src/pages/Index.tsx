@@ -48,114 +48,32 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Fundo Laranja Moderno e Profissional */}
+      {/* Fundo Elegante e Leve */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Gradiente Base Moderno */}
-        <div className="absolute inset-0" style={{
-          background: `
-            linear-gradient(135deg, 
-              #FF4500 0%, 
-              #FF6600 15%, 
-              #FF7700 30%, 
-              #FF8800 45%, 
-              #FF9900 60%, 
-              #FFAA00 75%, 
-              #FFBB33 90%, 
-              #FFCC66 100%
-            )`
-        }}></div>
+        {/* Gradiente Base Suave usando sistema de design */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/5"></div>
 
-        {/* Overlay com movimento sutil */}
-        <div 
-          className="absolute inset-0 opacity-60"
-          style={{
-            background: `
-              radial-gradient(circle at 20% 80%, rgba(255, 69, 0, 0.4) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(255, 140, 0, 0.3) 0%, transparent 50%),
-              radial-gradient(circle at 40% 40%, rgba(255, 165, 0, 0.2) 0%, transparent 50%)
-            `,
-            animation: 'gentle-float 20s ease-in-out infinite'
-          }}
-        ></div>
+        {/* Overlay minimalista com movimento sutil */}
+        <div className="absolute inset-0 opacity-30 animate-gradient-x bg-gradient-to-r from-primary/5 via-transparent to-accent/8"></div>
 
-        {/* Padrão geométrico sutil */}
-        <div 
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `
-              linear-gradient(30deg, transparent 40%, rgba(255, 255, 255, 0.1) 41%, rgba(255, 255, 255, 0.1) 42%, transparent 43%),
-              linear-gradient(-30deg, transparent 40%, rgba(255, 255, 255, 0.05) 41%, rgba(255, 255, 255, 0.05) 42%, transparent 43%)
-            `,
-            backgroundSize: '100px 100px',
-            animation: 'subtle-move 25s linear infinite'
-          }}
-        ></div>
-
-        {/* Elementos flutuantes minimalistas */}
+        {/* Elementos flutuantes simplificados */}
         <div className="absolute inset-0">
-          {/* Círculos grandes sutis */}
-          <div 
-            className="absolute -top-20 -right-20 w-80 h-80 rounded-full opacity-20"
-            style={{
-              background: 'radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%)',
-              animation: 'float-gentle 15s ease-in-out infinite'
-            }}
-          ></div>
-          <div 
-            className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full opacity-15"
-            style={{
-              background: 'radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%)',
-              animation: 'float-gentle 18s ease-in-out infinite reverse'
-            }}
-          ></div>
-          
-          {/* Formas geométricas modernas */}
-          <div 
-            className="absolute top-1/4 right-1/4 w-32 h-32 opacity-30"
-            style={{
-              background: 'linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%)',
-              clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)',
-              animation: 'rotate-slow 30s linear infinite'
-            }}
-          ></div>
-          <div 
-            className="absolute bottom-1/3 left-1/3 w-24 h-24 opacity-25"
-            style={{
-              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 100%)',
-              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-              animation: 'pulse-gentle 12s ease-in-out infinite'
-            }}
-          ></div>
+          <div className="absolute top-10 right-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-40 h-40 bg-accent/8 rounded-full blur-2xl animate-float delay-700"></div>
+          <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-primary/3 rounded-full blur-xl animate-pulse"></div>
         </div>
 
-        {/* Efeito de luz ambiente */}
-        <div 
-          className="absolute inset-0 opacity-40"
-          style={{
-            background: `
-              radial-gradient(ellipse 100% 50% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
-              radial-gradient(ellipse 50% 100% at 0% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(ellipse 50% 100% at 100% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)
-            `
-          }}
-        ></div>
-
-        {/* Textura sutil final */}
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.8) 1px, transparent 0)
-            `,
-            backgroundSize: '40px 40px'
-          }}
-        ></div>
+        {/* Grid sutil para textura */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }}></div>
       </div>
       {/* Floating Components */}
       <ChatBot />
       
       {/* Header */}
-      <header style={{background: 'linear-gradient(135deg, #FF6600 0%, #FF2E00 100%)', borderBottomColor: '#ff2200'}} className="fixed top-0 left-0 right-0 shadow-xl px-4 py-2 border-b-4 z-50">
+      <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-primary to-accent shadow-xl px-4 py-2 border-b-4 border-primary/20 z-50">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -208,18 +126,10 @@ const Index = () => {
       </header>
 
       {/* Hero Section - Fundo suavizado e mais elegante */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff5722 0%, #ff6600 20%, #ff7700 40%, #ff8800 60%, #ff9900 80%, #ffaa00 100%)'}}>
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-primary/90 via-primary to-accent/80">
         
-        {/* Fundo suavizado com padrões mais sutis */}
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.06) 0%, transparent 60%),
-            radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
-            radial-gradient(circle at 50% 20%, rgba(255, 165, 0, 0.08) 0%, transparent 70%),
-            radial-gradient(circle at 30% 80%, rgba(255, 140, 0, 0.05) 0%, transparent 60%)
-          `,
-          backgroundSize: '800px 800px, 1000px 1000px, 600px 600px, 500px 500px'
-        }}></div>
+        {/* Overlay minimalista */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10 opacity-50"></div>
         
         {/* Mobile Version */}
         <div className="md:hidden w-full px-4 py-16">
