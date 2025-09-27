@@ -337,20 +337,16 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <StatsCounter target={500} />
-                <p className="text-gray-700 font-medium">Clientes Ativos</p>
+                <StatsCounter endValue={500} label="Clientes Ativos" />
               </div>
               <div className="text-center">
-                <StatsCounter target={99} />
-                <p className="text-gray-700 font-medium">Uptime</p>
+                <StatsCounter endValue={99} label="Uptime" suffix="%" />
               </div>
               <div className="text-center">
-                <StatsCounter target={24} />
-                <p className="text-gray-700 font-medium">Suporte</p>
+                <StatsCounter endValue={24} label="Suporte" suffix="h" />
               </div>
               <div className="text-center">
-                <StatsCounter target={5} />
-                <p className="text-gray-700 font-medium">Anos no Mercado</p>
+                <StatsCounter endValue={5} label="Anos no Mercado" />
               </div>
             </div>
           </div>
@@ -560,7 +556,7 @@ const Index = () => {
             </AnimatedSection>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <AnimatedSection animation="slide-in-left">
+              <AnimatedSection animation="slide-left">
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
@@ -606,7 +602,7 @@ const Index = () => {
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-in-right">
+              <AnimatedSection animation="slide-right">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
                     <div className="text-3xl font-bold text-orange-600 mb-2">500+</div>
@@ -649,27 +645,30 @@ const Index = () => {
             <AnimatedSection animation="fade-up" delay={0}>
               <TestimonialCard
                 name="Maria Santos"
-                content="A internet da SaraivaNet é excelente! Nunca fica fora do ar e o suporte é muito rápido. O app da TV é uma maravilha para as crianças."
-                avatar="👩‍💼"
-                rating={5}
+                testimonial="A internet da SaraivaNet é excelente! Nunca fica fora do ar e o suporte é muito rápido. O app da TV é uma maravilha para as crianças."
+                age="32 anos"
+                location="São Paulo, SP"
+                initials="MS"
               />
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
               <TestimonialCard
                 name="João Silva"
-                content="Melhor custo-benefício da região! Internet rápida, TV grátis e atendimento nota 10. Super recomendo a SaraivaNet!"
-                avatar="👨‍💻"
-                rating={5}
+                testimonial="Melhor custo-benefício da região! Internet rápida, TV grátis e atendimento nota 10. Super recomendo a SaraivaNet!"
+                age="28 anos"
+                location="Rio de Janeiro, RJ"
+                initials="JS"
               />
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
               <TestimonialCard
                 name="Ana Oliveira"
-                content="Desde que contratei nunca mais tive problemas. A fibra óptica faz toda diferença! E o SaraivaTV tem muito conteúdo bom."
-                avatar="👩‍🎓"
-                rating={5}
+                testimonial="Desde que contratei nunca mais tive problemas. A fibra óptica faz toda diferença! E o SaraivaTV tem muito conteúdo bom."
+                age="45 anos"
+                location="Belo Horizonte, MG"
+                initials="AO"
               />
             </AnimatedSection>
           </div>
@@ -691,7 +690,7 @@ const Index = () => {
           </AnimatedSection>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimatedSection animation="slide-in-left">
+            <AnimatedSection animation="slide-left">
               <div className="space-y-6">
                 <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
@@ -735,7 +734,7 @@ const Index = () => {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection animation="slide-in-right">
+            <AnimatedSection animation="slide-right">
               <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-6">Pronto para se conectar?</h3>
                 <p className="mb-8">
