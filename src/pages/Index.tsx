@@ -48,16 +48,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fff9f5 0%, #ffeee0 25%, #ffe5d0 50%, #ffddc0 75%, #ffd5b0 100%)'}}>
-      {/* Elegant Background Pattern */}
-      <div className="absolute inset-0" style={{
-        backgroundImage: `
-          radial-gradient(circle at 20% 20%, rgba(255, 102, 0, 0.05) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.03) 0%, transparent 50%),
-          radial-gradient(circle at 40% 60%, rgba(255, 140, 0, 0.02) 0%, transparent 50%)
-        `,
-        backgroundSize: '800px 800px, 600px 600px, 400px 400px'
-      }}></div>
+    <div className="min-h-screen relative overflow-hidden" style={{background: 'linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%)'}}>
+      {/* Padrões de fundo removidos para manter o gradiente limpo */}
       {/* Floating Components */}
       <ChatBot />
       
@@ -108,18 +100,16 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Fundo suavizado e mais elegante */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff5722 0%, #ff6600 20%, #ff7700 40%, #ff8800 60%, #ff9900 80%, #ffaa00 100%)'}}>
+      {/* Hero Section - Fundo igual à imagem */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%)'}}>
         
-        {/* Fundo suavizado com padrões mais sutis */}
+        {/* Padrões sutis no fundo */}
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.06) 0%, transparent 60%),
-            radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
-            radial-gradient(circle at 50% 20%, rgba(255, 165, 0, 0.08) 0%, transparent 70%),
-            radial-gradient(circle at 30% 80%, rgba(255, 140, 0, 0.05) 0%, transparent 60%)
+            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.03) 0%, transparent 50%)
           `,
-          backgroundSize: '800px 800px, 1000px 1000px, 600px 600px, 500px 500px'
+          backgroundSize: '400px 400px, 600px 600px'
         }}></div>
         
         {/* Mobile Version */}
