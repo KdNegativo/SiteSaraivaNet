@@ -14,12 +14,16 @@ import ResponsiveImage from "@/components/ResponsiveImage";
 import HeroCarousel from "@/components/HeroCarousel";
 import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { usePerformanceMonitor } from "@/hooks/usePerformanceMonitor";
 import { Link } from "react-router-dom";
 import saraivaLogo from "@/assets/saraiva-logo-official.png";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
   const prefersReducedMotion = useReducedMotion();
+  
+  // Monitorar performance e ajustar animações automaticamente
+  usePerformanceMonitor();
   
   const handleSmoothScroll = (targetId: string) => {
     const targetElement = document.getElementById(targetId);
@@ -48,11 +52,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Fundo Dinâmico Futurista - Otimizado para mobile */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Base gradiente principal com cores vibrantes - com suporte a modo escuro */}
+      {/* Fundo Dinâmico Futurista - Otimizado com controle de performance */}
+      <div className="fixed inset-0 -z-10 overflow-hidden" style={{contain: 'layout style paint'}}>
+        {/* Base gradiente principal - estático no mobile para melhor performance */}
         <div 
-          className="absolute inset-0 dark:opacity-90" 
+          className="absolute inset-0 dark:opacity-90 md:animate-[gradient-move_20s_ease_infinite]" 
           style={{
             background: `linear-gradient(135deg, 
               #ff6b35 0%,     /* Laranja vibrante */
@@ -62,37 +66,35 @@ const Index = () => {
               #7c3aed 80%,    /* Roxo vibrante */
               #581c87 100%    /* Roxo escuro */
             )`,
-            backgroundSize: '200% 200%',
-            animation: 'gradient-move 20s ease infinite',
-            willChange: 'auto'
+            backgroundSize: '200% 200%'
           }}
         ></div>
 
         {/* Overlay para modo escuro - tons vermelhos */}
         <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-red-900/60 dark:via-red-800/70 dark:to-red-700/60"></div>
 
-        {/* Camada de orbs coloridos dinâmicos - simplificada para mobile */}
-        <div className="absolute inset-0 hidden md:block">
+        {/* Elementos animados apenas no desktop */}
+        <div className="absolute inset-0 hidden lg:block">
           <div 
             className="absolute top-1/4 right-1/5 w-72 h-72 rounded-full blur-3xl opacity-20"
             style={{
               background: 'radial-gradient(circle, #ff6b35, #f7931e)',
-              animation: 'float-large 20s ease-in-out infinite',
-              willChange: 'transform'
+              animation: 'float-large 25s ease-in-out infinite',
+              contain: 'layout style paint'
             }}
           ></div>
           <div 
             className="absolute bottom-1/3 left-1/6 w-80 h-80 rounded-full blur-3xl opacity-15"
             style={{
               background: 'radial-gradient(circle, #dc2626, #991b1b)',
-              animation: 'float-large 25s ease-in-out infinite reverse',
-              willChange: 'transform'
+              animation: 'float-large 30s ease-in-out infinite reverse',
+              contain: 'layout style paint'
             }}
           ></div>
         </div>
 
-        {/* Versão mobile mais simples */}
-        <div className="absolute inset-0 md:hidden">
+        {/* Versão estática para tablet e mobile */}
+        <div className="absolute inset-0 lg:hidden">
           <div 
             className="absolute top-1/4 right-1/5 w-40 h-40 rounded-full blur-2xl opacity-15"
             style={{
