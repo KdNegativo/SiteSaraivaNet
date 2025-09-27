@@ -177,8 +177,28 @@ const Index = () => {
                 </div>
               </div>
 
+              {/* Stats Mobile - embaixo dos cards */}
+              <div className="grid grid-cols-2 gap-3 max-w-md mx-auto mt-8">
+                <div className="bg-red-900/70 backdrop-blur-sm rounded-xl p-4 text-center shadow-lg">
+                  <div className="text-white font-black text-2xl mb-1">964+</div>
+                  <div className="text-red-100 font-medium text-xs">Clientes</div>
+                </div>
+                <div className="bg-red-900/70 backdrop-blur-sm rounded-xl p-4 text-center shadow-lg">
+                  <div className="text-white font-black text-2xl mb-1">95%</div>
+                  <div className="text-red-100 font-medium text-xs">Uptime</div>
+                </div>
+                <div className="bg-red-900/70 backdrop-blur-sm rounded-xl p-4 text-center shadow-lg">
+                  <div className="text-white font-black text-2xl mb-1">19+</div>
+                  <div className="text-red-100 font-medium text-xs">Canais</div>
+                </div>
+                <div className="bg-red-900/70 backdrop-blur-sm rounded-xl p-4 text-center shadow-lg">
+                  <div className="text-white font-black text-2xl mb-1">23h</div>
+                  <div className="text-red-100 font-medium text-xs">Online</div>
+                </div>
+              </div>
+
               {/* CTA Button maior no mobile */}
-              <div className="mt-16">
+              <div className="mt-12">
                 <TouchButton 
                   onClick={handleWhatsAppClick}
                   className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-10 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
@@ -278,10 +298,10 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Stats Bar - Stats na parte inferior */}
-        <div className="absolute bottom-0 left-0 right-0 pb-8">
+        {/* Stats Bar - Stats na parte inferior - apenas desktop */}
+        <div className="absolute bottom-0 left-0 right-0 pb-8 hidden lg:block">
           <div className="container mx-auto px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="grid grid-cols-4 gap-4 max-w-4xl mx-auto">
               <div className="bg-red-900/60 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg">
                 <div className="text-white font-black text-3xl mb-1">964+</div>
                 <div className="text-red-100 font-medium text-sm">Clientes</div>
