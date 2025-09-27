@@ -47,16 +47,40 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fff9f5 0%, #ffeee0 25%, #ffe5d0 50%, #ffddc0 75%, #ffd5b0 100%)'}}>
-      {/* Elegant Background Pattern */}
-      <div className="absolute inset-0" style={{
-        backgroundImage: `
-          radial-gradient(circle at 20% 20%, rgba(255, 102, 0, 0.05) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.03) 0%, transparent 50%),
-          radial-gradient(circle at 40% 60%, rgba(255, 140, 0, 0.02) 0%, transparent 50%)
-        `,
-        backgroundSize: '800px 800px, 600px 600px, 400px 400px'
-      }}></div>
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Dynamic Orange Background with Animated Elements */}
+      <div className="fixed inset-0 -z-10">
+        {/* Primary Gradient Background */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF7700 50%, #FF5722 75%, #FF8800 100%)'
+        }}></div>
+        
+        {/* Animated Gradient Overlay */}
+        <div className="absolute inset-0 opacity-30" style={{
+          background: 'linear-gradient(45deg, transparent 0%, rgba(255, 165, 0, 0.3) 25%, transparent 50%, rgba(255, 140, 0, 0.2) 75%, transparent 100%)',
+          animation: 'gradientShift 8s ease-in-out infinite'
+        }}></div>
+        
+        {/* Floating Geometric Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Large Circle */}
+          <div className="absolute -top-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float"></div>
+          {/* Medium Circle */}
+          <div className="absolute top-1/2 -left-32 w-64 h-64 bg-orange-300/10 rounded-full blur-2xl animate-float" style={{animationDelay: '2s'}}></div>
+          {/* Small Circles */}
+          <div className="absolute bottom-20 right-1/4 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float" style={{animationDelay: '4s'}}></div>
+          <div className="absolute top-1/4 left-1/3 w-24 h-24 bg-orange-200/15 rounded-full blur-lg animate-float" style={{animationDelay: '6s'}}></div>
+        </div>
+        
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+            radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px, 30px 30px'
+        }}></div>
+      </div>
       {/* Floating Components */}
       <ChatBot />
       
@@ -311,24 +335,51 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-8 px-4" style={{background: 'linear-gradient(135deg, #ff5722 0%, #ff6600 20%, #ff7700 40%, #ff8800 60%, #ff9900 80%, #ffaa00 100%)'}}>
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-amber-900/80 backdrop-blur-sm rounded-2xl p-4 text-center border border-amber-800/50">
-              <div className="text-white font-black text-2xl md:text-3xl mb-1">964+</div>
-              <div className="text-amber-100 font-medium text-xs md:text-sm">Clientes</div>
+      <section className="relative py-12 px-4">
+        {/* Dynamic Background for Stats */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(135deg, rgba(255, 102, 0, 0.95) 0%, rgba(255, 69, 0, 0.9) 50%, rgba(255, 119, 0, 0.85) 100%)'
+          }}></div>
+          {/* Animated Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 left-1/4 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute bottom-0 right-1/3 w-24 h-24 bg-orange-300/20 rounded-full blur-xl animate-bounce" style={{animationDuration: '3s'}}></div>
+          </div>
+        </div>
+        
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
+                <div className="text-white font-black text-3xl md:text-4xl mb-2 drop-shadow-lg">964+</div>
+                <div className="text-orange-100 font-semibold text-sm md:text-base">Clientes</div>
+              </div>
             </div>
-            <div className="bg-amber-900/80 backdrop-blur-sm rounded-2xl p-4 text-center border border-amber-800/50">
-              <div className="text-white font-black text-2xl md:text-3xl mb-1">95%</div>
-              <div className="text-amber-100 font-medium text-xs md:text-sm">Uptime</div>
+            
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
+                <div className="text-white font-black text-3xl md:text-4xl mb-2 drop-shadow-lg">95%</div>
+                <div className="text-orange-100 font-semibold text-sm md:text-base">Uptime</div>
+              </div>
             </div>
-            <div className="bg-amber-900/80 backdrop-blur-sm rounded-2xl p-4 text-center border border-amber-800/50">
-              <div className="text-white font-black text-2xl md:text-3xl mb-1">19+</div>
-              <div className="text-amber-100 font-medium text-xs md:text-sm">Canais</div>
+            
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
+                <div className="text-white font-black text-3xl md:text-4xl mb-2 drop-shadow-lg">19+</div>
+                <div className="text-orange-100 font-semibold text-sm md:text-base">Canais</div>
+              </div>
             </div>
-            <div className="bg-amber-900/80 backdrop-blur-sm rounded-2xl p-4 text-center border border-amber-800/50">
-              <div className="text-white font-black text-2xl md:text-3xl mb-1">23h</div>
-              <div className="text-amber-100 font-medium text-xs md:text-sm">Online</div>
+            
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
+                <div className="text-white font-black text-3xl md:text-4xl mb-2 drop-shadow-lg">23h</div>
+                <div className="text-orange-100 font-semibold text-sm md:text-base">Online</div>
+              </div>
             </div>
           </div>
         </div>
