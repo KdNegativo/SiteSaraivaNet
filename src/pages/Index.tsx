@@ -48,380 +48,82 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Fundo Moderno Vibrante - Laranja, Vermelho e Roxo */}
+      {/* Fundo Dinâmico Multicolorido */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Gradiente Base Ultra Vibrante - MUITO VISÍVEL */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: `
-              linear-gradient(45deg, 
-                #FF4500 0%,      /* Vermelho-laranja vibrante */
-                #DC143C 15%,     /* Vermelho intenso */
-                #8B008B 30%,     /* Roxo escuro */
-                #FF1493 45%,     /* Rosa intenso */
-                #FF6B35 60%,     /* Laranja vibrante */
-                #9932CC 75%,     /* Roxo médio */
-                #FF4500 100%     /* Volta ao vermelho-laranja */
-              )
-            `,
-            backgroundSize: '300% 300%',
-            animation: 'gradient-flow 8s ease-in-out infinite'
-          }}
-        >
-          {/* Overlay REDUZIDO para mostrar mais cor */}
-          <div 
-            className="absolute inset-0 opacity-30"
-            style={{
-              background: `
-                radial-gradient(ellipse at 30% 20%, rgba(255, 69, 0, 0.3) 0%, transparent 70%),
-                radial-gradient(ellipse at 70% 80%, rgba(139, 0, 139, 0.2) 0%, transparent 70%),
-                radial-gradient(ellipse at 10% 90%, rgba(255, 20, 147, 0.25) 0%, transparent 70%)
-              `
-            }}
-          ></div>
-        </div>
+        {/* Base com gradiente multicolorido */}
+        <div className="absolute inset-0" style={{
+          background: `linear-gradient(45deg, 
+            #667eea 0%, 
+            #764ba2 25%, 
+            #f093fb 50%, 
+            #f5576c 75%,
+            #4facfe 100%
+          )`,
+          backgroundSize: '400% 400%',
+          animation: 'gradient-move 15s ease infinite'
+        }}></div>
 
-        {/* Camada de Brilho Premium com Cores Vibrantes */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: `
-              linear-gradient(45deg, 
-                rgba(255, 69, 0, 0.2) 0%,      /* Vermelho-laranja */
-                rgba(220, 20, 60, 0.15) 16%,   /* Vermelho intenso */
-                rgba(139, 0, 139, 0.18) 32%,   /* Roxo escuro */
-                rgba(186, 85, 211, 0.12) 48%,  /* Roxo orquídea */
-                rgba(255, 20, 147, 0.16) 64%,  /* Rosa intenso */
-                rgba(255, 99, 71, 0.14) 80%,   /* Tomate */
-                rgba(255, 140, 0, 0.2) 100%    /* Laranja */
-              )
-            `,
-            backgroundSize: '350% 350%',
-            animation: 'gradient-flow 22s ease-in-out infinite reverse'
-          }}
-        ></div>
+        {/* Camada de cores animadas */}
+        <div className="absolute inset-0" style={{
+          background: `radial-gradient(circle at 20% 50%, rgba(103, 58, 183, 0.4) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(244, 67, 54, 0.3) 0%, transparent 50%),
+                      radial-gradient(circle at 40% 80%, rgba(76, 175, 80, 0.3) 0%, transparent 50%),
+                      radial-gradient(circle at 70% 30%, rgba(255, 193, 7, 0.4) 0%, transparent 50%)`,
+          animation: 'color-shift 20s ease-in-out infinite'
+        }}></div>
 
-        {/* Camadas de Profundidade Premium - Cores Vibrantes */}
-        <div 
-          className="absolute inset-0 opacity-60"
-          style={{
-            background: `
-              radial-gradient(ellipse 120% 80% at 25% 15%, rgba(255, 69, 0, 0.35) 0%, rgba(220, 20, 60, 0.2) 50%, transparent 80%),
-              radial-gradient(ellipse 100% 60% at 75% 85%, rgba(139, 0, 139, 0.3) 0%, rgba(186, 85, 211, 0.15) 40%, transparent 70%),
-              radial-gradient(ellipse 80% 100% at 15% 75%, rgba(255, 20, 147, 0.32) 0%, rgba(255, 99, 71, 0.18) 45%, transparent 75%),
-              radial-gradient(ellipse 90% 70% at 85% 25%, rgba(255, 140, 0, 0.25) 0%, rgba(255, 107, 53, 0.15) 35%, transparent 65%),
-              radial-gradient(ellipse 70% 90% at 50% 50%, rgba(178, 34, 34, 0.2) 0%, rgba(255, 69, 0, 0.1) 60%, transparent 90%)
-            `,
-            animation: 'float-tech 20s ease-in-out infinite'
-          }}
-        ></div>
-
-        {/* Efeitos Geométricos Modernos */}
-        <div className="absolute inset-0 opacity-20">
-          <div 
-            className="absolute top-10 left-10 w-32 h-32 border border-orange-300/30 rounded-full"
-            style={{
-              background: 'radial-gradient(circle, rgba(255, 140, 0, 0.1) 0%, transparent 70%)',
-              animation: 'float-tech 12s ease-in-out infinite'
-            }}
-          ></div>
-          <div 
-            className="absolute top-1/3 right-20 w-24 h-24 border border-orange-400/40 rotate-45"
-            style={{
-              background: 'linear-gradient(45deg, rgba(255, 107, 53, 0.15) 0%, transparent 100%)',
-              animation: 'float-tech 14s ease-in-out infinite reverse'
-            }}
-          ></div>
-          <div 
-            className="absolute bottom-1/4 left-1/3 w-20 h-20 border border-orange-200/35 rounded-lg rotate-12"
-            style={{
-              background: 'linear-gradient(135deg, rgba(247, 147, 30, 0.1) 0%, transparent 100%)',
-              animation: 'float-tech 16s ease-in-out infinite'
-            }}
-          ></div>
-        </div>
-
-        {/* Linhas de Energia Premium - Conexões de Alta Velocidade */}
+        {/* Orbs grandes coloridos */}
         <div className="absolute inset-0">
-          {/* Linha Principal Horizontal - Laranja a Vermelho */}
           <div 
-            className="absolute top-1/4 left-0 w-full h-1.5 opacity-70"
+            className="absolute top-10 right-10 w-80 h-80 rounded-full blur-3xl opacity-40"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(255, 69, 0, 0.9) 15%, rgba(220, 20, 60, 1) 35%, rgba(255, 20, 147, 0.95) 50%, rgba(178, 34, 34, 0.9) 65%, rgba(255, 140, 0, 0.85) 85%, transparent 100%)',
-              boxShadow: '0 0 15px rgba(255, 69, 0, 0.6), 0 0 30px rgba(220, 20, 60, 0.4), 0 0 45px rgba(255, 20, 147, 0.3)',
-              animation: 'data-flow 8s linear infinite'
+              background: 'radial-gradient(circle, #ff6b6b, #ee5a6f)',
+              animation: 'float-large 12s ease-in-out infinite'
             }}
           ></div>
-          
-          {/* Linha Diagonal Superior - Roxo a Laranja */}
           <div 
-            className="absolute top-1/6 left-0 w-full h-1 opacity-65 rotate-12 origin-left"
+            className="absolute bottom-20 left-20 w-96 h-96 rounded-full blur-3xl opacity-30"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(139, 0, 139, 0.8) 25%, rgba(186, 85, 211, 0.9) 45%, rgba(255, 99, 71, 0.85) 65%, rgba(255, 140, 0, 0.8) 85%, transparent 100%)',
-              boxShadow: '0 0 12px rgba(139, 0, 139, 0.5), 0 0 25px rgba(186, 85, 211, 0.3)',
-              animation: 'data-flow 10s linear infinite reverse'
+              background: 'radial-gradient(circle, #4ecdc4, #44a08d)',
+              animation: 'float-large 15s ease-in-out infinite reverse'
             }}
           ></div>
-          
-          {/* Linha Vertical - Gradiente Completo */}
           <div 
-            className="absolute top-0 left-2/3 w-1.5 h-full opacity-55"
+            className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full blur-2xl opacity-35"
             style={{
-              background: 'linear-gradient(180deg, transparent 0%, rgba(255, 107, 53, 0.9) 20%, rgba(220, 20, 60, 0.95) 40%, rgba(139, 0, 139, 0.9) 60%, rgba(255, 20, 147, 0.85) 80%, transparent 100%)',
-              boxShadow: '0 0 10px rgba(220, 20, 60, 0.6), 0 0 20px rgba(139, 0, 139, 0.4)',
-              animation: 'data-flow-vertical 12s linear infinite'
+              background: 'radial-gradient(circle, #feca57, #ff9ff3)',
+              animation: 'pulse-color 8s ease-in-out infinite'
             }}
           ></div>
-
-          {/* Nova Linha Diagonal Inferior - Rosa a Roxo */}
-          <div 
-            className="absolute bottom-1/5 left-0 w-full h-1 opacity-60 -rotate-6 origin-left"
-            style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(255, 20, 147, 0.8) 20%, rgba(186, 85, 211, 0.9) 50%, rgba(139, 0, 139, 0.85) 80%, transparent 100%)',
-              boxShadow: '0 0 10px rgba(255, 20, 147, 0.5), 0 0 20px rgba(186, 85, 211, 0.3)',
-              animation: 'data-flow 14s linear infinite'
-            }}
-          ></div>
-
-          {/* Linha Horizontal Central - Mix de Cores */}
-          <div 
-            className="absolute top-1/2 left-0 w-full h-0.5 opacity-45"
-            style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(178, 34, 34, 0.7) 25%, rgba(255, 69, 0, 0.8) 50%, rgba(255, 140, 0, 0.75) 75%, transparent 100%)',
-              boxShadow: '0 0 8px rgba(178, 34, 34, 0.4)',
-              animation: 'data-flow 16s linear infinite reverse'
-            }}
-          ></div>
-
-          {/* Rede Neural Premium - Cores Vibrantes */}
-          <div className="absolute inset-0">
-            <svg className="w-full h-full opacity-40" style={{animation: 'network-pulse 28s ease-in-out infinite'}}>
-              <defs>
-                <linearGradient id="networkGradOrange" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#FF4500" stopOpacity="0.9"/>
-                  <stop offset="50%" stopColor="#FF6B35" stopOpacity="0.8"/>
-                  <stop offset="100%" stopColor="#FF8C00" stopOpacity="0.85"/>
-                </linearGradient>
-                <linearGradient id="networkGradRed" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#DC143C" stopOpacity="0.9"/>
-                  <stop offset="50%" stopColor="#B22222" stopOpacity="0.8"/>
-                  <stop offset="100%" stopColor="#FF1493" stopOpacity="0.85"/>
-                </linearGradient>
-                <linearGradient id="networkGradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#8B008B" stopOpacity="0.9"/>
-                  <stop offset="50%" stopColor="#9932CC" stopOpacity="0.8"/>
-                  <stop offset="100%" stopColor="#BA55D3" stopOpacity="0.85"/>
-                </linearGradient>
-                <filter id="glow">
-                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                  <feMerge> 
-                    <feMergeNode in="coloredBlur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
-              </defs>
-              
-              {/* Conexões Laranja */}
-              <path 
-                d="M 100 200 Q 300 100 500 300 T 900 200" 
-                stroke="url(#networkGradOrange)" 
-                strokeWidth="2.5" 
-                fill="none"
-                filter="url(#glow)"
-                style={{animation: 'path-draw 16s ease-in-out infinite'}}
-              />
-              <path 
-                d="M 200 400 Q 400 200 600 500 T 1000 400" 
-                stroke="url(#networkGradOrange)" 
-                strokeWidth="1.8" 
-                fill="none"
-                filter="url(#glow)"
-                style={{animation: 'path-draw 20s ease-in-out infinite reverse'}}
-              />
-              
-              {/* Conexões Vermelhas */}
-              <path 
-                d="M 0 150 Q 250 50 450 250 Q 650 150 850 350 Q 950 300 1200 250" 
-                stroke="url(#networkGradRed)" 
-                strokeWidth="2" 
-                fill="none"
-                filter="url(#glow)"
-                style={{animation: 'path-draw 18s ease-in-out infinite'}}
-              />
-              <path 
-                d="M 150 500 Q 350 300 550 600 T 950 500" 
-                stroke="url(#networkGradRed)" 
-                strokeWidth="1.5" 
-                fill="none"
-                filter="url(#glow)"
-                style={{animation: 'path-draw 22s ease-in-out infinite reverse'}}
-              />
-              
-              {/* Conexões Roxas */}
-              <path 
-                d="M 50 350 Q 200 250 400 450 Q 600 350 800 550 Q 900 450 1150 400" 
-                stroke="url(#networkGradPurple)" 
-                strokeWidth="1.8" 
-                fill="none"
-                filter="url(#glow)"
-                style={{animation: 'path-draw 24s ease-in-out infinite'}}
-              />
-              <path 
-                d="M 250 100 Q 400 200 600 150 Q 800 100 1000 250 Q 1100 200 1200 150" 
-                stroke="url(#networkGradPurple)" 
-                strokeWidth="1.2" 
-                fill="none"
-                filter="url(#glow)"
-                style={{animation: 'path-draw 26s ease-in-out infinite reverse'}}
-              />
-            </svg>
-          </div>
         </div>
 
-        {/* Partículas Luminosas Visíveis */}
+        {/* Efeitos geométricos */}
         <div className="absolute inset-0">
-          {/* Partículas Grandes e Super Brilhantes */}
           <div 
-            className="absolute top-20 right-1/4 w-10 h-10 bg-white rounded-full"
+            className="absolute top-1/4 right-1/3 w-32 h-32 opacity-20"
             style={{
-              background: 'radial-gradient(circle, #FFFFFF 0%, #FF4500 70%)',
-              boxShadow: '0 0 50px #FFFFFF, 0 0 100px #FF4500, 0 0 150px rgba(255, 69, 0, 0.5)',
-              animation: 'particle-float 8s ease-in-out infinite'
+              background: 'linear-gradient(45deg, rgba(255,255,255,0.3), transparent)',
+              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+              animation: 'spin-gentle 25s linear infinite'
             }}
           ></div>
           <div 
-            className="absolute top-1/2 left-1/4 w-8 h-8 bg-white rounded-full"
+            className="absolute bottom-1/3 left-1/4 w-24 h-24 opacity-25 rounded-full"
             style={{
-              background: 'radial-gradient(circle, #FFFFFF 0%, #8B008B 70%)',
-              boxShadow: '0 0 40px #FFFFFF, 0 0 80px #8B008B, 0 0 120px rgba(139, 0, 139, 0.5)',
-              animation: 'particle-float 10s ease-in-out infinite',
-              animationDelay: '2s'
-            }}
-          ></div>
-          <div 
-            className="absolute bottom-1/3 right-1/3 w-7 h-7 bg-white rounded-full"
-            style={{
-              background: 'radial-gradient(circle, #FFFFFF 0%, #FF1493 70%)',
-              boxShadow: '0 0 35px #FFFFFF, 0 0 70px #FF1493, 0 0 105px rgba(255, 20, 147, 0.5)',
-              animation: 'particle-float 12s ease-in-out infinite',
-              animationDelay: '4s'
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.2), transparent)',
+              animation: 'bounce-soft 10s ease-in-out infinite'
             }}
           ></div>
         </div>
 
-        {/* Nós de Rede - Conexões de Alta Velocidade */}
-        <div className="absolute inset-0">
-          {/* Nós Laranja */}
-          <div 
-            className="absolute top-1/5 left-1/5 w-5 h-5 rounded-full border-2 border-orange-400 opacity-65"
-            style={{
-              background: 'radial-gradient(circle, rgba(255, 69, 0, 0.4) 0%, rgba(255, 140, 0, 0.2) 70%, transparent 100%)',
-              boxShadow: '0 0 15px rgba(255, 69, 0, 0.5), inset 0 0 10px rgba(255, 140, 0, 0.3)',
-              animation: 'node-pulse 5s ease-in-out infinite'
-            }}
-          ></div>
-          <div 
-            className="absolute bottom-1/6 right-1/6 w-4 h-4 rounded-full border-2 border-orange-500 opacity-70"
-            style={{
-              background: 'radial-gradient(circle, rgba(255, 107, 53, 0.4) 0%, rgba(247, 147, 30, 0.2) 70%, transparent 100%)',
-              boxShadow: '0 0 12px rgba(255, 107, 53, 0.5), inset 0 0 8px rgba(247, 147, 30, 0.3)',
-              animation: 'node-pulse 7s ease-in-out infinite',
-              animationDelay: '6s'
-            }}
-          ></div>
-
-          {/* Nós Vermelhos */}
-          <div 
-            className="absolute top-2/5 right-1/4 w-4 h-4 rounded-full border-2 border-red-500 opacity-60"
-            style={{
-              background: 'radial-gradient(circle, rgba(220, 20, 60, 0.4) 0%, rgba(178, 34, 34, 0.2) 70%, transparent 100%)',
-              boxShadow: '0 0 14px rgba(220, 20, 60, 0.5), inset 0 0 9px rgba(178, 34, 34, 0.3)',
-              animation: 'node-pulse 6s ease-in-out infinite',
-              animationDelay: '2s'
-            }}
-          ></div>
-          <div 
-            className="absolute top-1/8 left-2/3 w-3 h-3 rounded-full border-2 border-red-600 opacity-55"
-            style={{
-              background: 'radial-gradient(circle, rgba(178, 34, 34, 0.4) 0%, rgba(255, 69, 0, 0.2) 70%, transparent 100%)',
-              boxShadow: '0 0 10px rgba(178, 34, 34, 0.5), inset 0 0 6px rgba(255, 69, 0, 0.3)',
-              animation: 'node-pulse 8s ease-in-out infinite',
-              animationDelay: '4s'
-            }}
-          ></div>
-
-          {/* Nós Roxos */}
-          <div 
-            className="absolute bottom-1/4 left-1/2 w-4 h-4 rounded-full border-2 border-purple-500 opacity-68"
-            style={{
-              background: 'radial-gradient(circle, rgba(139, 0, 139, 0.4) 0%, rgba(153, 50, 204, 0.2) 70%, transparent 100%)',
-              boxShadow: '0 0 13px rgba(139, 0, 139, 0.5), inset 0 0 8px rgba(153, 50, 204, 0.3)',
-              animation: 'node-pulse 7s ease-in-out infinite',
-              animationDelay: '3s'
-            }}
-          ></div>
-          <div 
-            className="absolute top-3/4 left-1/8 w-3 h-3 rounded-full border-2 border-purple-600 opacity-62"
-            style={{
-              background: 'radial-gradient(circle, rgba(186, 85, 211, 0.4) 0%, rgba(139, 0, 139, 0.2) 70%, transparent 100%)',
-              boxShadow: '0 0 11px rgba(186, 85, 211, 0.5), inset 0 0 7px rgba(139, 0, 139, 0.3)',
-              animation: 'node-pulse 9s ease-in-out infinite',
-              animationDelay: '5s'
-            }}
-          ></div>
-
-          {/* Nós Rosa */}
-          <div 
-            className="absolute top-1/3 left-4/5 w-3 h-3 rounded-full border-2 border-pink-500 opacity-58"
-            style={{
-              background: 'radial-gradient(circle, rgba(255, 20, 147, 0.4) 0%, rgba(186, 85, 211, 0.2) 70%, transparent 100%)',
-              boxShadow: '0 0 9px rgba(255, 20, 147, 0.5), inset 0 0 6px rgba(186, 85, 211, 0.3)',
-              animation: 'node-pulse 6.5s ease-in-out infinite',
-              animationDelay: '7s'
-            }}
-          ></div>
-          <div 
-            className="absolute bottom-2/5 right-2/5 w-2.5 h-2.5 rounded-full border-2 border-pink-600 opacity-52"
-            style={{
-              background: 'radial-gradient(circle, rgba(255, 99, 71, 0.4) 0%, rgba(255, 20, 147, 0.2) 70%, transparent 100%)',
-              boxShadow: '0 0 8px rgba(255, 99, 71, 0.5), inset 0 0 5px rgba(255, 20, 147, 0.3)',
-              animation: 'node-pulse 8.5s ease-in-out infinite',
-              animationDelay: '1s'
-            }}
-          ></div>
-        </div>
-
-        {/* Overlay de Profundidade */}
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            background: `
-              radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
-              radial-gradient(ellipse 50% 80% at 0% 50%, rgba(0, 0, 0, 0.05) 0%, transparent 50%),
-              radial-gradient(ellipse 50% 80% at 100% 50%, rgba(0, 0, 0, 0.05) 0%, transparent 50%)
-            `
-          }}
-        ></div>
-
-        {/* Textura Tecnológica Sutil */}
-        <div 
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `
-              linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
-              linear-gradient(0deg, transparent 48%, rgba(255, 255, 255, 0.05) 49%, rgba(255, 255, 255, 0.05) 51%, transparent 52%)
-            `,
-            backgroundSize: '50px 50px',
-            animation: 'tech-grid 25s linear infinite'
-          }}
-        ></div>
+        {/* Overlay final suave */}
+        <div className="absolute inset-0 bg-white/5"></div>
       </div>
       {/* Floating Components */}
       <ChatBot />
       
       {/* Header */}
-      <header style={{background: 'linear-gradient(135deg, #FF6600 0%, #FF2E00 100%)', borderBottomColor: '#ff2200'}} className="fixed top-0 left-0 right-0 shadow-xl px-4 py-2 border-b-4 z-50">
+      <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-primary to-accent shadow-xl px-4 py-2 border-b-4 border-primary/20 z-50">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -474,18 +176,10 @@ const Index = () => {
       </header>
 
       {/* Hero Section - Fundo suavizado e mais elegante */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff5722 0%, #ff6600 20%, #ff7700 40%, #ff8800 60%, #ff9900 80%, #ffaa00 100%)'}}>
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center">
         
-        {/* Fundo suavizado com padrões mais sutis */}
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.06) 0%, transparent 60%),
-            radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
-            radial-gradient(circle at 50% 20%, rgba(255, 165, 0, 0.08) 0%, transparent 70%),
-            radial-gradient(circle at 30% 80%, rgba(255, 140, 0, 0.05) 0%, transparent 60%)
-          `,
-          backgroundSize: '800px 800px, 1000px 1000px, 600px 600px, 500px 500px'
-        }}></div>
+        {/* Overlay minimalista */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/15 opacity-80"></div>
         
         {/* Mobile Version */}
         <div className="md:hidden w-full px-4 py-16">
