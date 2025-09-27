@@ -4,35 +4,35 @@
 @tailwind utilities;
 
 @layer base {
-  /* CORES COLORIDAS E VIBRANTES */
+  /* SISTEMA DE CORES LARANJA DA EMPRESA */
   :root {
-    --background: 220 30% 97%;
-    --foreground: 220 30% 15%;
+    --background: 24 100% 96%;
+    --foreground: 16 100% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 20%;
+    --card-foreground: 16 100% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 20%;
+    --popover-foreground: 16 100% 15%;
 
-    --primary: 260 80% 60%;
+    --primary: 20 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 80% 60%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 24 100% 92%;
+    --secondary-foreground: 16 100% 20%;
 
-    --muted: 220 30% 92%;
-    --muted-foreground: 220 30% 40%;
+    --muted: 24 100% 94%;
+    --muted-foreground: 16 60% 40%;
 
-    --accent: 330 80% 65%;
+    --accent: 20 100% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 30% 85%;
-    --input: 220 30% 88%;
-    --ring: 260 80% 60%;
+    --border: 24 80% 85%;
+    --input: 24 80% 88%;
+    --ring: 20 100% 50%;
 
     --radius: 0.5rem;
   }
@@ -490,12 +490,12 @@
   }
 }
 
-/* Classes para garantir cores vibrantes funcionem bem */
-.colorful-gradient-bg {
+/* Classes para garantir o laranja funcione bem */
+.orange-gradient-bg {
   background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
 }
 
-.colorful-header {
+.orange-header {
   background: hsl(var(--primary));
   border-bottom-color: hsl(var(--accent));
 }
@@ -511,7 +511,7 @@ html {
 
 body {
   color-scheme: light only !important;
-  background: hsl(var(--background)) !important;
+  background: hsl(24 100% 96%) !important;
 }
 
 /* Elegant text shadows for better readability */

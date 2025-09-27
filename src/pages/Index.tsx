@@ -175,11 +175,31 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Fundo suavizado e mais elegante */}
+      {/* Hero Section - Fundo dinâmico laranja */}
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center">
         
-        {/* Overlay minimalista */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/15 opacity-80"></div>
+        {/* Fundo Base Gradiente Laranja */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-400/80 via-orange-500/60 to-orange-600/70"></div>
+        
+        {/* Camadas de Gradientes Laranja */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-orange-300/40 via-transparent to-orange-400/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-orange-500/20 to-orange-600/40"></div>
+        
+        {/* Formas Geométricas Animadas */}
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-400/30 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-orange-500/40 rounded-lg blur-lg animate-bounce"></div>
+        <div className="absolute top-1/2 right-1/3 w-20 h-20 bg-orange-300/50 rotate-45 blur-md animate-spin"></div>
+        
+        {/* Partículas Laranja Flutuantes */}
+        <div className="absolute top-10 left-10 w-4 h-4 bg-orange-400/60 rounded-full animate-ping"></div>
+        <div className="absolute bottom-20 left-20 w-3 h-3 bg-orange-500/50 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-10 w-2 h-2 bg-orange-600/70 rounded-full animate-bounce"></div>
+        
+        {/* Ondas Laranja */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-orange-500/30 to-transparent opacity-60"></div>
+        
+        {/* Overlay Suave */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 via-transparent to-orange-600/20 opacity-80"></div>
         
         {/* Mobile Version */}
         <div className="md:hidden w-full px-4 py-16">
