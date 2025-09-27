@@ -215,67 +215,70 @@ const Index = () => {
                 <span className="truncate">Internet + TV Grátis</span>
               </div>
 
-              {/* Title maior no mobile */}
-              <div className="space-y-4">
-                <h1 className="font-black text-white leading-none" style={{
-                  fontSize: 'clamp(32px, 9vw, 48px)',
-                  lineHeight: '0.95',
+              {/* Title maior no mobile - otimizado para não cortar */}
+              <div className="space-y-4 px-2">
+                <h1 className="font-black text-white leading-tight text-center" style={{
+                  fontSize: 'clamp(28px, 8vw, 42px)',
+                  lineHeight: '1.1',
                   fontWeight: '800',
-                  textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
+                  textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
+                  wordBreak: 'keep-all',
+                  hyphens: 'none'
                 }}>
-                  Internet + SaraivaTV
+                  Internet +<br />SaraivaTV
                 </h1>
                 
-                {/* Subtitle maior */}
-                <p className="text-white/95 font-semibold max-w-[56ch] mx-auto" style={{
-                  fontSize: 'clamp(16px, 4.5vw, 20px)',
-                  textShadow: '1px 1px 6px rgba(0,0,0,0.5)'
+                {/* Subtitle otimizada */}
+                <p className="text-white/95 font-semibold max-w-[90vw] mx-auto text-center px-2" style={{
+                  fontSize: 'clamp(14px, 4vw, 18px)',
+                  textShadow: '1px 1px 6px rgba(0,0,0,0.5)',
+                  lineHeight: '1.3'
                 }}>
                   🚀 Internet ultrarrápida + App gratuito
                 </p>
               </div>
 
-              {/* Carousel maior no mobile */}
-              <div className="w-full max-w-lg mx-auto mt-6" style={{aspectRatio: '14/9'}}>
-                <div className="w-full h-full rounded-2xl overflow-hidden border-2 border-white/20">
+              {/* Carousel otimizado para mobile */}
+              <div className="w-full max-w-[92vw] mx-auto mt-6" style={{aspectRatio: '16/10'}}>
+                <div className="w-full h-full rounded-xl overflow-hidden border border-white/20 shadow-2xl">
                   <HeroCarousel />
                 </div>
               </div>
 
-              {/* Benefits Cards maiores */}
-              <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto mt-12">
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-4 text-center border border-white/20 relative overflow-hidden">
-                  <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Wifi className="w-4 h-4 text-white" />
+              {/* Benefits Cards otimizados para mobile */}
+              <div className="grid grid-cols-2 gap-2 max-w-[90vw] mx-auto mt-8">
+                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-lg p-3 text-center border border-white/20 relative overflow-hidden">
+                  <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Wifi className="w-3 h-3 text-white" />
                   </div>
-                  <div className="text-white font-bold text-xs">Internet<br/>Rápida</div>
+                  <div className="text-white font-bold text-xs leading-tight">Internet<br/>Rápida</div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-4 text-center border border-white/20 relative overflow-hidden">
-                  <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Tv className="w-4 h-4 text-white" />
+                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-3 text-center border border-white/20 relative overflow-hidden">
+                  <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Tv className="w-3 h-3 text-white" />
                   </div>
-                  <div className="text-white font-bold text-xs">Aplicativo de<br/>TV</div>
+                  <div className="text-white font-bold text-xs leading-tight">Aplicativo de<br/>TV</div>
                 </div>
-                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl p-4 text-center border border-white/20 relative overflow-hidden">
-                  <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Music className="w-4 h-4 text-white" />
+                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg p-3 text-center border border-white/20 relative overflow-hidden">
+                  <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Music className="w-3 h-3 text-white" />
                   </div>
-                  <div className="text-white font-bold text-xs">Rádios<br/>24h</div>
+                  <div className="text-white font-bold text-xs leading-tight">Rádios<br/>24h</div>
                 </div>
-                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-4 text-center border border-white/20 relative overflow-hidden">
-                  <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Shield className="w-4 h-4 text-white" />
+                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg p-3 text-center border border-white/20 relative overflow-hidden">
+                  <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Shield className="w-3 h-3 text-white" />
                   </div>
-                  <div className="text-white font-bold text-xs">Suporte<br/>VIP</div>
+                  <div className="text-white font-bold text-xs leading-tight">Suporte<br/>VIP</div>
                 </div>
               </div>
 
-              {/* CTA Button maior no mobile */}
-              <div className="mt-8">
+              {/* CTA Button otimizado para mobile */}
+              <div className="mt-6 px-4">
                 <TouchButton 
                   onClick={handleWhatsAppClick}
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-8 rounded-full hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
-                  style={{height: '48px', fontSize: '18px'}}
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-6 rounded-full hover:scale-105 transition-all duration-300 inline-flex items-center border border-white/30 text-center mx-auto"
+                  style={{height: '44px', fontSize: '16px', minWidth: '200px'}}
                 >
                   🚀 Contratar Agora
                 </TouchButton>
@@ -425,44 +428,40 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Stats Section para Mobile - Movida para perto dos benefits */}
-          <div className="md:hidden w-full px-4">
-            <div className="mt-8">
-              <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto">
-                <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
-                  <div className="relative bg-white/15 backdrop-blur-md rounded-xl p-3 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
-                    <div className="text-white font-black text-xl mb-1 drop-shadow-lg">964+</div>
-                    <div className="text-orange-100 font-semibold text-xs">Clientes</div>
-                  </div>
+        {/* Stats Section para Mobile - otimizada */}
+        <div className="md:hidden w-full px-4">
+          <div className="mt-6">
+            <div className="grid grid-cols-2 gap-2 max-w-[90vw] mx-auto">
+              <div className="group relative">
+                <div className="relative bg-white/15 backdrop-blur-md rounded-lg p-3 text-center border border-white/20 hover:bg-white/25 transition-all duration-300">
+                  <div className="text-white font-black text-lg mb-1 drop-shadow-lg">964+</div>
+                  <div className="text-orange-100 font-semibold text-xs">Clientes</div>
                 </div>
-                
-                <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
-                  <div className="relative bg-white/15 backdrop-blur-md rounded-xl p-3 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
-                    <div className="text-white font-black text-xl mb-1 drop-shadow-lg">95%</div>
-                    <div className="text-orange-100 font-semibold text-xs">Uptime</div>
-                  </div>
+              </div>
+              
+              <div className="group relative">
+                <div className="relative bg-white/15 backdrop-blur-md rounded-lg p-3 text-center border border-white/20 hover:bg-white/25 transition-all duration-300">
+                  <div className="text-white font-black text-lg mb-1 drop-shadow-lg">95%</div>
+                  <div className="text-orange-100 font-semibold text-xs">Uptime</div>
                 </div>
-                
-                <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
-                  <div className="relative bg-white/15 backdrop-blur-md rounded-xl p-3 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
-                    <div className="text-white font-black text-xl mb-1 drop-shadow-lg">19+</div>
-                    <div className="text-orange-100 font-semibold text-xs">Canais</div>
-                  </div>
+              </div>
+              
+              <div className="group relative">
+                <div className="relative bg-white/15 backdrop-blur-md rounded-lg p-3 text-center border border-white/20 hover:bg-white/25 transition-all duration-300">
+                  <div className="text-white font-black text-lg mb-1 drop-shadow-lg">19+</div>
+                  <div className="text-orange-100 font-semibold text-xs">Canais</div>
                 </div>
-                
-                <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
-                  <div className="relative bg-white/15 backdrop-blur-md rounded-xl p-3 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
-                    <div className="text-white font-black text-xl mb-1 drop-shadow-lg">23h</div>
-                    <div className="text-orange-100 font-semibold text-xs">Online</div>
-                  </div>
+              </div>
+              
+              <div className="group relative">
+                <div className="relative bg-white/15 backdrop-blur-md rounded-lg p-3 text-center border border-white/20 hover:bg-white/25 transition-all duration-300">
+                  <div className="text-white font-black text-lg mb-1 drop-shadow-lg">23h</div>
+                  <div className="text-orange-100 font-semibold text-xs">Online</div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
