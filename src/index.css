@@ -263,10 +263,39 @@
     }
   }
 
-  /* Enhanced mobile shadows */
-  .shadow-premium {
-    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  /* Animações adicionais para fundo dinâmico */
+  @keyframes gentle-move {
+    0%, 100% { 
+      transform: translateX(0) translateY(0) scale(1);
+    }
+    33% { 
+      transform: translateX(20px) translateY(-15px) scale(1.05);
+    }
+    66% { 
+      transform: translateX(-10px) translateY(10px) scale(0.95);
+    }
   }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+
+  .animate-gradient-shift {
+    background-size: 300% 300%;
+    animation: gradient-shift 8s ease-in-out infinite;
+  }
+
+  /* Delay classes para animações */
+  .delay-1000 { animation-delay: 1000ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-900 { animation-delay: 900ms; }
 
   /* Enhanced 3D Button Effect for Better Visibility */
   .btn-3d {
@@ -1090,3 +1119,41 @@ body {
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
 }
+
+/* Animações do fundo dinâmico */
+@keyframes gentle-move {
+  0%, 100% { 
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  33% { 
+    transform: translateX(20px) translateY(-15px) scale(1.05);
+  }
+  66% { 
+    transform: translateX(-10px) translateY(10px) scale(0.95);
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-gradient-shift {
+  background-size: 300% 300%;
+  animation: gradient-shift 8s ease-in-out infinite;
+}
+
+.animate-gentle-move {
+  animation: gentle-move 15s ease-in-out infinite alternate;
+}
+
+/* Delay classes para animações */
+.delay-1000 { animation-delay: 1000ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-900 { animation-delay: 900ms; }
