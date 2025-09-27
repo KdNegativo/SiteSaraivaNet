@@ -308,27 +308,27 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Stats Bar - Aproximado do hero (margem superior 16-24px) */}
-        <div className="absolute bottom-0 left-0 right-0" style={{paddingTop: '20px', paddingBottom: '32px'}}>
-          <div className="max-w-6xl mx-auto px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="bg-amber-900/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl border border-amber-800/50">
-                <div className="text-white font-black text-4xl mb-2">964+</div>
-                <div className="text-amber-100 font-medium">Clientes</div>
-              </div>
-              <div className="bg-amber-900/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl border border-amber-800/50">
-                <div className="text-white font-black text-4xl mb-2">95%</div>
-                <div className="text-amber-100 font-medium">Uptime</div>
-              </div>
-              <div className="bg-amber-900/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl border border-amber-800/50">
-                <div className="text-white font-black text-4xl mb-2">19+</div>
-                <div className="text-amber-100 font-medium">Canais</div>
-              </div>
-              <div className="bg-amber-900/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl border border-amber-800/50">
-                <div className="text-white font-black text-4xl mb-2">23h</div>
-                <div className="text-amber-100 font-medium">Online</div>
-              </div>
+      {/* Stats Section */}
+      <section className="py-8 px-4" style={{background: 'linear-gradient(135deg, #ff5722 0%, #ff6600 20%, #ff7700 40%, #ff8800 60%, #ff9900 80%, #ffaa00 100%)'}}>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-amber-900/80 backdrop-blur-sm rounded-2xl p-4 text-center border border-amber-800/50">
+              <div className="text-white font-black text-2xl md:text-3xl mb-1">964+</div>
+              <div className="text-amber-100 font-medium text-xs md:text-sm">Clientes</div>
+            </div>
+            <div className="bg-amber-900/80 backdrop-blur-sm rounded-2xl p-4 text-center border border-amber-800/50">
+              <div className="text-white font-black text-2xl md:text-3xl mb-1">95%</div>
+              <div className="text-amber-100 font-medium text-xs md:text-sm">Uptime</div>
+            </div>
+            <div className="bg-amber-900/80 backdrop-blur-sm rounded-2xl p-4 text-center border border-amber-800/50">
+              <div className="text-white font-black text-2xl md:text-3xl mb-1">19+</div>
+              <div className="text-amber-100 font-medium text-xs md:text-sm">Canais</div>
+            </div>
+            <div className="bg-amber-900/80 backdrop-blur-sm rounded-2xl p-4 text-center border border-amber-800/50">
+              <div className="text-white font-black text-2xl md:text-3xl mb-1">23h</div>
+              <div className="text-amber-100 font-medium text-xs md:text-sm">Online</div>
             </div>
           </div>
         </div>
