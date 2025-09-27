@@ -176,10 +176,10 @@ const Index = () => {
       </header>
 
       {/* Hero Section - Fundo suavizado e mais elegante */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-primary/90 via-primary to-accent/80">
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center">
         
         {/* Overlay minimalista */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10 opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/15 opacity-80"></div>
         
         {/* Mobile Version */}
         <div className="md:hidden w-full px-4 py-16">
