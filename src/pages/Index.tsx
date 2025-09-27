@@ -61,7 +61,7 @@ const Index = () => {
       <ChatBot />
       
       {/* Header */}
-      <header style={{background: 'linear-gradient(135deg, #FF6600 0%, #FF2E00 100%)', borderBottomColor: '#ff2200'}} className="fixed top-0 left-0 right-0 shadow-xl px-4 py-3 border-b-4 z-50">
+      <header style={{background: 'linear-gradient(135deg, #FF6600 0%, #FF2E00 100%)', borderBottomColor: '#ff2200'}} className="fixed top-0 left-0 right-0 shadow-xl px-4 py-2 border-b-4 z-50">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -128,8 +128,8 @@ const Index = () => {
         }}></div>
         
         {/* Mobile Version */}
-        <div className="lg:hidden w-full px-6 py-20">
-          <div className="relative z-10 text-center space-y-10">
+        <div className="md:hidden w-full px-4 py-16">
+          <div className="relative z-10 text-center space-y-8">
             <AnimatedSection animation="fade-up">
               {/* Badge maior */}
               <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-5 py-3 rounded-full font-bold shadow-lg text-base mb-6">
@@ -207,8 +207,8 @@ const Index = () => {
         </div>
 
         {/* Desktop Version - Layout 2 colunas */}
-        <div className="hidden lg:block w-full">
-          <div className="max-w-[1480px] mx-auto px-12" style={{paddingTop: '80px', paddingBottom: '80px'}}>
+        <div className="hidden md:block w-full">
+          <div className="max-w-[1480px] mx-auto px-6" style={{paddingTop: '80px', paddingBottom: '80px'}}>
             <div className="flex items-center" style={{gap: '60px'}}>
               
               {/* Left Column - Textos/CTAs */}
