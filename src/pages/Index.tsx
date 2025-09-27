@@ -48,46 +48,76 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Fundo Dinâmico Bonito e Leve */}
+      {/* Fundo Dinâmico Multicolorido */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Gradiente base animado */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-400/80 via-purple-500/70 to-pink-400/60 animate-gradient-shift"></div>
-
-        {/* Camadas de gradiente com movimento */}
-        <div className="absolute inset-0 opacity-60">
-          <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400/40 via-transparent to-orange-300/30 animate-gradient-x"></div>
-          <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/30 via-transparent to-violet-400/40 animate-pulse"></div>
-        </div>
-
-        {/* Orbs flutuantes coloridos */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-400/30 to-cyan-300/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-400/25 to-pink-300/20 rounded-full blur-3xl animate-float delay-1000"></div>
-          <div className="absolute bottom-1/4 left-1/2 w-48 h-48 bg-gradient-to-r from-emerald-400/30 to-teal-300/20 rounded-full blur-2xl animate-float delay-500"></div>
-          <div className="absolute top-1/2 right-1/3 w-40 h-40 bg-gradient-to-r from-orange-400/25 to-yellow-300/20 rounded-full blur-2xl animate-bounce delay-300"></div>
-        </div>
-
-        {/* Formas geométricas animadas */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-white/10 to-transparent rounded-2xl rotate-12 animate-spin-slow"></div>
-          <div className="absolute bottom-32 left-16 w-24 h-24 bg-gradient-to-tr from-white/8 to-transparent rounded-full animate-wiggle"></div>
-        </div>
-
-        {/* Partículas flutuantes */}
-        <div className="absolute inset-0">
-          <div className="absolute top-32 left-1/3 w-2 h-2 bg-white/40 rounded-full animate-float delay-200"></div>
-          <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-cyan-300/50 rounded-full animate-bounce delay-700"></div>
-          <div className="absolute bottom-40 left-1/4 w-1 h-1 bg-pink-300/60 rounded-full animate-pulse delay-400"></div>
-          <div className="absolute top-3/4 left-2/3 w-2 h-2 bg-purple-300/40 rounded-full animate-float delay-900"></div>
-        </div>
-
-        {/* Overlay com padrão dinâmico */}
-        <div className="absolute inset-0 opacity-20 animate-gentle-move" style={{
-          backgroundImage: `
-            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.08) 0%, transparent 50%)
-          `
+        {/* Base com gradiente multicolorido */}
+        <div className="absolute inset-0" style={{
+          background: `linear-gradient(45deg, 
+            #667eea 0%, 
+            #764ba2 25%, 
+            #f093fb 50%, 
+            #f5576c 75%,
+            #4facfe 100%
+          )`,
+          backgroundSize: '400% 400%',
+          animation: 'gradient-move 15s ease infinite'
         }}></div>
+
+        {/* Camada de cores animadas */}
+        <div className="absolute inset-0" style={{
+          background: `radial-gradient(circle at 20% 50%, rgba(103, 58, 183, 0.4) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(244, 67, 54, 0.3) 0%, transparent 50%),
+                      radial-gradient(circle at 40% 80%, rgba(76, 175, 80, 0.3) 0%, transparent 50%),
+                      radial-gradient(circle at 70% 30%, rgba(255, 193, 7, 0.4) 0%, transparent 50%)`,
+          animation: 'color-shift 20s ease-in-out infinite'
+        }}></div>
+
+        {/* Orbs grandes coloridos */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute top-10 right-10 w-80 h-80 rounded-full blur-3xl opacity-40"
+            style={{
+              background: 'radial-gradient(circle, #ff6b6b, #ee5a6f)',
+              animation: 'float-large 12s ease-in-out infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-20 left-20 w-96 h-96 rounded-full blur-3xl opacity-30"
+            style={{
+              background: 'radial-gradient(circle, #4ecdc4, #44a08d)',
+              animation: 'float-large 15s ease-in-out infinite reverse'
+            }}
+          ></div>
+          <div 
+            className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full blur-2xl opacity-35"
+            style={{
+              background: 'radial-gradient(circle, #feca57, #ff9ff3)',
+              animation: 'pulse-color 8s ease-in-out infinite'
+            }}
+          ></div>
+        </div>
+
+        {/* Efeitos geométricos */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute top-1/4 right-1/3 w-32 h-32 opacity-20"
+            style={{
+              background: 'linear-gradient(45deg, rgba(255,255,255,0.3), transparent)',
+              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+              animation: 'spin-gentle 25s linear infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-1/3 left-1/4 w-24 h-24 opacity-25 rounded-full"
+            style={{
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.2), transparent)',
+              animation: 'bounce-soft 10s ease-in-out infinite'
+            }}
+          ></div>
+        </div>
+
+        {/* Overlay final suave */}
+        <div className="absolute inset-0 bg-white/5"></div>
       </div>
       {/* Floating Components */}
       <ChatBot />
