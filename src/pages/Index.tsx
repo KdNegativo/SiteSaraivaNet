@@ -48,51 +48,123 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Fundo Futurista Premium - Internet & Tecnologia */}
+      {/* Fundo Ultra Premium - Complexo e Sofisticado */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Gradiente Base Ultra Moderno */}
+        {/* Base Gradiente Multicamadas Ultra Premium */}
         <div 
           className="absolute inset-0"
           style={{
             background: `
-              linear-gradient(135deg, 
-                #FF6B35 0%,
-                #F7931E 12%, 
-                #FF8C00 25%, 
-                #FF7F50 35%, 
-                #FF6347 45%, 
-                #FF4500 55%,
-                #FF6600 65%, 
-                #FF7F00 75%,
-                #FF8C00 85%, 
-                #FFA500 100%
-              ),
-              radial-gradient(ellipse at top left, rgba(255, 107, 53, 0.4) 0%, transparent 60%),
-              radial-gradient(ellipse at bottom right, rgba(255, 140, 0, 0.3) 0%, transparent 50%),
-              radial-gradient(ellipse at center, rgba(247, 147, 30, 0.2) 0%, transparent 70%)
+              radial-gradient(ellipse 100% 80% at 0% 0%, #FF6B35 0%, transparent 50%),
+              radial-gradient(ellipse 80% 100% at 100% 0%, #F7931E 0%, transparent 50%),
+              radial-gradient(ellipse 120% 90% at 50% 100%, #FF8C00 0%, transparent 60%),
+              linear-gradient(135deg, #FF4500 0%, #FF6347 15%, #FF7F50 30%, #FF8C00 45%, #FFA500 60%, #FFB84D 75%, #FF6B35 90%, #F7931E 100%),
+              linear-gradient(45deg, rgba(255, 140, 0, 0.3) 0%, rgba(255, 107, 53, 0.2) 25%, rgba(247, 147, 30, 0.3) 50%, rgba(255, 165, 0, 0.2) 75%, rgba(255, 184, 77, 0.3) 100%),
+              conic-gradient(from 0deg at 30% 70%, #FF8C00 0deg, #F7931E 60deg, #FF6B35 120deg, #FFA500 180deg, #FF7F50 240deg, #FFB84D 300deg, #FF8C00 360deg)
             `,
-            backgroundSize: '400% 400%, 800px 800px, 1200px 1200px, 600px 600px',
-            animation: 'gradient-flow 15s ease-in-out infinite'
+            backgroundSize: '200% 150%, 180% 160%, 220% 140%, 400% 400%, 300% 300%, 250% 250%',
+            animation: 'ultra-complex-flow 25s ease-in-out infinite'
           }}
         ></div>
 
-        {/* Camada de Brilho Premium */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: `
-              linear-gradient(45deg, 
-                rgba(255, 215, 0, 0.15) 0%,
-                rgba(255, 140, 0, 0.1) 25%,
-                rgba(255, 69, 0, 0.15) 50%,
-                rgba(255, 107, 53, 0.1) 75%,
-                rgba(255, 165, 0, 0.15) 100%
-              )
-            `,
-            backgroundSize: '300% 300%',
-            animation: 'gradient-flow 20s ease-in-out infinite reverse'
-          }}
-        ></div>
+        {/* Malha Tecnológica 3D */}
+        <div className="absolute inset-0">
+          <svg className="w-full h-full opacity-15" style={{animation: 'mesh-rotate 30s linear infinite'}}>
+            <defs>
+              <pattern id="techGrid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                <path d="M 100 0 L 0 0 0 100" fill="none" stroke="url(#gridGradient)" strokeWidth="1"/>
+                <circle cx="0" cy="0" r="2" fill="url(#nodeGradient)"/>
+                <circle cx="100" cy="0" r="2" fill="url(#nodeGradient)"/>
+                <circle cx="0" cy="100" r="2" fill="url(#nodeGradient)"/>
+              </pattern>
+              <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="rgba(255, 140, 0, 0.8)" />
+                <stop offset="50%" stopColor="rgba(255, 107, 53, 0.6)" />
+                <stop offset="100%" stopColor="rgba(247, 147, 30, 0.8)" />
+              </linearGradient>
+              <radialGradient id="nodeGradient">
+                <stop offset="0%" stopColor="rgba(255, 255, 255, 0.9)" />
+                <stop offset="100%" stopColor="rgba(255, 140, 0, 0.7)" />
+              </radialGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#techGrid)" />
+          </svg>
+        </div>
+
+        {/* Ondas Fluidas Complexas */}
+        <div className="absolute inset-0">
+          <svg className="w-full h-full opacity-25" preserveAspectRatio="none" viewBox="0 0 1200 800">
+            <defs>
+              <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(255, 140, 0, 0.8)" />
+                <stop offset="50%" stopColor="rgba(255, 107, 53, 0.6)" />
+                <stop offset="100%" stopColor="rgba(247, 147, 30, 0.8)" />
+              </linearGradient>
+              <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(247, 147, 30, 0.7)" />
+                <stop offset="50%" stopColor="rgba(255, 165, 0, 0.5)" />
+                <stop offset="100%" stopColor="rgba(255, 184, 77, 0.7)" />
+              </linearGradient>
+            </defs>
+            
+            <path d="M0,400 Q300,200 600,350 T1200,300 L1200,800 L0,800 Z" 
+                  fill="url(#waveGrad1)" 
+                  style={{animation: 'wave-flow-1 20s ease-in-out infinite'}} />
+            <path d="M0,500 Q400,300 800,450 T1200,400 L1200,800 L0,800 Z" 
+                  fill="url(#waveGrad2)" 
+                  style={{animation: 'wave-flow-2 25s ease-in-out infinite reverse'}} />
+            <path d="M0,300 Q200,100 400,250 Q600,150 800,300 Q1000,200 1200,350 L1200,800 L0,800 Z" 
+                  fill="url(#waveGrad1)" 
+                  opacity="0.4"
+                  style={{animation: 'wave-flow-3 18s ease-in-out infinite'}} />
+          </svg>
+        </div>
+
+        {/* Formas Geométricas 3D Flutuantes */}
+        <div className="absolute inset-0">
+          {/* Hexágonos */}
+          <div className="absolute top-20 left-20 w-24 h-24 opacity-20"
+               style={{
+                 background: 'linear-gradient(135deg, rgba(255, 140, 0, 0.4) 0%, rgba(255, 107, 53, 0.2) 100%)',
+                 clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+                 animation: 'float-rotate-1 15s ease-in-out infinite',
+                 boxShadow: '0 0 30px rgba(255, 140, 0, 0.3)'
+               }}></div>
+          
+          {/* Triângulos */}
+          <div className="absolute top-1/3 right-32 w-20 h-20 opacity-25"
+               style={{
+                 background: 'linear-gradient(45deg, rgba(247, 147, 30, 0.5) 0%, rgba(255, 165, 0, 0.3) 100%)',
+                 clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+                 animation: 'float-rotate-2 12s ease-in-out infinite reverse',
+                 boxShadow: '0 0 25px rgba(247, 147, 30, 0.4)'
+               }}></div>
+          
+          {/* Losangos */}
+          <div className="absolute bottom-1/4 left-1/3 w-16 h-16 opacity-30"
+               style={{
+                 background: 'linear-gradient(135deg, rgba(255, 184, 77, 0.6) 0%, rgba(255, 140, 0, 0.4) 100%)',
+                 clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+                 animation: 'float-rotate-3 18s ease-in-out infinite',
+                 boxShadow: '0 0 20px rgba(255, 184, 77, 0.5)'
+               }}></div>
+          
+          {/* Círculos com Gradientes */}
+          <div className="absolute top-1/2 left-1/4 w-32 h-32 rounded-full opacity-15"
+               style={{
+                 background: 'radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 140, 0, 0.4) 40%, transparent 70%)',
+                 animation: 'pulse-glow-complex 10s ease-in-out infinite',
+                 boxShadow: '0 0 40px rgba(255, 140, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.2)'
+               }}></div>
+          
+          <div className="absolute bottom-1/3 right-1/4 w-28 h-28 rounded-full opacity-20"
+               style={{
+                 background: 'radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.4) 0%, rgba(247, 147, 30, 0.5) 30%, transparent 60%)',
+                 animation: 'pulse-glow-complex 14s ease-in-out infinite',
+                 animationDelay: '3s',
+                 boxShadow: '0 0 35px rgba(247, 147, 30, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.3)'
+               }}></div>
+        </div>
 
         {/* Camadas de Profundidade Premium */}
         <div 
@@ -212,57 +284,121 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Partículas Premium de Alta Tecnologia */}
+        {/* Sistema de Partículas Ultra Premium */}
         <div className="absolute inset-0">
-          {/* Partículas Grandes Premium */}
-          <div 
-            className="absolute top-20 right-1/4 w-3 h-3 bg-white rounded-full opacity-90"
-            style={{
-              background: 'radial-gradient(circle, #ffffff 0%, #FF8C00 50%, transparent 100%)',
-              boxShadow: '0 0 15px #FF8C00, 0 0 30px #FF6B35, 0 0 45px rgba(255, 140, 0, 0.3)',
-              animation: 'particle-float 15s ease-in-out infinite'
-            }}
-          ></div>
-          <div 
-            className="absolute top-1/2 left-1/4 w-2.5 h-2.5 bg-white rounded-full opacity-85"
-            style={{
-              background: 'radial-gradient(circle, #ffffff 0%, #F7931E 50%, transparent 100%)',
-              boxShadow: '0 0 12px #F7931E, 0 0 25px #FF6B35, 0 0 40px rgba(247, 147, 30, 0.3)',
-              animation: 'particle-float 18s ease-in-out infinite',
-              animationDelay: '3s'
-            }}
-          ></div>
-          <div 
-            className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-white rounded-full opacity-95"
-            style={{
-              background: 'radial-gradient(circle, #ffffff 0%, #FFA500 50%, transparent 100%)',
-              boxShadow: '0 0 10px #FFA500, 0 0 20px #FF8C00, 0 0 35px rgba(255, 165, 0, 0.4)',
-              animation: 'particle-float 13s ease-in-out infinite',
-              animationDelay: '6s'
-            }}
-          ></div>
-          <div 
-            className="absolute top-1/6 left-3/4 w-1.5 h-1.5 bg-white rounded-full opacity-80"
-            style={{
-              background: 'radial-gradient(circle, #ffffff 0%, #FF7F50 50%, transparent 100%)',
-              boxShadow: '0 0 8px #FF7F50, 0 0 18px #FF6B35',
-              animation: 'particle-float 16s ease-in-out infinite',
-              animationDelay: '1s'
-            }}
-          ></div>
+          {/* Partículas Principais com Trilhas */}
+          <div className="absolute top-16 right-1/5 w-4 h-4 opacity-90"
+               style={{
+                 background: 'radial-gradient(circle, #ffffff 0%, #FF8C00 30%, #F7931E 60%, transparent 100%)',
+                 borderRadius: '50%',
+                 boxShadow: `
+                   0 0 20px #FF8C00,
+                   0 0 40px #F7931E,
+                   0 0 60px rgba(255, 140, 0, 0.4),
+                   0 0 80px rgba(247, 147, 30, 0.2)
+                 `,
+                 animation: 'particle-dance-1 20s ease-in-out infinite'
+               }}>
+               <div className="absolute inset-0 rounded-full"
+                    style={{
+                      background: 'conic-gradient(from 0deg, transparent, #FF8C00, transparent, #F7931E, transparent)',
+                      animation: 'spin 4s linear infinite'
+                    }}></div>
+          </div>
+          
+          <div className="absolute top-1/2 left-1/6 w-3 h-3 opacity-85"
+               style={{
+                 background: 'radial-gradient(circle, #ffffff 0%, #F7931E 40%, #FFA500 70%, transparent 100%)',
+                 borderRadius: '50%',
+                 boxShadow: `
+                   0 0 15px #F7931E,
+                   0 0 30px #FFA500,
+                   0 0 45px rgba(247, 147, 30, 0.5)
+                 `,
+                 animation: 'particle-dance-2 25s ease-in-out infinite'
+               }}>
+               <div className="absolute inset-0 rounded-full"
+                    style={{
+                      background: 'conic-gradient(from 180deg, transparent, #F7931E, transparent, #FFA500, transparent)',
+                      animation: 'spin 6s linear infinite reverse'
+                    }}></div>
+          </div>
+          
+          <div className="absolute bottom-1/4 right-1/3 w-5 h-5 opacity-95"
+               style={{
+                 background: 'radial-gradient(circle, #ffffff 0%, #FFB84D 25%, #FF8C00 50%, #F7931E 75%, transparent 100%)',
+                 borderRadius: '50%',
+                 boxShadow: `
+                   0 0 25px #FFB84D,
+                   0 0 50px #FF8C00,
+                   0 0 75px rgba(255, 184, 77, 0.4),
+                   0 0 100px rgba(255, 140, 0, 0.2)
+                 `,
+                 animation: 'particle-dance-3 18s ease-in-out infinite'
+               }}>
+               <div className="absolute inset-0 rounded-full"
+                    style={{
+                      background: 'conic-gradient(from 90deg, transparent, #FFB84D, transparent, #FF8C00, transparent)',
+                      animation: 'spin 3s linear infinite'
+                    }}></div>
+          </div>
 
-          {/* Partículas Pequenas Premium */}
-          <div className="absolute top-1/3 left-1/2 w-1 h-1 rounded-full opacity-80 animate-twinkle-tech" 
-               style={{background: 'radial-gradient(circle, #ffffff 0%, #FF8C00 100%)', boxShadow: '0 0 6px #FF8C00'}}></div>
-          <div className="absolute bottom-1/4 left-1/6 w-0.5 h-0.5 rounded-full opacity-70 animate-twinkle-tech" 
-               style={{background: 'radial-gradient(circle, #ffffff 0%, #F7931E 100%)', boxShadow: '0 0 4px #F7931E', animationDelay: '1.5s'}}></div>
-          <div className="absolute top-3/4 right-1/6 w-0.5 h-0.5 rounded-full opacity-85 animate-twinkle-tech" 
-               style={{background: 'radial-gradient(circle, #ffffff 0%, #FFA500 100%)', boxShadow: '0 0 4px #FFA500', animationDelay: '4s'}}></div>
-          <div className="absolute top-1/8 left-1/8 w-0.5 h-0.5 rounded-full opacity-60 animate-twinkle-tech" 
-               style={{background: 'radial-gradient(circle, #ffffff 0%, #FF7F50 100%)', boxShadow: '0 0 3px #FF7F50', animationDelay: '2.5s'}}></div>
-          <div className="absolute bottom-1/8 right-1/8 w-1 h-1 rounded-full opacity-75 animate-twinkle-tech" 
-               style={{background: 'radial-gradient(circle, #ffffff 0%, #FF6B35 100%)', boxShadow: '0 0 5px #FF6B35', animationDelay: '5s'}}></div>
+          {/* Constelação de Micro Partículas */}
+          {Array.from({length: 15}).map((_, i) => (
+            <div key={i} 
+                 className="absolute w-1 h-1 rounded-full opacity-70"
+                 style={{
+                   top: `${Math.random() * 100}%`,
+                   left: `${Math.random() * 100}%`,
+                   background: `radial-gradient(circle, #ffffff 0%, ${['#FF8C00', '#F7931E', '#FFA500', '#FFB84D'][i % 4]} 100%)`,
+                   boxShadow: `0 0 ${5 + Math.random() * 10}px ${['#FF8C00', '#F7931E', '#FFA500', '#FFB84D'][i % 4]}`,
+                   animation: `twinkle-dance ${8 + Math.random() * 6}s ease-in-out infinite`,
+                   animationDelay: `${Math.random() * 5}s`
+                 }}></div>
+          ))}
         </div>
+
+        {/* Feixes de Luz Laser */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-1 h-full opacity-40 origin-top"
+               style={{
+                 background: 'linear-gradient(180deg, rgba(255, 140, 0, 0.8) 0%, rgba(247, 147, 30, 0.6) 50%, transparent 100%)',
+                 transform: 'rotate(15deg)',
+                 boxShadow: '0 0 10px rgba(255, 140, 0, 0.6), 0 0 20px rgba(247, 147, 30, 0.4)',
+                 animation: 'laser-sweep-1 12s ease-in-out infinite'
+               }}></div>
+          
+          <div className="absolute top-0 right-1/3 w-0.5 h-full opacity-35 origin-top"
+               style={{
+                 background: 'linear-gradient(180deg, rgba(247, 147, 30, 0.7) 0%, rgba(255, 165, 0, 0.5) 50%, transparent 100%)',
+                 transform: 'rotate(-20deg)',
+                 boxShadow: '0 0 8px rgba(247, 147, 30, 0.5)',
+                 animation: 'laser-sweep-2 15s ease-in-out infinite reverse'
+               }}></div>
+        </div>
+
+        {/* Textura Holográfica */}
+        <div className="absolute inset-0 opacity-10"
+             style={{
+               backgroundImage: `
+                 repeating-linear-gradient(
+                   45deg,
+                   transparent,
+                   transparent 2px,
+                   rgba(255, 255, 255, 0.1) 2px,
+                   rgba(255, 255, 255, 0.1) 4px
+                 ),
+                 repeating-linear-gradient(
+                   -45deg,
+                   transparent,
+                   transparent 3px,
+                   rgba(255, 140, 0, 0.1) 3px,
+                   rgba(255, 140, 0, 0.1) 6px
+                 )
+               `,
+               backgroundSize: '50px 50px, 70px 70px',
+               animation: 'holographic-shift 20s linear infinite'
+             }}></div>
 
         {/* Nós de Rede */}
         <div className="absolute inset-0">
