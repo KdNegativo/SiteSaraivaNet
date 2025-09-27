@@ -116,7 +116,7 @@ const Index = () => {
                 <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '55px', height: '55px', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.5))'}} />
               </div>
             </div>
-            <MobileNavigation onItemClick={handleSmoothScroll} />
+            <MobileNavigation />
           </div>
         </div>
 
