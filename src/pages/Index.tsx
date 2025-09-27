@@ -48,130 +48,220 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Fundo Futurista - Internet & Tecnologia */}
+      {/* Fundo Futurista Premium - Internet & Tecnologia */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Gradiente Base Dinâmico */}
+        {/* Gradiente Base Ultra Moderno */}
         <div 
           className="absolute inset-0"
           style={{
             background: `
               linear-gradient(135deg, 
-                #FF4500 0%, 
-                #FF6600 20%, 
-                #FF8800 35%, 
-                #E91E63 50%, 
-                #9C27B0 70%, 
-                #673AB7 85%, 
-                #FF5722 100%
-              )
+                #FF6B35 0%,
+                #F7931E 12%, 
+                #FF8C00 25%, 
+                #FF7F50 35%, 
+                #FF6347 45%, 
+                #FF4500 55%,
+                #FF6600 65%, 
+                #FF7F00 75%,
+                #FF8C00 85%, 
+                #FFA500 100%
+              ),
+              radial-gradient(ellipse at top left, rgba(255, 107, 53, 0.4) 0%, transparent 60%),
+              radial-gradient(ellipse at bottom right, rgba(255, 140, 0, 0.3) 0%, transparent 50%),
+              radial-gradient(ellipse at center, rgba(247, 147, 30, 0.2) 0%, transparent 70%)
             `,
-            backgroundSize: '400% 400%',
-            animation: 'gradient-flow 12s ease-in-out infinite'
+            backgroundSize: '400% 400%, 800px 800px, 1200px 1200px, 600px 600px',
+            animation: 'gradient-flow 15s ease-in-out infinite'
           }}
         ></div>
 
-        {/* Camada de Movimento Dinâmico */}
+        {/* Camada de Brilho Premium */}
         <div 
-          className="absolute inset-0 opacity-60"
+          className="absolute inset-0"
           style={{
             background: `
-              radial-gradient(ellipse at 30% 20%, rgba(255, 69, 0, 0.4) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 80%, rgba(156, 39, 176, 0.3) 0%, transparent 50%),
-              radial-gradient(ellipse at 20% 70%, rgba(233, 30, 99, 0.35) 0%, transparent 55%)
+              linear-gradient(45deg, 
+                rgba(255, 215, 0, 0.15) 0%,
+                rgba(255, 140, 0, 0.1) 25%,
+                rgba(255, 69, 0, 0.15) 50%,
+                rgba(255, 107, 53, 0.1) 75%,
+                rgba(255, 165, 0, 0.15) 100%
+              )
             `,
-            animation: 'float-tech 15s ease-in-out infinite'
+            backgroundSize: '300% 300%',
+            animation: 'gradient-flow 20s ease-in-out infinite reverse'
           }}
         ></div>
 
-        {/* Linhas de Conexão Fluídas */}
+        {/* Camadas de Profundidade Premium */}
+        <div 
+          className="absolute inset-0 opacity-50"
+          style={{
+            background: `
+              radial-gradient(ellipse 120% 80% at 25% 15%, rgba(255, 140, 0, 0.3) 0%, transparent 70%),
+              radial-gradient(ellipse 100% 60% at 75% 85%, rgba(255, 107, 53, 0.25) 0%, transparent 60%),
+              radial-gradient(ellipse 80% 100% at 15% 75%, rgba(247, 147, 30, 0.3) 0%, transparent 65%),
+              radial-gradient(ellipse 90% 70% at 85% 25%, rgba(255, 165, 0, 0.2) 0%, transparent 55%)
+            `,
+            animation: 'float-tech 18s ease-in-out infinite'
+          }}
+        ></div>
+
+        {/* Efeitos Geométricos Modernos */}
+        <div className="absolute inset-0 opacity-20">
+          <div 
+            className="absolute top-10 left-10 w-32 h-32 border border-orange-300/30 rounded-full"
+            style={{
+              background: 'radial-gradient(circle, rgba(255, 140, 0, 0.1) 0%, transparent 70%)',
+              animation: 'float-tech 12s ease-in-out infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute top-1/3 right-20 w-24 h-24 border border-orange-400/40 rotate-45"
+            style={{
+              background: 'linear-gradient(45deg, rgba(255, 107, 53, 0.15) 0%, transparent 100%)',
+              animation: 'float-tech 14s ease-in-out infinite reverse'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-1/4 left-1/3 w-20 h-20 border border-orange-200/35 rounded-lg rotate-12"
+            style={{
+              background: 'linear-gradient(135deg, rgba(247, 147, 30, 0.1) 0%, transparent 100%)',
+              animation: 'float-tech 16s ease-in-out infinite'
+            }}
+          ></div>
+        </div>
+
+        {/* Linhas de Energia Premium */}
         <div className="absolute inset-0">
-          {/* Linha Principal Horizontal */}
+          {/* Linha Principal Horizontal Premium */}
           <div 
-            className="absolute top-1/4 left-0 w-full h-0.5 opacity-40"
+            className="absolute top-1/4 left-0 w-full h-1 opacity-60"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, #FF6600 20%, #E91E63 50%, #9C27B0 80%, transparent 100%)',
-              animation: 'data-flow 8s linear infinite'
+              background: 'linear-gradient(90deg, transparent 0%, rgba(255, 140, 0, 0.8) 20%, rgba(255, 107, 53, 0.9) 50%, rgba(247, 147, 30, 0.8) 80%, transparent 100%)',
+              boxShadow: '0 0 10px rgba(255, 140, 0, 0.5), 0 0 20px rgba(255, 107, 53, 0.3)',
+              animation: 'data-flow 10s linear infinite'
             }}
           ></div>
           
-          {/* Linha Diagonal Superior */}
+          {/* Linha Diagonal Superior Premium */}
           <div 
-            className="absolute top-0 left-0 w-full h-0.5 opacity-30 rotate-12 origin-left"
+            className="absolute top-0 left-0 w-full h-0.5 opacity-50 rotate-12 origin-left"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, #9C27B0 30%, #FF8800 70%, transparent 100%)',
-              animation: 'data-flow 10s linear infinite reverse'
+              background: 'linear-gradient(90deg, transparent 0%, rgba(247, 147, 30, 0.7) 30%, rgba(255, 165, 0, 0.8) 70%, transparent 100%)',
+              boxShadow: '0 0 8px rgba(247, 147, 30, 0.4)',
+              animation: 'data-flow 12s linear infinite reverse'
             }}
           ></div>
           
-          {/* Linha Vertical */}
+          {/* Linha Vertical Premium */}
           <div 
-            className="absolute top-0 left-2/3 w-0.5 h-full opacity-25"
+            className="absolute top-0 left-2/3 w-1 h-full opacity-40"
             style={{
-              background: 'linear-gradient(180deg, transparent 0%, #FF4500 30%, #E91E63 60%, transparent 100%)',
-              animation: 'data-flow-vertical 12s linear infinite'
+              background: 'linear-gradient(180deg, transparent 0%, rgba(255, 107, 53, 0.8) 30%, rgba(255, 140, 0, 0.9) 60%, transparent 100%)',
+              boxShadow: '0 0 6px rgba(255, 107, 53, 0.5)',
+              animation: 'data-flow-vertical 14s linear infinite'
             }}
           ></div>
 
-          {/* Linhas de Rede Conectadas */}
+          {/* Rede Neural Premium */}
           <div className="absolute inset-0">
-            <svg className="w-full h-full opacity-20" style={{animation: 'network-pulse 20s ease-in-out infinite'}}>
+            <svg className="w-full h-full opacity-30" style={{animation: 'network-pulse 25s ease-in-out infinite'}}>
               <defs>
-                <linearGradient id="networkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#FF6600" stopOpacity="0.6"/>
-                  <stop offset="50%" stopColor="#E91E63" stopOpacity="0.4"/>
-                  <stop offset="100%" stopColor="#9C27B0" stopOpacity="0.6"/>
+                <linearGradient id="premiumNetworkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FF8C00" stopOpacity="0.8"/>
+                  <stop offset="30%" stopColor="#FF6B35" stopOpacity="0.6"/>
+                  <stop offset="70%" stopColor="#F7931E" stopOpacity="0.7"/>
+                  <stop offset="100%" stopColor="#FFA500" stopOpacity="0.8"/>
                 </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge> 
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
               </defs>
               
               <path 
                 d="M 100 200 Q 300 100 500 300 T 900 200" 
-                stroke="url(#networkGrad)" 
-                strokeWidth="1" 
+                stroke="url(#premiumNetworkGrad)" 
+                strokeWidth="2" 
                 fill="none"
-                style={{animation: 'path-draw 15s ease-in-out infinite'}}
+                filter="url(#glow)"
+                style={{animation: 'path-draw 18s ease-in-out infinite'}}
               />
               <path 
                 d="M 200 400 Q 400 200 600 500 T 1000 400" 
-                stroke="url(#networkGrad)" 
+                stroke="url(#premiumNetworkGrad)" 
+                strokeWidth="1.5" 
+                fill="none"
+                filter="url(#glow)"
+                style={{animation: 'path-draw 22s ease-in-out infinite reverse'}}
+              />
+              <path 
+                d="M 0 300 Q 200 150 400 350 Q 600 250 800 400 Q 900 350 1200 300" 
+                stroke="url(#premiumNetworkGrad)" 
                 strokeWidth="1" 
                 fill="none"
-                style={{animation: 'path-draw 18s ease-in-out infinite reverse'}}
+                filter="url(#glow)"
+                style={{animation: 'path-draw 20s ease-in-out infinite'}}
               />
             </svg>
           </div>
         </div>
 
-        {/* Partículas Luminosas Tecnológicas */}
+        {/* Partículas Premium de Alta Tecnologia */}
         <div className="absolute inset-0">
-          {/* Partículas Grandes */}
+          {/* Partículas Grandes Premium */}
           <div 
-            className="absolute top-20 right-1/4 w-2 h-2 bg-white rounded-full opacity-80"
+            className="absolute top-20 right-1/4 w-3 h-3 bg-white rounded-full opacity-90"
             style={{
-              boxShadow: '0 0 10px #FF6600, 0 0 20px #FF6600',
-              animation: 'particle-float 12s ease-in-out infinite'
+              background: 'radial-gradient(circle, #ffffff 0%, #FF8C00 50%, transparent 100%)',
+              boxShadow: '0 0 15px #FF8C00, 0 0 30px #FF6B35, 0 0 45px rgba(255, 140, 0, 0.3)',
+              animation: 'particle-float 15s ease-in-out infinite'
             }}
           ></div>
           <div 
-            className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-white rounded-full opacity-70"
+            className="absolute top-1/2 left-1/4 w-2.5 h-2.5 bg-white rounded-full opacity-85"
             style={{
-              boxShadow: '0 0 8px #E91E63, 0 0 15px #E91E63',
-              animation: 'particle-float 14s ease-in-out infinite',
-              animationDelay: '2s'
+              background: 'radial-gradient(circle, #ffffff 0%, #F7931E 50%, transparent 100%)',
+              boxShadow: '0 0 12px #F7931E, 0 0 25px #FF6B35, 0 0 40px rgba(247, 147, 30, 0.3)',
+              animation: 'particle-float 18s ease-in-out infinite',
+              animationDelay: '3s'
             }}
           ></div>
           <div 
-            className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-white rounded-full opacity-90"
+            className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-white rounded-full opacity-95"
             style={{
-              boxShadow: '0 0 6px #9C27B0, 0 0 12px #9C27B0',
-              animation: 'particle-float 10s ease-in-out infinite',
-              animationDelay: '4s'
+              background: 'radial-gradient(circle, #ffffff 0%, #FFA500 50%, transparent 100%)',
+              boxShadow: '0 0 10px #FFA500, 0 0 20px #FF8C00, 0 0 35px rgba(255, 165, 0, 0.4)',
+              animation: 'particle-float 13s ease-in-out infinite',
+              animationDelay: '6s'
+            }}
+          ></div>
+          <div 
+            className="absolute top-1/6 left-3/4 w-1.5 h-1.5 bg-white rounded-full opacity-80"
+            style={{
+              background: 'radial-gradient(circle, #ffffff 0%, #FF7F50 50%, transparent 100%)',
+              boxShadow: '0 0 8px #FF7F50, 0 0 18px #FF6B35',
+              animation: 'particle-float 16s ease-in-out infinite',
+              animationDelay: '1s'
             }}
           ></div>
 
-          {/* Partículas Pequenas */}
-          <div className="absolute top-1/3 left-1/2 w-0.5 h-0.5 bg-orange-300 rounded-full opacity-60 animate-twinkle-tech"></div>
-          <div className="absolute bottom-1/4 left-1/6 w-0.5 h-0.5 bg-pink-300 rounded-full opacity-50 animate-twinkle-tech" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-3/4 right-1/6 w-0.5 h-0.5 bg-purple-300 rounded-full opacity-70 animate-twinkle-tech" style={{animationDelay: '3s'}}></div>
+          {/* Partículas Pequenas Premium */}
+          <div className="absolute top-1/3 left-1/2 w-1 h-1 rounded-full opacity-80 animate-twinkle-tech" 
+               style={{background: 'radial-gradient(circle, #ffffff 0%, #FF8C00 100%)', boxShadow: '0 0 6px #FF8C00'}}></div>
+          <div className="absolute bottom-1/4 left-1/6 w-0.5 h-0.5 rounded-full opacity-70 animate-twinkle-tech" 
+               style={{background: 'radial-gradient(circle, #ffffff 0%, #F7931E 100%)', boxShadow: '0 0 4px #F7931E', animationDelay: '1.5s'}}></div>
+          <div className="absolute top-3/4 right-1/6 w-0.5 h-0.5 rounded-full opacity-85 animate-twinkle-tech" 
+               style={{background: 'radial-gradient(circle, #ffffff 0%, #FFA500 100%)', boxShadow: '0 0 4px #FFA500', animationDelay: '4s'}}></div>
+          <div className="absolute top-1/8 left-1/8 w-0.5 h-0.5 rounded-full opacity-60 animate-twinkle-tech" 
+               style={{background: 'radial-gradient(circle, #ffffff 0%, #FF7F50 100%)', boxShadow: '0 0 3px #FF7F50', animationDelay: '2.5s'}}></div>
+          <div className="absolute bottom-1/8 right-1/8 w-1 h-1 rounded-full opacity-75 animate-twinkle-tech" 
+               style={{background: 'radial-gradient(circle, #ffffff 0%, #FF6B35 100%)', boxShadow: '0 0 5px #FF6B35', animationDelay: '5s'}}></div>
         </div>
 
         {/* Nós de Rede */}
