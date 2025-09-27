@@ -762,59 +762,169 @@ body {
   animation: morphBorder 8s ease-in-out infinite;
 }
 
-/* ========== ANIMAÇÕES SUAVES E PROFISSIONAIS ========== */
+/* ========== ANIMAÇÕES FUTURISTAS E TECNOLÓGICAS ========== */
 
-/* Animação suave de flutuação */
-@keyframes gentle-float {
+/* Gradiente dinâmico principal */
+@keyframes gradient-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 25%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 100% 75%;
+  }
+}
+
+/* Movimento tecnológico suave */
+@keyframes float-tech {
   0%, 100% {
     transform: translate(0px, 0px) scale(1);
+    opacity: 0.6;
   }
   33% {
-    transform: translate(-10px, -15px) scale(1.02);
+    transform: translate(-15px, -20px) scale(1.05);
+    opacity: 0.8;
   }
   66% {
-    transform: translate(10px, -10px) scale(0.98);
+    transform: translate(15px, -10px) scale(0.95);
+    opacity: 0.7;
   }
 }
 
-@keyframes float-gentle {
+/* Fluxo de dados */
+@keyframes data-flow {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes data-flow-vertical {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Pulso de rede */
+@keyframes network-pulse {
   0%, 100% {
-    transform: translateY(0px) translateX(0px);
     opacity: 0.2;
+    transform: scale(1);
   }
   50% {
-    transform: translateY(-20px) translateX(10px);
+    opacity: 0.4;
+    transform: scale(1.02);
+  }
+}
+
+/* Desenho de caminho */
+@keyframes path-draw {
+  0% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Partículas flutuantes */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translate(0px, 0px);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(-10px, -15px);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(5px, -25px);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translate(10px, -10px);
+    opacity: 0.7;
+  }
+}
+
+/* Cintilação tecnológica */
+@keyframes twinkle-tech {
+  0%, 100% {
     opacity: 0.3;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  75% {
+    opacity: 0.6;
+    transform: scale(1.1);
   }
 }
 
-@keyframes subtle-move {
-  0% {
-    transform: translateX(0px) translateY(0px);
-  }
-  100% {
-    transform: translateX(20px) translateY(-20px);
-  }
-}
-
-@keyframes rotate-slow {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes pulse-gentle {
+/* Pulso dos nós */
+@keyframes node-pulse {
   0%, 100% {
     transform: scale(1);
-    opacity: 0.25;
+    opacity: 0.5;
+    box-shadow: 0 0 0 0 currentColor;
   }
   50% {
-    transform: scale(1.1);
-    opacity: 0.4;
+    transform: scale(1.2);
+    opacity: 0.8;
+    box-shadow: 0 0 0 10px transparent;
   }
+}
+
+/* Grid tecnológico */
+@keyframes tech-grid {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Aplicar animações */
+.animate-twinkle-tech {
+  animation: twinkle-tech 4s ease-in-out infinite;
 }
 
 @keyframes gradient-x {
