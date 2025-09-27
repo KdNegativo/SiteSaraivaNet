@@ -16,7 +16,6 @@ import { useParallax } from "@/hooks/useParallax";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { usePerformanceMonitor } from "@/hooks/usePerformanceMonitor";
 import { Link } from "react-router-dom";
-import saraivaLogo from "@/assets/saraiva-logo-official.png";
 
 const Index = () => {
   const parallaxOffset = useParallax(0.5);
@@ -121,9 +120,6 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="flex items-center justify-center">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '55px', height: '55px', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.5))'}} />
-              </div>
               <div>
                 <span style={{fontSize: '18px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px'}}>SaraivaNet</span>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
@@ -141,9 +137,6 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '55px', height: '55px', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.5))'}} />
-            </div>
             <div>
               <span style={{fontSize: '24px', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 4px #000000', fontFamily: 'Poppins, sans-serif'}}>SaraivaNet</span>
               <div className="text-xs text-orange-100 font-medium flex items-center">
@@ -1014,12 +1007,6 @@ const Index = () => {
           </div>
 
           <div className="border-t border-gray-700 mt-12 pt-8">
-            {/* Logo centralizada */}
-            <div className="flex justify-center mb-6">
-              <div className="flex items-center justify-center">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '35px', height: '35px', filter: 'drop-shadow(0 0 1px rgba(255,255,255,0.7))'}} />
-              </div>
-            </div>
             <p className="text-gray-400 text-lg text-center">
               © 2025 SaraivaNet. Todos os direitos reservados.
             </p>

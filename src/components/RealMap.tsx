@@ -123,13 +123,14 @@ const RealMap: React.FC = () => {
       // Criar o mapa com configurações específicas
       mapInstance.current = L.map(mapRef.current, {
         center: centerCoords,
-        zoom: 11,
+        zoom: window.innerWidth < 768 ? 10 : 11, // Zoom menor no mobile
         minZoom: 8,
         maxZoom: 16,
         zoomControl: true,
         scrollWheelZoom: true,
         doubleClickZoom: true,
-        dragging: true
+        dragging: true,
+        touchZoom: true // Habilitar pinch zoom
       });
 
       console.log('RealMap: Mapa criado, adicionando camada de tiles');
@@ -241,14 +242,15 @@ const RealMap: React.FC = () => {
         </div>
       </div>
       
-      {/* Container do Mapa */}
-      <div className="w-full h-96 rounded-2xl overflow-hidden shadow-xl border-2 border-blue-400/30 mb-6">
+      {/* Container do Mapa - Otimizado para mobile */}
+      <div className="w-full h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl border-2 border-blue-400/30 mb-6 touch-manipulation">
         <div 
           ref={mapRef} 
-          className="w-full h-full" 
+          className="w-full h-full touch-manipulation" 
           style={{ 
-            minHeight: '384px',
-            background: '#f8fafc' 
+            minHeight: '320px',
+            background: '#f8fafc',
+            touchAction: 'pan-x pan-y'
           }} 
         />
       </div>
