@@ -195,12 +195,12 @@ const Index = () => {
           </div>
           
           <nav className="flex items-center space-x-6">
-            <TouchButton onClick={() => handleSmoothScroll('inicio')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Início</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('planos')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Planos</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('cobertura')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Cobertura</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('sobre')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Sobre</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('contato')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Contato</TouchButton>
-            <Link to="/chips"><TouchButton variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-semibold">Chips</TouchButton></Link>
+            <TouchButton onClick={() => handleSmoothScroll('inicio')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 border border-white/30 bg-white/10 backdrop-blur-sm transition-colors font-medium px-4 py-2 rounded-lg">Início</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('planos')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 border border-white/30 bg-white/10 backdrop-blur-sm transition-colors font-medium px-4 py-2 rounded-lg">Planos</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('cobertura')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 border border-white/30 bg-white/10 backdrop-blur-sm transition-colors font-medium px-4 py-2 rounded-lg">Cobertura</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('sobre')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 border border-white/30 bg-white/10 backdrop-blur-sm transition-colors font-medium px-4 py-2 rounded-lg">Sobre</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('contato')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 border border-white/30 bg-white/10 backdrop-blur-sm transition-colors font-medium px-4 py-2 rounded-lg">Contato</TouchButton>
+            <Link to="/chips"><TouchButton variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 border border-white/30 bg-white/10 backdrop-blur-sm transition-colors font-semibold px-4 py-2 rounded-lg">Chips</TouchButton></Link>
           </nav>
 
           <div className="flex items-center space-x-4">
