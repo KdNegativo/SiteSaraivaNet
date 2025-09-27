@@ -50,38 +50,44 @@ const Index = () => {
     <div className="min-h-screen relative overflow-hidden">
       {/* Fundo Dinâmico Futurista */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Base gradiente principal com cores vibrantes */}
-        <div className="absolute inset-0" style={{
-          background: `linear-gradient(135deg, 
-            #ff6b35 0%,     /* Laranja vibrante */
-            #f7931e 20%,    /* Laranja dourado */
-            #dc2626 40%,    /* Vermelho forte */
-            #991b1b 60%,    /* Vermelho escuro */
-            #7c3aed 80%,    /* Roxo vibrante */
-            #581c87 100%    /* Roxo escuro */
-          )`,
-          backgroundSize: '400% 400%',
-          animation: 'gradient-move 12s ease infinite'
-        }}></div>
+        {/* Base gradiente principal com cores vibrantes - com suporte a modo escuro */}
+        <div 
+          className="absolute inset-0 dark:opacity-90" 
+          style={{
+            background: `linear-gradient(135deg, 
+              #ff6b35 0%,     /* Laranja vibrante */
+              #f7931e 20%,    /* Laranja dourado */
+              #dc2626 40%,    /* Vermelho forte */
+              #991b1b 60%,    /* Vermelho escuro */
+              #7c3aed 80%,    /* Roxo vibrante */
+              #581c87 100%    /* Roxo escuro */
+            )`,
+            backgroundSize: '400% 400%',
+            animation: 'gradient-move 12s ease infinite'
+          }}
+        ></div>
+
+        {/* Overlay para modo escuro - tons vermelhos */}
+        <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-red-900/60 dark:via-red-800/70 dark:to-red-700/60"></div>
 
         {/* Camada de orbs coloridos dinâmicos */}
         <div className="absolute inset-0">
           <div 
-            className="absolute top-1/4 right-1/5 w-72 h-72 rounded-full blur-3xl opacity-30"
+            className="absolute top-1/4 right-1/5 w-72 h-72 rounded-full blur-3xl opacity-30 dark:opacity-20"
             style={{
               background: 'radial-gradient(circle, #ff6b35, #f7931e)',
               animation: 'float-large 14s ease-in-out infinite'
             }}
           ></div>
           <div 
-            className="absolute bottom-1/3 left-1/6 w-80 h-80 rounded-full blur-3xl opacity-25"
+            className="absolute bottom-1/3 left-1/6 w-80 h-80 rounded-full blur-3xl opacity-25 dark:opacity-15"
             style={{
               background: 'radial-gradient(circle, #dc2626, #991b1b)',
               animation: 'float-large 16s ease-in-out infinite reverse'
             }}
           ></div>
           <div 
-            className="absolute top-1/2 left-1/2 w-60 h-60 rounded-full blur-2xl opacity-35"
+            className="absolute top-1/2 left-1/2 w-60 h-60 rounded-full blur-2xl opacity-35 dark:opacity-25"
             style={{
               background: 'radial-gradient(circle, #7c3aed, #581c87)',
               animation: 'pulse-color 10s ease-in-out infinite'
@@ -94,7 +100,7 @@ const Index = () => {
           {[...Array(4)].map((_, i) => (
             <div
               key={i}
-              className="absolute h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+              className="absolute h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent dark:via-red-300/30"
               style={{
                 width: '200px',
                 top: `${20 + i * 20}%`,
@@ -109,7 +115,7 @@ const Index = () => {
         {/* Efeitos geométricos tecnológicos */}
         <div className="absolute inset-0">
           <div 
-            className="absolute top-1/5 right-1/4 w-24 h-24 opacity-15"
+            className="absolute top-1/5 right-1/4 w-24 h-24 opacity-15 dark:opacity-10"
             style={{
               background: 'linear-gradient(45deg, rgba(255,255,255,0.4), transparent)',
               clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
@@ -117,7 +123,7 @@ const Index = () => {
             }}
           ></div>
           <div 
-            className="absolute bottom-1/4 left-1/3 w-16 h-16 opacity-20"
+            className="absolute bottom-1/4 left-1/3 w-16 h-16 opacity-20 dark:opacity-15"
             style={{
               background: 'linear-gradient(135deg, rgba(255,107,53,0.6), transparent)',
               borderRadius: '30%',
@@ -125,7 +131,7 @@ const Index = () => {
             }}
           ></div>
           <div 
-            className="absolute top-3/4 right-1/3 w-20 h-20 opacity-15"
+            className="absolute top-3/4 right-1/3 w-20 h-20 opacity-15 dark:opacity-10"
             style={{
               background: 'linear-gradient(90deg, rgba(124,58,237,0.5), transparent)',
               clipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)',
@@ -135,7 +141,7 @@ const Index = () => {
         </div>
 
         {/* Overlay final para suavizar */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/5 dark:from-red-950/20 dark:to-red-900/10"></div>
       </div>
       {/* Floating Components */}
       <ChatBot />
@@ -203,10 +209,10 @@ const Index = () => {
         <div className="md:hidden w-full px-4 py-16">
           <div className="relative z-10 text-center space-y-8">
             <AnimatedSection animation="fade-up">
-              {/* Badge maior */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm mb-4">
-                <Star className="w-4 h-4 mr-2" />
-                Internet + TV Grátis
+              {/* Badge maior - ajustado para não cortar no mobile */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-3 py-2 rounded-full font-bold text-xs mb-4 mx-auto max-w-[90vw] text-center whitespace-nowrap">
+                <Star className="w-3 h-3 mr-1 flex-shrink-0" />
+                <span className="truncate">Internet + TV Grátis</span>
               </div>
 
               {/* Title maior no mobile */}
