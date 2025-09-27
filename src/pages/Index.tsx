@@ -48,7 +48,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Fundo Dinâmico Futurista */}
+      {/* Fundo Dinâmico Futurista - Otimizado para mobile */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         {/* Base gradiente principal com cores vibrantes - com suporte a modo escuro */}
         <div 
@@ -62,80 +62,47 @@ const Index = () => {
               #7c3aed 80%,    /* Roxo vibrante */
               #581c87 100%    /* Roxo escuro */
             )`,
-            backgroundSize: '400% 400%',
-            animation: 'gradient-move 12s ease infinite'
+            backgroundSize: '200% 200%',
+            animation: 'gradient-move 20s ease infinite',
+            willChange: 'auto'
           }}
         ></div>
 
         {/* Overlay para modo escuro - tons vermelhos */}
         <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-red-900/60 dark:via-red-800/70 dark:to-red-700/60"></div>
 
-        {/* Camada de orbs coloridos dinâmicos */}
-        <div className="absolute inset-0">
+        {/* Camada de orbs coloridos dinâmicos - simplificada para mobile */}
+        <div className="absolute inset-0 hidden md:block">
           <div 
-            className="absolute top-1/4 right-1/5 w-72 h-72 rounded-full blur-3xl opacity-30 dark:opacity-20"
+            className="absolute top-1/4 right-1/5 w-72 h-72 rounded-full blur-3xl opacity-20"
             style={{
               background: 'radial-gradient(circle, #ff6b35, #f7931e)',
-              animation: 'float-large 14s ease-in-out infinite'
+              animation: 'float-large 20s ease-in-out infinite',
+              willChange: 'transform'
             }}
           ></div>
           <div 
-            className="absolute bottom-1/3 left-1/6 w-80 h-80 rounded-full blur-3xl opacity-25 dark:opacity-15"
+            className="absolute bottom-1/3 left-1/6 w-80 h-80 rounded-full blur-3xl opacity-15"
             style={{
               background: 'radial-gradient(circle, #dc2626, #991b1b)',
-              animation: 'float-large 16s ease-in-out infinite reverse'
-            }}
-          ></div>
-          <div 
-            className="absolute top-1/2 left-1/2 w-60 h-60 rounded-full blur-2xl opacity-35 dark:opacity-25"
-            style={{
-              background: 'radial-gradient(circle, #7c3aed, #581c87)',
-              animation: 'pulse-color 10s ease-in-out infinite'
+              animation: 'float-large 25s ease-in-out infinite reverse',
+              willChange: 'transform'
             }}
           ></div>
         </div>
 
-        {/* Linhas fluídas de conexão */}
-        <div className="absolute inset-0">
-          {[...Array(4)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent dark:via-red-300/30"
-              style={{
-                width: '200px',
-                top: `${20 + i * 20}%`,
-                left: '-200px',
-                animation: `flow-lines ${12 + i * 2}s linear infinite`,
-                animationDelay: `${i * 3}s`
-              }}
-            ></div>
-          ))}
-        </div>
-
-        {/* Efeitos geométricos tecnológicos */}
-        <div className="absolute inset-0">
+        {/* Versão mobile mais simples */}
+        <div className="absolute inset-0 md:hidden">
           <div 
-            className="absolute top-1/5 right-1/4 w-24 h-24 opacity-15 dark:opacity-10"
+            className="absolute top-1/4 right-1/5 w-40 h-40 rounded-full blur-2xl opacity-15"
             style={{
-              background: 'linear-gradient(45deg, rgba(255,255,255,0.4), transparent)',
-              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-              animation: 'spin-gentle 30s linear infinite'
+              background: 'radial-gradient(circle, #ff6b35, #f7931e)'
             }}
           ></div>
           <div 
-            className="absolute bottom-1/4 left-1/3 w-16 h-16 opacity-20 dark:opacity-15"
+            className="absolute bottom-1/3 left-1/6 w-48 h-48 rounded-full blur-2xl opacity-10"
             style={{
-              background: 'linear-gradient(135deg, rgba(255,107,53,0.6), transparent)',
-              borderRadius: '30%',
-              animation: 'bounce-soft 12s ease-in-out infinite'
-            }}
-          ></div>
-          <div 
-            className="absolute top-3/4 right-1/3 w-20 h-20 opacity-15 dark:opacity-10"
-            style={{
-              background: 'linear-gradient(90deg, rgba(124,58,237,0.5), transparent)',
-              clipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)',
-              animation: 'pulse-color 8s ease-in-out infinite'
+              background: 'radial-gradient(circle, #dc2626, #991b1b)'
             }}
           ></div>
         </div>
@@ -146,8 +113,8 @@ const Index = () => {
       {/* Floating Components */}
       <ChatBot />
       
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-orange-500 to-orange-600 shadow-xl px-4 py-2 border-b-4 border-orange-500/20 z-50">
+      {/* Header - Otimizado para performance */}
+      <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-orange-500 to-orange-600 shadow-xl px-4 py-2 border-b-4 border-orange-500/20 z-50 transform-gpu will-change-transform">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
