@@ -48,38 +48,59 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Dynamic Orange Background with Animated Elements */}
-      <div className="fixed inset-0 -z-10">
-        {/* Primary Gradient Background */}
-        <div className="absolute inset-0" style={{
-          background: 'linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF7700 50%, #FF5722 75%, #FF8800 100%)'
+      {/* Dynamic Orange Background with Spectacular Effects */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        {/* Primary Animated Gradient Background */}
+        <div className="absolute inset-0 animate-gradient-shift" style={{
+          background: 'linear-gradient(135deg, #FF4500 0%, #FF6600 20%, #FF8800 40%, #FF5722 60%, #FF7700 80%, #FF9900 100%)',
+          backgroundSize: '400% 400%'
         }}></div>
         
-        {/* Animated Gradient Overlay */}
-        <div className="absolute inset-0 opacity-30" style={{
-          background: 'linear-gradient(45deg, transparent 0%, rgba(255, 165, 0, 0.3) 25%, transparent 50%, rgba(255, 140, 0, 0.2) 75%, transparent 100%)',
-          animation: 'gradientShift 8s ease-in-out infinite'
+        {/* Multiple Moving Gradient Overlays */}
+        <div className="absolute inset-0 opacity-40 animate-gradient-x" style={{
+          background: 'linear-gradient(45deg, transparent 0%, rgba(255, 165, 0, 0.6) 25%, transparent 50%, rgba(255, 140, 0, 0.4) 75%, transparent 100%)',
+          backgroundSize: '200% 200%'
         }}></div>
         
-        {/* Floating Geometric Shapes */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Large Circle */}
-          <div className="absolute -top-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float"></div>
-          {/* Medium Circle */}
-          <div className="absolute top-1/2 -left-32 w-64 h-64 bg-orange-300/10 rounded-full blur-2xl animate-float" style={{animationDelay: '2s'}}></div>
-          {/* Small Circles */}
-          <div className="absolute bottom-20 right-1/4 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float" style={{animationDelay: '4s'}}></div>
-          <div className="absolute top-1/4 left-1/3 w-24 h-24 bg-orange-200/15 rounded-full blur-lg animate-float" style={{animationDelay: '6s'}}></div>
+        <div className="absolute inset-0 opacity-20 animate-gradient-y" style={{
+          background: 'linear-gradient(-45deg, rgba(255, 99, 71, 0.3) 0%, transparent 30%, rgba(255, 165, 0, 0.5) 70%, transparent 100%)',
+          backgroundSize: '300% 300%'
+        }}></div>
+        
+        {/* Spectacular Floating Elements */}
+        <div className="absolute inset-0">
+          {/* Giant Moving Orbs */}
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-yellow-300/20 to-orange-400/10 rounded-full blur-3xl animate-mega-float shadow-2xl"></div>
+          <div className="absolute top-1/3 -left-48 w-80 h-80 bg-gradient-to-tr from-red-400/15 to-orange-300/20 rounded-full blur-2xl animate-mega-float-reverse shadow-xl" style={{animationDelay: '3s'}}></div>
+          <div className="absolute bottom-20 right-1/3 w-64 h-64 bg-gradient-to-bl from-orange-200/25 to-yellow-400/15 rounded-full blur-xl animate-pulse-glow" style={{animationDelay: '1.5s'}}></div>
+          
+          {/* Medium Floating Shapes */}
+          <div className="absolute top-20 right-1/4 w-40 h-40 bg-white/15 rounded-full blur-lg animate-bounce-slow"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-32 h-32 bg-orange-300/20 rounded-full blur-md animate-sway" style={{animationDelay: '4s'}}></div>
+          <div className="absolute top-2/3 right-1/6 w-28 h-28 bg-yellow-200/25 rounded-full blur-sm animate-drift" style={{animationDelay: '2s'}}></div>
+          
+          {/* Small Sparkle Effects */}
+          <div className="absolute top-1/4 left-1/2 w-4 h-4 bg-white rounded-full animate-twinkle opacity-80"></div>
+          <div className="absolute top-3/4 left-1/3 w-3 h-3 bg-yellow-300 rounded-full animate-twinkle opacity-60" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-orange-200 rounded-full animate-twinkle opacity-70" style={{animationDelay: '2.5s'}}></div>
         </div>
         
-        {/* Subtle Pattern Overlay */}
-        <div className="absolute inset-0" style={{
+        {/* Dynamic Pattern Overlay */}
+        <div className="absolute inset-0 animate-pattern-drift" style={{
           backgroundImage: `
-            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+            radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+            radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.05) 50%, transparent 52%)
           `,
-          backgroundSize: '50px 50px, 30px 30px'
+          backgroundSize: '80px 80px, 40px 40px, 20px 20px'
         }}></div>
+        
+        {/* Pulsing Light Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-1 h-32 bg-gradient-to-b from-white/60 to-transparent animate-pulse-slow"></div>
+          <div className="absolute bottom-20 right-20 w-32 h-1 bg-gradient-to-r from-white/60 to-transparent animate-pulse-slow" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/4 w-1 h-24 bg-gradient-to-t from-orange-200/80 to-transparent animate-pulse-slow" style={{animationDelay: '2s'}}></div>
+        </div>
       </div>
       {/* Floating Components */}
       <ChatBot />
