@@ -132,72 +132,72 @@ const Index = () => {
           <div className="relative z-10 text-center space-y-8">
             <AnimatedSection animation="fade-up">
               {/* Badge maior */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-5 py-3 rounded-full font-bold shadow-lg text-base mb-6">
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm mb-4">
                 <Star className="w-4 h-4 mr-2" />
                 Internet + TV Grátis
               </div>
 
               {/* Title maior no mobile */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <h1 className="font-black text-white leading-none" style={{
-                  fontSize: 'clamp(36px, 10vw, 56px)',
+                  fontSize: 'clamp(32px, 9vw, 48px)',
                   lineHeight: '0.95',
                   fontWeight: '800',
-                  textShadow: '3px 3px 12px rgba(0,0,0,0.5)'
+                  textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
                 }}>
                   Internet + SaraivaTV
                 </h1>
                 
                 {/* Subtitle maior */}
                 <p className="text-white/95 font-semibold max-w-[56ch] mx-auto" style={{
-                  fontSize: 'clamp(18px, 5vw, 24px)',
-                  textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
+                  fontSize: 'clamp(16px, 4.5vw, 20px)',
+                  textShadow: '1px 1px 6px rgba(0,0,0,0.5)'
                 }}>
                   🚀 Internet ultrarrápida + App gratuito
                 </p>
               </div>
 
               {/* Carousel maior no mobile */}
-              <div className="w-full max-w-lg mx-auto mt-10" style={{aspectRatio: '14/9'}}>
-                <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl border-2 border-white/20">
+              <div className="w-full max-w-lg mx-auto mt-6" style={{aspectRatio: '14/9'}}>
+                <div className="w-full h-full rounded-2xl overflow-hidden border-2 border-white/20">
                   <HeroCarousel />
                 </div>
               </div>
 
               {/* Benefits Cards maiores */}
-              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto mt-16">
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
-                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto mt-12">
+                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-4 text-center border border-white/20 relative overflow-hidden">
+                  <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
                     <Wifi className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">Internet<br/>Rápida</div>
+                  <div className="text-white font-bold text-xs">Internet<br/>Rápida</div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-5 text-center shadow-lg border border-white/20">
-                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-4 text-center border border-white/20 relative overflow-hidden">
+                  <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
                     <Tv className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">Aplicativo de<br/>TV</div>
+                  <div className="text-white font-bold text-xs">Aplicativo de<br/>TV</div>
                 </div>
-                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
-                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl p-4 text-center border border-white/20 relative overflow-hidden">
+                  <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
                     <Music className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">Rádios<br/>24h</div>
+                  <div className="text-white font-bold text-xs">Rádios<br/>24h</div>
                 </div>
-                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
-                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-4 text-center border border-white/20 relative overflow-hidden">
+                  <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
                     <Shield className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">Suporte<br/>VIP</div>
+                  <div className="text-white font-bold text-xs">Suporte<br/>VIP</div>
                 </div>
               </div>
 
               {/* CTA Button maior no mobile */}
-              <div className="mt-16">
+              <div className="mt-8">
                 <TouchButton 
                   onClick={handleWhatsAppClick}
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-10 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
-                  style={{height: '56px', fontSize: '20px'}}
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-8 rounded-full hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
+                  style={{height: '48px', fontSize: '18px'}}
                 >
                   🚀 Contratar Agora
                 </TouchButton>
