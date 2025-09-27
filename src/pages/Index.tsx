@@ -157,7 +157,7 @@ const Index = () => {
       <ChatBot />
       
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-primary to-accent shadow-xl px-4 py-2 border-b-4 border-primary/20 z-50">
+      <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-orange-500 to-orange-600 shadow-xl px-4 py-2 border-b-4 border-orange-500/20 z-50">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between">
@@ -213,7 +213,7 @@ const Index = () => {
       <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center">
         
         {/* Overlay minimalista */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/15 opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-red-500/5 to-purple-600/10 opacity-60"></div>
         
         {/* Mobile Version */}
         <div className="md:hidden w-full px-4 py-16">
