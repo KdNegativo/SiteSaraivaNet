@@ -372,8 +372,34 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Fundo suavizado e mais elegante */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{background: 'linear-gradient(135deg, #ff5722 0%, #ff6600 20%, #ff7700 40%, #ff8800 60%, #ff9900 80%, #ffaa00 100%)'}}>
+      {/* Hero Section - Fundo Premium Ultra Moderno */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{
+        background: `
+          linear-gradient(135deg, 
+            #FF8C00 0%,
+            #FF7F50 8%,
+            #FF6B35 16%,
+            #F7931E 24%,
+            #FF8C00 32%,
+            #FFA500 40%,
+            #FF7F00 48%,
+            #FF6347 56%,
+            #FF5722 64%,
+            #FF6B35 72%,
+            #F7931E 80%,
+            #FF8C00 88%,
+            #FFA500 96%,
+            #FFB84D 100%
+          ),
+          radial-gradient(ellipse 70% 40% at 30% 20%, rgba(255, 215, 0, 0.3) 0%, transparent 70%),
+          radial-gradient(ellipse 80% 60% at 80% 70%, rgba(255, 140, 0, 0.25) 0%, transparent 60%),
+          radial-gradient(ellipse 60% 50% at 10% 80%, rgba(247, 147, 30, 0.2) 0%, transparent 50%),
+          linear-gradient(45deg, rgba(255, 165, 0, 0.1) 0%, rgba(255, 140, 0, 0.05) 50%, rgba(255, 107, 53, 0.1) 100%)
+        `,
+        backgroundSize: '300% 300%, 600px 400px, 800px 600px, 500px 300px, 100% 100%',
+        backgroundPosition: '0% 50%, 30% 20%, 80% 70%, 10% 80%, 0% 0%',
+        animation: 'premium-bg-flow 20s ease-in-out infinite'
+      }}>
         
         {/* Fundo suavizado com padrões mais sutis */}
         <div className="absolute inset-0" style={{
