@@ -47,15 +47,411 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{
-      background: 'linear-gradient(135deg, #FF8C00 0%, #FF7F50 25%, #FF6B35 50%, #F7931E 75%, #FFA500 100%)',
-    }}>
-      
-      {/* Overlay simples para profundidade */}
-      <div className="absolute inset-0" style={{
-        background: 'radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.1) 0%, transparent 50%)',
-      }}></div>
-      
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Fundo Ultra Premium - Complexo e Sofisticado */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        {/* Base Gradiente Multicamadas Ultra Premium */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: `
+              radial-gradient(ellipse 100% 80% at 0% 0%, #FF6B35 0%, transparent 50%),
+              radial-gradient(ellipse 80% 100% at 100% 0%, #F7931E 0%, transparent 50%),
+              radial-gradient(ellipse 120% 90% at 50% 100%, #FF8C00 0%, transparent 60%),
+              linear-gradient(135deg, #FF4500 0%, #FF6347 15%, #FF7F50 30%, #FF8C00 45%, #FFA500 60%, #FFB84D 75%, #FF6B35 90%, #F7931E 100%),
+              linear-gradient(45deg, rgba(255, 140, 0, 0.3) 0%, rgba(255, 107, 53, 0.2) 25%, rgba(247, 147, 30, 0.3) 50%, rgba(255, 165, 0, 0.2) 75%, rgba(255, 184, 77, 0.3) 100%),
+              conic-gradient(from 0deg at 30% 70%, #FF8C00 0deg, #F7931E 60deg, #FF6B35 120deg, #FFA500 180deg, #FF7F50 240deg, #FFB84D 300deg, #FF8C00 360deg)
+            `,
+            backgroundSize: '200% 150%, 180% 160%, 220% 140%, 400% 400%, 300% 300%, 250% 250%',
+            animation: 'ultra-complex-flow 25s ease-in-out infinite'
+          }}
+        ></div>
+
+        {/* Malha Tecnológica 3D */}
+        <div className="absolute inset-0">
+          <svg className="w-full h-full opacity-15" style={{animation: 'mesh-rotate 30s linear infinite'}}>
+            <defs>
+              <pattern id="techGrid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                <path d="M 100 0 L 0 0 0 100" fill="none" stroke="url(#gridGradient)" strokeWidth="1"/>
+                <circle cx="0" cy="0" r="2" fill="url(#nodeGradient)"/>
+                <circle cx="100" cy="0" r="2" fill="url(#nodeGradient)"/>
+                <circle cx="0" cy="100" r="2" fill="url(#nodeGradient)"/>
+              </pattern>
+              <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="rgba(255, 140, 0, 0.8)" />
+                <stop offset="50%" stopColor="rgba(255, 107, 53, 0.6)" />
+                <stop offset="100%" stopColor="rgba(247, 147, 30, 0.8)" />
+              </linearGradient>
+              <radialGradient id="nodeGradient">
+                <stop offset="0%" stopColor="rgba(255, 255, 255, 0.9)" />
+                <stop offset="100%" stopColor="rgba(255, 140, 0, 0.7)" />
+              </radialGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#techGrid)" />
+          </svg>
+        </div>
+
+        {/* Ondas Fluidas Complexas */}
+        <div className="absolute inset-0">
+          <svg className="w-full h-full opacity-25" preserveAspectRatio="none" viewBox="0 0 1200 800">
+            <defs>
+              <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(255, 140, 0, 0.8)" />
+                <stop offset="50%" stopColor="rgba(255, 107, 53, 0.6)" />
+                <stop offset="100%" stopColor="rgba(247, 147, 30, 0.8)" />
+              </linearGradient>
+              <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(247, 147, 30, 0.7)" />
+                <stop offset="50%" stopColor="rgba(255, 165, 0, 0.5)" />
+                <stop offset="100%" stopColor="rgba(255, 184, 77, 0.7)" />
+              </linearGradient>
+            </defs>
+            
+            <path d="M0,400 Q300,200 600,350 T1200,300 L1200,800 L0,800 Z" 
+                  fill="url(#waveGrad1)" 
+                  style={{animation: 'wave-flow-1 20s ease-in-out infinite'}} />
+            <path d="M0,500 Q400,300 800,450 T1200,400 L1200,800 L0,800 Z" 
+                  fill="url(#waveGrad2)" 
+                  style={{animation: 'wave-flow-2 25s ease-in-out infinite reverse'}} />
+            <path d="M0,300 Q200,100 400,250 Q600,150 800,300 Q1000,200 1200,350 L1200,800 L0,800 Z" 
+                  fill="url(#waveGrad1)" 
+                  opacity="0.4"
+                  style={{animation: 'wave-flow-3 18s ease-in-out infinite'}} />
+          </svg>
+        </div>
+
+        {/* Formas Geométricas 3D Flutuantes */}
+        <div className="absolute inset-0">
+          {/* Hexágonos */}
+          <div className="absolute top-20 left-20 w-24 h-24 opacity-20"
+               style={{
+                 background: 'linear-gradient(135deg, rgba(255, 140, 0, 0.4) 0%, rgba(255, 107, 53, 0.2) 100%)',
+                 clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+                 animation: 'float-rotate-1 15s ease-in-out infinite',
+                 boxShadow: '0 0 30px rgba(255, 140, 0, 0.3)'
+               }}></div>
+          
+          {/* Triângulos */}
+          <div className="absolute top-1/3 right-32 w-20 h-20 opacity-25"
+               style={{
+                 background: 'linear-gradient(45deg, rgba(247, 147, 30, 0.5) 0%, rgba(255, 165, 0, 0.3) 100%)',
+                 clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+                 animation: 'float-rotate-2 12s ease-in-out infinite reverse',
+                 boxShadow: '0 0 25px rgba(247, 147, 30, 0.4)'
+               }}></div>
+          
+          {/* Losangos */}
+          <div className="absolute bottom-1/4 left-1/3 w-16 h-16 opacity-30"
+               style={{
+                 background: 'linear-gradient(135deg, rgba(255, 184, 77, 0.6) 0%, rgba(255, 140, 0, 0.4) 100%)',
+                 clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+                 animation: 'float-rotate-3 18s ease-in-out infinite',
+                 boxShadow: '0 0 20px rgba(255, 184, 77, 0.5)'
+               }}></div>
+          
+          {/* Círculos com Gradientes */}
+          <div className="absolute top-1/2 left-1/4 w-32 h-32 rounded-full opacity-15"
+               style={{
+                 background: 'radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 140, 0, 0.4) 40%, transparent 70%)',
+                 animation: 'pulse-glow-complex 10s ease-in-out infinite',
+                 boxShadow: '0 0 40px rgba(255, 140, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.2)'
+               }}></div>
+          
+          <div className="absolute bottom-1/3 right-1/4 w-28 h-28 rounded-full opacity-20"
+               style={{
+                 background: 'radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.4) 0%, rgba(247, 147, 30, 0.5) 30%, transparent 60%)',
+                 animation: 'pulse-glow-complex 14s ease-in-out infinite',
+                 animationDelay: '3s',
+                 boxShadow: '0 0 35px rgba(247, 147, 30, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.3)'
+               }}></div>
+        </div>
+
+        {/* Camadas de Profundidade Premium */}
+        <div 
+          className="absolute inset-0 opacity-50"
+          style={{
+            background: `
+              radial-gradient(ellipse 120% 80% at 25% 15%, rgba(255, 140, 0, 0.3) 0%, transparent 70%),
+              radial-gradient(ellipse 100% 60% at 75% 85%, rgba(255, 107, 53, 0.25) 0%, transparent 60%),
+              radial-gradient(ellipse 80% 100% at 15% 75%, rgba(247, 147, 30, 0.3) 0%, transparent 65%),
+              radial-gradient(ellipse 90% 70% at 85% 25%, rgba(255, 165, 0, 0.2) 0%, transparent 55%)
+            `,
+            animation: 'float-tech 18s ease-in-out infinite'
+          }}
+        ></div>
+
+        {/* Efeitos Geométricos Modernos */}
+        <div className="absolute inset-0 opacity-20">
+          <div 
+            className="absolute top-10 left-10 w-32 h-32 border border-orange-300/30 rounded-full"
+            style={{
+              background: 'radial-gradient(circle, rgba(255, 140, 0, 0.1) 0%, transparent 70%)',
+              animation: 'float-tech 12s ease-in-out infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute top-1/3 right-20 w-24 h-24 border border-orange-400/40 rotate-45"
+            style={{
+              background: 'linear-gradient(45deg, rgba(255, 107, 53, 0.15) 0%, transparent 100%)',
+              animation: 'float-tech 14s ease-in-out infinite reverse'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-1/4 left-1/3 w-20 h-20 border border-orange-200/35 rounded-lg rotate-12"
+            style={{
+              background: 'linear-gradient(135deg, rgba(247, 147, 30, 0.1) 0%, transparent 100%)',
+              animation: 'float-tech 16s ease-in-out infinite'
+            }}
+          ></div>
+        </div>
+
+        {/* Linhas de Energia Premium */}
+        <div className="absolute inset-0">
+          {/* Linha Principal Horizontal Premium */}
+          <div 
+            className="absolute top-1/4 left-0 w-full h-1 opacity-60"
+            style={{
+              background: 'linear-gradient(90deg, transparent 0%, rgba(255, 140, 0, 0.8) 20%, rgba(255, 107, 53, 0.9) 50%, rgba(247, 147, 30, 0.8) 80%, transparent 100%)',
+              boxShadow: '0 0 10px rgba(255, 140, 0, 0.5), 0 0 20px rgba(255, 107, 53, 0.3)',
+              animation: 'data-flow 10s linear infinite'
+            }}
+          ></div>
+          
+          {/* Linha Diagonal Superior Premium */}
+          <div 
+            className="absolute top-0 left-0 w-full h-0.5 opacity-50 rotate-12 origin-left"
+            style={{
+              background: 'linear-gradient(90deg, transparent 0%, rgba(247, 147, 30, 0.7) 30%, rgba(255, 165, 0, 0.8) 70%, transparent 100%)',
+              boxShadow: '0 0 8px rgba(247, 147, 30, 0.4)',
+              animation: 'data-flow 12s linear infinite reverse'
+            }}
+          ></div>
+          
+          {/* Linha Vertical Premium */}
+          <div 
+            className="absolute top-0 left-2/3 w-1 h-full opacity-40"
+            style={{
+              background: 'linear-gradient(180deg, transparent 0%, rgba(255, 107, 53, 0.8) 30%, rgba(255, 140, 0, 0.9) 60%, transparent 100%)',
+              boxShadow: '0 0 6px rgba(255, 107, 53, 0.5)',
+              animation: 'data-flow-vertical 14s linear infinite'
+            }}
+          ></div>
+
+          {/* Rede Neural Premium */}
+          <div className="absolute inset-0">
+            <svg className="w-full h-full opacity-30" style={{animation: 'network-pulse 25s ease-in-out infinite'}}>
+              <defs>
+                <linearGradient id="premiumNetworkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FF8C00" stopOpacity="0.8"/>
+                  <stop offset="30%" stopColor="#FF6B35" stopOpacity="0.6"/>
+                  <stop offset="70%" stopColor="#F7931E" stopOpacity="0.7"/>
+                  <stop offset="100%" stopColor="#FFA500" stopOpacity="0.8"/>
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge> 
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              
+              <path 
+                d="M 100 200 Q 300 100 500 300 T 900 200" 
+                stroke="url(#premiumNetworkGrad)" 
+                strokeWidth="2" 
+                fill="none"
+                filter="url(#glow)"
+                style={{animation: 'path-draw 18s ease-in-out infinite'}}
+              />
+              <path 
+                d="M 200 400 Q 400 200 600 500 T 1000 400" 
+                stroke="url(#premiumNetworkGrad)" 
+                strokeWidth="1.5" 
+                fill="none"
+                filter="url(#glow)"
+                style={{animation: 'path-draw 22s ease-in-out infinite reverse'}}
+              />
+              <path 
+                d="M 0 300 Q 200 150 400 350 Q 600 250 800 400 Q 900 350 1200 300" 
+                stroke="url(#premiumNetworkGrad)" 
+                strokeWidth="1" 
+                fill="none"
+                filter="url(#glow)"
+                style={{animation: 'path-draw 20s ease-in-out infinite'}}
+              />
+            </svg>
+          </div>
+        </div>
+
+        {/* Sistema de Partículas Ultra Premium */}
+        <div className="absolute inset-0">
+          {/* Partículas Principais com Trilhas */}
+          <div className="absolute top-16 right-1/5 w-4 h-4 opacity-90"
+               style={{
+                 background: 'radial-gradient(circle, #ffffff 0%, #FF8C00 30%, #F7931E 60%, transparent 100%)',
+                 borderRadius: '50%',
+                 boxShadow: `
+                   0 0 20px #FF8C00,
+                   0 0 40px #F7931E,
+                   0 0 60px rgba(255, 140, 0, 0.4),
+                   0 0 80px rgba(247, 147, 30, 0.2)
+                 `,
+                 animation: 'particle-dance-1 20s ease-in-out infinite'
+               }}>
+               <div className="absolute inset-0 rounded-full"
+                    style={{
+                      background: 'conic-gradient(from 0deg, transparent, #FF8C00, transparent, #F7931E, transparent)',
+                      animation: 'spin 4s linear infinite'
+                    }}></div>
+          </div>
+          
+          <div className="absolute top-1/2 left-1/6 w-3 h-3 opacity-85"
+               style={{
+                 background: 'radial-gradient(circle, #ffffff 0%, #F7931E 40%, #FFA500 70%, transparent 100%)',
+                 borderRadius: '50%',
+                 boxShadow: `
+                   0 0 15px #F7931E,
+                   0 0 30px #FFA500,
+                   0 0 45px rgba(247, 147, 30, 0.5)
+                 `,
+                 animation: 'particle-dance-2 25s ease-in-out infinite'
+               }}>
+               <div className="absolute inset-0 rounded-full"
+                    style={{
+                      background: 'conic-gradient(from 180deg, transparent, #F7931E, transparent, #FFA500, transparent)',
+                      animation: 'spin 6s linear infinite reverse'
+                    }}></div>
+          </div>
+          
+          <div className="absolute bottom-1/4 right-1/3 w-5 h-5 opacity-95"
+               style={{
+                 background: 'radial-gradient(circle, #ffffff 0%, #FFB84D 25%, #FF8C00 50%, #F7931E 75%, transparent 100%)',
+                 borderRadius: '50%',
+                 boxShadow: `
+                   0 0 25px #FFB84D,
+                   0 0 50px #FF8C00,
+                   0 0 75px rgba(255, 184, 77, 0.4),
+                   0 0 100px rgba(255, 140, 0, 0.2)
+                 `,
+                 animation: 'particle-dance-3 18s ease-in-out infinite'
+               }}>
+               <div className="absolute inset-0 rounded-full"
+                    style={{
+                      background: 'conic-gradient(from 90deg, transparent, #FFB84D, transparent, #FF8C00, transparent)',
+                      animation: 'spin 3s linear infinite'
+                    }}></div>
+          </div>
+
+          {/* Constelação de Micro Partículas */}
+          {Array.from({length: 15}).map((_, i) => (
+            <div key={i} 
+                 className="absolute w-1 h-1 rounded-full opacity-70"
+                 style={{
+                   top: `${Math.random() * 100}%`,
+                   left: `${Math.random() * 100}%`,
+                   background: `radial-gradient(circle, #ffffff 0%, ${['#FF8C00', '#F7931E', '#FFA500', '#FFB84D'][i % 4]} 100%)`,
+                   boxShadow: `0 0 ${5 + Math.random() * 10}px ${['#FF8C00', '#F7931E', '#FFA500', '#FFB84D'][i % 4]}`,
+                   animation: `twinkle-dance ${8 + Math.random() * 6}s ease-in-out infinite`,
+                   animationDelay: `${Math.random() * 5}s`
+                 }}></div>
+          ))}
+        </div>
+
+        {/* Feixes de Luz Laser */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-1 h-full opacity-40 origin-top"
+               style={{
+                 background: 'linear-gradient(180deg, rgba(255, 140, 0, 0.8) 0%, rgba(247, 147, 30, 0.6) 50%, transparent 100%)',
+                 transform: 'rotate(15deg)',
+                 boxShadow: '0 0 10px rgba(255, 140, 0, 0.6), 0 0 20px rgba(247, 147, 30, 0.4)',
+                 animation: 'laser-sweep-1 12s ease-in-out infinite'
+               }}></div>
+          
+          <div className="absolute top-0 right-1/3 w-0.5 h-full opacity-35 origin-top"
+               style={{
+                 background: 'linear-gradient(180deg, rgba(247, 147, 30, 0.7) 0%, rgba(255, 165, 0, 0.5) 50%, transparent 100%)',
+                 transform: 'rotate(-20deg)',
+                 boxShadow: '0 0 8px rgba(247, 147, 30, 0.5)',
+                 animation: 'laser-sweep-2 15s ease-in-out infinite reverse'
+               }}></div>
+        </div>
+
+        {/* Textura Holográfica */}
+        <div className="absolute inset-0 opacity-10"
+             style={{
+               backgroundImage: `
+                 repeating-linear-gradient(
+                   45deg,
+                   transparent,
+                   transparent 2px,
+                   rgba(255, 255, 255, 0.1) 2px,
+                   rgba(255, 255, 255, 0.1) 4px
+                 ),
+                 repeating-linear-gradient(
+                   -45deg,
+                   transparent,
+                   transparent 3px,
+                   rgba(255, 140, 0, 0.1) 3px,
+                   rgba(255, 140, 0, 0.1) 6px
+                 )
+               `,
+               backgroundSize: '50px 50px, 70px 70px',
+               animation: 'holographic-shift 20s linear infinite'
+             }}></div>
+
+        {/* Nós de Rede */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute top-1/5 left-1/5 w-4 h-4 rounded-full border border-orange-400 opacity-50"
+            style={{
+              background: 'radial-gradient(circle, rgba(255, 102, 0, 0.3) 0%, transparent 100%)',
+              animation: 'node-pulse 6s ease-in-out infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute top-3/5 right-1/4 w-3 h-3 rounded-full border border-pink-400 opacity-40"
+            style={{
+              background: 'radial-gradient(circle, rgba(233, 30, 99, 0.3) 0%, transparent 100%)',
+              animation: 'node-pulse 8s ease-in-out infinite',
+              animationDelay: '2s'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full border border-purple-400 opacity-60"
+            style={{
+              background: 'radial-gradient(circle, rgba(156, 39, 176, 0.3) 0%, transparent 100%)',
+              animation: 'node-pulse 7s ease-in-out infinite',
+              animationDelay: '4s'
+            }}
+          ></div>
+        </div>
+
+        {/* Overlay de Profundidade */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            background: `
+              radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
+              radial-gradient(ellipse 50% 80% at 0% 50%, rgba(0, 0, 0, 0.05) 0%, transparent 50%),
+              radial-gradient(ellipse 50% 80% at 100% 50%, rgba(0, 0, 0, 0.05) 0%, transparent 50%)
+            `
+          }}
+        ></div>
+
+        {/* Textura Tecnológica Sutil */}
+        <div 
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `
+              linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
+              linear-gradient(0deg, transparent 48%, rgba(255, 255, 255, 0.05) 49%, rgba(255, 255, 255, 0.05) 51%, transparent 52%)
+            `,
+            backgroundSize: '50px 50px',
+            animation: 'tech-grid 25s linear infinite'
+          }}
+        ></div>
+      </div>
       {/* Floating Components */}
       <ChatBot />
       
@@ -141,6 +537,17 @@ const Index = () => {
         animation: 'premium-bg-flow 20s ease-in-out infinite'
       }}>
         
+        {/* Fundo suavizado com padrões mais sutis */}
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.06) 0%, transparent 60%),
+            radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+            radial-gradient(circle at 50% 20%, rgba(255, 165, 0, 0.08) 0%, transparent 70%),
+            radial-gradient(circle at 30% 80%, rgba(255, 140, 0, 0.05) 0%, transparent 60%)
+          `,
+          backgroundSize: '800px 800px, 1000px 1000px, 600px 600px, 500px 500px'
+        }}></div>
+        
         {/* Mobile Version */}
         <div className="md:hidden w-full px-4 py-16">
           <div className="relative z-10 text-center space-y-8">
@@ -210,612 +617,758 @@ const Index = () => {
               <div className="mt-8">
                 <TouchButton 
                   onClick={handleWhatsAppClick}
-                  className="group relative bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-all duration-300 transform hover:scale-105 w-full max-w-sm mx-auto flex items-center justify-center gap-3 animate-pulse"
-                  style={{
-                    boxShadow: '0 10px 30px rgba(34, 197, 94, 0.4)',
-                    textShadow: '1px 1px 3px rgba(0,0,0,0.5)'
-                  }}
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-8 rounded-full hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
+                  style={{height: '48px', fontSize: '18px'}}
                 >
-                  <span className="text-xl">📱</span>
-                  Contratar Agora
-                  <Zap className="w-6 h-6 text-yellow-300 animate-bounce" />
+                  🚀 Contratar Agora
                 </TouchButton>
               </div>
             </AnimatedSection>
           </div>
         </div>
 
-        {/* Desktop Version */}
-        <div className="hidden md:flex items-center w-full px-8 pt-20 pb-12">
-          <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            {/* Left Content */}
-            <AnimatedSection animation="slide-left">
-              <div className="space-y-8">
-                {/* Badge */}
-                <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-6 py-3 rounded-full font-bold text-base shadow-lg">
-                  <Star className="w-5 h-5 mr-2" />
-                  Internet + TV Grátis
-                </div>
+        {/* Desktop Version - Layout 2 colunas */}
+        <div className="hidden md:block w-full">
+          <div className="max-w-[1480px] mx-auto px-6" style={{paddingTop: '80px', paddingBottom: '80px'}}>
+            <div className="flex items-center" style={{gap: '60px'}}>
+              
+              {/* Left Column - Textos/CTAs */}
+              <div className="flex-1 space-y-8 pr-8">
+                <AnimatedSection animation="fade-up">
+                  {/* Badge pequeno acima do H1 */}
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-6 py-3 rounded-full font-bold shadow-lg text-base mb-6">
+                    <Star className="w-4 h-4 mr-2" />
+                    Internet + TV Grátis
+                  </div>
+                  
+                  {/* Title bem maior */}
+                  <div className="space-y-6">
+                    <h1 className="text-white leading-none max-w-[56ch]" style={{
+                      fontSize: 'clamp(56px, 7.5vw, 96px)',
+                      fontWeight: '800',
+                      lineHeight: '0.95',
+                      textShadow: '4px 4px 16px rgba(0,0,0,0.7)'
+                    }}>
+                      Internet + SaraivaTV
+                    </h1>
+                    
+                    {/* Subtitle maior */}
+                    <p className="text-white/95 font-semibold max-w-[56ch]" style={{
+                      fontSize: 'clamp(22px, 2.2vw, 28px)',
+                      textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
+                    }}>
+                      🚀 Internet ultrarrápida + App gratuito
+                    </p>
+                  </div>
 
-                {/* Main Title */}
-                <div className="space-y-4">
-                  <h1 className="text-6xl xl:text-7xl font-black text-white leading-tight" style={{
-                    textShadow: '3px 3px 12px rgba(0,0,0,0.8)',
-                    fontFamily: 'Poppins, sans-serif'
-                  }}>
-                    Internet +<br />
-                    <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
-                      SaraivaTV
-                    </span>
-                  </h1>
-                  <p className="text-xl text-white/95 font-semibold max-w-lg" style={{
-                    textShadow: '2px 2px 8px rgba(0,0,0,0.7)'
-                  }}>
-                    🚀 Internet ultrarrápida com aplicativo de TV gratuito para toda família!
-                  </p>
-                </div>
+                  {/* CTA Button maior e mais destacado */}
+                  <div className="mt-12 pt-6">
+                    <TouchButton 
+                      onClick={handleWhatsAppClick}
+                      className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-12 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
+                      style={{
+                        height: '68px',
+                        fontSize: '24px',
+                        boxShadow: '0 20px 40px rgba(0,0,0,0.4), 0 10px 20px rgba(255,165,0,0.5), inset 0 3px 0 rgba(255,255,255,0.8)'
+                      }}
+                    >
+                      🚀 Contratar Agora
+                    </TouchButton>
+                  </div>
+                </AnimatedSection>
+              </div>
 
-                {/* Desktop CTA */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <TouchButton 
-                    onClick={handleWhatsAppClick}
-                    className="group relative bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
+              {/* Right Column - Carrossel maior */}
+              <div className="w-[720px] flex-shrink-0">
+                <AnimatedSection animation="slide-right">
+                  <div 
+                    className="w-full rounded-3xl overflow-hidden shadow-2xl border-3 border-white/25 bg-gradient-to-br from-white/8 to-orange-200/15 backdrop-blur-sm max-w-full" 
                     style={{
-                      boxShadow: '0 10px 30px rgba(34, 197, 94, 0.4)',
-                      textShadow: '1px 1px 3px rgba(0,0,0,0.5)'
+                      aspectRatio: '14/9',
+                      boxShadow: '0 25px 50px rgba(0,0,0,0.3), 0 12px 25px rgba(255,102,0,0.25)'
                     }}
                   >
-                    <span className="text-xl">📱</span>
-                    Contratar via WhatsApp
-                    <Zap className="w-5 h-5 text-yellow-300 group-hover:animate-bounce" />
-                  </TouchButton>
-                  
-                  <TouchButton 
-                    onClick={handlePhoneClick}
-                    className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 hover:border-white/60 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center gap-3 backdrop-blur-md"
-                    style={{textShadow: '1px 1px 3px rgba(0,0,0,0.5)'}}
-                  >
-                    <Phone className="w-5 h-5" />
-                    (89) 99439-5789
-                  </TouchButton>
-                </div>
+                    <HeroCarousel />
+                  </div>
+                </AnimatedSection>
               </div>
-            </AnimatedSection>
+            </div>
 
-            {/* Right Content */}
-            <AnimatedSection animation="slide-right">
-              <div className="relative">
-                {/* Hero Image/Carousel */}
-                <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 shadow-2xl" style={{aspectRatio: '16/10'}}>
-                  <HeroCarousel />
-                </div>
-
-                {/* Floating Features */}
-                <div className="grid grid-cols-2 gap-4 mt-8">
-                  <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-6 text-center border border-white/20 hover:scale-105 transition-transform duration-300">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Wifi className="w-6 h-6 text-white" />
+            {/* Benefits Cards - 80% largura central */}
+            <div className="mt-16">
+              <AnimatedSection animation="fade-up">
+                <div className="w-4/5 mx-auto">
+                  <div className="grid grid-cols-4 gap-6">
+                    <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 h-32 border border-white/20 backdrop-blur-sm">
+                      <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <Wifi className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="text-white font-bold text-sm leading-tight">Internet<br/>Rápida</div>
                     </div>
-                    <h3 className="text-white font-bold text-lg mb-1">Internet</h3>
-                    <p className="text-white/80 text-sm">Ultra Rápida</p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-6 text-center border border-white/20 hover:scale-105 transition-transform duration-300">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Tv className="w-6 h-6 text-white" />
+                    <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 h-32 border border-white/20 backdrop-blur-sm">
+                      <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <Tv className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="text-white font-bold text-sm leading-tight">Aplicativo de<br/>TV</div>
                     </div>
-                    <h3 className="text-white font-bold text-lg mb-1">SaraivaTV</h3>
-                    <p className="text-white/80 text-sm">App Gratuito</p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-6 text-center border border-white/20 hover:scale-105 transition-transform duration-300">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Music className="w-6 h-6 text-white" />
+                    <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 h-32 border border-white/20 backdrop-blur-sm">
+                      <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <Music className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="text-white font-bold text-sm leading-tight">Rádios<br/>24h</div>
                     </div>
-                    <h3 className="text-white font-bold text-lg mb-1">Rádios</h3>
-                    <p className="text-white/80 text-sm">24h Online</p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-6 text-center border border-white/20 hover:scale-105 transition-transform duration-300">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Shield className="w-6 h-6 text-white" />
+                    <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all duration-300 h-32 border border-white/20 backdrop-blur-sm">
+                      <div className="w-8 h-8 bg-white/30 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <Shield className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="text-white font-bold text-sm leading-tight">Suporte<br/>VIP</div>
                     </div>
-                    <h3 className="text-white font-bold text-lg mb-1">Suporte</h3>
-                    <p className="text-white/80 text-sm">VIP 24/7</p>
                   </div>
                 </div>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <AnimatedSection animation="fade-up">
-        <section className="py-16 bg-white/95 backdrop-blur-xl">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <StatsCounter endValue={500} label="Clientes Ativos" />
-              </div>
-              <div className="text-center">
-                <StatsCounter endValue={99} label="Uptime" suffix="%" />
-              </div>
-              <div className="text-center">
-                <StatsCounter endValue={24} label="Suporte" suffix="h" />
-              </div>
-              <div className="text-center">
-                <StatsCounter endValue={5} label="Anos no Mercado" />
+      <section className="relative py-12 px-4">
+        {/* Dynamic Background for Stats */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(135deg, rgba(255, 102, 0, 0.95) 0%, rgba(255, 69, 0, 0.9) 50%, rgba(255, 119, 0, 0.85) 100%)'
+          }}></div>
+          {/* Animated Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 left-1/4 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute bottom-0 right-1/3 w-24 h-24 bg-orange-300/20 rounded-full blur-xl animate-bounce" style={{animationDuration: '3s'}}></div>
+          </div>
+        </div>
+        
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
+                <div className="text-white font-black text-3xl md:text-4xl mb-2 drop-shadow-lg">964+</div>
+                <div className="text-orange-100 font-semibold text-sm md:text-base">Clientes</div>
               </div>
             </div>
-          </div>
-        </section>
-      </AnimatedSection>
-
-      {/* Plans Section Mobile */}
-      <section id="planos" className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4">
-          <AnimatedSection animation="fade-up">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Planos de Internet + SaraivaTV
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Escolha o plano perfeito para sua família. Todos os planos incluem o aplicativo SaraivaTV gratuito!
-              </p>
+            
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
+                <div className="text-white font-black text-3xl md:text-4xl mb-2 drop-shadow-lg">95%</div>
+                <div className="text-orange-100 font-semibold text-sm md:text-base">Uptime</div>
+              </div>
             </div>
-          </AnimatedSection>
-
-          {/* Mobile Plans Carousel */}
-          <div className="md:hidden">
-            <MobilePlansCarousel />
-          </div>
-
-          {/* Desktop Plans Grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Plan 1 - Basic */}
-            <AnimatedSection animation="fade-up" delay={0}>
-              <Card className="relative overflow-hidden border-2 border-gray-200 hover:border-orange-400 transition-all duration-300 hover:shadow-xl group">
-                <div className="p-8">
-                  <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4">
-                      <Wifi className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Básico</h3>
-                    <div className="text-4xl font-black text-orange-600 mb-2">R$ 49</div>
-                    <p className="text-gray-500">por mês</p>
-                  </div>
-                  
-                  <div className="space-y-4 mb-8">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Internet 50MB</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">SaraivaTV Grátis</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Suporte 24h</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Instalação Grátis</span>
-                    </div>
-                  </div>
-                  
-                  <TouchButton 
-                    onClick={handleWhatsAppClick}
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 group-hover:scale-105"
-                  >
-                    Contratar Agora
-                  </TouchButton>
-                </div>
-              </Card>
-            </AnimatedSection>
-
-            {/* Plan 2 - Popular */}
-            <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="relative overflow-hidden border-2 border-orange-400 shadow-xl scale-105 bg-gradient-to-b from-orange-50 to-white">
-                <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-2 font-bold text-sm">
-                  MAIS POPULAR
-                </div>
-                <div className="p-8 pt-12">
-                  <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-4">
-                      <Zap className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Turbo</h3>
-                    <div className="text-4xl font-black text-orange-600 mb-2">R$ 79</div>
-                    <p className="text-gray-500">por mês</p>
-                  </div>
-                  
-                  <div className="space-y-4 mb-8">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Internet 100MB</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">SaraivaTV Premium</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Suporte Prioritário</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Instalação + Wi-Fi Grátis</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Técnico 24h</span>
-                    </div>
-                  </div>
-                  
-                  <TouchButton 
-                    onClick={handleWhatsAppClick}
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    Contratar Agora
-                  </TouchButton>
-                </div>
-              </Card>
-            </AnimatedSection>
-
-            {/* Plan 3 - Premium */}
-            <AnimatedSection animation="fade-up" delay={400}>
-              <Card className="relative overflow-hidden border-2 border-gray-200 hover:border-orange-400 transition-all duration-300 hover:shadow-xl group">
-                <div className="p-8">
-                  <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
-                      <Award className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
-                    <div className="text-4xl font-black text-orange-600 mb-2">R$ 129</div>
-                    <p className="text-gray-500">por mês</p>
-                  </div>
-                  
-                  <div className="space-y-4 mb-8">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Internet 200MB</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">SaraivaTV Premium+</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Suporte VIP</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Instalação Premium</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">Wi-Fi Mesh Grátis</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">IP Fixo Grátis</span>
-                    </div>
-                  </div>
-                  
-                  <TouchButton 
-                    onClick={handleWhatsAppClick}
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 group-hover:scale-105"
-                  >
-                    Contratar Agora
-                  </TouchButton>
-                </div>
-              </Card>
-            </AnimatedSection>
+            
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
+                <div className="text-white font-black text-3xl md:text-4xl mb-2 drop-shadow-lg">19+</div>
+                <div className="text-orange-100 font-semibold text-sm md:text-base">Canais</div>
+              </div>
+            </div>
+            
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white/15 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
+                <div className="text-white font-black text-3xl md:text-4xl mb-2 drop-shadow-lg">23h</div>
+                <div className="text-orange-100 font-semibold text-sm md:text-base">Online</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Coverage Section */}
-      <section id="cobertura" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      {/* Plans Section - Clean & Beautiful */}
+      <section id="planos" className="relative overflow-hidden pt-5 pb-20 px-4" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
+        
+        {/* Sophisticated Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-blue-500/8"></div>
+        
+        {/* Elegant Floating Elements */}
+        {!prefersReducedMotion && (
+          <div className="absolute inset-0">
+            <div className="absolute top-20 right-20 w-64 h-64 bg-orange-400/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s' }}></div>
+            <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-400/12 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '3s' }}></div>
+            <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-purple-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s', animationDelay: '6s' }}></div>
+          </div>
+        )}
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <AnimatedSection animation="fade-up">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Área de Cobertura
+            <div className="text-center mb-16">
+              {/* Simple Badge */}
+              <div className="inline-flex items-center bg-orange-500/90 text-white px-6 py-3 rounded-full text-lg font-bold mb-8 border border-orange-400">
+                <Award className="w-5 h-5 mr-3" />
+                <span>Plano Exclusivo</span>
+              </div>
+              
+              {/* Beautiful Title */}
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.8)'}}>
+                Internet + SaraivaTV
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Verificamos nossa cobertura em Eliseu Martins - PI e região. Nossa rede fibra óptica garante a melhor conexão para você!
+              <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
+                O plano completo que vai transformar sua experiência digital
               </p>
+              
+              {/* Special Offer */}
+              <div className="inline-flex items-center bg-green-500/90 text-white px-6 py-3 rounded-full font-bold text-lg">
+                🎉 Oferta especial: 3 meses com desconto!
+              </div>
             </div>
           </AnimatedSection>
 
-          <AnimatedSection animation="scale-in">
-            <div className="bg-gray-50 rounded-3xl p-8 max-w-4xl mx-auto">
+          {/* Beautiful Plan Card */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-2xl overflow-hidden border border-orange-500/30 hover:border-orange-500/50 hover:scale-102 transform transition-all duration-500 group">
+            
+            {/* Plan Header */}
+            <div className="bg-gradient-to-r from-orange-500 to-red-500 p-8 text-white text-center group-hover:from-orange-400 group-hover:to-red-400 transition-all duration-500">
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Wifi className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-3xl font-black mb-3" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>Plano Completo</h3>
+              <div className="text-5xl font-black mb-3" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>300MB</div>
+              <div className="text-xl opacity-95 font-medium">Fibra Óptica + SaraivaTV Grátis</div>
+            </div>
+
+            {/* Plan Content */}
+            <div className="p-8 lg:p-10">
+              <div className="grid lg:grid-cols-2 gap-10 items-center">
+                
+                {/* Pricing Section */}
+                <div className="text-center lg:text-left space-y-6">
+                  <div className="bg-slate-700/50 rounded-2xl p-6 border border-slate-600">
+                    <div className="text-lg text-slate-400 line-through mb-2">De R$ 169,90</div>
+                    <div className="text-5xl font-black text-orange-400 mb-2 group-hover:text-orange-300 transition-colors duration-300">
+                      R$ 129<span className="text-3xl">,90</span>
+                    </div>
+                    <div className="text-lg text-slate-300">por mês</div>
+                  </div>
+
+                  <div className="bg-green-900/50 p-6 rounded-2xl border border-green-700">
+                    <div className="text-green-300 font-bold mb-2 text-lg">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
+                    <div className="text-green-400 text-base">Promoção exclusiva para novos clientes</div>
+                  </div>
+
+                  <TouchButton 
+                    onClick={handleWhatsAppClick} 
+                    className="w-full lg:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-black py-4 px-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+                  >
+                    🚀 Contratar Agora
+                  </TouchButton>
+                </div>
+
+                {/* Features Section */}
+                <div className="space-y-6">
+                  <h4 className="text-2xl font-black text-white mb-6" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
+                    Tudo que você precisa:
+                  </h4>
+                  
+                  <div className="space-y-4">
+                    {[
+                      { icon: Wifi, text: "Internet 300MB fibra óptica ultrarrápida", color: "from-orange-500 to-red-500" },
+                      { icon: Tv, text: "App SaraivaTV Premium totalmente grátis", color: "from-blue-500 to-purple-500" },
+                      { icon: Smartphone, text: "Assista TV direto no seu celular", color: "from-green-500 to-emerald-500" },
+                      { icon: Music, text: "Rádios nacionais e locais incluídas", color: "from-purple-500 to-pink-500" },
+                      { icon: Shield, text: "Suporte técnico 24h todos os dias", color: "from-yellow-500 to-orange-500" },
+                      { icon: Zap, text: "Velocidade garantida por contrato", color: "from-cyan-500 to-blue-500" },
+                      { icon: CheckCircle, text: "Instalação profissional (taxa única R$ 149,90)", color: "from-emerald-500 to-green-500" },
+                      { icon: Heart, text: "Contrato de 12 meses", color: "from-pink-500 to-red-500" }
+                    ].map((feature, index) => (
+                      <div key={index} className="flex items-center space-x-4 p-4 bg-slate-700/30 rounded-xl border border-slate-600/50 hover:border-orange-400/50 hover:bg-slate-600/30 transition-all duration-300 hover:scale-105 transform">
+                        <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                          <feature.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="font-bold text-slate-100 text-lg">{feature.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <div className="bg-slate-800/80 backdrop-blur-sm rounded-3xl p-10 text-white shadow-xl border border-slate-700 hover:border-orange-500/30 transition-all duration-500 hover:scale-102">
+              <h3 className="text-3xl font-black mb-6" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+                🔥 Não Perca Esta Oportunidade!
+              </h3>
+              <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
+                Conecte-se com a melhor internet de Eliseu Martins e ganhe o SaraivaTV de presente.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <TouchButton 
+                onClick={handleWhatsAppClick} 
+                className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 font-black rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+              >
+                💬 WhatsApp
+              </TouchButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage Area - Simplified */}
+      <section id="cobertura" className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              🗺️ Nossa Área de Cobertura
+            </h2>
+            <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Levamos internet de fibra óptica de alta qualidade para toda a região sul do Piauí
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <h3 className="text-2xl font-bold mb-6">🏙️ Cidades Atendidas</h3>
+              <div className="space-y-4">
+                {["Eliseu Martins", "Colônia do Gurguéia", "Manoel Emídio", "Canavieira", "Jerumenha"].map((city, index) => (
+                  <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    <div className="font-semibold text-lg">{city}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
               <RealMap />
             </div>
-          </AnimatedSection>
+          </div>
+
+          <div className="text-center">
+            <TouchButton 
+              onClick={handleWhatsAppClick}
+              className="inline-flex items-center space-x-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <span>💬</span>
+              <span>Verificar Disponibilidade</span>
+            </TouchButton>
+          </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="sobre" className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <AnimatedSection animation="fade-up">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Sobre a SaraivaNet
-                </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                  Há 5 anos conectando famílias em Eliseu Martins com a melhor internet e entretenimento da região.
-                </p>
+      {/* SaraivaTV Features Section - ULTRA PREMIUM */}
+      <section className="py-16 px-4 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fff5f0 0%, #ffede0 30%, #ffe5d4 70%, #ffd4c4 100%)'}}>
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: `
+              radial-gradient(circle at 20% 20%, rgba(255,165,0,0.4) 2px, transparent 2px),
+              radial-gradient(circle at 80% 80%, rgba(255,100,0,0.3) 2px, transparent 2px),
+              linear-gradient(135deg, transparent 40%, rgba(255,165,0,0.1) 50%, transparent 60%)
+            `,
+            backgroundSize: '100px 100px, 80px 80px, 160px 160px'
+          }}></div>
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-orange-300/40 to-red-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-tr from-purple-300/30 to-orange-300/40 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center text-orange-600 text-sm font-bold mb-6">
+              <Tv className="w-4 h-4 mr-2" />
+              <span>App Exclusivo</span>
+            </div>
+            <h2 className="text-5xl font-black mb-6">
+              <span className="text-gray-800">Conheça o </span>
+              <span className="text-red-600">SaraivaTV</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
+              App gratuito que vem junto com sua internet. Assista TV direto no celular com qualidade HD!
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8 mb-16">
+            <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-200/20 to-transparent animate-shimmer"></div>
+              <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
+                <Tv className="w-12 h-12 text-orange-500" />
               </div>
-            </AnimatedSection>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <AnimatedSection animation="slide-left">
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                      <Users className="w-6 h-6 text-orange-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        Foco no Cliente
-                      </h3>
-                      <p className="text-gray-600">
-                        Mais de 500 famílias confiam na SaraivaNet para sua conexão diária. Nossa prioridade é sua satisfação.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-orange-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        Tecnologia Confiável
-                      </h3>
-                      <p className="text-gray-600">
-                        Rede 100% fibra óptica com 99% de uptime. Tecnologia de ponta para garantir sua conexão sempre estável.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                      <Heart className="w-6 h-6 text-orange-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        Compromisso Local
-                      </h3>
-                      <p className="text-gray-600">
-                        Empresa familiar nascida em Eliseu Martins. Conhecemos as necessidades da nossa comunidade.
-                      </p>
-                    </div>
-                  </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">Canais de TV</h3>
+              <p className="text-gray-600 mb-6 relative z-10 font-medium">
+                Assista os mesmos canais da sua TV direto no celular
+              </p>
+              <div className="space-y-2 relative z-10">
+                <span className="text-orange-600 text-sm font-bold">TV Aberta</span>
+                <span className="text-orange-600 text-sm font-bold ml-2">Canais Locais</span>
+                <div className="mt-2">
+                  <span className="text-orange-600 text-sm font-bold">Notícias</span>
+                  <span className="text-orange-600 text-sm font-bold ml-2">Esportes</span>
                 </div>
-              </AnimatedSection>
+              </div>
+            </Card>
 
-              <AnimatedSection animation="slide-right">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
-                    <div className="text-3xl font-bold text-orange-600 mb-2">500+</div>
-                    <div className="text-gray-600 font-medium">Clientes Ativos</div>
-                  </div>
-                  <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
-                    <div className="text-3xl font-bold text-orange-600 mb-2">99%</div>
-                    <div className="text-gray-600 font-medium">Uptime</div>
-                  </div>
-                  <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
-                    <div className="text-3xl font-bold text-orange-600 mb-2">24h</div>
-                    <div className="text-gray-600 font-medium">Suporte</div>
-                  </div>
-                  <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
-                    <div className="text-3xl font-bold text-orange-600 mb-2">5</div>
-                    <div className="text-gray-600 font-medium">Anos</div>
-                  </div>
+            <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-200/20 to-transparent animate-shimmer"></div>
+              <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
+                <Music className="w-12 h-12 text-green-500" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">Rádios Online</h3>
+              <p className="text-gray-600 mb-6 relative z-10 font-medium">
+                Escute suas rádios favoritas onde estiver
+              </p>
+              <div className="space-y-2 relative z-10">
+                <span className="text-green-600 text-sm font-bold">Rádios Locais</span>
+                <span className="text-green-600 text-sm font-bold ml-2">Música</span>
+                <div className="mt-2">
+                  <span className="text-green-600 text-sm font-bold">Notícias</span>
+                  <span className="text-green-600 text-sm font-bold ml-2">Esportes</span>
                 </div>
-              </AnimatedSection>
+              </div>
+            </Card>
+
+            <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-200/20 to-transparent animate-shimmer"></div>
+              <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
+                <Smartphone className="w-12 h-12 text-blue-500" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">No Seu Celular</h3>
+              <p className="text-gray-600 mb-6 relative z-10 font-medium">
+                App fácil de usar para Android e iOS
+              </p>
+              <div className="space-y-2 relative z-10">
+                <span className="text-blue-600 text-sm font-bold">Android</span>
+                <span className="text-blue-600 text-sm font-bold ml-2">iOS</span>
+                <div className="mt-2">
+                  <span className="text-blue-600 text-sm font-bold">Fácil de Usar</span>
+                  <span className="text-blue-600 text-sm font-bold ml-2">Gratuito</span>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="text-center p-8 relative overflow-hidden touch-manipulation">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-200/20 to-transparent animate-shimmer"></div>
+              <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6 relative z-10">
+                <Zap className="w-12 h-12 text-purple-500" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 relative z-10">Transmissão Ao Vivo</h3>
+              <p className="text-gray-600 mb-6 relative z-10 font-medium">
+                Tudo que passa na TV, passa no app em tempo real
+              </p>
+              <div className="space-y-2 relative z-10">
+                <span className="text-purple-600 text-sm font-bold">Ao Vivo</span>
+                <span className="text-purple-600 text-sm font-bold ml-2">Tempo Real</span>
+                <div className="mt-2">
+                  <span className="text-purple-600 text-sm font-bold">Sem Atraso</span>
+                  <span className="text-purple-600 text-sm font-bold ml-2">Qualidade HD</span>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <div className="glass-premium rounded-3xl p-16 text-white relative overflow-hidden shadow-2xl" style={{background: 'linear-gradient(135deg, #ff6600 0%, #ff4400 50%, #cc3300 100%)'}}>
+            <div className="absolute inset-0"></div>
+            <div className="relative z-10 text-center">
+              <h3 className="text-4xl font-bold mb-6 leading-tight" style={{
+                textShadow: '3px 3px 12px rgba(0,0,0,0.8)'
+              }}>
+                Pronto para ter Internet + SaraivaTV?
+              </h3>
+              <p className="text-xl mb-10 opacity-95 max-w-3xl mx-auto leading-relaxed font-medium">
+                Não perca tempo! Aproveite nossa oferta especial e ganhe o app SaraivaTV grátis.
+              </p>
+              <div className="flex justify-center">
+              <TouchButton onClick={handleWhatsAppClick} className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-5 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3">
+                <span className="text-2xl">💬</span>
+                Entrar em Contato
+              </TouchButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section - Simplified */}
+      <section className="py-16 px-4 bg-gradient-to-r from-orange-500 via-orange-600 to-purple-600">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-4">Números Que Falam Por Si</h2>
+          <p className="text-xl text-white/90 mb-12">
+            Resultados conquistados com dedicação e compromisso
+          </p>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-xl">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <StatsCounter endValue={1000} label="Famílias Conectadas" suffix="+" />
+            </div>
+
+            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-xl">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <StatsCounter endValue={5} label="Cidades Atendidas" />
+            </div>
+
+            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-xl">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <StatsCounter endValue={99.9} label="Uptime Garantido" suffix="%" />
+            </div>
+
+            <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 text-white shadow-xl">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-white" />
+              </div>
+              <StatsCounter endValue={98} label="Satisfação" suffix="%" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section - Simplified */}
+      <section id="sobre" className="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Sobre a SaraivaNet</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Há 22 anos conectando Eliseu Martins com o mundo digital
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-gray-800 mb-6">Nossa História</h3>
+              <p className="text-gray-600 mb-6 text-lg">
+                Fundada em 2003, a SaraivaNet nasceu do sonho de democratizar o acesso à internet de qualidade em Eliseu Martins.
+              </p>
+              <p className="text-gray-600 mb-8 text-lg">
+                Hoje somos referência em conectividade na região, sempre mantendo nosso compromisso com a excelência no atendimento.
+              </p>
+
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
+                  <div className="text-3xl font-bold text-orange-500">1000+</div>
+                  <div className="text-sm text-gray-600 font-medium">Clientes Ativos</div>
+                </div>
+                <div className="text-center p-6 bg-gradient-to-b from-orange-50 to-white rounded-2xl shadow-lg">
+                  <div className="text-3xl font-bold text-orange-500">22</div>
+                  <div className="text-sm text-gray-600 font-medium">Anos de Experiência</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-10 shadow-xl">
+              <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+                Tecnologia que Conecta Corações
+              </h3>
+              <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed">
+                Na SaraivaNet, acreditamos que internet é conexão humana. É o avô vendo o neto pela primeira vez por videochamada, é o estudante acessando conhecimento.
+              </p>
+              <div className="text-center">
+                <div className="inline-flex items-center text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-lg">
+                  <Heart className="w-6 h-6 mr-2" />
+                  Feito com amor no Piauí desde 2003
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <AnimatedSection animation="fade-up">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                O que nossos clientes dizem
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Depoimentos reais de quem confia na SaraivaNet para se manter conectado.
-              </p>
+      <section className="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Star className="w-4 h-4 mr-2" />
+              Depoimentos
             </div>
-          </AnimatedSection>
+            <h2 className="text-5xl font-bold text-gray-800 mb-4">O Que Nossos Clientes Dizem</h2>
+            <p className="text-xl text-gray-600">
+              Histórias reais de pessoas que confiam na SaraivaNet para se conectar com o mundo
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <AnimatedSection animation="fade-up" delay={0}>
-              <TestimonialCard
-                name="Maria Santos"
-                testimonial="A internet da SaraivaNet é excelente! Nunca fica fora do ar e o suporte é muito rápido. O app da TV é uma maravilha para as crianças."
-                age="32 anos"
-                location="São Paulo, SP"
-                initials="MS"
-              />
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={200}>
-              <TestimonialCard
-                name="João Silva"
-                testimonial="Melhor custo-benefício da região! Internet rápida, TV grátis e atendimento nota 10. Super recomendo a SaraivaNet!"
-                age="28 anos"
-                location="Rio de Janeiro, RJ"
-                initials="JS"
-              />
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={400}>
-              <TestimonialCard
-                name="Ana Oliveira"
-                testimonial="Desde que contratei nunca mais tive problemas. A fibra óptica faz toda diferença! E o SaraivaTV tem muito conteúdo bom."
-                age="45 anos"
-                location="Belo Horizonte, MG"
-                initials="AO"
-              />
-            </AnimatedSection>
+          <div className="grid md:grid-cols-3 gap-8">
+            <TestimonialCard 
+              name="Maria Santos" 
+              age="68 anos" 
+              location="Centro de Eliseu Martins" 
+              initials="MS" 
+              testimonial="Aqui em casa a internet funciona super bem, nunca tive problema de velocidade ou queda. Cumpre o que promete." 
+            />
+            
+            <TestimonialCard 
+              name="João Silva" 
+              age="45 anos" 
+              location="Bairro São José" 
+              initials="JS" 
+              testimonial="O atendimento foi rápido e eficiente, e a instalação foi no prazo. A conexão tá ótima até agora." 
+            />
+            
+            <TestimonialCard 
+              name="Ana Oliveira" 
+              age="72 anos" 
+              location="Vila Nova" 
+              initials="AO" 
+              testimonial="Trabalho com internet o dia todo e essa foi a melhor que já tive. Estável, rápida e sem surpresas na conta." 
+            />
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contato" className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4">
+      {/* Contact Section - Modern Design */}
+      <section id="contato" className="relative py-20 px-4" style={{background: 'linear-gradient(135deg, #6B46C1 0%, #7C3AED 25%, #8B5CF6 50%, #A855F7 75%, #C084FC 100%)'}}>
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-purple-900/30"></div>
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 1px, transparent 1px)`,
+            backgroundSize: '40px 40px, 60px 60px'
+          }}></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
           <AnimatedSection animation="fade-up">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-bold mb-8 border border-white/30">
+                <Phone className="w-5 h-5 mr-3" />
+                <span>Fale Conosco</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{textShadow: '3px 3px 12px rgba(0,0,0,0.8)'}}>
                 Entre em Contato
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Estamos prontos para levar a melhor internet para sua casa. Fale conosco agora!
+              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
+                Estamos aqui para ajudar! Entre em contato conosco e descubra como podemos conectar você ao mundo digital.
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimatedSection animation="slide-left">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Telefone / WhatsApp</h3>
-                    <p className="text-gray-600">(89) 99439-5789</p>
-                  </div>
+          {/* Contact Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Telefone */}
+            <TouchButton 
+              onClick={handlePhoneClick}
+              className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105 cursor-pointer text-left"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-xl">
+                  <Phone className="w-8 h-8 text-white" />
                 </div>
-
-                <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">E-mail</h3>
-                    <p className="text-gray-600">contato@saraivanet.com.br</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
-                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Localização</h3>
-                    <p className="text-gray-600">Eliseu Martins - PI</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Atendimento</h3>
-                    <p className="text-gray-600">24 horas por dia</p>
-                  </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-1">Telefone</h3>
+                  <p className="text-white/90 text-lg font-semibold">(89) 99439-5789</p>
+                  <p className="text-sm text-white/70">Toque para ligar</p>
                 </div>
               </div>
-            </AnimatedSection>
+            </TouchButton>
 
-            <AnimatedSection animation="slide-right">
-              <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-6">Pronto para se conectar?</h3>
-                <p className="mb-8">
-                  Entre em contato agora e descubra como a SaraivaNet pode transformar sua experiência online!
-                </p>
-                
-                <div className="space-y-4">
-                  <TouchButton 
-                    onClick={handleWhatsAppClick}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3"
-                  >
-                    <span className="text-xl">📱</span>
-                    WhatsApp: (89) 99439-5789
-                  </TouchButton>
-                  
-                  <TouchButton 
-                    onClick={handlePhoneClick}
-                    className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-md text-white font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3"
-                  >
-                    <Phone className="w-5 h-5" />
-                    Ligar Agora
-                  </TouchButton>
+            {/* Endereço */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-xl">
+                  <MapPin className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-1">Endereço</h3>
+                  <p className="text-white/90 text-lg font-semibold">Rua Fernando Silva, Centro</p>
+                  <p className="text-sm text-white/70">Eliseu Martins - PI</p>
                 </div>
               </div>
-            </AnimatedSection>
+            </div>
+
+            {/* Horário */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-xl">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-1">Horário</h3>
+                  <p className="text-white/90 text-lg font-semibold">Segunda a Sábado</p>
+                  <p className="text-sm text-white/70">8h às 18h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* WhatsApp CTA Card */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20 text-center">
+            <div className="mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-400 to-pink-500 rounded-2xl shadow-xl mb-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+                🚀 Pronto para se conectar?
+              </h3>
+              <p className="text-white/90 mb-8 text-xl max-w-2xl mx-auto">
+                Entre em contato agora e ganhe o SaraivaTV grátis!
+              </p>
+            </div>
+            <TouchButton 
+              onClick={handleWhatsAppClick} 
+              className="bg-white text-purple-600 hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-300 inline-flex items-center"
+            >
+              <Phone className="w-6 h-6 mr-3" />
+              💬 Falar no WhatsApp
+            </TouchButton>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <img src={saraivaLogo} alt="SaraivaNet Logo" className="w-12 h-12" />
-                <span className="text-2xl font-bold">SaraivaNet</span>
+      <footer className="bg-gradient-to-b from-gray-800 to-gray-900 dark:from-gray-900 dark:to-black text-white py-12 sm:py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
+            <div className="flex-1 max-w-2xl">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <Wifi className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">SaraivaNet</span>
               </div>
-              <p className="text-gray-400 mb-6 max-w-md">
-                Conectando famílias em Eliseu Martins com internet de qualidade e entretenimento gratuito há mais de 5 anos.
+              <p className="text-gray-300 mb-6 leading-relaxed text-lg">
+                Conectando Eliseu Martins com o mundo há 22 anos. Internet de qualidade, 
+                suporte especializado e compromisso com nossa comunidade.
               </p>
-              <div className="flex gap-4">
-                <TouchButton 
-                  onClick={handleWhatsAppClick}
-                  className="bg-green-600 hover:bg-green-700 p-3 rounded-lg transition-colors"
-                >
-                  📱
-                </TouchButton>
-                <TouchButton 
-                  onClick={handlePhoneClick}
-                  className="bg-blue-600 hover:bg-blue-700 p-3 rounded-lg transition-colors"
-                >
-                  <Phone className="w-5 h-5" />
-                </TouchButton>
+              <div className="flex items-center text-orange-400 bg-orange-900/20 px-4 py-2 rounded-full">
+                <Heart className="w-5 h-5 mr-2" />
+                <span className="font-medium">Feito com amor no Piauí desde 2003</span>
               </div>
             </div>
-            
-            <div>
-              <h4 className="text-lg font-bold mb-4">Serviços</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Internet Fibra Óptica</li>
-                <li>SaraivaTV</li>
-                <li>Suporte 24h</li>
-                <li>Instalação Gratuita</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-bold mb-4">Contato</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>(89) 99439-5789</li>
-                <li>contato@saraivanet.com.br</li>
-                <li>Eliseu Martins - PI</li>
-                <li>Atendimento 24h</li>
+
+            <div className="flex-shrink-0">
+              <h4 className="text-2xl font-bold mb-6 text-orange-400">Contato</h4>
+              <ul className="space-y-4">
+                <li className="flex items-center space-x-3">
+                  <TouchButton 
+                    onClick={handlePhoneClick}
+                    className="flex items-center space-x-3 text-lg hover:text-orange-400 transition-colors text-left"
+                  >
+                    <Phone className="w-5 h-5 text-orange-400" />
+                    <span>(89) 99439-5789</span>
+                  </TouchButton>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <MapPin className="w-5 h-5 text-orange-400" />
+                  <span className="text-lg">Rua Fernando Silva, Centro, Eliseu Martins - PI</span>
+                </li>
               </ul>
             </div>
           </div>
-          
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center">
-            <p className="text-gray-400">
-              &copy; 2024 SaraivaNet. Todos os direitos reservados.
+
+          <div className="border-t border-gray-700 mt-12 pt-8">
+            {/* Logo centralizada */}
+            <div className="flex justify-center mb-6">
+              <div className="flex items-center justify-center">
+                <img src={saraivaLogo} alt="SaraivaNet Logo" className="object-contain" style={{width: '35px', height: '35px', filter: 'drop-shadow(0 0 1px rgba(255,255,255,0.7))'}} />
+              </div>
+            </div>
+            <p className="text-gray-400 text-lg text-center">
+              © 2025 SaraivaNet. Todos os direitos reservados.
             </p>
           </div>
         </div>
