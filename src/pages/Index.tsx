@@ -48,76 +48,110 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Fundo Dinâmico Multicolorido */}
+      {/* Fundo Dinâmico Futurista */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Base com gradiente multicolorido */}
+        {/* Base gradiente principal com cores vibrantes */}
         <div className="absolute inset-0" style={{
-          background: `linear-gradient(45deg, 
-            #667eea 0%, 
-            #764ba2 25%, 
-            #f093fb 50%, 
-            #f5576c 75%,
-            #4facfe 100%
+          background: `linear-gradient(135deg, 
+            #ff6b35 0%,     /* Laranja vibrante */
+            #f7931e 20%,    /* Laranja dourado */
+            #dc2626 40%,    /* Vermelho forte */
+            #991b1b 60%,    /* Vermelho escuro */
+            #7c3aed 80%,    /* Roxo vibrante */
+            #581c87 100%    /* Roxo escuro */
           )`,
           backgroundSize: '400% 400%',
-          animation: 'gradient-move 15s ease infinite'
+          animation: 'gradient-move 12s ease infinite'
         }}></div>
 
-        {/* Camada de cores animadas */}
-        <div className="absolute inset-0" style={{
-          background: `radial-gradient(circle at 20% 50%, rgba(103, 58, 183, 0.4) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, rgba(244, 67, 54, 0.3) 0%, transparent 50%),
-                      radial-gradient(circle at 40% 80%, rgba(76, 175, 80, 0.3) 0%, transparent 50%),
-                      radial-gradient(circle at 70% 30%, rgba(255, 193, 7, 0.4) 0%, transparent 50%)`,
-          animation: 'color-shift 20s ease-in-out infinite'
-        }}></div>
-
-        {/* Orbs grandes coloridos */}
+        {/* Camada de orbs coloridos dinâmicos */}
         <div className="absolute inset-0">
           <div 
-            className="absolute top-10 right-10 w-80 h-80 rounded-full blur-3xl opacity-40"
+            className="absolute top-1/4 right-1/5 w-72 h-72 rounded-full blur-3xl opacity-30"
             style={{
-              background: 'radial-gradient(circle, #ff6b6b, #ee5a6f)',
-              animation: 'float-large 12s ease-in-out infinite'
+              background: 'radial-gradient(circle, #ff6b35, #f7931e)',
+              animation: 'float-large 14s ease-in-out infinite'
             }}
           ></div>
           <div 
-            className="absolute bottom-20 left-20 w-96 h-96 rounded-full blur-3xl opacity-30"
+            className="absolute bottom-1/3 left-1/6 w-80 h-80 rounded-full blur-3xl opacity-25"
             style={{
-              background: 'radial-gradient(circle, #4ecdc4, #44a08d)',
-              animation: 'float-large 15s ease-in-out infinite reverse'
+              background: 'radial-gradient(circle, #dc2626, #991b1b)',
+              animation: 'float-large 16s ease-in-out infinite reverse'
             }}
           ></div>
           <div 
-            className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full blur-2xl opacity-35"
+            className="absolute top-1/2 left-1/2 w-60 h-60 rounded-full blur-2xl opacity-35"
             style={{
-              background: 'radial-gradient(circle, #feca57, #ff9ff3)',
+              background: 'radial-gradient(circle, #7c3aed, #581c87)',
+              animation: 'pulse-color 10s ease-in-out infinite'
+            }}
+          ></div>
+        </div>
+
+        {/* Partículas luminosas */}
+        <div className="absolute inset-0">
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-white/60 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `particles-float ${8 + Math.random() * 4}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 5}s`
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Linhas fluídas de conexão */}
+        <div className="absolute inset-0">
+          {[...Array(4)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+              style={{
+                width: '200px',
+                top: `${20 + i * 20}%`,
+                left: '-200px',
+                animation: `flow-lines ${12 + i * 2}s linear infinite`,
+                animationDelay: `${i * 3}s`
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Efeitos geométricos tecnológicos */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute top-1/5 right-1/4 w-24 h-24 opacity-15"
+            style={{
+              background: 'linear-gradient(45deg, rgba(255,255,255,0.4), transparent)',
+              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+              animation: 'spin-gentle 30s linear infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-1/4 left-1/3 w-16 h-16 opacity-20"
+            style={{
+              background: 'linear-gradient(135deg, rgba(255,107,53,0.6), transparent)',
+              borderRadius: '30%',
+              animation: 'bounce-soft 12s ease-in-out infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute top-3/4 right-1/3 w-20 h-20 opacity-15"
+            style={{
+              background: 'linear-gradient(90deg, rgba(124,58,237,0.5), transparent)',
+              clipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)',
               animation: 'pulse-color 8s ease-in-out infinite'
             }}
           ></div>
         </div>
 
-        {/* Efeitos geométricos */}
-        <div className="absolute inset-0">
-          <div 
-            className="absolute top-1/4 right-1/3 w-32 h-32 opacity-20"
-            style={{
-              background: 'linear-gradient(45deg, rgba(255,255,255,0.3), transparent)',
-              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-              animation: 'spin-gentle 25s linear infinite'
-            }}
-          ></div>
-          <div 
-            className="absolute bottom-1/3 left-1/4 w-24 h-24 opacity-25 rounded-full"
-            style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.2), transparent)',
-              animation: 'bounce-soft 10s ease-in-out infinite'
-            }}
-          ></div>
-        </div>
-
-        {/* Overlay final suave */}
-        <div className="absolute inset-0 bg-white/5"></div>
+        {/* Overlay final para suavizar */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/5"></div>
       </div>
       {/* Floating Components */}
       <ChatBot />
