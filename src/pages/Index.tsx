@@ -195,12 +195,12 @@ const Index = () => {
           </div>
           
           <nav className="flex items-center space-x-6">
-            <TouchButton onClick={() => handleSmoothScroll('inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</TouchButton>
-            <Link to="/chips"><TouchButton className="text-white hover:text-orange-200 transition-colors font-semibold">Chips</TouchButton></Link>
+            <TouchButton onClick={() => handleSmoothScroll('inicio')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Início</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('planos')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Planos</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('cobertura')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Cobertura</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('sobre')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Sobre</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('contato')} variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-medium">Contato</TouchButton>
+            <Link to="/chips"><TouchButton variant="ghost" className="text-white hover:text-orange-200 hover:bg-orange-600/20 transition-colors font-semibold">Chips</TouchButton></Link>
           </nav>
 
           <div className="flex items-center space-x-4">
