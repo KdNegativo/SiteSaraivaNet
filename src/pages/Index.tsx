@@ -67,12 +67,8 @@ const Index = () => {
         <div className="md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img 
-                src={saraivaSymbol} 
-                alt="SaraivaNet Symbol" 
-                className="w-10 h-10 object-contain"
-              />
-              <div>
+              <div className="text-white">
+                <h1 className="text-lg font-bold">SaraivaNet</h1>
                 <div className="text-xs text-orange-100 font-medium flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
                   <span className="bg-gradient-to-r from-white/80 to-white/60 bg-clip-text text-transparent font-bold">Eliseu Martins - PI</span>
@@ -88,12 +84,8 @@ const Index = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img 
-              src={saraivaSymbol} 
-              alt="SaraivaNet Symbol" 
-              className="w-12 h-12 object-contain"
-            />
-            <div>
+            <div className="text-white">
+              <h1 className="text-2xl font-bold">SaraivaNet</h1>
               <div className="text-xs text-orange-100 font-medium flex items-center">
                 <MapPin className="w-3 h-3 mr-1" />
                 Eliseu Martins - PI
