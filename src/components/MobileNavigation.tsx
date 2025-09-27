@@ -89,6 +89,7 @@ const MobileNavigation = () => {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h1 className="text-lg font-bold text-white">SaraivaNet</h1>
+              <h2 className="text-sm text-white/80">Menu</h2>
             </div>
             <button
               onClick={() => setIsOpen(false)}

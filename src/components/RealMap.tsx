@@ -114,128 +114,111 @@ const RealMap: React.FC = () => {
       mapInstance.current = null;
     }
 
-    // Aguardar um pouco para garantir que o DOM está pronto
-    const initMap = () => {
-      try {
-        // Coordenadas centrais da região (centro entre as cidades)
-        const centerCoords: [number, number] = [-8.0969, -43.5764];
-        
-        console.log('RealMap: Criando mapa centrado em:', centerCoords);
+    try {
+      // Coordenadas centrais da região (centro entre as cidades)
+      const centerCoords: [number, number] = [-8.0969, -43.5764];
+      
+      console.log('RealMap: Criando mapa centrado em:', centerCoords);
 
-        // Criar o mapa com configurações mais simples para mobile
-        mapInstance.current = L.map(mapRef.current!, {
-          center: centerCoords,
-          zoom: window.innerWidth < 768 ? 9 : 11,
-          minZoom: 8,
-          maxZoom: 16,
-          zoomControl: true,
-          scrollWheelZoom: true,
-          doubleClickZoom: true,
-          dragging: true,
-          touchZoom: true,
-          attributionControl: false // Remove atribuição
+      // Criar o mapa com configurações específicas
+      mapInstance.current = L.map(mapRef.current, {
+        center: centerCoords,
+        zoom: 11,
+        minZoom: 8,
+        maxZoom: 16,
+        zoomControl: true,
+        scrollWheelZoom: true,
+        doubleClickZoom: true,
+        dragging: true
+      });
+
+      console.log('RealMap: Mapa criado, adicionando camada de tiles');
+      
+      // Adicionar tiles sem marca d'água
+      const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '',
+        maxZoom: 18,
+      });
+      
+      tileLayer.addTo(mapInstance.current);
+      console.log('RealMap: Tiles adicionados');
+
+      // Criar array de coordenadas para calcular bounds
+      const coordinates: [number, number][] = [];
+      
+      // Adicionar marcadores das cidades
+      cities.forEach((city) => {
+        console.log(`RealMap: Adicionando ${city.name} em [${city.lat}, ${city.lng}]`);
+        
+        const marker = L.marker([city.lat, city.lng], {
+          icon: createCustomIcon(city.status)
         });
-
-        console.log('RealMap: Mapa criado, adicionando camada de tiles');
         
-        // Usar tiles padrão que funcionam sempre
-        const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '',
-          maxZoom: 18
-        });
-        
-        tileLayer.addTo(mapInstance.current);
-        console.log('RealMap: Tiles adicionados');
+        marker.addTo(mapInstance.current!);
+        coordinates.push([city.lat, city.lng]);
 
-        // Forçar redimensionamento após um pequeno delay
-        setTimeout(() => {
-          if (mapInstance.current) {
-            mapInstance.current.invalidateSize();
-            console.log('RealMap: Tamanho do mapa invalidado/atualizado');
-          }
-        }, 100);
-
-        // Criar array de coordenadas para calcular bounds
-        const coordinates: [number, number][] = [];
-        
-        // Adicionar marcadores das cidades
-        cities.forEach((city) => {
-          console.log(`RealMap: Adicionando ${city.name} em [${city.lat}, ${city.lng}]`);
-          
-          const marker = L.marker([city.lat, city.lng], {
-            icon: createCustomIcon(city.status)
-          });
-          
-          marker.addTo(mapInstance.current!);
-          coordinates.push([city.lat, city.lng]);
-
-          const popupContent = `
-            <div style="text-align: center; padding: 15px; min-width: 200px; font-family: Arial, sans-serif;">
-              <h3 style="margin: 0 0 10px 0; color: #16a34a; font-weight: bold; font-size: 16px;">
-                📍 ${city.name}
-              </h3>
-              <p style="margin: 0 0 12px 0; color: #555; font-size: 14px; line-height: 1.4;">
-                ${city.description}
-              </p>
-              <div style="margin: 10px 0; padding: 6px 12px; background-color: #16a34a; color: white; border-radius: 15px; font-size: 12px; display: inline-block; font-weight: bold;">
-                🟢 Internet Ativa
-              </div>
-              <br>
-              <button 
-                onclick="window.open('https://wa.me/5589994395789?text=${encodeURIComponent(
-                  `Olá! Gostaria de contratar internet em ${city.name}. Podem me ajudar?`
-                )}', '_blank')"
-                style="
-                  margin-top: 10px;
-                  padding: 10px 15px;
-                  background-color: #25D366;
-                  color: white;
-                  border: none;
-                  border-radius: 8px;
-                  cursor: pointer;
-                  font-size: 13px;
-                  font-weight: bold;
-                  transition: background-color 0.3s;
-                "
-                onmouseover="this.style.backgroundColor='#1DA851'"
-                onmouseout="this.style.backgroundColor='#25D366'"
-              >
-                💬 Contratar Agora
-              </button>
+        const popupContent = `
+          <div style="text-align: center; padding: 15px; min-width: 200px; font-family: Arial, sans-serif;">
+            <h3 style="margin: 0 0 10px 0; color: #16a34a; font-weight: bold; font-size: 16px;">
+              📍 ${city.name}
+            </h3>
+            <p style="margin: 0 0 12px 0; color: #555; font-size: 14px; line-height: 1.4;">
+              ${city.description}
+            </p>
+            <div style="margin: 10px 0; padding: 6px 12px; background-color: #16a34a; color: white; border-radius: 15px; font-size: 12px; display: inline-block; font-weight: bold;">
+              🟢 Internet Ativa
             </div>
-          `;
+            <br>
+            <button 
+              onclick="window.open('https://wa.me/5589994395789?text=${encodeURIComponent(
+                `Olá! Gostaria de contratar internet em ${city.name}. Podem me ajudar?`
+              )}', '_blank')"
+              style="
+                margin-top: 10px;
+                padding: 10px 15px;
+                background-color: #25D366;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 13px;
+                font-weight: bold;
+                transition: background-color 0.3s;
+              "
+              onmouseover="this.style.backgroundColor='#1DA851'"
+              onmouseout="this.style.backgroundColor='#25D366'"
+            >
+              💬 Contratar Agora
+            </button>
+          </div>
+        `;
 
-          marker.bindPopup(popupContent, {
-            maxWidth: 250,
-            className: 'custom-popup'
-          });
+        marker.bindPopup(popupContent, {
+          maxWidth: 250,
+          className: 'custom-popup'
         });
+      });
 
-        // Ajustar a visualização para mostrar todas as cidades
-        if (coordinates.length > 0) {
-          const group = L.featureGroup(cities.map((city) => 
-            L.marker([city.lat, city.lng])
-          ));
-          mapInstance.current.fitBounds(group.getBounds(), {
-            padding: [20, 20],
-            maxZoom: 12
-          });
-          console.log('RealMap: Visualização ajustada para mostrar todas as cidades');
-        }
-
-        console.log('RealMap: Mapa totalmente configurado e funcional');
-
-      } catch (error) {
-        console.error('RealMap: Erro crítico ao inicializar mapa:', error);
+      // Ajustar a visualização para mostrar todas as cidades
+      if (coordinates.length > 0) {
+        const group = L.featureGroup(cities.map((city) => 
+          L.marker([city.lat, city.lng])
+        ));
+        mapInstance.current.fitBounds(group.getBounds(), {
+          padding: [20, 20],
+          maxZoom: 12
+        });
+        console.log('RealMap: Visualização ajustada para mostrar todas as cidades');
       }
-    };
 
-    // Inicializar após um pequeno delay para garantir que o elemento está pronto
-    const timeoutId = setTimeout(initMap, 100);
+      console.log('RealMap: Mapa totalmente configurado e funcional');
+
+    } catch (error) {
+      console.error('RealMap: Erro crítico ao inicializar mapa:', error);
+    }
 
     // Cleanup function
     return () => {
-      clearTimeout(timeoutId);
       console.log('RealMap: Limpando mapa');
       if (mapInstance.current) {
         mapInstance.current.remove();
@@ -258,24 +241,16 @@ const RealMap: React.FC = () => {
         </div>
       </div>
       
-      {/* Container do Mapa - Forçar carregamento */}
-      <div className="w-full h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl border-2 border-blue-400/30 mb-6 relative">
+      {/* Container do Mapa */}
+      <div className="w-full h-96 rounded-2xl overflow-hidden shadow-xl border-2 border-blue-400/30 mb-6">
         <div 
           ref={mapRef} 
-          className="w-full h-full absolute inset-0" 
+          className="w-full h-full" 
           style={{ 
-            minHeight: '320px',
-            background: '#e5e7eb',
-            zIndex: 1
+            minHeight: '384px',
+            background: '#f8fafc' 
           }} 
         />
-        {/* Fallback se o mapa não carregar */}
-        <div className="absolute inset-0 flex items-center justify-center text-gray-600 bg-gray-200 z-0">
-          <div className="text-center p-4">
-            <div className="text-2xl mb-2">🗺️</div>
-            <div className="text-sm">Carregando mapa...</div>
-          </div>
-        </div>
       </div>
 
       {/* Legenda - apenas Internet Ativa */}
