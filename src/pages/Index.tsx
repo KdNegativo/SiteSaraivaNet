@@ -48,59 +48,94 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Dynamic Orange Background with Spectacular Effects */}
+      {/* Fundo Moderno e Impactante - Totalmente Diferente */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Primary Animated Gradient Background */}
-        <div className="absolute inset-0 animate-gradient-shift" style={{
-          background: 'linear-gradient(135deg, #FF4500 0%, #FF6600 20%, #FF8800 40%, #FF5722 60%, #FF7700 80%, #FF9900 100%)',
-          backgroundSize: '400% 400%'
+        {/* Base com gradiente diagonal dramático */}
+        <div className="absolute inset-0" style={{
+          background: `
+            linear-gradient(135deg, 
+              #FF4500 0%, 
+              #1a1a1a 25%, 
+              #FF6600 40%, 
+              #2d2d2d 55%, 
+              #FF8800 70%, 
+              #1f1f1f 85%, 
+              #FF5722 100%
+            )`
         }}></div>
         
-        {/* Multiple Moving Gradient Overlays */}
-        <div className="absolute inset-0 opacity-40 animate-gradient-x" style={{
-          background: 'linear-gradient(45deg, transparent 0%, rgba(255, 165, 0, 0.6) 25%, transparent 50%, rgba(255, 140, 0, 0.4) 75%, transparent 100%)',
-          backgroundSize: '200% 200%'
-        }}></div>
-        
-        <div className="absolute inset-0 opacity-20 animate-gradient-y" style={{
-          background: 'linear-gradient(-45deg, rgba(255, 99, 71, 0.3) 0%, transparent 30%, rgba(255, 165, 0, 0.5) 70%, transparent 100%)',
-          backgroundSize: '300% 300%'
-        }}></div>
-        
-        {/* Spectacular Floating Elements */}
-        <div className="absolute inset-0">
-          {/* Giant Moving Orbs */}
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-yellow-300/20 to-orange-400/10 rounded-full blur-3xl animate-mega-float shadow-2xl"></div>
-          <div className="absolute top-1/3 -left-48 w-80 h-80 bg-gradient-to-tr from-red-400/15 to-orange-300/20 rounded-full blur-2xl animate-mega-float-reverse shadow-xl" style={{animationDelay: '3s'}}></div>
-          <div className="absolute bottom-20 right-1/3 w-64 h-64 bg-gradient-to-bl from-orange-200/25 to-yellow-400/15 rounded-full blur-xl animate-pulse-glow" style={{animationDelay: '1.5s'}}></div>
-          
-          {/* Medium Floating Shapes */}
-          <div className="absolute top-20 right-1/4 w-40 h-40 bg-white/15 rounded-full blur-lg animate-bounce-slow"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-32 h-32 bg-orange-300/20 rounded-full blur-md animate-sway" style={{animationDelay: '4s'}}></div>
-          <div className="absolute top-2/3 right-1/6 w-28 h-28 bg-yellow-200/25 rounded-full blur-sm animate-drift" style={{animationDelay: '2s'}}></div>
-          
-          {/* Small Sparkle Effects */}
-          <div className="absolute top-1/4 left-1/2 w-4 h-4 bg-white rounded-full animate-twinkle opacity-80"></div>
-          <div className="absolute top-3/4 left-1/3 w-3 h-3 bg-yellow-300 rounded-full animate-twinkle opacity-60" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-orange-200 rounded-full animate-twinkle opacity-70" style={{animationDelay: '2.5s'}}></div>
-        </div>
-        
-        {/* Dynamic Pattern Overlay */}
-        <div className="absolute inset-0 animate-pattern-drift" style={{
+        {/* Padrão geométrico hexagonal laranja */}
+        <div className="absolute inset-0 opacity-30" style={{
           backgroundImage: `
-            radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
-            radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.05) 50%, transparent 52%)
+            radial-gradient(circle at 25% 25%, #FF6600 8px, transparent 8px),
+            radial-gradient(circle at 75% 75%, #FF8800 6px, transparent 6px),
+            linear-gradient(45deg, transparent 40%, #FF4500 42%, #FF4500 58%, transparent 60%),
+            linear-gradient(-45deg, transparent 40%, #FF7700 42%, #FF7700 58%, transparent 60%)
           `,
-          backgroundSize: '80px 80px, 40px 40px, 20px 20px'
+          backgroundSize: '120px 120px, 80px 80px, 60px 60px, 60px 60px',
+          backgroundPosition: '0 0, 40px 40px, 0 0, 30px 30px'
         }}></div>
         
-        {/* Pulsing Light Effects */}
+        {/* Elementos geométricos visíveis */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-1 h-32 bg-gradient-to-b from-white/60 to-transparent animate-pulse-slow"></div>
-          <div className="absolute bottom-20 right-20 w-32 h-1 bg-gradient-to-r from-white/60 to-transparent animate-pulse-slow" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 left-1/4 w-1 h-24 bg-gradient-to-t from-orange-200/80 to-transparent animate-pulse-slow" style={{animationDelay: '2s'}}></div>
+          {/* Hexágonos grandes */}
+          <div className="absolute top-20 left-20 w-32 h-32 border-4 border-orange-400/60 rotate-45 opacity-70"></div>
+          <div className="absolute top-40 right-32 w-24 h-24 border-3 border-yellow-400/50 rotate-12 opacity-60"></div>
+          <div className="absolute bottom-32 left-1/3 w-28 h-28 border-4 border-orange-500/70 -rotate-30 opacity-80"></div>
+          
+          {/* Losangos coloridos */}
+          <div className="absolute top-1/4 right-1/4 w-16 h-16 bg-gradient-to-br from-orange-400/40 to-red-500/30 rotate-45"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-20 h-20 bg-gradient-to-tl from-yellow-400/35 to-orange-600/40 rotate-12"></div>
+          
+          {/* Linhas dinâmicas */}
+          <div className="absolute top-0 left-1/3 w-1 h-full bg-gradient-to-b from-transparent via-orange-400/60 to-transparent"></div>
+          <div className="absolute top-1/3 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent"></div>
+          <div className="absolute top-2/3 left-0 w-full h-0.5 bg-gradient-to-r from-orange-500/40 via-red-400/60 to-orange-500/40"></div>
         </div>
+        
+        {/* Grid pontilhado laranja */}
+        <div className="absolute inset-0 opacity-25" style={{
+          backgroundImage: `
+            radial-gradient(circle, #FF6600 1px, transparent 1px),
+            radial-gradient(circle, #FF8800 0.5px, transparent 0.5px)
+          `,
+          backgroundSize: '50px 50px, 25px 25px',
+          backgroundPosition: '0 0, 12.5px 12.5px'
+        }}></div>
+        
+        {/* Efeito de luz radial */}
+        <div className="absolute inset-0" style={{
+          background: `
+            radial-gradient(circle at 20% 30%, rgba(255, 102, 0, 0.4) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 136, 0, 0.3) 0%, transparent 40%),
+            radial-gradient(circle at 60% 80%, rgba(255, 69, 0, 0.35) 0%, transparent 45%),
+            radial-gradient(circle at 30% 70%, rgba(255, 165, 0, 0.25) 0%, transparent 35%)
+          `
+        }}></div>
+        
+        {/* Formas geométricas flutuantes mais visíveis */}
+        <div className="absolute inset-0">
+          {/* Triângulos */}
+          <div className="absolute top-16 right-16 w-0 h-0 border-l-16 border-r-16 border-b-28 border-l-transparent border-r-transparent border-b-orange-400/50"></div>
+          <div className="absolute bottom-20 right-20 w-0 h-0 border-l-12 border-r-12 border-t-20 border-l-transparent border-r-transparent border-t-yellow-400/60"></div>
+          
+          {/* Retângulos coloridos */}
+          <div className="absolute top-1/3 left-10 w-8 h-24 bg-gradient-to-b from-orange-500/60 to-red-500/40 rotate-12"></div>
+          <div className="absolute bottom-1/3 right-10 w-6 h-32 bg-gradient-to-t from-yellow-500/50 to-orange-400/60 -rotate-6"></div>
+          
+          {/* Círculos com bordas */}
+          <div className="absolute top-1/2 left-1/2 w-20 h-20 border-2 border-orange-400/70 rounded-full bg-orange-300/20"></div>
+          <div className="absolute top-20 left-1/2 w-12 h-12 border-2 border-yellow-400/80 rounded-full bg-yellow-200/30"></div>
+        </div>
+        
+        {/* Overlay texturizado */}
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `
+            linear-gradient(90deg, transparent 50%, rgba(255, 102, 0, 0.1) 51%, rgba(255, 102, 0, 0.1) 52%, transparent 53%),
+            linear-gradient(0deg, transparent 50%, rgba(255, 136, 0, 0.08) 51%, rgba(255, 136, 0, 0.08) 52%, transparent 53%)
+          `,
+          backgroundSize: '20px 20px, 20px 20px'
+        }}></div>
       </div>
       {/* Floating Components */}
       <ChatBot />
