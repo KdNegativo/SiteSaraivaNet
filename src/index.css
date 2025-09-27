@@ -762,29 +762,58 @@ body {
   animation: morphBorder 8s ease-in-out infinite;
 }
 
-/* ========== SPECTACULAR NEW ANIMATIONS FOR ULTRA DYNAMIC EFFECTS ========== */
+/* ========== ANIMAÇÕES SUAVES E PROFISSIONAIS ========== */
 
-/* Ultra Dynamic Gradient Animations */
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-    transform: scale(1) rotate(0deg);
+/* Animação suave de flutuação */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
   }
-  25% {
-    background-position: 25% 25%;
-    transform: scale(1.02) rotate(1deg);
+  33% {
+    transform: translate(-10px, -15px) scale(1.02);
+  }
+  66% {
+    transform: translate(10px, -10px) scale(0.98);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.2;
   }
   50% {
-    background-position: 100% 50%;
-    transform: scale(1) rotate(0deg);
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.3;
   }
-  75% {
-    background-position: 75% 75%;
-    transform: scale(1.01) rotate(-1deg);
+}
+
+@keyframes subtle-move {
+  0% {
+    transform: translateX(0px) translateY(0px);
   }
   100% {
-    background-position: 0% 50%;
-    transform: scale(1) rotate(0deg);
+    transform: translateX(20px) translateY(-20px);
+  }
+}
+
+@keyframes rotate-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.4;
   }
 }
 

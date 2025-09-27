@@ -48,101 +48,108 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Fundo Laranja Ultra Sofisticado e Impactante */}
+      {/* Fundo Laranja Moderno e Profissional */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Gradiente Base Sofisticado */}
+        {/* Gradiente Base Moderno */}
         <div className="absolute inset-0" style={{
           background: `
-            radial-gradient(ellipse at top left, #FF4500 0%, #FF6600 25%, #FF8800 50%),
-            radial-gradient(ellipse at bottom right, #FF5722 0%, #FF7043 30%, #FFB74D 60%),
-            radial-gradient(circle at center, transparent 40%, #FF6600 70%, #FF4500 100%),
-            linear-gradient(135deg, #FF3300 0%, transparent 50%, #FF9500 100%)
-          `
+            linear-gradient(135deg, 
+              #FF4500 0%, 
+              #FF6600 15%, 
+              #FF7700 30%, 
+              #FF8800 45%, 
+              #FF9900 60%, 
+              #FFAA00 75%, 
+              #FFBB33 90%, 
+              #FFCC66 100%
+            )`
         }}></div>
 
-        {/* Efeitos de Luz Dinâmicos */}
+        {/* Overlay com movimento sutil */}
+        <div 
+          className="absolute inset-0 opacity-60"
+          style={{
+            background: `
+              radial-gradient(circle at 20% 80%, rgba(255, 69, 0, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 140, 0, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(255, 165, 0, 0.2) 0%, transparent 50%)
+            `,
+            animation: 'gentle-float 20s ease-in-out infinite'
+          }}
+        ></div>
+
+        {/* Padrão geométrico sutil */}
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `
+              linear-gradient(30deg, transparent 40%, rgba(255, 255, 255, 0.1) 41%, rgba(255, 255, 255, 0.1) 42%, transparent 43%),
+              linear-gradient(-30deg, transparent 40%, rgba(255, 255, 255, 0.05) 41%, rgba(255, 255, 255, 0.05) 42%, transparent 43%)
+            `,
+            backgroundSize: '100px 100px',
+            animation: 'subtle-move 25s linear infinite'
+          }}
+        ></div>
+
+        {/* Elementos flutuantes minimalistas */}
         <div className="absolute inset-0">
-          {/* Raios de luz radiantes */}
-          <div className="absolute top-1/4 left-1/4 w-96 h-2 bg-gradient-to-r from-transparent via-yellow-300/80 to-transparent rotate-45 animate-pulse-glow"></div>
-          <div className="absolute top-3/4 right-1/4 w-80 h-1 bg-gradient-to-r from-transparent via-orange-200/70 to-transparent -rotate-45 animate-pulse-glow" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-1 bg-gradient-to-r from-transparent via-red-300/60 to-transparent rotate-90 animate-pulse-glow" style={{animationDelay: '2s'}}></div>
+          {/* Círculos grandes sutis */}
+          <div 
+            className="absolute -top-20 -right-20 w-80 h-80 rounded-full opacity-20"
+            style={{
+              background: 'radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%)',
+              animation: 'float-gentle 15s ease-in-out infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full opacity-15"
+            style={{
+              background: 'radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%)',
+              animation: 'float-gentle 18s ease-in-out infinite reverse'
+            }}
+          ></div>
           
-          {/* Círculos de luz pulsante */}
-          <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-radial from-yellow-300/40 to-transparent rounded-full animate-pulse-glow"></div>
-          <div className="absolute bottom-20 left-20 w-40 h-40 bg-gradient-radial from-orange-400/30 to-transparent rounded-full animate-pulse-glow" style={{animationDelay: '1.5s'}}></div>
-          <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-gradient-radial from-red-400/50 to-transparent rounded-full animate-pulse-glow" style={{animationDelay: '3s'}}></div>
+          {/* Formas geométricas modernas */}
+          <div 
+            className="absolute top-1/4 right-1/4 w-32 h-32 opacity-30"
+            style={{
+              background: 'linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%)',
+              clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)',
+              animation: 'rotate-slow 30s linear infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-1/3 left-1/3 w-24 h-24 opacity-25"
+            style={{
+              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 100%)',
+              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+              animation: 'pulse-gentle 12s ease-in-out infinite'
+            }}
+          ></div>
         </div>
 
-        {/* Partículas Flutuantes Brilhantes */}
-        <div className="absolute inset-0">
-          {/* Partículas grandes */}
-          <div className="absolute top-16 left-16 w-4 h-4 bg-yellow-300 rounded-full shadow-lg shadow-yellow-300/50 animate-mega-float"></div>
-          <div className="absolute top-32 right-24 w-3 h-3 bg-orange-300 rounded-full shadow-lg shadow-orange-300/50 animate-mega-float" style={{animationDelay: '1s'}}></div>
-          <div className="absolute bottom-24 left-32 w-5 h-5 bg-red-400 rounded-full shadow-lg shadow-red-400/50 animate-mega-float" style={{animationDelay: '2s'}}></div>
-          <div className="absolute bottom-16 right-16 w-2 h-2 bg-yellow-400 rounded-full shadow-lg shadow-yellow-400/50 animate-mega-float" style={{animationDelay: '3s'}}></div>
-          
-          {/* Partículas médias */}
-          <div className="absolute top-1/3 left-1/6 w-2 h-2 bg-orange-200 rounded-full animate-twinkle"></div>
-          <div className="absolute top-2/3 right-1/6 w-1.5 h-1.5 bg-yellow-200 rounded-full animate-twinkle" style={{animationDelay: '0.5s'}}></div>
-          <div className="absolute top-1/2 left-1/3 w-1 h-1 bg-red-300 rounded-full animate-twinkle" style={{animationDelay: '1.5s'}}></div>
-          <div className="absolute bottom-1/3 right-1/3 w-2.5 h-2.5 bg-orange-400 rounded-full animate-twinkle" style={{animationDelay: '2.5s'}}></div>
-        </div>
+        {/* Efeito de luz ambiente */}
+        <div 
+          className="absolute inset-0 opacity-40"
+          style={{
+            background: `
+              radial-gradient(ellipse 100% 50% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+              radial-gradient(ellipse 50% 100% at 0% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(ellipse 50% 100% at 100% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)
+            `
+          }}
+        ></div>
 
-        {/* Padrões Geométricos Complexos */}
-        <div className="absolute inset-0 opacity-40">
-          {/* Hexágonos brilhantes */}
-          <div className="absolute top-24 left-24 w-20 h-20 border-2 border-yellow-400/60 rotate-30 shadow-lg shadow-yellow-400/30" style={{
-            clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
-          }}></div>
-          <div className="absolute top-40 right-32 w-16 h-16 border-2 border-orange-400/70 -rotate-45 shadow-lg shadow-orange-400/40" style={{
-            clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
-          }}></div>
-          <div className="absolute bottom-32 left-40 w-24 h-24 border-3 border-red-400/50 rotate-60 shadow-xl shadow-red-400/30" style={{
-            clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
-          }}></div>
-          
-          {/* Diamantes luminosos */}
-          <div className="absolute top-1/4 right-1/4 w-12 h-12 bg-gradient-to-br from-yellow-300/60 to-orange-400/40 rotate-45 shadow-2xl shadow-yellow-400/50"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-8 h-8 bg-gradient-to-tl from-orange-300/70 to-red-400/50 rotate-12 shadow-xl shadow-orange-400/60"></div>
-          <div className="absolute top-1/2 left-1/2 w-10 h-10 bg-gradient-to-br from-red-300/50 to-yellow-400/60 -rotate-30 shadow-2xl shadow-red-400/40"></div>
-        </div>
-
-        {/* Ondas Luminosas */}
-        <div className="absolute inset-0" style={{
-          background: `
-            radial-gradient(ellipse 800px 400px at 20% 30%, rgba(255, 165, 0, 0.3) 0%, transparent 50%),
-            radial-gradient(ellipse 600px 300px at 80% 70%, rgba(255, 69, 0, 0.4) 0%, transparent 60%),
-            radial-gradient(ellipse 1000px 500px at 50% 20%, rgba(255, 140, 0, 0.2) 0%, transparent 40%)
-          `
-        }}></div>
-
-        {/* Grid de Pontos Brilhantes */}
-        <div className="absolute inset-0 opacity-30" style={{
-          backgroundImage: `
-            radial-gradient(circle, rgba(255, 215, 0, 0.8) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255, 140, 0, 0.6) 0.5px, transparent 0.5px)
-          `,
-          backgroundSize: '60px 60px, 30px 30px',
-          backgroundPosition: '0 0, 15px 15px'
-        }}></div>
-
-        {/* Efeitos de Profundidade */}
-        <div className="absolute inset-0">
-          {/* Camadas de profundidade */}
-          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-orange-300/20 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-red-400/30 to-transparent"></div>
-          <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-yellow-300/25 to-transparent"></div>
-          <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-orange-400/20 to-transparent"></div>
-        </div>
-
-        {/* Textura Sutil */}
-        <div className="absolute inset-0 opacity-15" style={{
-          backgroundImage: `
-            linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.1) 42%, rgba(255, 255, 255, 0.1) 44%, transparent 46%),
-            linear-gradient(-45deg, transparent 40%, rgba(255, 215, 0, 0.1) 42%, rgba(255, 215, 0, 0.1) 44%, transparent 46%)
-          `,
-          backgroundSize: '30px 30px, 30px 30px'
-        }}></div>
+        {/* Textura sutil final */}
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `
+              radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.8) 1px, transparent 0)
+            `,
+            backgroundSize: '40px 40px'
+          }}
+        ></div>
       </div>
       {/* Floating Components */}
       <ChatBot />
