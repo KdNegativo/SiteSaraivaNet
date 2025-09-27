@@ -89,22 +89,6 @@ const Index = () => {
           ></div>
         </div>
 
-        {/* Partículas luminosas */}
-        <div className="absolute inset-0">
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-white/60 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animation: `particles-float ${8 + Math.random() * 4}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 5}s`
-              }}
-            ></div>
-          ))}
-        </div>
-
         {/* Linhas fluídas de conexão */}
         <div className="absolute inset-0">
           {[...Array(4)].map((_, i) => (
