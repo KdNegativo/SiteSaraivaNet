@@ -138,11 +138,10 @@ const RealMap: React.FC = () => {
 
         console.log('RealMap: Mapa criado, adicionando camada de tiles');
         
-        // Usar tiles alternativos para melhor compatibilidade
-        const tileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // Usar tiles padrão que funcionam sempre
+        const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '',
-          maxZoom: 18,
-          crossOrigin: true
+          maxZoom: 18
         });
         
         tileLayer.addTo(mapInstance.current);
