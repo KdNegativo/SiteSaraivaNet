@@ -101,7 +101,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section - Gradiente baseado na imagem de referência */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center orange-gradient-bg">
+      <section id="inicio" className="hero-section relative overflow-hidden min-h-screen flex items-center">
         
         {/* Padrões sutis no fundo */}
         <div className="absolute inset-0" style={{

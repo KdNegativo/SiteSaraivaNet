@@ -514,24 +514,35 @@
   border-bottom-color: hsl(var(--red-dark));
 }
 
-/* BLINDAGEM das cores - Força o uso das cores exatas da imagem em QUALQUER modo */
+/* BLINDAGEM das cores - Força o uso das cores exatas da imagem APENAS onde necessário */
 body {
-  background-color: #FF6600; /* Laranja exato da imagem */
+  background-color: #f8fafc; /* Fundo claro e legível para o site */
   color-scheme: light dark; /* Sinaliza ao navegador que já gerenciamos os temas */
+}
+
+/* Aplica o laranja intenso APENAS no hero section */
+.hero-section {
+  background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 
 /* Anula a tentativa do navegador de mudar o 'hue' (matiz) no modo escuro */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #FF6600 !important; /* Força o mesmo laranja! */
-    filter: none !important; /* Ignora filtros de extensões de modo escuro */
-    mix-blend-mode: normal !important; /* Anula blend modes de extensões */
-    color: black !important; /* Força texto escuro para manter legibilidade */
+    background-color: #1a1a1a !important; /* Fundo escuro para modo escuro */
+    color: white !important; /* Texto claro para contraste */
   }
   
-  /* Proteção completa para elementos com gradiente */
-  .orange-gradient-bg,
-  section[style*="linear-gradient"] {
+  /* Proteção APENAS para o hero section */
+  .hero-section {
+    background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+  
+  /* Proteção para gradientes principais */
+  .orange-gradient-bg {
     background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
     filter: none !important;
     mix-blend-mode: normal !important;
@@ -539,20 +550,6 @@ body {
   
   .gradient-primary {
     background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-  }
-  
-  .gradient-animated {
-    background: linear-gradient(-45deg, #FF6600, #FF8C00, #FF4500, #CC0000) !important;
-    background-size: 300% 300%;
-    animation: gradient-shift 6s ease infinite;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-  }
-  
-  /* Proteção para botões e elementos interativos */
-  .btn-premium, .glass-button, .hover-lift {
     filter: none !important;
     mix-blend-mode: normal !important;
   }
