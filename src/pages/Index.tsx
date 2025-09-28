@@ -323,8 +323,125 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - Clean & Beautiful */}
-      <section id="planos" className="relative overflow-hidden pt-5 pb-20 px-4" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
+      {/* Plans Section - Mobile Design igual às imagens */}
+      <section id="planos" className="relative overflow-hidden lg:hidden" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
+        <div className="px-4 py-8">
+          {/* Mobile Title Section */}
+          <div className="text-center mb-8">
+            <h2 className="text-white text-3xl font-bold mb-4" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
+              Tudo que você precisa:
+            </h2>
+          </div>
+
+          {/* Mobile Features Cards - Layout igual à primeira imagem */}
+          <div className="space-y-4 mb-8">
+            <div className="bg-slate-700/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Wifi className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-white">
+                  <div className="text-xl font-bold">Internet 300MB</div>
+                  <div className="text-lg">fibra óptica ultrarrápida</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-700/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Tv className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-white">
+                  <div className="text-xl font-bold">App SaraivaTV Premium</div>
+                  <div className="text-lg">totalmente grátis</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-700/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Smartphone className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-white">
+                  <div className="text-xl font-bold">Assista TV</div>
+                  <div className="text-lg">direto no seu celular</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-700/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Music className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-white">
+                  <div className="text-xl font-bold">Rádios</div>
+                  <div className="text-lg">nacionais e locais incluídas</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-700/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-white">
+                  <div className="text-xl font-bold">Suporte técnico</div>
+                  <div className="text-lg">24h todos os dias</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Plan Header - igual à segunda imagem */}
+          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-t-2xl p-6 text-white text-center">
+            <h3 className="text-2xl font-black mb-2" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>
+              Plano Completo
+            </h3>
+            <div className="text-4xl font-black mb-2" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}>
+              300MB
+            </div>
+            <div className="text-lg font-medium">
+              Fibra Óptica + SaraivaTV Grátis
+            </div>
+          </div>
+
+          {/* Mobile Pricing Card - igual à segunda imagem */}
+          <div className="bg-slate-700/90 backdrop-blur-sm rounded-b-2xl p-6 border-x border-b border-slate-600/50 mb-4">
+            <div className="text-center">
+              <div className="text-slate-400 line-through text-lg mb-2">De R$ 169,90</div>
+              <div className="text-orange-400 font-black text-5xl mb-1">
+                R$ 129<span className="text-3xl">,90</span>
+              </div>
+              <div className="text-slate-300 text-lg">por mês</div>
+            </div>
+          </div>
+
+          {/* Mobile Economy Card - igual à segunda imagem */}
+          <div className="bg-green-600/90 backdrop-blur-sm rounded-2xl p-6 mb-6">
+            <div className="text-center text-white">
+              <div className="text-lg font-bold mb-2">💰 Economia de R$ 120 nos primeiros 3 meses!</div>
+              <div className="text-base opacity-90">Promoção exclusiva para novos clientes</div>
+            </div>
+          </div>
+
+          {/* Mobile CTA Button */}
+          <div className="text-center">
+            <TouchButton 
+              onClick={handleWhatsAppClick}
+              className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-black py-4 px-8 rounded-2xl shadow-lg text-lg"
+            >
+              🚀 Contratar Agora
+            </TouchButton>
+          </div>
+        </div>
+      </section>
+
+      {/* Plans Section - Desktop Version */}
+      <section id="planos-desktop" className="relative overflow-hidden pt-5 pb-20 px-4 hidden lg:block" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
         
         {/* Sophisticated Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-blue-500/8"></div>
