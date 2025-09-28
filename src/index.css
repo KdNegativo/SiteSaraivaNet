@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 @layer base {
-  /* FORÇA O SITE A SEMPRE SER LARANJA - MODO CLARO TRAVADO */
+  /* Definições de cores consistentes para modo claro e escuro */
   :root {
     --background: 24 100% 96%;
     --foreground: 16 100% 10%;
@@ -35,6 +35,37 @@
     --ring: 20 100% 50%;
 
     --radius: 0.5rem;
+  }
+
+  /* Definições para modo escuro mantendo o laranja */
+  .dark {
+    --background: 16 20% 8%;
+    --foreground: 24 100% 95%;
+
+    --card: 16 20% 10%;
+    --card-foreground: 24 100% 90%;
+
+    --popover: 16 20% 10%;
+    --popover-foreground: 24 100% 90%;
+
+    --primary: 20 100% 60%;
+    --primary-foreground: 16 20% 8%;
+
+    --secondary: 16 20% 15%;
+    --secondary-foreground: 24 100% 85%;
+
+    --muted: 16 20% 12%;
+    --muted-foreground: 24 50% 70%;
+
+    --accent: 20 100% 65%;
+    --accent-foreground: 16 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 16 20% 20%;
+    --input: 16 20% 15%;
+    --ring: 20 100% 60%;
   }
 }
 
@@ -471,18 +502,9 @@
   border-bottom-color: hsl(var(--orange-dark));
 }
 
-/* TRAVA O SITE NO MODO CLARO - NUNCA MUDA */
-* {
-  color-scheme: light only !important;
-}
-
+/* Permite alternância entre modo claro e escuro */
 html {
-  color-scheme: light only !important;
-}
-
-body {
-  color-scheme: light only !important;
-  background: hsl(24 100% 96%) !important;
+  color-scheme: light dark;
 }
 
 /* Elegant text shadows for better readability */
