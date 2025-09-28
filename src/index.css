@@ -517,6 +517,7 @@
 /* BLINDAGEM das cores - Força o uso das cores exatas da imagem em QUALQUER modo */
 body {
   background-color: #FF6600; /* Laranja exato da imagem */
+  color-scheme: light dark; /* Sinaliza ao navegador que já gerenciamos os temas */
 }
 
 /* Anula a tentativa do navegador de mudar o 'hue' (matiz) no modo escuro */
