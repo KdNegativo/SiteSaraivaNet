@@ -514,6 +514,33 @@
   border-bottom-color: hsl(var(--red-dark));
 }
 
+/* BLINDAGEM das cores - Força o uso das cores exatas da imagem em QUALQUER modo */
+body {
+  background-color: #FF6600; /* Laranja exato da imagem */
+}
+
+/* Anula a tentativa do navegador de mudar o 'hue' (matiz) no modo escuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #FF6600; /* Força o mesmo laranja! */
+  }
+  
+  /* Garante que o gradiente permaneça com as cores originais */
+  .orange-gradient-bg {
+    background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
+  }
+  
+  .gradient-primary {
+    background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
+  }
+  
+  .gradient-animated {
+    background: linear-gradient(-45deg, #FF6600, #FF8C00, #FF4500, #CC0000) !important;
+    background-size: 300% 300%;
+    animation: gradient-shift 6s ease infinite;
+  }
+}
+
 /* Permite alternância entre modo claro e escuro */
 html {
   color-scheme: light dark;
