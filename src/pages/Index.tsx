@@ -910,16 +910,16 @@ const Index = () => {
             {/* Telefone */}
             <TouchButton 
               onClick={handlePhoneClick}
-              className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105 cursor-pointer text-left"
+              className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-lg rounded-3xl p-8 border border-gray-200/50 dark:border-gray-600/50 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 cursor-pointer text-left shadow-lg"
             >
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-xl">
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-1">Telefone</h3>
-                  <p className="text-white/90 text-lg font-semibold">(89) 99439-5789</p>
-                  <p className="text-sm text-white/70">Toque para ligar</p>
+                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">Telefone</h3>
+                  <p className="text-gray-700 dark:text-gray-200 text-lg font-semibold">(89) 99439-5789</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Toque para ligar</p>
                 </div>
               </div>
             </TouchButton>
