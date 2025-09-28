@@ -925,29 +925,29 @@ const Index = () => {
             </TouchButton>
 
             {/* Endereço */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+            <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-lg rounded-3xl p-8 border border-gray-200/50 dark:border-gray-600/50 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-xl">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-1">Endereço</h3>
-                  <p className="text-white/90 text-lg font-semibold">Rua Fernando Silva, Centro</p>
-                  <p className="text-sm text-white/70">Eliseu Martins - PI</p>
+                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">Endereço</h3>
+                  <p className="text-gray-700 dark:text-gray-200 text-lg font-semibold">Rua Fernando Silva, Centro</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Eliseu Martins - PI</p>
                 </div>
               </div>
             </div>
 
             {/* Horário */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+            <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-lg rounded-3xl p-8 border border-gray-200/50 dark:border-gray-600/50 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-xl">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-1">Horário</h3>
-                  <p className="text-white/90 text-lg font-semibold">Segunda a Sábado</p>
-                  <p className="text-sm text-white/70">8h às 18h</p>
+                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">Horário</h3>
+                  <p className="text-gray-700 dark:text-gray-200 text-lg font-semibold">Segunda a Sábado</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">8h às 18h</p>
                 </div>
               </div>
             </div>
