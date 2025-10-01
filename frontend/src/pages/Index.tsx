@@ -253,18 +253,19 @@ const Index = () => {
               {/* Left Column - Textos e CTA */}
               <div className="flex-1 max-w-xl">
                 <AnimatedSection animation="fade-up">
-                  {/* Título Principal MUITO maior */}
-                  <h1 className="text-white font-black leading-tight mb-8" style={{
-                    fontSize: 'clamp(4rem, 8vw, 8rem)',
-                    lineHeight: '0.9',
+                  {/* Título Principal - tamanho ajustado */}
+                  <h1 className="text-white font-black leading-tight mb-10" style={{
+                    fontSize: 'clamp(3.5rem, 6vw, 6rem)',
+                    lineHeight: '1.05',
                     fontWeight: '900',
-                    textShadow: '5px 5px 25px rgba(0,0,0,0.8), 0 0 50px rgba(255,102,0,0.4)'
+                    textShadow: '5px 5px 25px rgba(0,0,0,0.8), 0 0 50px rgba(255,102,0,0.4)',
+                    letterSpacing: '-0.02em'
                   }}>
                     Internet +<br/>SaraivaTV
                   </h1>
                   
-                  {/* Subtítulo */}
-                  <p className="text-white/90 text-xl mb-8 flex items-center" style={{
+                  {/* Subtítulo com espaçamento melhorado */}
+                  <p className="text-white/90 text-2xl mb-10 flex items-center" style={{
                     textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
                   }}>
                     🚀 Internet ultrarrápida + App gratuito
