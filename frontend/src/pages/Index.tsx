@@ -101,34 +101,32 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Fundo Laranja Moderno e Bonito */}
-      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center" style={{
-        background: 'linear-gradient(135deg, #ff6b35 0%, #ff8c42 20%, #ffa94d 40%, #ff7f50 60%, #ff6347 80%, #ff4500 100%)'
-      }}>
-        {/* Camada de mesh gradient animado */}
-        <div className="absolute inset-0 opacity-50">
-          <div className="absolute top-0 left-0 w-full h-full" style={{
-            background: 'radial-gradient(circle at 20% 30%, rgba(255, 200, 100, 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255, 150, 50, 0.3) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(255, 100, 80, 0.2) 0%, transparent 50%)'
+      {/* Hero Section - Fundo Laranja Animado e Leve para Mobile */}
+      <section id="inicio" className="hero-animated relative overflow-hidden min-h-screen flex items-center">
+        {/* Gradiente animado de base - Otimizado para performance */}
+        <div className="absolute inset-0 animate-gradient-shift" style={{
+          background: 'linear-gradient(135deg, #ff6b35 0%, #ff8c42 25%, #ffa94d 50%, #ff7f50 75%, #ff4500 100%)',
+          backgroundSize: '200% 200%'
+        }}></div>
+        
+        {/* Camadas de luz animadas - Leve usando apenas CSS */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 animate-light-1" style={{
+            background: 'radial-gradient(circle at 30% 40%, rgba(255, 220, 100, 0.6) 0%, transparent 60%)'
+          }}></div>
+          <div className="absolute inset-0 animate-light-2" style={{
+            background: 'radial-gradient(circle at 70% 60%, rgba(255, 150, 80, 0.5) 0%, transparent 60%)'
           }}></div>
         </div>
         
-        {/* Esferas flutuantes suaves */}
-        <div className="absolute inset-0 overflow-hidden opacity-60">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-yellow-400/30 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-red-500/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s', animationDuration: '12s' }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-orange-300/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s', animationDuration: '15s' }}></div>
-        </div>
+        {/* Padrão de pontos muito leve */}
+        <div className="absolute inset-0 opacity-[0.06]" style={{
+          backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }}></div>
         
-        {/* Padrões sutis */}
-        <div className="absolute inset-0 opacity-[0.08]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.4) 1.5px, transparent 1.5px)`,
-            backgroundSize: '60px 60px'
-          }}></div>
-        </div>
-        
-        {/* Overlay suave para profundidade */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10"></div>
+        {/* Overlay suave */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-black/10"></div>
         
         {/* Mobile Version */}
         <div className="lg:hidden w-full px-6 py-20 relative z-20">
