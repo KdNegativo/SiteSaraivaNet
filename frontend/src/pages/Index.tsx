@@ -675,21 +675,37 @@ const Index = () => {
 
       {/* SaraivaTV Features Section - ULTRA PREMIUM */}
       <section className="py-16 px-4 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fff5f0 0%, #ffede0 30%, #ffe5d4 70%, #ffd4c4 100%)'}}>
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full" style={{
+        {/* Padrões sofisticados */}
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute inset-0" style={{
             backgroundImage: `
-              radial-gradient(circle at 20% 20%, rgba(255,165,0,0.4) 2px, transparent 2px),
-              radial-gradient(circle at 80% 80%, rgba(255,100,0,0.3) 2px, transparent 2px),
-              linear-gradient(135deg, transparent 40%, rgba(255,165,0,0.1) 50%, transparent 60%)
+              linear-gradient(rgba(255, 140, 0, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 140, 0, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '100px 100px, 80px 80px, 160px 160px'
+            backgroundSize: '60px 60px'
+          }}></div>
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              radial-gradient(circle at 20% 20%, rgba(255,165,0,0.3) 3px, transparent 3px),
+              radial-gradient(circle at 80% 80%, rgba(255,100,0,0.25) 2px, transparent 2px)
+            `,
+            backgroundSize: '120px 120px, 90px 90px'
+          }}></div>
+          <div className="absolute inset-0" style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 80px,
+              rgba(255,140,0,0.08) 80px,
+              rgba(255,140,0,0.08) 160px
+            )`
           }}></div>
         </div>
         
-        {/* Floating Elements */}
-        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-orange-300/40 to-red-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
-        <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-tr from-purple-300/30 to-orange-300/40 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
+        {/* Floating Elements suaves */}
+        <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-orange-300/40 to-red-300/30 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s' }}></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-tr from-purple-300/30 to-orange-300/35 rounded-full blur-3xl animate-float" style={{ animationDuration: '15s', animationDelay: '3s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-56 h-56 bg-gradient-to-bl from-yellow-300/25 to-pink-300/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '18s', animationDelay: '6s' }}></div>
         
         <div className="w-full px-6 max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
