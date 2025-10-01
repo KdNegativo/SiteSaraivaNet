@@ -514,44 +514,17 @@
   border-bottom-color: hsl(var(--red-dark));
 }
 
-/* BLINDAGEM das cores - Força o uso das cores exatas da imagem APENAS onde necessário */
+/* Fundo base do site */
 body {
-  background-color: #f8fafc; /* Fundo claro e legível para o site */
-  color-scheme: light dark; /* Sinaliza ao navegador que já gerenciamos os temas */
+  background-color: #f8fafc;
+  color-scheme: light dark;
 }
 
-/* Aplica o laranja intenso APENAS no hero section */
-.hero-section {
-  background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
-  filter: none !important;
-  mix-blend-mode: normal !important;
-}
-
-/* Anula a tentativa do navegador de mudar o 'hue' (matiz) no modo escuro */
+/* Modo escuro */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #1a1a1a !important; /* Fundo escuro para modo escuro */
-    color: white !important; /* Texto claro para contraste */
-  }
-  
-  /* Proteção APENAS para o hero section */
-  .hero-section {
-    background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-  }
-  
-  /* Proteção para gradientes principais */
-  .orange-gradient-bg {
-    background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-  }
-  
-  .gradient-primary {
-    background: linear-gradient(135deg, #FF6600 0%, #FF4500 25%, #FF3300 50%, #FF1100 75%, #CC0000 100%) !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
+    background-color: #1a1a1a !important;
+    color: white !important;
   }
 }
 
