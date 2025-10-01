@@ -57,19 +57,20 @@ const MobileNavigation = () => {
 
   return (
     <>
-      {/* Botão do Menu */}
+      {/* Botão do Menu - Aumentado e mais visível */}
       <button
         onClick={toggleMenu}
-        className="relative z-60 w-10 h-10 bg-transparent border-2 border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all duration-200 active:scale-95"
+        className="relative z-[100] w-12 h-12 bg-white/20 backdrop-blur-sm border-2 border-white/40 rounded-xl flex items-center justify-center text-white hover:bg-white/30 transition-all duration-200 active:scale-95 shadow-lg"
         style={{ 
           WebkitTapHighlightColor: 'transparent',
           touchAction: 'manipulation'
         }}
+        aria-label="Menu"
       >
         {isOpen ? (
-          <X className="h-5 w-5" />
+          <X className="h-6 w-6" />
         ) : (
-          <Menu className="h-5 w-5" />
+          <Menu className="h-6 w-6" />
         )}
       </button>
 
