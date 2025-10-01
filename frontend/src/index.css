@@ -1455,7 +1455,26 @@ html {
   .animate-float-slow,
   .animate-float-slower,
   .animate-float-reverse,
-  .animate-shine {
+  .animate-shine,
+  .animate-tech-grid,
+  .animate-data-flow-1,
+  .animate-data-flow-2,
+  .animate-data-flow-3,
+  .animate-data-flow-vertical-1,
+  .animate-data-flow-vertical-2,
+  .animate-data-flow-vertical-3,
+  .animate-particle-1,
+  .animate-particle-2,
+  .animate-particle-3,
+  .animate-particle-4,
+  .animate-particle-5,
+  .animate-wifi-pulse-1,
+  .animate-wifi-pulse-2,
+  .animate-wifi-pulse-3,
+  .animate-speed-lines,
+  .animate-signal-expand-1,
+  .animate-signal-expand-2,
+  .animate-signal-expand-3 {
     animation: none !important;
   }
 }
