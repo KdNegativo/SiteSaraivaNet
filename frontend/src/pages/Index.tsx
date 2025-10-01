@@ -520,7 +520,7 @@ const Index = () => {
       </section>
 
       {/* Plans Section - Desktop Version com fundo premium */}
-      <section id="planos-desktop" className="relative overflow-hidden pt-5 pb-20 px-4 hidden lg:block" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
+      <section className="relative overflow-hidden pt-5 pb-20 px-4 hidden lg:block" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
         
         {/* Padrões geométricos elegantes */}
         <div className="absolute inset-0 opacity-10">
