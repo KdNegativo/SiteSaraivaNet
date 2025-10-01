@@ -298,9 +298,9 @@ const Index = () => {
             </div>
 
             {/* Benefits Cards - Design Premium */}
-            <div className="mt-16">
+            <div className="mt-20">
               <AnimatedSection animation="fade-up">
-                <div className="grid grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div className="grid grid-cols-4 gap-8 max-w-6xl mx-auto">
                   <div className="group bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 text-center shadow-2xl border-2 border-white/20 hover:scale-105 transition-all duration-300 hover:shadow-orange-500/50 backdrop-blur-sm">
                     <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300 shadow-lg">
                       <Wifi className="w-8 h-8 text-white" />
