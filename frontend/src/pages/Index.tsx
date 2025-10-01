@@ -209,7 +209,7 @@ const Index = () => {
               </div>
 
               {/* Stats Mobile - embaixo dos cards com design premium */}
-              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto mt-8">
+              <div className="grid grid-cols-2 gap-5 max-w-lg mx-auto mt-12 px-4">
                 <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-2xl p-5 text-center shadow-2xl border border-white/10 hover:scale-105 transition-all duration-300">
                   <div className="text-white font-black text-3xl mb-2 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">964+</div>
                   <div className="text-red-100 font-bold text-xs uppercase tracking-wider">Clientes</div>
