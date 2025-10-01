@@ -277,16 +277,16 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Desktop Version - Layout com melhor espaçamento */}
+        {/* Desktop Version - Layout com muito melhor espaçamento */}
         <div className="hidden lg:block w-full relative z-20">
-          <div className="container mx-auto px-8 py-20">
-            <div className="flex items-center justify-between gap-16">
+          <div className="container mx-auto px-12 py-24">
+            <div className="flex items-center justify-between gap-20">
               
               {/* Left Column - Textos e CTA */}
-              <div className="flex-1 max-w-xl">
+              <div className="flex-1 max-w-2xl">
                 <AnimatedSection animation="fade-up">
                   {/* Título Principal - tamanho ajustado */}
-                  <h1 className="text-white font-black leading-tight mb-10 drop-shadow-2xl" style={{
+                  <h1 className="text-white font-black leading-tight mb-12 drop-shadow-2xl" style={{
                     fontSize: 'clamp(3.5rem, 6vw, 6rem)',
                     lineHeight: '1.05',
                     fontWeight: '900',
@@ -297,7 +297,7 @@ const Index = () => {
                   </h1>
                   
                   {/* Subtítulo com espaçamento melhorado */}
-                  <p className="text-white/90 text-2xl mb-10 flex items-center" style={{
+                  <p className="text-white/90 text-2xl mb-14 flex items-center" style={{
                     textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
                   }}>
                     🚀 Internet ultrarrápida + App gratuito
@@ -306,7 +306,7 @@ const Index = () => {
                   {/* Botão CTA moderno */}
                   <TouchButton 
                     onClick={handleWhatsAppClick}
-                    className="group relative bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 hover:from-yellow-300 hover:via-orange-400 hover:to-yellow-300 text-gray-900 font-black px-10 py-5 rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-110 transition-all duration-300 text-xl border-2 border-white/40 backdrop-blur-sm"
+                    className="group relative bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 hover:from-yellow-300 hover:via-orange-400 hover:to-yellow-300 text-gray-900 font-black px-12 py-6 rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-110 transition-all duration-300 text-xl border-2 border-white/40 backdrop-blur-sm"
                   >
                     <span className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></span>
                     <span className="relative">🚀 Contratar Agora</span>
