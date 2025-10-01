@@ -135,16 +135,16 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10"></div>
         
         {/* Mobile Version */}
-        <div className="lg:hidden w-full px-6 py-20">
-          <div className="relative z-10 text-center space-y-10">
+        <div className="lg:hidden w-full px-6 py-20 relative z-20">
+          <div className="text-center space-y-10">
             <AnimatedSection animation="fade-up">
               {/* Title tamanho ajustado no mobile */}
               <div className="space-y-8">
-                <h1 className="font-black text-white leading-tight" style={{
+                <h1 className="font-black text-white leading-tight drop-shadow-2xl" style={{
                   fontSize: 'clamp(40px, 11vw, 64px)',
                   lineHeight: '1.1',
                   fontWeight: '900',
-                  textShadow: '4px 4px 20px rgba(0,0,0,0.7), 0 0 40px rgba(255,102,0,0.3)',
+                  textShadow: '4px 4px 20px rgba(0,0,0,0.7), 2px 2px 10px rgba(0,0,0,0.5)',
                   letterSpacing: '-0.02em'
                 }}>
                   Internet +<br/>SaraivaTV
