@@ -4,24 +4,24 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const HeroCarousel = () => {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1400&auto=format&fit=crop",
-      alt: "Setup Gaming Profissional - Internet Ultra Rápida SaraivaNet"
+      src: "https://images.unsplash.com/photo-1758524944389-51662fefe820?q=80&w=1400&auto=format&fit=crop",
+      alt: "Casal Feliz Jogando Videogame - Diversão com Internet SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?q=80&w=1400&auto=format&fit=crop",
-      alt: "Streaming de TV - Assista Seus Programas Favoritos com SaraivaNet"
+      src: "https://images.unsplash.com/photo-1758524944381-ae87d8feae1a?q=80&w=1400&auto=format&fit=crop",
+      alt: "Amigos se Divertindo com Games - Internet Ultra Rápida SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1400&auto=format&fit=crop",
-      alt: "Tecnologia e Trabalho Remoto - Conectividade SaraivaNet"
+      src: "https://images.unsplash.com/photo-1758612897213-fbe111d74c8a?q=80&w=1400&auto=format&fit=crop",
+      alt: "Criança Aproveitando Games Online - Conexão Estável SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1750712263185-edde9f359e33?q=80&w=1400&auto=format&fit=crop",
-      alt: "WiFi Moderno - Rede de Alta Velocidade SaraivaNet"
+      src: "https://images.unsplash.com/photo-1563208964-a455770abf67?q=80&w=1400&auto=format&fit=crop",
+      alt: "Amigas Comemorando Vitória em Jogo Online - SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?q=80&w=1400&auto=format&fit=crop",
-      alt: "Velocidade Extrema - Internet Fibra Óptica SaraivaNet"
+      src: "https://images.pexels.com/photos/8885038/pexels-photo-8885038.jpeg?auto=compress&cs=tinysrgb&w=1400",
+      alt: "Amigos Juntos Jogando Online - Diversão Garantida com SaraivaNet"
     }
   ];
 
