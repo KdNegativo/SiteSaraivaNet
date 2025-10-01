@@ -53,17 +53,20 @@ const Index = () => {
       {/* Floating Components */}
       <ChatBot />
       
-      {/* Header */}
-      <header style={{background: '#ff6600', borderBottomColor: '#ff4400'}} className="fixed top-0 left-0 right-0 shadow-xl px-4 py-3 border-b-4 z-50">
+      {/* Header - Modern Glassmorphism Design */}
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-gradient-to-r from-orange-600/95 via-red-600/95 to-orange-700/95 border-b border-white/10 shadow-2xl">
         {/* Mobile Layout */}
         <div className="md:hidden">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between px-4 py-4">
             <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
+                <Wifi className="w-5 h-5 text-white" />
+              </div>
               <div className="text-white">
-                <h1 className="text-lg font-bold">SaraivaNet</h1>
-                <div className="text-xs text-orange-100 font-medium flex items-center">
+                <h1 className="text-lg font-black tracking-tight">SaraivaNet</h1>
+                <div className="text-xs text-orange-100 font-semibold flex items-center">
                   <MapPin className="w-2.5 h-2.5 mr-1" />
-                  <span className="bg-gradient-to-r from-white/80 to-white/60 bg-clip-text text-transparent font-bold">Eliseu Martins - PI</span>
+                  <span>Eliseu Martins - PI</span>
                 </div>
               </div>
             </div>
@@ -74,24 +77,27 @@ const Index = () => {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden md:flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+        <div className="hidden md:flex items-center justify-between px-8 py-4">
+          <div className="flex items-center space-x-4">
+            <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl hover:scale-105 transition-transform duration-300">
+              <Wifi className="w-7 h-7 text-white" />
+            </div>
             <div className="text-white">
-              <h1 className="text-2xl font-bold">SaraivaNet</h1>
-              <div className="text-xs text-orange-100 font-medium flex items-center">
-                <MapPin className="w-3 h-3 mr-1" />
+              <h1 className="text-3xl font-black tracking-tight bg-gradient-to-r from-white to-orange-100 bg-clip-text text-transparent">SaraivaNet</h1>
+              <div className="text-sm text-orange-100 font-semibold flex items-center">
+                <MapPin className="w-3.5 h-3.5 mr-1.5" />
                 Eliseu Martins - PI
               </div>
             </div>
           </div>
           
-          <nav className="flex items-center space-x-6">
-            <TouchButton onClick={() => handleSmoothScroll('inicio')} className="text-white hover:text-orange-200 transition-colors font-medium">Início</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('planos')} className="text-white hover:text-orange-200 transition-colors font-medium">Planos</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('cobertura')} className="text-white hover:text-orange-200 transition-colors font-medium">Cobertura</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('sobre')} className="text-white hover:text-orange-200 transition-colors font-medium">Sobre</TouchButton>
-            <TouchButton onClick={() => handleSmoothScroll('contato')} className="text-white hover:text-orange-200 transition-colors font-medium">Contato</TouchButton>
-            <Link to="/chips"><TouchButton className="text-white hover:text-orange-200 transition-colors font-semibold">Chips</TouchButton></Link>
+          <nav className="flex items-center space-x-2">
+            <TouchButton onClick={() => handleSmoothScroll('inicio')} className="text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-semibold">Início</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('planos')} className="text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-semibold">Planos</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('cobertura')} className="text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-semibold">Cobertura</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('sobre')} className="text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-semibold">Sobre</TouchButton>
+            <TouchButton onClick={() => handleSmoothScroll('contato')} className="text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-semibold">Contato</TouchButton>
+            <Link to="/chips"><TouchButton className="bg-white/20 hover:bg-white/30 text-white px-5 py-2 rounded-lg transition-all duration-300 font-bold backdrop-blur-sm border border-white/20">Chips</TouchButton></Link>
           </nav>
 
           <div className="flex items-center space-x-4">
