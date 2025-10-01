@@ -385,8 +385,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Anchor para scroll */}
+      <div id="planos"></div>
+      
       {/* Plans Section - Mobile Design com fundo melhorado */}
-      <section id="planos" className="relative overflow-hidden lg:hidden" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
+      <section className="relative overflow-hidden lg:hidden" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
         {/* Padrões de fundo elegantes */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
