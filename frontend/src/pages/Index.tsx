@@ -248,12 +248,13 @@ const Index = () => {
                     🚀 Internet ultrarrápida + App gratuito
                   </p>
 
-                  {/* Botão CTA */}
+                  {/* Botão CTA moderno */}
                   <TouchButton 
                     onClick={handleWhatsAppClick}
-                    className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-8 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+                    className="group relative bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 hover:from-yellow-300 hover:via-orange-400 hover:to-yellow-300 text-gray-900 font-black px-10 py-5 rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-110 transition-all duration-300 text-xl border-2 border-white/40 backdrop-blur-sm"
                   >
-                    🚀 Contratar Agora
+                    <span className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></span>
+                    <span className="relative">🚀 Contratar Agora</span>
                   </TouchButton>
                 </AnimatedSection>
               </div>
