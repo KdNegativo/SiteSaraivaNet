@@ -314,16 +314,13 @@ const Index = () => {
                 </AnimatedSection>
               </div>
 
-              {/* Right Column - Carrossel */}
+              {/* Right Column - Carrossel maior */}
               <div className="flex-1 max-w-2xl">
-                <AnimatedSection animation="slide-right">
-                  <div 
-                    className="w-full rounded-2xl overflow-hidden shadow-2xl" 
-                    style={{
-                      aspectRatio: '16/10'
-                    }}
-                  >
-                    <HeroCarousel />
+                <AnimatedSection animation="fade-up">
+                  <div className="w-full" style={{aspectRatio: '16/9'}}>
+                    <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30">
+                      <HeroCarousel />
+                    </div>
                   </div>
                 </AnimatedSection>
               </div>
