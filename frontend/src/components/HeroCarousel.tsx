@@ -5,23 +5,23 @@ const HeroCarousel = () => {
   const images = [
     {
       src: "https://images.unsplash.com/photo-1758524944389-51662fefe820?q=80&w=1400&auto=format&fit=crop",
-      alt: "Casal Feliz Jogando Videogame - Diversão com Internet SaraivaNet"
+      alt: "Casal Feliz Jogando Videogame - Gaming sem Lag com SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1758524944381-ae87d8feae1a?q=80&w=1400&auto=format&fit=crop",
-      alt: "Amigos se Divertindo com Games - Internet Ultra Rápida SaraivaNet"
+      src: "https://images.pexels.com/photos/14756354/pexels-photo-14756354.jpeg?auto=compress&cs=tinysrgb&w=1400",
+      alt: "Assistindo Streaming Netflix Juntos - Entretenimento com SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1758612897213-fbe111d74c8a?q=80&w=1400&auto=format&fit=crop",
-      alt: "Criança Aproveitando Games Online - Conexão Estável SaraivaNet"
+      src: "https://images.unsplash.com/photo-1758524942454-8f7c57df055a?q=80&w=1400&auto=format&fit=crop",
+      alt: "Videochamada em Família - Conecte-se com Quem Ama via SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1563208964-a455770abf67?q=80&w=1400&auto=format&fit=crop",
-      alt: "Amigas Comemorando Vitória em Jogo Online - SaraivaNet"
+      src: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1400",
+      alt: "Estudando Online - Educação à Distância com Internet SaraivaNet"
     },
     {
-      src: "https://images.pexels.com/photos/8885038/pexels-photo-8885038.jpeg?auto=compress&cs=tinysrgb&w=1400",
-      alt: "Amigos Juntos Jogando Online - Diversão Garantida com SaraivaNet"
+      src: "https://images.pexels.com/photos/7414080/pexels-photo-7414080.jpeg?auto=compress&cs=tinysrgb&w=1400",
+      alt: "Crianças Navegando Juntas - Internet Segura para Família SaraivaNet"
     }
   ];
 
