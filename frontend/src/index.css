@@ -706,6 +706,133 @@ html {
   will-change: transform, opacity;
 }
 
+/* Animações Premium para Fundo Dinâmico */
+@keyframes mesh-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.1) rotate(120deg);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translate(-20px, 30px) scale(0.9) rotate(240deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes mesh-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-30px, -30px) scale(1.2) rotate(180deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes wave-1 {
+  0% {
+    transform: translateX(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(360deg);
+  }
+}
+
+@keyframes wave-2 {
+  0% {
+    transform: translateX(100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-100%) rotate(-360deg);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes float-slower {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-180deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(25px) scale(1.1);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+/* Classes de animação */
+.animate-mesh-1 {
+  animation: mesh-1 18s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-mesh-2 {
+  animation: mesh-2 22s ease-in-out infinite;
+  animation-delay: 3s;
+  will-change: transform, opacity;
+}
+
+.animate-wave-1 {
+  animation: wave-1 25s linear infinite;
+  will-change: transform;
+}
+
+.animate-wave-2 {
+  animation: wave-2 30s linear infinite;
+  animation-delay: 5s;
+  will-change: transform;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-slower {
+  animation: float-slower 12s ease-in-out infinite;
+  animation-delay: 2s;
+  will-change: transform;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 10s ease-in-out infinite;
+  animation-delay: 4s;
+  will-change: transform;
+}
+
+.animate-shine {
+  animation: shine 3s ease-in-out infinite;
+  animation-delay: 1s;
+  will-change: transform;
+}
+
 @keyframes morphBorder {
   0%, 100% { 
     border-radius: 2rem;
