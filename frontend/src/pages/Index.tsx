@@ -354,9 +354,23 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - Mobile Design igual às imagens */}
+      {/* Plans Section - Mobile Design com fundo melhorado */}
       <section id="planos" className="relative overflow-hidden lg:hidden" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
-        <div className="px-4 py-8">
+        {/* Padrões de fundo elegantes */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+              radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px, 80px 80px'
+          }}></div>
+        </div>
+        
+        {/* Gradiente suave overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent"></div>
+        
+        <div className="px-4 py-8 relative z-10">
           {/* Mobile Title Section */}
           <div className="text-center mb-8">
             <h2 className="text-white text-3xl font-bold mb-4" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
