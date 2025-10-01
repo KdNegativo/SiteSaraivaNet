@@ -164,24 +164,24 @@ const Index = () => {
                   Internet +<br/>SaraivaTV
                 </h1>
                 
-                {/* Subtitle maior */}
-                <p className="text-white/95 font-semibold max-w-[56ch] mx-auto" style={{
-                  fontSize: 'clamp(18px, 5vw, 24px)',
+                {/* Subtitle com melhor espaçamento */}
+                <p className="text-white/95 font-semibold max-w-[56ch] mx-auto mt-6" style={{
+                  fontSize: 'clamp(16px, 4.5vw, 22px)',
                   textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
                 }}>
                   🚀 Internet ultrarrápida + App gratuito
                 </p>
               </div>
 
-              {/* Carousel maior no mobile */}
-              <div className="w-full max-w-lg mx-auto mt-10" style={{aspectRatio: '14/9'}}>
+              {/* Carousel com melhor espaçamento */}
+              <div className="w-full max-w-lg mx-auto mt-12" style={{aspectRatio: '14/9'}}>
                 <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl border-2 border-white/20">
                   <HeroCarousel />
                 </div>
               </div>
 
-              {/* Benefits Cards modernos com hover effects */}
-              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto mt-16">
+              {/* Benefits Cards modernos com hover effects e mais espaçamento */}
+              <div className="grid grid-cols-2 gap-5 max-w-lg mx-auto mt-16 px-4">
                 <div className="group bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-6 text-center shadow-2xl border-2 border-white/20 hover:scale-105 transition-all duration-300 hover:shadow-orange-500/50 backdrop-blur-sm">
                   <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
                     <Wifi className="w-6 h-6 text-white" />
