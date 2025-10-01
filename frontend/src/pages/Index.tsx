@@ -205,9 +205,9 @@ const Index = () => {
                 </p>
               </div>
 
-              {/* Carousel com muito mais espaçamento */}
-              <div className="w-full max-w-lg mx-auto mt-16" style={{aspectRatio: '14/9'}}>
-                <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl border-2 border-white/20">
+              {/* Carousel maior */}
+              <div className="w-full max-w-2xl mx-auto mt-16" style={{aspectRatio: '16/10'}}>
+                <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30">
                   <HeroCarousel />
                 </div>
               </div>
