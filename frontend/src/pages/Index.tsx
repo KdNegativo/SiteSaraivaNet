@@ -53,7 +53,7 @@ const Index = () => {
       <ChatBot />
       
       {/* Header - Modern Glassmorphism Design */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-gradient-to-r from-orange-600/95 via-red-600/95 to-orange-700/95 border-b border-white/10 shadow-2xl">
+      <header className="fixed top-0 left-0 right-0 z-[60] backdrop-blur-xl bg-gradient-to-r from-orange-600/95 via-red-600/95 to-orange-700/95 border-b border-white/10 shadow-2xl">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="flex items-center justify-between px-4 py-4">
