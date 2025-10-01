@@ -203,14 +203,17 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* CTA Button maior no mobile */}
+              {/* CTA Button moderno com animação */}
               <div className="mt-12">
                 <TouchButton 
                   onClick={handleWhatsAppClick}
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-black px-10 rounded-full shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center border-2 border-white/30"
-                  style={{height: '56px', fontSize: '20px'}}
+                  className="group relative bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 hover:from-yellow-300 hover:via-orange-400 hover:to-yellow-300 text-gray-900 font-black px-12 rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-110 transition-all duration-300 inline-flex items-center border-2 border-white/40 backdrop-blur-sm animate-pulse"
+                  style={{height: '60px', fontSize: '20px'}}
                 >
-                  🚀 Contratar Agora
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></span>
+                  <span className="relative flex items-center">
+                    🚀 Contratar Agora
+                  </span>
                 </TouchButton>
               </div>
             </AnimatedSection>
