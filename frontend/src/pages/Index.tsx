@@ -862,9 +862,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section - Simplified */}
-      <section id="sobre" className="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
-        <div className="w-full px-6">
+      {/* About Section - Fundo melhorado */}
+      <section id="sobre" className="py-16 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        {/* Padrões sutis de fundo */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.1) 2px, transparent 2px),
+              radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.08) 1px, transparent 1px)
+            `,
+            backgroundSize: '100px 100px, 70px 70px'
+          }}></div>
+        </div>
+        
+        {/* Elementos flutuantes suaves */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-orange-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-64 h-64 bg-blue-200/15 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="w-full px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Sobre a SaraivaNet</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
