@@ -77,13 +77,13 @@ const MobileNavigation = () => {
       {/* Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90]"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Menu Lateral */}
-      <div className={`fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-gradient-to-b from-orange-600 to-red-600 z-50 transform transition-transform duration-300 ease-in-out ${
+      <div className={`fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-gradient-to-b from-orange-600 to-red-600 z-[95] shadow-2xl transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="p-6 h-full overflow-y-auto">
