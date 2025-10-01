@@ -812,3 +812,36 @@ html {
   background-clip: text;
   filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.3));
 }
+
+/* Otimizações para Mobile - Performance */
+@media (max-width: 768px) {
+  /* Reduz complexidade de animações em mobile */
+  .animate-gradient-shift {
+    animation-duration: 20s; /* Mais lento = menos CPU */
+  }
+  
+  .animate-light-1,
+  .animate-light-2 {
+    animation-duration: 30s;
+  }
+  
+  /* Reduz blur em mobile para melhor performance */
+  .blur-3xl {
+    filter: blur(40px);
+  }
+  
+  .blur-2xl {
+    filter: blur(30px);
+  }
+}
+
+/* Respeita preferências de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .animate-gradient-shift,
+  .animate-light-1,
+  .animate-light-2,
+  .animate-float,
+  .animate-shimmer {
+    animation: none !important;
+  }
+}
