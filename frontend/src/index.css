@@ -675,14 +675,14 @@ html {
 
 @keyframes shimmer {
   0% { 
-    transform: translateX(-100%);
+    transform: translateX(-100%) skewX(-15deg);
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
   100% { 
-    transform: translateX(100%);
+    transform: translateX(100%) skewX(-15deg);
     opacity: 0;
   }
 }
