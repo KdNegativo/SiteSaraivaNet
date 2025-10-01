@@ -101,32 +101,72 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Fundo Laranja Animado e Leve para Mobile */}
+      {/* Hero Section - Fundo Laranja Ultra Premium e Animado */}
       <section id="inicio" className="hero-animated relative overflow-hidden min-h-screen flex items-center">
-        {/* Gradiente animado de base - Otimizado para performance */}
+        {/* Gradiente base vibrante e animado */}
         <div className="absolute inset-0 animate-gradient-shift" style={{
-          background: 'linear-gradient(135deg, #ff6b35 0%, #ff8c42 25%, #ffa94d 50%, #ff7f50 75%, #ff4500 100%)',
-          backgroundSize: '200% 200%'
+          background: 'linear-gradient(135deg, #ff6b35 0%, #ff8c42 15%, #ffa94d 30%, #ff7f50 45%, #ff6347 60%, #ff4500 75%, #ff6b35 100%)',
+          backgroundSize: '300% 300%'
         }}></div>
         
-        {/* Camadas de luz animadas - Leve usando apenas CSS */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 animate-light-1" style={{
-            background: 'radial-gradient(circle at 30% 40%, rgba(255, 220, 100, 0.6) 0%, transparent 60%)'
+        {/* Mesh gradient com múltiplas cores - Animado */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 animate-mesh-1 opacity-40" style={{
+            background: 'radial-gradient(circle at 20% 30%, rgba(255, 235, 59, 0.5) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255, 87, 34, 0.4) 0%, transparent 50%)'
           }}></div>
-          <div className="absolute inset-0 animate-light-2" style={{
-            background: 'radial-gradient(circle at 70% 60%, rgba(255, 150, 80, 0.5) 0%, transparent 60%)'
+          <div className="absolute inset-0 animate-mesh-2 opacity-30" style={{
+            background: 'radial-gradient(circle at 60% 40%, rgba(255, 193, 7, 0.45) 0%, transparent 55%), radial-gradient(circle at 40% 80%, rgba(244, 67, 54, 0.35) 0%, transparent 55%)'
           }}></div>
         </div>
         
-        {/* Padrão de pontos muito leve */}
-        <div className="absolute inset-0 opacity-[0.06]" style={{
-          backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
-        }}></div>
+        {/* Ondas animadas de fundo */}
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute inset-0 animate-wave-1" style={{
+            background: 'repeating-linear-gradient(45deg, transparent, transparent 80px, rgba(255, 255, 255, 0.15) 80px, rgba(255, 255, 255, 0.15) 160px)'
+          }}></div>
+          <div className="absolute inset-0 animate-wave-2" style={{
+            background: 'repeating-linear-gradient(-45deg, transparent, transparent 100px, rgba(255, 255, 255, 0.1) 100px, rgba(255, 255, 255, 0.1) 200px)'
+          }}></div>
+        </div>
         
-        {/* Overlay suave */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-black/10"></div>
+        {/* Padrões geométricos modernos */}
+        <div className="absolute inset-0 opacity-[0.12]">
+          {/* Grid pattern */}
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)
+            `,
+            backgroundSize: '80px 80px'
+          }}></div>
+          
+          {/* Dots pattern */}
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 2px)`,
+            backgroundSize: '60px 60px',
+            backgroundPosition: '0 0, 30px 30px'
+          }}></div>
+        </div>
+        
+        {/* Esferas flutuantes com blur */}
+        <div className="absolute inset-0 overflow-hidden opacity-50">
+          <div className="absolute top-10 -right-20 w-80 h-80 bg-yellow-300/40 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-red-400/35 rounded-full blur-3xl animate-float-slower"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-orange-300/40 rounded-full blur-3xl animate-float-reverse"></div>
+        </div>
+        
+        {/* Shine effect animado atravessando */}
+        <div className="absolute inset-0 overflow-hidden opacity-25">
+          <div className="absolute inset-0 animate-shine" style={{
+            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%)',
+            transform: 'translateX(-100%) skewX(-15deg)',
+            width: '50%'
+          }}></div>
+        </div>
+        
+        {/* Overlay com gradiente para profundidade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/10 via-transparent to-red-900/10"></div>
         
         {/* Mobile Version */}
         <div className="lg:hidden w-full px-6 py-20 relative z-20">
