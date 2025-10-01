@@ -245,10 +245,10 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Desktop Version - Layout igual à imagem */}
+        {/* Desktop Version - Layout com melhor espaçamento */}
         <div className="hidden lg:block w-full">
-          <div className="container mx-auto px-8 py-16">
-            <div className="flex items-center justify-between gap-12">
+          <div className="container mx-auto px-8 py-20">
+            <div className="flex items-center justify-between gap-16">
               
               {/* Left Column - Textos e CTA */}
               <div className="flex-1 max-w-xl">
