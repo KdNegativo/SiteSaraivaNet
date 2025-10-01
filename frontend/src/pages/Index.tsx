@@ -152,13 +152,14 @@ const Index = () => {
         <div className="lg:hidden w-full px-6 py-20">
           <div className="relative z-10 text-center space-y-10">
             <AnimatedSection animation="fade-up">
-              {/* Title MUITO maior no mobile */}
-              <div className="space-y-6">
-                <h1 className="font-black text-white leading-none" style={{
-                  fontSize: 'clamp(48px, 14vw, 80px)',
-                  lineHeight: '0.9',
+              {/* Title tamanho ajustado no mobile */}
+              <div className="space-y-8">
+                <h1 className="font-black text-white leading-tight" style={{
+                  fontSize: 'clamp(40px, 11vw, 64px)',
+                  lineHeight: '1.1',
                   fontWeight: '900',
-                  textShadow: '4px 4px 20px rgba(0,0,0,0.7), 0 0 40px rgba(255,102,0,0.3)'
+                  textShadow: '4px 4px 20px rgba(0,0,0,0.7), 0 0 40px rgba(255,102,0,0.3)',
+                  letterSpacing: '-0.02em'
                 }}>
                   Internet +<br/>SaraivaTV
                 </h1>
