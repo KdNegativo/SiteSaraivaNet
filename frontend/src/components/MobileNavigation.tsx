@@ -82,14 +82,18 @@ const MobileNavigation = () => {
         />
       )}
 
-      {/* Menu Lateral - Com !important para forçar visibilidade */}
+      {/* Menu Lateral - Forçando visibilidade completa */}
       <div 
-        className={`fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-gradient-to-b from-orange-600 to-red-600 shadow-2xl transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-screen w-80 max-w-[90vw] shadow-2xl transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ zIndex: 9999 }}
+        style={{ 
+          zIndex: 99999,
+          background: 'linear-gradient(180deg, #ff6600 0%, #cc0000 100%)',
+          position: 'fixed'
+        }}
       >
-        <div className="p-6 h-full overflow-y-auto">
+        <div className="p-6 h-full overflow-y-auto text-white">
           <div className="flex items-center justify-between mb-8">
             <div>
               <h1 className="text-lg font-bold text-white">SaraivaNet</h1>
