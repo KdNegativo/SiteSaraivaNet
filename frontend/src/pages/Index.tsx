@@ -122,9 +122,9 @@ const Index = () => {
         <div className="lg:hidden w-full px-6 py-20">
           <div className="relative z-10 text-center space-y-10">
             <AnimatedSection animation="fade-up">
-              {/* Badge maior */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-5 py-3 rounded-full font-bold shadow-lg text-base mb-6">
-                <Star className="w-4 h-4 mr-2" />
+              {/* Badge moderno com glassmorphism */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 text-gray-900 px-6 py-3 rounded-full font-black shadow-2xl text-base mb-6 border-2 border-white/30 backdrop-blur-sm animate-pulse hover:scale-105 transition-transform duration-300">
+                <Star className="w-5 h-5 mr-2 animate-spin" style={{ animationDuration: '3s' }} />
                 Internet + TV Grátis
               </div>
 
