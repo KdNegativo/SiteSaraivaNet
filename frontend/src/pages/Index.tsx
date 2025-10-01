@@ -101,72 +101,84 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Fundo Laranja Ultra Premium e Animado */}
+      {/* Hero Section - Fundo Criativo de Internet/Tecnologia */}
       <section id="inicio" className="hero-animated relative overflow-hidden min-h-screen flex items-center">
-        {/* Gradiente base vibrante e animado */}
-        <div className="absolute inset-0 animate-gradient-shift" style={{
-          background: 'linear-gradient(135deg, #ff6b35 0%, #ff8c42 15%, #ffa94d 30%, #ff7f50 45%, #ff6347 60%, #ff4500 75%, #ff6b35 100%)',
-          backgroundSize: '300% 300%'
+        {/* Gradiente base laranja moderno */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(135deg, #ff6600 0%, #ff8800 50%, #ff5500 100%)'
         }}></div>
         
-        {/* Mesh gradient com múltiplas cores - Animado */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 animate-mesh-1 opacity-40" style={{
-            background: 'radial-gradient(circle at 20% 30%, rgba(255, 235, 59, 0.5) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255, 87, 34, 0.4) 0%, transparent 50%)'
-          }}></div>
-          <div className="absolute inset-0 animate-mesh-2 opacity-30" style={{
-            background: 'radial-gradient(circle at 60% 40%, rgba(255, 193, 7, 0.45) 0%, transparent 55%), radial-gradient(circle at 40% 80%, rgba(244, 67, 54, 0.35) 0%, transparent 55%)'
-          }}></div>
-        </div>
-        
-        {/* Ondas animadas de fundo */}
-        <div className="absolute inset-0 opacity-15">
-          <div className="absolute inset-0 animate-wave-1" style={{
-            background: 'repeating-linear-gradient(45deg, transparent, transparent 80px, rgba(255, 255, 255, 0.15) 80px, rgba(255, 255, 255, 0.15) 160px)'
-          }}></div>
-          <div className="absolute inset-0 animate-wave-2" style={{
-            background: 'repeating-linear-gradient(-45deg, transparent, transparent 100px, rgba(255, 255, 255, 0.1) 100px, rgba(255, 255, 255, 0.1) 200px)'
-          }}></div>
-        </div>
-        
-        {/* Padrões geométricos modernos */}
-        <div className="absolute inset-0 opacity-[0.12]">
-          {/* Grid pattern */}
-          <div className="absolute inset-0" style={{
+        {/* Grid de conexão tecnológica animada */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 animate-tech-grid" style={{
             backgroundImage: `
-              linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)
+              linear-gradient(rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+              linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '80px 80px'
-          }}></div>
-          
-          {/* Dots pattern */}
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 2px)`,
-            backgroundSize: '60px 60px',
-            backgroundPosition: '0 0, 30px 30px'
+            backgroundSize: '100px 100px, 100px 100px, 20px 20px, 20px 20px',
+            backgroundPosition: '-2px -2px, -2px -2px, -1px -1px, -1px -1px'
           }}></div>
         </div>
         
-        {/* Esferas flutuantes com blur */}
-        <div className="absolute inset-0 overflow-hidden opacity-50">
-          <div className="absolute top-10 -right-20 w-80 h-80 bg-yellow-300/40 rounded-full blur-3xl animate-float-slow"></div>
-          <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-red-400/35 rounded-full blur-3xl animate-float-slower"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-orange-300/40 rounded-full blur-3xl animate-float-reverse"></div>
+        {/* Linhas de dados fluindo - Efeito Fibra Óptica */}
+        <div className="absolute inset-0 overflow-hidden opacity-30">
+          <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-white to-transparent top-[20%] animate-data-flow-1"></div>
+          <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-yellow-300 to-transparent top-[45%] animate-data-flow-2"></div>
+          <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-white to-transparent top-[70%] animate-data-flow-3"></div>
+          <div className="absolute w-1 h-full bg-gradient-to-b from-transparent via-white to-transparent left-[15%] animate-data-flow-vertical-1"></div>
+          <div className="absolute w-1 h-full bg-gradient-to-b from-transparent via-orange-200 to-transparent left-[60%] animate-data-flow-vertical-2"></div>
+          <div className="absolute w-1 h-full bg-gradient-to-b from-transparent via-white to-transparent left-[85%] animate-data-flow-vertical-3"></div>
         </div>
         
-        {/* Shine effect animado atravessando */}
+        {/* Partículas de dados/pacotes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-2 h-2 bg-white rounded-full top-[10%] left-[10%] animate-particle-1 shadow-lg shadow-white/50"></div>
+          <div className="absolute w-2 h-2 bg-yellow-300 rounded-full top-[30%] left-[70%] animate-particle-2 shadow-lg shadow-yellow-300/50"></div>
+          <div className="absolute w-2 h-2 bg-white rounded-full top-[60%] left-[20%] animate-particle-3 shadow-lg shadow-white/50"></div>
+          <div className="absolute w-2 h-2 bg-orange-200 rounded-full top-[80%] left-[80%] animate-particle-4 shadow-lg shadow-orange-200/50"></div>
+          <div className="absolute w-2 h-2 bg-white rounded-full top-[40%] left-[50%] animate-particle-5 shadow-lg shadow-white/50"></div>
+        </div>
+        
+        {/* Ondas de sinal WiFi pulsantes */}
         <div className="absolute inset-0 overflow-hidden opacity-25">
-          <div className="absolute inset-0 animate-shine" style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%)',
-            transform: 'translateX(-100%) skewX(-15deg)',
-            width: '50%'
+          <div className="absolute top-[25%] left-[15%] animate-wifi-pulse-1">
+            <div className="w-32 h-32 border-4 border-white rounded-full"></div>
+          </div>
+          <div className="absolute top-[60%] right-[20%] animate-wifi-pulse-2">
+            <div className="w-40 h-40 border-4 border-yellow-300 rounded-full"></div>
+          </div>
+          <div className="absolute bottom-[15%] left-[50%] animate-wifi-pulse-3">
+            <div className="w-36 h-36 border-4 border-white rounded-full"></div>
+          </div>
+        </div>
+        
+        {/* Pontos de conexão (nós de rede) */}
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute w-3 h-3 bg-white rounded-full top-[15%] left-[20%] shadow-lg shadow-white/50 animate-pulse"></div>
+          <div className="absolute w-3 h-3 bg-yellow-300 rounded-full top-[35%] left-[75%] shadow-lg shadow-yellow-300/50 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute w-3 h-3 bg-white rounded-full top-[65%] left-[30%] shadow-lg shadow-white/50 animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute w-3 h-3 bg-orange-200 rounded-full top-[85%] left-[70%] shadow-lg shadow-orange-200/50 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        </div>
+        
+        {/* Efeito de velocidade/movimento */}
+        <div className="absolute inset-0 overflow-hidden opacity-15">
+          <div className="absolute inset-0 animate-speed-lines" style={{
+            background: 'repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(255, 255, 255, 0.3) 100px, rgba(255, 255, 255, 0.3) 102px)'
           }}></div>
         </div>
         
-        {/* Overlay com gradiente para profundidade */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/15"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/10 via-transparent to-red-900/10"></div>
+        {/* Círculos de sinal expandindo */}
+        <div className="absolute top-[30%] right-[25%]">
+          <div className="absolute w-20 h-20 border-2 border-white/30 rounded-full animate-signal-expand-1"></div>
+          <div className="absolute w-20 h-20 border-2 border-white/20 rounded-full animate-signal-expand-2"></div>
+          <div className="absolute w-20 h-20 border-2 border-white/10 rounded-full animate-signal-expand-3"></div>
+        </div>
+        
+        {/* Overlay para profundidade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/5 via-transparent to-red-900/5"></div>
         
         {/* Mobile Version */}
         <div className="lg:hidden w-full px-6 py-20 relative z-20">
