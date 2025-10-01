@@ -103,28 +103,26 @@ const MobileNavigation = () => {
             </button>
           </div>
 
-          <div className="space-y-4">
+          <nav className="space-y-3">
+            {menuItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleSmoothScroll(item.id)}
+                className="w-full flex items-center space-x-3 p-4 text-white hover:bg-white/20 rounded-xl transition-colors text-left font-medium text-base"
+              >
+                <item.icon className="w-6 h-6" />
+                <span>{item.label}</span>
+              </button>
+            ))}
+            
             <button
               onClick={() => { setIsOpen(false); navigate('/chips'); }}
-              className="w-full flex items-center space-x-3 p-3 text-white bg-white/15 hover:bg-white/25 rounded-lg transition-colors text-left"
+              className="w-full flex items-center space-x-3 p-4 text-white hover:bg-white/20 rounded-xl transition-colors text-left font-medium text-base"
             >
-              <Smartphone className="w-5 h-5" />
-              <span className="font-semibold">Chips</span>
+              <Smartphone className="w-6 h-6" />
+              <span>Chips</span>
             </button>
-
-            <nav className="space-y-4">
-              {menuItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => handleSmoothScroll(item.id)}
-                  className="w-full flex items-center space-x-3 p-3 text-white hover:bg-white/20 rounded-lg transition-colors text-left"
-                >
-                  <item.icon className="w-5 h-5" />
-                  <span className="font-medium">{item.label}</span>
-                </button>
-              ))}
-            </nav>
-          </div>
+          </nav>
 
           <div className="mt-8 pt-8 border-t border-white/20">
             <div className="text-center">
