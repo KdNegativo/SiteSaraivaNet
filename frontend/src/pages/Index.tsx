@@ -222,15 +222,12 @@ const Index = () => {
               {/* Left Column - Textos e CTA */}
               <div className="flex-1 max-w-xl">
                 <AnimatedSection animation="fade-up">
-                  {/* Badge moderno */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 text-gray-900 px-6 py-3 rounded-full font-black text-base mb-8 shadow-2xl border-2 border-white/40 backdrop-blur-sm animate-pulse hover:scale-105 transition-transform duration-300">
-                    <Star className="w-5 h-5 mr-2 animate-spin" style={{ animationDuration: '3s' }} />
-                    Internet + TV Grátis
-                  </div>
-                  
-                  {/* Título Principal */}
-                  <h1 className="text-white text-5xl xl:text-6xl font-black leading-tight mb-6" style={{
-                    textShadow: '3px 3px 12px rgba(0,0,0,0.7)'
+                  {/* Título Principal MUITO maior */}
+                  <h1 className="text-white font-black leading-tight mb-8" style={{
+                    fontSize: 'clamp(4rem, 8vw, 8rem)',
+                    lineHeight: '0.9',
+                    fontWeight: '900',
+                    textShadow: '5px 5px 25px rgba(0,0,0,0.8), 0 0 50px rgba(255,102,0,0.4)'
                   }}>
                     Internet +<br/>SaraivaTV
                   </h1>
