@@ -122,21 +122,15 @@ const Index = () => {
         <div className="lg:hidden w-full px-6 py-20">
           <div className="relative z-10 text-center space-y-10">
             <AnimatedSection animation="fade-up">
-              {/* Badge moderno com glassmorphism */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 text-gray-900 px-6 py-3 rounded-full font-black shadow-2xl text-base mb-6 border-2 border-white/30 backdrop-blur-sm animate-pulse hover:scale-105 transition-transform duration-300">
-                <Star className="w-5 h-5 mr-2 animate-spin" style={{ animationDuration: '3s' }} />
-                Internet + TV Grátis
-              </div>
-
-              {/* Title maior no mobile */}
+              {/* Title MUITO maior no mobile */}
               <div className="space-y-6">
                 <h1 className="font-black text-white leading-none" style={{
-                  fontSize: 'clamp(36px, 10vw, 56px)',
-                  lineHeight: '0.95',
-                  fontWeight: '800',
-                  textShadow: '3px 3px 12px rgba(0,0,0,0.5)'
+                  fontSize: 'clamp(48px, 14vw, 80px)',
+                  lineHeight: '0.9',
+                  fontWeight: '900',
+                  textShadow: '4px 4px 20px rgba(0,0,0,0.7), 0 0 40px rgba(255,102,0,0.3)'
                 }}>
-                  Internet + SaraivaTV
+                  Internet +<br/>SaraivaTV
                 </h1>
                 
                 {/* Subtitle maior */}
