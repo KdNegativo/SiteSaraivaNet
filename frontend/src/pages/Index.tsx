@@ -308,25 +308,25 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Stats Bar - Stats na parte inferior - apenas desktop */}
+        {/* Stats Bar - Design Premium */}
         <div className="absolute bottom-0 left-0 right-0 pb-8 hidden lg:block">
           <div className="container mx-auto px-8">
-            <div className="grid grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <div className="bg-red-900/60 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg">
-                <div className="text-white font-black text-3xl mb-1">964+</div>
-                <div className="text-red-100 font-medium text-sm">Clientes</div>
+            <div className="grid grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-8 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-4xl mb-2 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">964+</div>
+                <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Clientes</div>
               </div>
-              <div className="bg-red-900/60 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg">
-                <div className="text-white font-black text-3xl mb-1">95%</div>
-                <div className="text-red-100 font-medium text-sm">Uptime</div>
+              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-8 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-4xl mb-2 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">95%</div>
+                <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Uptime</div>
               </div>
-              <div className="bg-red-900/60 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg">
-                <div className="text-white font-black text-3xl mb-1">19+</div>
-                <div className="text-red-100 font-medium text-sm">Canais</div>
+              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-8 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-4xl mb-2 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">19+</div>
+                <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Canais</div>
               </div>
-              <div className="bg-red-900/60 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg">
-                <div className="text-white font-black text-3xl mb-1">23h</div>
-                <div className="text-red-100 font-medium text-sm">Online</div>
+              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-8 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-4xl mb-2 bg-gradient-to-r from-pink-300 to-rose-300 bg-clip-text text-transparent">23h</div>
+                <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Online</div>
               </div>
             </div>
           </div>
