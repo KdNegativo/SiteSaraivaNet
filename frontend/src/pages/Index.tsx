@@ -105,47 +105,56 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Fundo Ultra Premium */}
-      <section id="inicio" className="hero-section relative overflow-hidden min-h-screen flex items-center">
+      {/* Hero Section - Fundo Laranja Premium e Moderno */}
+      <section id="inicio" className="relative overflow-hidden min-h-screen flex items-center">
+        {/* Base gradient laranja suave e elegante */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-orange-600 to-red-600"></div>
         
-        {/* Padrões geométricos modernos e elegantes */}
-        <div className="absolute inset-0 opacity-20">
-          {/* Grid pattern */}
+        {/* Animated mesh gradient overlay */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Grandes esferas animadas com cores complementares */}
+          <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-br from-yellow-400/40 to-orange-400/30 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute -bottom-40 -left-40 w-[700px] h-[700px] bg-gradient-to-tr from-red-600/40 to-orange-500/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s', animationDuration: '12s' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-orange-400/30 to-yellow-500/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s', animationDuration: '15s' }}></div>
+          
+          {/* Esferas menores para mais profundidade */}
+          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-br from-amber-400/25 to-orange-500/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s', animationDuration: '10s' }}></div>
+          <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-gradient-to-tr from-red-500/25 to-pink-500/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s', animationDuration: '14s' }}></div>
+        </div>
+        
+        {/* Padrões geométricos sutis e modernos */}
+        <div className="absolute inset-0 opacity-[0.07]">
+          {/* Grid sutil */}
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px)
             `,
-            backgroundSize: '80px 80px'
+            backgroundSize: '100px 100px'
           }}></div>
           
-          {/* Diagonal lines */}
+          {/* Dots pattern elegante */}
           <div className="absolute inset-0" style={{
-            backgroundImage: `repeating-linear-gradient(
-              45deg,
-              transparent,
-              transparent 40px,
-              rgba(255, 255, 255, 0.05) 40px,
-              rgba(255, 255, 255, 0.05) 80px
-            )`
-          }}></div>
-          
-          {/* Dots pattern */}
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px)`,
-            backgroundSize: '50px 50px'
+            backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.6) 2px, transparent 2px)`,
+            backgroundSize: '80px 80px',
+            backgroundPosition: '0 0, 40px 40px'
           }}></div>
         </div>
         
-        {/* Mesh Gradient Overlay - Esferas flutuantes */}
+        {/* Gradient overlay para suavizar */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-600/20 to-orange-700/40"></div>
+        
+        {/* Vignette sutil */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-black/20"></div>
+        
+        {/* Shine effect animado */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-yellow-400/30 to-orange-500/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-red-500/25 to-pink-500/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s', animationDuration: '8s' }}></div>
-          <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-gradient-to-bl from-purple-500/20 to-blue-500/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s', animationDuration: '10s' }}></div>
+          <div className="absolute top-0 left-0 w-full h-full animate-shimmer" style={{
+            background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)',
+            transform: 'translateX(-100%)',
+            animationDuration: '8s'
+          }}></div>
         </div>
-        
-        {/* Vignette effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/30"></div>
         
         {/* Mobile Version */}
         <div className="lg:hidden w-full px-6 py-20">
