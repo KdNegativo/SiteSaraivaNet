@@ -82,10 +82,13 @@ const MobileNavigation = () => {
         />
       )}
 
-      {/* Menu Lateral */}
-      <div className={`fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-gradient-to-b from-orange-600 to-red-600 z-[95] shadow-2xl transform transition-transform duration-300 ease-in-out ${
-        isOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}>
+      {/* Menu Lateral - Com !important para forçar visibilidade */}
+      <div 
+        className={`fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-gradient-to-b from-orange-600 to-red-600 shadow-2xl transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        style={{ zIndex: 9999 }}
+      >
         <div className="p-6 h-full overflow-y-auto">
           <div className="flex items-center justify-between mb-8">
             <div>
