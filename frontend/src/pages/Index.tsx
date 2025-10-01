@@ -971,14 +971,29 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section - Modern Design */}
+      {/* Contact Section - Fundo Premium */}
       <section id="contato" className="relative py-20 px-4" style={{background: 'linear-gradient(135deg, #6B46C1 0%, #7C3AED 25%, #8B5CF6 50%, #A855F7 75%, #C084FC 100%)'}}>
         <div className="absolute inset-0">
+          {/* Padrões geométricos elegantes */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `
+                linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '80px 80px'
+            }}></div>
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px)`,
+              backgroundSize: '60px 60px'
+            }}></div>
+          </div>
+          
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-purple-900/30"></div>
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px, 60px 60px'
-          }}></div>
+          
+          {/* Esferas flutuantes */}
+          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-pink-500/25 to-purple-600/20 rounded-full blur-3xl animate-float" style={{ animationDuration: '15s' }}></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-tr from-indigo-500/20 to-blue-500/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '18s', animationDelay: '3s' }}></div>
         </div>
 
         <div className="w-full px-6 relative z-10">
