@@ -1,24 +1,27 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import heroGamer from "@/assets/hero-gamer.jpg";
 
 const HeroCarousel = () => {
   const images = [
     {
-      src: heroGamer,
-      alt: "Pessoa usando computador com internet SaraivaNet"
+      src: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1400&auto=format&fit=crop",
+      alt: "Setup Gaming Profissional - Internet Ultra Rápida SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1758524942663-c2de04389d79?q=80&w=1200&auto=format&fit=crop",
-      alt: "Casal feliz conectado com SaraivaNet"
+      src: "https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?q=80&w=1400&auto=format&fit=crop",
+      alt: "Streaming de TV - Assista Seus Programas Favoritos com SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1758273707380-c2a958004cd1?q=80&w=1200&auto=format&fit=crop",
-      alt: "Pessoa relaxando em casa com internet SaraivaNet"
+      src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1400&auto=format&fit=crop",
+      alt: "Tecnologia e Trabalho Remoto - Conectividade SaraivaNet"
     },
     {
-      src: "https://images.unsplash.com/photo-1758686254118-cbcf8e32bafe?q=80&w=1200&auto=format&fit=crop",
-      alt: "Família conectada com internet SaraivaNet"
+      src: "https://images.unsplash.com/photo-1750712263185-edde9f359e33?q=80&w=1400&auto=format&fit=crop",
+      alt: "WiFi Moderno - Rede de Alta Velocidade SaraivaNet"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?q=80&w=1400&auto=format&fit=crop",
+      alt: "Velocidade Extrema - Internet Fibra Óptica SaraivaNet"
     }
   ];
 
