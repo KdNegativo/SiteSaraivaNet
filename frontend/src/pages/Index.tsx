@@ -332,9 +332,9 @@ const Index = () => {
         </div>
 
         {/* Stats Bar - Design Premium */}
-        <div className="absolute bottom-0 left-0 right-0 pb-8 hidden lg:block">
+        <div className="absolute bottom-0 left-0 right-0 pb-12 hidden lg:block">
           <div className="container mx-auto px-8">
-            <div className="grid grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-4 gap-8 max-w-6xl mx-auto">
               <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-8 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
                 <div className="text-white font-black text-4xl mb-2 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">964+</div>
                 <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Clientes</div>
