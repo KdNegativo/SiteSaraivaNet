@@ -232,7 +232,7 @@ const Index = () => {
         </div>
 
         {/* Desktop Version - Layout com melhor espaçamento */}
-        <div className="hidden lg:block w-full">
+        <div className="hidden lg:block w-full relative z-20">
           <div className="container mx-auto px-8 py-20">
             <div className="flex items-center justify-between gap-16">
               
@@ -240,11 +240,11 @@ const Index = () => {
               <div className="flex-1 max-w-xl">
                 <AnimatedSection animation="fade-up">
                   {/* Título Principal - tamanho ajustado */}
-                  <h1 className="text-white font-black leading-tight mb-10" style={{
+                  <h1 className="text-white font-black leading-tight mb-10 drop-shadow-2xl" style={{
                     fontSize: 'clamp(3.5rem, 6vw, 6rem)',
                     lineHeight: '1.05',
                     fontWeight: '900',
-                    textShadow: '5px 5px 25px rgba(0,0,0,0.8), 0 0 50px rgba(255,102,0,0.4)',
+                    textShadow: '5px 5px 25px rgba(0,0,0,0.8), 2px 2px 12px rgba(0,0,0,0.6)',
                     letterSpacing: '-0.02em'
                   }}>
                     Internet +<br/>SaraivaTV
