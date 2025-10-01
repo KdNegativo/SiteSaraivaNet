@@ -240,28 +240,28 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Stats Mobile - embaixo dos cards com design premium */}
-              <div className="grid grid-cols-2 gap-5 max-w-lg mx-auto mt-12 px-4">
-                <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-2xl p-5 text-center shadow-2xl border border-white/10 hover:scale-105 transition-all duration-300">
-                  <div className="text-white font-black text-3xl mb-2 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">964+</div>
-                  <div className="text-red-100 font-bold text-xs uppercase tracking-wider">Clientes</div>
+              {/* Stats Mobile - embaixo dos cards com design premium e mais espaçamento */}
+              <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto mt-20 px-4">
+                <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-2xl p-7 text-center shadow-2xl border border-white/10 hover:scale-105 transition-all duration-300">
+                  <div className="text-white font-black text-4xl mb-3 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">964+</div>
+                  <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Clientes</div>
                 </div>
-                <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-2xl p-5 text-center shadow-2xl border border-white/10 hover:scale-105 transition-all duration-300">
-                  <div className="text-white font-black text-3xl mb-2 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">95%</div>
-                  <div className="text-red-100 font-bold text-xs uppercase tracking-wider">Uptime</div>
+                <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-2xl p-7 text-center shadow-2xl border border-white/10 hover:scale-105 transition-all duration-300">
+                  <div className="text-white font-black text-4xl mb-3 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">95%</div>
+                  <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Uptime</div>
                 </div>
-                <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-2xl p-5 text-center shadow-2xl border border-white/10 hover:scale-105 transition-all duration-300">
-                  <div className="text-white font-black text-3xl mb-2 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">19+</div>
-                  <div className="text-red-100 font-bold text-xs uppercase tracking-wider">Canais</div>
+                <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-2xl p-7 text-center shadow-2xl border border-white/10 hover:scale-105 transition-all duration-300">
+                  <div className="text-white font-black text-4xl mb-3 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">19+</div>
+                  <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Canais</div>
                 </div>
-                <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-2xl p-5 text-center shadow-2xl border border-white/10 hover:scale-105 transition-all duration-300">
-                  <div className="text-white font-black text-3xl mb-2 bg-gradient-to-r from-pink-300 to-rose-300 bg-clip-text text-transparent">23h</div>
-                  <div className="text-red-100 font-bold text-xs uppercase tracking-wider">Online</div>
+                <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-2xl p-7 text-center shadow-2xl border border-white/10 hover:scale-105 transition-all duration-300">
+                  <div className="text-white font-black text-4xl mb-3 bg-gradient-to-r from-pink-300 to-rose-300 bg-clip-text text-transparent">23h</div>
+                  <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Online</div>
                 </div>
               </div>
 
-              {/* CTA Button moderno com animação */}
-              <div className="mt-12">
+              {/* CTA Button moderno com animação e mais espaço */}
+              <div className="mt-16">
                 <TouchButton 
                   onClick={handleWhatsAppClick}
                   className="group relative bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 hover:from-yellow-300 hover:via-orange-400 hover:to-yellow-300 text-gray-900 font-black px-12 rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-110 transition-all duration-300 inline-flex items-center border-2 border-white/40 backdrop-blur-sm animate-pulse"
