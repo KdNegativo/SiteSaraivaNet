@@ -155,31 +155,31 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Benefits Cards maiores */}
+              {/* Benefits Cards modernos com hover effects */}
               <div className="grid grid-cols-2 gap-4 max-w-md mx-auto mt-16">
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
-                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Wifi className="w-4 h-4 text-white" />
+                <div className="group bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-6 text-center shadow-2xl border-2 border-white/20 hover:scale-105 transition-all duration-300 hover:shadow-orange-500/50 backdrop-blur-sm">
+                  <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
+                    <Wifi className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">Internet<br/>Rápida</div>
+                  <div className="text-white font-black text-sm">Internet<br/>Rápida</div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-5 text-center shadow-lg border border-white/20">
-                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Tv className="w-4 h-4 text-white" />
+                <div className="group bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-6 text-center shadow-2xl border-2 border-white/20 hover:scale-105 transition-all duration-300 hover:shadow-blue-500/50 backdrop-blur-sm">
+                  <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
+                    <Tv className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">Aplicativo de<br/>TV</div>
+                  <div className="text-white font-black text-sm">Aplicativo de<br/>TV</div>
                 </div>
-                <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
-                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Music className="w-4 h-4 text-white" />
+                <div className="group bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-6 text-center shadow-2xl border-2 border-white/20 hover:scale-105 transition-all duration-300 hover:shadow-green-500/50 backdrop-blur-sm">
+                  <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
+                    <Music className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">Rádios<br/>24h</div>
+                  <div className="text-white font-black text-sm">Rádios<br/>24h</div>
                 </div>
-                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-5 text-center shadow-lg border border-white/20">
-                  <div className="w-8 h-8 bg-white/30 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Shield className="w-4 h-4 text-white" />
+                <div className="group bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-6 text-center shadow-2xl border-2 border-white/20 hover:scale-105 transition-all duration-300 hover:shadow-purple-500/50 backdrop-blur-sm">
+                  <div className="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
+                    <Shield className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm">Suporte<br/>VIP</div>
+                  <div className="text-white font-black text-sm">Suporte<br/>VIP</div>
                 </div>
               </div>
 
