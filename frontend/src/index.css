@@ -833,6 +833,358 @@ html {
   will-change: transform;
 }
 
+/* ========================================
+   ANIMAÇÕES CRIATIVAS PARA SITE DE INTERNET
+   ======================================== */
+
+/* Grid tecnológico animado */
+@keyframes tech-grid {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(100px) translateY(100px);
+  }
+}
+
+.animate-tech-grid {
+  animation: tech-grid 20s linear infinite;
+}
+
+/* Fluxo de dados horizontal */
+@keyframes data-flow-1 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes data-flow-2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes data-flow-3 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+.animate-data-flow-1 {
+  animation: data-flow-1 4s ease-in-out infinite;
+}
+
+.animate-data-flow-2 {
+  animation: data-flow-2 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-data-flow-3 {
+  animation: data-flow-3 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Fluxo de dados vertical */
+@keyframes data-flow-vertical-1 {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes data-flow-vertical-2 {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes data-flow-vertical-3 {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+.animate-data-flow-vertical-1 {
+  animation: data-flow-vertical-1 5s ease-in-out infinite;
+}
+
+.animate-data-flow-vertical-2 {
+  animation: data-flow-vertical-2 6s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-data-flow-vertical-3 {
+  animation: data-flow-vertical-3 7s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+/* Partículas de dados se movendo */
+@keyframes particle-1 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(80vw, 70vh);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-2 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-60vw, 50vh);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-3 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(70vw, -40vh);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-4 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-70vw, -60vh);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-5 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(40vw, 60vh);
+    opacity: 0;
+  }
+}
+
+.animate-particle-1 {
+  animation: particle-1 8s ease-in-out infinite;
+}
+
+.animate-particle-2 {
+  animation: particle-2 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-particle-3 {
+  animation: particle-3 9s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.animate-particle-4 {
+  animation: particle-4 11s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-particle-5 {
+  animation: particle-5 7s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+/* Ondas WiFi pulsantes */
+@keyframes wifi-pulse-1 {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+@keyframes wifi-pulse-2 {
+  0%, 100% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 1;
+  }
+}
+
+@keyframes wifi-pulse-3 {
+  0%, 100% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
+.animate-wifi-pulse-1 {
+  animation: wifi-pulse-1 4s ease-in-out infinite;
+}
+
+.animate-wifi-pulse-2 {
+  animation: wifi-pulse-2 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-wifi-pulse-3 {
+  animation: wifi-pulse-3 4.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Linhas de velocidade */
+@keyframes speed-lines {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+.animate-speed-lines {
+  animation: speed-lines 2s linear infinite;
+}
+
+/* Sinais expandindo */
+@keyframes signal-expand-1 {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes signal-expand-2 {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes signal-expand-3 {
+  0% {
+    transform: scale(0);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.animate-signal-expand-1 {
+  animation: signal-expand-1 2s ease-out infinite;
+}
+
+.animate-signal-expand-2 {
+  animation: signal-expand-2 2s ease-out infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-signal-expand-3 {
+  animation: signal-expand-3 2s ease-out infinite;
+  animation-delay: 1s;
+}
+
 @keyframes morphBorder {
   0%, 100% { 
     border-radius: 2rem;
