@@ -228,9 +228,9 @@ const Index = () => {
               {/* Left Column - Textos e CTA */}
               <div className="flex-1 max-w-xl">
                 <AnimatedSection animation="fade-up">
-                  {/* Badge */}
-                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm mb-8">
-                    <Star className="w-4 h-4 mr-2" />
+                  {/* Badge moderno */}
+                  <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 text-gray-900 px-6 py-3 rounded-full font-black text-base mb-8 shadow-2xl border-2 border-white/40 backdrop-blur-sm animate-pulse hover:scale-105 transition-transform duration-300">
+                    <Star className="w-5 h-5 mr-2 animate-spin" style={{ animationDuration: '3s' }} />
                     Internet + TV Grátis
                   </div>
                   
