@@ -485,8 +485,23 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Plans Section - Desktop Version */}
+      {/* Plans Section - Desktop Version com fundo premium */}
       <section id="planos-desktop" className="relative overflow-hidden pt-5 pb-20 px-4 hidden lg:block" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b82 75%, #0d5aa7 100%)'}}>
+        
+        {/* Padrões geométricos elegantes */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
+            `,
+            backgroundSize: '100px 100px'
+          }}></div>
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.12) 2px, transparent 2px)`,
+            backgroundSize: '70px 70px'
+          }}></div>
+        </div>
         
         {/* Sophisticated Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-blue-500/8"></div>
@@ -494,9 +509,9 @@ const Index = () => {
         {/* Elegant Floating Elements */}
         {!prefersReducedMotion && (
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-64 h-64 bg-orange-400/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s' }}></div>
-            <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-400/12 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '3s' }}></div>
-            <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-purple-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s', animationDelay: '6s' }}></div>
+            <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-orange-400/20 to-yellow-400/15 rounded-full blur-3xl animate-float" style={{ animationDuration: '10s' }}></div>
+            <div className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-gradient-to-tr from-blue-400/18 to-cyan-400/12 rounded-full blur-3xl animate-float" style={{ animationDuration: '12s', animationDelay: '3s' }}></div>
+            <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-gradient-to-bl from-purple-400/15 to-pink-400/10 rounded-full blur-3xl animate-float" style={{ animationDuration: '8s', animationDelay: '6s' }}></div>
           </div>
         )}
         
