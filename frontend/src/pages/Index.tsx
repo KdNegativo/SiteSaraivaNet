@@ -98,10 +98,6 @@ const Index = () => {
             <TouchButton onClick={() => handleSmoothScroll('contato')} className="text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-semibold">Contato</TouchButton>
             <Link to="/chips"><TouchButton className="bg-white/20 hover:bg-white/30 text-white px-5 py-2 rounded-lg transition-all duration-300 font-bold backdrop-blur-sm border border-white/20">Chips</TouchButton></Link>
           </nav>
-
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-          </div>
         </div>
       </header>
 
