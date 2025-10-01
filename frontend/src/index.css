@@ -654,6 +654,58 @@ html {
   100% { background-position: 0% 50%; }
 }
 
+/* Animação otimizada para mobile - Gradiente de fundo */
+@keyframes gradient-shift {
+  0% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+  100% { 
+    background-position: 0% 50%; 
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 15s ease infinite;
+  will-change: background-position;
+}
+
+/* Animações de luz - Leves e otimizadas */
+@keyframes light-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(20px, -20px) scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes light-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(1.15);
+    opacity: 0.4;
+  }
+}
+
+.animate-light-1 {
+  animation: light-1 20s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-light-2 {
+  animation: light-2 25s ease-in-out infinite;
+  animation-delay: 5s;
+  will-change: transform, opacity;
+}
+
 @keyframes morphBorder {
   0%, 100% { 
     border-radius: 2rem;
