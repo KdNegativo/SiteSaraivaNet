@@ -363,25 +363,25 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Stats Bar - Design Premium */}
-        <div className="absolute bottom-0 left-0 right-0 pb-12 hidden lg:block">
-          <div className="container mx-auto px-8">
-            <div className="grid grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-8 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
-                <div className="text-white font-black text-4xl mb-2 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">964+</div>
-                <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Clientes</div>
+        {/* Stats Bar - Design Premium com mais espaço */}
+        <div className="absolute bottom-0 left-0 right-0 pb-16 hidden lg:block">
+          <div className="container mx-auto px-12">
+            <div className="grid grid-cols-4 gap-10 max-w-7xl mx-auto">
+              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-10 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-5xl mb-4 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">964+</div>
+                <div className="text-red-100 font-bold text-base uppercase tracking-wider">Clientes</div>
               </div>
-              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-8 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
-                <div className="text-white font-black text-4xl mb-2 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">95%</div>
-                <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Uptime</div>
+              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-10 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-5xl mb-4 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">95%</div>
+                <div className="text-red-100 font-bold text-base uppercase tracking-wider">Uptime</div>
               </div>
-              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-8 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
-                <div className="text-white font-black text-4xl mb-2 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">19+</div>
-                <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Canais</div>
+              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-10 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-5xl mb-4 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">19+</div>
+                <div className="text-red-100 font-bold text-base uppercase tracking-wider">Canais</div>
               </div>
-              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-8 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
-                <div className="text-white font-black text-4xl mb-2 bg-gradient-to-r from-pink-300 to-rose-300 bg-clip-text text-transparent">23h</div>
-                <div className="text-red-100 font-bold text-sm uppercase tracking-wider">Online</div>
+              <div className="group bg-gradient-to-br from-red-900/80 to-red-800/80 backdrop-blur-xl rounded-3xl p-10 text-center shadow-2xl border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="text-white font-black text-5xl mb-4 bg-gradient-to-r from-pink-300 to-rose-300 bg-clip-text text-transparent">23h</div>
+                <div className="text-red-100 font-bold text-base uppercase tracking-wider">Online</div>
               </div>
             </div>
           </div>
