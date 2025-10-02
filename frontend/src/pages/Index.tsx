@@ -1047,12 +1047,12 @@ const Index = () => {
           {/* Contact Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {/* Telefone */}
-            <TouchButton 
+            <div 
               onClick={handlePhoneClick}
-              className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105 cursor-pointer text-left"
+              className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105 cursor-pointer"
             >
               <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-xl" style={{ borderRadius: '1rem' }}>
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-xl" style={{ borderRadius: '1rem', minWidth: '64px', minHeight: '64px', maxWidth: '64px', maxHeight: '64px' }}>
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -1061,7 +1061,7 @@ const Index = () => {
                   <p className="text-sm text-white/70">Toque para ligar</p>
                 </div>
               </div>
-            </TouchButton>
+            </div>
 
             {/* Endereço */}
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
