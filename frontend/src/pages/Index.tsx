@@ -1052,7 +1052,7 @@ const Index = () => {
               className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105 cursor-pointer text-left"
             >
               <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-xl" style={{ borderRadius: '1rem' }}>
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -1066,7 +1066,7 @@ const Index = () => {
             {/* Endereço */}
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-xl" style={{ borderRadius: '1rem' }}>
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -1080,7 +1080,7 @@ const Index = () => {
             {/* Horário */}
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-xl" style={{ borderRadius: '1rem' }}>
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <div>
