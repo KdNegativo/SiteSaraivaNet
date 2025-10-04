@@ -514,18 +514,31 @@
   border-bottom-color: hsl(var(--red-dark));
 }
 
-/* Fundo base do site */
-body {
-  background-color: #f8fafc;
-  color-scheme: light dark;
+/* Fundo base do site - PROTEÇÃO CONTRA MODO ESCURO */
+body, html, #root {
+  background-color: #f8fafc !important;
+  color-scheme: light !important;
 }
 
-/* Modo escuro */
+/* FORÇAR CORES ORIGINAIS - Desabilitar modo escuro do navegador */
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1a1a1a !important;
-    color: white !important;
+  body, html, #root {
+    background-color: #f8fafc !important;
+    color: inherit !important;
+    color-scheme: light !important;
   }
+  
+  /* Forçar cores originais em todos os elementos */
+  * {
+    color-scheme: light !important;
+  }
+}
+
+/* Hero section - Manter fundo laranja sempre */
+.hero-animated,
+section[id="inicio"] {
+  background: linear-gradient(135deg, #ff6600 0%, #ff8800 50%, #ff5500 100%) !important;
+  color-scheme: light !important;
 }
 
 /* Permite alternância entre modo claro e escuro */
