@@ -514,31 +514,67 @@
   border-bottom-color: hsl(var(--red-dark));
 }
 
-/* Fundo base do site - PROTEÇÃO CONTRA MODO ESCURO */
-body, html, #root {
-  background-color: #f8fafc !important;
-  color-scheme: light !important;
+/* ============================================
+   PROTEÇÃO MÁXIMA CONTRA MODO ESCURO FORÇADO
+   ============================================ */
+
+/* Desabilitar modo escuro completamente */
+:root {
+  color-scheme: light only !important;
+  supported-color-schemes: light !important;
 }
 
-/* FORÇAR CORES ORIGINAIS - Desabilitar modo escuro do navegador */
+body, html, #root {
+  background-color: #f8fafc !important;
+  color-scheme: light only !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* Desabilitar todos os filtros que navegadores aplicam em dark mode */
+body *, html *, #root * {
+  color-scheme: light only !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* ANULAR Media Query de Dark Mode */
 @media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light only !important;
+    supported-color-schemes: light !important;
+  }
+  
   body, html, #root {
     background-color: #f8fafc !important;
     color: inherit !important;
-    color-scheme: light !important;
+    color-scheme: light only !important;
+    filter: none !important;
+    -webkit-filter: none !important;
   }
   
-  /* Forçar cores originais em todos os elementos */
+  /* Forçar em TODOS os elementos */
   * {
-    color-scheme: light !important;
+    color-scheme: light only !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+  
+  /* Elementos específicos com cores laranja */
+  header, 
+  .hero-animated,
+  [style*="background"] {
+    filter: none !important;
+    -webkit-filter: none !important;
   }
 }
 
-/* Hero section - Manter fundo laranja sempre */
-.hero-animated,
-section[id="inicio"] {
+/* Hero section - Proteger cores laranja */
+.hero-animated {
   background: linear-gradient(135deg, #ff6600 0%, #ff8800 50%, #ff5500 100%) !important;
-  color-scheme: light !important;
+  color-scheme: light only !important;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 
 /* Permite alternância entre modo claro e escuro */
