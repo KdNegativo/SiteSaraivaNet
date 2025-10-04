@@ -3,10 +3,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SaraivaNet - Internet de Alta Velocidade</title>
+    <style>
+      /* Proteção crítica contra modo escuro - carrega primeiro */
+      :root {
+        color-scheme: light only !important;
+        supported-color-schemes: light !important;
+      }
+      body {
+        color-scheme: light only !important;
+      }
+    </style>
     
     <!-- Google Fonts Premium - Mais Elegante -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
